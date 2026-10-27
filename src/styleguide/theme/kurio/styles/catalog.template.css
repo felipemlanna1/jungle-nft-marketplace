@@ -831,13 +831,23 @@ html[data-theme='kurio'] .nft-card-image .edition-badge.is-sold-out {
   display: inline-flex;
   position: absolute;
   top: 16px;
-  right: 8px;
-  left: auto;
+  right: auto;
+  bottom: auto;
+  left: 8px;
+  align-items: center;
+  width: max-content;
+  max-width: calc(100% - 16px);
+  height: auto;
   padding: 4px 6px;
   border-radius: 4px;
   background: var(--surface-dark);
   color: var(--foreground);
   font-size: 11px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+html[data-theme='kurio'] .nft-card-image .rarity-badge + .edition-badge.is-sold-out {
+  top: 52px;
 }
 
 .editorial-highlights {

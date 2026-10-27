@@ -20,3 +20,13 @@ As capturas e as medidas antes/depois estão em `reports/mobile-polish/`. As lar
 Os testes verificam cartões alinhados, margens e espaços, texto sem encostar na imagem ou no botão, indicadores abaixo do conteúdo e menu centralizado. Também conferem o hover, a abertura e o fechamento pelo teclado e a volta do foco. Os contadores 1, 2, 9, 10, 99 e 100 são variações visuais do mesmo badge; o teste mede se os caracteres cabem nele.
 
 A referência visual da Home móvel foi atualizada após as medições e a inspeção das capturas. A altura fixa e a coluna deslocada deram lugar à altura conforme o conteúdo e aos cartões alinhados. Os snapshots desktop e das demais páginas foram preservados.
+
+## Selo de item esgotado
+
+O selo “Esgotado” estava preso ao topo e à base da imagem ao mesmo tempo. A regra do tema definia `top`, mas mantinha o `bottom` da regra geral. Isso esticava o fundo do selo pela altura do card. No mobile, ele também ficava no mesmo canto do coração.
+
+A altura agora acompanha o texto, sem quebra de linha. O selo fica no canto superior esquerdo, com `bottom: auto` e `right: auto`. Quando a obra também é rara, “RARO” ocupa a primeira linha e “Esgotado” fica abaixo. O coração continua no canto direito.
+
+O teste em `tests/e2e/card-status.spec.ts` usa a obra já esgotada da API e esgota uma obra rara pelo endpoint de demonstração. Em cada caso, confere 320, 375, 390, 414, 440 e 1440 px: texto inteiro, altura entre 20 e 32 px, selos dentro da imagem e sem encostar no coração. O clique no favorito também deve abrir o login com a obra escolhida.
+
+Os quatro casos locais passaram em Chromium, com os projetos desktop e mobile. O resultado está em `reports/card-status-green.json`. Essa rodada não substitui a conferência da publicação.

@@ -22,6 +22,7 @@ export default tseslint.config(
   {
     ignores: [
       'dist/**',
+      '.vercel/**',
       'node_modules/**',
       'public/mockServiceWorker.js',
       'playwright-report/**',

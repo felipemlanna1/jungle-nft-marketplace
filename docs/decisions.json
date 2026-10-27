@@ -466,7 +466,7 @@
     {
       "id": "vercel-hosting",
       "evidence": "O enunciado recomenda Vercel. A aplicação usa rotas no navegador, MSW e um Service Worker, que precisam funcionar também no acesso direto e após atualizar a página.",
-      "decision": "Publicar como Vite SPA. Usar vercel.json para as rotas e o cache, manter Node.js 22 e enviar somente os arquivos necessários ao build.",
+      "decision": "Publicar como Vite SPA, com Node22. Usar vercel.json para rotas e cache e --prebuilt para enviar o build local conferido.",
       "reason": "Abrir detalhe, login, carrinho e pedido pelo link sem erro404, atualizar o Service Worker e manter o mesmo ambiente de build já validado.",
       "implementation": [
         "vercel.json",
@@ -475,7 +475,19 @@
         "package.json",
         "package-lock.json"
       ],
-      "validation": "Build local aprovado. Os343arquivos gerados têm os mesmos hashes da versão validada. A conferência do domínio público e dos fluxos será registrada nos relatórios da publicação."
+      "validation": "Os343arquivos publicados são iguais aos do build validado.18testes no domínio público passaram. As12medições Lighthouse estáveis atendem às metas do enunciado. Detalhes em reports/vercel-deployment.json."
+    },
+    {
+      "id": "card-status-label",
+      "evidence": "O selo Esgotado mantinha o bottom da regra geral e recebia top no tema. As duas posições esticavam sua altura. A posição à direita também coincidia com o botão de favorito no mobile.",
+      "decision": "Deixar a altura seguir o texto, sem quebra de linha, e posicionar o selo no canto superior esquerdo. Quando houver RARO, colocar Esgotado abaixo, em outra linha.",
+      "reason": "Manter os dois estados legíveis sem cobrir a imagem inteira nem o botão de favorito.",
+      "implementation": [
+        "src/styleguide/theme/kurio/styles/catalog.template.css",
+        "src/styles.kurio.css",
+        "tests/e2e/card-status.spec.ts"
+      ],
+      "validation": "Quatro casos locais aprovados em Chromium nos projetos desktop e mobile. Cada caso confere 320, 375, 390, 414, 440 e 1440 px, com selo dentro da imagem, altura de 20 a 32 px, texto inteiro e sem sobreposição ao favorito ou à raridade. O teste esgota a obra rara pela API simulada e confere o clique no favorito. Resultado em reports/card-status-green.json; a publicação tem conferência separada."
     }
   ],
   "detailedRecords": [
