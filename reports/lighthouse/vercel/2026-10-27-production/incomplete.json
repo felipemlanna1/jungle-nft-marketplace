@@ -1,0 +1,7 @@
+{
+  "complete": false,
+  "approved": false,
+  "completedMeasurements": 1,
+  "error": "O navegador encerrou a conexão durante a segunda medição mobile. A matriz completa foi reiniciada em outra pasta, sem apagar esta tentativa.",
+  "firstReport": "home-mobile-1.report.json"
+}

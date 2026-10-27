@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-10-27T21:23:38.508Z",
+  "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "deploymentId": "dpl_D25wPnP8KuPzN2qAmMCc2cZdo3mQ",
+  "verifiedRuntimeFiles": 343,
+  "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+  "hostedDocumentVerification": {
+    "mode": "exact",
+    "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+    "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+    "injectionCount": 0
+  },
+  "hostingConfigurationVerification": [
+    {
+      "path": "_headers",
+      "sourcePath": "public/_headers",
+      "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "sourceBytes": 604,
+      "buildBytes": 604,
+      "responseStatus": 200,
+      "responseSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "responseBytes": 604,
+      "mode": "served-as-raw-file",
+      "support": "unsupported",
+      "policiesApplied": false,
+      "runtimePolicyChecks": [],
+      "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+    }
+  ],
+  "policies": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/nft/nft-1",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/checkout",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/mockServiceWorker.js",
+      "status": 200,
+      "type": "application/javascript; charset=utf-8",
+      "cache": "no-cache"
+    },
+    {
+      "path": "assets/application-CnWYuhBj.js",
+      "status": 200,
+      "type": "application/javascript; charset=utf-8",
+      "cache": "public, max-age=31536000, immutable"
+    }
+  ]
+}

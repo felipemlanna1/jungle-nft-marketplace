@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-10-27T21:25:43.600873+00:00",
+  "provider": "Vercel",
+  "primaryUrl": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "projectId": "prj_AVFUVieqQKPLS4ekImrPjpXijDw9",
+  "projectName": "jungle-nft-marketplace-felipe",
+  "deploymentId": "dpl_D25wPnP8KuPzN2qAmMCc2cZdo3mQ",
+  "deploymentUrl": "https://jungle-nft-marketplace-felipe-d2t8n0orl-felipemlanna1s-projects.vercel.app",
+  "status": "READY",
+  "sourceCommit": "cfe39ac14c2ed91a8779d601fc36dac9cd63f953",
+  "buildMode": "vercel build --prod; vercel deploy --prebuilt --prod",
+  "framework": "vite",
+  "nodeVersion": "22.x",
+  "vercelConfigSha256": "02b375c34fcc772ddedd1a44fd8b482542da5aa71de10d4ef6b7c364da81c043",
+  "verifiedRuntimeFiles": 343,
+  "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+  "anonymousAccess": true,
+  "publicSourceOptionUsed": false,
+  "hostVerification": "reports/vercel-host-verification.json",
+  "productionTests": {
+    "report": "reports/production-vercel.json",
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0
+  },
+  "previousAttempts": [
+    {
+      "status": "build-failed",
+      "reason": "A lista de upload excluía tests/fixtures/legacy-catalog-v1.json, importado por um teste em src durante a conferência de tipos. A lista foi corrigida."
+    },
+    {
+      "status": "READY",
+      "deploymentId": "dpl_HNYGD7GZLrLeVxsU6MLXr91hmsBs",
+      "tests": "reports/historical/vercel-remote-build/production.json",
+      "limitation": "O build remoto gerou nomes de chunks diferentes do build local. A publicação seguinte usou a saída local, sem recompilar no servidor."
+    }
+  ],
+  "performanceSummary": "reports/lighthouse/vercel/2026-10-27-final/summary.json",
+  "officialPerformanceTargetsMet": true,
+  "performanceMedians": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "mobile",
+      "categories": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        94,
+        94,
+        94
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        100,
+        100,
+        100
+      ]
+    }
+  ],
+  "performanceBrowserInterruption": "Primeira tentativa incompleta preservada em reports/lighthouse/vercel/2026-10-27-production/incomplete.json; a matriz atual contém as12medições completas."
+}

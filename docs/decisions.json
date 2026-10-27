@@ -466,8 +466,8 @@
     {
       "id": "vercel-hosting",
       "evidence": "O enunciado recomenda Vercel. A aplicação usa rotas no navegador, MSW e um Service Worker, que precisam funcionar também no acesso direto e após atualizar a página.",
-      "decision": "Publicar como Vite SPA, com Node22. Usar vercel.json para rotas e cache e --prebuilt para enviar o build local conferido.",
-      "reason": "Abrir detalhe, login, carrinho e pedido pelo link sem erro404, atualizar o Service Worker e manter o mesmo ambiente de build já validado.",
+      "decision": "Publicar como Vite SPA, com Node.js 22. Usar vercel.json para rotas e cache e --prebuilt para enviar o build local conferido.",
+      "reason": "Abrir detalhe, login, carrinho e pedido pelo link sem erro 404, atualizar o Service Worker e manter o mesmo ambiente de build já validado.",
       "implementation": [
         "vercel.json",
         ".vercelignore",
@@ -475,7 +475,7 @@
         "package.json",
         "package-lock.json"
       ],
-      "validation": "Os343arquivos publicados são iguais aos do build validado.18testes no domínio público passaram. As12medições Lighthouse estáveis atendem às metas do enunciado. Detalhes em reports/vercel-deployment.json."
+      "validation": "Os 343 arquivos da versão d18f892 foram comparados com o build local e 24 testes no domínio público passaram. A última matriz Lighthouse completa é de db81f5d, anterior ao ajuste da moldura. As tentativas posteriores interrompidas estão registradas separadamente em reports/vercel-deployment.json."
     },
     {
       "id": "card-status-label",
@@ -501,7 +501,7 @@
         "src/styles.kurio.css",
         "tests/e2e/card-frame.spec.ts"
       ],
-      "validation": "A conferência cobre 768, 1024 e 1440 px: arredondamento, borda, dimensões de cada faixa e imagem quadrada dentro da moldura. O resultado da rodada local fica em reports/card-frame-green.json; a conferência da publicação é separada."
+      "validation": "Passaram 16 casos locais focados, oito comparações visuais e 24 testes de produção. A conferência de 768, 1024 e 1440 px verifica arredondamento, borda, dimensões de cada faixa e imagem quadrada. Os cinco tamanhos de mobile também foram conferidos. Somente o snapshot do catálogo desktop foi atualizado após inspeção. Evidências em reports/card-frame/summary.json."
     }
   ],
   "detailedRecords": [

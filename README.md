@@ -2,13 +2,13 @@
 
 Desafio Frontend da Jungle Gaming. Marketplace de NFTs com catálogo, favoritos, carrinho, compra e conta do colecionador.
 
-[Aplicação](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev) · [GitHub](https://github.com/felipemlanna1/jungle-nft-marketplace)
+[Aplicação](https://jungle-nft-marketplace-felipe.vercel.app) · [GitHub](https://github.com/felipemlanna1/jungle-nft-marketplace)
 
 Usei React, TypeScript, Vite, TanStack Router e Query, Axios, Socket.IO, MSW, Tailwind e componentes no padrão shadcn/ui com Radix.
 
 ## Como rodar
 
-É necessário Node.js 22.19 ou superior e npm.
+É necessário Node.js 22, a partir da versão 22.19, e npm.
 
 ```bash
 npm ci
@@ -85,8 +85,8 @@ Para o Lighthouse, gere o build e mantenha o preview aberto em outro terminal. A
 
 ## Resultados
 
-Foram aprovados 224 testes unitários, 166 E2E com oito comparações visuais e 18 testes na aplicação publicada.
+Na revisão atual, passaram 224 testes unitários, 32 testes dos scripts e [172 E2E](https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969), incluindo oito comparações visuais. Na aplicação publicada, passaram 24 testes dos principais fluxos e das mudanças de layout.
 
-Lighthouse estável: performance 83 no início mobile, 85 no detalhe mobile e 99 no desktop. Acessibilidade e boas práticas: 100; SEO: 92. A performance mobile ficou abaixo da meta de 90. A [análise](./docs/quality-gates.md#lighthouse) traz as medianas, LCP, CLS, TBT e a comparação com a correção experimental de HTTP/3.
+A última rodada completa do Lighthouse na Vercel, do commit `db81f5d`, teve performance 93 no início mobile, 94 no detalhe mobile e 100 no desktop; acessibilidade e boas práticas 100, e SEO 92. Essas notas são anteriores ao ajuste de borda dos cards. A nova medição do commit `d18f892` foi interrompida pelo navegador e ainda não tem uma rodada completa. A [análise](./docs/quality-gates.md#lighthouse) separa os resultados e as execuções interrompidas.
 
 [Relatórios](./reports) · [Decisões técnicas](./docs/decisions.json) · [Publicação](./docs/hosting.md)

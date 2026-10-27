@@ -1,24 +1,33 @@
 # Publicação
 
-[Aplicação no Cloudflare Workers](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev)
+[Aplicação na Vercel](https://jungle-nft-marketplace-felipe.vercel.app)
 
-O site usa Workers Static Assets, configurado em `wrangler.jsonc`. A pasta `dist` guarda os arquivos prontos do build: aplicação, imagens, fontes e mocks. API, login, carteiras, pagamentos e Socket.IO são simulados no navegador.
-
-A opção `single-page-application` permite abrir uma página pelo link e atualizá-la sem perder a rota. O servidor usa `index.html` para carregar a aplicação.
+O site usa o build estático do Vite. API, login, carteiras, pagamentos e Socket.IO continuam simulados no navegador. O projeto usa Node.js 22.
 
 ## Publicar
 
-Entre na conta pelo Wrangler e defina `CLOUDFLARE_ACCOUNT_ID` no ambiente.
+Com a Vercel CLI instalada, entre na conta e vincule a pasta ao projeto `jungle-nft-marketplace-felipe`:
 
 ```bash
-npm run check
-npm run build
-npx wrangler@4.78.0 deploy --config wrangler.jsonc --x-autoconfig=false
+vercel link
 ```
 
-## Cache e conferência dos arquivos
+Depois, confira o código, gere os arquivos e publique:
 
-O navegador pode guardar arquivos para não precisar baixá-los novamente. As regras de `public/_headers` definem esse comportamento e são copiadas para o build:
+```bash
+npm ci
+npm run check
+vercel build --prod --yes
+vercel deploy --prebuilt --prod --yes
+```
+
+`vercel build` gera os arquivos em `.vercel/output`. A opção `--prebuilt` envia esses arquivos sem refazer o build no servidor. Assim, a publicação usa os mesmos arquivos conferidos localmente. A pasta `.vercel` fica fora do Git.
+
+O `vercel.json` define o Vite, o comando de build, a saída `dist` e as rotas. Uma URL como `/nft/nft-1` carrega `index.html`, inclusive ao atualizar a página. Imagens, scripts e o Service Worker continuam sendo servidos como arquivos.
+
+## Cache e conferência
+
+As regras de cache da Vercel ficam em `vercel.json`:
 
 | Arquivo                                | Cache-Control                         |
 | -------------------------------------- | ------------------------------------- |
@@ -26,10 +35,8 @@ O navegador pode guardar arquivos para não precisar baixá-los novamente. As re
 | Arquivos em `/assets` com hash no nome | `public, max-age=31536000, immutable` |
 | Service Worker                         | `no-cache`                            |
 
-`no-transform` preserva o HTML sem o script automático JavaScript Detections da Cloudflare. Os arquivos com hash podem ser guardados por um ano. HTML e Service Worker precisam ser conferidos no servidor antes de serem reutilizados.
+HTML e Service Worker são conferidos no servidor antes de serem reutilizados. Arquivos com hash podem ficar guardados por um ano, pois o nome muda quando o conteúdo muda. O arquivo `public/_headers` é usado na hospedagem Cloudflare; a Vercel usa as regras do `vercel.json`.
 
-A auditoria usa SHA256 para conferir se os arquivos publicados são iguais aos gerados localmente. Como o servidor aplica as regras de `_headers`, esse arquivo é conferido de outra forma: conteúdo esperado na fonte e no build, respostas HTTP 200 e regras de cache realmente aplicadas. Os demais arquivos são comparados por inteiro.
+A publicação foi conferida comparando os 343 arquivos com o build validado. O [registro da conferência](../reports/vercel-host-verification.json) guarda os hashes, as rotas e os cabeçalhos. Os [testes no site publicado](../reports/production-vercel.json) ficam em relatório separado.
 
-Os [testes do site publicado](../reports/production-polish.json) e a [auditoria pública](../reports/lighthouse/summary.json) registram a versão conferida e os resultados.
-
-Referências: [Static Assets](https://developers.cloudflare.com/workers/static-assets/get-started/), [rotas de SPA](https://developers.cloudflare.com/workers/static-assets/routing/single-page-application/), [cabeçalhos](https://developers.cloudflare.com/workers/static-assets/headers/) e [JavaScript Detections](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/).
+Referências: [Vite na Vercel](https://vercel.com/docs/frameworks/frontend/vite), [configuração do projeto](https://vercel.com/docs/project-configuration/vercel-json) e [publicação pela CLI](https://vercel.com/docs/cli/deploy).

@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Preparação técnica concluída e versão publicada pronta para avaliação humana e envio pelo candidato. CI224/29/166 e produção18 aprovados; verificadores Node atuais32. Notas estáveis acima de80 em todas as categorias e execuções, conforme autorização posterior de Felipe. Meta original P90 mobile não cumprida no estável; comparação experimental H3 preservada. Nota subjetiva null e envio não realizado.",
+  "status": "Versão d18f892 publicada na Vercel, com 343 arquivos conferidos e 24 testes de produção aprovados. A suíte completa no GitHub passou com 224 Vitest, 32 Node e 172 Chromium. Moldura e selo de esgotado corrigidos; oito comparações visuais aprovadas. A última matriz Lighthouse completa é de db81f5d; a nova medição foi interrompida pelo navegador. Nota subjetiva não atribuída. Envio não realizado.",
   "reviewType": "Revisão cruzada por evidências, sem uso de notas históricas.",
   "independence": {
     "independentScope": "Componentes e hooks React de catálogo, carrinho, checkout, recibo, roteamento e conta escritos por outros integrantes.",
@@ -187,11 +187,26 @@
       "evidence": "Geração 17 no transporte e base nova 1 permitiam que o GET de bootstrap invalidasse a época de um POST de login legítimo concorrente. A contraprova do hook com MSW real falhou nos dois casos novos antes do ajuste.",
       "fix": "Antes de login/registro, useAuthForm aguarda fetchQuery da mesma chave de sessão, com AbortSignal e sem retry. A consulta deduplica o bootstrap e termina o rebase antes da captura síncrona do POST; o transporte não foi enfraquecido.",
       "validation": "RED 2/2→GREEN 5/5, incluindo favorito persistido, senha alterada preservada e 503 sem POST ou perda de campos. Provas reports/auth-handshake-before.log e reports/auth-handshake-after.log; revisão cruzada de ordenação e ownerguards concluída."
+    },
+    {
+      "id": "sold-out-badge-stretch",
+      "severity": "P2",
+      "fix": "Selo usa bottom:auto e fica à esquerda; selo raro conserva sua própria área.",
+      "validation": "Quatro casos em desktop/mobile cobrem seis larguras e favorito funcional. Incluídos na rodada de 24 testes de produção.",
+      "evidence": "reports/card-status/summary.json"
+    },
+    {
+      "id": "square-card-artwork-frame",
+      "severity": "P2",
+      "fix": "Raio de 20px vem do tema. Borda de 1px usa a cor semântica acima de 767px, sem mudar as dimensões.",
+      "validation": "16 casos locais, oito comparações visuais e 24 casos de produção aprovados. Leitura cruzada não encontrou regressões nesse escopo.",
+      "evidence": "reports/card-frame/summary.json"
     }
   ],
   "openP1": [],
   "pendingReleaseEvidence": [
-    "Avaliação humana de Felipe e envio pelo próprio candidato, sem alteração automática de ATS ou mensagens."
+    "Avaliação humana e envio pelo candidato.",
+    "Matriz Lighthouse da revisão de moldura não concluída; consultar currentPerformanceEvidence."
   ],
   "clockMethodology": "Somente um dos E2E usa setFixedTime para controlar Date e testar reconexão antes do prazo do modelo. Timers, requisições, Socket.IO e interações de browser permanecem ativos. O outro E2E usa tempo normal e verifica a confirmação por fallback REST. Nenhum controle de relógio é usado no Lighthouse.",
   "performanceEvidence": {
@@ -203,59 +218,44 @@
     "allBestPractices": 100,
     "allSeo": 92,
     "allCls": 0,
-    "gate": "Registro anterior à autorização de notas acima de8/10: medianas oficiais P>=90,A/B>=95,SEO>=90 e requisito adicional anterior todoP>90. Aceitação atual em reports/release-readiness.json.",
+    "gate": "Metas do enunciado P>=90/A>=95/BP>=95/SEO>=90; todas atendidas na matriz estável atual da Vercel. Resultados anteriores mantidos no histórico.",
     "browserStartupFailure": "reports/lighthouse/probes/public-query-prefetch/execution-failure.json",
     "limits": "Probes locais são HTTP/1.1 com throttling simulado padrão. Não se presume aprovação HTTPS/h2 sem medir.",
     "classification": "Probe local histórico, distinto da matriz HTTPS atual em finalPerformanceEvidence."
   },
   "finalFunctionalEvidence": {
-    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
     "unitTests": 224,
     "unitTestFiles": 26,
-    "artifactVerifierTests": 29,
-    "e2eTests": 166,
+    "artifactVerifierTests": 32,
+    "e2eTests": 172,
     "visualRegressions": 8,
     "ci": {
-      "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182",
+      "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
       "status": "completed",
       "conclusion": "success",
       "checksJob": "success",
       "browserJob": "success",
-      "sourceCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
-      "completedAt": "2026-10-27T20:23:53Z",
+      "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+      "completedAt": "2026-10-27T22:16:27Z",
       "workers": 1,
       "updateSnapshots": "none",
-      "evidenceMethod": "gh run view --json e contagens finais do log dos dois jobs."
+      "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
     },
-    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
-    "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
-    "sourceRevisionAtPerformanceAudit": {
-      "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
-      "changedFiles": [
-        "M reports/favorite-login-catalog-desktop.png",
-        " M reports/favorite-login-catalog-mobile.png",
-        " M reports/favorite-login-detail-desktop.png",
-        " M reports/favorite-saved-catalog-desktop.png",
-        " M reports/favorite-saved-catalog-mobile.png",
-        " M reports/favorite-saved-detail-desktop.png",
-        " M reports/favorite-saved-detail-mobile.png",
-        " M tests/e2e/mobile-home-layout.spec.ts",
-        "?? reports/production-polish.json"
-      ]
-    },
-    "productionEvidence": "reports/production-polish.json",
-    "testRevisionLimit": "O CI executou o teste do contador versionado em c8fefe8. O ajuste posterior exige badge real 2 pela API e elimina criação de span de fallback; somente os 18 testes de produção posteriores são a prova desse refinamento. Nenhum runtime foi alterado por esse ajuste."
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "productionEvidence": "reports/production-vercel.json",
+    "scope": "Suíte completa de código do commit d18f892. O build local servido na Vercel foi verificado separadamente; a auditoria Lighthouse atual permaneceu incompleta."
   },
   "finalPerformanceEvidence": {
-    "summary": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
-    "runDirectory": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z",
-    "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
-    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
-    "completedAt": "2026-10-27T20:17:21.450Z",
+    "summary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+    "runDirectory": "reports/lighthouse/vercel/2026-10-27-card-status",
+    "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+    "commit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+    "completedAt": "2026-10-27T21:47:22.037Z",
     "completeMatrix": true,
-    "approved": false,
+    "approved": true,
     "gate": {
-      "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
+      "scope": "Official challenge medians reported separately from the candidate acceptance above 8/10.",
       "completeMatrix": true,
       "categoryThresholds": {
         "performance": 90,
@@ -263,9 +263,15 @@
         "best-practices": 95,
         "seo": 90
       },
-      "officialMediansMet": false,
-      "allPerformanceRunsAbove90": false,
-      "approved": false,
+      "officialMediansMet": true,
+      "allPerformanceRunsAbove90": true,
+      "allCategoryRunsAbove80": true,
+      "candidateAcceptance": {
+        "date": "2026-10-27",
+        "minimumExclusive": 80,
+        "source": "Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje."
+      },
+      "approved": true,
       "aspirations": {
         "mobilePerformanceMediansAtLeast95": false,
         "requiredForApproval": false
@@ -281,60 +287,60 @@
         "path": "/",
         "profile": "mobile",
         "categories": {
-          "performance": 83,
+          "performance": 93,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          83,
-          83,
-          83
+          93,
+          93,
+          93
         ]
       },
       {
         "path": "/",
         "profile": "desktop",
         "categories": {
-          "performance": 99,
+          "performance": 100,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          99,
-          98,
-          99
+          100,
+          100,
+          100
         ]
       },
       {
         "path": "/nft/nft-1",
         "profile": "mobile",
         "categories": {
-          "performance": 85,
+          "performance": 94,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          84,
-          85,
-          85
+          94,
+          94,
+          94
         ]
       },
       {
         "path": "/nft/nft-1",
         "profile": "desktop",
         "categories": {
-          "performance": 99,
+          "performance": 100,
           "accessibility": 100,
           "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          99,
-          99,
-          98
+          100,
+          100,
+          100
         ]
       }
     ],
@@ -344,79 +350,11 @@
       "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
       "injectionCount": 0
     },
-    "hostingConfigurationVerification": [
-      {
-        "path": "_headers",
-        "sourcePath": "public/_headers",
-        "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
-        "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
-        "sourceBytes": 604,
-        "buildBytes": 604,
-        "responseStatus": 200,
-        "responseSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-        "responseBytes": 889,
-        "mode": "consumed-static-asset-configuration",
-        "support": "verified",
-        "policiesApplied": true,
-        "knownConfigurationSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
-        "configurationResponse": "verified-spa-fallback",
-        "fallbackDocumentVerification": {
-          "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "injectionCount": 0
-        },
-        "runtimePolicyChecks": [
-          {
-            "path": "/",
-            "status": 200,
-            "cacheControl": "no-cache, no-transform",
-            "expectedCacheControl": "no-cache, no-transform",
-            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-            "documentVerification": {
-              "mode": "exact",
-              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "injectionCount": 0
-            }
-          },
-          {
-            "path": "/nft/nft-1",
-            "status": 200,
-            "cacheControl": "no-cache, no-transform",
-            "expectedCacheControl": "no-cache, no-transform",
-            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-            "documentVerification": {
-              "mode": "exact",
-              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "injectionCount": 0
-            }
-          },
-          {
-            "path": "/assets/application-CnWYuhBj.js",
-            "status": 200,
-            "cacheControl": "public, max-age=31536000, immutable",
-            "expectedCacheControl": "public, max-age=31536000, immutable",
-            "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
-          },
-          {
-            "path": "/mockServiceWorker.js",
-            "status": 200,
-            "cacheControl": "no-cache",
-            "expectedCacheControl": "no-cache",
-            "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
-          }
-        ],
-        "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
-      }
-    ],
     "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
-    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
-    "platformIssue": "Workers serve HTML idêntico ao build sem JSD, com Best Practices100. A performance mobile estável permanece abaixo da meta originalP90; o mínimo83 atende ao critério posterior do candidato acima de80.",
+    "runtimeSourceFingerprint": "f94fde58f7b13e31436bcbaf316ba3bb5c5a265eac9e16503c220f8d99699113",
     "runtimeApplicationUnchangedDuringAudit": true,
-    "measurementLimit": "Auditoria das duas rotas no Workers, sem bloquear scripts ou substituir recursos. Não certifica o mirror Sites v5; performance aprovada não pode ser inferida do CI.",
-    "candidateAcceptance": "reports/release-readiness.json"
+    "measurementLimit": "Medições do build prebuilt na Vercel, sem alterar o cenário, bloquear scripts ou remover imagens. Resultados de outros domínios são históricos.",
+    "classification": "Última matriz completa; anterior ao ajuste de moldura em d18f892. Não é a medição completa da versão atual."
   },
   "openReleaseBlockers": [],
   "additionalAccessibilityFindings": [
@@ -485,6 +423,117 @@
       "baselinePolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
       "durationMs": 403453.264,
       "classification": "Registro histórico preservado; não certifica c8fefe8. O caminho genérico de evidência pode receber provas posteriores."
+    },
+    {
+      "classification": "Produção anterior no Workers; a Vercel tem execução própria.",
+      "evidence": {
+        "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+        "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+        "report": "reports/production-polish.json",
+        "stats": {
+          "startTime": "2026-10-27T20:12:07.162Z",
+          "duration": 77844.84800000001,
+          "expected": 18,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "passed": 18,
+        "retriesObserved": [
+          0
+        ],
+        "scope": {
+          "layout": 10,
+          "favoriteLogin": 4,
+          "newsletter": 2,
+          "purchase": 2
+        },
+        "layoutWidths": [
+          320,
+          375,
+          390,
+          414,
+          440
+        ],
+        "projects": [
+          "desktop",
+          "mobile"
+        ],
+        "limits": "Dez casos de layout são cinco larguras nos dois projetos; a validação funcional é simulada no navegador. Não equivale a toda a suíte ou à validação do mirror Sites."
+      }
+    },
+    {
+      "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+      "commit": "cfe39ac14c2ed91a8779d601fc36dac9cd63f953",
+      "report": "reports/production-vercel.json",
+      "stats": {
+        "startTime": "2026-10-27T21:22:47.051Z",
+        "duration": 49253.778000000006,
+        "expected": 18,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "passed": 18,
+      "retriesObserved": [
+        0
+      ],
+      "scope": {
+        "layout": 10,
+        "favoriteLogin": 4,
+        "newsletter": 2,
+        "purchase": 2
+      },
+      "layoutWidths": [
+        320,
+        375,
+        390,
+        414,
+        440
+      ],
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "limits": "Recorte de18casos no domínio de produção da Vercel, em Chromium desktop/mobile."
+    },
+    {
+      "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+      "unitTests": 224,
+      "unitTestFiles": 26,
+      "artifactVerifierTests": 29,
+      "e2eTests": 166,
+      "visualRegressions": 8,
+      "ci": {
+        "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182",
+        "status": "completed",
+        "conclusion": "success",
+        "checksJob": "success",
+        "browserJob": "success",
+        "sourceCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+        "completedAt": "2026-10-27T20:23:53Z",
+        "workers": 1,
+        "updateSnapshots": "none",
+        "evidenceMethod": "gh run view --json e contagens finais do log dos dois jobs."
+      },
+      "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
+      "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+      "sourceRevisionAtPerformanceAudit": {
+        "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+        "changedFiles": [
+          "M reports/favorite-login-catalog-desktop.png",
+          " M reports/favorite-login-catalog-mobile.png",
+          " M reports/favorite-login-detail-desktop.png",
+          " M reports/favorite-saved-catalog-desktop.png",
+          " M reports/favorite-saved-catalog-mobile.png",
+          " M reports/favorite-saved-detail-desktop.png",
+          " M reports/favorite-saved-detail-mobile.png",
+          " M tests/e2e/mobile-home-layout.spec.ts",
+          "?? reports/production-polish.json"
+        ]
+      },
+      "productionEvidence": "reports/production-polish.json",
+      "testRevisionLimit": "O CI executou o teste do contador versionado em c8fefe8. O ajuste posterior exige badge real 2 pela API e elimina criação de span de fallback; somente os 18 testes de produção posteriores são a prova desse refinamento. Nenhum runtime foi alterado por esse ajuste."
     }
   ],
   "historicalPerformanceEvidence": [
@@ -594,6 +643,290 @@
       "runtimeApplicationUnchanged": true,
       "originalSummaryAlias": "reports/lighthouse/summary.json",
       "classification": "Matriz anterior do Sites preservada como reprovada; não representa o runtime Workers atual."
+    },
+    {
+      "classification": "Matriz estável anterior do Workers, preservada após a migração para Vercel.",
+      "evidence": {
+        "summary": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
+        "runDirectory": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z",
+        "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+        "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+        "completedAt": "2026-10-27T20:17:21.450Z",
+        "completeMatrix": true,
+        "approved": false,
+        "gate": {
+          "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
+          "completeMatrix": true,
+          "categoryThresholds": {
+            "performance": 90,
+            "accessibility": 95,
+            "best-practices": 95,
+            "seo": 90
+          },
+          "officialMediansMet": false,
+          "allPerformanceRunsAbove90": false,
+          "approved": false,
+          "aspirations": {
+            "mobilePerformanceMediansAtLeast95": false,
+            "requiredForApproval": false
+          }
+        },
+        "totalRuns": 12,
+        "throttlingMethod": "simulate",
+        "lighthouse": "13.5.0",
+        "node": "v22.22.0",
+        "browser": "Playwright Chromium 156.0.8078.4",
+        "medians": [
+          {
+            "path": "/",
+            "profile": "mobile",
+            "categories": {
+              "performance": 83,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 92
+            },
+            "performanceRuns": [
+              83,
+              83,
+              83
+            ]
+          },
+          {
+            "path": "/",
+            "profile": "desktop",
+            "categories": {
+              "performance": 99,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 92
+            },
+            "performanceRuns": [
+              99,
+              98,
+              99
+            ]
+          },
+          {
+            "path": "/nft/nft-1",
+            "profile": "mobile",
+            "categories": {
+              "performance": 85,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 92
+            },
+            "performanceRuns": [
+              84,
+              85,
+              85
+            ]
+          },
+          {
+            "path": "/nft/nft-1",
+            "profile": "desktop",
+            "categories": {
+              "performance": 99,
+              "accessibility": 100,
+              "best-practices": 100,
+              "seo": 92
+            },
+            "performanceRuns": [
+              99,
+              99,
+              98
+            ]
+          }
+        ],
+        "artifactVerification": {
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
+        },
+        "hostingConfigurationVerification": [
+          {
+            "path": "_headers",
+            "sourcePath": "public/_headers",
+            "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+            "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+            "sourceBytes": 604,
+            "buildBytes": 604,
+            "responseStatus": 200,
+            "responseSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+            "responseBytes": 889,
+            "mode": "consumed-static-asset-configuration",
+            "support": "verified",
+            "policiesApplied": true,
+            "knownConfigurationSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+            "configurationResponse": "verified-spa-fallback",
+            "fallbackDocumentVerification": {
+              "mode": "exact",
+              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "injectionCount": 0
+            },
+            "runtimePolicyChecks": [
+              {
+                "path": "/",
+                "status": 200,
+                "cacheControl": "no-cache, no-transform",
+                "expectedCacheControl": "no-cache, no-transform",
+                "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                "documentVerification": {
+                  "mode": "exact",
+                  "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                  "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                  "injectionCount": 0
+                }
+              },
+              {
+                "path": "/nft/nft-1",
+                "status": 200,
+                "cacheControl": "no-cache, no-transform",
+                "expectedCacheControl": "no-cache, no-transform",
+                "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                "documentVerification": {
+                  "mode": "exact",
+                  "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                  "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+                  "injectionCount": 0
+                }
+              },
+              {
+                "path": "/assets/application-CnWYuhBj.js",
+                "status": 200,
+                "cacheControl": "public, max-age=31536000, immutable",
+                "expectedCacheControl": "public, max-age=31536000, immutable",
+                "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
+              },
+              {
+                "path": "/mockServiceWorker.js",
+                "status": 200,
+                "cacheControl": "no-cache",
+                "expectedCacheControl": "no-cache",
+                "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
+              }
+            ],
+            "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+          }
+        ],
+        "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+        "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
+        "platformIssue": "Workers serve HTML idêntico ao build sem JSD, com Best Practices100. A performance mobile estável permanece abaixo da meta originalP90; o mínimo83 atende ao critério posterior do candidato acima de80.",
+        "runtimeApplicationUnchangedDuringAudit": true,
+        "measurementLimit": "Auditoria das duas rotas no Workers, sem bloquear scripts ou substituir recursos. Não certifica o mirror Sites v5; performance aprovada não pode ser inferida do CI.",
+        "candidateAcceptance": "reports/release-readiness.json"
+      }
+    },
+    {
+      "summary": "reports/lighthouse/vercel/2026-10-27-final/summary.json",
+      "runDirectory": "reports/lighthouse/vercel/2026-10-27-final",
+      "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+      "commit": "cfe39ac14c2ed91a8779d601fc36dac9cd63f953",
+      "completedAt": "2026-10-27T21:29:09.297Z",
+      "completeMatrix": true,
+      "approved": true,
+      "gate": {
+        "scope": "Official challenge medians reported separately from the candidate acceptance above 8/10.",
+        "completeMatrix": true,
+        "categoryThresholds": {
+          "performance": 90,
+          "accessibility": 95,
+          "best-practices": 95,
+          "seo": 90
+        },
+        "officialMediansMet": true,
+        "allPerformanceRunsAbove90": true,
+        "allCategoryRunsAbove80": true,
+        "candidateAcceptance": {
+          "date": "2026-10-27",
+          "minimumExclusive": 80,
+          "source": "Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje."
+        },
+        "approved": true,
+        "aspirations": {
+          "mobilePerformanceMediansAtLeast95": false,
+          "requiredForApproval": false
+        }
+      },
+      "totalRuns": 12,
+      "throttlingMethod": "simulate",
+      "lighthouse": "13.5.0",
+      "node": "v22.22.0",
+      "browser": "Playwright Chromium 156.0.8078.4",
+      "medians": [
+        {
+          "path": "/",
+          "profile": "mobile",
+          "categories": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            93,
+            93,
+            93
+          ]
+        },
+        {
+          "path": "/",
+          "profile": "desktop",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "mobile",
+          "categories": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            94,
+            94,
+            94
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "desktop",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            100,
+            100,
+            100
+          ]
+        }
+      ],
+      "artifactVerification": {
+        "mode": "exact",
+        "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "injectionCount": 0
+      },
+      "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+      "runtimeSourceFingerprint": "f94fde58f7b13e31436bcbaf316ba3bb5c5a265eac9e16503c220f8d99699113",
+      "runtimeApplicationUnchangedDuringAudit": true,
+      "measurementLimit": "Medições do build prebuilt na Vercel, sem alterar o cenário, bloquear scripts ou remover imagens. Resultados de outros domínios são históricos."
     }
   ],
   "historicalReleaseBlockers": [
@@ -678,22 +1011,24 @@
     }
   },
   "productionEvidence": {
-    "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
-    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
-    "report": "reports/production-polish.json",
+    "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+    "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "report": "reports/production-vercel.json",
     "stats": {
-      "startTime": "2026-10-27T20:12:07.162Z",
-      "duration": 77844.84800000001,
-      "expected": 18,
+      "startTime": "2026-10-27T22:01:46.903Z",
+      "duration": 75272.285,
+      "expected": 24,
       "skipped": 0,
       "unexpected": 0,
       "flaky": 0
     },
-    "passed": 18,
+    "passed": 24,
     "retriesObserved": [
       0
     ],
     "scope": {
+      "cardFrame": 2,
+      "cardStatus": 4,
       "layout": 10,
       "favoriteLogin": 4,
       "newsletter": 2,
@@ -710,26 +1045,29 @@
       "desktop",
       "mobile"
     ],
-    "limits": "Dez casos de layout são cinco larguras nos dois projetos; a validação funcional é simulada no navegador. Não equivale a toda a suíte ou à validação do mirror Sites."
+    "limits": "Recorte de 24 casos em Chromium na Vercel. Não representa a execução completa da suíte nem valida outros navegadores."
   },
   "releaseReadiness": {
-    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
     "published": true,
-    "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "primaryUrl": "https://jungle-nft-marketplace-felipe.vercel.app",
     "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
     "mirrorVersion": 5,
     "ciApproved": true,
     "productionSubsetApproved": true,
-    "performanceApproved": true,
+    "performanceApproved": null,
     "humanReview": "pending",
     "submissionPerformed": false,
-    "overallComplete": true,
+    "overallComplete": false,
     "subjectiveCodeScore": null,
-    "performanceApprovalBasis": "Critério posterior acima de80; aprovação não altera as metas originais.",
-    "officialPerformanceTargetMet": false,
-    "readyForSubmission": true,
-    "completionScope": "Preparação técnica, validação automatizada e publicação.",
-    "acceptanceEvidence": "reports/release-readiness.json"
+    "performanceApprovalBasis": "Última matriz completa pertence ao commit anterior. Nova auditoria interrompida, sem aprovação completa atribuída ao d18f892.",
+    "officialPerformanceTargetMet": null,
+    "readyForSubmission": false,
+    "completionScope": "Correção visual, verificações funcionais e publicação concluídas; medição adicional de performance e avaliação humana pendentes.",
+    "acceptanceEvidence": "reports/release-readiness.json",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "deploymentId": "dpl_F7YqDUE6nrEhhmeRDCusbhvT9Voc",
+    "ciScope": "224 Vitest, 32 Node e 172 Chromium no commit d18f892; nenhuma atualização de snapshot no CI."
   },
   "acceptedReleaseLimitations": [
     {
@@ -737,9 +1075,10 @@
       "evidence": "Workers c8fefe8: Home mobile 83/83/83, mediana 83; Detail mobile 84/85/85, mediana 85. Medianas inferiores a 90 e execuções inferiores ou iguais a 90 reprovam o gate.",
       "owner": "Aplicação/entrega. Não há diagnóstico causal novo nesta atualização documental.",
       "source": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
-      "state": "accepted-by-candidate",
+      "state": "historical-workers-result",
       "acceptance": "Critério posterior explícito em 27/10/2026: notas acima de 8/10.",
-      "originalTargetMet": false
+      "originalTargetMet": false,
+      "resolution": "A matriz estável atual na Vercel atende P90. O resultado anterior do Workers não foi alterado."
     }
   ],
   "experimentalPerformanceEvidence": {
@@ -790,5 +1129,79 @@
       }
     ],
     "limitation": "Correção oficial do modelo HTTP/3, sem alteração dos assets. Resultado não substitui a matriz estável."
+  },
+  "currentPerformanceEvidence": {
+    "status": "incomplete",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "attempts": [
+      "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+      "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+    ],
+    "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
+    "completeMatrix": false,
+    "approved": null,
+    "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+    "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+    "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
+  },
+  "currentFunctionalEvidence": {
+    "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "unitTests": 224,
+    "artifactVerifierTests": 32,
+    "focusedLocalE2e": 16,
+    "visualRegressions": 8,
+    "production": {
+      "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+      "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+      "report": "reports/production-vercel.json",
+      "stats": {
+        "startTime": "2026-10-27T22:01:46.903Z",
+        "duration": 75272.285,
+        "expected": 24,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "passed": 24,
+      "retriesObserved": [
+        0
+      ],
+      "scope": {
+        "cardFrame": 2,
+        "cardStatus": 4,
+        "layout": 10,
+        "favoriteLogin": 4,
+        "newsletter": 2,
+        "purchase": 2
+      },
+      "layoutWidths": [
+        320,
+        375,
+        390,
+        414,
+        440
+      ],
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "limits": "Recorte de 24 casos em Chromium na Vercel. Não representa a execução completa da suíte nem valida outros navegadores."
+    },
+    "scope": "Suíte completa de 172 casos no CI, mais verificações locais e 24 casos no domínio publicado.",
+    "cardFrame": "reports/card-frame/summary.json",
+    "cardStatus": "reports/card-status/summary.json",
+    "ci": {
+      "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
+      "status": "completed",
+      "conclusion": "success",
+      "checksJob": "success",
+      "browserJob": "success",
+      "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+      "completedAt": "2026-10-27T22:16:27Z",
+      "workers": 1,
+      "updateSnapshots": "none",
+      "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
+    },
+    "fullE2eTests": 172
   }
 }

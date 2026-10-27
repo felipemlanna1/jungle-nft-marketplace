@@ -1,0 +1,7 @@
+{
+  "recordedAt": "2026-10-27T22:06:31.408188+00:00",
+  "completed": false,
+  "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+  "error": "Chromium TargetCloseError during home mobile run 1. No completed performance score was accepted.",
+  "retryDirectory": "reports/lighthouse/vercel/2026-10-27-card-frame-final"
+}

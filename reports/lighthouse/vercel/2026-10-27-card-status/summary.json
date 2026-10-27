@@ -1,0 +1,5136 @@
+{
+  "startedAt": "2026-10-27T21:44:15.070Z",
+  "completedAt": "2026-10-27T21:47:22.037Z",
+  "node": "v22.22.0",
+  "lighthouse": "13.5.0",
+  "engine": {
+    "name": "stable",
+    "packageName": "lighthouse",
+    "experimental": false,
+    "summary": "summary.json"
+  },
+  "browser": "Playwright Chromium 156.0.8078.4",
+  "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "build": {
+    "fingerprint": "f8e85207967b22d8a310311c65d6035e4dea3aa5d63d3b4d53f12b359eb1c0d6",
+    "files": [
+      {
+        "path": "_headers",
+        "bytes": 604,
+        "sha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae"
+      },
+      {
+        "path": "art/apes/burgundy-collector-360.webp",
+        "bytes": 25844,
+        "sha256": "39bddaf86763c8f4db832fb5049560c402266f73cd831cd1eec3bd324166acd6"
+      },
+      {
+        "path": "art/apes/burgundy-collector-600.webp",
+        "bytes": 67322,
+        "sha256": "2c51715e0d111598b3f0ae8a98ec2855e10cbdf9e5619b6a7684b2fe388b7458"
+      },
+      {
+        "path": "art/apes/burgundy-collector.webp",
+        "bytes": 138674,
+        "sha256": "6f29bdfe8273e71bf67c90c9832b6f2e51ecc961c60d6a060225711a8ac18615"
+      },
+      {
+        "path": "art/apes/ivory-listener-360.webp",
+        "bytes": 21566,
+        "sha256": "33db469e2df8603e9ba7e24cf0bf33920a108a6450d37f3b519d30d36a2373aa"
+      },
+      {
+        "path": "art/apes/ivory-listener-600.webp",
+        "bytes": 61906,
+        "sha256": "7fccfdca05ffb708002c56dc7b340d14cdf6c7d6951f09992ace73cab94fe4c9"
+      },
+      {
+        "path": "art/apes/ivory-listener.webp",
+        "bytes": 139298,
+        "sha256": "19fbc674cd86795d7c0f349644d34625ee659f02bfaf7e402e8aacfff1020c33"
+      },
+      {
+        "path": "art/apes/linen-scholar-360.webp",
+        "bytes": 23896,
+        "sha256": "d4653d63e606516b73ec840562abfdcbe7d2cf849c7f7fea61c1af68ebef5af4"
+      },
+      {
+        "path": "art/apes/linen-scholar-600.webp",
+        "bytes": 68350,
+        "sha256": "84ffa6557c16bc069304101582f79ea3fa7dd07ca15a858275f632cd51e64096"
+      },
+      {
+        "path": "art/apes/linen-scholar.webp",
+        "bytes": 159120,
+        "sha256": "920a8b363e3671f7c9d50421ab5f35093fd91d9b423227aa4e4640583041aaa3"
+      },
+      {
+        "path": "art/apes/midnight-curator-360.webp",
+        "bytes": 21512,
+        "sha256": "2b51d829d3f488af3083eb579f27dc2e2cf09af83db282c96d8e561744f06f97"
+      },
+      {
+        "path": "art/apes/midnight-curator-600.webp",
+        "bytes": 61838,
+        "sha256": "da6611e5a0ea8377ada3933156483fe1678ba9bee31c8fedddd539865be1178f"
+      },
+      {
+        "path": "art/apes/midnight-curator.webp",
+        "bytes": 133062,
+        "sha256": "31ffe997c1cccee120fd72e912f4e14cd8162a4c344bb33f7c23436d1421eac5"
+      },
+      {
+        "path": "art/apes/olive-explorer-360.webp",
+        "bytes": 32194,
+        "sha256": "c78bef7bb6029e4994938ef708b00bc503415aab21d2dff174da9e67b2e2341f"
+      },
+      {
+        "path": "art/apes/olive-explorer-600.webp",
+        "bytes": 81228,
+        "sha256": "660f446c4f2e67ff3a61e85b727a4fbe2b350224c163a18b07d5388b904c151c"
+      },
+      {
+        "path": "art/apes/olive-explorer.webp",
+        "bytes": 162304,
+        "sha256": "20c5dd4933986b34a7834a48a1fce252ecf1a8a76cea6ba040a97ea5c183cc40"
+      },
+      {
+        "path": "art/apes/terracotta-traveler-360.webp",
+        "bytes": 26694,
+        "sha256": "3e75792867da40cb1181b8e3c8eafd21eb1a0f3301df77fa3a8ebb17c2738e8c"
+      },
+      {
+        "path": "art/apes/terracotta-traveler-600.webp",
+        "bytes": 67780,
+        "sha256": "40ee1433a6111890151d5e243fc3178554fe556c4b94fe78ac95ed8431eab1c3"
+      },
+      {
+        "path": "art/apes/terracotta-traveler.webp",
+        "bytes": 138922,
+        "sha256": "8054fa1e05b22fbf0fd1c9603bc42602f72fdec1a449008213622da08e77eacd"
+      },
+      {
+        "path": "art/atlantic-cartographer.webp",
+        "bytes": 186464,
+        "sha256": "ebed88b4bee573df0bab7e83af1857a0cb0f3dc3a2a8839a9e71763c85af8b13"
+      },
+      {
+        "path": "art/ceramic-maker.webp",
+        "bytes": 203626,
+        "sha256": "36aaf616a0f277b043b90a3a2acf639c5cf2145d6525d51f1f0d5b3bc9539c58"
+      },
+      {
+        "path": "art/hero.svg",
+        "bytes": 1963,
+        "sha256": "f8dc0924f1db377659f0e45f6ea4537750eb70a38e742d9059c3213e30d79f75"
+      },
+      {
+        "path": "art/nft-1.svg",
+        "bytes": 1963,
+        "sha256": "f8dc0924f1db377659f0e45f6ea4537750eb70a38e742d9059c3213e30d79f75"
+      },
+      {
+        "path": "art/nft-10.svg",
+        "bytes": 1963,
+        "sha256": "869d4aaeb383a57505b8c5544656828e603c77f1bf72a895fa4274829b6a9957"
+      },
+      {
+        "path": "art/nft-11.svg",
+        "bytes": 1963,
+        "sha256": "74df1bf976eb966d1e9da77009e6f0a19559972474cf492337c2be8d0a3b6f09"
+      },
+      {
+        "path": "art/nft-12.svg",
+        "bytes": 1964,
+        "sha256": "bfdaba693ed3183c836471943429c13c02b2dff13b1b2cb21196620ed3ff36b1"
+      },
+      {
+        "path": "art/nft-2.svg",
+        "bytes": 1964,
+        "sha256": "65594c5c39094dd05d6701d65bf2ff014f5c453eeab0a4929d949f4903d2ff8b"
+      },
+      {
+        "path": "art/nft-3.svg",
+        "bytes": 1964,
+        "sha256": "0c158adc30253b02b0af344eaa2baccc4dbec78516e595bb83120d9665999317"
+      },
+      {
+        "path": "art/nft-4.svg",
+        "bytes": 1964,
+        "sha256": "4b7b2109c09402be6fe34dd89a79c8342edba34e0fdf369c22bb6536da73c1fb"
+      },
+      {
+        "path": "art/nft-5.svg",
+        "bytes": 1965,
+        "sha256": "8a4df1a9a91ed43ee75dfba5e907f3677fab091f23831249a768ffd0fa0f296c"
+      },
+      {
+        "path": "art/nft-6.svg",
+        "bytes": 1965,
+        "sha256": "f253fbb03a18cacfd9ecfebd9051a30390c638ee4a2c1ebdf963f2e790719b45"
+      },
+      {
+        "path": "art/nft-7.svg",
+        "bytes": 1964,
+        "sha256": "372831191ceb6f2443702ecebc003eec1c9e8769af63e3870251abd6043320ec"
+      },
+      {
+        "path": "art/nft-8.svg",
+        "bytes": 1964,
+        "sha256": "e24503e7548f78f0f2692ad81df00d6b8a4d8f251c13cd5ce382f69b74a726a4"
+      },
+      {
+        "path": "art/nft-9.svg",
+        "bytes": 1964,
+        "sha256": "967bd848ac145ed5df31e98b75c6f022ef7790b3ec213e5c5eeb39df6ca3ed7b"
+      },
+      {
+        "path": "assets/application-DDX3Bbwd.js",
+        "bytes": 117783,
+        "sha256": "f06e612bbb698fa2ab893638f4cc5387051459cf101b2165a0343e53837fb892"
+      },
+      {
+        "path": "assets/arrow-left-CoJX7ZK0.js",
+        "bytes": 4543,
+        "sha256": "63f359a3223647a74561dfbff594c0a357a19d208cd77afb2e0bced97138444b"
+      },
+      {
+        "path": "assets/attempt-o7wZlnVp.js",
+        "bytes": 495,
+        "sha256": "a47d8eebcc3b4586114eb610a30034a32ea955a493f62ae9db76902d1e282039"
+      },
+      {
+        "path": "assets/bootstrap-Dlat6oX_.js",
+        "bytes": 2312,
+        "sha256": "f6fb82565fb38aeaae8fac20da517c1fd44ba837a244c7ab6aab3f5aa5539db4"
+      },
+      {
+        "path": "assets/browser-mLzkjooY.js",
+        "bytes": 339562,
+        "sha256": "e4b6874e170a8e3805737d4fb794cac6bebdde2847bd2ec0ffe390e5cea0516d"
+      },
+      {
+        "path": "assets/catalog-BUVZ1EZK.js",
+        "bytes": 1967,
+        "sha256": "1030a57241628dfe226b8448aa9050f5094000e3c8d71aee241997593873c3c3"
+      },
+      {
+        "path": "assets/demo-C7wDLMX1.js",
+        "bytes": 83,
+        "sha256": "fc4244edb31dd07411034aab35314dab0bf3ab28cbfdcc4f76b490507f7e4cbe"
+      },
+      {
+        "path": "assets/index-1haAk8x8.js",
+        "bytes": 978,
+        "sha256": "2759e40f5b81c5548f9553b5c1aeb9f78e7a715c4e694f26de8886fde7500af3"
+      },
+      {
+        "path": "assets/index-3RFFenbH.js",
+        "bytes": 3671,
+        "sha256": "f6f6e67d0b0f8252a1f0addfd50a7d3843b31d433a510c6430525fbb5660d1a5"
+      },
+      {
+        "path": "assets/index-BBZeIHJp.js",
+        "bytes": 454,
+        "sha256": "fe9977bcbdf6160d5eacbfab65c8b1dd852ba8dd773c59b05fb494f417171bde"
+      },
+      {
+        "path": "assets/index-BFK_gRJ8.js",
+        "bytes": 1174,
+        "sha256": "2deb8bfabe1010b4ae7ff1786115ac358dfd3da3ee67c940079eece26af9d066"
+      },
+      {
+        "path": "assets/index-BK4BjSYa.js",
+        "bytes": 12684,
+        "sha256": "ee3c5d78a64cf6ed4e365640644be130b51edaeea71b117b3711a0831ca7c7f5"
+      },
+      {
+        "path": "assets/index-BTHX-3pp.js",
+        "bytes": 709,
+        "sha256": "5105dc16e438d7a968375a07584a2d09e5abbe1b2df051d4e32818d916b1c730"
+      },
+      {
+        "path": "assets/index-BucaC7et.js",
+        "bytes": 1313,
+        "sha256": "d114d7a66d081c344bb991c94603a791643e80e3b0a8e81ec33c07a4c0f52e54"
+      },
+      {
+        "path": "assets/index-C2vSlyof.js",
+        "bytes": 7752,
+        "sha256": "a7d7395b875c177d04cfd6688ce5b9536dcba9feca9c6a0b0b8a3525f118761e"
+      },
+      {
+        "path": "assets/index-C8rEftuK.css",
+        "bytes": 121260,
+        "sha256": "caf349c1a5e7a18e1f5d9c149be3953411acd45eac84dc808e2232a109bb6dab"
+      },
+      {
+        "path": "assets/index-CBxFkzED.js",
+        "bytes": 6782,
+        "sha256": "8729a0d58ab1ff69838a0a934993a199fdb175f814e02c716bdb339d5c65e900"
+      },
+      {
+        "path": "assets/index-CC3bPbej.js",
+        "bytes": 10386,
+        "sha256": "6770c56a6a86a26d990d29dbefd659489eaf308d8ea9b42b1fad9141f359fac5"
+      },
+      {
+        "path": "assets/index-Cc7KERWg.js",
+        "bytes": 31565,
+        "sha256": "70edae97744e24716333d0b5271013613662d4a462fb8158cffc00f9b9b79fdc"
+      },
+      {
+        "path": "assets/index-CCDcP3e8.js",
+        "bytes": 8087,
+        "sha256": "235372d0c51b0f5cc7599f9a0aca245ab0f1cc4c763cede20059b4a0d3932e58"
+      },
+      {
+        "path": "assets/index-CTsULgIL.js",
+        "bytes": 7191,
+        "sha256": "46f75a9e0f6eb39c81855dd20dbfbeaa2a82ccef1436ed7d4903a7f885b4479a"
+      },
+      {
+        "path": "assets/index-DaVohJ1g.js",
+        "bytes": 457,
+        "sha256": "469f600507cdc243a6d78295edad6ed3da49cbc4705eda762014d85e00878a25"
+      },
+      {
+        "path": "assets/index-DBjqRdeX.js",
+        "bytes": 1775,
+        "sha256": "d5cd8be788c2d93a14603347b2e5027b94c7e6b9da82dfa024ab86503e9ee457"
+      },
+      {
+        "path": "assets/index-DEWnkggU.js",
+        "bytes": 4080,
+        "sha256": "afea9e8c6dfc089a0bb659727eb2e804e71dbb89f18c4692367cabe9031dbba3"
+      },
+      {
+        "path": "assets/index-DIzzlVHQ.js",
+        "bytes": 6644,
+        "sha256": "67150e6b222503b9bdb7525adcf4ab33e949193b1adbcade31cac8529cb26dd0"
+      },
+      {
+        "path": "assets/index-DKXDncH6.js",
+        "bytes": 3241,
+        "sha256": "9753e2830ac85fc36a3aa27e0321315658bd3ad0519c5c91a6b7cb694e77f4a6"
+      },
+      {
+        "path": "assets/index-hwOuSLYc.js",
+        "bytes": 1472,
+        "sha256": "ee15fff64db8aa1edd0362461411be2bae74d130bc0e3782ee8378c2501e5769"
+      },
+      {
+        "path": "assets/index-Lhjs-2Fj.js",
+        "bytes": 2334,
+        "sha256": "5b1597a6fba9e3dcb7017366664ad37463a618bd77bb8e26b699f8027f8deef7"
+      },
+      {
+        "path": "assets/index-ZVI1WQTY.js",
+        "bytes": 23100,
+        "sha256": "7ef73b79215f149bfa995500b09f8225fc51fb139bf2f18afddf79932f6ff7f7"
+      },
+      {
+        "path": "assets/react-runtime-BpIJT8mN.js",
+        "bytes": 223639,
+        "sha256": "cd16cb67e1c2db356ab2980cb429beeb36d042d03073f57014d9e98aecfcec4c"
+      },
+      {
+        "path": "assets/roboto-mono-cyrillic-ext-wght-normal-BUDPrIko.woff2",
+        "bytes": 35912,
+        "sha256": "6d72c2150c28b5305e7bfd0290edcf6038e556a9dd11a6ef15a1652548a35693"
+      },
+      {
+        "path": "assets/roboto-mono-cyrillic-wght-normal-HUlVHixE.woff2",
+        "bytes": 18592,
+        "sha256": "4052cc0b0f8b1b39da6cfaf90460f8b3c84dfc4b7562e9308ffa0998c3b9a005"
+      },
+      {
+        "path": "assets/roboto-mono-greek-wght-normal-BJJTbwTT.woff2",
+        "bytes": 14044,
+        "sha256": "308f763acd5f648b0556c1f79b848102f494d0450072cfd2fd8064ddf287f4f8"
+      },
+      {
+        "path": "assets/roboto-mono-latin-ext-wght-normal-QAYlOegK.woff2",
+        "bytes": 22916,
+        "sha256": "4cc0d52e0fa37c28084e0cbce3589a8ab32dd21e6ea619489c5f7c6e8c43b922"
+      },
+      {
+        "path": "assets/roboto-mono-latin-wght-normal-CZtBPCCa.woff2",
+        "bytes": 32796,
+        "sha256": "b81cd55177300649be8f95b3b747d721ce607e8ed2856e25bd0c630cfd631faf"
+      },
+      {
+        "path": "assets/roboto-mono-vietnamese-wght-normal-DlC-zuDL.woff2",
+        "bytes": 10308,
+        "sha256": "a4f562a288609dcb8f13e2b52296f1f3360957f09060735d4f00b5886e5bc7e0"
+      },
+      {
+        "path": "assets/schemas-BXmkP5do.js",
+        "bytes": 33868,
+        "sha256": "922fcf75cd18ac56341a2fa3e10ed27356affdf1693f259ac376b0accce51b41"
+      },
+      {
+        "path": "assets/tanstack-9-dFWv5N.js",
+        "bytes": 125601,
+        "sha256": "2e0f4cdd5bd38d009fd80c816c5b20cd06cacc91cd93b3b288c577f2dcda8ea6"
+      },
+      {
+        "path": "assets/useAddToCart-Cd315iAj.css",
+        "bytes": 2468,
+        "sha256": "eeb71c7879813018c6970ec0b1734f74c80b9746c3a11c7b6336148d7f405dfa"
+      },
+      {
+        "path": "assets/useAddToCart-Dkpsnts_.js",
+        "bytes": 147763,
+        "sha256": "179c48bced5aa87b22fb386568d8e5c671c32b96a887bacb80dfb7a5094534d9"
+      },
+      {
+        "path": "assets/useCart-BskLtEM2.js",
+        "bytes": 969,
+        "sha256": "c3d45b5420940a318404964f3cc83bdbef269fff1422d561f4f833ba1bb91480"
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 200,
+        "sha256": "b982f5b7b8fd9d373b74d465a0edf02dd51d8565d4a04772148be3424616e105"
+      },
+      {
+        "path": "figma/art/2a42ba5adc341c3d-360.webp",
+        "bytes": 29280,
+        "sha256": "3a808f766c8abbb6a502c32eeba18cf07a326c031dfd59769ceacfdd255ec54b"
+      },
+      {
+        "path": "figma/art/2a42ba5adc341c3d-600.webp",
+        "bytes": 72408,
+        "sha256": "4fa98976c51cd2c7c9bb290f4898abb872124b14be7b007369f549c21a027e91"
+      },
+      {
+        "path": "figma/art/2a42ba5adc341c3d.webp",
+        "bytes": 147234,
+        "sha256": "bae5d77cf72d83e883023946ff9fa9ea0bd6b2bf66b8e35821e51bb024ceb5aa"
+      },
+      {
+        "path": "figma/art/326df4c1c08c31c8-360.webp",
+        "bytes": 23484,
+        "sha256": "e3ed9587f07f84417d5b939a6887b147b5340c823762f58c58f5e135a0b8b556"
+      },
+      {
+        "path": "figma/art/326df4c1c08c31c8-600.webp",
+        "bytes": 55560,
+        "sha256": "07f24fcdb0f9e31c1ad1c277b6fd77c43a8d56f2de429e49a597b14172ad722c"
+      },
+      {
+        "path": "figma/art/326df4c1c08c31c8.webp",
+        "bytes": 121208,
+        "sha256": "925971671316a97765de56882fe7a6d2400afdd99265b6ca2c63a8d69699ca0b"
+      },
+      {
+        "path": "figma/art/9b25d8d72395aa62-360.webp",
+        "bytes": 26822,
+        "sha256": "821805dbc32e9e363d42dbdeafc8729483ecc204d6d84ac156ddc36a5c185d30"
+      },
+      {
+        "path": "figma/art/9b25d8d72395aa62-600.webp",
+        "bytes": 64614,
+        "sha256": "3e4245f3f55caddc956417dfab737402f1a6a9752c90c17e19776fab7fb26b1f"
+      },
+      {
+        "path": "figma/art/9b25d8d72395aa62.webp",
+        "bytes": 139954,
+        "sha256": "a93a88dd55d4d473af08c0d28985d79f62b231581834834da5b180af3980a70b"
+      },
+      {
+        "path": "figma/art/f20b58b99de12b6e-300.webp",
+        "bytes": 21062,
+        "sha256": "1eaf6dcf08291e9f40feccc1fcfcc3eadfc4384447ae29be3bd257c413de9010"
+      },
+      {
+        "path": "figma/art/f20b58b99de12b6e-360.webp",
+        "bytes": 28930,
+        "sha256": "67bd333c7361ce3a2158bdd9758959f714f86181533ed55201bc6a91965ba07f"
+      },
+      {
+        "path": "figma/art/f20b58b99de12b6e-600.webp",
+        "bytes": 64120,
+        "sha256": "273d87f1ff563e9b7346e8249b18e592d05884d8cf14539e2f1b528f0f763923"
+      },
+      {
+        "path": "figma/art/f20b58b99de12b6e.webp",
+        "bytes": 121896,
+        "sha256": "d75120fe23d50cf1ce78579759c25a8d947417d583c048dfef1475c2540a1153"
+      },
+      {
+        "path": "figma/cart/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "figma/cart/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/cart/imgCarouselDots.svg",
+        "bytes": 821,
+        "sha256": "beeb6d9dfad9ef3f7dc7caeb5eaee0fc5328c3df1ef96373f90536cd685e66dc"
+      },
+      {
+        "path": "figma/cart/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/cart/imgDelete.svg",
+        "bytes": 772,
+        "sha256": "ee4358bcb2278e59f6c01199b2b24e7feed4298fe232eb58f85ad89fdbfd5749"
+      },
+      {
+        "path": "figma/cart/imgFrame.svg",
+        "bytes": 280,
+        "sha256": "0b504b1508310c2a10af08dd071b3daf44df8826d2e54deb8d2e3e6884e07af9"
+      },
+      {
+        "path": "figma/cart/imgFrame1.svg",
+        "bytes": 344,
+        "sha256": "5727571b6801480b34da01eb9144cfbdf9b9889a59a00e0f6e53327c1a56d174"
+      },
+      {
+        "path": "figma/cart/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "figma/cart/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "figma/cart/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "figma/cart/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "figma/cart/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "figma/cart/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "db0ffe0bdb329e35aae7eccca6a96cfd36d76b3f361b197736fb2f118fb9121a"
+      },
+      {
+        "path": "figma/cart/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "302db3a02437cee0ad4c1618de06c0dfe642c94737d5669192781edf78e784d5"
+      },
+      {
+        "path": "figma/cart/imgLine7.svg",
+        "bytes": 252,
+        "sha256": "307dabdc450c6b535abcddff73316ea97a69c4eb0a9012dcb87c361441b82846"
+      },
+      {
+        "path": "figma/cart/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/cart/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/detail/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "figma/detail/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/detail/imgCarouselDots.svg",
+        "bytes": 821,
+        "sha256": "6deb89d6dad322ba24432799c97e8f0da097e5dc9612d2c482063583918d0416"
+      },
+      {
+        "path": "figma/detail/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/detail/imgEllipse24.svg",
+        "bytes": 545,
+        "sha256": "c4895a03a25710db14ab6ecaaae1b988d0cda576a631834db218364d357ef2f2"
+      },
+      {
+        "path": "figma/detail/imgEllipse25.svg",
+        "bytes": 541,
+        "sha256": "a072391f79c1558f6de5efc2e59b2e298c9e13b3e755b0b8d97075af5e823306"
+      },
+      {
+        "path": "figma/detail/imgEllipse26.svg",
+        "bytes": 545,
+        "sha256": "ef7f60c27e69b94ba2387a21da3c2a644887b3c714d6d43086eaa8b940d07936"
+      },
+      {
+        "path": "figma/detail/imgEllipse27.svg",
+        "bytes": 545,
+        "sha256": "c1af46bba8e994ff13ca34f3a336c04998f120309638baed0ed12324a1dd9c82"
+      },
+      {
+        "path": "figma/detail/imgFrame.svg",
+        "bytes": 279,
+        "sha256": "3c3b68b7be3648b5a5cf1f3cf8442ae0a29174b87a02e24e0f806def1d0b4e83"
+      },
+      {
+        "path": "figma/detail/imgFrame1.svg",
+        "bytes": 334,
+        "sha256": "a59305fbc255cd7493223c7677d6a3acd4b076522ff5ba77dfd78132863ed917"
+      },
+      {
+        "path": "figma/detail/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "figma/detail/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "figma/detail/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "figma/detail/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "figma/detail/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "figma/detail/imgFrame238.svg",
+        "bytes": 1276,
+        "sha256": "014b44cf6c3629ddc2581fbeed92714841fce707fcf4e1f93b958317e28fef15"
+      },
+      {
+        "path": "figma/detail/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "0fa90a80e18e338a71170d39584b98127fe12e317d6cdd72c59f89fb65ed8be0"
+      },
+      {
+        "path": "figma/detail/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "5b75976d2c5ae12509e955a4a89f9671cfd354f7cecd96b8f32e40af5998271f"
+      },
+      {
+        "path": "figma/detail/imgLine5.svg",
+        "bytes": 252,
+        "sha256": "5720dc3915d58568d6d2671bac7dc30498591f4cb3e110e8fcb06fb43b38ac66"
+      },
+      {
+        "path": "figma/detail/imgLine6.svg",
+        "bytes": 242,
+        "sha256": "d2dee6dbb4797d152e94cc2fb224385d08d7df4c31c26dd61d089df4a6201341"
+      },
+      {
+        "path": "figma/detail/imgLinkedin.svg",
+        "bytes": 534,
+        "sha256": "ff3cb7cf633dbe6fa43f7d47c7d3c2f358b4318d0418804405947d7344d76ae3"
+      },
+      {
+        "path": "figma/detail/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/detail/imgMessage.svg",
+        "bytes": 1222,
+        "sha256": "3b1d83e85ce80e2c0398926f8031ff9566af60e334c68a72ecc910e75794d382"
+      },
+      {
+        "path": "figma/detail/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/detail/imgStar.svg",
+        "bytes": 1251,
+        "sha256": "2825eb7248e6d55fa34c3c85a38529746cc6437791e1f7860c2321a3ce0ac453"
+      },
+      {
+        "path": "figma/detail/imgStar1.svg",
+        "bytes": 1251,
+        "sha256": "385da0b35478b0ed92054eacb545ace8d11977f50fb342327632dc01b3596561"
+      },
+      {
+        "path": "figma/detail/imgTwitter.svg",
+        "bytes": 1234,
+        "sha256": "6c4b682b4ed5eb78efe0be927a88dcaa91bd65cbd8cfe7fc8e4914f06c195257"
+      },
+      {
+        "path": "figma/home/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "figma/home/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "figma/home/imgArrowRight.svg",
+        "bytes": 565,
+        "sha256": "35f08d7598b8fdea032f5ec34e788ca9413d427d8ddfdd92f1908bc4d02b9758"
+      },
+      {
+        "path": "figma/home/imgArrowRight2.svg",
+        "bytes": 451,
+        "sha256": "b3542159d4936332fe1ef98342f796451426e4898b1d4f457817ebac7e1b32e7"
+      },
+      {
+        "path": "figma/home/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/home/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/home/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "figma/home/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "figma/home/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "figma/home/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "figma/home/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "figma/home/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "figma/home/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "figma/home/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "figma/home/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "ae1600c325d7b0183acec9b5b048d426959e69f92851f9aaa8d77311fc06bb2c"
+      },
+      {
+        "path": "figma/home/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "figma/home/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "figma/home/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/home/imgMaskGroup.svg",
+        "bytes": 829,
+        "sha256": "311d5a7032b9d800a920f1428f6c3f766ee96dcd0090e3ba906ba6cacda0f504"
+      },
+      {
+        "path": "figma/home/imgRectangle3.svg",
+        "bytes": 199,
+        "sha256": "7794c68c7090f9e0ef137f544699c583a9f8b2de1b293f504631caec71863c4d"
+      },
+      {
+        "path": "figma/home/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/login/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "figma/login/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "figma/login/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/login/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/login/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "figma/login/imgFacebook1.svg",
+        "bytes": 644,
+        "sha256": "989807e1d00ec515d541e0c737162ef3c086d676e06fcf40225d78b85cb23e6f"
+      },
+      {
+        "path": "figma/login/imgFrame.svg",
+        "bytes": 1228,
+        "sha256": "7e74c795d766357b6b5a82fa6c79cf512dc1813b4751d9570ad45bbc6ca1d808"
+      },
+      {
+        "path": "figma/login/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "figma/login/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "figma/login/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "5e54b72e7dad45e8eb429734267be70e8edd9ce5a2a250c86fc908c0bf729553"
+      },
+      {
+        "path": "figma/login/imgHide.svg",
+        "bytes": 1318,
+        "sha256": "7ca97961ae6f9812bb4bf157c085f6539ceacad412b62310db70afac063ed567"
+      },
+      {
+        "path": "figma/login/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "figma/login/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "26553206cb96630ee07bf127eb0efba5402b1e6e065d785a150f8af5ed0ca447"
+      },
+      {
+        "path": "figma/login/imgLine4.svg",
+        "bytes": 222,
+        "sha256": "4ae11a696d33dac86c3d31b454b7225a7cf5b026a7f34c9cb32f765cf6b9542a"
+      },
+      {
+        "path": "figma/login/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "figma/login/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "figma/login/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "a3cbcbf3189627cc40c282719dfc2890b0d7a6c10cc639a431ea7888a581657e"
+      },
+      {
+        "path": "figma/login/imgLine8.svg",
+        "bytes": 225,
+        "sha256": "b94f607d6df7479f9ef84377b6eb9356f37daf902be137f8bfc510de7609d4bb"
+      },
+      {
+        "path": "figma/login/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/login/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/login/imgShopping1.svg",
+        "bytes": 1628,
+        "sha256": "87c1891c989d13761042b7eafed139d7791e9c95fa8bd91062682bf5a4396052"
+      },
+      {
+        "path": "figma/login/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "figma/login/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "figma/login/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "figma/login/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "figma/login/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "figma/login/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "figma/login/imgX.svg",
+        "bytes": 787,
+        "sha256": "a434085336d2581c34cc1e853dc35399644244590ec7d3751f884cbaf62d4dfa"
+      },
+      {
+        "path": "figma/manifest.json",
+        "bytes": 15312,
+        "sha256": "bf98436892f485f36f21d5bd6246deec0931bd6bfb626aedb76b6d98ee8a145d"
+      },
+      {
+        "path": "figma/mobile-detail/imgArrowLeft2.svg",
+        "bytes": 450,
+        "sha256": "66aea4dd7e0e227a5cbb167fb376767ac27655d30f65c7a53b2205cfce3d976e"
+      },
+      {
+        "path": "figma/mobile-detail/imgEllipse25.svg",
+        "bytes": 539,
+        "sha256": "2d6fbd07c215a1b7f227996dddea8fdf7d5deb36058dd7f10f1626c69032f331"
+      },
+      {
+        "path": "figma/mobile-detail/imgEllipse26.svg",
+        "bytes": 543,
+        "sha256": "7fc52a6e0e11a701eb6f7f8d9d99c3000965054bf10bfca8dfe89d8dad110122"
+      },
+      {
+        "path": "figma/mobile-detail/imgEllipse27.svg",
+        "bytes": 543,
+        "sha256": "42a22f798ce1948dbede58dffb2aa5354a8fd7196245ed25e0398b7d7f4dc2b4"
+      },
+      {
+        "path": "figma/mobile-detail/imgFrame.svg",
+        "bytes": 280,
+        "sha256": "47af0f9b2bbb018a225118b4ba0f1ccc2a5887cb9d90efd09ada691ea34deb56"
+      },
+      {
+        "path": "figma/mobile-detail/imgFrame1.svg",
+        "bytes": 344,
+        "sha256": "5727571b6801480b34da01eb9144cfbdf9b9889a59a00e0f6e53327c1a56d174"
+      },
+      {
+        "path": "figma/mobile-detail/imgGroup62.svg",
+        "bytes": 400,
+        "sha256": "50feb8619fadac3f6031988ac9d918ed76e9947f27f83acd028aaf5a54fcf314"
+      },
+      {
+        "path": "figma/mobile-detail/imgShop.svg",
+        "bytes": 1211,
+        "sha256": "2445ac9651089fbab54fc0c49f293f15046e8fdb98218abf1bb92fba47ffc361"
+      },
+      {
+        "path": "figma/mobile-detail/imgStar.svg",
+        "bytes": 1289,
+        "sha256": "a707499d73b16690d029df6070f372ddee12e700884fdbaae4d68ad1e00733dd"
+      },
+      {
+        "path": "figma/mobile-detail/imgVector.svg",
+        "bytes": 1758,
+        "sha256": "7ff44d980c5750f1c5b36890670b201cc1d52e31ed4febeade1c079e292f70cc"
+      },
+      {
+        "path": "figma/mobile-home/imgArrowRight.svg",
+        "bytes": 568,
+        "sha256": "c52fe7279962435f332d481e23e18d2024017e241408e404cf73e51cc85bc3d7"
+      },
+      {
+        "path": "figma/mobile-home/imgEllipse39.svg",
+        "bytes": 486,
+        "sha256": "88966ba04e6896065dbf8e98a615fea2c41adcd49f1f25ae7c02a577965d3ed6"
+      },
+      {
+        "path": "figma/mobile-home/imgFilter.svg",
+        "bytes": 1097,
+        "sha256": "626a33e9cf87b0114eb7d76f30b3215e3ea50d6b6dafebce66f47c262ac268af"
+      },
+      {
+        "path": "figma/mobile-home/imgFrame4.svg",
+        "bytes": 393,
+        "sha256": "9243a5140bc3a208bf7c002a6fda07d8d7f8e5ac2442a494a1a1b943935a736f"
+      },
+      {
+        "path": "figma/mobile-home/imgFrame410.svg",
+        "bytes": 1938,
+        "sha256": "3c3dc151493f0b8add40af0b0b2bfa955ade927ca7ccb4e077a35ea17819916a"
+      },
+      {
+        "path": "figma/mobile-home/imgGroup58.svg",
+        "bytes": 1961,
+        "sha256": "e5cd6f43676492095d18826cb6a9d3c1999249540d8b5f83d1c3a169f40f7ef5"
+      },
+      {
+        "path": "figma/mobile-home/imgHome.svg",
+        "bytes": 958,
+        "sha256": "817217a0fb3c14a94ec579cacd868fb46c74815085c5bec20571fcbff5a3fd1d"
+      },
+      {
+        "path": "figma/mobile-home/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "c4608a9dd20da1ff0792960a1dcfea1ef08a759b77846e8fd3cc3ee449ad8d3d"
+      },
+      {
+        "path": "figma/mobile-home/imgMaskGroup.svg",
+        "bytes": 1409,
+        "sha256": "81e705a5e521900cc42861cd468f817ae73541f7286caf942716e543df6173f0"
+      },
+      {
+        "path": "figma/mobile-home/imgSearch.svg",
+        "bytes": 919,
+        "sha256": "4c37bff9a264e486854cbd355ad3e5ee90c5f8e956dd495013effa1a2fcc87ec"
+      },
+      {
+        "path": "figma/mobile-home/imgShop.svg",
+        "bytes": 1211,
+        "sha256": "b139c41ef0e3cd55a37bc5e6c59a1d12397edea0bc673a68d14ee0e27ede4847"
+      },
+      {
+        "path": "figma/mobile-home/imgUser.svg",
+        "bytes": 783,
+        "sha256": "685a52bee52914a28fa470d693af74235322f879e4ce77c823c6357b7de114a7"
+      },
+      {
+        "path": "figma/mobile-home/imgVector.svg",
+        "bytes": 1216,
+        "sha256": "5e4a0cdcc377948550b28d2aae6c5709b7e27ebf1ebdbe41be06393fb42623e7"
+      },
+      {
+        "path": "figma/mobile-home/imgVector1.svg",
+        "bytes": 925,
+        "sha256": "fd0bba2847544e3defee9d845af26b2e6cd1242bbeda89dc1a7efd95f492dd05"
+      },
+      {
+        "path": "figma/mobile-home/imgVector2.svg",
+        "bytes": 873,
+        "sha256": "6e762edf1dfd8e8fe482370cb42bab8a0aa34e96dd1d8c1aca5b06cd926463cb"
+      },
+      {
+        "path": "figma/mobile-home/imgVector3.svg",
+        "bytes": 746,
+        "sha256": "f374805f6712c71c467df0230cadcb997b4054530b577e6466a3d9b8b41207c9"
+      },
+      {
+        "path": "figma/mobile-home/imgVector4.svg",
+        "bytes": 934,
+        "sha256": "225ff31a985101fd13f10ba6b7554b8b1f200de5e42f5995380fdfd2502cd672"
+      },
+      {
+        "path": "figma/mobile-home/imgVector5.svg",
+        "bytes": 795,
+        "sha256": "cf24e892c1ecce9c16ff0ea5a731fb6a72834a101622f64dcb862bbb0ec1f1a0"
+      },
+      {
+        "path": "figma/mobile-home/imgVector6.svg",
+        "bytes": 880,
+        "sha256": "287fb8dff06b629aaccc32646223bd568543613e31a72b75a460963686f0293f"
+      },
+      {
+        "path": "figma/mobile-login/imgFacebook1.svg",
+        "bytes": 642,
+        "sha256": "0445e8ea7de3d164caf154b3b19f583277c8b0906fa88abe5977701031e4841d"
+      },
+      {
+        "path": "figma/mobile-login/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "figma/mobile-login/imgHide.svg",
+        "bytes": 1309,
+        "sha256": "07aba54d50501f9249a3b1b208d27c06b5bc9f49a9d43b2991448174c5848fed"
+      },
+      {
+        "path": "figma/mobile-login/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "392cbf844f0d1e69ec53eb356dbc4c72b8212a5632b6902af30a6b78609278a7"
+      },
+      {
+        "path": "figma/mobile-login/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "figma/mobile-login/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "figma/mobile-login/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "figma/mobile-login/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "figma/mobile-login/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "figma/mobile-login/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "figma/mobile-payment/imgArrowLeft2.svg",
+        "bytes": 450,
+        "sha256": "bfdac5f3714203b54490a6ac7dc331bae684590860c0d78705918f4f6e3cdc82"
+      },
+      {
+        "path": "figma/mobile-payment/imgEllipse38.svg",
+        "bytes": 383,
+        "sha256": "b90365adfbf2dd93f3de1a06564372c1b4f45433cb6ccc34244318d6aeaeb16b"
+      },
+      {
+        "path": "figma/mobile-payment/imgEllipse44.svg",
+        "bytes": 373,
+        "sha256": "c9441a1b1db7b411ed6b553ce28a6571da2eb1b04dd626c34a6be3b9fe7e55e3"
+      },
+      {
+        "path": "figma/mobile-payment/imgEllipse46.svg",
+        "bytes": 372,
+        "sha256": "5a2a327d2240b6312c20f7d887fde33933003499c3ac12c378619a89406f732c"
+      },
+      {
+        "path": "figma/mobile-payment/imgGroup87.svg",
+        "bytes": 396,
+        "sha256": "00b69ee0eacaaacbbc474a9724df7a7f35d0949d5856e427385d1233c41b554d"
+      },
+      {
+        "path": "figma/mobile-payment/imgGroup90.svg",
+        "bytes": 456,
+        "sha256": "97666ab8acffb9e6c20ce60a7d02e3c6c9bfe22fec4f7b708e22015c82f01875"
+      },
+      {
+        "path": "figma/mobile-payment/imgWallet.svg",
+        "bytes": 1008,
+        "sha256": "3f641924aee47acbf153a59bff3e84780dd6c05910ccd29195e2a58f5f1894c1"
+      },
+      {
+        "path": "figma/mobile-register/imgFacebook1.svg",
+        "bytes": 642,
+        "sha256": "96a93ad0e8b8aa426089c8486d15937582d67a65a903c17e5e4dc9448094cb6a"
+      },
+      {
+        "path": "figma/mobile-register/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "figma/mobile-register/imgHide.svg",
+        "bytes": 1309,
+        "sha256": "07aba54d50501f9249a3b1b208d27c06b5bc9f49a9d43b2991448174c5848fed"
+      },
+      {
+        "path": "figma/mobile-register/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "392cbf844f0d1e69ec53eb356dbc4c72b8212a5632b6902af30a6b78609278a7"
+      },
+      {
+        "path": "figma/mobile-register/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "figma/mobile-register/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "figma/mobile-register/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "figma/mobile-register/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "figma/mobile-register/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "figma/mobile-register/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "figma/order/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "figma/order/imgArrowDown.svg",
+        "bytes": 605,
+        "sha256": "60d5d9aebbf5cd7e5abd6e0cc8f642d56fe56f038a4796ad0964d6da1e1e8c56"
+      },
+      {
+        "path": "figma/order/imgArrowDown1.svg",
+        "bytes": 605,
+        "sha256": "4373c8391935271d4d6de11877337be7c65fd66bf4f1f565db079fdeaca1d197"
+      },
+      {
+        "path": "figma/order/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/order/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/order/imgEllipse31.svg",
+        "bytes": 354,
+        "sha256": "b3602dc9e9420e3bfa34221e919e8aac29acb86fefbfb134a63260df5ad3213a"
+      },
+      {
+        "path": "figma/order/imgEllipse32.svg",
+        "bytes": 372,
+        "sha256": "96e51a214e55e19807221accd94017444a41b4bdcad21aa448b8b826b4d58af4"
+      },
+      {
+        "path": "figma/order/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "figma/order/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "figma/order/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "figma/order/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "figma/order/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "figma/order/imgFrame323.svg",
+        "bytes": 457,
+        "sha256": "d3db0b08e8609049dd555aa7b5763d898f1baf41a035e4b7a1ad5fba824ae48a"
+      },
+      {
+        "path": "figma/order/imgGroup.svg",
+        "bytes": 6337,
+        "sha256": "2abdea35aa83b26b060de908e5e9714e49ffdaa3c2bf2c93930e141367dbb69e"
+      },
+      {
+        "path": "figma/order/imgLine10.svg",
+        "bytes": 223,
+        "sha256": "5a9dc781c38b60b5bdb3c6c1e630fba7f42e649f6c61ce5d7d70b0f7d34816d8"
+      },
+      {
+        "path": "figma/order/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "4bdbc18f053fa7efd0fa76257076486ed257205ad7d1623da340b97dc6906a4e"
+      },
+      {
+        "path": "figma/order/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "0b1eefd4cd20cf5d625006854ef2981b5721fed9c1584df78cef6eb0b17849cf"
+      },
+      {
+        "path": "figma/order/imgLine4.svg",
+        "bytes": 249,
+        "sha256": "ec867e18aa6cdbb659f1b35ccb7ad1eac30f75995d38283d91c88135c8da90b1"
+      },
+      {
+        "path": "figma/order/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/order/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/order/imgX.svg",
+        "bytes": 803,
+        "sha256": "6434dc289eab154a742c48c6a4942b40bb2bf0ab38c93c10fb79682e4b4eeb80"
+      },
+      {
+        "path": "figma/payment/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "figma/payment/imgArrowDown.svg",
+        "bytes": 605,
+        "sha256": "60d5d9aebbf5cd7e5abd6e0cc8f642d56fe56f038a4796ad0964d6da1e1e8c56"
+      },
+      {
+        "path": "figma/payment/imgArrowDown1.svg",
+        "bytes": 605,
+        "sha256": "4373c8391935271d4d6de11877337be7c65fd66bf4f1f565db079fdeaca1d197"
+      },
+      {
+        "path": "figma/payment/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/payment/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/payment/imgEllipse31.svg",
+        "bytes": 354,
+        "sha256": "b3602dc9e9420e3bfa34221e919e8aac29acb86fefbfb134a63260df5ad3213a"
+      },
+      {
+        "path": "figma/payment/imgEllipse32.svg",
+        "bytes": 372,
+        "sha256": "96e51a214e55e19807221accd94017444a41b4bdcad21aa448b8b826b4d58af4"
+      },
+      {
+        "path": "figma/payment/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "figma/payment/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "figma/payment/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "figma/payment/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "figma/payment/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "figma/payment/imgFrame323.svg",
+        "bytes": 457,
+        "sha256": "d3db0b08e8609049dd555aa7b5763d898f1baf41a035e4b7a1ad5fba824ae48a"
+      },
+      {
+        "path": "figma/payment/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "4bdbc18f053fa7efd0fa76257076486ed257205ad7d1623da340b97dc6906a4e"
+      },
+      {
+        "path": "figma/payment/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "0b1eefd4cd20cf5d625006854ef2981b5721fed9c1584df78cef6eb0b17849cf"
+      },
+      {
+        "path": "figma/payment/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/payment/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/profile/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "figma/profile/imgActivity.svg",
+        "bytes": 1026,
+        "sha256": "d102cc0ed827fc20138ad559e2499aaec69cbd182a583fd71cf7918b491b5556"
+      },
+      {
+        "path": "figma/profile/imgArrowDown.svg",
+        "bytes": 602,
+        "sha256": "bd200d44e9af2433fa96e52678a740df8824c614d594438b56a9b05489f92fb9"
+      },
+      {
+        "path": "figma/profile/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/profile/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/profile/imgDangerTriangle.svg",
+        "bytes": 878,
+        "sha256": "8b04700608134c5c2135eb7905dcee4fd0b3d4baed6c062e11f2277e7fcc98be"
+      },
+      {
+        "path": "figma/profile/imgDownload.svg",
+        "bytes": 798,
+        "sha256": "20457f1ab9ab66289a4feecbca17e0dad534c3b7e0cab48b6357e71ea2552c1b"
+      },
+      {
+        "path": "figma/profile/imgHeart1.svg",
+        "bytes": 1778,
+        "sha256": "d3b60820cc91342d7a0921434a30d5c18ac05df8a91bc88769a16667a967c169"
+      },
+      {
+        "path": "figma/profile/imgHide.svg",
+        "bytes": 3806,
+        "sha256": "906f499a566a4e2ad96baf6e7b40f6c86e8fe6b2c1bab93af77dff44a73c6048"
+      },
+      {
+        "path": "figma/profile/imgImage2.svg",
+        "bytes": 1046,
+        "sha256": "6e8937ac4f14f41c17ab0a738c1083d5b82d863b7b978d5b7cbe15fd20c2ae13"
+      },
+      {
+        "path": "figma/profile/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "figma/profile/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "9f32c2b8af7f1b175b669a1484b692735781563f2118eeaf5c30a5f244a71b22"
+      },
+      {
+        "path": "figma/profile/imgLocation.svg",
+        "bytes": 1540,
+        "sha256": "655486a1eed0d325c7c25906abadd2b50c67f395a80eb25aab90ea0f31e52c92"
+      },
+      {
+        "path": "figma/profile/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/profile/imgLogout1.svg",
+        "bytes": 786,
+        "sha256": "479a567f079a032606e21820202255fbcd4588fbdc45d1195d0a2d159c4abd43"
+      },
+      {
+        "path": "figma/profile/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/profile/imgShopping1.svg",
+        "bytes": 1618,
+        "sha256": "90c610853ba0b5467a80fb352516e547a5b44c7d793bf2bafed61e2e7876399b"
+      },
+      {
+        "path": "figma/profile/imgUser.svg",
+        "bytes": 1422,
+        "sha256": "82dad8db63f10f7239ff4494436c95bfbfea62c7fb8bff442c8744699286097c"
+      },
+      {
+        "path": "figma/register/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "figma/register/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "figma/register/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/register/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/register/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "figma/register/imgFacebook1.svg",
+        "bytes": 644,
+        "sha256": "434d15ce624cf8819a38c076c532185e771ea1eda1cb5ecaf80bcfe8bc6dc77d"
+      },
+      {
+        "path": "figma/register/imgFrame.svg",
+        "bytes": 1228,
+        "sha256": "bb7dee15114b3007714aa6ae08ee7f8be1a6e0caca3267344442df9f692d5034"
+      },
+      {
+        "path": "figma/register/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "figma/register/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "figma/register/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "5e54b72e7dad45e8eb429734267be70e8edd9ce5a2a250c86fc908c0bf729553"
+      },
+      {
+        "path": "figma/register/imgHide.svg",
+        "bytes": 1318,
+        "sha256": "7ca97961ae6f9812bb4bf157c085f6539ceacad412b62310db70afac063ed567"
+      },
+      {
+        "path": "figma/register/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "figma/register/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "26553206cb96630ee07bf127eb0efba5402b1e6e065d785a150f8af5ed0ca447"
+      },
+      {
+        "path": "figma/register/imgLine4.svg",
+        "bytes": 222,
+        "sha256": "4ae11a696d33dac86c3d31b454b7225a7cf5b026a7f34c9cb32f765cf6b9542a"
+      },
+      {
+        "path": "figma/register/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "figma/register/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "figma/register/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "a3cbcbf3189627cc40c282719dfc2890b0d7a6c10cc639a431ea7888a581657e"
+      },
+      {
+        "path": "figma/register/imgLine8.svg",
+        "bytes": 225,
+        "sha256": "b94f607d6df7479f9ef84377b6eb9356f37daf902be137f8bfc510de7609d4bb"
+      },
+      {
+        "path": "figma/register/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/register/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/register/imgShopping1.svg",
+        "bytes": 1628,
+        "sha256": "a755611d9a1d6753872d853588d80679a87297a888b208f70526887db2766b0f"
+      },
+      {
+        "path": "figma/register/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "figma/register/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "figma/register/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "figma/register/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "figma/register/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "figma/register/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "figma/register/imgX.svg",
+        "bytes": 787,
+        "sha256": "a434085336d2581c34cc1e853dc35399644244590ec7d3751f884cbaf62d4dfa"
+      },
+      {
+        "path": "figma/wallets/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "figma/wallets/imgActivity.svg",
+        "bytes": 1026,
+        "sha256": "d102cc0ed827fc20138ad559e2499aaec69cbd182a583fd71cf7918b491b5556"
+      },
+      {
+        "path": "figma/wallets/imgArrowDown.svg",
+        "bytes": 602,
+        "sha256": "bd200d44e9af2433fa96e52678a740df8824c614d594438b56a9b05489f92fb9"
+      },
+      {
+        "path": "figma/wallets/imgArrowDown1.svg",
+        "bytes": 602,
+        "sha256": "489bd4c61287603cbec765d03549baa46f6e6f09c9ad8cda14152a9c22d6ba21"
+      },
+      {
+        "path": "figma/wallets/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "figma/wallets/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "figma/wallets/imgDangerTriangle.svg",
+        "bytes": 878,
+        "sha256": "8b04700608134c5c2135eb7905dcee4fd0b3d4baed6c062e11f2277e7fcc98be"
+      },
+      {
+        "path": "figma/wallets/imgDownload.svg",
+        "bytes": 798,
+        "sha256": "20457f1ab9ab66289a4feecbca17e0dad534c3b7e0cab48b6357e71ea2552c1b"
+      },
+      {
+        "path": "figma/wallets/imgEllipse22.svg",
+        "bytes": 385,
+        "sha256": "08f4c145aacca2086193ae9ff416b97ce2f29de6865a6d9def4899a46dd8a26b"
+      },
+      {
+        "path": "figma/wallets/imgHeart1.svg",
+        "bytes": 1778,
+        "sha256": "d3b60820cc91342d7a0921434a30d5c18ac05df8a91bc88769a16667a967c169"
+      },
+      {
+        "path": "figma/wallets/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "figma/wallets/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "9f32c2b8af7f1b175b669a1484b692735781563f2118eeaf5c30a5f244a71b22"
+      },
+      {
+        "path": "figma/wallets/imgLocation.svg",
+        "bytes": 1530,
+        "sha256": "a61067d5138c0b60b63cee291b3c4f589a6738224aeaee2f62d9f25dff9930a0"
+      },
+      {
+        "path": "figma/wallets/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "figma/wallets/imgLogout1.svg",
+        "bytes": 786,
+        "sha256": "479a567f079a032606e21820202255fbcd4588fbdc45d1195d0a2d159c4abd43"
+      },
+      {
+        "path": "figma/wallets/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "figma/wallets/imgShopping1.svg",
+        "bytes": 1618,
+        "sha256": "97a7adbd6c896b348dc4b6933561b13349cb0d8ceab83f897940a86eb97e1194"
+      },
+      {
+        "path": "figma/wallets/imgUser.svg",
+        "bytes": 1422,
+        "sha256": "bdb499e7f8a91304bc89e6692c0c9bb99a2811d29ea5188e818adb7e91288a44"
+      },
+      {
+        "path": "index.html",
+        "bytes": 889,
+        "sha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783"
+      },
+      {
+        "path": "mockServiceWorker.js",
+        "bytes": 9666,
+        "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
+      }
+    ],
+    "sourceRevision": {
+      "commit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+      "changedFiles": [
+        "M README.md",
+        " M docs/hosting.md",
+        " M docs/quality-gates.md",
+        " M docs/requirements.json",
+        " M reports/favorite-login-catalog-desktop.png",
+        " M reports/favorite-login-detail-desktop.png",
+        " M reports/favorite-saved-detail-desktop.png",
+        " M reports/lighthouse/summary.json",
+        " M reports/release-readiness.json",
+        " M reports/revisao-adversarial-atual.json",
+        "?? reports/card-status-green.json",
+        "?? reports/card-status-red.json",
+        "?? reports/card-status-visual.json",
+        "?? reports/card-status/",
+        "?? reports/historical/vercel-initial-prebuilt/",
+        "?? reports/historical/vercel-remote-build/",
+        "?? reports/lighthouse/vercel/",
+        "?? reports/production-vercel.json",
+        "?? reports/vercel-deployment.json",
+        "?? reports/vercel-host-verification.json"
+      ]
+    },
+    "runtimeSourceFingerprint": "4abcc3b4ee90f4682494bece9595e5cd9478b2b7d934e64e35f2c29f9b72b297",
+    "runtimeSources": [
+      {
+        "path": "src/app/components/AppShell/index.tsx",
+        "bytes": 1822,
+        "sha256": "a62b8b565670ca0a2e85f5a95c9b4975cff56377360dfe6b87e005212be7631d"
+      },
+      {
+        "path": "src/app/components/AppShell/useAppShell.ts",
+        "bytes": 1839,
+        "sha256": "6dc77f1ba9bc848e104f014a452e6da759970da1c565f243ddc802cebcedb02d"
+      },
+      {
+        "path": "src/app/components/BootstrapSkeleton/index.tsx",
+        "bytes": 2461,
+        "sha256": "51ad0c22ca84d2210d4fa5f57848864a945543ce5a9c3003b1cb633daf27aa31"
+      },
+      {
+        "path": "src/app/components/BootstrapSkeleton/styles.css",
+        "bytes": 1393,
+        "sha256": "0c03c99e9b69e50b8e7108a64477e89a367c8c61eaabad7a54c71fae00098991"
+      },
+      {
+        "path": "src/app/components/GenericPageSkeleton/index.tsx",
+        "bytes": 366,
+        "sha256": "96647125594140fad713534de90e4ae55c823881208c063e9c3bc5b905a8def0"
+      },
+      {
+        "path": "src/app/components/NotFound/index.tsx",
+        "bytes": 393,
+        "sha256": "bc239f71edf3d2f8a731679078f72db75aad8e7a2560f2b403cfc5867e0ad27f"
+      },
+      {
+        "path": "src/app/components/RouteErrorBoundary/index.tsx",
+        "bytes": 490,
+        "sha256": "12845af831667f317ab8c62a37c951d3b1b0162c0d7cfd36d2e368ad5e9819af"
+      },
+      {
+        "path": "src/app/components/RouteErrorBoundary/RouteErrorBoundary.test.ts",
+        "bytes": 1595,
+        "sha256": "07f542ce227a845ab0864e744fb230f6cb0fe4ff240e8fed80b43ca22be1d4fc"
+      },
+      {
+        "path": "src/app/components/RouteErrorFallback/index.tsx",
+        "bytes": 447,
+        "sha256": "09239dc790edf40350cfb537ef63152e9e93c9ef2b9889c1e49984c4f5c837fc"
+      },
+      {
+        "path": "src/app/components/RouteErrorFallback/useErrorRecovery.ts",
+        "bytes": 163,
+        "sha256": "501628709154dd5373c3ed0216aad5aeb0862bc10eaa6322f0ddf73edd6b4b32"
+      },
+      {
+        "path": "src/app/components/RoutePending/index.tsx",
+        "bytes": 370,
+        "sha256": "535b792b7ab617fa67d2db364bbcf88ee5b7acd912445343fccf834cef5697bb"
+      },
+      {
+        "path": "src/app/components/RoutePending/useRoutePending.ts",
+        "bytes": 217,
+        "sha256": "f288a254f90dd0e797d072b34fd8eab8f3ab3630421ac294705e79ecf266a4bd"
+      },
+      {
+        "path": "src/app/components/SessionGuard/index.tsx",
+        "bytes": 1202,
+        "sha256": "081297bd1aa7e5737a2079ec76959049d5e6a82119d964c064702340e3bb0c2c"
+      },
+      {
+        "path": "src/app/components/SessionGuard/useSessionGuard.ts",
+        "bytes": 781,
+        "sha256": "da6aff123c3dc4c03e35216c226bfe72a4607e35269357de9022a00b3e2ae099"
+      },
+      {
+        "path": "src/app/routes/NftRoute/index.tsx",
+        "bytes": 228,
+        "sha256": "abe41f4e18a3533a2091786912f459b2f4b598d1a9788174876a251de484d331"
+      },
+      {
+        "path": "src/app/routes/NftRoute/useNftRoute.ts",
+        "bytes": 143,
+        "sha256": "108480169938cc25217eb207d74713d2aa2e4c633c500ed68d72274addaafdf7"
+      },
+      {
+        "path": "src/app/routes/OrderRoute/index.tsx",
+        "bytes": 215,
+        "sha256": "153745cce3d965c89b741fe339b6dc9c95fe6788504830ac929a78ba95cd3c68"
+      },
+      {
+        "path": "src/app/routes/OrderRoute/useOrderRoute.ts",
+        "bytes": 145,
+        "sha256": "5633b4f04a30991586af82db46fdf794fbc81141657b5355d67feeb7620de61d"
+      },
+      {
+        "path": "src/app/routing/preload.test.ts",
+        "bytes": 4724,
+        "sha256": "9dd3e87337b8262fb3699e0e875307adcf93ac33912415a23168eb0e7919908d"
+      },
+      {
+        "path": "src/app/routing/preload.ts",
+        "bytes": 1339,
+        "sha256": "0f4352f16ce6674a62ee2933b0cda87e0e402a0cd3ed1f286e8749b26a19a3cc"
+      },
+      {
+        "path": "src/app/routing/search.test.ts",
+        "bytes": 3280,
+        "sha256": "be070c7e5964df53e37b232bb68841fd956f01cd3659bf9f9036fa75b3d810d3"
+      },
+      {
+        "path": "src/app/routing/search.ts",
+        "bytes": 1673,
+        "sha256": "94e32bbaf540b970814590438fb68fe238e76b0d386199674b20d83e7ab5fe7c"
+      },
+      {
+        "path": "src/app/shared-types.ts",
+        "bytes": 239,
+        "sha256": "eb2ebe5725215c6524482eeac2b1e2d22380a6d2c31b7e1b7af104b653c0ea80"
+      },
+      {
+        "path": "src/application.tsx",
+        "bytes": 770,
+        "sha256": "16e77666976faef6f4d01feefdcc048e5bc20445ddcbfba75d163ddc21c1f2fc"
+      },
+      {
+        "path": "src/assets/critical-media.ts",
+        "bytes": 366,
+        "sha256": "f8e5ad2f7a111e4a14317680e3ba1407a42bb43c55f18d8a7bb46bf636ce401c"
+      },
+      {
+        "path": "src/assets/figma/index.ts",
+        "bytes": 14876,
+        "sha256": "b3fb4b0d60dc975aa0f0aa1f8dcfe606beadaf5089309b2a8f4a206982be4ef8"
+      },
+      {
+        "path": "src/assets/figma/preloadArtwork.ts",
+        "bytes": 897,
+        "sha256": "4fcca588ea803387248c1fd2c88f55c23c2774eeec31b7a493a1d67b737d7c20"
+      },
+      {
+        "path": "src/assets/figma/responsiveArtwork.ts",
+        "bytes": 1157,
+        "sha256": "2d44049d0af6babccee7b314b4cf31154d38a8236b8cde9592cd98240e31206b"
+      },
+      {
+        "path": "src/bootstrap.tsx",
+        "bytes": 688,
+        "sha256": "734b6a9d46bed0d6f3ac1d66601c83d61ca07153653b39bc0303226e39f7871d"
+      },
+      {
+        "path": "src/components/Layout/Footer/components/Newsletter/index.tsx",
+        "bytes": 1824,
+        "sha256": "85529e614c2e8f3f20a608caf9946707a50da3d56c22080c3719aa6c6ef0a9d4"
+      },
+      {
+        "path": "src/components/Layout/Footer/components/Newsletter/shared-types.ts",
+        "bytes": 303,
+        "sha256": "647d7288fbbfcc3eb76886f1202367c60eefe87c36cab27f517f7430cec5ae7d"
+      },
+      {
+        "path": "src/components/Layout/Footer/components/Newsletter/useNewsletter.test.tsx",
+        "bytes": 4929,
+        "sha256": "ed9884dd18cda9306e8c0be6f2b3bd2badf90be87d8e0abd29089ad7b9c99d79"
+      },
+      {
+        "path": "src/components/Layout/Footer/components/Newsletter/useNewsletter.ts",
+        "bytes": 3495,
+        "sha256": "4f9229ef98b7f6a8a0325f417ba846e9d692a1343d99e074b15905ab36775c98"
+      },
+      {
+        "path": "src/components/Layout/Footer/content.ts",
+        "bytes": 563,
+        "sha256": "76884ba304f3013b626b75992b0bd9132b5fb6f20d136012c6a735de48be0fa0"
+      },
+      {
+        "path": "src/components/Layout/Footer/index.tsx",
+        "bytes": 4018,
+        "sha256": "0ac422aa2e9dc1a08e4ba3be61acc3aff9e00a603555ce746a1a514207c05d01"
+      },
+      {
+        "path": "src/components/Layout/index.tsx",
+        "bytes": 7718,
+        "sha256": "108714d88a05028e8e6dd38ab7aec9953e8efac97a3ec6ea5485187b1cd64bd5"
+      },
+      {
+        "path": "src/components/Layout/MobileNavigation/index.tsx",
+        "bytes": 1686,
+        "sha256": "08bc23dc2a39ef8cd682bd9d972de4d4d0fc035282176db756ea80f512bd93d3"
+      },
+      {
+        "path": "src/components/Layout/shared-types.ts",
+        "bytes": 224,
+        "sha256": "c2a6ae1412c92373abd047b5fa87db6018977e671d962afbd9569e905d6b9c5f"
+      },
+      {
+        "path": "src/components/Layout/useLayout.ts",
+        "bytes": 4028,
+        "sha256": "c3af1909d70d9ef1f131904850445ffc9faee6378a19e997201ace597ea9a860"
+      },
+      {
+        "path": "src/components/LiveNotice/index.tsx",
+        "bytes": 487,
+        "sha256": "2767fd01eac1f5caf8eb21385f0d287c02f05e6e24b836c953cf9448c579c26b"
+      },
+      {
+        "path": "src/components/LiveNotice/useLiveNotice.ts",
+        "bytes": 536,
+        "sha256": "348cfc003cf413109a2bfc8da141f2e929f737e78880c538d758a1d9a5dde7d7"
+      },
+      {
+        "path": "src/components/ScenarioPanel/index.tsx",
+        "bytes": 3850,
+        "sha256": "f34175b6758f8d6381755fb57fdd65f5df422290d3d7cb96f3f2957cc39f0c2c"
+      },
+      {
+        "path": "src/components/ScenarioPanel/shared-types.ts",
+        "bytes": 143,
+        "sha256": "854dfef99462131d0a65cc54c5e11ccebc4912047fbe21eb290aec1086e71518"
+      },
+      {
+        "path": "src/components/ScenarioPanel/useScenarioPanel.ts",
+        "bytes": 1964,
+        "sha256": "2d707b45a557762d215baf3b70e908bb8c73e6bb620f009a12d7ae88668a7be3"
+      },
+      {
+        "path": "src/components/ui/index.tsx",
+        "bytes": 82,
+        "sha256": "234c7ed7d78d550134a9d932d3e6fca28ab224d9447942b0b77c995b4bbc2f13"
+      },
+      {
+        "path": "src/config/demo.ts",
+        "bytes": 105,
+        "sha256": "aa7f60f900199d15bfabc410f0894a7c84b846cca29ea2790df0b0bb372a51a7"
+      },
+      {
+        "path": "src/contracts.ts",
+        "bytes": 3985,
+        "sha256": "464ce378374e1a98b91a440927f733d270ee2cc397bf97f0477d214cffd2e2ab"
+      },
+      {
+        "path": "src/domain/articles.test.ts",
+        "bytes": 3419,
+        "sha256": "002f25493d8cc6091037cb693a27f330b081734c01ea6b8d0220f643e8443139"
+      },
+      {
+        "path": "src/domain/catalog-api.test.ts",
+        "bytes": 9298,
+        "sha256": "dd5f3f73faba4a413c3dca2c2ffbc227eccaed55764e531812a1b466a5894957"
+      },
+      {
+        "path": "src/domain/catalog-migration.test.ts",
+        "bytes": 7390,
+        "sha256": "5681947e424dfd406ac544785890f109cffc38ade81b0e45506ce15cefe6baa5"
+      },
+      {
+        "path": "src/domain/catalog.test.ts",
+        "bytes": 3081,
+        "sha256": "4498c8407171763a9c6973f41f1e51787e700280953982c19180637057b4ce96"
+      },
+      {
+        "path": "src/domain/catalog.ts",
+        "bytes": 2760,
+        "sha256": "34837db137eb5273e282221f509e3d3197e1d7beb535946fbfba9a1a01207c73"
+      },
+      {
+        "path": "src/domain/editions.test.ts",
+        "bytes": 7336,
+        "sha256": "59e4b49139914662651b16789247edcd693220e75d874511694e7c3bba43c22c"
+      },
+      {
+        "path": "src/domain/editions.ts",
+        "bytes": 2003,
+        "sha256": "20690f57fa87fb203986384d6c91af57fe2056cbd787da97578ed277b3bd473c"
+      },
+      {
+        "path": "src/domain/marketplace.test.ts",
+        "bytes": 8069,
+        "sha256": "45b5e2e2a10631fe4304db8fb7436062770a201d38816b02b8fbafc14e29b8c0"
+      },
+      {
+        "path": "src/domain/money.test.ts",
+        "bytes": 778,
+        "sha256": "566589e4b42c1df8712190bcc6147315bc6ee7d58e367a80f8b1f727506b55be"
+      },
+      {
+        "path": "src/domain/money.ts",
+        "bytes": 998,
+        "sha256": "4fe7ca887d0169c42c2e2dc724d5b02af6e8eafd4ef5a7b87313db5c02294362"
+      },
+      {
+        "path": "src/domain/newsletter.test.ts",
+        "bytes": 4090,
+        "sha256": "0ea7265ae76f75aa73378e666a22edacf58f03b37324cb94f56843d1a7340305"
+      },
+      {
+        "path": "src/domain/recommendations.test.ts",
+        "bytes": 4705,
+        "sha256": "18154429ec4f342d80658c4017880970cd66250064ab952ac53db9a2771a9a61"
+      },
+      {
+        "path": "src/domain/recommendations.ts",
+        "bytes": 671,
+        "sha256": "010c76354f3a52a9c521a135dd96c2f3c34b3d43d2055edcd354716b034caed4"
+      },
+      {
+        "path": "src/domain/schemas.test.ts",
+        "bytes": 2965,
+        "sha256": "625d600612cfee084636247ad1c59c3ddffafe82bf0646101aba2f26cb525859"
+      },
+      {
+        "path": "src/domain/schemas.ts",
+        "bytes": 7227,
+        "sha256": "7e1da07deda9e231f62a9a8c07498740f2ff3b8ffdd132b20f2ffe789d1a5e8c"
+      },
+      {
+        "path": "src/domain/session-transport.test.ts",
+        "bytes": 13998,
+        "sha256": "ff62c6f9c69f1048d877739ae06c70bd800c53e8064f7e5a521f8bb95ce514ba"
+      },
+      {
+        "path": "src/lib/query.ts",
+        "bytes": 1417,
+        "sha256": "2c5422a3cbd4a77e5e93836541c88e5e6f4e110b05e046ec71502f71d7ca313c"
+      },
+      {
+        "path": "src/lib/realtime.ts",
+        "bytes": 4524,
+        "sha256": "62fe2f55d648279ccbcdf0a058173c60f5061f201de02dab2295c6b8811b7917"
+      },
+      {
+        "path": "src/lib/returnTo.ts",
+        "bytes": 646,
+        "sha256": "f731bca4e3825e31193d62c805ef86a446119e1096da49fe0aa47313042bdc68"
+      },
+      {
+        "path": "src/lib/utils.ts",
+        "bytes": 168,
+        "sha256": "c407b940a1b71992691321d7162086f17af79fa371d0e4693926714048699b63"
+      },
+      {
+        "path": "src/main.tsx",
+        "bytes": 2088,
+        "sha256": "fcce468cd829b0829f610983cc40e3ba70f321532e12f0b7e81721c44a4044e9"
+      },
+      {
+        "path": "src/mocks/articles.ts",
+        "bytes": 2592,
+        "sha256": "f1e00174db6556b8b311d7d8606ce92443081740830b9f4abf1c3d1da7d479dd"
+      },
+      {
+        "path": "src/mocks/browser.ts",
+        "bytes": 381,
+        "sha256": "0488e68d7d2034dcaeee028629ec5e16e0f5ef735e605cb25ecf3908840f0198"
+      },
+      {
+        "path": "src/mocks/database.ts",
+        "bytes": 21377,
+        "sha256": "e4c2d20c8f87fcb389e27661e06a30926119a51ce206fc618684df252c8f8456"
+      },
+      {
+        "path": "src/mocks/fixtures.ts",
+        "bytes": 3252,
+        "sha256": "27c12955eb0645820f25151a04d58b09ab18fb6e7e4fbe61f1af686ee8204be7"
+      },
+      {
+        "path": "src/mocks/handlers/account.ts",
+        "bytes": 5061,
+        "sha256": "5456e362450c1ec179bc212b8864c5cf5fb03f6f5940c7123e08a98258c55a5a"
+      },
+      {
+        "path": "src/mocks/handlers/articles.ts",
+        "bytes": 707,
+        "sha256": "cf0b212beb2f71e72a7b82cbb9ad11c7e2270b543002086f0e1709cdb26891a9"
+      },
+      {
+        "path": "src/mocks/handlers/cart.ts",
+        "bytes": 2099,
+        "sha256": "4163d2d6351a2af5d0a2ff0edbe4e4477a1480b67324f8d0a35cab4e9575b368"
+      },
+      {
+        "path": "src/mocks/handlers/catalog.ts",
+        "bytes": 2193,
+        "sha256": "0e75fb35dfeb61928809474d0059e73d1140e3ba83610e87998f647c7196e0a7"
+      },
+      {
+        "path": "src/mocks/handlers/demo.ts",
+        "bytes": 2458,
+        "sha256": "39947dead1a600c944c9aa4804e4bb81022ee1393a206d44c6a4b1d553fba8eb"
+      },
+      {
+        "path": "src/mocks/handlers/events.ts",
+        "bytes": 1109,
+        "sha256": "fdf3904abfa3c5e7c79eb0d0e00e54da33b783cd56c2e755480a57ca7d7e9381"
+      },
+      {
+        "path": "src/mocks/handlers/network.ts",
+        "bytes": 3684,
+        "sha256": "fb5a073dfd3a0011938be669088fd62b6b1461369299590506c0e5e5c36800e5"
+      },
+      {
+        "path": "src/mocks/handlers/newsletter.ts",
+        "bytes": 1293,
+        "sha256": "df705438cf1c644f8296207e4af35922a632c08b15761b02ba78b2310e4b3405"
+      },
+      {
+        "path": "src/mocks/handlers/orders.ts",
+        "bytes": 1326,
+        "sha256": "3e960ad64b9ad5c80615e5b8695f2932c11cb0caea6f3167beee28e0a12d8892"
+      },
+      {
+        "path": "src/mocks/handlers/recommendations.ts",
+        "bytes": 1378,
+        "sha256": "c1c5dc89400181e014f9cabb416a9a81b63bdd12e8c6c6a3c994a8190ae50740"
+      },
+      {
+        "path": "src/mocks/handlers/session.ts",
+        "bytes": 2858,
+        "sha256": "8db39b1facf2366f61866f51b4683e210ef16128f3837a4f489a3ee0a6e0d7c9"
+      },
+      {
+        "path": "src/mocks/handlers.ts",
+        "bytes": 793,
+        "sha256": "35afd8806c91afa6b54a2dea2a646acd45347f91cf369c9da8b4c9009654d302"
+      },
+      {
+        "path": "src/mocks/migrations/catalog.ts",
+        "bytes": 1383,
+        "sha256": "5ae50a3e388106116f8a9baf86f4ac3a8552d0e782e6c5310fcfba20642bdee4"
+      },
+      {
+        "path": "src/modules/account/components/AccountSidebar/index.tsx",
+        "bytes": 2026,
+        "sha256": "4711a5456764b7e4a4a851c4bef0880f6f37338fac1b162577fa5f855a76b802"
+      },
+      {
+        "path": "src/modules/account/components/AccountSidebar/useAccountSidebar.ts",
+        "bytes": 824,
+        "sha256": "4642917b40d26fce08bb0563ae171d5878358667bf75652e60f883366dd391a1"
+      },
+      {
+        "path": "src/modules/account/components/AuthBackdrop/index.tsx",
+        "bytes": 193,
+        "sha256": "a3f96439d06e75261f31dc428f09905b853aa14aff671b89e7180eac768ffda6"
+      },
+      {
+        "path": "src/modules/account/components/AuthForm/index.tsx",
+        "bytes": 7289,
+        "sha256": "44ecf159a2f7beecf1c04736de93e692fb111827903a1a32d30515919247f016"
+      },
+      {
+        "path": "src/modules/account/components/AuthForm/useAuthForm.test.ts",
+        "bytes": 7909,
+        "sha256": "f20561fda059d1872cbc07a8c2f28ebe638b5dcc3db98815eaeb791a4aafa1b2"
+      },
+      {
+        "path": "src/modules/account/components/AuthForm/useAuthForm.ts",
+        "bytes": 4190,
+        "sha256": "0bf54461abf88681d827f53fbe072bb4f38d6f8b3fde634e469c468d8f50e170"
+      },
+      {
+        "path": "src/modules/account/components/AuthForm/useAuthPresentation.ts",
+        "bytes": 444,
+        "sha256": "084728ca6d410c91264b8ea83740c6aa16a0e0eba42214289dea9c5f27e01015"
+      },
+      {
+        "path": "src/modules/account/components/EnsField/index.tsx",
+        "bytes": 830,
+        "sha256": "eeab1a7b6cc9a081b1ca7091ee6213437770a910d55940cddacaced2fdbebe05"
+      },
+      {
+        "path": "src/modules/account/components/PasswordField/index.tsx",
+        "bytes": 1106,
+        "sha256": "b1f1e646fcdff3d7a8418eaf4b37a84ee5a83ec5ab4a7295f27ecf0615cd10db"
+      },
+      {
+        "path": "src/modules/account/components/PasswordField/usePasswordField.ts",
+        "bytes": 277,
+        "sha256": "f49e9675c87efd6b4f9834f1c8cd57dd38ae44c0553f7bb3b1d10208f460543d"
+      },
+      {
+        "path": "src/modules/account/components/PasswordForm/index.tsx",
+        "bytes": 2079,
+        "sha256": "f816b377769eed558de1f64df71fe69853c6f51e197cd66279b8ff908a0706c4"
+      },
+      {
+        "path": "src/modules/account/components/PasswordForm/usePasswordForm.ts",
+        "bytes": 1671,
+        "sha256": "c1dda4f02533bfaaa6386b3fff28a4160a3f45caa76aadafdf076a2c339e5536"
+      },
+      {
+        "path": "src/modules/account/components/SocialOptions/index.tsx",
+        "bytes": 1358,
+        "sha256": "79f7f63d4babd7df452b3f3bb9f338d1d09d0ac49aa6cc4b4104fee17a6faef7"
+      },
+      {
+        "path": "src/modules/account/components/WalletFields/index.tsx",
+        "bytes": 3681,
+        "sha256": "bbf62ae2ce54eaff6ff5b065463fcbfb6fe44b5b71f5ab88a26d15f1013b8601"
+      },
+      {
+        "path": "src/modules/account/hooks/mutationOwnership.test.ts",
+        "bytes": 5675,
+        "sha256": "1c3ff4717ca52d44ad02f513009e9a3cb021e30e69d8328551ad13e3a0029368"
+      },
+      {
+        "path": "src/modules/account/hooks/useAccount.ts",
+        "bytes": 1950,
+        "sha256": "d335535b2b134a3f2b30054c018c943448959f508530dd83fdd8b453dad607c9"
+      },
+      {
+        "path": "src/modules/account/index.ts",
+        "bytes": 260,
+        "sha256": "d27fb715509c04c001b8ee42e0d17b055849e4925ee8860e67fc1597210d1ced"
+      },
+      {
+        "path": "src/modules/account/pages/Login/index.tsx",
+        "bytes": 126,
+        "sha256": "fe65def7c7fddf00f04e8597d5d3db7c2e1395e7a6d4428199a240333d63b54b"
+      },
+      {
+        "path": "src/modules/account/pages/Profile/index.tsx",
+        "bytes": 5007,
+        "sha256": "6daf68b14c52fb2316bd275d139ff7eb269247576910299ab2d37dad4f8ed8cc"
+      },
+      {
+        "path": "src/modules/account/pages/Profile/useProfile.ts",
+        "bytes": 3106,
+        "sha256": "db7d4f29f6ad38abcac5f43e0c0746816c8eb6b7a8370ee371297dfdb3753f06"
+      },
+      {
+        "path": "src/modules/account/pages/Register/index.tsx",
+        "bytes": 121,
+        "sha256": "1f687cbcf2e3fcae3eaf668a98ce3ff524762de6c0d994f41c135791b401b9a3"
+      },
+      {
+        "path": "src/modules/account/pages/Wallets/index.tsx",
+        "bytes": 4783,
+        "sha256": "11b9f8e683af54886338bd2a4ff2e36568268d18d52410d0647240393604114d"
+      },
+      {
+        "path": "src/modules/account/pages/Wallets/useWallets.ts",
+        "bytes": 4796,
+        "sha256": "0a707871be82821f6a78add442d4c890eab4369e1eb8a83c858bb3072000309d"
+      },
+      {
+        "path": "src/modules/account/shared-types.ts",
+        "bytes": 1545,
+        "sha256": "c17f6dad8784b17b9b0d9939c06308485eab603a79d068a19a162d923a7eb498"
+      },
+      {
+        "path": "src/modules/catalog/components/CatalogFilters/index.tsx",
+        "bytes": 3620,
+        "sha256": "2e2d12b2c825a1c5f09443b74012229d6cfb7bb2ee5a0d8098291dda114ff5c9"
+      },
+      {
+        "path": "src/modules/catalog/components/CatalogFilters/usePriceRange.ts",
+        "bytes": 1203,
+        "sha256": "3dadc4fcc99dd0570c867f694b52ec656e51ff2388036a676099d1ebe3f1ee20"
+      },
+      {
+        "path": "src/modules/catalog/components/CatalogPromotions/index.tsx",
+        "bytes": 1559,
+        "sha256": "6c0acd5e9321076b81e14c5ee4caf7bdcbbd0755e8a0f3673fbd8f7cd6cf8e01"
+      },
+      {
+        "path": "src/modules/catalog/components/CatalogSkeleton/index.tsx",
+        "bytes": 557,
+        "sha256": "b34eea21896d5c1997fd603313c64920078bb3dd6e66e0868b72f691c943279e"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/components/ArticleReader/index.tsx",
+        "bytes": 1808,
+        "sha256": "a5d461bdddfe4d90f2291b20aef7b10026591b3ac9ccf1192090bd48a9b14273"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/components/ArticleReader/useArticleReader.ts",
+        "bytes": 297,
+        "sha256": "5e7511ef7f68f11c56665a30dcd185df1b4e1a5f4f56eccac86fa868e1d73511"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/components/EditorialCard/index.tsx",
+        "bytes": 1363,
+        "sha256": "c84652152b9921dd73dba7ae17a4f9883bc631f2a228f9c772103f2747b59705"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/components/EditorialSkeleton/index.tsx",
+        "bytes": 588,
+        "sha256": "11e2a4e7ae5836212d52763e3c90cf98b26f2b9b37139f40774b9fe57bddc126"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/format.ts",
+        "bytes": 208,
+        "sha256": "b5050123d892c734c62b8319f674f70c2bdb91ce2b4a9cd798622e0134c03e48"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/index.tsx",
+        "bytes": 2207,
+        "sha256": "dd3f1e9a5772f5302560fda6fc4ccd250d35fc4488e502a0dd2677bc7d0adadc"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/shared-types.ts",
+        "bytes": 227,
+        "sha256": "edd13ce75429ff583332e4b97ebcd568a984879024e3a4b844c53becb9020f1c"
+      },
+      {
+        "path": "src/modules/catalog/components/EditorialHighlights/useEditorialHighlights.ts",
+        "bytes": 611,
+        "sha256": "822afd10256823a0f16c6114f0123ca2f8334dc36ed97e715bb3e3115b33662b"
+      },
+      {
+        "path": "src/modules/catalog/components/FavoritesList/index.tsx",
+        "bytes": 1918,
+        "sha256": "a0e8a55cf845d588d34a1060c3e69f6add5c86a078f10330223685e1c344febf"
+      },
+      {
+        "path": "src/modules/catalog/components/FavoritesList/useFavoritesList.ts",
+        "bytes": 1163,
+        "sha256": "588a308abd09cdc7b37fa55de747b1cd21447634762dc19d1ae51a5e7ac33d51"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/components/HeroBackdrop/index.tsx",
+        "bytes": 2087,
+        "sha256": "f5fe01c3c20a0a04c1f85a0e7476c685a9367646db2bd2505d73cce2bda3e9d6"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/components/HeroBackdrop/useHeroBackdrop.ts",
+        "bytes": 278,
+        "sha256": "38085331ecd1e369053407bfa2376a19d335e1b0824465aac060fb2095ac83d1"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/components/HeroSlide/index.tsx",
+        "bytes": 2991,
+        "sha256": "287d6e1e2b52f502eead37ed5d54980cef77d2cd6e2f159a9beaa7ca83b40651"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/content.ts",
+        "bytes": 1906,
+        "sha256": "16fcb94b886d481e0ca7c8b71f33fed92fc9d767ac7370322f63f7cee1db7763"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/index.tsx",
+        "bytes": 898,
+        "sha256": "43519dea5b37a6df6ad9da38b52aa58dc9cabe885d396c5f33987660ab5ede22"
+      },
+      {
+        "path": "src/modules/catalog/components/MarketplaceHero/useMarketplaceHero.ts",
+        "bytes": 635,
+        "sha256": "305dd3d0f76ed90a4c4d58dda2bb0acda65289c63bb910bb677dfc3fa665a3b0"
+      },
+      {
+        "path": "src/modules/catalog/components/NFTCard/index.tsx",
+        "bytes": 4246,
+        "sha256": "e97691372f12f9212b7f0134aae3116cb530463899f93742b79681df49987839"
+      },
+      {
+        "path": "src/modules/catalog/components/NFTCard/useNftCard.ts",
+        "bytes": 942,
+        "sha256": "e2279aa6683b0fe2f2018fa78da6d6540e8b3f7bf18d3c866c9eb39613da766c"
+      },
+      {
+        "path": "src/modules/catalog/components/NftDetailsSkeleton/index.tsx",
+        "bytes": 1459,
+        "sha256": "9871f63b7febf32919c96de8f54996d81ba287a3cb210df9d3ac849a5c81e312"
+      },
+      {
+        "path": "src/modules/catalog/components/NftFavoriteAction/index.tsx",
+        "bytes": 1138,
+        "sha256": "7a5720e4210b99cb08a27d90f5a613d38460b467b52e3505baf6fe0db8ca3a78"
+      },
+      {
+        "path": "src/modules/catalog/components/NftGallery/index.tsx",
+        "bytes": 2129,
+        "sha256": "650525b9dbcae777daea1e0507e5d73cc86f461592ea6d7c5a0460dd78bd2d4e"
+      },
+      {
+        "path": "src/modules/catalog/components/NftGallery/styles.template.css",
+        "bytes": 3388,
+        "sha256": "92b558d77258bb69cbffc338193372ee968d1bf0475349960daff89ee9eea4f5"
+      },
+      {
+        "path": "src/modules/catalog/components/NftGallery/useNftGallery.ts",
+        "bytes": 638,
+        "sha256": "e94728554214dce6e79fb8d33ce96f52ce46a553d7130a5978a2c9a9e8a0eb03"
+      },
+      {
+        "path": "src/modules/catalog/components/NftPreview/index.tsx",
+        "bytes": 1659,
+        "sha256": "b22a0fb8254f58cf828bd71524b352c0db017667bb780ec389b22d792fbdf1d9"
+      },
+      {
+        "path": "src/modules/catalog/components/NftPreview/useNftPreview.ts",
+        "bytes": 950,
+        "sha256": "693903e2b498e7ddd1999531330d2f566a43fa8b418e1557eeee979d75a89e7a"
+      },
+      {
+        "path": "src/modules/catalog/components/RelatedNfts/index.tsx",
+        "bytes": 2748,
+        "sha256": "034e9cbe5564b10b419cb9f3dcb400cc619365b32cac2285b6c0d65ed6cc8a02"
+      },
+      {
+        "path": "src/modules/catalog/components/RelatedNfts/styles.template.css",
+        "bytes": 2061,
+        "sha256": "f387e5d553b0c06b8b1354f9a90c8fc305002547a9aa17beef4e14cc06988158"
+      },
+      {
+        "path": "src/modules/catalog/components/RelatedNfts/useRelatedNfts.ts",
+        "bytes": 748,
+        "sha256": "446c22450701603b6501a1dbcfb6347e7a1c8482b5be7d9fdb84b664ccda8cb8"
+      },
+      {
+        "path": "src/modules/catalog/config.ts",
+        "bytes": 313,
+        "sha256": "7bd7b3fc0a1466f73fbfe5c7d71c7c7c68ca08cfe145282eeae7d4a3fde41e6c"
+      },
+      {
+        "path": "src/modules/catalog/hooks/useAddToCart.ts",
+        "bytes": 1320,
+        "sha256": "70dc89508a529a113082c3d60a08b6b0e9e2bb4a50c96eb912d751d4a345f6ed"
+      },
+      {
+        "path": "src/modules/catalog/hooks/useCatalog.test.ts",
+        "bytes": 5125,
+        "sha256": "57347e16c3bda72d75a6648267aa48d6189295f85a8225fb2cd475aeb4125041"
+      },
+      {
+        "path": "src/modules/catalog/hooks/useCatalog.ts",
+        "bytes": 2185,
+        "sha256": "03d13460332c167b44470e3712d5f18ebbf72f9362615abd083c3de43f0a0f16"
+      },
+      {
+        "path": "src/modules/catalog/index.ts",
+        "bytes": 103,
+        "sha256": "010e92586ea557d031a82e2035d008091c2a0b88975c1f697a0ecc9b24e7be50"
+      },
+      {
+        "path": "src/modules/catalog/pages/Marketplace/index.tsx",
+        "bytes": 10018,
+        "sha256": "c3d751c398e6fdaa877889bc894ec3598366962f412bad1c244a99424e879606"
+      },
+      {
+        "path": "src/modules/catalog/pages/Marketplace/useMarketplace.ts",
+        "bytes": 3234,
+        "sha256": "b5ccc8c6a47345543e5975d5cc70c49a458891a1ae96b754e67cc9ba97c3e39e"
+      },
+      {
+        "path": "src/modules/catalog/pages/NftDetails/index.tsx",
+        "bytes": 8668,
+        "sha256": "bd457acda65fd5e7bb518db4ddeb82833a7770fafaf1305627994b523caecf86"
+      },
+      {
+        "path": "src/modules/catalog/pages/NftDetails/styles.template.css",
+        "bytes": 10979,
+        "sha256": "49dae3a972533288d9e84fba30b692f572df1907bff2ab5cc9eaa1cfe1421ab4"
+      },
+      {
+        "path": "src/modules/catalog/pages/NftDetails/useNftDetails.test.ts",
+        "bytes": 5029,
+        "sha256": "d846cd317607985fd45ff1e09f2210ee0a2b6d08d8d4bfe2f8c490b31ec9c9da"
+      },
+      {
+        "path": "src/modules/catalog/pages/NftDetails/useNftDetails.ts",
+        "bytes": 2032,
+        "sha256": "fa4402b43ea8cbd6ab2de3dcabcd4052ca03a58f11854a5e140cbb1ea1c12f96"
+      },
+      {
+        "path": "src/modules/catalog/queries.ts",
+        "bytes": 600,
+        "sha256": "6496aed2aa9f1050c37f99c711770c433ef31a4dd94fab8e3e17214a76a141fb"
+      },
+      {
+        "path": "src/modules/catalog/shared-types.ts",
+        "bytes": 1873,
+        "sha256": "959378728ab8193370d47191fea557c4b3f852a87b9ae4d34f5296da0760ea2b"
+      },
+      {
+        "path": "src/modules/catalog/stores/useNftPreviewStore.ts",
+        "bytes": 267,
+        "sha256": "3f3cde9d184bc84a721e235430ff37f9ec01a8c4abe9b284b456d1c29fa62bb1"
+      },
+      {
+        "path": "src/modules/checkout/attempt.test.ts",
+        "bytes": 2346,
+        "sha256": "5db76ea87c8284256f08117472b60f1129dda86f98ede27ac80a906dd66c731a"
+      },
+      {
+        "path": "src/modules/checkout/attempt.ts",
+        "bytes": 1156,
+        "sha256": "2d8d136820eaadbb306386bdfce0283971cf6818a86f6ac055533f1bbe28c0ae"
+      },
+      {
+        "path": "src/modules/checkout/components/CartItemRow/index.tsx",
+        "bytes": 2267,
+        "sha256": "51dfb9af5275e162559143f6231c520c2468b649f2b41e45d0a0ac2d3d9cf8d1"
+      },
+      {
+        "path": "src/modules/checkout/components/CartSummary/index.tsx",
+        "bytes": 2118,
+        "sha256": "797474833274faa758350997ca299793622bf0d22b183e1ef43eb70e981738f0"
+      },
+      {
+        "path": "src/modules/checkout/components/CheckoutWallets/index.tsx",
+        "bytes": 1997,
+        "sha256": "5011f90704f1d3bc249589c833eafc9b1a93651b28703e3ab0cdde5236fdb02e"
+      },
+      {
+        "path": "src/modules/checkout/components/CollectorForm/index.tsx",
+        "bytes": 6042,
+        "sha256": "0b0fc83b7cd40ffb5553ab025c03c4015587c47e6611cedeb6c2935848aa0c6f"
+      },
+      {
+        "path": "src/modules/checkout/components/OrderReceipt/index.tsx",
+        "bytes": 3820,
+        "sha256": "08afba5d9f78414d1f8876a7e4686a05255dc4225d7ef2687336ada17af8c2c9"
+      },
+      {
+        "path": "src/modules/checkout/components/OrderReceipt/useOrderReceipt.ts",
+        "bytes": 1051,
+        "sha256": "8039d220f1511e1f4db89eb9bdff3e6feae0fc90a6b665e0170a947ca696d8ae"
+      },
+      {
+        "path": "src/modules/checkout/components/OrderSummary/index.tsx",
+        "bytes": 1040,
+        "sha256": "be1f468db231a9728219ffdf8903a6511c00c7eded50dfef6d149391707de933"
+      },
+      {
+        "path": "src/modules/checkout/hooks/useCart.test.ts",
+        "bytes": 3101,
+        "sha256": "7f88f97a2c466574cb2489493a49eea2fc1a62bf186a307751128a301df6a64e"
+      },
+      {
+        "path": "src/modules/checkout/hooks/useCart.ts",
+        "bytes": 1749,
+        "sha256": "b3a20d603bcce570814ae8bee5558377360fafd1e1905749eeca110107235594"
+      },
+      {
+        "path": "src/modules/checkout/index.ts",
+        "bytes": 133,
+        "sha256": "3b3ecb5ad373baef05a1b5f99d7752ea0ed3f007e9453c63ea525ef2cab187ab"
+      },
+      {
+        "path": "src/modules/checkout/pages/Cart/index.tsx",
+        "bytes": 3756,
+        "sha256": "ff5ac422b01d97064b3da620f65548669b9c60045582b102e749ad19b2bcd2f6"
+      },
+      {
+        "path": "src/modules/checkout/pages/Cart/useCartPage.ts",
+        "bytes": 1721,
+        "sha256": "de34472cf1dc5f013f48757c1418e8c10cc1d754c0bd1cfd2f07a2d7e88c7582"
+      },
+      {
+        "path": "src/modules/checkout/pages/Checkout/index.tsx",
+        "bytes": 9202,
+        "sha256": "4459065e4f11b203bb5385db49ef395296fbcc2c89074f77ea498f37347e5bae"
+      },
+      {
+        "path": "src/modules/checkout/pages/Checkout/styles.template.css",
+        "bytes": 10437,
+        "sha256": "e94d941474d304868f6a3f098d60d8222e0762f9f6637e9a02ee60406f83466f"
+      },
+      {
+        "path": "src/modules/checkout/pages/Checkout/useCheckout.ts",
+        "bytes": 12367,
+        "sha256": "493060ce1e1a990769c7e1efe9b8b48a4662a2a1c49fbe8f7e1ced63657ae42f"
+      },
+      {
+        "path": "src/modules/checkout/pages/Checkout/useCheckoutFields.ts",
+        "bytes": 1051,
+        "sha256": "cd8c746ceabdbde3efe9bd043fd560e6eae52d44bbd157fb33b430db9909b4a0"
+      },
+      {
+        "path": "src/modules/checkout/pages/Order/index.tsx",
+        "bytes": 2453,
+        "sha256": "03038e8a2a1497427f9d84737045c699101e5ad2629137e13ba373a4b40a67d9"
+      },
+      {
+        "path": "src/modules/checkout/pages/Order/useOrder.ts",
+        "bytes": 1097,
+        "sha256": "ce0d5cdcd4656ae5ad1722132b9b33a141583dc707fa18677e1f836bd1065065"
+      },
+      {
+        "path": "src/modules/checkout/shared-types.ts",
+        "bytes": 1874,
+        "sha256": "b596a76409908ea5e125322b5ac67aa58a87703fe98319524ae035f177406fe2"
+      },
+      {
+        "path": "src/router.tsx",
+        "bytes": 2899,
+        "sha256": "36e5a0fb0bb0a6463032b34e5e1debee4d0a5fd6c240314d9251d2f3c8ed309e"
+      },
+      {
+        "path": "src/services/http/generation.ts",
+        "bytes": 1478,
+        "sha256": "84b21d620d877bf25ec189394924cfe917b0c33b6befa9e3d33c081aa3aea9c1"
+      },
+      {
+        "path": "src/services/http/index.ts",
+        "bytes": 2787,
+        "sha256": "29159fef32567fd6049bd9861a9511837ae1a1ae9db09ce1f05ac191c2dc53ea"
+      },
+      {
+        "path": "src/services/marketplace/index.ts",
+        "bytes": 4427,
+        "sha256": "90f1dfce49f39e6af177ce68ee6a2eeeb9f740e0f7989296db23c8fa2ddf16fc"
+      },
+      {
+        "path": "src/styleguide/components/Button/index.tsx",
+        "bytes": 765,
+        "sha256": "4850e0da46ffae8d806c8e1d680a6595f4e5a5babd9ed5398f8df2b8aa50c86e"
+      },
+      {
+        "path": "src/styleguide/components/Carousel/index.tsx",
+        "bytes": 2753,
+        "sha256": "b97bc95a7e34b72b6e26a6d3ef8a67b9c559b298635b19cb75ea4fe0c124d2c8"
+      },
+      {
+        "path": "src/styleguide/components/Carousel/shared-types.ts",
+        "bytes": 793,
+        "sha256": "8f37d916e8107cc4ff8f0f0739b9d08cb3c29a28cc0c36b426b998387115e936"
+      },
+      {
+        "path": "src/styleguide/components/Carousel/useCarousel.ts",
+        "bytes": 2792,
+        "sha256": "a545d02c1dc9ff10bf48994f6e6c056d6d0304700d3ddb0d3f04b72c2f2b399a"
+      },
+      {
+        "path": "src/styleguide/components/Field/index.tsx",
+        "bytes": 518,
+        "sha256": "aeb33546747f5f47795a4e638916bc67556c6b93e5ae6bcb4ed09e93a2e955cc"
+      },
+      {
+        "path": "src/styleguide/components/Input/index.tsx",
+        "bytes": 328,
+        "sha256": "afd9ca7be26061440f3fd361bd3c960a3d68da4b5fdef24daddaad49f9478e10"
+      },
+      {
+        "path": "src/styleguide/components/Modal/index.tsx",
+        "bytes": 1175,
+        "sha256": "9db74f68a1cec5ef564cf83e851aadcd68590706c70a8fa4cf18542a231b3550"
+      },
+      {
+        "path": "src/styleguide/components/Modal/shared-types.ts",
+        "bytes": 381,
+        "sha256": "1a2004f816eac18b0dcf90a0059e9e1add703647300b4db5b4152279fc1a7bbf"
+      },
+      {
+        "path": "src/styleguide/components/Modal/useModal.ts",
+        "bytes": 718,
+        "sha256": "8efb722591b534f32fac0bc46b6d94e24a2c6dba3d986accc77bcdd9c66a8c9d"
+      },
+      {
+        "path": "src/styleguide/components/Notice/index.tsx",
+        "bytes": 323,
+        "sha256": "db12461e6266642a7f0976b04803e26c4841cc4b83f312e02a652d44d0743c82"
+      },
+      {
+        "path": "src/styleguide/components/QuantityInput/index.tsx",
+        "bytes": 1070,
+        "sha256": "9e4e9dd44f403b5731c342d7e857652953ca4d3b3449356515d45f434ed4ac20"
+      },
+      {
+        "path": "src/styleguide/components/QuantityInput/shared-types.ts",
+        "bytes": 169,
+        "sha256": "d538cc86f8b16a166451eb8bef5882c2348a094df78a6112c95414f9a1f5441f"
+      },
+      {
+        "path": "src/styleguide/components/QuantityInput/styles.template.css",
+        "bytes": 636,
+        "sha256": "5602018c332c0c923b8ce4e4b2aaacb1a0045c2fc15ef27816204201db200d6d"
+      },
+      {
+        "path": "src/styleguide/components/QuantityInput/useQuantityInput.test.ts",
+        "bytes": 989,
+        "sha256": "b625b2ed0702b33c5405ff13db49631415c2cd9f87516c88f8de3b8f8e238d88"
+      },
+      {
+        "path": "src/styleguide/components/QuantityInput/useQuantityInput.ts",
+        "bytes": 703,
+        "sha256": "c1949e8c8bbfa23c3d9a3df88abbb9ddf5f7f89011b39bc17b4067a1e23a2325"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/index.tsx",
+        "bytes": 819,
+        "sha256": "db71b6dddcdc419d416fc7ea805c0a4505d5bfc27f14bb2cfbe5a2ce5cb6a81e"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/shared-types.ts",
+        "bytes": 244,
+        "sha256": "8f12715179ad76406b9b7c11e7525555cb0813f8df9c38dfe15e015a6e450410"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/styles.css",
+        "bytes": 881,
+        "sha256": "25d1bf362113efc053f7847e432e3ec0b5156470476da45503f7b3411685572b"
+      },
+      {
+        "path": "src/styleguide/components/Select/index.tsx",
+        "bytes": 2198,
+        "sha256": "8bf99cd427272802eb4a4ea4fa1f88057654d4121c7cd6de7becd6529a5a598c"
+      },
+      {
+        "path": "src/styleguide/components/Select/shared-types.ts",
+        "bytes": 436,
+        "sha256": "0af79ef8341ee36532de53d94b8d0406311c019c48205d9a375257030e56ed20"
+      },
+      {
+        "path": "src/styleguide/components/Select/styles.css",
+        "bytes": 2095,
+        "sha256": "15d8cef400782d566b7bbdb3df611e38898ef5977fbbbc960a7309a7bc13c70c"
+      },
+      {
+        "path": "src/styleguide/components/Skeleton/index.tsx",
+        "bytes": 142,
+        "sha256": "af91b7e16d77e77dbcfaa2c2d6f154620a3e79271a43468660a9030596ef4e25"
+      },
+      {
+        "path": "src/styleguide/components/StyleguideProvider/index.tsx",
+        "bytes": 297,
+        "sha256": "d06e05987bcfd022b958062fcc3cbeda3cfd6004e8308e39fb265117eb84565f"
+      },
+      {
+        "path": "src/styleguide/components/StyleguideProvider/useStyleguide.ts",
+        "bytes": 2018,
+        "sha256": "28eb001dba7aca492c8b0040c1ab9eab6935a6a8115e265e252532856c63ed5a"
+      },
+      {
+        "path": "src/styleguide/hooks/useTheme.ts",
+        "bytes": 270,
+        "sha256": "48a37ef2e77957f8a9cd04a1a36c36d22380c14ad87444911d6f641705773a87"
+      },
+      {
+        "path": "src/styleguide/index.ts",
+        "bytes": 797,
+        "sha256": "ffe938a0538cd99206219402be6136672599f71d737fabacc840f741d8cd6286"
+      },
+      {
+        "path": "src/styleguide/theme/index.ts",
+        "bytes": 483,
+        "sha256": "0b947de796966df47c86ff7299bb21a829b1db7cf69eea625d26c5cc4d919f16"
+      },
+      {
+        "path": "src/styleguide/theme/kurio/styles/account.template.css",
+        "bytes": 16122,
+        "sha256": "517ff581cd753e8df87a3061b8665bdf2c4fcdd9ab160d76ee444443fe2513e2"
+      },
+      {
+        "path": "src/styleguide/theme/kurio/styles/cart-order.template.css",
+        "bytes": 18600,
+        "sha256": "47d523cee2be4e744129084905b6ae667c858e5cf46874b703254c6e1f703038"
+      },
+      {
+        "path": "src/styleguide/theme/kurio/styles/catalog.template.css",
+        "bytes": 21320,
+        "sha256": "40ab0d845ea4c27533a8b79c80660f4c9b471e84cec86ce96a47aa00cd16db0c"
+      },
+      {
+        "path": "src/styleguide/theme/kurio/styles/commerce.template.css",
+        "bytes": 248,
+        "sha256": "eca40cde8426d3f02590588aa5429632e58a842060fdc1cc6e40853d7deadf99"
+      },
+      {
+        "path": "src/styleguide/theme/kurio/styles/shell.template.css",
+        "bytes": 10776,
+        "sha256": "fa7d828d615fd32bf41fa594b1220945f90f9d0ac2f7008f52210c9522c1d236"
+      },
+      {
+        "path": "src/styleguide/theme/preference.test.ts",
+        "bytes": 1382,
+        "sha256": "6b8d23618a53a2241a50a6113b94f7998034cd46e0740ce63a74f0a597ba57fb"
+      },
+      {
+        "path": "src/styleguide/theme/preference.ts",
+        "bytes": 532,
+        "sha256": "2cb491d0fcd525d34e7ef15b2a7d70040026377370e744a83069c2f492ec447a"
+      },
+      {
+        "path": "src/styleguide/theme/recipes/button.ts",
+        "bytes": 398,
+        "sha256": "0af6ae52f1c432cf967e82abbb77983b3d81cce88b4355fe425636081e93773c"
+      },
+      {
+        "path": "src/styleguide/theme/semantic-tokens/colors.ts",
+        "bytes": 989,
+        "sha256": "a07c8b91c69588a4c2c37e8cd495166f32c636a7b521e20e329526086efc17b4"
+      },
+      {
+        "path": "src/styleguide/theme/semantic-tokens/index.ts",
+        "bytes": 168,
+        "sha256": "a053b3e9a065f2751c48848f96c13bb7dabdf55eb71d305c7aacfc1e9b6517bc"
+      },
+      {
+        "path": "src/styleguide/theme/theme.generated.css",
+        "bytes": 1079,
+        "sha256": "11b761e70a99b7b4cb00dc650cfa06932b2054a4db60337b37d4d93592f6493b"
+      },
+      {
+        "path": "src/styleguide/theme/tokens.ts",
+        "bytes": 817,
+        "sha256": "58ca5d47373ce4a8fddaf8e45213e3c4ca23a2a0d6b1ecbcaaa5a67035431f0e"
+      },
+      {
+        "path": "src/styles.css",
+        "bytes": 33186,
+        "sha256": "9c8663cf14ab2159cf7ae56904aa089b2e30bf0ce336ccb0ed583f4ed8893519"
+      },
+      {
+        "path": "src/styles.kurio.css",
+        "bytes": 94069,
+        "sha256": "b87c73b3a356085d1f7765dbccc4e84840e130685ae5b2863b5273558f9166ce"
+      },
+      {
+        "path": "src/styles.template.css",
+        "bytes": 33281,
+        "sha256": "3d9f0985848de631f24f0ccb13be1d59eeec380cd6268e36b3fc37e8f00b9cca"
+      },
+      {
+        "path": "public/_headers",
+        "bytes": 604,
+        "sha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae"
+      },
+      {
+        "path": "public/art/apes/burgundy-collector-360.webp",
+        "bytes": 25844,
+        "sha256": "39bddaf86763c8f4db832fb5049560c402266f73cd831cd1eec3bd324166acd6"
+      },
+      {
+        "path": "public/art/apes/burgundy-collector-600.webp",
+        "bytes": 67322,
+        "sha256": "2c51715e0d111598b3f0ae8a98ec2855e10cbdf9e5619b6a7684b2fe388b7458"
+      },
+      {
+        "path": "public/art/apes/burgundy-collector.webp",
+        "bytes": 138674,
+        "sha256": "6f29bdfe8273e71bf67c90c9832b6f2e51ecc961c60d6a060225711a8ac18615"
+      },
+      {
+        "path": "public/art/apes/ivory-listener-360.webp",
+        "bytes": 21566,
+        "sha256": "33db469e2df8603e9ba7e24cf0bf33920a108a6450d37f3b519d30d36a2373aa"
+      },
+      {
+        "path": "public/art/apes/ivory-listener-600.webp",
+        "bytes": 61906,
+        "sha256": "7fccfdca05ffb708002c56dc7b340d14cdf6c7d6951f09992ace73cab94fe4c9"
+      },
+      {
+        "path": "public/art/apes/ivory-listener.webp",
+        "bytes": 139298,
+        "sha256": "19fbc674cd86795d7c0f349644d34625ee659f02bfaf7e402e8aacfff1020c33"
+      },
+      {
+        "path": "public/art/apes/linen-scholar-360.webp",
+        "bytes": 23896,
+        "sha256": "d4653d63e606516b73ec840562abfdcbe7d2cf849c7f7fea61c1af68ebef5af4"
+      },
+      {
+        "path": "public/art/apes/linen-scholar-600.webp",
+        "bytes": 68350,
+        "sha256": "84ffa6557c16bc069304101582f79ea3fa7dd07ca15a858275f632cd51e64096"
+      },
+      {
+        "path": "public/art/apes/linen-scholar.webp",
+        "bytes": 159120,
+        "sha256": "920a8b363e3671f7c9d50421ab5f35093fd91d9b423227aa4e4640583041aaa3"
+      },
+      {
+        "path": "public/art/apes/midnight-curator-360.webp",
+        "bytes": 21512,
+        "sha256": "2b51d829d3f488af3083eb579f27dc2e2cf09af83db282c96d8e561744f06f97"
+      },
+      {
+        "path": "public/art/apes/midnight-curator-600.webp",
+        "bytes": 61838,
+        "sha256": "da6611e5a0ea8377ada3933156483fe1678ba9bee31c8fedddd539865be1178f"
+      },
+      {
+        "path": "public/art/apes/midnight-curator.webp",
+        "bytes": 133062,
+        "sha256": "31ffe997c1cccee120fd72e912f4e14cd8162a4c344bb33f7c23436d1421eac5"
+      },
+      {
+        "path": "public/art/apes/olive-explorer-360.webp",
+        "bytes": 32194,
+        "sha256": "c78bef7bb6029e4994938ef708b00bc503415aab21d2dff174da9e67b2e2341f"
+      },
+      {
+        "path": "public/art/apes/olive-explorer-600.webp",
+        "bytes": 81228,
+        "sha256": "660f446c4f2e67ff3a61e85b727a4fbe2b350224c163a18b07d5388b904c151c"
+      },
+      {
+        "path": "public/art/apes/olive-explorer.webp",
+        "bytes": 162304,
+        "sha256": "20c5dd4933986b34a7834a48a1fce252ecf1a8a76cea6ba040a97ea5c183cc40"
+      },
+      {
+        "path": "public/art/apes/terracotta-traveler-360.webp",
+        "bytes": 26694,
+        "sha256": "3e75792867da40cb1181b8e3c8eafd21eb1a0f3301df77fa3a8ebb17c2738e8c"
+      },
+      {
+        "path": "public/art/apes/terracotta-traveler-600.webp",
+        "bytes": 67780,
+        "sha256": "40ee1433a6111890151d5e243fc3178554fe556c4b94fe78ac95ed8431eab1c3"
+      },
+      {
+        "path": "public/art/apes/terracotta-traveler.webp",
+        "bytes": 138922,
+        "sha256": "8054fa1e05b22fbf0fd1c9603bc42602f72fdec1a449008213622da08e77eacd"
+      },
+      {
+        "path": "public/art/atlantic-cartographer.webp",
+        "bytes": 186464,
+        "sha256": "ebed88b4bee573df0bab7e83af1857a0cb0f3dc3a2a8839a9e71763c85af8b13"
+      },
+      {
+        "path": "public/art/ceramic-maker.webp",
+        "bytes": 203626,
+        "sha256": "36aaf616a0f277b043b90a3a2acf639c5cf2145d6525d51f1f0d5b3bc9539c58"
+      },
+      {
+        "path": "public/art/hero.svg",
+        "bytes": 1963,
+        "sha256": "f8dc0924f1db377659f0e45f6ea4537750eb70a38e742d9059c3213e30d79f75"
+      },
+      {
+        "path": "public/art/nft-1.svg",
+        "bytes": 1963,
+        "sha256": "f8dc0924f1db377659f0e45f6ea4537750eb70a38e742d9059c3213e30d79f75"
+      },
+      {
+        "path": "public/art/nft-10.svg",
+        "bytes": 1963,
+        "sha256": "869d4aaeb383a57505b8c5544656828e603c77f1bf72a895fa4274829b6a9957"
+      },
+      {
+        "path": "public/art/nft-11.svg",
+        "bytes": 1963,
+        "sha256": "74df1bf976eb966d1e9da77009e6f0a19559972474cf492337c2be8d0a3b6f09"
+      },
+      {
+        "path": "public/art/nft-12.svg",
+        "bytes": 1964,
+        "sha256": "bfdaba693ed3183c836471943429c13c02b2dff13b1b2cb21196620ed3ff36b1"
+      },
+      {
+        "path": "public/art/nft-2.svg",
+        "bytes": 1964,
+        "sha256": "65594c5c39094dd05d6701d65bf2ff014f5c453eeab0a4929d949f4903d2ff8b"
+      },
+      {
+        "path": "public/art/nft-3.svg",
+        "bytes": 1964,
+        "sha256": "0c158adc30253b02b0af344eaa2baccc4dbec78516e595bb83120d9665999317"
+      },
+      {
+        "path": "public/art/nft-4.svg",
+        "bytes": 1964,
+        "sha256": "4b7b2109c09402be6fe34dd89a79c8342edba34e0fdf369c22bb6536da73c1fb"
+      },
+      {
+        "path": "public/art/nft-5.svg",
+        "bytes": 1965,
+        "sha256": "8a4df1a9a91ed43ee75dfba5e907f3677fab091f23831249a768ffd0fa0f296c"
+      },
+      {
+        "path": "public/art/nft-6.svg",
+        "bytes": 1965,
+        "sha256": "f253fbb03a18cacfd9ecfebd9051a30390c638ee4a2c1ebdf963f2e790719b45"
+      },
+      {
+        "path": "public/art/nft-7.svg",
+        "bytes": 1964,
+        "sha256": "372831191ceb6f2443702ecebc003eec1c9e8769af63e3870251abd6043320ec"
+      },
+      {
+        "path": "public/art/nft-8.svg",
+        "bytes": 1964,
+        "sha256": "e24503e7548f78f0f2692ad81df00d6b8a4d8f251c13cd5ce382f69b74a726a4"
+      },
+      {
+        "path": "public/art/nft-9.svg",
+        "bytes": 1964,
+        "sha256": "967bd848ac145ed5df31e98b75c6f022ef7790b3ec213e5c5eeb39df6ca3ed7b"
+      },
+      {
+        "path": "public/favicon.svg",
+        "bytes": 200,
+        "sha256": "b982f5b7b8fd9d373b74d465a0edf02dd51d8565d4a04772148be3424616e105"
+      },
+      {
+        "path": "public/figma/art/2a42ba5adc341c3d-360.webp",
+        "bytes": 29280,
+        "sha256": "3a808f766c8abbb6a502c32eeba18cf07a326c031dfd59769ceacfdd255ec54b"
+      },
+      {
+        "path": "public/figma/art/2a42ba5adc341c3d-600.webp",
+        "bytes": 72408,
+        "sha256": "4fa98976c51cd2c7c9bb290f4898abb872124b14be7b007369f549c21a027e91"
+      },
+      {
+        "path": "public/figma/art/2a42ba5adc341c3d.webp",
+        "bytes": 147234,
+        "sha256": "bae5d77cf72d83e883023946ff9fa9ea0bd6b2bf66b8e35821e51bb024ceb5aa"
+      },
+      {
+        "path": "public/figma/art/326df4c1c08c31c8-360.webp",
+        "bytes": 23484,
+        "sha256": "e3ed9587f07f84417d5b939a6887b147b5340c823762f58c58f5e135a0b8b556"
+      },
+      {
+        "path": "public/figma/art/326df4c1c08c31c8-600.webp",
+        "bytes": 55560,
+        "sha256": "07f24fcdb0f9e31c1ad1c277b6fd77c43a8d56f2de429e49a597b14172ad722c"
+      },
+      {
+        "path": "public/figma/art/326df4c1c08c31c8.webp",
+        "bytes": 121208,
+        "sha256": "925971671316a97765de56882fe7a6d2400afdd99265b6ca2c63a8d69699ca0b"
+      },
+      {
+        "path": "public/figma/art/9b25d8d72395aa62-360.webp",
+        "bytes": 26822,
+        "sha256": "821805dbc32e9e363d42dbdeafc8729483ecc204d6d84ac156ddc36a5c185d30"
+      },
+      {
+        "path": "public/figma/art/9b25d8d72395aa62-600.webp",
+        "bytes": 64614,
+        "sha256": "3e4245f3f55caddc956417dfab737402f1a6a9752c90c17e19776fab7fb26b1f"
+      },
+      {
+        "path": "public/figma/art/9b25d8d72395aa62.webp",
+        "bytes": 139954,
+        "sha256": "a93a88dd55d4d473af08c0d28985d79f62b231581834834da5b180af3980a70b"
+      },
+      {
+        "path": "public/figma/art/f20b58b99de12b6e-300.webp",
+        "bytes": 21062,
+        "sha256": "1eaf6dcf08291e9f40feccc1fcfcc3eadfc4384447ae29be3bd257c413de9010"
+      },
+      {
+        "path": "public/figma/art/f20b58b99de12b6e-360.webp",
+        "bytes": 28930,
+        "sha256": "67bd333c7361ce3a2158bdd9758959f714f86181533ed55201bc6a91965ba07f"
+      },
+      {
+        "path": "public/figma/art/f20b58b99de12b6e-600.webp",
+        "bytes": 64120,
+        "sha256": "273d87f1ff563e9b7346e8249b18e592d05884d8cf14539e2f1b528f0f763923"
+      },
+      {
+        "path": "public/figma/art/f20b58b99de12b6e.webp",
+        "bytes": 121896,
+        "sha256": "d75120fe23d50cf1ce78579759c25a8d947417d583c048dfef1475c2540a1153"
+      },
+      {
+        "path": "public/figma/cart/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "public/figma/cart/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/cart/imgCarouselDots.svg",
+        "bytes": 821,
+        "sha256": "beeb6d9dfad9ef3f7dc7caeb5eaee0fc5328c3df1ef96373f90536cd685e66dc"
+      },
+      {
+        "path": "public/figma/cart/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/cart/imgDelete.svg",
+        "bytes": 772,
+        "sha256": "ee4358bcb2278e59f6c01199b2b24e7feed4298fe232eb58f85ad89fdbfd5749"
+      },
+      {
+        "path": "public/figma/cart/imgFrame.svg",
+        "bytes": 280,
+        "sha256": "0b504b1508310c2a10af08dd071b3daf44df8826d2e54deb8d2e3e6884e07af9"
+      },
+      {
+        "path": "public/figma/cart/imgFrame1.svg",
+        "bytes": 344,
+        "sha256": "5727571b6801480b34da01eb9144cfbdf9b9889a59a00e0f6e53327c1a56d174"
+      },
+      {
+        "path": "public/figma/cart/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "public/figma/cart/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "public/figma/cart/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "public/figma/cart/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "public/figma/cart/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "public/figma/cart/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "db0ffe0bdb329e35aae7eccca6a96cfd36d76b3f361b197736fb2f118fb9121a"
+      },
+      {
+        "path": "public/figma/cart/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "302db3a02437cee0ad4c1618de06c0dfe642c94737d5669192781edf78e784d5"
+      },
+      {
+        "path": "public/figma/cart/imgLine7.svg",
+        "bytes": 252,
+        "sha256": "307dabdc450c6b535abcddff73316ea97a69c4eb0a9012dcb87c361441b82846"
+      },
+      {
+        "path": "public/figma/cart/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/cart/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/detail/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "public/figma/detail/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/detail/imgCarouselDots.svg",
+        "bytes": 821,
+        "sha256": "6deb89d6dad322ba24432799c97e8f0da097e5dc9612d2c482063583918d0416"
+      },
+      {
+        "path": "public/figma/detail/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/detail/imgEllipse24.svg",
+        "bytes": 545,
+        "sha256": "c4895a03a25710db14ab6ecaaae1b988d0cda576a631834db218364d357ef2f2"
+      },
+      {
+        "path": "public/figma/detail/imgEllipse25.svg",
+        "bytes": 541,
+        "sha256": "a072391f79c1558f6de5efc2e59b2e298c9e13b3e755b0b8d97075af5e823306"
+      },
+      {
+        "path": "public/figma/detail/imgEllipse26.svg",
+        "bytes": 545,
+        "sha256": "ef7f60c27e69b94ba2387a21da3c2a644887b3c714d6d43086eaa8b940d07936"
+      },
+      {
+        "path": "public/figma/detail/imgEllipse27.svg",
+        "bytes": 545,
+        "sha256": "c1af46bba8e994ff13ca34f3a336c04998f120309638baed0ed12324a1dd9c82"
+      },
+      {
+        "path": "public/figma/detail/imgFrame.svg",
+        "bytes": 279,
+        "sha256": "3c3b68b7be3648b5a5cf1f3cf8442ae0a29174b87a02e24e0f806def1d0b4e83"
+      },
+      {
+        "path": "public/figma/detail/imgFrame1.svg",
+        "bytes": 334,
+        "sha256": "a59305fbc255cd7493223c7677d6a3acd4b076522ff5ba77dfd78132863ed917"
+      },
+      {
+        "path": "public/figma/detail/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "public/figma/detail/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "public/figma/detail/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "public/figma/detail/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "public/figma/detail/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "public/figma/detail/imgFrame238.svg",
+        "bytes": 1276,
+        "sha256": "014b44cf6c3629ddc2581fbeed92714841fce707fcf4e1f93b958317e28fef15"
+      },
+      {
+        "path": "public/figma/detail/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "0fa90a80e18e338a71170d39584b98127fe12e317d6cdd72c59f89fb65ed8be0"
+      },
+      {
+        "path": "public/figma/detail/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "5b75976d2c5ae12509e955a4a89f9671cfd354f7cecd96b8f32e40af5998271f"
+      },
+      {
+        "path": "public/figma/detail/imgLine5.svg",
+        "bytes": 252,
+        "sha256": "5720dc3915d58568d6d2671bac7dc30498591f4cb3e110e8fcb06fb43b38ac66"
+      },
+      {
+        "path": "public/figma/detail/imgLine6.svg",
+        "bytes": 242,
+        "sha256": "d2dee6dbb4797d152e94cc2fb224385d08d7df4c31c26dd61d089df4a6201341"
+      },
+      {
+        "path": "public/figma/detail/imgLinkedin.svg",
+        "bytes": 534,
+        "sha256": "ff3cb7cf633dbe6fa43f7d47c7d3c2f358b4318d0418804405947d7344d76ae3"
+      },
+      {
+        "path": "public/figma/detail/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/detail/imgMessage.svg",
+        "bytes": 1222,
+        "sha256": "3b1d83e85ce80e2c0398926f8031ff9566af60e334c68a72ecc910e75794d382"
+      },
+      {
+        "path": "public/figma/detail/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/detail/imgStar.svg",
+        "bytes": 1251,
+        "sha256": "2825eb7248e6d55fa34c3c85a38529746cc6437791e1f7860c2321a3ce0ac453"
+      },
+      {
+        "path": "public/figma/detail/imgStar1.svg",
+        "bytes": 1251,
+        "sha256": "385da0b35478b0ed92054eacb545ace8d11977f50fb342327632dc01b3596561"
+      },
+      {
+        "path": "public/figma/detail/imgTwitter.svg",
+        "bytes": 1234,
+        "sha256": "6c4b682b4ed5eb78efe0be927a88dcaa91bd65cbd8cfe7fc8e4914f06c195257"
+      },
+      {
+        "path": "public/figma/home/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "public/figma/home/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "public/figma/home/imgArrowRight.svg",
+        "bytes": 565,
+        "sha256": "35f08d7598b8fdea032f5ec34e788ca9413d427d8ddfdd92f1908bc4d02b9758"
+      },
+      {
+        "path": "public/figma/home/imgArrowRight2.svg",
+        "bytes": 451,
+        "sha256": "b3542159d4936332fe1ef98342f796451426e4898b1d4f457817ebac7e1b32e7"
+      },
+      {
+        "path": "public/figma/home/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/home/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/home/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "public/figma/home/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "public/figma/home/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "public/figma/home/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "public/figma/home/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "public/figma/home/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "public/figma/home/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "public/figma/home/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "public/figma/home/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "ae1600c325d7b0183acec9b5b048d426959e69f92851f9aaa8d77311fc06bb2c"
+      },
+      {
+        "path": "public/figma/home/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "public/figma/home/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "public/figma/home/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/home/imgMaskGroup.svg",
+        "bytes": 829,
+        "sha256": "311d5a7032b9d800a920f1428f6c3f766ee96dcd0090e3ba906ba6cacda0f504"
+      },
+      {
+        "path": "public/figma/home/imgRectangle3.svg",
+        "bytes": 199,
+        "sha256": "7794c68c7090f9e0ef137f544699c583a9f8b2de1b293f504631caec71863c4d"
+      },
+      {
+        "path": "public/figma/home/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/login/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "public/figma/login/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "public/figma/login/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/login/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/login/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "public/figma/login/imgFacebook1.svg",
+        "bytes": 644,
+        "sha256": "989807e1d00ec515d541e0c737162ef3c086d676e06fcf40225d78b85cb23e6f"
+      },
+      {
+        "path": "public/figma/login/imgFrame.svg",
+        "bytes": 1228,
+        "sha256": "7e74c795d766357b6b5a82fa6c79cf512dc1813b4751d9570ad45bbc6ca1d808"
+      },
+      {
+        "path": "public/figma/login/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "public/figma/login/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "public/figma/login/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "5e54b72e7dad45e8eb429734267be70e8edd9ce5a2a250c86fc908c0bf729553"
+      },
+      {
+        "path": "public/figma/login/imgHide.svg",
+        "bytes": 1318,
+        "sha256": "7ca97961ae6f9812bb4bf157c085f6539ceacad412b62310db70afac063ed567"
+      },
+      {
+        "path": "public/figma/login/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "public/figma/login/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "26553206cb96630ee07bf127eb0efba5402b1e6e065d785a150f8af5ed0ca447"
+      },
+      {
+        "path": "public/figma/login/imgLine4.svg",
+        "bytes": 222,
+        "sha256": "4ae11a696d33dac86c3d31b454b7225a7cf5b026a7f34c9cb32f765cf6b9542a"
+      },
+      {
+        "path": "public/figma/login/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "public/figma/login/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "public/figma/login/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "a3cbcbf3189627cc40c282719dfc2890b0d7a6c10cc639a431ea7888a581657e"
+      },
+      {
+        "path": "public/figma/login/imgLine8.svg",
+        "bytes": 225,
+        "sha256": "b94f607d6df7479f9ef84377b6eb9356f37daf902be137f8bfc510de7609d4bb"
+      },
+      {
+        "path": "public/figma/login/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/login/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/login/imgShopping1.svg",
+        "bytes": 1628,
+        "sha256": "87c1891c989d13761042b7eafed139d7791e9c95fa8bd91062682bf5a4396052"
+      },
+      {
+        "path": "public/figma/login/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "public/figma/login/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "public/figma/login/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "public/figma/login/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "public/figma/login/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "public/figma/login/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "public/figma/login/imgX.svg",
+        "bytes": 787,
+        "sha256": "a434085336d2581c34cc1e853dc35399644244590ec7d3751f884cbaf62d4dfa"
+      },
+      {
+        "path": "public/figma/manifest.json",
+        "bytes": 15312,
+        "sha256": "bf98436892f485f36f21d5bd6246deec0931bd6bfb626aedb76b6d98ee8a145d"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgArrowLeft2.svg",
+        "bytes": 450,
+        "sha256": "66aea4dd7e0e227a5cbb167fb376767ac27655d30f65c7a53b2205cfce3d976e"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgEllipse25.svg",
+        "bytes": 539,
+        "sha256": "2d6fbd07c215a1b7f227996dddea8fdf7d5deb36058dd7f10f1626c69032f331"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgEllipse26.svg",
+        "bytes": 543,
+        "sha256": "7fc52a6e0e11a701eb6f7f8d9d99c3000965054bf10bfca8dfe89d8dad110122"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgEllipse27.svg",
+        "bytes": 543,
+        "sha256": "42a22f798ce1948dbede58dffb2aa5354a8fd7196245ed25e0398b7d7f4dc2b4"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgFrame.svg",
+        "bytes": 280,
+        "sha256": "47af0f9b2bbb018a225118b4ba0f1ccc2a5887cb9d90efd09ada691ea34deb56"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgFrame1.svg",
+        "bytes": 344,
+        "sha256": "5727571b6801480b34da01eb9144cfbdf9b9889a59a00e0f6e53327c1a56d174"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgGroup62.svg",
+        "bytes": 400,
+        "sha256": "50feb8619fadac3f6031988ac9d918ed76e9947f27f83acd028aaf5a54fcf314"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgShop.svg",
+        "bytes": 1211,
+        "sha256": "2445ac9651089fbab54fc0c49f293f15046e8fdb98218abf1bb92fba47ffc361"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgStar.svg",
+        "bytes": 1289,
+        "sha256": "a707499d73b16690d029df6070f372ddee12e700884fdbaae4d68ad1e00733dd"
+      },
+      {
+        "path": "public/figma/mobile-detail/imgVector.svg",
+        "bytes": 1758,
+        "sha256": "7ff44d980c5750f1c5b36890670b201cc1d52e31ed4febeade1c079e292f70cc"
+      },
+      {
+        "path": "public/figma/mobile-home/imgArrowRight.svg",
+        "bytes": 568,
+        "sha256": "c52fe7279962435f332d481e23e18d2024017e241408e404cf73e51cc85bc3d7"
+      },
+      {
+        "path": "public/figma/mobile-home/imgEllipse39.svg",
+        "bytes": 486,
+        "sha256": "88966ba04e6896065dbf8e98a615fea2c41adcd49f1f25ae7c02a577965d3ed6"
+      },
+      {
+        "path": "public/figma/mobile-home/imgFilter.svg",
+        "bytes": 1097,
+        "sha256": "626a33e9cf87b0114eb7d76f30b3215e3ea50d6b6dafebce66f47c262ac268af"
+      },
+      {
+        "path": "public/figma/mobile-home/imgFrame4.svg",
+        "bytes": 393,
+        "sha256": "9243a5140bc3a208bf7c002a6fda07d8d7f8e5ac2442a494a1a1b943935a736f"
+      },
+      {
+        "path": "public/figma/mobile-home/imgFrame410.svg",
+        "bytes": 1938,
+        "sha256": "3c3dc151493f0b8add40af0b0b2bfa955ade927ca7ccb4e077a35ea17819916a"
+      },
+      {
+        "path": "public/figma/mobile-home/imgGroup58.svg",
+        "bytes": 1961,
+        "sha256": "e5cd6f43676492095d18826cb6a9d3c1999249540d8b5f83d1c3a169f40f7ef5"
+      },
+      {
+        "path": "public/figma/mobile-home/imgHome.svg",
+        "bytes": 958,
+        "sha256": "817217a0fb3c14a94ec579cacd868fb46c74815085c5bec20571fcbff5a3fd1d"
+      },
+      {
+        "path": "public/figma/mobile-home/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "c4608a9dd20da1ff0792960a1dcfea1ef08a759b77846e8fd3cc3ee449ad8d3d"
+      },
+      {
+        "path": "public/figma/mobile-home/imgMaskGroup.svg",
+        "bytes": 1409,
+        "sha256": "81e705a5e521900cc42861cd468f817ae73541f7286caf942716e543df6173f0"
+      },
+      {
+        "path": "public/figma/mobile-home/imgSearch.svg",
+        "bytes": 919,
+        "sha256": "4c37bff9a264e486854cbd355ad3e5ee90c5f8e956dd495013effa1a2fcc87ec"
+      },
+      {
+        "path": "public/figma/mobile-home/imgShop.svg",
+        "bytes": 1211,
+        "sha256": "b139c41ef0e3cd55a37bc5e6c59a1d12397edea0bc673a68d14ee0e27ede4847"
+      },
+      {
+        "path": "public/figma/mobile-home/imgUser.svg",
+        "bytes": 783,
+        "sha256": "685a52bee52914a28fa470d693af74235322f879e4ce77c823c6357b7de114a7"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector.svg",
+        "bytes": 1216,
+        "sha256": "5e4a0cdcc377948550b28d2aae6c5709b7e27ebf1ebdbe41be06393fb42623e7"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector1.svg",
+        "bytes": 925,
+        "sha256": "fd0bba2847544e3defee9d845af26b2e6cd1242bbeda89dc1a7efd95f492dd05"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector2.svg",
+        "bytes": 873,
+        "sha256": "6e762edf1dfd8e8fe482370cb42bab8a0aa34e96dd1d8c1aca5b06cd926463cb"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector3.svg",
+        "bytes": 746,
+        "sha256": "f374805f6712c71c467df0230cadcb997b4054530b577e6466a3d9b8b41207c9"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector4.svg",
+        "bytes": 934,
+        "sha256": "225ff31a985101fd13f10ba6b7554b8b1f200de5e42f5995380fdfd2502cd672"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector5.svg",
+        "bytes": 795,
+        "sha256": "cf24e892c1ecce9c16ff0ea5a731fb6a72834a101622f64dcb862bbb0ec1f1a0"
+      },
+      {
+        "path": "public/figma/mobile-home/imgVector6.svg",
+        "bytes": 880,
+        "sha256": "287fb8dff06b629aaccc32646223bd568543613e31a72b75a460963686f0293f"
+      },
+      {
+        "path": "public/figma/mobile-login/imgFacebook1.svg",
+        "bytes": 642,
+        "sha256": "0445e8ea7de3d164caf154b3b19f583277c8b0906fa88abe5977701031e4841d"
+      },
+      {
+        "path": "public/figma/mobile-login/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "public/figma/mobile-login/imgHide.svg",
+        "bytes": 1309,
+        "sha256": "07aba54d50501f9249a3b1b208d27c06b5bc9f49a9d43b2991448174c5848fed"
+      },
+      {
+        "path": "public/figma/mobile-login/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "392cbf844f0d1e69ec53eb356dbc4c72b8212a5632b6902af30a6b78609278a7"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "public/figma/mobile-login/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgArrowLeft2.svg",
+        "bytes": 450,
+        "sha256": "bfdac5f3714203b54490a6ac7dc331bae684590860c0d78705918f4f6e3cdc82"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgEllipse38.svg",
+        "bytes": 383,
+        "sha256": "b90365adfbf2dd93f3de1a06564372c1b4f45433cb6ccc34244318d6aeaeb16b"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgEllipse44.svg",
+        "bytes": 373,
+        "sha256": "c9441a1b1db7b411ed6b553ce28a6571da2eb1b04dd626c34a6be3b9fe7e55e3"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgEllipse46.svg",
+        "bytes": 372,
+        "sha256": "5a2a327d2240b6312c20f7d887fde33933003499c3ac12c378619a89406f732c"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgGroup87.svg",
+        "bytes": 396,
+        "sha256": "00b69ee0eacaaacbbc474a9724df7a7f35d0949d5856e427385d1233c41b554d"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgGroup90.svg",
+        "bytes": 456,
+        "sha256": "97666ab8acffb9e6c20ce60a7d02e3c6c9bfe22fec4f7b708e22015c82f01875"
+      },
+      {
+        "path": "public/figma/mobile-payment/imgWallet.svg",
+        "bytes": 1008,
+        "sha256": "3f641924aee47acbf153a59bff3e84780dd6c05910ccd29195e2a58f5f1894c1"
+      },
+      {
+        "path": "public/figma/mobile-register/imgFacebook1.svg",
+        "bytes": 642,
+        "sha256": "96a93ad0e8b8aa426089c8486d15937582d67a65a903c17e5e4dc9448094cb6a"
+      },
+      {
+        "path": "public/figma/mobile-register/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "public/figma/mobile-register/imgHide.svg",
+        "bytes": 1309,
+        "sha256": "07aba54d50501f9249a3b1b208d27c06b5bc9f49a9d43b2991448174c5848fed"
+      },
+      {
+        "path": "public/figma/mobile-register/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "392cbf844f0d1e69ec53eb356dbc4c72b8212a5632b6902af30a6b78609278a7"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "public/figma/mobile-register/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "public/figma/order/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "public/figma/order/imgArrowDown.svg",
+        "bytes": 605,
+        "sha256": "60d5d9aebbf5cd7e5abd6e0cc8f642d56fe56f038a4796ad0964d6da1e1e8c56"
+      },
+      {
+        "path": "public/figma/order/imgArrowDown1.svg",
+        "bytes": 605,
+        "sha256": "4373c8391935271d4d6de11877337be7c65fd66bf4f1f565db079fdeaca1d197"
+      },
+      {
+        "path": "public/figma/order/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/order/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/order/imgEllipse31.svg",
+        "bytes": 354,
+        "sha256": "b3602dc9e9420e3bfa34221e919e8aac29acb86fefbfb134a63260df5ad3213a"
+      },
+      {
+        "path": "public/figma/order/imgEllipse32.svg",
+        "bytes": 372,
+        "sha256": "96e51a214e55e19807221accd94017444a41b4bdcad21aa448b8b826b4d58af4"
+      },
+      {
+        "path": "public/figma/order/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "public/figma/order/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "public/figma/order/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "public/figma/order/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "public/figma/order/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "public/figma/order/imgFrame323.svg",
+        "bytes": 457,
+        "sha256": "d3db0b08e8609049dd555aa7b5763d898f1baf41a035e4b7a1ad5fba824ae48a"
+      },
+      {
+        "path": "public/figma/order/imgGroup.svg",
+        "bytes": 6337,
+        "sha256": "2abdea35aa83b26b060de908e5e9714e49ffdaa3c2bf2c93930e141367dbb69e"
+      },
+      {
+        "path": "public/figma/order/imgLine10.svg",
+        "bytes": 223,
+        "sha256": "5a9dc781c38b60b5bdb3c6c1e630fba7f42e649f6c61ce5d7d70b0f7d34816d8"
+      },
+      {
+        "path": "public/figma/order/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "4bdbc18f053fa7efd0fa76257076486ed257205ad7d1623da340b97dc6906a4e"
+      },
+      {
+        "path": "public/figma/order/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "0b1eefd4cd20cf5d625006854ef2981b5721fed9c1584df78cef6eb0b17849cf"
+      },
+      {
+        "path": "public/figma/order/imgLine4.svg",
+        "bytes": 249,
+        "sha256": "ec867e18aa6cdbb659f1b35ccb7ad1eac30f75995d38283d91c88135c8da90b1"
+      },
+      {
+        "path": "public/figma/order/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/order/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/order/imgX.svg",
+        "bytes": 803,
+        "sha256": "6434dc289eab154a742c48c6a4942b40bb2bf0ab38c93c10fb79682e4b4eeb80"
+      },
+      {
+        "path": "public/figma/payment/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "90ad892336e5601740d792409f5610bc8a892c022a669d52248fb21c838c0ab7"
+      },
+      {
+        "path": "public/figma/payment/imgArrowDown.svg",
+        "bytes": 605,
+        "sha256": "60d5d9aebbf5cd7e5abd6e0cc8f642d56fe56f038a4796ad0964d6da1e1e8c56"
+      },
+      {
+        "path": "public/figma/payment/imgArrowDown1.svg",
+        "bytes": 605,
+        "sha256": "4373c8391935271d4d6de11877337be7c65fd66bf4f1f565db079fdeaca1d197"
+      },
+      {
+        "path": "public/figma/payment/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/payment/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/payment/imgEllipse31.svg",
+        "bytes": 354,
+        "sha256": "b3602dc9e9420e3bfa34221e919e8aac29acb86fefbfb134a63260df5ad3213a"
+      },
+      {
+        "path": "public/figma/payment/imgEllipse32.svg",
+        "bytes": 372,
+        "sha256": "96e51a214e55e19807221accd94017444a41b4bdcad21aa448b8b826b4d58af4"
+      },
+      {
+        "path": "public/figma/payment/imgFrame108.svg",
+        "bytes": 477,
+        "sha256": "6a984b7eeb4d8b6f88561c31ca45cbdf22f77c536dc85e5cd7bb10a7b45d1688"
+      },
+      {
+        "path": "public/figma/payment/imgFrame109.svg",
+        "bytes": 1723,
+        "sha256": "129783e293beb8f856fa0117b3806bd98c1a61455812671fe0faa1d34b92ea59"
+      },
+      {
+        "path": "public/figma/payment/imgFrame110.svg",
+        "bytes": 1288,
+        "sha256": "90ac152d2c8ad501109137db7ee03baf7493122d1afc6ee0fb435ed1835e2d94"
+      },
+      {
+        "path": "public/figma/payment/imgFrame111.svg",
+        "bytes": 677,
+        "sha256": "be57d179a85ed75bb0d1d221979eb71d6516c99ab892343420c84dc5921bb71e"
+      },
+      {
+        "path": "public/figma/payment/imgFrame112.svg",
+        "bytes": 1186,
+        "sha256": "211a63e3208bb23a6c336ae1b47721797f1ce8fb184a04f9d3e9b47066997d22"
+      },
+      {
+        "path": "public/figma/payment/imgFrame323.svg",
+        "bytes": 457,
+        "sha256": "d3db0b08e8609049dd555aa7b5763d898f1baf41a035e4b7a1ad5fba824ae48a"
+      },
+      {
+        "path": "public/figma/payment/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "4bdbc18f053fa7efd0fa76257076486ed257205ad7d1623da340b97dc6906a4e"
+      },
+      {
+        "path": "public/figma/payment/imgLine3.svg",
+        "bytes": 249,
+        "sha256": "0b1eefd4cd20cf5d625006854ef2981b5721fed9c1584df78cef6eb0b17849cf"
+      },
+      {
+        "path": "public/figma/payment/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/payment/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/profile/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "public/figma/profile/imgActivity.svg",
+        "bytes": 1026,
+        "sha256": "d102cc0ed827fc20138ad559e2499aaec69cbd182a583fd71cf7918b491b5556"
+      },
+      {
+        "path": "public/figma/profile/imgArrowDown.svg",
+        "bytes": 602,
+        "sha256": "bd200d44e9af2433fa96e52678a740df8824c614d594438b56a9b05489f92fb9"
+      },
+      {
+        "path": "public/figma/profile/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/profile/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/profile/imgDangerTriangle.svg",
+        "bytes": 878,
+        "sha256": "8b04700608134c5c2135eb7905dcee4fd0b3d4baed6c062e11f2277e7fcc98be"
+      },
+      {
+        "path": "public/figma/profile/imgDownload.svg",
+        "bytes": 798,
+        "sha256": "20457f1ab9ab66289a4feecbca17e0dad534c3b7e0cab48b6357e71ea2552c1b"
+      },
+      {
+        "path": "public/figma/profile/imgHeart1.svg",
+        "bytes": 1778,
+        "sha256": "d3b60820cc91342d7a0921434a30d5c18ac05df8a91bc88769a16667a967c169"
+      },
+      {
+        "path": "public/figma/profile/imgHide.svg",
+        "bytes": 3806,
+        "sha256": "906f499a566a4e2ad96baf6e7b40f6c86e8fe6b2c1bab93af77dff44a73c6048"
+      },
+      {
+        "path": "public/figma/profile/imgImage2.svg",
+        "bytes": 1046,
+        "sha256": "6e8937ac4f14f41c17ab0a738c1083d5b82d863b7b978d5b7cbe15fd20c2ae13"
+      },
+      {
+        "path": "public/figma/profile/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "public/figma/profile/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "9f32c2b8af7f1b175b669a1484b692735781563f2118eeaf5c30a5f244a71b22"
+      },
+      {
+        "path": "public/figma/profile/imgLocation.svg",
+        "bytes": 1540,
+        "sha256": "655486a1eed0d325c7c25906abadd2b50c67f395a80eb25aab90ea0f31e52c92"
+      },
+      {
+        "path": "public/figma/profile/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/profile/imgLogout1.svg",
+        "bytes": 786,
+        "sha256": "479a567f079a032606e21820202255fbcd4588fbdc45d1195d0a2d159c4abd43"
+      },
+      {
+        "path": "public/figma/profile/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/profile/imgShopping1.svg",
+        "bytes": 1618,
+        "sha256": "90c610853ba0b5467a80fb352516e547a5b44c7d793bf2bafed61e2e7876399b"
+      },
+      {
+        "path": "public/figma/profile/imgUser.svg",
+        "bytes": 1422,
+        "sha256": "82dad8db63f10f7239ff4494436c95bfbfea62c7fb8bff442c8744699286097c"
+      },
+      {
+        "path": "public/figma/register/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "public/figma/register/imgArrowDown2.svg",
+        "bytes": 371,
+        "sha256": "1c90b2616e3e03d9463f045add3315b5c87de690cc69251122f1102230061aba"
+      },
+      {
+        "path": "public/figma/register/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/register/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/register/imgEllipse5.svg",
+        "bytes": 399,
+        "sha256": "a7ad54496d2bd2bc6f21f5b3964c0c093e246676cac971ae0306b99a988482c7"
+      },
+      {
+        "path": "public/figma/register/imgFacebook1.svg",
+        "bytes": 644,
+        "sha256": "434d15ce624cf8819a38c076c532185e771ea1eda1cb5ecaf80bcfe8bc6dc77d"
+      },
+      {
+        "path": "public/figma/register/imgFrame.svg",
+        "bytes": 1228,
+        "sha256": "bb7dee15114b3007714aa6ae08ee7f8be1a6e0caca3267344442df9f692d5034"
+      },
+      {
+        "path": "public/figma/register/imgGroup.svg",
+        "bytes": 479,
+        "sha256": "502d5067f7550430197c65c62645d2513e83f88337a42f2e9008fe4a4eadae6e"
+      },
+      {
+        "path": "public/figma/register/imgGroup4.svg",
+        "bytes": 375,
+        "sha256": "0ff55c193b808afd4687bbe57909e205132df46d8d4fd37e2ce9547da6237377"
+      },
+      {
+        "path": "public/figma/register/imgHeart1.svg",
+        "bytes": 1792,
+        "sha256": "5e54b72e7dad45e8eb429734267be70e8edd9ce5a2a250c86fc908c0bf729553"
+      },
+      {
+        "path": "public/figma/register/imgHide.svg",
+        "bytes": 1318,
+        "sha256": "7ca97961ae6f9812bb4bf157c085f6539ceacad412b62310db70afac063ed567"
+      },
+      {
+        "path": "public/figma/register/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "public/figma/register/imgLine3.svg",
+        "bytes": 240,
+        "sha256": "26553206cb96630ee07bf127eb0efba5402b1e6e065d785a150f8af5ed0ca447"
+      },
+      {
+        "path": "public/figma/register/imgLine4.svg",
+        "bytes": 222,
+        "sha256": "4ae11a696d33dac86c3d31b454b7225a7cf5b026a7f34c9cb32f765cf6b9542a"
+      },
+      {
+        "path": "public/figma/register/imgLine5.svg",
+        "bytes": 260,
+        "sha256": "95733611bc777f8a07ea79a472c7ef3cc38e2a2fa31e822a480dc0aa03d578e0"
+      },
+      {
+        "path": "public/figma/register/imgLine6.svg",
+        "bytes": 263,
+        "sha256": "5038c8f668fcaf3512709e7b583ffa0bf686c21513b0cac9ebf0e6d80a3ea778"
+      },
+      {
+        "path": "public/figma/register/imgLine7.svg",
+        "bytes": 225,
+        "sha256": "a3cbcbf3189627cc40c282719dfc2890b0d7a6c10cc639a431ea7888a581657e"
+      },
+      {
+        "path": "public/figma/register/imgLine8.svg",
+        "bytes": 225,
+        "sha256": "b94f607d6df7479f9ef84377b6eb9356f37daf902be137f8bfc510de7609d4bb"
+      },
+      {
+        "path": "public/figma/register/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/register/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/register/imgShopping1.svg",
+        "bytes": 1628,
+        "sha256": "a755611d9a1d6753872d853588d80679a87297a888b208f70526887db2766b0f"
+      },
+      {
+        "path": "public/figma/register/imgVector.svg",
+        "bytes": 491,
+        "sha256": "c293e9ddf51016e74411ffa71aae83a04cee53060bdd0624623b913f5cd4b4bb"
+      },
+      {
+        "path": "public/figma/register/imgVector1.svg",
+        "bytes": 374,
+        "sha256": "a0ac95235f757b6f820778c7641b4dfcbea6b86b3007feebb1ea88d9b9728d6c"
+      },
+      {
+        "path": "public/figma/register/imgVector2.svg",
+        "bytes": 556,
+        "sha256": "d8d5466e16c1fba7a46fe895157f51f31029390f256bb7c20b832edb753d8553"
+      },
+      {
+        "path": "public/figma/register/imgVector3.svg",
+        "bytes": 435,
+        "sha256": "74177b5f0bc699619fa0299cc25077fc38864199d99ad1da481b89e41e4001d5"
+      },
+      {
+        "path": "public/figma/register/imgVector4.svg",
+        "bytes": 600,
+        "sha256": "e6e795dfe25a3d9d5ad477efea06552c8b8423b2ef5a3d500b9548472b9f0957"
+      },
+      {
+        "path": "public/figma/register/imgVector5.svg",
+        "bytes": 495,
+        "sha256": "73208a6a28f1b0e60cfe67f071bfccf6c7fe9e314f5e88a6869c3b00408c60be"
+      },
+      {
+        "path": "public/figma/register/imgX.svg",
+        "bytes": 787,
+        "sha256": "a434085336d2581c34cc1e853dc35399644244590ec7d3751f884cbaf62d4dfa"
+      },
+      {
+        "path": "public/figma/wallets/imgActiveUnderline.svg",
+        "bytes": 249,
+        "sha256": "e8f2fd36a1514c39c5124f4899284cf3adeea857e9cf90c98529a85b6c628413"
+      },
+      {
+        "path": "public/figma/wallets/imgActivity.svg",
+        "bytes": 1026,
+        "sha256": "d102cc0ed827fc20138ad559e2499aaec69cbd182a583fd71cf7918b491b5556"
+      },
+      {
+        "path": "public/figma/wallets/imgArrowDown.svg",
+        "bytes": 602,
+        "sha256": "bd200d44e9af2433fa96e52678a740df8824c614d594438b56a9b05489f92fb9"
+      },
+      {
+        "path": "public/figma/wallets/imgArrowDown1.svg",
+        "bytes": 602,
+        "sha256": "489bd4c61287603cbec765d03549baa46f6e6f09c9ad8cda14152a9c22d6ba21"
+      },
+      {
+        "path": "public/figma/wallets/imgBadge.svg",
+        "bytes": 359,
+        "sha256": "dfa5e8cc745f17e8a08cca78ff36cf1eff4a5e2d88903bc0f27c9ee2ae555fa7"
+      },
+      {
+        "path": "public/figma/wallets/imgCartIcon.svg",
+        "bytes": 1448,
+        "sha256": "5e2917db4f8f9463a648666c7d78030791e7b24347d68476a342492088adf031"
+      },
+      {
+        "path": "public/figma/wallets/imgDangerTriangle.svg",
+        "bytes": 878,
+        "sha256": "8b04700608134c5c2135eb7905dcee4fd0b3d4baed6c062e11f2277e7fcc98be"
+      },
+      {
+        "path": "public/figma/wallets/imgDownload.svg",
+        "bytes": 798,
+        "sha256": "20457f1ab9ab66289a4feecbca17e0dad534c3b7e0cab48b6357e71ea2552c1b"
+      },
+      {
+        "path": "public/figma/wallets/imgEllipse22.svg",
+        "bytes": 385,
+        "sha256": "08f4c145aacca2086193ae9ff416b97ce2f29de6865a6d9def4899a46dd8a26b"
+      },
+      {
+        "path": "public/figma/wallets/imgHeart1.svg",
+        "bytes": 1778,
+        "sha256": "d3b60820cc91342d7a0921434a30d5c18ac05df8a91bc88769a16667a967c169"
+      },
+      {
+        "path": "public/figma/wallets/imgLine1.svg",
+        "bytes": 252,
+        "sha256": "d34e83dadb55777dcb8e127a3985b83cdfd73629724b14b47a2b7e4eb2cdaaff"
+      },
+      {
+        "path": "public/figma/wallets/imgLine2.svg",
+        "bytes": 249,
+        "sha256": "9f32c2b8af7f1b175b669a1484b692735781563f2118eeaf5c30a5f244a71b22"
+      },
+      {
+        "path": "public/figma/wallets/imgLocation.svg",
+        "bytes": 1530,
+        "sha256": "a61067d5138c0b60b63cee291b3c4f589a6738224aeaee2f62d9f25dff9930a0"
+      },
+      {
+        "path": "public/figma/wallets/imgLogout.svg",
+        "bytes": 786,
+        "sha256": "400348ca0c418c6142cffed0fee38c7753ee589c268f03be4cd8ebf20543de3c"
+      },
+      {
+        "path": "public/figma/wallets/imgLogout1.svg",
+        "bytes": 786,
+        "sha256": "479a567f079a032606e21820202255fbcd4588fbdc45d1195d0a2d159c4abd43"
+      },
+      {
+        "path": "public/figma/wallets/imgSearchIcon.svg",
+        "bytes": 1073,
+        "sha256": "43663fd7c3c84d7bfa66ffdd358cb5ae9baf57d2be516ff25b06e1fb89d0e388"
+      },
+      {
+        "path": "public/figma/wallets/imgShopping1.svg",
+        "bytes": 1618,
+        "sha256": "97a7adbd6c896b348dc4b6933561b13349cb0d8ceab83f897940a86eb97e1194"
+      },
+      {
+        "path": "public/figma/wallets/imgUser.svg",
+        "bytes": 1422,
+        "sha256": "bdb499e7f8a91304bc89e6692c0c9bb99a2811d29ea5188e818adb7e91288a44"
+      },
+      {
+        "path": "public/mockServiceWorker.js",
+        "bytes": 9666,
+        "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
+      },
+      {
+        "path": "index.html",
+        "bytes": 877,
+        "sha256": "61c63a9df4e257bbc5c00262580c978b548144bfc93ffb8063884c4d85be7a03"
+      },
+      {
+        "path": "vite.config.ts",
+        "bytes": 753,
+        "sha256": "96e113db8207492ce17b352d8a5d5df929a1aca2ed224949ebc4a894f6ec3638"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2543,
+        "sha256": "069e69e338250205977b9c428f5f10bf2f4a0ac434aa946db9769f999e8fd686"
+      },
+      {
+        "path": "package-lock.json",
+        "bytes": 333657,
+        "sha256": "c5e333e507e8471db7e006d5a9608aae78ce51690d2dc33593ac7202766e8248"
+      }
+    ],
+    "hostedDocumentVerification": {
+      "mode": "exact",
+      "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+      "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+      "injectionCount": 0
+    },
+    "hostingConfigurationVerification": [
+      {
+        "path": "_headers",
+        "sourcePath": "public/_headers",
+        "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "sourceBytes": 604,
+        "buildBytes": 604,
+        "responseStatus": 200,
+        "responseSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "responseBytes": 604,
+        "mode": "served-as-raw-file",
+        "support": "unsupported",
+        "policiesApplied": false,
+        "runtimePolicyChecks": [],
+        "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+      }
+    ]
+  },
+  "methodology": "Production build verified against served artifact SHA256 hashes. Only the exact reviewed _headers configuration may be consumed rather than served, after matching local source/build hashes and verifying HTTP 200, cache policies and document/asset identity for both measured routes, a hashed JavaScript asset and the service worker; its identity and runtime evidence are recorded. A byte-identical raw _headers response remains verified as bytes and is explicitly recorded as unsupported configuration. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.",
+  "outputDirectory": "reports/lighthouse/vercel/2026-10-27-card-status",
+  "gate": {
+    "scope": "Official challenge medians reported separately from the candidate acceptance above 8/10.",
+    "completeMatrix": true,
+    "categoryThresholds": {
+      "performance": 90,
+      "accessibility": 95,
+      "best-practices": 95,
+      "seo": 90
+    },
+    "officialMediansMet": true,
+    "allPerformanceRunsAbove90": true,
+    "allCategoryRunsAbove80": true,
+    "candidateAcceptance": {
+      "date": "2026-10-27",
+      "minimumExclusive": 80,
+      "source": "Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje."
+    },
+    "approved": true,
+    "aspirations": {
+      "mobilePerformanceMediansAtLeast95": false,
+      "requiredForApproval": false
+    }
+  },
+  "rows": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "preflight": {
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+        "title": "KURIO: O futuro da arte digital",
+        "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DEWnkggU.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-1.report.html",
+          "fetchTime": "2026-10-27T21:45:07.398Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1083.097,
+          "LCP": 3183.0969999999998,
+          "CLS": 0,
+          "TBT": 16,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3665.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-2.report.html",
+          "fetchTime": "2026-10-27T21:45:18.741Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1077.2350000000001,
+          "LCP": 3177.235,
+          "CLS": 0,
+          "TBT": 8,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3662.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-3.report.html",
+          "fetchTime": "2026-10-27T21:45:30.304Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1078.574,
+          "LCP": 3178.574,
+          "CLS": 0,
+          "TBT": 8,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3701,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "preflight": {
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+        "title": "KURIO: O futuro da arte digital",
+        "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DEWnkggU.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-1.report.html",
+          "fetchTime": "2026-10-27T21:45:42.145Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 312.766,
+          "LCP": 712.7660000000001,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3702.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-2.report.html",
+          "fetchTime": "2026-10-27T21:45:53.335Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 308.68899999999996,
+          "LCP": 708.689,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3653.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-3.report.html",
+          "fetchTime": "2026-10-27T21:46:04.510Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 316.264,
+          "LCP": 716.264,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3689.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "mobile",
+      "preflight": {
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+        "title": "Obra · KURIO",
+        "heading": "Emerald Ape #042",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DEWnkggU.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-1.report.html",
+          "fetchTime": "2026-10-27T21:46:16.544Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1070.1235000000001,
+          "LCP": 3029.1235,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3681,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-2.report.html",
+          "fetchTime": "2026-10-27T21:46:27.781Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1070.1675,
+          "LCP": 3028.1675,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3712.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-3.report.html",
+          "fetchTime": "2026-10-27T21:46:39.014Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1074.995,
+          "LCP": 3036.995,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3717,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "desktop",
+      "preflight": {
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+        "title": "Obra · KURIO",
+        "heading": "Emerald Ape #042",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DEWnkggU.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-1.report.html",
+          "fetchTime": "2026-10-27T21:46:50.639Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 300.78200000000004,
+          "LCP": 583.782,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3716.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-2.report.html",
+          "fetchTime": "2026-10-27T21:47:01.816Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 301.38300000000004,
+          "LCP": 584.383,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3683.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-3.report.html",
+          "fetchTime": "2026-10-27T21:47:12.908Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 300.374,
+          "LCP": 582.374,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3671.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    }
+  ]
+}

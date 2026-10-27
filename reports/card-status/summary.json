@@ -1,0 +1,92 @@
+{
+  "sourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+  "url": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "deploymentId": "dpl_8WnZiqnuh5Yuzq453BeMxijUNn4U",
+  "cause": "O selo recebia top16px no tema e herdava bottom10px, ou7px no mobile. As duas posições esticavam a caixa. O canto direito também era ocupado pelo favorito.",
+  "change": "Altura pelo conteúdo, bottomauto e posição à esquerda. Em obras raras, Esgotado fica abaixo de RARO.",
+  "reproduction": {
+    "report": "reports/card-status-red.json",
+    "measuredHeight": 191.84375,
+    "maximumReadableHeight": 32,
+    "tests": {
+      "startTime": "2026-10-27T21:35:59.247Z",
+      "duration": 1752.9399999999998,
+      "expected": 0,
+      "skipped": 1,
+      "unexpected": 1,
+      "flaky": 0
+    },
+    "note": "Execução interrompida após a primeira falha esperada; o segundo cenário não foi executado nessa rodada."
+  },
+  "local": {
+    "report": "reports/card-status-green.json",
+    "stats": {
+      "startTime": "2026-10-27T21:36:54.525Z",
+      "duration": 11385.107,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "viewportWidths": [
+      440,
+      320,
+      375,
+      390,
+      414,
+      1440
+    ],
+    "statusVariants": [
+      "regular",
+      "rare"
+    ],
+    "viewportStatusCombinations": 24,
+    "checks": [
+      "selo compacto e texto inteiro",
+      "selos dentro do card",
+      "sem sobreposição com favorito ou raridade",
+      "favorito de item esgotado leva ao login com a intenção preservada"
+    ]
+  },
+  "visual": {
+    "report": "reports/card-status-visual.json",
+    "stats": {
+      "startTime": "2026-10-27T21:38:54.159Z",
+      "duration": 9106.402999999998,
+      "expected": 8,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "baselinesUpdated": false
+  },
+  "production": {
+    "report": "reports/production-vercel.json",
+    "stats": {
+      "startTime": "2026-10-27T21:42:43.251Z",
+      "duration": 58064.196,
+      "expected": 22,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "scope": {
+      "cardStatus": 4,
+      "layout": 10,
+      "favoriteLogin": 4,
+      "newsletter": 2,
+      "purchase": 2
+    }
+  },
+  "images": [
+    "reports/card-status/production-regular-mobile-440.png",
+    "reports/card-status/production-rare-mobile-440.png"
+  ],
+  "codeChecks": {
+    "command": "npm run check",
+    "passed": true,
+    "vitest": 224,
+    "nodeVerifiers": 32,
+    "note": "O lint ignora .vercel, que contém arquivos gerados. As regras da aplicação continuam iguais."
+  }
+}

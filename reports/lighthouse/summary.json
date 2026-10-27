@@ -1,12 +1,18 @@
 {
-  "startedAt": "2026-10-27T20:14:23.823Z",
-  "completedAt": "2026-10-27T20:17:21.450Z",
+  "startedAt": "2026-10-27T21:44:15.070Z",
+  "completedAt": "2026-10-27T21:47:22.037Z",
   "node": "v22.22.0",
   "lighthouse": "13.5.0",
+  "engine": {
+    "name": "stable",
+    "packageName": "lighthouse",
+    "experimental": false,
+    "summary": "summary.json"
+  },
   "browser": "Playwright Chromium 156.0.8078.4",
-  "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+  "target": "https://jungle-nft-marketplace-felipe.vercel.app",
   "build": {
-    "fingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+    "fingerprint": "f8e85207967b22d8a310311c65d6035e4dea3aa5d63d3b4d53f12b359eb1c0d6",
     "files": [
       {
         "path": "_headers",
@@ -179,9 +185,9 @@
         "sha256": "967bd848ac145ed5df31e98b75c6f022ef7790b3ec213e5c5eeb39df6ca3ed7b"
       },
       {
-        "path": "assets/application-CnWYuhBj.js",
+        "path": "assets/application-DDX3Bbwd.js",
         "bytes": 117783,
-        "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
+        "sha256": "f06e612bbb698fa2ab893638f4cc5387051459cf101b2165a0343e53837fb892"
       },
       {
         "path": "assets/arrow-left-CoJX7ZK0.js",
@@ -194,9 +200,9 @@
         "sha256": "a47d8eebcc3b4586114eb610a30034a32ea955a493f62ae9db76902d1e282039"
       },
       {
-        "path": "assets/bootstrap-Dc2Cj1w3.js",
+        "path": "assets/bootstrap-Dlat6oX_.js",
         "bytes": 2312,
-        "sha256": "96be1d18f23311cda880fcdf29de779b9959f507fe52e56d300b433915d07068"
+        "sha256": "f6fb82565fb38aeaae8fac20da517c1fd44ba837a244c7ab6aab3f5aa5539db4"
       },
       {
         "path": "assets/browser-mLzkjooY.js",
@@ -219,19 +225,19 @@
         "sha256": "2759e40f5b81c5548f9553b5c1aeb9f78e7a715c4e694f26de8886fde7500af3"
       },
       {
-        "path": "assets/index-BCSdGZ60.js",
-        "bytes": 8087,
-        "sha256": "564324d4b21ab171b688e1b1e15550a71786521db78b28aa682adc59203d74d0"
+        "path": "assets/index-3RFFenbH.js",
+        "bytes": 3671,
+        "sha256": "f6f6e67d0b0f8252a1f0addfd50a7d3843b31d433a510c6430525fbb5660d1a5"
+      },
+      {
+        "path": "assets/index-BBZeIHJp.js",
+        "bytes": 454,
+        "sha256": "fe9977bcbdf6160d5eacbfab65c8b1dd852ba8dd773c59b05fb494f417171bde"
       },
       {
         "path": "assets/index-BFK_gRJ8.js",
         "bytes": 1174,
         "sha256": "2deb8bfabe1010b4ae7ff1786115ac358dfd3da3ee67c940079eece26af9d066"
-      },
-      {
-        "path": "assets/index-BFsp0Yzm.js",
-        "bytes": 7191,
-        "sha256": "8637b25bfaa7a9af5ee36c1bf9bf3afdb75b275ba97edde44eabfff98aae7fa0"
       },
       {
         "path": "assets/index-BK4BjSYa.js",
@@ -249,9 +255,19 @@
         "sha256": "d114d7a66d081c344bb991c94603a791643e80e3b0a8e81ec33c07a4c0f52e54"
       },
       {
-        "path": "assets/index-C6cs5luM.js",
-        "bytes": 1775,
-        "sha256": "d628cc6dff3a5cb7574e26fd5bf188d0dae1ba0b3aaf1e5889a23b8a61bd39ae"
+        "path": "assets/index-C2vSlyof.js",
+        "bytes": 7752,
+        "sha256": "a7d7395b875c177d04cfd6688ce5b9536dcba9feca9c6a0b0b8a3525f118761e"
+      },
+      {
+        "path": "assets/index-C8rEftuK.css",
+        "bytes": 121260,
+        "sha256": "caf349c1a5e7a18e1f5d9c149be3953411acd45eac84dc808e2232a109bb6dab"
+      },
+      {
+        "path": "assets/index-CBxFkzED.js",
+        "bytes": 6782,
+        "sha256": "8729a0d58ab1ff69838a0a934993a199fdb175f814e02c716bdb339d5c65e900"
       },
       {
         "path": "assets/index-CC3bPbej.js",
@@ -264,24 +280,34 @@
         "sha256": "70edae97744e24716333d0b5271013613662d4a462fb8158cffc00f9b9b79fdc"
       },
       {
-        "path": "assets/index-CvvGsjRd.js",
-        "bytes": 1472,
-        "sha256": "42a05824741845ff9ef3b6a45f033fcb61702bc2864d00d99c4e0441a6bfce70"
+        "path": "assets/index-CCDcP3e8.js",
+        "bytes": 8087,
+        "sha256": "235372d0c51b0f5cc7599f9a0aca245ab0f1cc4c763cede20059b4a0d3932e58"
       },
       {
-        "path": "assets/index-D5oQfqxt.js",
-        "bytes": 6644,
-        "sha256": "682211d4861662432839f43481ac08cb9aa05d7e3fa7b605a09019841d94651e"
+        "path": "assets/index-CTsULgIL.js",
+        "bytes": 7191,
+        "sha256": "46f75a9e0f6eb39c81855dd20dbfbeaa2a82ccef1436ed7d4903a7f885b4479a"
       },
       {
-        "path": "assets/index-DAsOHOfR.js",
+        "path": "assets/index-DaVohJ1g.js",
         "bytes": 457,
-        "sha256": "9a2e7da88fd8edcc854b7aba1260bad69f33e320e2b95ab7aed63ef5e9fcd024"
+        "sha256": "469f600507cdc243a6d78295edad6ed3da49cbc4705eda762014d85e00878a25"
       },
       {
-        "path": "assets/index-dh8Bfhrl.js",
-        "bytes": 23100,
-        "sha256": "10c7e31d39524fb182289eba6b72325d1acf3e3f4121081ab7732e46f2488b7e"
+        "path": "assets/index-DBjqRdeX.js",
+        "bytes": 1775,
+        "sha256": "d5cd8be788c2d93a14603347b2e5027b94c7e6b9da82dfa024ab86503e9ee457"
+      },
+      {
+        "path": "assets/index-DEWnkggU.js",
+        "bytes": 4080,
+        "sha256": "afea9e8c6dfc089a0bb659727eb2e804e71dbb89f18c4692367cabe9031dbba3"
+      },
+      {
+        "path": "assets/index-DIzzlVHQ.js",
+        "bytes": 6644,
+        "sha256": "67150e6b222503b9bdb7525adcf4ab33e949193b1adbcade31cac8529cb26dd0"
       },
       {
         "path": "assets/index-DKXDncH6.js",
@@ -289,39 +315,19 @@
         "sha256": "9753e2830ac85fc36a3aa27e0321315658bd3ad0519c5c91a6b7cb694e77f4a6"
       },
       {
-        "path": "assets/index-DMrk8NXe.js",
-        "bytes": 4080,
-        "sha256": "ce82cf1a80bc55e2f27c425516ebcd9387e5bcd2fafdb8c572ecd0ca8ad6c016"
+        "path": "assets/index-hwOuSLYc.js",
+        "bytes": 1472,
+        "sha256": "ee15fff64db8aa1edd0362461411be2bae74d130bc0e3782ee8378c2501e5769"
       },
       {
-        "path": "assets/index-DrIibKDZ.js",
-        "bytes": 6782,
-        "sha256": "3b0012aa2e0d1a634db2d1deebe5c812fe061972be4c5be4428452dbc485d060"
-      },
-      {
-        "path": "assets/index-DzB6VF5b.css",
-        "bytes": 121046,
-        "sha256": "c9b43786664f74a76d28835d131280fc78257a17275ac7b14031e4578acb7570"
-      },
-      {
-        "path": "assets/index-eXkaLDfP.js",
+        "path": "assets/index-Lhjs-2Fj.js",
         "bytes": 2334,
-        "sha256": "32386d8f7b7635cedd711625d8c566b1d4f2d0973cd668107bbd367224097d0d"
+        "sha256": "5b1597a6fba9e3dcb7017366664ad37463a618bd77bb8e26b699f8027f8deef7"
       },
       {
-        "path": "assets/index-Kkz3mllO.js",
-        "bytes": 454,
-        "sha256": "a07873c6777f3805c1d47a52a75ddd6549667ca5d9859cf3871e1cb4dc6358c4"
-      },
-      {
-        "path": "assets/index-svXclce4.js",
-        "bytes": 3671,
-        "sha256": "fdf500dda0b5934ab47846a61165f5d42c3e9a7b26fd9b89cc9295b95e9737c0"
-      },
-      {
-        "path": "assets/index-XmldA4bB.js",
-        "bytes": 7752,
-        "sha256": "1de660065d2f0301b8bb1daa57791800a3a02c07e3ca965c62b3b190a368e615"
+        "path": "assets/index-ZVI1WQTY.js",
+        "bytes": 23100,
+        "sha256": "7ef73b79215f149bfa995500b09f8225fc51fb139bf2f18afddf79932f6ff7f7"
       },
       {
         "path": "assets/react-runtime-BpIJT8mN.js",
@@ -379,9 +385,9 @@
         "sha256": "179c48bced5aa87b22fb386568d8e5c671c32b96a887bacb80dfb7a5094534d9"
       },
       {
-        "path": "assets/useCart-DSPuorH0.js",
+        "path": "assets/useCart-BskLtEM2.js",
         "bytes": 969,
-        "sha256": "4d3c87670e9574e1c01c28c26a5344f2af84a274b77e1699518c39aecd99d9ef"
+        "sha256": "c3d45b5420940a318404964f3cc83bdbef269fff1422d561f4f833ba1bb91480"
       },
       {
         "path": "favicon.svg",
@@ -1716,7 +1722,7 @@
       {
         "path": "index.html",
         "bytes": 889,
-        "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35"
+        "sha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783"
       },
       {
         "path": "mockServiceWorker.js",
@@ -1725,20 +1731,31 @@
       }
     ],
     "sourceRevision": {
-      "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+      "commit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
       "changedFiles": [
-        "M reports/favorite-login-catalog-desktop.png",
-        " M reports/favorite-login-catalog-mobile.png",
+        "M README.md",
+        " M docs/hosting.md",
+        " M docs/quality-gates.md",
+        " M docs/requirements.json",
+        " M reports/favorite-login-catalog-desktop.png",
         " M reports/favorite-login-detail-desktop.png",
-        " M reports/favorite-saved-catalog-desktop.png",
-        " M reports/favorite-saved-catalog-mobile.png",
         " M reports/favorite-saved-detail-desktop.png",
-        " M reports/favorite-saved-detail-mobile.png",
-        " M tests/e2e/mobile-home-layout.spec.ts",
-        "?? reports/production-polish.json"
+        " M reports/lighthouse/summary.json",
+        " M reports/release-readiness.json",
+        " M reports/revisao-adversarial-atual.json",
+        "?? reports/card-status-green.json",
+        "?? reports/card-status-red.json",
+        "?? reports/card-status-visual.json",
+        "?? reports/card-status/",
+        "?? reports/historical/vercel-initial-prebuilt/",
+        "?? reports/historical/vercel-remote-build/",
+        "?? reports/lighthouse/vercel/",
+        "?? reports/production-vercel.json",
+        "?? reports/vercel-deployment.json",
+        "?? reports/vercel-host-verification.json"
       ]
     },
-    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
+    "runtimeSourceFingerprint": "4abcc3b4ee90f4682494bece9595e5cd9478b2b7d934e64e35f2c29f9b72b297",
     "runtimeSources": [
       {
         "path": "src/app/components/AppShell/index.tsx",
@@ -2787,8 +2804,8 @@
       },
       {
         "path": "src/styleguide/theme/kurio/styles/catalog.template.css",
-        "bytes": 21066,
-        "sha256": "b84d51b0d71dc75b58a90fc0d94c653298cd61f23701597ae202aad3c6d6df15"
+        "bytes": 21320,
+        "sha256": "40ab0d845ea4c27533a8b79c80660f4c9b471e84cec86ce96a47aa00cd16db0c"
       },
       {
         "path": "src/styleguide/theme/kurio/styles/commerce.template.css",
@@ -2842,8 +2859,8 @@
       },
       {
         "path": "src/styles.kurio.css",
-        "bytes": 93815,
-        "sha256": "2f4dfbcfa1c11d949dbb79df43ccece82ab68abbc1c9ba98cad23aad2bc8a584"
+        "bytes": 94069,
+        "sha256": "b87c73b3a356085d1f7765dbccc4e84840e130685ae5b2863b5273558f9166ce"
       },
       {
         "path": "src/styles.template.css",
@@ -4367,19 +4384,19 @@
       },
       {
         "path": "package.json",
-        "bytes": 2445,
-        "sha256": "97adbd93822724baa974faac96a655ec6e1bb731b23bf0db7a7ec102c44431ea"
+        "bytes": 2543,
+        "sha256": "069e69e338250205977b9c428f5f10bf2f4a0ac434aa946db9769f999e8fd686"
       },
       {
         "path": "package-lock.json",
-        "bytes": 292369,
-        "sha256": "2207baceea68f17166702d8f70687d55e14e293da0ff87bc776cb833a19aa0f3"
+        "bytes": 333657,
+        "sha256": "c5e333e507e8471db7e006d5a9608aae78ce51690d2dc33593ac7202766e8248"
       }
     ],
     "hostedDocumentVerification": {
       "mode": "exact",
-      "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-      "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+      "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+      "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
       "injectionCount": 0
     },
     "hostingConfigurationVerification": [
@@ -4391,69 +4408,20 @@
         "sourceBytes": 604,
         "buildBytes": 604,
         "responseStatus": 200,
-        "responseSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-        "responseBytes": 889,
-        "mode": "consumed-static-asset-configuration",
-        "support": "verified",
-        "policiesApplied": true,
-        "knownConfigurationSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
-        "configurationResponse": "verified-spa-fallback",
-        "fallbackDocumentVerification": {
-          "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "injectionCount": 0
-        },
-        "runtimePolicyChecks": [
-          {
-            "path": "/",
-            "status": 200,
-            "cacheControl": "no-cache, no-transform",
-            "expectedCacheControl": "no-cache, no-transform",
-            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-            "documentVerification": {
-              "mode": "exact",
-              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "injectionCount": 0
-            }
-          },
-          {
-            "path": "/nft/nft-1",
-            "status": 200,
-            "cacheControl": "no-cache, no-transform",
-            "expectedCacheControl": "no-cache, no-transform",
-            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-            "documentVerification": {
-              "mode": "exact",
-              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-              "injectionCount": 0
-            }
-          },
-          {
-            "path": "/assets/application-CnWYuhBj.js",
-            "status": 200,
-            "cacheControl": "public, max-age=31536000, immutable",
-            "expectedCacheControl": "public, max-age=31536000, immutable",
-            "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
-          },
-          {
-            "path": "/mockServiceWorker.js",
-            "status": 200,
-            "cacheControl": "no-cache",
-            "expectedCacheControl": "no-cache",
-            "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
-          }
-        ],
+        "responseSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "responseBytes": 604,
+        "mode": "served-as-raw-file",
+        "support": "unsupported",
+        "policiesApplied": false,
+        "runtimePolicyChecks": [],
         "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
       }
     ]
   },
   "methodology": "Production build verified against served artifact SHA256 hashes. Only the exact reviewed _headers configuration may be consumed rather than served, after matching local source/build hashes and verifying HTTP 200, cache policies and document/asset identity for both measured routes, a hashed JavaScript asset and the service worker; its identity and runtime evidence are recorded. A byte-identical raw _headers response remains verified as bytes and is explicitly recorded as unsupported configuration. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.",
-  "outputDirectory": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z",
+  "outputDirectory": "reports/lighthouse/vercel/2026-10-27-card-status",
   "gate": {
-    "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
+    "scope": "Official challenge medians reported separately from the candidate acceptance above 8/10.",
     "completeMatrix": true,
     "categoryThresholds": {
       "performance": 90,
@@ -4461,9 +4429,15 @@
       "best-practices": 95,
       "seo": 90
     },
-    "officialMediansMet": false,
-    "allPerformanceRunsAbove90": false,
-    "approved": false,
+    "officialMediansMet": true,
+    "allPerformanceRunsAbove90": true,
+    "allCategoryRunsAbove80": true,
+    "candidateAcceptance": {
+      "date": "2026-10-27",
+      "minimumExclusive": 80,
+      "source": "Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje."
+    },
+    "approved": true,
     "aspirations": {
       "mobilePerformanceMediansAtLeast95": false,
       "requiredForApproval": false
@@ -4474,12 +4448,12 @@
       "path": "/",
       "profile": "mobile",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
         "title": "KURIO: O futuro da arte digital",
         "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-DMrk8NXe.js"
+          "/assets/index-DEWnkggU.js"
         ],
         "api": {
           "status": 200,
@@ -4490,13 +4464,13 @@
         "pageErrors": [],
         "documentVerification": {
           "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
           "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 83,
+        "performance": 93,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 92
@@ -4504,20 +4478,20 @@
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.html",
-          "fetchTime": "2026-10-27T20:14:53.365Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-1.report.html",
+          "fetchTime": "2026-10-27T21:45:07.398Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 83,
+            "performance": 93,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1309.086,
-          "LCP": 4778.236499999999,
+          "FCP": 1083.097,
+          "LCP": 3183.0969999999998,
           "CLS": 0,
-          "TBT": 21,
+          "TBT": 16,
           "config": {
             "formFactor": "mobile",
             "throttlingMethod": "simulate",
@@ -4541,7 +4515,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3702.5,
+            "benchmarkIndex": 3665.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4550,20 +4524,20 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-2.report.html",
-          "fetchTime": "2026-10-27T20:15:05.135Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-2.report.html",
+          "fetchTime": "2026-10-27T21:45:18.741Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 83,
+            "performance": 93,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1259.462,
-          "LCP": 4738.520499999999,
+          "FCP": 1077.2350000000001,
+          "LCP": 3177.235,
           "CLS": 0,
-          "TBT": 10,
+          "TBT": 8,
           "config": {
             "formFactor": "mobile",
             "throttlingMethod": "simulate",
@@ -4587,7 +4561,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3713.5,
+            "benchmarkIndex": 3662.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4596,20 +4570,20 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-3.report.html",
-          "fetchTime": "2026-10-27T20:15:17.030Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-mobile-3.report.html",
+          "fetchTime": "2026-10-27T21:45:30.304Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 83,
+            "performance": 93,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1113.05,
-          "LCP": 4673.3875,
+          "FCP": 1078.574,
+          "LCP": 3178.574,
           "CLS": 0,
-          "TBT": 6,
+          "TBT": 8,
           "config": {
             "formFactor": "mobile",
             "throttlingMethod": "simulate",
@@ -4633,7 +4607,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3728,
+            "benchmarkIndex": 3701,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4646,12 +4620,12 @@
       "path": "/",
       "profile": "desktop",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
         "title": "KURIO: O futuro da arte digital",
         "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-DMrk8NXe.js"
+          "/assets/index-DEWnkggU.js"
         ],
         "api": {
           "status": 200,
@@ -4662,13 +4636,13 @@
         "pageErrors": [],
         "documentVerification": {
           "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
           "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 99,
+        "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 92
@@ -4676,18 +4650,18 @@
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-1.report.html",
-          "fetchTime": "2026-10-27T20:15:30.208Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-1.report.html",
+          "fetchTime": "2026-10-27T21:45:42.145Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 383.094,
-          "LCP": 1033.282,
+          "FCP": 312.766,
+          "LCP": 712.7660000000001,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4713,7 +4687,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3718.5,
+            "benchmarkIndex": 3702.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4722,18 +4696,18 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-2.report.html",
-          "fetchTime": "2026-10-27T20:15:41.790Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-2.report.html",
+          "fetchTime": "2026-10-27T21:45:53.335Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 98,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 387.392,
-          "LCP": 1045.1759999999997,
+          "FCP": 308.68899999999996,
+          "LCP": 708.689,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4759,7 +4733,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3683,
+            "benchmarkIndex": 3653.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4768,18 +4742,18 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-3.report.html",
-          "fetchTime": "2026-10-27T20:15:53.339Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/home-desktop-3.report.html",
+          "fetchTime": "2026-10-27T21:46:04.510Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 385.724,
-          "LCP": 1040.1720000000003,
+          "FCP": 316.264,
+          "LCP": 716.264,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4805,7 +4779,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3700.5,
+            "benchmarkIndex": 3689.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4818,12 +4792,12 @@
       "path": "/nft/nft-1",
       "profile": "mobile",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
         "title": "Obra · KURIO",
         "heading": "Emerald Ape #042",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-DMrk8NXe.js"
+          "/assets/index-DEWnkggU.js"
         ],
         "api": {
           "status": 200,
@@ -4834,13 +4808,13 @@
         "pageErrors": [],
         "documentVerification": {
           "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
           "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 85,
+        "performance": 94,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 92
@@ -4848,18 +4822,18 @@
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-1.report.html",
-          "fetchTime": "2026-10-27T20:16:09.213Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-1.report.html",
+          "fetchTime": "2026-10-27T21:46:16.544Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 84,
+            "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1271.994,
-          "LCP": 4462.478999999999,
+          "FCP": 1070.1235000000001,
+          "LCP": 3029.1235,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4885,7 +4859,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3725,
+            "benchmarkIndex": 3681,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4894,18 +4868,18 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-2.report.html",
-          "fetchTime": "2026-10-27T20:16:21.177Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-2.report.html",
+          "fetchTime": "2026-10-27T21:46:27.781Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 85,
+            "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1248.997,
-          "LCP": 4378.4895,
+          "FCP": 1070.1675,
+          "LCP": 3028.1675,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4931,7 +4905,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3674.5,
+            "benchmarkIndex": 3712.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4940,18 +4914,18 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-3.report.html",
-          "fetchTime": "2026-10-27T20:16:32.703Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-mobile-3.report.html",
+          "fetchTime": "2026-10-27T21:46:39.014Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 85,
+            "performance": 94,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1230.962,
-          "LCP": 4315.866999999999,
+          "FCP": 1074.995,
+          "LCP": 3036.995,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4977,7 +4951,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3714.5,
+            "benchmarkIndex": 3717,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4990,12 +4964,12 @@
       "path": "/nft/nft-1",
       "profile": "desktop",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+        "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
         "title": "Obra · KURIO",
         "heading": "Emerald Ape #042",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-DMrk8NXe.js"
+          "/assets/index-DEWnkggU.js"
         ],
         "api": {
           "status": 200,
@@ -5006,13 +4980,13 @@
         "pageErrors": [],
         "documentVerification": {
           "mode": "exact",
-          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "rawSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
+          "normalizedSha256": "ade64bf880ce5fd0a6757e280e9c5d9bdef2d1cdeb1c01e4202124b7bc804783",
           "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 99,
+        "performance": 100,
         "accessibility": 100,
         "best-practices": 100,
         "seo": 92
@@ -5020,18 +4994,18 @@
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-1.report.html",
-          "fetchTime": "2026-10-27T20:16:48.733Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-1.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-1.report.html",
+          "fetchTime": "2026-10-27T21:46:50.639Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 370.23199999999997,
-          "LCP": 1040.464,
+          "FCP": 300.78200000000004,
+          "LCP": 583.782,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -5057,7 +5031,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3705.5,
+            "benchmarkIndex": 3716.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -5066,18 +5040,18 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-2.report.html",
-          "fetchTime": "2026-10-27T20:17:00.423Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-2.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-2.report.html",
+          "fetchTime": "2026-10-27T21:47:01.816Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 99,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 359.422,
-          "LCP": 1018.844,
+          "FCP": 301.38300000000004,
+          "LCP": 584.383,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -5103,7 +5077,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3725,
+            "benchmarkIndex": 3683.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -5112,18 +5086,18 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-3.report.html",
-          "fetchTime": "2026-10-27T20:17:12.029Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "json": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-3.report.json",
+          "html": "reports/lighthouse/vercel/2026-10-27-card-status/detail-desktop-3.report.html",
+          "fetchTime": "2026-10-27T21:47:12.908Z",
+          "finalUrl": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
           "categories": {
-            "performance": 98,
+            "performance": 100,
             "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "FCP": 363.904,
-          "LCP": 1047.808,
+          "FCP": 300.374,
+          "LCP": 582.374,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -5149,7 +5123,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3686.5,
+            "benchmarkIndex": 3671.5,
             "credits": {
               "axe-core": "4.14.0"
             }

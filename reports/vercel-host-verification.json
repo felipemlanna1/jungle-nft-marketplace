@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-10-27T22:10:39.812Z",
+  "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "deploymentId": "dpl_F7YqDUE6nrEhhmeRDCusbhvT9Voc",
+  "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+  "verifiedRuntimeFiles": 343,
+  "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+  "hostedDocumentVerification": {
+    "mode": "exact",
+    "rawSha256": "3bb5d4438f3e5cd88c15b6114c684a92a1b6376db2f846c7400b9b71fb94c4b5",
+    "normalizedSha256": "3bb5d4438f3e5cd88c15b6114c684a92a1b6376db2f846c7400b9b71fb94c4b5",
+    "injectionCount": 0
+  },
+  "hostingConfigurationVerification": [
+    {
+      "path": "_headers",
+      "sourcePath": "public/_headers",
+      "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "sourceBytes": 604,
+      "buildBytes": 604,
+      "responseStatus": 200,
+      "responseSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+      "responseBytes": 604,
+      "mode": "served-as-raw-file",
+      "support": "unsupported",
+      "policiesApplied": false,
+      "runtimePolicyChecks": [],
+      "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+    }
+  ],
+  "policies": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/nft/nft-1",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/login",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/cart",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/checkout",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "no-cache, no-transform"
+    },
+    {
+      "path": "/mockServiceWorker.js",
+      "status": 200,
+      "type": "application/javascript; charset=utf-8",
+      "cache": "no-cache"
+    },
+    {
+      "path": "/assets/application-CpePYv7G.js",
+      "status": 200,
+      "type": "application/javascript; charset=utf-8",
+      "cache": "public, max-age=31536000, immutable"
+    }
+  ]
+}

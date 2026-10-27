@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/junglegaming/frontend-challenge",
   "referenceRead": "Enunciado integral do desafio e frames do Figma.",
-  "status": "Runtime c8fefe8 publicado em Workers e no mirror Sites v5. Validação em 27/10/2026: 224 Vitest, 32 verificadores Node, 166 E2E no CI e 18 testes de produção aprovados. Aceitação interna acima de 8/10 registrada separadamente. Performance mobile 83/85 no Lighthouse estável, abaixo da meta original P90; análise e comparação experimental disponíveis. Envio não realizado.",
+  "status": "Implementação publicada com as correções de moldura e selo. Verificações funcionais atuais aprovadas. A última auditoria Lighthouse completa pertence à versão anterior à moldura; a tentativa atual foi interrompida e está registrada.",
   "scope": [
     {
       "requirement": "Stack obrigatória em uso efetivo",
@@ -124,9 +124,16 @@
     },
     {
       "requirement": "Playwright e regressão visual",
-      "implementation": "166 casos no CI do commit c8fefe8 cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria, nomes longos, seleção de carteira, precisão dos filtros e oito baselines de início, detalhe, carrinho e pagamento.",
-      "evidence": ["playwright.config.ts", "tests/e2e", ".github/workflows/quality.yml"],
-      "limit": "CI 40575466182: 166/166 aprovados sem atualização de snapshots. A prova local anterior de 164/164 permanece histórica. O teste do badge foi refinado depois do commit, sem mudar o runtime: exige contador real 2 após POST/reload e mede as geometrias CSS 1/2/9/10/99/100 no elemento existente, sem criar span. Esse refinamento passou nos 18 testes HTTPS de produção; não é atribuído retroativamente ao CI."
+      "implementation": "172 casos no CI do commit d18f892 cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações dos cards, carrosséis, geometria e oito comparações visuais de início, detalhe, carrinho e pagamento.",
+      "evidence": [
+        "playwright.config.ts",
+        "tests/e2e",
+        ".github/workflows/quality.yml",
+        "reports/card-frame/summary.json",
+        "reports/card-status/summary.json",
+        "reports/production-vercel.json"
+      ],
+      "limit": "CI 40591145969: 172/172 Chromium aprovados, sem atualizar snapshots no CI. Também passaram 16 casos locais focados, oito comparações visuais e 24 casos no domínio publicado. Somente o snapshot local do catálogo desktop foi atualizado após inspeção da moldura; os demais sete foram preservados."
     },
     {
       "requirement": "Lighthouse em build otimizado, três medições por página e perfil",
@@ -136,47 +143,72 @@
         "reports/performance",
         "reports/lighthouse/runs",
         "reports/release-readiness.json",
-        "reports/lighthouse/h3-summary.json"
+        "reports/lighthouse/h3-summary.json",
+        "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+        "reports/vercel-host-verification.json"
       ],
-      "limit": "Matriz estável completa: medianas P83/99/85/99 e A100/BP100/SEO92. A performance mobile não atende P90 do enunciado; a aceitação interna acima de 80 foi registrada separadamente. A versão experimental oficial 13.5.0-dev.20261023, com correção HTTP/3, obteve P95/100/95/100 e A100/BP100/SEO92 sobre o mesmo aplicativo. O baseline estável permanece como referência principal."
+      "limit": "Última matriz completa em db81f5d: Lighthouse 13.5.0 estável, medianas P93/100/94/100 e A100/BP100/SEO92, atendendo às metas originais. O ajuste posterior de borda e raio em d18f892 teve duas medições interrompidas por TargetCloseError; a aprovação completa não foi atribuída a esse commit."
     },
     {
       "requirement": "Deploy público correspondente ao repositório e execução limpa",
-      "implementation": "Build estático do commit c8fefe8686114be4db364d43a87469ce09cf8e0f publicado em Workers e no mirror Sites versão 5, com assets e mocks locais; sem backend de negócio na hospedagem.",
+      "implementation": "Build estático publicado na Vercel com --prebuilt. Os 343 arquivos foram comparados com o build local. Rotas, cache e Node.js 22 estão definidos na configuração.",
       "evidence": [
-        "wrangler.jsonc",
-        ".openai/hosting.json",
+        "vercel.json",
+        ".vercelignore",
         "docs/hosting.md",
-        "reports/production-polish.json",
-        "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json"
+        "reports/vercel-deployment.json",
+        "reports/vercel-host-verification.json",
+        "reports/production-vercel.json",
+        "reports/lighthouse/vercel/2026-10-27-card-status/summary.json"
       ],
-      "limit": "18 testes HTTPS Workers passaram: dez de layout, quatro de favoritos/login, dois de newsletter e dois de compra. Esse escopo não substitui a suíte completa nem certifica o mirror Sites ou todos os navegadores. Publicação não significa envio do desafio ou aprovação humana."
+      "limit": "24 testes na Vercel em Chromium desktop/mobile: dois de moldura, quatro de selo de esgotado, dez de layout, quatro de favoritos/login, dois de newsletter e dois de compra. Não repete toda a suíte nem valida outros navegadores."
     }
   ],
   "currentRelease": {
-    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
-    "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "primaryUrl": "https://jungle-nft-marketplace-felipe.vercel.app",
     "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
     "mirrorVersion": 5,
-    "ci": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182",
+    "ci": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
     "mobileDecisions": "docs/decisions-mobile-polish.md",
     "subjectiveCodeScore": null,
-    "performanceApproved": true,
+    "performanceApproved": null,
     "humanReview": "pending",
     "submissionPerformed": false,
-    "overallComplete": true,
-    "performanceApprovalBasis": "Critério interno de liberação: cada nota acima de 80 nas 12 execuções estáveis. A meta original do desafio permanece P90.",
-    "officialPerformanceTargetMet": false,
-    "readyForSubmission": true,
-    "technicalPreparationComplete": true,
-    "completionScope": "Implementação, validação automatizada e publicação concluídas. Avaliação humana e submissão ainda pendentes.",
-    "acceptanceEvidence": "reports/release-readiness.json"
+    "overallComplete": false,
+    "performanceApprovalBasis": "Última matriz completa da versão anterior à moldura. Nova medição interrompida pelo navegador.",
+    "officialPerformanceTargetMet": null,
+    "readyForSubmission": false,
+    "technicalPreparationComplete": false,
+    "completionScope": "Correções visuais, testes funcionais e publicação concluídos. Medição adicional de performance e avaliação humana pendentes.",
+    "acceptanceEvidence": "reports/release-readiness.json",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "deploymentId": "dpl_F7YqDUE6nrEhhmeRDCusbhvT9Voc",
+    "productionEvidence": "reports/production-vercel.json",
+    "performanceEvidence": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+    "currentPerformance": {
+      "status": "incomplete",
+      "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+      "attempts": [
+        "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+        "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+      ],
+      "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
+      "completeMatrix": false,
+      "approved": null,
+      "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+      "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+      "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
+    },
+    "ciStatus": "success",
+    "ciCompletedAt": "2026-10-27T22:16:27Z"
   },
   "documentedDifferences": [
     "Dados e contagens refletem a simulação e não os números ilustrativos do Figma.",
     "O total matematicamente inconsistente no carrinho mobile foi corrigido pela cotação da API.",
     "Perfil, carteiras e confirmação têm adaptação mobile sem frame original equivalente.",
     "Comparativos do Figma não certificam identidade integral de pixels; as diferenças observadas estão registradas.",
-    "As prévias editoriais da Home abrem conteúdo ilustrativo em diálogo. Redes sociais abrem as plataformas e a newsletter confirma apenas uma assinatura local simulada, sem envio de e-mail."
+    "As prévias editoriais da Home abrem conteúdo ilustrativo em diálogo. Redes sociais abrem as plataformas e a newsletter confirma apenas uma assinatura local simulada, sem envio de e-mail.",
+    "Por pedido do candidato, a moldura marrom das imagens recebeu cantos arredondados e uma borda sutil no desktop, usando tokens do tema e mantendo as dimensões anteriores."
   ]
 }

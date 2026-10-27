@@ -1,0 +1,101 @@
+{
+  "recordedAt": "2026-10-27T22:10:48.770536+00:00",
+  "completed": false,
+  "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+  "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+  "error": "Chromium TargetCloseError during detail mobile run 3.",
+  "completedReports": [
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/detail-mobile-1.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+      "profile": "mobile",
+      "categories": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/detail-mobile-2.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/nft/nft-1",
+      "profile": "mobile",
+      "categories": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-desktop-1.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-desktop-2.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-desktop-3.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-mobile-1.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "mobile",
+      "categories": {
+        "performance": 86,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-mobile-2.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "mobile",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    },
+    {
+      "report": "reports/lighthouse/vercel/2026-10-27-card-frame-final/home-mobile-3.report.json",
+      "url": "https://jungle-nft-marketplace-felipe.vercel.app/?q=&category=all&sort=newest&page=1&tab=all",
+      "profile": "mobile",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    }
+  ],
+  "totalCompletedRuns": 8,
+  "requiredRuns": 12,
+  "acceptedAsCompleteMatrix": false,
+  "note": "Relatórios parciais preservados. Não foram combinados com a matriz anterior nem usados para declarar aprovação completa da versão atual."
+}

@@ -1,0 +1,183 @@
+{
+  "recordedAt": "2026-10-27T21:30:53.062156+00:00",
+  "source": "Matriz estável completa da Vercel e testes da publicação.",
+  "instruction": "Se as notas ficatem acima de 8 esta aprovado, preciso mandar ainda hoje",
+  "minimumExclusive": 80,
+  "categories": [
+    "performance",
+    "accessibility",
+    "best-practices",
+    "seo"
+  ],
+  "completeMatrix": true,
+  "totalRuns": 12,
+  "totalCategoryScores": 48,
+  "minimumObservedScore": 92,
+  "approved": true,
+  "stableSummary": "reports/lighthouse/vercel/2026-10-27-final/summary.json",
+  "officialChallengeMediansMet": true,
+  "experimentalComparison": {
+    "version": "13.5.0-dev.20261023",
+    "experimental": true,
+    "summary": "reports/lighthouse/h3-summary.json",
+    "officialChallengeMediansMet": true,
+    "scope": "Comparação histórica no Workers, separada da auditoria estável atual na Vercel."
+  },
+  "publication": {
+    "primaryUrl": "https://jungle-nft-marketplace-felipe.vercel.app",
+    "previousUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "sourceCommit": "cfe39ac14c2ed91a8779d601fc36dac9cd63f953",
+    "runtimeCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "runtimeFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+    "verifiedRuntimeFiles": 343,
+    "deploymentId": "dpl_D25wPnP8KuPzN2qAmMCc2cZdo3mQ"
+  },
+  "tests": {
+    "vitest": 224,
+    "nodeArtifactVerifiers": 32,
+    "ciE2e": 166,
+    "visuals": 8,
+    "productionE2e": 18
+  },
+  "readyForCandidateReviewAndSubmission": true,
+  "submissionPerformed": false,
+  "limitation": "Medições de laboratório no Chromium, com o cenário padrão dos mocks. Resultados históricos de outros domínios permanecem separados.",
+  "security": {
+    "tool": "gitleaks",
+    "findings": 0,
+    "report": "reports/secrets-review.json",
+    "bytesScanned": 43431851
+  },
+  "finalChecks": {
+    "command": "npm run check",
+    "approved": true,
+    "vitestPassed": 224,
+    "vitestFiles": 26,
+    "nodeVerifiersPassed": 32,
+    "types": true,
+    "lint": true,
+    "format": true
+  },
+  "previousAcceptance": {
+    "recordedAt": "2026-10-27T20:38:09.615Z",
+    "source": "Pedido explícito de Felipe no chat em 27/10/2026",
+    "instruction": "Se as notas ficatem acima de 8 esta aprovado, preciso mandar ainda hoje",
+    "minimumExclusive": 80,
+    "categories": [
+      "performance",
+      "accessibility",
+      "best-practices",
+      "seo"
+    ],
+    "completeMatrix": true,
+    "totalRuns": 12,
+    "totalCategoryScores": 48,
+    "minimumObservedScore": 83,
+    "approved": true,
+    "stableSummary": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
+    "officialChallengeMediansMet": false,
+    "experimentalComparison": {
+      "version": "13.5.0-dev.20261023",
+      "experimental": true,
+      "summary": "reports/lighthouse/h3-summary.json",
+      "officialChallengeMediansMet": true,
+      "scope": "Comparação histórica no Workers, separada da auditoria estável atual na Vercel."
+    },
+    "publication": {
+      "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+      "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+      "runtimeCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+      "runtimeFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+      "verifiedRuntimeFiles": 343
+    },
+    "tests": {
+      "vitest": 224,
+      "nodeArtifactVerifiers": 32,
+      "ciE2e": 166,
+      "visuals": 8,
+      "productionE2e": 18
+    },
+    "readyForCandidateReviewAndSubmission": true,
+    "submissionPerformed": false,
+    "limitation": "A matriz estável mantém performance mobile 83/85 abaixo da meta original P90. O candidato aceitou a liberação acima de 80; a divergência e a comparação experimental permanecem documentadas.",
+    "security": {
+      "tool": "gitleaks",
+      "findings": 0,
+      "report": "reports/secrets-review.json",
+      "bytesScanned": 43431851
+    },
+    "finalChecks": {
+      "command": "npm run check",
+      "approved": true,
+      "vitestPassed": 224,
+      "vitestFiles": 26,
+      "nodeVerifiersPassed": 32,
+      "types": true,
+      "lint": true,
+      "format": true
+    }
+  },
+  "productionEvidence": "reports/production-vercel.json",
+  "medians": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "categories": {
+        "performance": 93,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        93,
+        93,
+        93
+      ]
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        100,
+        100,
+        100
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "mobile",
+      "categories": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        94,
+        94,
+        94
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "desktop",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "performanceRuns": [
+        100,
+        100,
+        100
+      ]
+    }
+  ]
+}
