@@ -10,11 +10,7 @@ async function boot(page: Page) {
     });
   });
   await page.reload();
-  await expect(
-    page
-      .getByRole('heading', { name: /Arte extraordinária|futuro da arte|Descubra|Colecione/i })
-      .first(),
-  ).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1 }).first()).toBeVisible();
 }
 async function login(page: Page, email = 'collector@example.test') {
   await page.goto('/login');

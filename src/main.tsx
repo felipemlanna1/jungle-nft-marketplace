@@ -5,6 +5,7 @@ import { RouterProvider } from '@tanstack/react-router';
 import { queryClient } from './lib/query';
 import { router } from './router';
 import './styles.css';
+import './styles.expedition.css';
 import { StyleguideProvider } from './styleguide';
 
 async function bootstrap() {

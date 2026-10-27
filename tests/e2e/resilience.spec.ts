@@ -43,5 +43,5 @@ test('unknown routes provide a real recovery link', async ({ page }) => {
   await page.goto('/not-a-route');
   await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
   await page.getByRole('link', { name: 'Explore NFTs' }).click();
-  await expect(page.getByRole('heading', { name: /Seja dono do futuro/i })).toBeVisible();
+  await expect(page.locator('#hero-title')).toBeVisible();
 });

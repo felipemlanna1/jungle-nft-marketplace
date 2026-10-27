@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27T10:47:50.589Z",
+  "date": "2026-10-27T11:19:25.542Z",
   "node": "v22.16.0",
   "browser": "Chromium provided by Playwright",
   "target": "http://127.0.0.1:4173",
@@ -8,44 +8,44 @@
       "path": "/",
       "profile": "mobile",
       "medians": {
-        "performance": 91,
-        "accessibility": 96,
-        "best-practices": 96,
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
         "seo": 92
       },
       "runs": [
         {
           "categories": {
             "performance": 89,
-            "accessibility": 96,
-            "best-practices": 96,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3344.6290000000004,
+          "LCP": 3335.15225,
           "CLS": 0,
-          "TBT": 16.5
+          "TBT": 15.5
         },
         {
           "categories": {
-            "performance": 91,
-            "accessibility": 96,
-            "best-practices": 96,
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3072.5792,
+          "LCP": 3222.2423,
           "CLS": 0,
-          "TBT": 2.5
+          "TBT": 0
         },
         {
           "categories": {
-            "performance": 91,
-            "accessibility": 96,
-            "best-practices": 96,
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3073.5058,
+          "LCP": 3224.8551,
           "CLS": 0,
-          "TBT": 2
+          "TBT": 0.5
         }
       ]
     },
@@ -54,7 +54,7 @@
       "profile": "desktop",
       "medians": {
         "performance": 100,
-        "accessibility": 96,
+        "accessibility": 100,
         "best-practices": 100,
         "seo": 92
       },
@@ -62,34 +62,34 @@
         {
           "categories": {
             "performance": 100,
-            "accessibility": 96,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 675.5876499999999,
-          "CLS": 0.000009120614233403561,
+          "LCP": 678.9003,
+          "CLS": 0.00002441437057371806,
           "TBT": 0
         },
         {
           "categories": {
             "performance": 100,
-            "accessibility": 96,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 675.0289,
-          "CLS": 0.000009120614233403561,
+          "LCP": 690.25145,
+          "CLS": 0.00002441437057371806,
           "TBT": 0
         },
         {
           "categories": {
             "performance": 100,
-            "accessibility": 96,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 676.3831,
-          "CLS": 0.000009120614233403561,
+          "LCP": 685.0095,
+          "CLS": 0.00002441437057371806,
           "TBT": 0
         }
       ]
@@ -98,43 +98,43 @@
       "path": "/nft/nft-1",
       "profile": "mobile",
       "medians": {
-        "performance": 92,
-        "accessibility": 95,
-        "best-practices": 96,
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
         "seo": 92
       },
       "runs": [
         {
           "categories": {
-            "performance": 92,
-            "accessibility": 95,
-            "best-practices": 96,
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3042.83015,
-          "CLS": 0.004960473525887027,
+          "LCP": 3199.8560500000003,
+          "CLS": 0.00001195757329901502,
           "TBT": 0
         },
         {
           "categories": {
-            "performance": 92,
-            "accessibility": 95,
-            "best-practices": 96,
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3045.3133000000003,
-          "CLS": 0.004960473525887027,
+          "LCP": 3198.8559,
+          "CLS": 0.00001195757329901502,
           "TBT": 0
         },
         {
           "categories": {
-            "performance": 92,
-            "accessibility": 95,
-            "best-practices": 96,
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "LCP": 3046.1718499999997,
-          "CLS": 0.004960473525887027,
+          "LCP": 3197.8181,
+          "CLS": 0.00001195757329901502,
           "TBT": 0
         }
       ]
@@ -144,7 +144,7 @@
       "profile": "desktop",
       "medians": {
         "performance": 100,
-        "accessibility": 95,
+        "accessibility": 100,
         "best-practices": 100,
         "seo": 92
       },
@@ -152,34 +152,34 @@
         {
           "categories": {
             "performance": 100,
-            "accessibility": 95,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 697.8346,
-          "CLS": 0.008553830781090933,
+          "LCP": 690.7228,
+          "CLS": 0.003238317928551539,
           "TBT": 0
         },
         {
           "categories": {
             "performance": 100,
-            "accessibility": 95,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 697.64155,
-          "CLS": 0.008553830781090933,
+          "LCP": 696.76425,
+          "CLS": 0.003238317928551539,
           "TBT": 0
         },
         {
           "categories": {
             "performance": 100,
-            "accessibility": 95,
+            "accessibility": 100,
             "best-practices": 100,
             "seo": 92
           },
-          "LCP": 691.7293,
-          "CLS": 0.008553830781090933,
+          "LCP": 697.06695,
+          "CLS": 0.003238317928551539,
           "TBT": 0
         }
       ]

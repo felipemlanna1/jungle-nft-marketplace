@@ -1,5 +1,7 @@
 # KURIO | NFT Marketplace
 
+[Abrir marketplace](https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site) · [Código](https://github.com/felipemlanna1/jungle-nft-marketplace)
+
 Aplicação React e TypeScript para o desafio de Frontend da Jungle Gaming. Catálogo, conta, carrinho, cotação, compra e recibo usam uma API simulada na rede. Nenhuma compra, carteira ou transação de blockchain é real.
 
 O projeto foi escrito do zero para esta entrega. Não inclui código, histórico Git, bancos, credenciais ou dados de projetos anteriores.
@@ -109,16 +111,24 @@ Veja [ARCHITECTURE.md](./ARCHITECTURE.md) para contratos, cache, sessão, estado
 
 A estrutura usa módulos com páginas de composição, hooks próximos da página, componentes em pastas próprias, tipos centrais e uma camada de serviços separada. O styleguide centraliza tokens, receitas e primitivas acessíveis. Não há cópia de uma base profissional anterior.
 
+## Aparências Jungle e Kurio
+
+O seletor no cabeçalho alterna entre **Jungle**, aparência inicial de exploração na selva, e **Kurio**, composição original orientada pelo Figma. A escolha vale para catálogo, detalhe, conta e compra, sem alterar os dados ou a URL e sem remontar os formulários. A preferência fica somente no navegador.
+
+A aparência Jungle usa como referência visual as prévias oficiais de Chimp Mines, Captain's Treasure e Goblin's Gold em [junglegaming.io/pt](https://junglegaming.io/pt#games): ambiente escuro, pedra, bronze, ouro e esmeralda. Não há ranking público de popularidade. A arte do destaque é original, produzida para esta demonstração; nenhum personagem, logo ou asset dos jogos foi extraído.
+
+Os tokens das duas aparências usam os mesmos nomes semânticos. O provider e seu hook controlam a preferência; o seletor contém apresentação; catálogo e serviços continuam independentes da persistência visual. `src/styleguide/theme/expedition/styles/` separa shell, catálogo, primitivas e fluxos. O gerador compila essas fontes e seus breakpoints em `src/styles.expedition.css`; o arquivo gerado não deve ser editado diretamente.
+
 ## Figma e limites conhecidos
 
 O arquivo oficial foi observado no navegador para orientar marca KURIO, paleta escura, acentos âmbar, tipografia monoespaçada e composição. O conector não conseguiu fornecer contexto de design nem exportar os assets originais por restrição de acesso do arquivo.
 
-As obras incluídas são SVGs sintéticos, novos e locais. Portanto, **a fidelidade exata aos assets e a todos os frames do Figma não está certificada**. A galeria e a representação de edições também são simplificadas: cada NFT tem seu próprio estoque; variantes independentes de uma mesma obra não são modeladas.
+As obras incluídas são SVGs sintéticos, novos e locais. O destaque Jungle usa uma imagem WebP própria. Portanto, **a fidelidade exata aos assets e a todos os frames do Figma não está certificada**. A galeria e a representação de edições também são simplificadas: cada NFT tem seu próprio estoque; variantes independentes de uma mesma obra não são modeladas.
 
 A publicação e o envio são etapas separadas. Este documento não comprova que uma URL pública foi publicada ou que a candidatura foi enviada. A revisão adversarial e os resultados de validação ficam em `reports/`.
 
 ## Validação executada
 
-Na rodada consolidada de 27/10/2026 passaram 38 testes de domínio/HTTP e 54 testes Playwright, seguidos de 22 regressões direcionadas após os últimos ajustes, com projetos desktop e mobile. TypeScript, lint e build passaram. As capturas de início, detalhe, carrinho e pagamento estão versionadas. A revisão adversarial e as medianas de três auditorias Lighthouse por página e perfil estão em `reports/`.
+Na rodada inicial de 27/10/2026 passaram 38 testes de domínio/HTTP e 54 testes Playwright, seguidos de 22 regressões direcionadas. Na atualização visual com as duas aparências, passaram 72 testes Playwright, incluindo 14 específicos de tema, e uma segunda rodada de 10 comparações visuais, com projetos desktop e mobile. TypeScript, lint e build passaram. As capturas de início, detalhe, carrinho e pagamento estão versionadas. A revisão adversarial e as medianas de três auditorias Lighthouse por página e perfil estão em `reports/`.
 
 O CSS global é compilado de `src/styles.template.css`. Cores semânticas, espaçamento, raios e breakpoints vêm de `src/styleguide/theme`. Altere a fonte do tema e gere novamente, evitando editar os arquivos gerados manualmente.

@@ -11,4 +11,11 @@ export const colors = {
   focus: tokens.colors.amber[300],
   danger: tokens.colors.red[300],
   success: tokens.colors.green[300],
+  accentForeground: tokens.colors.brown[950],
+  headerBackground: tokens.colors.translucent.header,
+  overlay: tokens.colors.translucent.overlay,
+  gameGlow: tokens.colors.translucent.glow,
+  gameProgress: tokens.colors.green[300],
+  dangerSurface: tokens.colors.red[950],
+  successSurface: tokens.colors.green[950],
 } as const;

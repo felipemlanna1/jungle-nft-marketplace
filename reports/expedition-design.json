@@ -1,0 +1,34 @@
+{
+  "createdAt": "2026-10-27T11:07:41.578Z",
+  "request": "Familiarizar a interface com a linguagem dos jogos da Jungle sem substituir os fluxos NFT do desafio.",
+  "officialReferences": [
+    {
+      "url": "https://junglegaming.io/pt#game-chimp-mines",
+      "observed": "Pedra escura, selva, moldura bronze, detalhes esmeralda."
+    },
+    {
+      "url": "https://junglegaming.io/pt#game-captains-treasure",
+      "observed": "Ornamentos dourados e fantasia de exploração."
+    },
+    {
+      "url": "https://junglegaming.io/pt#game-goblins-gold",
+      "observed": "Madeira, metal e detalhes dourados."
+    }
+  ],
+  "popularity": "Títulos destacados oficialmente; não foi encontrado ranking público de popularidade.",
+  "asset": {
+    "file": "public/art/expedition-hero.webp",
+    "method": "Built-in Imagegen, seguido de codificação WebP com cwebp q82.",
+    "prompt": "Use case: stylized-concept. Asset type: original full width game-lobby hero background for a premium fantasy collectible marketplace. A lush mysterious jungle temple treasure chamber at dusk, intricate weathered dark stone and antique gold architectural frame, a luminous faceted emerald gemstone floating over a circular carved altar on the RIGHT HALF, small warm glowing treasure coins and rich foliage framing the scene, cinematic premium 3D game art with polished hand-painted surfaces. Wide 16:9 landscape. LEFT HALF predominantly dark near-black forest green atmospheric negative space, low detail to support readable HTML headline overlay. Palette deep forest green #071713, bronze and antique gold #e6bf77, emerald light, warm amber fire, soft volumetric beams. Bold readable silhouettes, striking depth, elegant and lush. No people or animals, no existing characters, no logos, no UI, no text, no letters, no watermark. This is an original jungle exploration world, not a copy of a particular game.",
+    "originalCharactersOrLogosCopied": false
+  },
+  "preserved": {
+    "theme": "Kurio, selecionável no cabeçalho.",
+    "data": "Mesmos contratos, catálogo, carrinho e simulação de compra.",
+    "privateProjects": "Sem cópia de fontes, dados ou histórico de projetos anteriores."
+  },
+  "validation": {
+    "status": "Revisão concluída antes da publicação.",
+    "results": "reports/expedition-validation.json"
+  }
+}

@@ -13,6 +13,7 @@ async function api(page: Page, path: string, body: unknown) {
   );
 }
 test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('jungle.marketplace.theme', 'kurio'));
   await page.goto('/');
   await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
 });

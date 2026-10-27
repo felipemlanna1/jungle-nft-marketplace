@@ -33,7 +33,7 @@ test('Socket.IO price event reconciles the visible cart and announces a changed 
 test('tablet 768px preserves content without horizontal overflow', async ({ page }) => {
   await page.setViewportSize({ width: 768, height: 1024 });
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: /Seja dono do futuro/i })).toBeVisible();
+  await expect(page.locator('#hero-title')).toBeVisible();
   await expect(
     page.getByRole('link', { name: 'Ver The future of ETH®', exact: true }),
   ).toBeVisible();

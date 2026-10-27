@@ -7,3 +7,6 @@ export { Modal } from './components/Modal';
 export { StyleguideProvider } from './components/StyleguideProvider';
 export { useTheme } from './hooks/useTheme';
 export { theme } from './theme';
+
+export { ThemeSwitcher } from './components/ThemeSwitcher';
+export { themes, DEFAULT_THEME, type ThemeName } from './theme';

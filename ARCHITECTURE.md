@@ -28,6 +28,12 @@ Os tokens definem o vocabulário visual e os aliases semânticos. As receitas de
 
 As primitivas seguem o padrão de composição shadcn/ui, com Radix para slots e diálogos e CVA para variantes. Diálogos usam semântica, contenção e retorno de foco da primitiva. Os campos mantêm labels, estados de erro e foco visível. Skeletons reservam dimensões e respeitam movimento reduzido.
 
+### Duas aparências, um contrato visual
+
+`theme/index.ts` define `expedition` e `kurio` com o mesmo contrato de tokens. O gerador emite as variáveis por `data-theme`. O hook `useStyleguide` valida e persiste a preferência e trata falhas de armazenamento. A troca atualiza contexto e atributo do documento sem chave de remontagem, preservando rascunhos, sessão, consultas e tentativa de compra. Alterar a aparência não dispara operações de domínio.
+
+`ThemeSwitcher` usa botões com estado `aria-pressed` e foco visível. O hook próximo do componente fornece opções e ação; as páginas recebem somente a aparência selecionada. O modo Jungle acrescenta `MarketplaceHero` e `CollectionStrip`, ambos de apresentação. Os filtros dessas coleções percorrem o mesmo estado de URL e a mesma consulta REST do catálogo.
+
 ## Contratos REST
 
 Todas as chamadas da interface passam pelo cliente Axios. Respostas de erro usam `{ message, code }` e o status HTTP correspondente. O modelo de erro representa validação, sessão expirada, recurso inexistente, conflito de disponibilidade e indisponibilidade transitória.

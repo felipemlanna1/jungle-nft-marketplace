@@ -34,6 +34,9 @@ test('profile draft survives a changed account response for the same user', asyn
   await login(page, '/profile');
   const name = page.getByLabel('Nome de exibição', { exact: true });
   await expect(name).toHaveValue('Alex Collector');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+    page.viewportSize()!.width + 1,
+  );
   await name.fill('My unsaved collector draft');
   await changeRemoteProfileAndRefetch(page);
   await expect(name).toHaveValue('My unsaved collector draft');

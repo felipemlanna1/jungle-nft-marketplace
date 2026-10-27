@@ -1,20 +1,16 @@
 import { Link } from '@tanstack/react-router';
-import {
-  ArrowRight,
-  ChevronLeft,
-  ChevronRight,
-  Search,
-  SlidersHorizontal,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, Search, SlidersHorizontal } from 'lucide-react';
 import type { CatalogSearch } from '../../shared-types';
 import { errorMessage } from '../../../../services/marketplace';
 import { Button, Input, Notice } from '../../../../components/ui';
 import { NFTCard } from '../../components/NFTCard';
 import { CatalogSkeleton } from '../../components/CatalogSkeleton';
 import { categories, useMarketplace } from './useMarketplace';
+import { MarketplaceHero } from '../../components/MarketplaceHero';
+import { CollectionStrip } from '../../components/CollectionStrip';
 export function CatalogPage() {
   const {
+    themeName,
     search,
     term,
     setTerm,
@@ -30,70 +26,32 @@ export function CatalogPage() {
   } = useMarketplace();
   return (
     <>
-      <section className="hero page-shell" aria-labelledby="hero-title">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="live-dot" /> Bem-vindo à Kurio
-          </p>
-          <h1 id="hero-title">
-            Seja dono do futuro
-            <br />
-            da arte digital<span className="accent">.</span>
-          </h1>
-          <p className="hero-description">
-            Descubra NFTs selecionados de criadores, colecione o extraordinário e faça parte de uma
-            nova cultura.
-          </p>
-          <Button asChild>
-            <a href="#marketplace">
-              Explorar coleção <ArrowRight size={16} />
-            </a>
-          </Button>
-          <div className="hero-proof">
-            <div className="avatar-stack">
-              <span>AC</span>
-              <span>LM</span>
-              <span>JR</span>
-            </div>
-            <p>
-              Arte original.
-              <br />
-              <strong>Possibilidades extraordinárias.</strong>
-            </p>
-          </div>
-        </div>
-        <div className="hero-art">
-          <img
-            src="/art/hero.svg"
-            width="680"
-            height="680"
-            alt="Escultura digital abstrata em tons de âmbar, obra demonstrativa"
-            fetchPriority="high"
-          />
-          <div className="hero-art-caption">
-            <span>
-              <span className="overline">Coleção em destaque</span>
-              <strong>Beyond the ordinary</strong>
-            </span>
-            <Link to="/nft/$id" params={{ id: 'nft-1' }} aria-label="Explorar coleção em destaque">
-              <ArrowRight size={19} />
-            </Link>
-          </div>
-          <span className="hero-art-label">
-            <Sparkles size={13} /> Arte sem limites
-          </span>
-        </div>
-      </section>
+      <MarketplaceHero appearance={themeName} />
+      {themeName === 'expedition' && (
+        <CollectionStrip
+          category={search.category}
+          onSelect={(category) => update({ category: category || undefined, page: 1 })}
+        />
+      )}
       <section
         className="marketplace-section page-shell"
         id="marketplace"
         aria-labelledby="marketplace-title"
       >
-        <div className="section-heading">
+        <div
+          className={`section-heading ${themeName === 'expedition' ? 'game-lobby-heading' : ''}`}
+        >
           <div>
-            <p className="eyebrow">Encontre sua próxima descoberta</p>
+            <p className="eyebrow">
+              {themeName === 'expedition'
+                ? 'SEU PRÓXIMO TESOURO'
+                : 'Encontre sua próxima descoberta'}
+            </p>
             <h2 id="marketplace-title">
-              Explore o marketplace<span className="accent">.</span>
+              {themeName === 'expedition'
+                ? 'O próximo item da sua coleção'
+                : 'Explore o marketplace'}
+              <span className="accent">.</span>
             </h2>
           </div>
           <span className="collection-count">

@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-27",
+  "scope": "Independent review of root-authored Expedition integration: Layout, Marketplace page/hook, Hero, CollectionStrip, compileStyles extension and CSS source scoping. Own theme provider/context is excluded from independent quality assessment.",
+  "reviewedSourceHashes": {
+    "src/components/Layout/index.tsx": "f2b86c1e04d4c2c6129fa68012474c67771afccf9b98422836e7963eeaf9a0b1",
+    "src/components/Layout/useLayout.ts": "5c9ee72367259427a1e575ebaf6fe06f3e7f5c99ebbfad3995d929c9d9ad5d04",
+    "src/modules/catalog/pages/Marketplace/index.tsx": "4fc44c0ef5cd367a74e739291243c1020fd5da90b5207d3cea3d95c77350ae81",
+    "src/modules/catalog/pages/Marketplace/useMarketplace.ts": "ba54dffde42c6ee68627804c516616e2641ede974fa9936656c9d102fcf05952",
+    "src/modules/catalog/components/MarketplaceHero/index.tsx": "ae6bdca02319d7e6b436f4a3c96456e5462b292f9f861d577ebe488256e4421c",
+    "src/modules/catalog/components/CollectionStrip/index.tsx": "a19163ae268e50f068590c0f3a7b5c7767375a8b8b0cac4b75eedebdc7324700",
+    "src/modules/catalog/components/CollectionStrip/collections.ts": "2621ebff85b4c31643cfd3524c6ae882f63185317d03928ac3d7e6b0f494142e",
+    "scripts/generate-theme.mjs": "9f0313c666846522d6849380098747e2ec5e4281667d01b533c59dbcefdc5346",
+    "src/main.tsx": "957e0107bc8f3aee49d84c53c1dd8cd51ca92c16aabe9e5d38e9cd8e1e283fb8"
+  },
+  "findings": [
+    {
+      "id": "EXP-CTA-001",
+      "priority": "P2",
+      "file": "src/modules/catalog/components/MarketplaceHero/index.tsx",
+      "line": 38,
+      "finding": "CTA Minha coleção links to /profile, which edits profile and does not display an owned NFT collection.",
+      "recommendation": "Use Meu perfil or provide a genuine collection view before claiming that feature.",
+      "status": "fixed_by_root"
+    }
+  ],
+  "conclusions": [
+    "useLayout only adds themeName consumption; query keys, cart counting, logout and cache behavior remain unchanged in this diff.",
+    "useMarketplace only adds themeName to state returned to the page; search term effect stays dependent on URL search.q and no theme-driven API effect was introduced.",
+    "CollectionStrip uses valid existing category values and resets pagination to1 through the existing URL update function; no fictitious collection counts or business entities added.",
+    "Hero and CollectionStrip remain presentational, with data access and router-state actions delegated to the page hook.",
+    "Expedition CSS selectors are scoped to html[data-theme=expedition] in the four source templates reviewed; the Kurio hero branch preserves its previous composition.",
+    "compileStyles deterministically joins four explicit source files and replaces breakpoint tokens; it does not execute app services or alter demo data.",
+    "Own ThemeSwitcher accessibility defect from concurrent fix was resolved: one explicit aria-label and title per button; no duplicate JSX attributes remain."
+  ],
+  "qualityAssessment": "The reviewed integration preserves the established view/hook and service boundaries. Theme selection is presentation state and does not introduce marketplace domain rules. No numeric quality score assigned.",
+  "validation": {
+    "typecheck": "passed",
+    "eslintSelectedScope": "passed",
+    "independentBrowserTests": "Delegated to API reviewer; not claimed here.",
+    "visualBaseline": "Static preservation observed; final Kurio screenshot regressions still require consolidated tests."
+  },
+  "limits": [
+    "Not a full security audit.",
+    "No claim of pixel-identical Figma fidelity.",
+    "Provider/context authored by this reviewer was not independently graded.",
+    "A separate implementation/theme-review result must be retained with this report."
+  ],
+  "publication": "No publication or external submission performed by reviewer."
+}

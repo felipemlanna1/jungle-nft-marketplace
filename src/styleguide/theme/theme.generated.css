@@ -1,4 +1,4 @@
-:root {
+:root[data-theme="kurio"] {
   --background: #120e0b;
   --surface: #1a1410;
   --surface-raised: #211a14;
@@ -10,10 +10,55 @@
   --focus: #f2c985;
   --danger: #f29388;
   --success: #96c6a0;
+  --accent-foreground: #120e0b;
+  --header-background: #120e0bf5;
+  --overlay: #080604cc;
+  --game-glow: #d2a35e26;
+  --game-progress: #96c6a0;
+  --danger-surface: #351b18;
+  --success-surface: #172b1b;
   --font-body:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   --font-display: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --radius-sm: 5px;
+  --radius-md: 9px;
+  --radius-lg: 12px;
+  --breakpoint-mobile: 767px;
+  --breakpoint-tablet: 1000px;
+  --breakpoint-desktop: 1440px;
+  --radius: 9px;
+}
+
+:root,
+:root[data-theme="expedition"] {
+  --background: #071713;
+  --surface: #0c211b;
+  --surface-raised: #132e25;
+  --border: #294136;
+  --foreground: #edf4ed;
+  --muted: #a4b8ab;
+  --accent: #e6bf77;
+  --accent-hover: #f5dba5;
+  --accent-foreground: #071713;
+  --focus: #f5dba5;
+  --danger: #f5a39b;
+  --success: #a1dbb0;
+  --header-background: #071713f5;
+  --overlay: #020b08cc;
+  --game-glow: #e6bf7726;
+  --game-progress: #8bc5a2;
+  --danger-surface: #351c1b;
+  --success-surface: #153324;
+  --font-body:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-display: "Arial Black", "Arial", ui-sans-serif, system-ui, sans-serif;
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;

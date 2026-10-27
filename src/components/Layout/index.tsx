@@ -1,10 +1,11 @@
 import { useLayout } from './useLayout';
 import type { ReactNode } from 'react';
 import { Link } from '@tanstack/react-router';
-import { ArrowUpRight, ChevronDown, Menu, Search, ShoppingBag } from 'lucide-react';
-import { Button, Modal } from '../../styleguide';
+import { ArrowUpRight, ChevronDown, Gem, Menu, Search, ShoppingBag } from 'lucide-react';
+import { Button, Modal, ThemeSwitcher } from '../../styleguide';
 export function Layout({ children }: { children: ReactNode }) {
-  const { menuOpen, setMenuOpen, logoutError, leaving, session, count, logout } = useLayout();
+  const { themeName, menuOpen, setMenuOpen, logoutError, leaving, session, count, logout } =
+    useLayout();
   return (
     <>
       <a className="skip-link" href="#main-content">
@@ -13,8 +14,18 @@ export function Layout({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="header-inner">
           <Link to="/" className="wordmark" aria-label="Página inicial da Kurio">
-            <span className="brand-symbol">c</span>kurio
-            <span className="brand-dot">.</span>
+            {themeName === 'expedition' ? (
+              <>
+                <span className="game-brand-emblem">
+                  <Gem size={24} strokeWidth={1.5} />
+                </span>
+                <span className="game-brand-copy">
+                  kurio<small>EXPLORE. COLECIONE.</small>
+                </span>
+              </>
+            ) : (
+              <>kurio</>
+            )}
           </Link>
           <div className="header-divider" />
           <nav className="desktop-nav" aria-label="Navegação principal">
@@ -27,6 +38,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <Link to="/wallets">Carteiras</Link>
           </nav>
           <div className="header-actions">
+            <ThemeSwitcher />
             <Link to="/" search={{}} className="header-search" aria-label="Buscar NFTs">
               <Search size={19} />
             </Link>

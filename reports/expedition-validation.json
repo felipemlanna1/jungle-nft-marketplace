@@ -1,0 +1,99 @@
+{
+  "createdAt": "2026-10-27T11:18:05.976318+00:00",
+  "scope": "Atualização de aparência Jungle e preservação de Kurio; sem alteração de contratos de domínio.",
+  "codeOrganization": {
+    "theme": "Tokens primitivos e aliases semânticos das duas aparências com geração de CSS e breakpoints.",
+    "logic": "useStyleguide/useThemeSwitcher controlam preferência; useLayout/useMarketplace recebem aparência.",
+    "views": "MarketplaceHero e CollectionStrip são componentes de apresentação.",
+    "styles": "Fontes separadas em shell, primitivas, catálogo e fluxos; CSS final é gerado."
+  },
+  "checks": {
+    "unitAndHttp": {
+      "passed": 38,
+      "scope": "Domínio e transporte; nenhuma alteração nesses módulos nesta atualização."
+    },
+    "playwright": {
+      "passed": 72,
+      "command": "npx playwright test --update-snapshots --workers=2 --reporter=line",
+      "snapshots": "Mudanças visuais intencionais revisadas."
+    },
+    "visualRecheck": {
+      "passed": 10,
+      "command": "npx playwright test --grep 'visual regression' --workers=2 --reporter=line"
+    },
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "gitDiffCheck": "passed",
+    "secretScan": {
+      "tool": "gitleaks dir --redact",
+      "candidates": 0,
+      "limit": "Resultado automatizado; não é certificação de ausência absoluta de dados sensíveis."
+    }
+  },
+  "adversarialFixes": [
+    {
+      "finding": "Botões de tema perdiam nome acessível com texto oculto no celular.",
+      "fix": "aria-label explícito e rótulos visíveis em cabeçalho de duas linhas.",
+      "verified": "14 E2Es de tema e rodada completa."
+    },
+    {
+      "finding": "CTA Minha coleção navegava para o formulário de perfil.",
+      "fix": "Rótulo Meu perfil corresponde à rota real.",
+      "verified": "Leitura independente dos componentes de apresentação."
+    },
+    {
+      "finding": "Upload do avatar visível expandia o perfil em mobile e atrapalhava o botão fixo de cenários.",
+      "fix": "Classe de ocultação acessível aplicada, avatar com dimensões e min-width das superfícies; campos mobile com fonte 16px.",
+      "verified": "Regressão de rascunho mobile agora verifica a largura e abre o painel; rodada completa passou."
+    }
+  ],
+  "limitations": [
+    "Arte inspirada no gênero; não é reprodução oficial ou pixel-perfect dos jogos.",
+    "Não há ranking público verificável de popularidade dos jogos destacados.",
+    "Kurio preserva a composição de referência com novo seletor e melhorias de acessibilidade; fidelidade integral ao Figma continua não certificada.",
+    "Marketplace usa simulação de compra, conta e carteira.",
+    "Revisão técnica interna, sem garantia de contratação ou de ausência de defeitos."
+  ],
+  "lighthouse": {
+    "measuredAt": "2026-10-27T11:19:25.542Z",
+    "runsPerPageAndProfile": 3,
+    "target": "http://127.0.0.1:4173",
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      }
+    ],
+    "challengeMinimumsMet": true
+  },
+  "publication": "Aguardando publicação da versão revisada; candidatura não enviada."
+}

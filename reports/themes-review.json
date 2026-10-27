@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-27",
+  "scope": "Adversarial review of Expedition/Kurio theme alteration before publication. Read source, exercised browser interactions and inspected generated screenshots. No implementation edits by reviewer.",
+  "status": "NO_REMAINING_HIGH_FINDING_IN_SCOPED_THEME_REVIEW",
+  "finding": {
+    "id": "THEME-A11Y-01",
+    "severity": "medium",
+    "issue": "At narrow/mobile widths Expedition CSS hid theme button text while icons were aria-hidden, leaving two unnamed buttons.",
+    "reproduction": "320px viewport; getByRole group Tema visual contained buttons with no accessible names, preventing semantic activation.",
+    "fix": "Author added explicit aria-label for each theme option and restored visible labels in a two-row mobile header. Account control also remains visible.",
+    "validation": "Subsequent14/14 desktop/mobile browser cases passed, including keyboard focus and controls bounded within320/390/768/1440."
+  },
+  "verifiedBehavior": [
+    "Default theme expedition when preference missing or invalid",
+    "Changing theme keeps catalog URL search/filter/sort/page intact",
+    "Guest cart item count survives theme switch and document reload",
+    "Kurio preference survives reload",
+    "Unsaved profile name remains and keyboard focus stays on activated theme button",
+    "Checkout collector name/email and review state remain across themes; no order is created by theme changes",
+    "Blocked preference reads/writes do not crash catalog or in-memory theme switching",
+    "Both themes maintain document width and header/search/toolbar/title/cart control bounds at320,390,768,1440 pixels"
+  ],
+  "tests": {
+    "file": "tests/e2e/themes.spec.ts",
+    "command": "playwright test tests/e2e/themes.spec.ts --update-snapshots",
+    "result": "14 passed (19.9s),desktop and mobile Chromium",
+    "casesPerProject": 7
+  },
+  "visualInspection": {
+    "desktop": "tests/e2e/themes.spec.ts-snapshots/expedition-home-desktop-darwin.png",
+    "mobile": "tests/e2e/themes.spec.ts-snapshots/expedition-home-mobile-darwin.png",
+    "assessment": "Original fantasy temple artwork, dark green/gold shell and readable NFT catalog; mobile header exposes account/cart/menu and theme controls in separate rows. No horizontal content loss detected.",
+    "baselineCaveat": "New screenshots establish regression references; their creation does not certify upstream Figma fidelity."
+  },
+  "sourceReview": [
+    "StyleguideProvider changes context value without keying/remounting the application subtree",
+    "Theme name allowlist prevents arbitrary preference values from entering DOM attribute",
+    "Preference storage access catches read/write failures",
+    "Theme-specific composition/CSS remains isolated from baseline Kurio UI",
+    "Theme changes do not enter server-state query keys or clear account/cart data"
+  ],
+  "limitations": [
+    "Storage-failure scenario targets theme preference access, not complete browser storage destruction.",
+    "Old Kurio visual baseline assertions require deliberate update for the added two-row mobile theme control, handled by parent.",
+    "Final full functional/visual suite and deployment verification are parent release gates; this report does not claim publication."
+  ]
+}

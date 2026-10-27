@@ -6,3 +6,10 @@ export interface NFTCardProps {
   onFavorite: () => void;
   busy: boolean;
 }
+export interface MarketplaceHeroProps {
+  appearance: 'kurio' | 'expedition';
+}
+export interface CollectionStripProps {
+  category?: string;
+  onSelect: (category: string) => void;
+}

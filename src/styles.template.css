@@ -65,7 +65,8 @@ textarea:focus-visible {
   background: var(--accent);
   color: var(--background);
 }
-.sr-only {
+.sr-only,
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -783,10 +784,33 @@ h4 {
 .form-card,
 .summary-card,
 .wallet-card {
+  min-width: 0;
   padding: 25px;
   border: 1px solid var(--border);
   border-radius: 7px;
   background: var(--surface);
+}
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+.profile-avatar > :is(img, span) {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 22px;
+}
+.profile-avatar label:focus-within {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
 }
 .field {
   display: flex;
@@ -1705,4 +1729,30 @@ h4 {
 .demo-dialog p {
   font-size: 12px;
   line-height: 1.7;
+}
+
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .header-inner {
+    height: auto;
+    min-height: 68px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-block: 12px;
+  }
+  .header-inner > .wordmark { margin-right: auto; }
+  .header-actions { display: contents; }
+  .header-inner .theme-switcher {
+    order: 10;
+    flex: 0 0 100%;
+    justify-content: center;
+  }
+  .theme-switcher-option { flex: 1; }
+}
+
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  html[data-theme] body :is(input, textarea, select, .input),
+  html[data-theme] body .catalog-search .input,
+  html[data-theme] body .sort-control select {
+    font-size: 16px;
+  }
 }

@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import type { CatalogSearch, NFT } from '../../shared-types';
 import { market } from '../../../../services/marketplace';
 import { useCatalog, useFavorite } from '../../hooks/useCatalog';
+import { useTheme } from '../../../../styleguide';
 export const categories = [
   { label: 'Todas as coleções', value: '' },
   { label: 'Arte digital', value: 'Art' },
@@ -11,6 +12,7 @@ export const categories = [
   { label: 'Fotografia', value: 'Photography' },
 ];
 export function useMarketplace() {
+  const { themeName } = useTheme();
   const search = useSearch({ strict: false }) as CatalogSearch;
   const navigate = useNavigate();
   const [term, setTerm] = useState(search.q ?? '');
@@ -49,6 +51,7 @@ export function useMarketplace() {
     void navigate({ to: '/', search: {} });
   }
   return {
+    themeName,
     search,
     term,
     setTerm,

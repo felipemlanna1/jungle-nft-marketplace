@@ -82,6 +82,7 @@ test('demo controls are keyboard accessible and focus returns after close', asyn
 });
 
 test('catalog visual regression', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('jungle.marketplace.theme', 'kurio'));
   await boot(page);
   await expect(page.locator('img').first()).toBeVisible();
   await page.evaluate(() => document.fonts.ready);

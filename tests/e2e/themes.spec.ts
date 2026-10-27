@@ -1,0 +1,201 @@
+import { test, expect, type Page } from '@playwright/test';
+
+const THEME_KEY = 'jungle.marketplace.theme';
+const themeGroup = (page: Page) => page.getByRole('group', { name: 'Tema visual', exact: true });
+async function ready(page: Page) {
+  await expect(themeGroup(page)).toBeVisible();
+  await expect(page.getByRole('main')).toBeVisible();
+}
+async function selectTheme(page: Page, name: 'Jungle' | 'Kurio') {
+  const button = themeGroup(page).getByRole('button', { name, exact: true });
+  await button.click();
+  await expect(button).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('html')).toHaveAttribute(
+    'data-theme',
+    name === 'Jungle' ? 'expedition' : 'kurio',
+  );
+}
+async function addFirstCollectible(page: Page) {
+  await page.goto('/nft/nft-1');
+  await ready(page);
+  await page.getByRole('button', { name: /^Adicionar ao carrinho/ }).click();
+  await expect(page.getByText('A obra está no seu carrinho.')).toBeVisible();
+}
+async function login(page: Page, redirect: string) {
+  await page.goto(`/login?redirect=${encodeURIComponent(redirect)}`);
+  await ready(page);
+  await page.getByLabel('E-mail', { exact: true }).fill('collector@example.test');
+  await page.getByLabel('Senha', { exact: true }).fill('Collect0r!Demo');
+  await page.getByRole('button', { name: /^Entrar/ }).click();
+  await expect(page).toHaveURL(new RegExp(`${redirect}$`));
+}
+
+test('theme changes preserve URL filters and cart and persist after refresh', async ({ page }) => {
+  await addFirstCollectible(page);
+  await page.goto('/?q=art&category=Art&sort=price-asc&page=2');
+  await ready(page);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'expedition');
+  const before = page.url();
+  await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();
+  await selectTheme(page, 'Kurio');
+  expect(page.url()).toBe(before);
+  await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();
+  await expect(page.getByLabel('Buscar obras ou criadores', { exact: true })).toHaveValue('art');
+  await page.reload();
+  await ready(page);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'kurio');
+  expect(page.url()).toBe(before);
+  await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();
+});
+
+test('theme switches preserve unsaved profile form values and keyboard focus', async ({ page }) => {
+  await login(page, '/profile');
+  const name = page.getByLabel('Nome de exibição', { exact: true });
+  await expect(name).toHaveValue('Alex Collector');
+  await name.fill('Unsaved profile theme draft');
+  const button = themeGroup(page).getByRole('button', { name: 'Kurio', exact: true });
+  await button.focus();
+  await page.keyboard.press('Space');
+  await expect(button).toHaveAttribute('aria-pressed', 'true');
+  await expect(button).toBeFocused();
+  await expect(name).toHaveValue('Unsaved profile theme draft');
+  await selectTheme(page, 'Jungle');
+  await expect(name).toHaveValue('Unsaved profile theme draft');
+  expect(new URL(page.url()).pathname).toBe('/profile');
+});
+
+test('theme switches preserve checkout data and review without creating an order', async ({
+  page,
+}) => {
+  await addFirstCollectible(page);
+  await login(page, '/checkout');
+  await page.getByLabel('Nome completo', { exact: true }).fill('Unsaved checkout theme draft');
+  await page.getByLabel('E-mail', { exact: true }).fill('draft@example.test');
+  await page.getByRole('button', { name: 'Conectar carteira', exact: true }).click();
+  await page.getByRole('button', { name: /Revisar compra/ }).click();
+  await expect(page.getByRole('heading', { name: 'Revise sua compra', exact: true })).toBeVisible();
+  await selectTheme(page, 'Kurio');
+  await expect(page.getByText('Unsaved checkout theme draft', { exact: true })).toBeVisible();
+  await expect(page.getByText('draft@example.test', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Revise sua compra', exact: true })).toBeVisible();
+  expect(
+    await page.evaluate(
+      () => Object.keys(JSON.parse(localStorage.getItem('jungle.demo.database.v1')!).orders).length,
+    ),
+  ).toBe(0);
+  await selectTheme(page, 'Jungle');
+  await page.getByRole('button', { name: 'Editar dados', exact: true }).click();
+  await expect(page.getByLabel('Nome completo', { exact: true })).toHaveValue(
+    'Unsaved checkout theme draft',
+  );
+  await expect(page.getByLabel('E-mail', { exact: true })).toHaveValue('draft@example.test');
+});
+
+test('an invalid saved theme falls back safely and remains switchable', async ({ page }) => {
+  await page.addInitScript((key) => localStorage.setItem(key, 'not-a-supported-theme'), THEME_KEY);
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto('/');
+  await ready(page);
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'expedition');
+  await selectTheme(page, 'Kurio');
+  expect(errors).toEqual([]);
+});
+
+test('blocked preference storage does not crash the catalog or in-memory theme changes', async ({
+  page,
+}) => {
+  await page.addInitScript((key) => {
+    const get = Storage.prototype.getItem;
+    const set = Storage.prototype.setItem;
+    Storage.prototype.getItem = function (name: string) {
+      if (name === key) throw new DOMException('Theme preference storage blocked', 'SecurityError');
+      return get.call(this, name);
+    };
+    Storage.prototype.setItem = function (name: string, value: string) {
+      if (name === key) throw new DOMException('Theme preference storage blocked', 'SecurityError');
+      return set.call(this, name, value);
+    };
+  }, THEME_KEY);
+  const errors: string[] = [];
+  page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto('/');
+  await ready(page);
+  await expect(page.locator('.nft-card').first()).toBeVisible();
+  await selectTheme(page, 'Kurio');
+  await selectTheme(page, 'Jungle');
+  expect(errors).toEqual([]);
+});
+
+test('both themes keep critical controls within 320, 390, 768 and 1440 pixels', async ({
+  page,
+}) => {
+  await page.goto('/');
+  await ready(page);
+  await expect(page.locator('.nft-card').first()).toBeVisible();
+  for (const width of [320, 390, 768, 1440]) {
+    await page.setViewportSize({ width, height: 1000 });
+    for (const theme of ['Jungle', 'Kurio'] as const) {
+      await selectTheme(page, theme);
+      const bounds = await page.evaluate(() => {
+        const selectors = [
+          '.header-inner',
+          '.header-actions',
+          '.theme-switcher',
+          '.cart-link',
+          '#catalog-search',
+          '.catalog-toolbar',
+          '#hero-title',
+        ];
+        return {
+          viewport: innerWidth,
+          scroll: document.documentElement.scrollWidth,
+          controls: selectors.map((selector) => {
+            const node = document.querySelector(selector);
+            const rect = node?.getBoundingClientRect();
+            return {
+              selector,
+              left: rect?.left ?? 0,
+              right: rect?.right ?? 0,
+              width: rect?.width ?? 0,
+            };
+          }),
+        };
+      });
+      expect(bounds.scroll, `${theme} overflow at ${width}px`).toBeLessThanOrEqual(
+        bounds.viewport + 1,
+      );
+      for (const control of bounds.controls) {
+        expect(
+          control.left,
+          `${theme} ${control.selector} left edge at ${width}px`,
+        ).toBeGreaterThanOrEqual(-1);
+        expect(
+          control.right,
+          `${theme} ${control.selector} right edge at ${width}px`,
+        ).toBeLessThanOrEqual(width + 1);
+      }
+    }
+  }
+});
+
+test('expedition home visual regression', async ({ page }) => {
+  await page.goto('/');
+  await ready(page);
+  await selectTheme(page, 'Jungle');
+  await expect(page.locator('.nft-card').first()).toBeVisible();
+  await expect(page.locator('.game-hero-background')).toBeVisible();
+  await expect
+    .poll(() =>
+      page
+        .locator('.game-hero-background')
+        .evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0),
+    )
+    .toBe(true);
+  await page.evaluate(() => document.fonts.ready);
+  await expect(page).toHaveScreenshot('expedition-home.png', {
+    fullPage: true,
+    animations: 'disabled',
+    maxDiffPixelRatio: 0.02,
+  });
+});
