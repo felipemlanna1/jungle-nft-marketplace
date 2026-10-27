@@ -274,8 +274,13 @@ html[data-theme='kurio'] .nft-card-image {
   height: 300px;
   aspect-ratio: auto;
   padding: 24px 4px 26px;
-  border-radius: 0;
+  border-radius: var(--radius-card);
   background: var(--surface);
+}
+@media (width > __breakpoint_mobile__) {
+  html[data-theme='kurio'] .nft-card-image {
+    border: 1px solid var(--border);
+  }
 }
 html[data-theme='kurio'] .nft-card-image > a {
   width: 100%;
@@ -650,7 +655,6 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
   html[data-theme='kurio'] .nft-card-image {
     height: auto;
     aspect-ratio: 175 / 200;
-    border-radius: 20px;
     padding: 12px 4px 20px;
     background: linear-gradient(140deg, var(--surface), var(--surface-raised));
     align-items: flex-start;

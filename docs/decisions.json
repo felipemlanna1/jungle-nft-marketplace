@@ -488,6 +488,20 @@
         "tests/e2e/card-status.spec.ts"
       ],
       "validation": "Quatro casos locais aprovados em Chromium nos projetos desktop e mobile. Cada caso confere 320, 375, 390, 414, 440 e 1440 px, com selo dentro da imagem, altura de 20 a 32 px, texto inteiro e sem sobreposição ao favorito ou à raridade. O teste esgota a obra rara pela API simulada e confere o clique no favorito. Resultado em reports/card-status-green.json; a publicação tem conferência separada."
+    },
+    {
+      "id": "card-artwork-frame",
+      "evidence": "A moldura desktop tinha cantos retos, enquanto o mobile já usava 20 px de arredondamento.",
+      "decision": "Usar o token radii.card de 20 px nas duas versões. Acima da largura mobile, acrescentar borda de 1 px com a cor var(--border) do tema.",
+      "reason": "Manter a mesma moldura entre os tamanhos de tela, sem repetir o valor do arredondamento nem criar uma cor solta. É uma adaptação do Figma. Foram preservados os 300 px de altura acima de 1240 px, a proporção de 258/300 nas larguras intermediárias, os espaços internos de 24/4/26 px e a proporção da arte.",
+      "implementation": [
+        "src/styleguide/theme/tokens.ts",
+        "src/styleguide/theme/kurio/styles/catalog.template.css",
+        "src/styleguide/theme/theme.generated.css",
+        "src/styles.kurio.css",
+        "tests/e2e/card-frame.spec.ts"
+      ],
+      "validation": "A conferência cobre 768, 1024 e 1440 px: arredondamento, borda, dimensões de cada faixa e imagem quadrada dentro da moldura. O resultado da rodada local fica em reports/card-frame-green.json; a conferência da publicação é separada."
     }
   ],
   "detailedRecords": [

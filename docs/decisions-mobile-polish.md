@@ -30,3 +30,15 @@ A altura agora acompanha o texto, sem quebra de linha. O selo fica no canto supe
 O teste em `tests/e2e/card-status.spec.ts` usa a obra já esgotada da API e esgota uma obra rara pelo endpoint de demonstração. Em cada caso, confere 320, 375, 390, 414, 440 e 1440 px: texto inteiro, altura entre 20 e 32 px, selos dentro da imagem e sem encostar no coração. O clique no favorito também deve abrir o login com a obra escolhida.
 
 Os quatro casos locais passaram em Chromium, com os projetos desktop e mobile. O resultado está em `reports/card-status-green.json`. Essa rodada não substitui a conferência da publicação.
+
+## Moldura das imagens
+
+A moldura desktop tinha cantos retos, enquanto o mobile já usava 20 px de arredondamento. As duas versões agora usam o token `radii.card`, gerado no CSS como `--radius-card`.
+
+Acima da largura mobile, a moldura também recebe uma borda de 1 px com `var(--border)`. A cor vem do tema. No desktop acima de 1240 px, a altura continua em 300 px. Até 1240 px, permanece a proporção de 258/300 já usada pelo layout. Os espaços internos continuam em 24 px no topo, 4 px nas laterais e 26 px na base.
+
+O arredondamento desktop é uma adaptação do Figma para manter a mesma moldura entre os tamanhos de tela. A arte e sua proporção foram preservadas.
+
+A conferência em `tests/e2e/card-frame.spec.ts` cobre 768, 1024 e 1440 px: cantos arredondados, borda visível, dimensões de cada faixa e imagem quadrada dentro da moldura.
+
+O resultado da rodada local fica em `reports/card-frame-green.json`; a conferência da publicação é separada.

@@ -11,7 +11,7 @@ export const tokens = {
     body: '"Roboto Mono Variable", "Roboto Mono", ui-monospace, monospace',
     display: '"Roboto Mono Variable", "Roboto Mono", ui-monospace, monospace',
   },
-  radii: { sm: '5px', md: '9px', lg: '12px' },
+  radii: { sm: '5px', md: '9px', lg: '12px', card: '20px' },
   spacing: { xs: '4px', sm: '8px', md: '16px', lg: '24px', xl: '40px' },
   breakpoints: { compact: '374px', mobile: '767px', tablet: '1000px', desktop: '1440px' },
 } as const;
