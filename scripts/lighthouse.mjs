@@ -4,6 +4,7 @@ import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { chromium } from '@playwright/test';
 import { verifyHostedHtml } from './lib/verified-html.mjs';
+import { verifyHostedBuild } from './lib/hosted-artifacts.mjs';
 
 const target = process.env.AUDIT_URL || 'http://127.0.0.1:4173';
 const startedAt = new Date().toISOString();
@@ -62,18 +63,12 @@ for (const file of runtimeSources.filter((file) => file.path.startsWith('public/
 const indexFingerprint = buildFiles.find((file) => file.path === 'index.html')?.sha256;
 if (!indexFingerprint) throw new Error('A production dist/index.html is required.');
 const expectedDocument = await readFile('dist/index.html');
-let hostedDocumentVerification;
-// Compare bytes, not just filenames: a stale preview or changed artifact invalidates this audit.
-for (const file of buildFiles) {
-  const response = await fetch(`${target}/${file.path}`);
-  if (!response.ok)
-    throw new Error(`Served artifact differs from the production build: ${file.path}`);
-  const received = Buffer.from(await response.arrayBuffer());
-  if (file.path === 'index.html')
-    hostedDocumentVerification = verifyHostedHtml(received, expectedDocument);
-  else if (sha256(received) !== file.sha256)
-    throw new Error(`Served artifact differs from the production build: ${file.path}`);
-}
+const { hostedDocumentVerification, hostingConfigurationVerification } = await verifyHostedBuild({
+  target,
+  buildFiles,
+  runtimeSources,
+  expectedDocument,
+});
 const sourceRevision = {
   commit: execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
   changedFiles: execFileSync('git', ['status', '--porcelain'], { encoding: 'utf8' })
@@ -260,9 +255,10 @@ const summary = {
     runtimeSourceFingerprint,
     runtimeSources,
     hostedDocumentVerification,
+    hostingConfigurationVerification,
   },
   methodology:
-    'Production build verified against served artifact SHA256 hashes. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.',
+    'Production build verified against served artifact SHA256 hashes. Only the exact reviewed _headers configuration may be consumed rather than served, after matching local source/build hashes and verifying HTTP 200, cache policies and document/asset identity for both measured routes, a hashed JavaScript asset and the service worker; its identity and runtime evidence are recorded. A byte-identical raw _headers response remains verified as bytes and is explicitly recorded as unsupported configuration. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.',
   outputDirectory,
   gate,
   rows,

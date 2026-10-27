@@ -19,7 +19,7 @@ Os estilos específicos da galeria, dos controles de quantidade, das recomendaç
 ## Alterações motivadas pela revisão
 
 - A faixa com três ações permanentes sobre a arte foi retirada no mobile. O coração ocupa a posição do frame; compra e ampliação estão disponíveis no detalhe. O desktop mantém as três ações solicitadas anteriormente.
-- As abas ganharam intervalos legíveis e alvos de interação. A coluna direita mantém o deslocamento de 32 px presente no desenho.
+- As abas ganharam intervalos legíveis e alvos de interação. O pedido posterior de 27/10 nivelou as duas colunas e retirou o deslocamento de 32 px do desenho; a decisão vigente está em `decisions-mobile-polish.md`.
 - O banner teve a posição do texto e a linha de base do botão corrigidas. O tablet recebeu dimensões próprias, preservando os frames de 414 e 1440 px.
 - O bloco de acesso demonstrativo deslocava o botão de login em 97 px. Ele foi movido após as ações do formulário, sem alterar a autenticação.
 - O pagamento mobile passou a apresentar carteiras, provedores e total antes do formulário. Os dados do coletor continuam editáveis por rolagem, com as mesmas validações. Conexão e revisão continuam obrigatórias antes da confirmação, conforme o enunciado.

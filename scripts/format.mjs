@@ -12,6 +12,7 @@ const targets = [
   '*.ts',
   '*.js',
   '*.json',
+  '*.jsonc',
   '*.html',
   '*.md',
 ];

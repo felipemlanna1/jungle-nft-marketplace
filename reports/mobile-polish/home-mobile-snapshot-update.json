@@ -1,0 +1,26 @@
+{
+  "format": "compact-playwright-report",
+  "stats": {
+    "startTime": "2026-10-27T19:58:49.341Z",
+    "duration": 2695.755,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "catalog visual regression",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2179,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

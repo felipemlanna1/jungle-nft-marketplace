@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
+    "test:artifacts": "node --test scripts/hosted-artifacts.test.mjs scripts/verified-html.test.mjs",
     "test:e2e": "playwright test",
     "test:e2e:update": "playwright test --update-snapshots",
     "audit:lighthouse": "node scripts/lighthouse.mjs",
@@ -18,7 +19,7 @@
     "prebuild": "npm run theme:generate",
     "format": "node scripts/format.mjs --write",
     "format:check": "node scripts/format.mjs --check",
-    "check": "npm run theme:generate && npm run typecheck && npm run lint && npm run format:check && npm test"
+    "check": "npm run theme:generate && npm run typecheck && npm run lint && npm run format:check && npm test && npm run test:artifacts"
   },
   "dependencies": {
     "@fontsource-variable/roboto-mono": "^5.3.0",

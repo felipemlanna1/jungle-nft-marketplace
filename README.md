@@ -1,6 +1,6 @@
 # KURIO | Marketplace de NFTs
 
-[Aplicação pública](https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site) · [Repositório](https://github.com/felipemlanna1/jungle-nft-marketplace)
+[Aplicação pública](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev) · [Repositório](https://github.com/felipemlanna1/jungle-nft-marketplace)
 
 Implementação do desafio Frontend da Jungle Gaming em React e TypeScript. Catálogo, conta, carrinho e compra usam REST simulado com MSW. Os eventos percorrem um cliente Socket.IO. Carteiras e pagamentos são fictícios.
 
@@ -25,6 +25,8 @@ npm run audit:lighthouse
 ```
 
 A auditoria usa o build otimizado em `http://127.0.0.1:4173`, aberto por `npm run preview`. Desenvolvimento e demonstração compartilham os mesmos contratos, handlers e fixtures. `npm run check` reúne geração do tema, TypeScript, lint, formatação e testes unitários.
+
+A publicação direta dos assets e a conferência dos cabeçalhos estão descritas em [docs/hosting.md](./docs/hosting.md). A [revisão dos quatro ajustes móveis](./docs/decisions-mobile-polish.md) registra o nivelamento dos cards, o contador do carrinho, o espaçamento do banner e o alinhamento do menu.
 
 ## Avaliação manual
 

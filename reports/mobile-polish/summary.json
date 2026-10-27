@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-27",
+  "scope": "Home, catálogo e navegação móvel",
+  "sourceFrozen": true,
+  "hashes": {
+    "src/components/Layout/MobileNavigation/index.tsx": "08bc23dc2a39ef8cd682bd9d972de4d4d0fc035282176db756ea80f512bd93d3",
+    "src/styleguide/theme/kurio/styles/catalog.template.css": "b84d51b0d71dc75b58a90fc0d94c653298cd61f23701597ae202aad3c6d6df15",
+    "src/styleguide/theme/kurio/styles/shell.template.css": "fa7d828d615fd32bf41fa594b1220945f90f9d0ac2f7008f52210c9522c1d236",
+    "src/styles.kurio.css": "2f4dfbcfa1c11d949dbb79df43ccece82ab68abbc1c9ba98cad23aad2bc8a584",
+    "tests/e2e/mobile-home-layout.spec.ts": "32abf5d9a4c6696223285216ef9ef3caf5c8ccba75ffdd11e545a8de3343f693",
+    "tests/e2e/hero-geometry.spec.ts": "53743b3840abc9231b6a544e0e8a016f7df29b5b98e813a2853af136f8272e5a",
+    "tests/e2e/marketplace.spec.ts-snapshots/catalog-mobile-darwin.png": "607239481b76aa81d6576d5bf3b91764f3e5aa13bd3476a570389d992ba1d44d"
+  },
+  "validation": {
+    "mobile": {
+      "passed": 16,
+      "total": 16,
+      "report": "focused-results.json"
+    },
+    "desktop": {
+      "startTime": "2026-10-27T19:59:05.959Z",
+      "duration": 59344.676,
+      "expected": 16,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "report": "focused-desktop-confirmation.json"
+    },
+    "homeMobileSnapshot": {
+      "startTime": "2026-10-27T20:00:16.265Z",
+      "duration": 1760.476,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "report": "home-mobile-snapshot-verification.json"
+    },
+    "initialCombinedRun": {
+      "startTime": "2026-10-27T19:54:39.305Z",
+      "duration": 138668.302,
+      "expected": 30,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0,
+      "report": "focused-results.json",
+      "note": "Duas falhas intermitentes no gesto/teclado desktop; repetição isolada 2/2 e confirmação desktop completa 16/16 passaram sem mudança da aplicação ou redução dos critérios.",
+      "byProject": {
+        "mobile": {
+          "passed": 16,
+          "total": 16
+        },
+        "desktop": {
+          "passed": 14,
+          "total": 16
+        }
+      }
+    },
+    "adversarialReview": {
+      "passed": true,
+      "images": [
+        "after-320.png",
+        "after-440.png",
+        "nav-badge-100.png"
+      ],
+      "note": "Revisão independente somente leitura; nenhum problema concreto novo identificado."
+    },
+    "isolatedInteractionRecheck": {
+      "passed": 2,
+      "total": 2,
+      "report": "interaction-recheck-results.json"
+    },
+    "interpretation": "Execuções distintas. As repetições passaram sem alterar a aplicação nem reduzir critérios; não se conclui ausência de intermitência. O campo flaky do Playwright mede novas tentativas dentro da mesma execução, não estas repetições manuais."
+  },
+  "widths": [
+    320,
+    375,
+    390,
+    414,
+    440
+  ],
+  "requestedViewport": {
+    "width": 440,
+    "height": 956
+  },
+  "onlyUpdatedSnapshot": "tests/e2e/marketplace.spec.ts-snapshots/catalog-mobile-darwin.png",
+  "limits": [
+    "A suíte completa anterior de 164 testes não foi repetida nesta revisão.",
+    "A área segura usa env(safe-area-inset-bottom); o navegador automatizado destas capturas reporta zero.",
+    "A validação de produção depende da publicação realizada pelo agente principal."
+  ]
+}

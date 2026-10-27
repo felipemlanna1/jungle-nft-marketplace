@@ -1,0 +1,48 @@
+{
+  "format": "compact-playwright-report",
+  "stats": {
+    "startTime": "2026-10-27T19:57:57.540Z",
+    "duration": 10481.886999999999,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "hero geometry stays contained at 390px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4071,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5828,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

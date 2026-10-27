@@ -1,0 +1,104 @@
+[
+  {
+    "count": 1,
+    "badge": {
+      "x": 302,
+      "y": 886,
+      "width": 20,
+      "height": 20
+    },
+    "text": {
+      "x": 308.984375,
+      "y": 889,
+      "width": 6.015625,
+      "height": 13
+    },
+    "scrollWidth": 20,
+    "clientWidth": 20
+  },
+  {
+    "count": 2,
+    "badge": {
+      "x": 302,
+      "y": 886,
+      "width": 20,
+      "height": 20
+    },
+    "text": {
+      "x": 308.984375,
+      "y": 889,
+      "width": 6.015625,
+      "height": 13
+    },
+    "scrollWidth": 20,
+    "clientWidth": 20
+  },
+  {
+    "count": 9,
+    "badge": {
+      "x": 302,
+      "y": 886,
+      "width": 20,
+      "height": 20
+    },
+    "text": {
+      "x": 308.984375,
+      "y": 889,
+      "width": 6.015625,
+      "height": 13
+    },
+    "scrollWidth": 20,
+    "clientWidth": 20
+  },
+  {
+    "count": 10,
+    "badge": {
+      "x": 301.984375,
+      "y": 886,
+      "width": 20.015625,
+      "height": 20
+    },
+    "text": {
+      "x": 305.984375,
+      "y": 889,
+      "width": 12.015625,
+      "height": 13
+    },
+    "scrollWidth": 20,
+    "clientWidth": 20
+  },
+  {
+    "count": 99,
+    "badge": {
+      "x": 301.984375,
+      "y": 886,
+      "width": 20.015625,
+      "height": 20
+    },
+    "text": {
+      "x": 305.984375,
+      "y": 889,
+      "width": 12.015625,
+      "height": 13
+    },
+    "scrollWidth": 20,
+    "clientWidth": 20
+  },
+  {
+    "count": 100,
+    "badge": {
+      "x": 295.984375,
+      "y": 886,
+      "width": 26.015625,
+      "height": 20
+    },
+    "text": {
+      "x": 299.984375,
+      "y": 889,
+      "width": 18.015625,
+      "height": 13
+    },
+    "scrollWidth": 26,
+    "clientWidth": 26
+  }
+]

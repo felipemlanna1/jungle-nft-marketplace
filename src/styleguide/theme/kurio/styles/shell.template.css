@@ -265,7 +265,7 @@ html[data-theme='kurio'] .site-footer {
   }
   html[data-theme='kurio'] main {
     padding-top: 40px;
-    padding-bottom: 110px;
+    padding-bottom: calc(110px + env(safe-area-inset-bottom));
   }
   html[data-theme='kurio'] .page-shell {
     width: calc(100% - 48px);
@@ -274,6 +274,8 @@ html[data-theme='kurio'] .site-footer {
     display: none;
   }
   html[data-theme='kurio'] .mobile-bottom-nav {
+    --mobile-nav-center-size: 65px;
+    --mobile-nav-top-padding: 18px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
@@ -282,8 +284,8 @@ html[data-theme='kurio'] .site-footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 96px;
-    padding: 18px 20px max(20px, env(safe-area-inset-bottom));
+    height: calc(96px + env(safe-area-inset-bottom));
+    padding: var(--mobile-nav-top-padding) 20px calc(20px + env(safe-area-inset-bottom));
     border-radius: 32px 32px 0 0;
     background: var(--surface);
     color: var(--muted);
@@ -308,65 +310,65 @@ html[data-theme='kurio'] .site-footer {
     opacity: 1;
   }
   .mobile-bottom-nav > .mobile-nav-center {
-    width: 65px;
-    height: 65px;
+    width: var(--mobile-nav-center-size);
+    height: var(--mobile-nav-center-size);
     align-self: start;
-    margin-top: -48px;
+    margin-block-start: calc(
+      -1 * var(--mobile-nav-top-padding) - var(--mobile-nav-center-size) / 2
+    );
     border-radius: 50%;
     color: var(--foreground);
     background: transparent;
-    box-shadow: 0 10px 0 10px var(--background);
+    isolation: isolate;
+  }
+  .mobile-nav-center::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: -8px;
+    border-radius: inherit;
+    background: var(--background);
+    pointer-events: none;
   }
   .mobile-nav-disc {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+    border-radius: inherit;
+    background: var(--surface);
     pointer-events: none;
+  }
+  .mobile-nav-center:hover .mobile-nav-disc {
+    filter: brightness(1.08);
   }
   .mobile-menu-symbol {
     position: relative;
     z-index: 1;
-    width: 28px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
   }
-  .mobile-menu-symbol > img {
-    position: absolute;
-    width: 11px;
-    height: 11px;
-  }
-  .mobile-menu-symbol-top-left {
-    top: 0;
-    left: 1px;
-  }
-  .mobile-menu-symbol-top-right {
-    top: 0;
-    right: 1px;
-  }
-  .mobile-menu-symbol-bottom-left {
-    bottom: 0;
-    left: 1px;
-  }
-  .mobile-menu-symbol-bottom-right {
-    bottom: 0;
-    right: 1px;
-  }
-  .mobile-menu-symbol > .mobile-menu-symbol-line {
-    top: 12px;
-    left: 0;
-    width: 28px;
-    height: 2px;
-  }
-  .mobile-cart-count {
+  .mobile-bottom-nav .mobile-cart-count {
     position: absolute;
     right: 0;
-    top: 0;
-    border-radius: 50%;
+    top: 1px;
+    display: grid;
+    place-items: center;
+    width: max-content;
+    min-width: 20px;
+    height: 20px;
+    padding-inline: 4px;
+    border-radius: 999px;
     background: var(--primary);
     color: var(--background);
-    min-width: 16px;
-    min-height: 16px;
     font-size: 10px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    pointer-events: none;
   }
 }
 

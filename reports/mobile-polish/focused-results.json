@@ -1,0 +1,554 @@
+{
+  "format": "compact-playwright-report",
+  "stats": {
+    "startTime": "2026-10-27T19:54:39.305Z",
+    "duration": 138668.302,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "hero geometry stays contained at 320px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3856,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 375px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3720,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 390px",
+      "project": "desktop",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 10699,
+          "error": {
+            "message": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 1', exact: true })\nExpected: \"true\"\nReceived: \"\"\nTimeout:  8000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 1', exact: true }) with timeout 8000ms\n  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 1', exact: true })\n    20 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 1\">…</button>\n       - unexpected value \"null\"\n",
+            "location": {
+              "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+              "column": 7,
+              "line": 161
+            }
+          },
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/test-failed-1.png"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 412px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3783,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 414px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3784,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3794,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 768px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5809,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1024px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4555,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px",
+      "project": "desktop",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 9878,
+          "error": {
+            "message": "Error: expect(locator).toHaveAttribute(expected) failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \"true\"\nReceived: \"\"\nTimeout:  8000ms\n\nCall log:\n  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\n  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\n    20 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\n       - unexpected value \"null\"\n",
+            "location": {
+              "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+              "column": 7,
+              "line": 154
+            }
+          },
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            },
+            {
+              "name": "screenshot",
+              "contentType": "image/png",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-1440px-desktop/test-failed-1.png"
+            },
+            {
+              "name": "error-context",
+              "contentType": "text/markdown",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-1440px-desktop/error-context.md"
+            },
+            {
+              "name": "trace",
+              "contentType": "application/zip",
+              "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results/hero-geometry-hero-geometry-stays-contained-at-1440px-desktop/trace.zip"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1920px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5858,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px with 125% content scaling",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5773,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 320px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4061,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 375px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4127,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 390px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4136,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 412px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4177,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 414px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4208,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 440px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4363,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 768px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6327,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1024px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6817,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7147,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1920px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7271,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px with 125% content scaling",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7283,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 320px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1464,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 375px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1440,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 390px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1473,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 414px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1456,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1446,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 320px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1485,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 375px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1466,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 390px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1546,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 414px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1496,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 440px",
+      "project": "mobile",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1514,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

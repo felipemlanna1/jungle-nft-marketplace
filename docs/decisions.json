@@ -458,6 +458,8 @@
     "docs/figma-comments-review.json",
     "docs/quality-gates.md",
     "docs/decisions-responsive.md",
+    "docs/decisions-mobile-polish.md",
+    "docs/hosting.md",
     "docs/assets-originais.json"
   ]
 }

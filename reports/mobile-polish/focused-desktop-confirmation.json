@@ -1,0 +1,261 @@
+{
+  "format": "compact-playwright-report",
+  "stats": {
+    "startTime": "2026-10-27T19:59:05.959Z",
+    "duration": 59344.676,
+    "expected": 16,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "hero geometry stays contained at 320px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3879,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 375px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3753,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 390px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3740,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 412px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3758,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 414px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3740,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3726,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 768px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5759,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1024px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5776,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5794,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1920px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5857,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "hero geometry stays contained at 1440px with 125% content scaling",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5789,
+          "attachments": [
+            {
+              "name": "second-slide",
+              "contentType": "image/png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 320px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1401,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 375px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1398,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 390px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1436,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 414px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1434,
+          "attachments": []
+        }
+      ]
+    },
+    {
+      "title": "mobile catalog preserves artwork and usable navigation at 440px",
+      "project": "desktop",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1399,
+          "attachments": []
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
