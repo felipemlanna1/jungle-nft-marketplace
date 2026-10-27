@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 
 export const galleryViews = [
-  { label: 'Composição completa', zoom: 1, position: '50% 50%' },
-  { label: 'Detalhe do rosto', zoom: 1.55, position: '50% 25%' },
-  { label: 'Detalhe da composição', zoom: 1.3, position: '25% 70%' },
-  { label: 'Textura da obra', zoom: 1.8, position: '70% 70%' },
+  { id: 'full', label: 'Composição completa' },
+  { id: 'portrait', label: 'Detalhe do rosto' },
+  { id: 'composition', label: 'Detalhe da composição' },
+  { id: 'texture', label: 'Textura da obra' },
 ] as const;
 export function useNftGallery(image: string) {
   const [selectedIndex, setSelectedIndex] = useState(0);

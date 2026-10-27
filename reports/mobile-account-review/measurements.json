@@ -1,0 +1,559 @@
+{
+  "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+  "nativeMobileFrames": [
+    "Login",
+    "Cadastro"
+  ],
+  "noNativeMobileFrames": [
+    "Perfil do Colecionador",
+    "Carteiras",
+    "Confirmação de Pedido"
+  ],
+  "review": [
+    {
+      "name": "login-public-414",
+      "path": "/login",
+      "screenshot": "reports/mobile-account-review/login-public-414.png",
+      "sizes": {
+        "width": 414,
+        "height": 896,
+        "scrollWidth": 414,
+        "scrollHeight": 896,
+        "dialogs": [
+          {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 414,
+              "height": 896,
+              "top": 0,
+              "right": 414,
+              "bottom": 896,
+              "left": 0
+            },
+            "scrollHeight": 897,
+            "clientHeight": 896
+          }
+        ],
+        "controls": [
+          {
+            "text": "Fechar e voltar ao início",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Entrar",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Criar conta",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Digite seu e-mail",
+            "rect": {
+              "x": 28,
+              "y": 311,
+              "width": 358,
+              "height": 50,
+              "top": 311,
+              "right": 386,
+              "bottom": 361,
+              "left": 28
+            }
+          },
+          {
+            "text": "Senha",
+            "rect": {
+              "x": 28,
+              "y": 373,
+              "width": 358,
+              "height": 50,
+              "top": 373,
+              "right": 386,
+              "bottom": 423,
+              "left": 28
+            }
+          },
+          {
+            "text": "Mostrar senha",
+            "rect": {
+              "x": 349,
+              "y": 383,
+              "width": 28,
+              "height": 30,
+              "top": 383,
+              "right": 377,
+              "bottom": 413,
+              "left": 349
+            }
+          },
+          {
+            "text": "Esqueceu sua senha?",
+            "rect": {
+              "x": 249.171875,
+              "y": 435,
+              "width": 136.828125,
+              "height": 18,
+              "top": 435,
+              "right": 386,
+              "bottom": 453,
+              "left": 249.171875
+            }
+          },
+          {
+            "text": "Usar conta de demonstração",
+            "rect": {
+              "x": 28,
+              "y": 465,
+              "width": 358,
+              "height": 40,
+              "top": 465,
+              "right": 386,
+              "bottom": 505,
+              "left": 28
+            }
+          },
+          {
+            "text": "Entrar",
+            "rect": {
+              "x": 28,
+              "y": 589,
+              "width": 358,
+              "height": 60,
+              "top": 589,
+              "right": 386,
+              "bottom": 649,
+              "left": 28
+            }
+          },
+          {
+            "text": "Continuar com Google",
+            "rect": {
+              "x": 28,
+              "y": 717,
+              "width": 358,
+              "height": 40,
+              "top": 717,
+              "right": 386,
+              "bottom": 757,
+              "left": 28
+            }
+          },
+          {
+            "text": "Continuar com Facebook",
+            "rect": {
+              "x": 28,
+              "y": 773,
+              "width": 358,
+              "height": 40,
+              "top": 773,
+              "right": 386,
+              "bottom": 813,
+              "left": 28
+            }
+          },
+          {
+            "text": "Crie uma conta",
+            "rect": {
+              "x": 211.203125,
+              "y": 853,
+              "width": 117.625,
+              "height": 19,
+              "top": 853,
+              "right": 328.828125,
+              "bottom": 872,
+              "left": 211.203125
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "register-public-414",
+      "path": "/register",
+      "screenshot": "reports/mobile-account-review/register-public-414.png",
+      "sizes": {
+        "width": 414,
+        "height": 896,
+        "scrollWidth": 414,
+        "scrollHeight": 896,
+        "dialogs": [
+          {
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 414,
+              "height": 896,
+              "top": 0,
+              "right": 414,
+              "bottom": 896,
+              "left": 0
+            },
+            "scrollHeight": 896,
+            "clientHeight": 896
+          }
+        ],
+        "controls": [
+          {
+            "text": "Fechar e voltar ao início",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Entrar",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Criar conta",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            }
+          },
+          {
+            "text": "Nome de usuário",
+            "rect": {
+              "x": 28,
+              "y": 311,
+              "width": 358,
+              "height": 50,
+              "top": 311,
+              "right": 386,
+              "bottom": 361,
+              "left": 28
+            }
+          },
+          {
+            "text": "Digite seu e-mail",
+            "rect": {
+              "x": 28,
+              "y": 373,
+              "width": 358,
+              "height": 50,
+              "top": 373,
+              "right": 386,
+              "bottom": 423,
+              "left": 28
+            }
+          },
+          {
+            "text": "Senha",
+            "rect": {
+              "x": 28,
+              "y": 435,
+              "width": 358,
+              "height": 50,
+              "top": 435,
+              "right": 386,
+              "bottom": 485,
+              "left": 28
+            }
+          },
+          {
+            "text": "Mostrar senha",
+            "rect": {
+              "x": 349,
+              "y": 445,
+              "width": 28,
+              "height": 30,
+              "top": 445,
+              "right": 377,
+              "bottom": 475,
+              "left": 349
+            }
+          },
+          {
+            "text": "Confirmar senha",
+            "rect": {
+              "x": 28,
+              "y": 497,
+              "width": 358,
+              "height": 50,
+              "top": 497,
+              "right": 386,
+              "bottom": 547,
+              "left": 28
+            }
+          },
+          {
+            "text": "Mostrar confirmar senha",
+            "rect": {
+              "x": 349,
+              "y": 507,
+              "width": 28,
+              "height": 30,
+              "top": 507,
+              "right": 377,
+              "bottom": 537,
+              "left": 349
+            }
+          },
+          {
+            "text": "Criar contaCriar perfil",
+            "rect": {
+              "x": 28,
+              "y": 587,
+              "width": 358,
+              "height": 60,
+              "top": 587,
+              "right": 386,
+              "bottom": 647,
+              "left": 28
+            }
+          },
+          {
+            "text": "Continuar com Google",
+            "rect": {
+              "x": 28,
+              "y": 715,
+              "width": 358,
+              "height": 40,
+              "top": 715,
+              "right": 386,
+              "bottom": 755,
+              "left": 28
+            }
+          },
+          {
+            "text": "Continuar com Facebook",
+            "rect": {
+              "x": 28,
+              "y": 771,
+              "width": 358,
+              "height": 40,
+              "top": 771,
+              "right": 386,
+              "bottom": 811,
+              "left": 28
+            }
+          },
+          {
+            "text": "Entre",
+            "rect": {
+              "x": 261.609375,
+              "y": 851,
+              "width": 42.015625,
+              "height": 19,
+              "top": 851,
+              "right": 303.625,
+              "bottom": 870,
+              "left": 261.609375
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "profile-public-414",
+      "path": "/profile",
+      "screenshot": "reports/mobile-account-review/profile-public-414.png",
+      "sizes": {
+        "width": 414,
+        "height": 896,
+        "scrollWidth": 414,
+        "scrollHeight": 3468,
+        "dialogs": [],
+        "controls": []
+      }
+    },
+    {
+      "name": "wallet-public-414",
+      "path": "/wallets",
+      "screenshot": "reports/mobile-account-review/wallet-public-414.png",
+      "sizes": {
+        "width": 414,
+        "height": 896,
+        "scrollWidth": 414,
+        "scrollHeight": 3684,
+        "dialogs": [],
+        "controls": []
+      }
+    },
+    {
+      "name": "profile-public-320",
+      "path": "/profile",
+      "screenshot": "reports/mobile-account-review/profile-public-320.png",
+      "sizes": {
+        "width": 320,
+        "height": 896,
+        "scrollWidth": 320,
+        "scrollHeight": 3632,
+        "dialogs": [],
+        "controls": []
+      }
+    },
+    {
+      "name": "wallet-public-320",
+      "path": "/wallets",
+      "screenshot": "reports/mobile-account-review/wallet-public-320.png",
+      "sizes": {
+        "width": 320,
+        "height": 896,
+        "scrollWidth": 320,
+        "scrollHeight": 3884,
+        "dialogs": [],
+        "controls": []
+      }
+    },
+    {
+      "name": "order-public-414",
+      "path": "/orders/order-1001",
+      "screenshot": "reports/mobile-account-review/order-public-414.png",
+      "sizes": {
+        "width": 414,
+        "height": 896,
+        "scrollWidth": 414,
+        "scrollHeight": 2324,
+        "dialogs": [
+          {
+            "rect": {
+              "x": 24,
+              "y": 32,
+              "width": 366,
+              "height": 716,
+              "top": 32,
+              "right": 390,
+              "bottom": 748,
+              "left": 24
+            },
+            "scrollHeight": 706,
+            "clientHeight": 706
+          }
+        ],
+        "controls": [
+          {
+            "text": "Explorar mais NFTs",
+            "rect": {
+              "x": 115.375,
+              "y": 658,
+              "width": 183.234375,
+              "height": 48,
+              "top": 658,
+              "right": 298.609375,
+              "bottom": 706,
+              "left": 115.375
+            }
+          },
+          {
+            "text": "Fechar comprovante",
+            "rect": {
+              "x": 354,
+              "y": 44,
+              "width": 24,
+              "height": 24,
+              "top": 44,
+              "right": 378,
+              "bottom": 68,
+              "left": 354
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "order-public-320",
+      "path": "/orders/order-1001",
+      "screenshot": "reports/mobile-account-review/order-public-320.png",
+      "sizes": {
+        "width": 320,
+        "height": 896,
+        "scrollWidth": 320,
+        "scrollHeight": 2448,
+        "dialogs": [
+          {
+            "rect": {
+              "x": 24,
+              "y": 32,
+              "width": 272,
+              "height": 770,
+              "top": 32,
+              "right": 296,
+              "bottom": 802,
+              "left": 24
+            },
+            "scrollHeight": 760,
+            "clientHeight": 760
+          }
+        ],
+        "controls": [
+          {
+            "text": "Explorar mais NFTs",
+            "rect": {
+              "x": 68.375,
+              "y": 712,
+              "width": 183.234375,
+              "height": 48,
+              "top": 712,
+              "right": 251.609375,
+              "bottom": 760,
+              "left": 68.375
+            }
+          },
+          {
+            "text": "Fechar comprovante",
+            "rect": {
+              "x": 260,
+              "y": 44,
+              "width": 24,
+              "height": 24,
+              "top": 44,
+              "right": 284,
+              "bottom": 68,
+              "left": 260
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

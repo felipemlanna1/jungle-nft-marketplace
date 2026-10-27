@@ -33,7 +33,6 @@ export function useStyleguide(): ThemeContextValue {
 
   useLayoutEffect(() => {
     document.documentElement.dataset.theme = themeName;
-    document.documentElement.style.colorScheme = 'dark';
     try {
       window.localStorage.setItem(THEME_STORAGE_KEY, themeName);
       window.localStorage.setItem(THEME_VERSION_KEY, THEME_VERSION);

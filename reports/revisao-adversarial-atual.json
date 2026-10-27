@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Fonte e build finais aprovados em 207 testes unitários e 148 E2E, com hashes imutáveis e comparações visuais sem atualização automática. Entrega ainda pendente da matriz de 12 medições Lighthouse no candidato HTTPS exato e do smoke após publicação. Nota interna nula até fechar esses gates.",
+  "status": "Revisão responsiva aprovada em 224 testes unitários e 164 E2E, com oito regressões visuais. Sem P0/P1 aberto nessa revisão. A publicação desta revisão e a nova matriz Lighthouse HTTPS ainda estão em validação. A matriz anterior do HTTPS, referente a c5e11f1, permanece reprovada e preservada; não representa a nova medição.",
   "reviewType": "Revisão cruzada por evidências, sem uso de notas históricas.",
   "independence": {
     "independentScope": "Componentes e hooks React de catálogo, carrinho, checkout, recibo, roteamento e conta escritos por outros integrantes.",
@@ -181,8 +181,9 @@
   ],
   "openP1": [],
   "pendingReleaseEvidence": [
-    "Matriz de 12 execuções Lighthouse 13.5 no candidato HTTPS exato, com categorias oficiais e todas as execuções de performance acima de 90",
-    "Smoke pós-publicação, hashes do artefato e recibos de entrega sob responsabilidade do publicador"
+    "Resolver ou registrar explicitamente os bloqueios reais de performance mobile e de hosting, sem declarar gates cumpridos",
+    "Qualquer artefato futuro corrigido exige evidência correspondente; não reutilizar esta matriz como aprovação",
+    "Smoke pós-publicação e recibos de entrega sob responsabilidade do publicador"
   ],
   "clockMethodology": "Somente um dos E2E usa setFixedTime para controlar Date e testar reconexão antes do prazo do modelo. Timers, requisições, Socket.IO e interações de browser permanecem ativos. O outro E2E usa tempo normal e verifica a confirmação por fallback REST. Nenhum controle de relógio é usado no Lighthouse.",
   "performanceEvidence": {
@@ -210,5 +211,157 @@
     "evidence": "reports/e2e-final-build-evidence.json",
     "baselinePolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
     "durationMs": 403453.264
+  },
+  "finalPerformanceEvidence": {
+    "summary": "reports/lighthouse/summary.json",
+    "runDirectory": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z",
+    "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+    "completeMatrix": true,
+    "approved": false,
+    "gate": {
+      "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
+      "completeMatrix": true,
+      "categoryThresholds": {
+        "performance": 90,
+        "accessibility": 95,
+        "best-practices": 95,
+        "seo": 90
+      },
+      "officialMediansMet": false,
+      "allPerformanceRunsAbove90": false,
+      "approved": false,
+      "aspirations": {
+        "mobilePerformanceMediansAtLeast95": false,
+        "requiredForApproval": false
+      }
+    },
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 81,
+          "seo": 92
+        },
+        "performanceRuns": [
+          87,
+          84,
+          87
+        ]
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 97,
+          "accessibility": 96,
+          "best-practices": 81,
+          "seo": 92
+        },
+        "performanceRuns": [
+          93,
+          97,
+          100
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 81,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          88,
+          85
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 94,
+          "accessibility": 97,
+          "best-practices": 81,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          94,
+          93
+        ]
+      }
+    ],
+    "artifactVerification": {
+      "mode": "known-cloudflare-jsd-envelope",
+      "rawSha256": "8c72bd03dc89221ae908e538c1a889fb31aadbd75411fec0464a5194f7f70590",
+      "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
+      "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
+      "injectionCount": 1,
+      "scriptSha256": "daf5c1a41abe00f7ae3c5078c7fb3c3d49dd6847bc533899f80e67da6a823217",
+      "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
+      "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+      "volatileFields": [
+        "rayId",
+        "base64UnixTimestamp"
+      ],
+      "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
+      "measurement": "The browser receives the original response and executes the platform script unchanged."
+    },
+    "platformIssue": "Best Practices 81 é causado por FencedFrame e StorageType.persistent no JavaScript Detections injetado pela Cloudflare. O script foi executado normalmente e não removido da medição.",
+    "platformDocumentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
+    "runtimeApplicationUnchanged": true
+  },
+  "openReleaseBlockers": [
+    {
+      "id": "public-mobile-performance-below-gate",
+      "evidence": "Home mobile 87,84,87; Detail mobile 94,88,85. Medianas 87/88 e execuções<=90 não atendem ao gate.",
+      "owner": "Aplicação/entrega; causa observada envolve LCP de imagens reais, SpeedIndex e variabilidade de rede. Não atribuir tudo à plataforma sem prova."
+    },
+    {
+      "id": "hosting-jsd-deprecations",
+      "evidence": "Best Practices 81 em todos os 12 runs; auditoria deprecations aponta exclusivamente /cdn-cgi/challenge-platform/scripts/jsd/main.js.",
+      "owner": "Hosting; qualquer correção deve ser geral/documentada, sem bloquear scripts na auditoria."
+    }
+  ],
+  "additionalAccessibilityFindings": [
+    {
+      "severity": "P2",
+      "id": "newsletter-label-content-name-mismatch",
+      "evidence": "Botão visível Enviar usa aria-label Inscrever na newsletter; o nome acessível não contém o texto visível."
+    },
+    {
+      "severity": "P2",
+      "id": "rating-prohibited-aria-label",
+      "evidence": "Span do rating contém aria-label sem role que aceite nome acessível."
+    },
+    {
+      "severity": "P2",
+      "id": "price-range-target-size",
+      "evidence": "Ranges de preço têm área 258x4px sobreposta, abaixo do alvo mínimo 24x24px."
+    }
+  ],
+  "responsiveReview": {
+    "unitTests": 224,
+    "e2eTests": 164,
+    "e2eFailed": 0,
+    "e2eSkipped": 0,
+    "e2eRetries": 0,
+    "visualRegressions": 8,
+    "sourceSha256": "23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e",
+    "buildSha256": "d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f",
+    "immutable": true,
+    "evidence": [
+      "reports/e2e-final-build-evidence.json",
+      "reports/visual-baseline-review.json",
+      "reports/revisao-responsive-adversarial.json",
+      "reports/inline-style-enforcement.json"
+    ],
+    "productionVerification": "pending"
   }
 }

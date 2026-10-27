@@ -1,0 +1,179 @@
+{
+  "method": "Capture identical real application DOM snapshots for Detail, Cart and Checkout. Replace only the Kurio stylesheet with the pre-extraction and post-extraction compilation in a static Chromium document. Compare affected CSS properties and exact geometry of every DOM node. Animated timelines are paused at0 in both static documents to compare the same frame; source animation declarations remain unchanged. No application requests, behavior or timing are changed.",
+  "breakpoints": {
+    "MOBILE": "767px",
+    "TABLET": "1000px",
+    "DESKTOP": "1440px"
+  },
+  "rows": [
+    {
+      "surface": "detail",
+      "viewport": {
+        "width": 320,
+        "height": 896
+      },
+      "nodes": 318,
+      "properties": 73,
+      "beforeSha256": "e9ae2681c792ba854592a99afd7efa0b57b6634fa7e39496605b2b69759c8235",
+      "afterSha256": "e9ae2681c792ba854592a99afd7efa0b57b6634fa7e39496605b2b69759c8235",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "detail",
+      "viewport": {
+        "width": 414,
+        "height": 896
+      },
+      "nodes": 318,
+      "properties": 73,
+      "beforeSha256": "f32cb14c292a949b0f1c7452862712855dda936e6a136358c3a13517db3225eb",
+      "afterSha256": "f32cb14c292a949b0f1c7452862712855dda936e6a136358c3a13517db3225eb",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "detail",
+      "viewport": {
+        "width": 768,
+        "height": 896
+      },
+      "nodes": 318,
+      "properties": 73,
+      "beforeSha256": "3b7adf6c4a20fe856d0ca9cacb32863fa1abb29e5b1003576373a7ad42a0cff0",
+      "afterSha256": "3b7adf6c4a20fe856d0ca9cacb32863fa1abb29e5b1003576373a7ad42a0cff0",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "detail",
+      "viewport": {
+        "width": 1440,
+        "height": 896
+      },
+      "nodes": 318,
+      "properties": 73,
+      "beforeSha256": "44f1e90e5d56c85c2b6df39d2710572e69ff832e9867d2701ce6c82abb423c0e",
+      "afterSha256": "44f1e90e5d56c85c2b6df39d2710572e69ff832e9867d2701ce6c82abb423c0e",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "cart",
+      "viewport": {
+        "width": 320,
+        "height": 896
+      },
+      "nodes": 273,
+      "properties": 73,
+      "beforeSha256": "1ad8f06c0ea46c830a6146840faea55b7ca6852e868bd759ea97417ece0b4630",
+      "afterSha256": "1ad8f06c0ea46c830a6146840faea55b7ca6852e868bd759ea97417ece0b4630",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "cart",
+      "viewport": {
+        "width": 414,
+        "height": 896
+      },
+      "nodes": 273,
+      "properties": 73,
+      "beforeSha256": "9cf8662acb6de64ebb38c2244a49f2c8e13593252c3f885b622f349529b36c59",
+      "afterSha256": "9cf8662acb6de64ebb38c2244a49f2c8e13593252c3f885b622f349529b36c59",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "cart",
+      "viewport": {
+        "width": 768,
+        "height": 896
+      },
+      "nodes": 273,
+      "properties": 73,
+      "beforeSha256": "959a7a1f10a5cb3426dc1ece8c2c0361090b457107156db9b0865a00d2346253",
+      "afterSha256": "959a7a1f10a5cb3426dc1ece8c2c0361090b457107156db9b0865a00d2346253",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "cart",
+      "viewport": {
+        "width": 1440,
+        "height": 896
+      },
+      "nodes": 273,
+      "properties": 73,
+      "beforeSha256": "f103275cf75b84db86aea1ca70ad518d3a6b80bdd9c2e7c4ae9a348c2b1ee9b1",
+      "afterSha256": "f103275cf75b84db86aea1ca70ad518d3a6b80bdd9c2e7c4ae9a348c2b1ee9b1",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "checkout",
+      "viewport": {
+        "width": 320,
+        "height": 896
+      },
+      "nodes": 249,
+      "properties": 73,
+      "beforeSha256": "83acb1f61a217e151f16f39c156f7184044b71b833b965644564b6170d4240ab",
+      "afterSha256": "83acb1f61a217e151f16f39c156f7184044b71b833b965644564b6170d4240ab",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "checkout",
+      "viewport": {
+        "width": 414,
+        "height": 896
+      },
+      "nodes": 249,
+      "properties": 73,
+      "beforeSha256": "9909aa1f4658c918ea10b73b04dea6de8cd5fe524a128d994ec0b895ea9b8229",
+      "afterSha256": "9909aa1f4658c918ea10b73b04dea6de8cd5fe524a128d994ec0b895ea9b8229",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "checkout",
+      "viewport": {
+        "width": 768,
+        "height": 896
+      },
+      "nodes": 249,
+      "properties": 73,
+      "beforeSha256": "e10c6ed773b998cae76adab802b36b2df0d7cfd4ef86fa8953d584126a5b738b",
+      "afterSha256": "e10c6ed773b998cae76adab802b36b2df0d7cfd4ef86fa8953d584126a5b738b",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    },
+    {
+      "surface": "checkout",
+      "viewport": {
+        "width": 1440,
+        "height": 896
+      },
+      "nodes": 249,
+      "properties": 73,
+      "beforeSha256": "99b90175f4a76e06cc7e3d246a59fa832132c11a966f18d96d141c2b12934ac7",
+      "afterSha256": "99b90175f4a76e06cc7e3d246a59fa832132c11a966f18d96d141c2b12934ac7",
+      "equal": true,
+      "differingNodes": 0,
+      "differences": []
+    }
+  ],
+  "allEqual": true
+}

@@ -134,41 +134,8 @@ html[data-theme='kurio'] .catalog-sidebar nav button.category-active {
   padding-left: 12px;
 }
 .price-range-sliders {
-  position: relative;
-  display: grid;
   height: 20px;
   margin-bottom: 12px;
-}
-.price-range-sliders input {
-  appearance: none;
-  -webkit-appearance: none;
-  grid-area: 1 / 1;
-  height: 4px;
-  align-self: center;
-  margin: 0;
-  width: 100%;
-  pointer-events: none;
-  background: var(--primary);
-}
-.price-range-sliders input::-webkit-slider-thumb {
-  appearance: none;
-  -webkit-appearance: none;
-  pointer-events: auto;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  background: var(--primary);
-  cursor: ew-resize;
-}
-.price-range-sliders input::-moz-range-thumb {
-  pointer-events: auto;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--primary);
-  background: var(--primary);
-  cursor: ew-resize;
 }
 .price-value-controls {
   display: flex;
@@ -249,11 +216,12 @@ html[data-theme='kurio'] .catalog-toolbar {
   background: transparent;
   border: 0;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 16px;
 }
 .catalog-tabs button.is-active {
   color: var(--text-accent);
+  font-weight: 700;
 }
 .catalog-tabs button.is-active::after {
   position: absolute;
@@ -479,6 +447,12 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
   }
 }
 @media (max-width: __BREAKPOINT_TABLET__) {
+  html[data-theme='kurio'] .kurio-hero {
+    height: 360px;
+  }
+  html[data-theme='kurio'] .marketplace-section {
+    margin-top: 64px;
+  }
   html[data-theme='kurio'] .catalog-layout {
     grid-template-columns: 210px minmax(0, 1fr);
     gap: 24px;
@@ -597,6 +571,7 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
     width: 100%;
   }
   html[data-theme='kurio'] .hero .kurio-explore {
+    display: flex;
     width: auto;
     height: 16px;
     min-height: 16px;
@@ -646,21 +621,22 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
   }
   html[data-theme='kurio'] .catalog-toolbar {
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     padding: 0;
     overflow-x: auto;
   }
   .catalog-tabs {
     width: max-content;
-    gap: 4px;
+    gap: 16px;
   }
   .catalog-tabs button {
     font-size: 14px;
     line-height: 16px;
-    padding-bottom: 4px;
+    min-height: 24px;
+    padding-bottom: 8px;
   }
   .catalog-tabs button.is-active::after {
-    bottom: 0;
+    bottom: 4px;
   }
   .catalog-tabs button + button {
     margin-left: 0;
@@ -680,6 +656,7 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
     border-radius: 20px;
     padding: 12px 4px 20px;
     background: linear-gradient(140deg, var(--surface), var(--surface-raised));
+    align-items: flex-start;
   }
   html[data-theme='kurio'] .skeleton-card .art-skeleton {
     height: auto;
@@ -720,6 +697,26 @@ html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
     right: 8px;
     width: 28px;
     height: 28px;
+  }
+  html[data-theme='kurio'] .nft-card .card-actions {
+    top: 12px;
+    right: 8px;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    opacity: 1;
+  }
+  html[data-theme='kurio'] .card-actions .card-action-add,
+  html[data-theme='kurio'] .card-actions .card-action-preview {
+    display: none;
+  }
+  html[data-theme='kurio'] .card-actions .card-action-favorite {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border-color: var(--primary);
+    color: var(--text-accent);
+    background: var(--surface);
   }
   html[data-theme='kurio'] .pagination {
     margin-top: 24px;
@@ -794,9 +791,12 @@ html[data-theme='kurio'] .kurio-hero-slide-secondary h1 {
 }
 @media (max-width: __BREAKPOINT_MOBILE__) {
   .kurio-hero-slide {
-    padding: 16px;
+    padding: 6px 16px 16px;
     align-items: flex-start;
     gap: 8px;
+  }
+  html[data-theme='kurio'] .kurio-hero-slide .hero-art {
+    margin-top: 4px;
   }
   .kurio-hero-control-space {
     display: none;
@@ -990,4 +990,7 @@ html[data-theme='kurio'] .nft-card-image .edition-badge.is-sold-out {
   .article-reader-image {
     height: 200px;
   }
+}
+.hero-backdrop-mask {
+  mask-type: alpha;
 }

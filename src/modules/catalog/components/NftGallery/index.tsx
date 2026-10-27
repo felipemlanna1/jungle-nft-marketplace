@@ -28,7 +28,7 @@ export function NftGallery({ image, title }: { image: string; title: string }) {
         ))}
       </div>
       <div className="nft-gallery-stage">
-        <div className="nft-gallery-image">
+        <div className="nft-gallery-image" data-view={view.id}>
           <img
             src={image}
             {...responsiveArtwork(image, detailArtworkSizes)}
@@ -36,7 +36,6 @@ export function NftGallery({ image, title }: { image: string; title: string }) {
             width="404"
             height="404"
             fetchPriority="high"
-            style={{ transform: `scale(${view.zoom})`, objectPosition: view.position }}
           />
         </div>
         <button

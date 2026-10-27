@@ -1,0 +1,35 @@
+/
+  Cache-Control: no-cache, no-transform
+
+/index.html
+  Cache-Control: no-cache, no-transform
+
+/nft/*
+  Cache-Control: no-cache, no-transform
+
+/login
+  Cache-Control: no-cache, no-transform
+
+/register
+  Cache-Control: no-cache, no-transform
+
+/cart
+  Cache-Control: no-cache, no-transform
+
+/checkout
+  Cache-Control: no-cache, no-transform
+
+/profile
+  Cache-Control: no-cache, no-transform
+
+/wallets
+  Cache-Control: no-cache, no-transform
+
+/orders/*
+  Cache-Control: no-cache, no-transform
+
+/mockServiceWorker.js
+  Cache-Control: no-cache
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable

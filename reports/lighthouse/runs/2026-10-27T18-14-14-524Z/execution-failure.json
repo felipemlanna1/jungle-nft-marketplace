@@ -1,0 +1,16 @@
+{
+  "completedAt": "2026-10-27T18:20:20.101864+00:00",
+  "status": "artifact-verification-failure",
+  "completeMatrix": false,
+  "approved": false,
+  "measuredRuns": 0,
+  "error": "Served artifact differs from the production build: index.html",
+  "causeConfirmedBySubsequentRead": "Cloudflare injected its JavaScript Detections script into the public HTML. Application document and referenced runtime assets are unchanged. This attempt was aborted without measuring.",
+  "capture": "public-index-captured.html",
+  "capturedPublicSha256": "ecdd4cba68f56efe3c25efab93cfaffd9ce5db63c45659bc173605645cab282f",
+  "localSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
+  "node": "22.22.0",
+  "lighthouse": "13.5.0",
+  "sourceOrBuildChanges": false,
+  "pauseBeforeMeasurement": "Harness was suspended before any Lighthouse process during the root GitHub push, then resumed. No scores were generated."
+}

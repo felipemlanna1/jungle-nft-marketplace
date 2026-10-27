@@ -6,6 +6,17 @@ const mockImports = {
   group: ['**/mocks', '**/mocks/**'],
   message: 'Application code must use services. Only bootstrap and tests may import mocks.',
 };
+const inlineStyleRestrictions = [
+  {
+    selector: 'JSXAttribute[name.name="style"]',
+    message: 'Use stylesheet classes or data attributes instead of inline styles.',
+  },
+  {
+    selector:
+      'CallExpression[callee.type="MemberExpression"][callee.property.name="setAttribute"][arguments.0.value="style"]',
+    message: 'Use stylesheet classes or data attributes instead of setting the style attribute.',
+  },
+];
 
 export default tseslint.config(
   {
@@ -26,6 +37,14 @@ export default tseslint.config(
       ...hooks.configs.recommended.rules,
       '@typescript-eslint/no-explicit-any': 'error',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-restricted-syntax': ['error', ...inlineStyleRestrictions],
+      'no-restricted-properties': [
+        'error',
+        {
+          property: 'style',
+          message: 'Use stylesheet classes or data attributes instead of CSSOM style access.',
+        },
+      ],
     },
   },
   {
@@ -35,6 +54,7 @@ export default tseslint.config(
       'no-restricted-imports': ['error', { patterns: [mockImports] }],
       'no-restricted-syntax': [
         'error',
+        ...inlineStyleRestrictions,
         {
           selector: String.raw`ImportExpression[source.value=/(^|\u002f)mocks(\u002f|$)/]`,
           message: 'Only bootstrap and tests may load the simulated transport.',
@@ -48,6 +68,7 @@ export default tseslint.config(
     rules: {
       'no-restricted-syntax': [
         'error',
+        ...inlineStyleRestrictions,
         {
           selector: String.raw`ImportExpression[source.value=/(^|\u002f)mocks(\u002f|$)/]`,
           message: 'Domain code cannot load mocks.',

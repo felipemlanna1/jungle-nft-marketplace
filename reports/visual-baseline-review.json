@@ -1,0 +1,675 @@
+{
+  "reviewedAt": "2026-10-27T19:23:57.781100+00:00",
+  "scope": "Revisão das oito regressões visuais após correções de responsividade. Não é certificação de fidelidade integral ou substituto da suíte funcional.",
+  "baselineOriginCommit": "c5e11f190ad612f53d4b665d6c89dbe30444704a",
+  "matrix": {
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "deviceScaleFactor": 1
+    },
+    "mobile": {
+      "preset": "iPhone 13 em Chromium",
+      "viewport": [
+        390,
+        664
+      ],
+      "screen": [
+        390,
+        844
+      ],
+      "deviceScaleFactor": 3
+    },
+    "screenshotScale": "css",
+    "fullPage": true,
+    "animations": "disabled",
+    "maxDiffPixelRatio": 0.02,
+    "toleranceChanged": false
+  },
+  "runs": {
+    "initialWithoutUpdate": {
+      "passed": 7,
+      "failed": 1,
+      "durationMs": 11435.8
+    },
+    "finalWithoutUpdate": {
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "durationMs": 8383.853000000001,
+      "build": [
+        "http://127.0.0.1:4173/assets/index-B-PX_qGf.js"
+      ]
+    },
+    "updatedBaselineCount": 4,
+    "preservedDesktopBaselineCount": 4,
+    "runtimeOrAssertionLogicEditedByThisReview": false
+  },
+  "resolvedFindings": [
+    {
+      "id": "checkout-short-viewport-overlap",
+      "before": "CTA fixo y 576..636 sobrepunha controles y 542..613 em 390 × 664 px.",
+      "after": "CTA no fluxo normal; sem interseção com os controles nos três tamanhos medidos.",
+      "verification": [
+        {
+          "width": 390,
+          "height": 664,
+          "documentWidth": 390,
+          "script": [
+            "http://127.0.0.1:4173/assets/index-BfsutNMe.js"
+          ],
+          "buttons": [
+            {
+              "text": "Conectar carteira",
+              "rect": {
+                "x": 28,
+                "y": 542,
+                "width": 334,
+                "height": 43,
+                "top": 542,
+                "right": 362,
+                "bottom": 585,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Simular recusa de conexão",
+              "rect": {
+                "x": 28,
+                "y": 593,
+                "width": 334,
+                "height": 20,
+                "top": 593,
+                "right": 362,
+                "bottom": 613,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Revisar compra",
+              "rect": {
+                "x": 28,
+                "y": 689,
+                "width": 334,
+                "height": 60,
+                "top": 689,
+                "right": 362,
+                "bottom": 749,
+                "left": 28
+              },
+              "position": "static"
+            }
+          ]
+        },
+        {
+          "width": 414,
+          "height": 896,
+          "documentWidth": 414,
+          "script": [
+            "http://127.0.0.1:4173/assets/index-BfsutNMe.js"
+          ],
+          "buttons": [
+            {
+              "text": "Conectar carteira",
+              "rect": {
+                "x": 28,
+                "y": 542,
+                "width": 358,
+                "height": 43,
+                "top": 542,
+                "right": 386,
+                "bottom": 585,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Simular recusa de conexão",
+              "rect": {
+                "x": 28,
+                "y": 593,
+                "width": 358,
+                "height": 20,
+                "top": 593,
+                "right": 386,
+                "bottom": 613,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Revisar compra",
+              "rect": {
+                "x": 28,
+                "y": 804,
+                "width": 358,
+                "height": 60,
+                "top": 804,
+                "right": 386,
+                "bottom": 864,
+                "left": 28
+              },
+              "position": "static"
+            }
+          ]
+        },
+        {
+          "width": 440,
+          "height": 956,
+          "documentWidth": 440,
+          "script": [
+            "http://127.0.0.1:4173/assets/index-BfsutNMe.js"
+          ],
+          "buttons": [
+            {
+              "text": "Conectar carteira",
+              "rect": {
+                "x": 28,
+                "y": 542,
+                "width": 384,
+                "height": 43,
+                "top": 542,
+                "right": 412,
+                "bottom": 585,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Simular recusa de conexão",
+              "rect": {
+                "x": 28,
+                "y": 593,
+                "width": 384,
+                "height": 20,
+                "top": 593,
+                "right": 412,
+                "bottom": 613,
+                "left": 28
+              },
+              "position": "static"
+            },
+            {
+              "text": "Revisar compra",
+              "rect": {
+                "x": 28,
+                "y": 864,
+                "width": 384,
+                "height": 60,
+                "top": 864,
+                "right": 412,
+                "bottom": 924,
+                "left": 28
+              },
+              "position": "static"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "desktop-quantity-size",
+      "before": "Botões de 20 × 30 px, gap de 8 px e contador de 17 px, diferentes do frame.",
+      "after": "Botões de 33 × 49,5 px, gap de 12 px, contador de 20 px e ícones de 26,39 px no desktop. O mobile mantém seu dimensionamento anterior.",
+      "nativeNodes": [
+        "70410:4190",
+        "70410:4194"
+      ],
+      "verification": [
+        {
+          "width": 1440,
+          "gap": "12px",
+          "buttons": [
+            {
+              "rect": {
+                "x": 725,
+                "y": 421.875,
+                "width": 33,
+                "height": 49.5,
+                "top": 421.875,
+                "right": 758,
+                "bottom": 471.375,
+                "left": 725
+              },
+              "svg": {
+                "x": 728.296875,
+                "y": 433.421875,
+                "width": 26.390625,
+                "height": 26.390625,
+                "top": 433.421875,
+                "right": 754.6875,
+                "bottom": 459.8125,
+                "left": 728.296875
+              }
+            },
+            {
+              "rect": {
+                "x": 806,
+                "y": 421.875,
+                "width": 33,
+                "height": 49.5,
+                "top": 421.875,
+                "right": 839,
+                "bottom": 471.375,
+                "left": 806
+              },
+              "svg": {
+                "x": 809.296875,
+                "y": 433.421875,
+                "width": 26.390625,
+                "height": 26.390625,
+                "top": 433.421875,
+                "right": 835.6875,
+                "bottom": 459.8125,
+                "left": 809.296875
+              }
+            }
+          ],
+          "inputFontSize": "20px",
+          "script": [
+            "http://127.0.0.1:4173/assets/index-B-PX_qGf.js"
+          ]
+        },
+        {
+          "width": 416,
+          "gap": "8px",
+          "buttons": [
+            {
+              "rect": {
+                "x": 69.609375,
+                "y": 760,
+                "width": 20,
+                "height": 30,
+                "top": 760,
+                "right": 89.609375,
+                "bottom": 790,
+                "left": 69.609375
+              },
+              "svg": {
+                "x": 73.109375,
+                "y": 768.5,
+                "width": 13,
+                "height": 13,
+                "top": 768.5,
+                "right": 86.109375,
+                "bottom": 781.5,
+                "left": 73.109375
+              }
+            },
+            {
+              "rect": {
+                "x": 130.609375,
+                "y": 760,
+                "width": 20,
+                "height": 30,
+                "top": 760,
+                "right": 150.609375,
+                "bottom": 790,
+                "left": 130.609375
+              },
+              "svg": {
+                "x": 134.109375,
+                "y": 768.5,
+                "width": 13,
+                "height": 13,
+                "top": 768.5,
+                "right": 147.109375,
+                "bottom": 781.5,
+                "left": 134.109375
+              }
+            }
+          ],
+          "inputFontSize": "14px",
+          "script": [
+            "http://127.0.0.1:4173/assets/index-B-PX_qGf.js"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "css-breakpoint-placeholder",
+      "before": "Prettier normalizava o placeholder de uma media query para minúsculas; o gerador não o substituía e o browser ignorava a regra. A suíte visual ainda passava.",
+      "after": "Gerador passou a resolver placeholders sem diferenciar maiúsculas/minúsculas e a rejeitar placeholders não resolvidos. A regra foi medida no browser após novo build; nenhum placeholder remanescente foi encontrado nos dois CSS gerados."
+    }
+  ],
+  "baselines": [
+    {
+      "path": "tests/e2e/marketplace.spec.ts-snapshots/catalog-desktop-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/marketplace.spec.ts-snapshots/catalog-desktop-darwin.png",
+      "width": 1440,
+      "height": 3807,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/marketplace-catalog-visual-regression-desktop/test-finished-1.png",
+      "actualSHA256": "76c838386d407bca8a92e6df9e17e89d532568877210c02b1f87dff0a797bb0f",
+      "actualSize": [
+        1440,
+        3807
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        1440,
+        3807
+      ],
+      "differentPixelsCommonRegion": 1983,
+      "differentPixelRatioCommonRegion": 0.0003617240171613694,
+      "differenceBoundsCommonRegion": [
+        140,
+        500,
+        851,
+        1149
+      ],
+      "beforeSHA256": "b0b986f9e9484d7ac34dfa1d8a7d63b0f19c9ba401d3cdedbae9ae71cd46303d",
+      "afterSHA256": "b0b986f9e9484d7ac34dfa1d8a7d63b0f19c9ba401d3cdedbae9ae71cd46303d",
+      "updated": false,
+      "reason": "Arquivo preservado. Pequenas diferenças aprovadas no peso das abas e no slider dentro da tolerância; não se declara imagem idêntica.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        1440,
+        3807
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Catálogo padrão, página 1, nove NFTs, visitante."
+    },
+    {
+      "path": "tests/e2e/marketplace.spec.ts-snapshots/catalog-mobile-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/marketplace.spec.ts-snapshots/catalog-mobile-darwin.png",
+      "width": 390,
+      "height": 5637,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/marketplace-catalog-visual-regression-mobile/test-finished-1.png",
+      "actualSHA256": "b090c6ec68a85d00dcfc7beb01d2e7f8ca4e5833d65a6d021d855a48507dae05",
+      "actualSize": [
+        390,
+        5637
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        390,
+        5637
+      ],
+      "differentPixelsCommonRegion": 150991,
+      "differentPixelRatioCommonRegion": 0.06868128619059966,
+      "differenceBoundsCommonRegion": [
+        24,
+        40,
+        366,
+        5337
+      ],
+      "beforeSHA256": "557b8c07c6135559b155a78a573cd3df9e7cd780a183ed57a286962a0a0d60f0",
+      "afterSHA256": "b090c6ec68a85d00dcfc7beb01d2e7f8ca4e5833d65a6d021d855a48507dae05",
+      "updated": true,
+      "reason": "Texto do hero reposicionado, abas regulares/ativa em negrito e separadas, coração no topo em vez de faixa de ações sobre a arte, símbolo e disco originais da navegação. Geometria nativa de 414 px conferida separadamente.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        390,
+        5637
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Catálogo padrão, página 1, nove NFTs, visitante."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/cart-desktop-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/cart-desktop-darwin.png",
+      "width": 1440,
+      "height": 1836,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-cart-visual-regression-desktop/test-finished-1.png",
+      "actualSHA256": "6d041eecae38c68595888fde601f1bfdcdb9bf0e11dcf1c33d8edcfe1920d77d",
+      "actualSize": [
+        1440,
+        1836
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        1440,
+        1836
+      ],
+      "differentPixelsCommonRegion": 0,
+      "differentPixelRatioCommonRegion": 0.0,
+      "differenceBoundsCommonRegion": null,
+      "beforeSHA256": "6d041eecae38c68595888fde601f1bfdcdb9bf0e11dcf1c33d8edcfe1920d77d",
+      "afterSHA256": "6d041eecae38c68595888fde601f1bfdcdb9bf0e11dcf1c33d8edcfe1920d77d",
+      "updated": false,
+      "reason": "Arquivo preservado e pixels idênticos ao anterior.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        1440,
+        1836
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Visitante, NFTnft-1, quantidade 1, preço 1.19 ETH e total 1.206 ETH."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/cart-mobile-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/cart-mobile-darwin.png",
+      "width": 390,
+      "height": 3097,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-cart-visual-regression-mobile/test-finished-1.png",
+      "actualSHA256": "d83868a8b2d4dfb2e4980b14d9f9f6e69a1a8a75b0619643aa8926d4100d98cd",
+      "actualSize": [
+        390,
+        3097
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        390,
+        3097
+      ],
+      "differentPixelsCommonRegion": 4631,
+      "differentPixelRatioCommonRegion": 0.003834148845450105,
+      "differenceBoundsCommonRegion": [
+        39,
+        43,
+        350,
+        180
+      ],
+      "beforeSHA256": "959d5437e82343b1d3b8ac5e29c00e55f55d3991e4dfb6f8da26dccdd87cda7a",
+      "afterSHA256": "d83868a8b2d4dfb2e4980b14d9f9f6e69a1a8a75b0619643aa8926d4100d98cd",
+      "updated": true,
+      "reason": "Título do item alinhado em uma linha e quantidade circular no padrão do frame. Estado do teste contém um item, preservado entre antes e depois.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        390,
+        3097
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Visitante, NFTnft-1, quantidade 1, preço 1.19 ETH e total 1.206 ETH."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/detail-desktop-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/detail-desktop-darwin.png",
+      "width": 1440,
+      "height": 2456,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-detail-visual-regression-desktop/test-finished-1.png",
+      "actualSHA256": "5d2de39a3352c2a2229f87903c7bf30ea26a37f80574c9838bf5cfb2fd6b37e1",
+      "actualSize": [
+        1440,
+        2456
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        1440,
+        2456
+      ],
+      "differentPixelsCommonRegion": 193921,
+      "differentPixelRatioCommonRegion": 0.054831987423090846,
+      "differenceBoundsCommonRegion": [
+        121,
+        130,
+        1320,
+        576
+      ],
+      "beforeSHA256": "a0d74012d5f6410355e2c44164a9aa41ffacb014b2ea09f309da7ff12c0de147",
+      "afterSHA256": "a0d74012d5f6410355e2c44164a9aa41ffacb014b2ea09f309da7ff12c0de147",
+      "updated": false,
+      "reason": "Arquivo preservado. A renderização atual corrigiu quantidade para 33 × 49,5 px, gap de 12 px e fonte 20; geometria medida diretamente no browser. Espaçamento e remoção de dica também mudaram. Passar na tolerância não significa identidade de pixels.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        1440,
+        2456
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "NFTnft-1, visitante, edição e quantidade padrão."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/detail-mobile-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/detail-mobile-darwin.png",
+      "width": 390,
+      "height": 4046,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-detail-visual-regression-mobile/test-finished-1.png",
+      "actualSHA256": "dad7140f54aee79b1ed40a66ff57245c6df5117efb646793ca0c25af2cc1e105",
+      "actualSize": [
+        390,
+        4046
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        390,
+        4046
+      ],
+      "differentPixelsCommonRegion": 380,
+      "differentPixelRatioCommonRegion": 0.00024082031002446228,
+      "differenceBoundsCommonRegion": [
+        40,
+        36,
+        272,
+        616
+      ],
+      "beforeSHA256": "0c8c277dbaaf6173bd83193de021018e32935f1fc9638026f492f0750da38a6a",
+      "afterSHA256": "dad7140f54aee79b1ed40a66ff57245c6df5117efb646793ca0c25af2cc1e105",
+      "updated": true,
+      "reason": "Ícone de carrinho corrigido; geometria dos controles preservada. No frame de 414x 896, Edição, ID e Coleção estão presentes. Em viewport curta, pode ser necessário rolar para expor conteúdo acima da faixa fixa de compra.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        390,
+        4046
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "NFTnft-1, visitante, edição e quantidade padrão."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/payment-desktop-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/payment-desktop-darwin.png",
+      "width": 1440,
+      "height": 1750,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-payment-visual-regression-desktop/test-finished-1.png",
+      "actualSHA256": "497a07e823507d232c5ecce21f7db10841c7bcb1c7e1d716d19d4dd5c50accb2",
+      "actualSize": [
+        1440,
+        1750
+      ],
+      "sameDimensions": true,
+      "commonPixelDimensions": [
+        1440,
+        1750
+      ],
+      "differentPixelsCommonRegion": 0,
+      "differentPixelRatioCommonRegion": 0.0,
+      "differenceBoundsCommonRegion": null,
+      "beforeSHA256": "497a07e823507d232c5ecce21f7db10841c7bcb1c7e1d716d19d4dd5c50accb2",
+      "afterSHA256": "497a07e823507d232c5ecce21f7db10841c7bcb1c7e1d716d19d4dd5c50accb2",
+      "updated": false,
+      "reason": "Arquivo preservado e pixels idênticos ao anterior.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        1440,
+        1750
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Conta fictícia collector@example.test, NFTnft-1, quantidade 1, carteira simulada ainda desconectada e total 1.206 ETH."
+    },
+    {
+      "path": "tests/e2e/views.spec.ts-snapshots/payment-mobile-darwin.png",
+      "oldFile": "/tmp/jungle-baseline-review-20261027/old/tests/e2e/views.spec.ts-snapshots/payment-mobile-darwin.png",
+      "width": 390,
+      "height": 4041,
+      "actualFile": "/tmp/jungle-baseline-review-20261027/final4-results/views-payment-visual-regression-mobile/test-finished-1.png",
+      "actualSHA256": "f49f5b2413c8f228880d4ceb685e4269b84f14917a08fa65cfd840eecf5d49d5",
+      "actualSize": [
+        390,
+        3783
+      ],
+      "sameDimensions": false,
+      "commonPixelDimensions": [
+        390,
+        3783
+      ],
+      "differentPixelsCommonRegion": 633669,
+      "differentPixelRatioCommonRegion": 0.42949836312247097,
+      "differenceBoundsCommonRegion": [
+        0,
+        32,
+        390,
+        3783
+      ],
+      "beforeSHA256": "b9e9fe0a5346a43daaac9ed42579e473f04cf6d3f045b56cf512b5534f9f5c07",
+      "afterSHA256": "f49f5b2413c8f228880d4ceb685e4269b84f14917a08fa65cfd840eecf5d49d5",
+      "updated": true,
+      "reason": "Carteiras e provedores antecedem os campos do colecionador, conforme hierarquia móvel do Figma. O CTA entrou no fluxo e deixou de cobrir controles em telas curtas. Campos adicionais de simulação e dados coerentes da API permanecem explícitos.",
+      "reviewedByHumanInspection": true,
+      "baselineSizeAfter": [
+        390,
+        3783
+      ],
+      "rawPixelComparisonNote": "Diferença RGB exata na região comum, separada da comparação perceptual do Playwright. Não é um índice de fidelidade ao Figma.",
+      "state": "Conta fictícia collector@example.test, NFTnft-1, quantidade 1, carteira simulada ainda desconectada e total 1.206 ETH."
+    }
+  ],
+  "additionalUserViewport": {
+    "file": "reports/mobile-home-review/home-user-440x956.webp",
+    "width": 440,
+    "height": 956,
+    "lossless": true,
+    "decodedPixelsEqualToCapture": true,
+    "sourceSHA256": "f8f5f0a6d88ea38a45b31619b00729d272db2860cbc2a1c26c53b9615ec9c8f3",
+    "sha256": "e345e999275ae3dc8c5ad22047b638f1d3145c0d923dc1fbf4298bdf988af1c5",
+    "captureState": {
+      "url": "http://127.0.0.1:4173/?q=&category=all&sort=newest&page=1&tab=trending",
+      "width": 440,
+      "height": 956,
+      "documentWidth": 440,
+      "script": [
+        "http://127.0.0.1:4173/assets/index-B-PX_qGf.js"
+      ],
+      "hero": {
+        "x": 24,
+        "y": 101,
+        "width": 392,
+        "height": 190,
+        "top": 101,
+        "right": 416,
+        "bottom": 291,
+        "left": 24
+      },
+      "catalog": {
+        "x": 24,
+        "y": 343,
+        "width": 392,
+        "height": 1442.21875,
+        "top": 343,
+        "right": 416,
+        "bottom": 1785.21875,
+        "left": 24
+      }
+    }
+  },
+  "knownSourceDifferences": [
+    {
+      "id": "catalog-cross-frame-content",
+      "evidence": "Desktop node 70342:2805 mostra Cosmic Bloom #118 com arte Sage e 1.29 ETH; mobile node 70410:4153 mostra arte amarela mas repete título Sage Nomad #009 e 1.69 ETH do segundo cartão.",
+      "decision": "Preservar uma identidade e ordenação canônica entre viewports. Não trocar a fixture apenas para imitar a inconsistência do frame."
+    },
+    {
+      "id": "fixture-state",
+      "evidence": "Frames ilustram outros saldos, carteiras, quantidades e textos. Os testes mantiveram os mesmos dados fictícios antes/depois e os totais calculados pela API, incluindo taxa de 0.016 ETH."
+    },
+    {
+      "id": "viewport-and-device",
+      "evidence": "Baselines móveis usam 390 × 664 px; frames nativos usam 414 × 896 px. A Home foi capturada também em 440 × 956 px exatamente na URL enviada. Isso não equivale a teste em aparelho físico ou Safari."
+    }
+  ],
+  "evidencePolicy": "Capturas, diferenças, traces e cópias antigas completos ficam fora do repositório. Apenas o manifesto e a prova de 440 × 956 px em WebP sem perdas são adicionados aos relatórios.",
+  "externalEvidenceDirectory": "../jungle-review-evidence/2026-10-27/baseline-review-final"
+}

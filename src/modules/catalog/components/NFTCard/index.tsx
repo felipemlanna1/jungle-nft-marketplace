@@ -25,6 +25,7 @@ export function NFTCard({ nft, favorite, onFavorite, busy, priority = false }: N
         <div className="card-actions" role="group" aria-label={`Ações de ${nft.title}`}>
           <button
             type="button"
+            className="card-action-add"
             aria-label={`Adicionar ${nft.title} ao carrinho`}
             aria-describedby={added ? statusId : undefined}
             disabled={add.isPending || !canAdd}
@@ -39,7 +40,7 @@ export function NFTCard({ nft, favorite, onFavorite, busy, priority = false }: N
           </button>
           <button
             type="button"
-            className={favorite ? 'is-favorite' : ''}
+            className={`card-action-favorite${favorite ? ' is-favorite' : ''}`}
             aria-label={`${favorite ? 'Remover' : 'Adicionar'} ${nft.title} ${favorite ? 'dos' : 'aos'} favoritos`}
             aria-pressed={favorite}
             onClick={onFavorite}
@@ -50,6 +51,7 @@ export function NFTCard({ nft, favorite, onFavorite, busy, priority = false }: N
           </button>
           <button
             type="button"
+            className="card-action-preview"
             aria-label={`Ampliar ${nft.title}`}
             onClick={preview}
             title="Ampliar obra"

@@ -1,7 +1,7 @@
 import { test, expect, type Page } from '@playwright/test';
 
 const emailLabel = 'E-mail da newsletter';
-const submitLabel = 'Inscrever na newsletter';
+const submitLabel = 'Enviar inscrição na newsletter';
 const confirmation = 'Inscrição simulada confirmada. Nenhum e-mail real será enviado.';
 async function scenario(page: Page, value: 'default' | 'slow' | 'server-error') {
   await page.evaluate(async (scenario) => {

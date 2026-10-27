@@ -12,6 +12,7 @@ export { themes, DEFAULT_THEME, type ThemeName } from './theme';
 
 export { QuantityInput } from './components/QuantityInput';
 export { Select } from './components/Select';
+export { RangeSlider } from './components/RangeSlider';
 export {
   Carousel,
   CarouselContent,

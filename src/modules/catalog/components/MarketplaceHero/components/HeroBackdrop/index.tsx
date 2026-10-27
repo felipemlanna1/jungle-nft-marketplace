@@ -18,7 +18,7 @@ export function HeroBackdrop() {
       <rect width="366" height="190" rx="30" fill={`url(#${surfaceId})`} />
       <mask
         id={maskId}
-        style={{ maskType: 'alpha' }}
+        className="hero-backdrop-mask"
         maskUnits="userSpaceOnUse"
         x="0"
         y="0"

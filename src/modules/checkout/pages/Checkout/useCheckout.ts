@@ -125,6 +125,7 @@ export function useCheckout() {
     }
   };
   const changeWallet = (id: string) => {
+    setField('manualWallet', false);
     setWalletId(id);
     const wallet = wallets.data?.find((item) => item.id === id);
     if (wallet) setNetwork(wallet.network);

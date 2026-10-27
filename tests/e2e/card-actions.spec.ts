@@ -10,13 +10,25 @@ test('card preview, cart and rarity follow the mocked API', async ({ page, isMob
   const detail = page.waitForResponse(
     (response) => new URL(response.url()).pathname === '/api/nfts/nft-1',
   );
-  const previewButton = card.getByRole('button', { name: 'Ampliar Emerald Ape #042', exact: true });
+  if (isMobile) {
+    await expect(
+      card.getByRole('button', { name: 'Adicionar Emerald Ape #042 ao carrinho', exact: true }),
+    ).toBeHidden();
+    await expect(
+      card.getByRole('button', { name: 'Ampliar Emerald Ape #042', exact: true }),
+    ).toBeHidden();
+    await card.getByRole('link', { name: 'Ver Emerald Ape #042', exact: true }).click();
+  }
+  const previewButton = isMobile
+    ? page.getByRole('button', { name: 'Ampliar obra', exact: true })
+    : card.getByRole('button', { name: 'Ampliar Emerald Ape #042', exact: true });
   await previewButton.click();
   const data = await (await detail).json();
   const preview = page.getByRole('dialog', { name: data.title, exact: true });
   await expect(preview).toBeVisible();
   await expect(preview.getByRole('img', { name: data.title })).toHaveAttribute('src', data.image);
-  await expect(preview).toContainText(`${data.price} ETH`);
+  if (!isMobile) await expect(preview).toContainText(`${data.price} ETH`);
+  else await expect(page.locator('.detail-price')).toContainText(`${data.price} ETH`);
   await page.keyboard.press('Escape');
   await expect(preview).not.toBeVisible();
   await expect(previewButton).toBeFocused();
@@ -25,9 +37,11 @@ test('card preview, cart and rarity follow the mocked API', async ({ page, isMob
       new URL(response.url()).pathname === '/api/cart/items' &&
       response.request().method() === 'POST',
   );
-  await card
-    .getByRole('button', { name: 'Adicionar Emerald Ape #042 ao carrinho', exact: true })
-    .click();
+  if (isMobile) await page.getByRole('button', { name: 'Comprar NFT', exact: true }).click();
+  else
+    await card
+      .getByRole('button', { name: 'Adicionar Emerald Ape #042 ao carrinho', exact: true })
+      .click();
   const response = await addition;
   expect(response.status()).toBe(200);
   expect(response.request().postDataJSON()).toMatchObject({
@@ -35,6 +49,11 @@ test('card preview, cart and rarity follow the mocked API', async ({ page, isMob
     quantity: 1,
     editionId: data.defaultEditionId,
   });
+  if (isMobile) {
+    await expect(page.getByRole('link', { name: 'Ver carrinho', exact: true })).toBeVisible();
+    await page.goto('/');
+    await expect(card).toBeVisible();
+  }
   await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();
   const catalogue = await page.evaluate(async () => (await fetch('/api/nfts')).json());
   const rare = catalogue.items.find((item: { rarity?: string }) => item.rarity === 'Rare');

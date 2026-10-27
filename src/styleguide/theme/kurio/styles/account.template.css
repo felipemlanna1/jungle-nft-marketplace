@@ -151,6 +151,7 @@
 .auth-demo-access {
   display: grid;
   gap: 8px;
+  margin-top: 16px;
 }
 .auth-demo-access .button {
   width: 100%;
@@ -164,6 +165,10 @@
   font-size: 12px;
   line-height: 18px;
   color: var(--muted);
+}
+.auth-demo-access p {
+  font-size: 11px;
+  line-height: 16px;
 }
 .auth-favorite-context {
   margin-bottom: 16px;

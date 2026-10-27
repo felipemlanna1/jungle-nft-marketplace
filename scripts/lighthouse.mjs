@@ -3,6 +3,7 @@ import { spawn } from 'node:child_process';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { chromium } from '@playwright/test';
+import { verifyHostedHtml } from './lib/verified-html.mjs';
 
 const target = process.env.AUDIT_URL || 'http://127.0.0.1:4173';
 const startedAt = new Date().toISOString();
@@ -60,10 +61,17 @@ for (const file of runtimeSources.filter((file) => file.path.startsWith('public/
 }
 const indexFingerprint = buildFiles.find((file) => file.path === 'index.html')?.sha256;
 if (!indexFingerprint) throw new Error('A production dist/index.html is required.');
+const expectedDocument = await readFile('dist/index.html');
+let hostedDocumentVerification;
 // Compare bytes, not just filenames: a stale preview or changed artifact invalidates this audit.
 for (const file of buildFiles) {
   const response = await fetch(`${target}/${file.path}`);
-  if (!response.ok || sha256(Buffer.from(await response.arrayBuffer())) !== file.sha256)
+  if (!response.ok)
+    throw new Error(`Served artifact differs from the production build: ${file.path}`);
+  const received = Buffer.from(await response.arrayBuffer());
+  if (file.path === 'index.html')
+    hostedDocumentVerification = verifyHostedHtml(received, expectedDocument);
+  else if (sha256(received) !== file.sha256)
     throw new Error(`Served artifact differs from the production build: ${file.path}`);
 }
 const sourceRevision = {
@@ -83,8 +91,9 @@ async function preflight(path) {
     const errors = [];
     page.on('pageerror', (error) => errors.push(error.message));
     const navigation = await page.goto(target + path, { waitUntil: 'domcontentloaded' });
-    if (!navigation || sha256(await navigation.body()) !== indexFingerprint)
+    if (!navigation)
       throw new Error(`Measured route does not serve the verified production document: ${path}`);
+    const documentVerification = verifyHostedHtml(await navigation.body(), expectedDocument);
     await page
       .locator(path === '/' ? 'article.nft-card' : '.detail-grid')
       .first()
@@ -105,6 +114,7 @@ async function preflight(path) {
       }),
       realtimeConnected: true,
       pageErrors: errors,
+      documentVerification,
     };
     if (
       errors.length ||
@@ -249,9 +259,10 @@ const summary = {
     sourceRevision,
     runtimeSourceFingerprint,
     runtimeSources,
+    hostedDocumentVerification,
   },
   methodology:
-    'Production build verified against served artifact SHA256 hashes, sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; the application MSW and Socket.IO simulation runs unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.',
+    'Production build verified against served artifact SHA256 hashes. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.',
   outputDirectory,
   gate,
   rows,

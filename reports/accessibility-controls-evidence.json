@@ -1,0 +1,72 @@
+{
+  "escopo": "Correções dos três achados de acessibilidade observados na auditoria HTTPS, complementadas pela suíte final do build congelado.",
+  "achados": [
+    {
+      "problema": "O nome acessível da newsletter omitira o texto visível Enviar.",
+      "correcao": "Enviar inscrição na newsletter contém o rótulo visível; seletores atualizados sem retirar asserções de POST, deduplicação, falha, preservação de rascunho e identidade."
+    },
+    {
+      "problema": "As estrelas usavam aria-label em span sem função semântica.",
+      "correcao": "Agrupamento role=img com avaliação no nome acessível; SVGs permanecem decorativos."
+    },
+    {
+      "problema": "Dois ranges nativos ocupavam a mesma caixa258×4, sobrepondo seus alvos.",
+      "correcao": "Radix Slider com dois thumbs reais24×24, foco e teclado próprios. Trilho4px e círculos15px preservados; teste arrasta a área fora do círculo visível, comprovando que a área maior funciona.",
+      "dependencia": "@radix-ui/react-slider1.6.1, autorizada pelo responsável; npm audit sem vulnerabilidades."
+    }
+  ],
+  "precisao": {
+    "autoridade": "Campos manuais, URL e API continuam usando strings ETH com até 18 casas decimais. Os números do slider não representam dinheiro.",
+    "limiteVisual": "Somente o controle gráfico projeta 0 a 20 ETH em passos de 0,01. Um valor manual fora dessa faixa continua exato até o usuário mover o limite correspondente.",
+    "prova": "Quatro casos desktop/mobile exercitam ponteiro na borda externa, teclado, valor do outro limite intacto, HTTP 200 com strings exatas, URL e recarga."
+  },
+  "comparacaoVisual": {
+    "antes": "reports/price-range-before.png",
+    "depois": "reports/price-range-after.png",
+    "diferenca": "reports/price-range-diff.png",
+    "dimensoes": [
+      270,
+      108
+    ],
+    "pixelsAlterados": 120,
+    "explicacao": "Diferenças de rasterização limitadas aos círculos; dimensões do bloco, trilho, textos e botão mantidos. Não constitui alegação de identidade absoluta de pixels."
+  },
+  "revisaoIndependente": "market_api leu RangeSlider/usePriceRange e não encontrou bloqueante; conferiu preservação de strings, crossing e limites manuais acima20.",
+  "diagnosticosDesenvolvimento": [
+    {
+      "rodada": "16 casos",
+      "passaram": 15,
+      "falharam": 1,
+      "motivo": "Desktop newsletter: segundo [vite] connecting após preencher o campo e antes do POST."
+    },
+    {
+      "rodada": "24 casos",
+      "passaram": 23,
+      "falharam": 1,
+      "motivo": "Mobile newsletter: POST iniciado em36591ms, duas novas conexões Vite em37232/38004ms, resposta ausente(-1). Fonte em edição; não tratado como aprovação integral."
+    }
+  ],
+  "gestoMobileCI": {
+    "run": "40558435367",
+    "resultadoAnterior": "147 de148; falha no swipe do hero mobile.",
+    "evidencia": "Trace mostrou12 roundtrips CDP com duração total aproximada1.81s, diferente do gesto de192ms pretendido.",
+    "correcao": "Gesto touch nativo Chromium em uma chamada, velocidade800px/s; aguarda seis quadros de geometria estável antes do gesto. Asserções de navegação, URL e reduced-motion mantidas.",
+    "contraprova": "10 repetições mobile passaram em33.3s, sem retries.",
+    "avaliacao": "A latência dos comandos é uma hipótese de influência do runner, não causa única comprovada. A execução local aprovada não permite declarar a nova CI aprovada.",
+    "estadoCI": "Pendente de nova execução do GitHub Actions."
+  },
+  "pendente": "Auditoria HTTPS da nova versão e nova execução de CI. As provas locais não atribuem nota de qualidade ou desempenho.",
+  "verificacaoFinal": {
+    "casosAprovados": 164,
+    "falhas": 0,
+    "pulados": 0,
+    "instaveis": 0,
+    "comparacoesVisuais": 8,
+    "tentativasPorCaso": 1,
+    "porta": 4173,
+    "relatorio": "reports/e2e-final-build-evidence.json",
+    "hashFonte": "23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e",
+    "hashBuild": "d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f",
+    "arquivosAlteradosDuranteRodada": []
+  }
+}

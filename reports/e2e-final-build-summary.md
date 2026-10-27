@@ -1,30 +1,38 @@
 # Verificação final do build
 
-A suíte completa aprovou **148 de 148 testes** em Chromium desktop e mobile, no build otimizado servido na porta 4173. Não houve falhas, testes pulados ou novas tentativas nesta rodada. As oito comparações visuais vigentes passaram sem atualização de referências. A execução levou 403.5 segundos com Node v22.22.0.
+A suíte completa aprovou **164 de 164 testes** em Chromium desktop e mobile, no build otimizado servido na porta 4173. Cada perfil executou 82 casos. Não houve falhas, testes pulados, novas tentativas ou resultados instáveis. As oito comparações visuais vigentes passaram sem atualização de referências. A execução levou 368,4 segundos com Node v22.22.0, em um único worker.
 
 - [Relatório HTML completo](playwright-final-build-html/index.html)
 - [Resultado JSON](e2e-final-build-verified.json)
 - [Hashes e conferência dos arquivos servidos](e2e-final-build-evidence.json)
-- [Histórico das correções de autenticação](login-bootstrap-counterproof.json)
-- [Correções de prontidão dos testes](e2e-readiness-correction.json)
-- [Revisão adversarial dos controles](adversarial-release-review.json)
+- [Listagem dos 164 casos](e2e-final-build-list.txt)
+- [Log completo](e2e-final-build-run.log)
+- [Correções de acessibilidade e diagnósticos preservados](accessibility-controls-evidence.json)
+- [Contraprovas da regra de estilos](inline-style-enforcement.json)
+- [Investigação da execução anterior de CI](ci-investigation-c5.json)
 
-O HTML está em uma pasta versionável, fora das exclusões do Git. Comparações visuais verificam regressão contra referências examinadas; não constituem nota nem declaração de fidelidade integral ao Figma.
+O HTML está em uma pasta versionável, fora das exclusões do Git. A aprovação corresponde à execução automatizada local. Comparações visuais detectam regressão contra referências examinadas; não constituem nota nem declaração de fidelidade integral ao Figma. A nova execução de CI e a auditoria HTTPS do candidato publicado são verificações separadas.
 
 ## Integridade
 
-Código, testes, configuração, `index.html` e build não mudaram durante a execução. O HTML, o JavaScript principal e o CSS servidos corresponderam ao build antes e depois dos testes.
+Código, arquivos públicos, testes e referências visuais, configuração, `index.html`, gerador de tema e build não mudaram durante a execução. O HTML, o JavaScript principal e o CSS servidos corresponderam aos bytes do build antes e depois dos testes.
 
 | Registro | SHA-256 antes e depois |
 | --- | --- |
-| Código, testes, configuração e HTML de entrada | `6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9` |
-| Build otimizado | `fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993` |
-| Todos os arquivos verificados | `8133887121d10b3738c947c966f831c73a258d4da0f7f63a8a0934ee22c6201f` |
+| Código, testes, configuração e HTML de entrada | `23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e` |
+| Build otimizado | `d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f` |
+| Todos os arquivos verificados, incluindo runner | `7ab2ca1fb0c139cf17477e5944704c8dd7158e84896e2fd5e21fa7c7bb6ab66c` |
+
+## Escopo comprovado
+
+A rodada inclui autenticação e isolamento entre contas; favoritos após login; seleção efetiva de carteira; filtros por teclado e ponteiro sem arredondar campos ETH de 18 casas; compra, recusa e recuperação idempotente; reconexão e estoque em tempo real; rascunhos; leitura editorial; newsletter; foco dos diálogos; carrosséis; geometria responsiva e oito comparações visuais.
 
 ## Diagnósticos preservados
 
-A primeira rodada registrou [uma falha real de concorrência no login](diagnostics/login-bootstrap-first-full-run/html/index.html). A correção foi verificada na [rodada anterior à otimização](diagnostics/pre-optimization-green-run/html/index.html), preservada com seus próprios hashes.
+A execução de 148 casos anterior às correções atuais está preservada em [seu próprio relatório](diagnostics/pre-accessibility-148-green-20261027T192614Z/playwright-html/index.html), com os respectivos hashes e resultados. Ela não foi usada para aprovar os arquivos novos.
 
-Após a otimização inicial, [cinco falhas de prontidão dos testes](diagnostics/bootstrap-readiness-run/html/index.html) foram mantidas no histórico. Três fluxos esperavam apenas classes do placeholder ou o banner atrás do login. As esperas passaram a reconhecer conteúdo acessível real, a URL de destino e o fechamento do diálogo. As asserções de foco, igualdade da URL, identidade do pedido e ausência de duplicação permaneceram. Não houve espera direta pela sessão, pausa fixa ou alteração do runtime para corrigir esses testes. Os seis casos afetados passaram, seguidos da repetição completa de 148 casos no mesmo build.
+Duas provas de desenvolvimento da newsletter foram interrompidas por recargas Vite durante alterações de fonte. Seus traces estão em `reports/diagnostics/accessibility-controls-hmr/`. A rodada atual não teve recargas de desenvolvimento e aprovou os oito casos da newsletter no build congelado, mantendo suas asserções.
 
-A execução utilizou contas, carteiras e transações fictícias da demonstração. Mobile corresponde à emulação Chromium configurada no projeto.
+A execução anterior do GitHub Actions registrou uma falha no gesto mobile do carrossel. O trace mostrou demora nos comandos sequenciais; isso é uma hipótese de influência do runner, não causa única comprovada. O helper passou a usar um gesto touch nativo contínuo e verificar estabilidade geométrica. As asserções foram preservadas, e esta rodada local passou. O estado da nova CI permanece pendente.
+
+Todos os fluxos usam contas, carteiras e transações fictícias. Mobile corresponde à emulação Chromium configurada no projeto. Não foram executados testes adicionais de estresse após esta rodada.

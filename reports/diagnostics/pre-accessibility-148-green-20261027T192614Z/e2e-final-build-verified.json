@@ -1,0 +1,3649 @@
+{
+  "config": {
+    "argv": [
+      "/Users/felipemoreiralanna/.npm/_npx/6d82ddbdd7da268b/node_modules/node/bin/node",
+      "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "/tmp/jungle-marketplace-final.config.mts",
+      "--list"
+    ],
+    "configFile": "/tmp/jungle-marketplace-final.config.mts",
+    "rootDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/playwright-final-build-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/playwright-final-build-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/playwright-final-build-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/playwright-final-build-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/e2e-final-build-verified.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/playwright-final-build-html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "none",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "account-edit.spec.ts",
+      "file": "account-edit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "avatar and password changes persist through real profile forms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46791f9a79a9775c9012-c829ab1e1a741da78ac3",
+          "file": "account-edit.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "avatar and password changes persist through real profile forms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "46791f9a79a9775c9012-be464ec0cf6894012040",
+          "file": "account-edit.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "account.spec.ts",
+      "file": "account.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "auth controls reveal passwords and report disconnected identity providers honestly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-8c1513b5c9452226883b",
+          "file": "account.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registration requires matching passwords and creates an isolated collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-7cdfaade328117e9fe9b",
+          "file": "account.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "profile and expanded wallet data persist and secondary wallet controls are functional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-73f248f3a11b94c1c8e3",
+          "file": "account.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "auth controls reveal passwords and report disconnected identity providers honestly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-43fdc94acecad31d67f4",
+          "file": "account.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registration requires matching passwords and creates an isolated collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-507c72e0417d0d17c269",
+          "file": "account.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "profile and expanded wallet data persist and secondary wallet controls are functional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-2cc8b6edd29a5643dd0d",
+          "file": "account.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "adversarial-ui.spec.ts",
+      "file": "adversarial-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a changed quote requires a second explicit confirmation before any order exists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-604ac892f4f056ed4f34",
+          "file": "adversarial-ui.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "favorites and private profile do not cross a logout and account switch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-53d8afe085bc1ce8631e",
+          "file": "adversarial-ui.spec.ts",
+          "line": 65,
+          "column": 1
+        },
+        {
+          "title": "a changed quote requires a second explicit confirmation before any order exists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-2baabdbd3ac3924b3969",
+          "file": "adversarial-ui.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "favorites and private profile do not cross a logout and account switch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-adf7724861ca9262c72e",
+          "file": "adversarial-ui.spec.ts",
+          "line": 65,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "api-contracts.spec.ts",
+      "file": "api-contracts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest cart survives login; private resources never leak between accounts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-01260c57259cdfe0b0a9",
+          "file": "api-contracts.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "idempotent order is unique, immutable and inaccessible to another user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-97bea8a79dc7d345995f",
+          "file": "api-contracts.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "price change invalidates an accepted quote before order creation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-b8ca41c19c1bbe9a50bb",
+          "file": "api-contracts.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "validation rejects bad quantities, profile values and wallet addresses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-448ec0ad43b10e7cee12",
+          "file": "api-contracts.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "duplicate registration and session expiration are explicit failures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-a61f9cda598a8c59db07",
+          "file": "api-contracts.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "guest cart survives login; private resources never leak between accounts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-c06a22fa094f4c52b9e9",
+          "file": "api-contracts.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "idempotent order is unique, immutable and inaccessible to another user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-48973f1d8e15f7ce1695",
+          "file": "api-contracts.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "price change invalidates an accepted quote before order creation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-9ed094a4481bdf2c71f7",
+          "file": "api-contracts.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "validation rejects bad quantities, profile values and wallet addresses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-3c5573a3078dbc5a08f4",
+          "file": "api-contracts.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "duplicate registration and session expiration are explicit failures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "aa3677a73aad62004270-4251f870649d0c16f7c3",
+          "file": "api-contracts.spec.ts",
+          "line": 111,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "card-actions.spec.ts",
+      "file": "card-actions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "card preview, cart and rarity follow the mocked API",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4889ca60facfd958a20d-28b6f647f7da04525502",
+          "file": "card-actions.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "card preview, cart and rarity follow the mocked API",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "4889ca60facfd958a20d-b9a1f761509f26f027a8",
+          "file": "card-actions.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "carousel.spec.ts",
+      "file": "carousel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero highlights support dots, keyboard navigation and real pointer dragging",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-343968486ddcb63156c4",
+          "file": "carousel.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "reduced motion changes are honored by immediate highlight positioning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-20b88fc2beff231539cd",
+          "file": "carousel.spec.ts",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "related collectibles navigate actual slides without leaving the current artwork",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-da57be4c8e2a23146256",
+          "file": "carousel.spec.ts",
+          "line": 74,
+          "column": 1
+        },
+        {
+          "title": "hero highlights support dots, keyboard navigation and real pointer dragging",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-5129401d6b9f4c1d4beb",
+          "file": "carousel.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "reduced motion changes are honored by immediate highlight positioning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-b8d96dd7e52e3e9a1293",
+          "file": "carousel.spec.ts",
+          "line": 52,
+          "column": 1
+        },
+        {
+          "title": "related collectibles navigate actual slides without leaving the current artwork",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-7c2e07615959492a302b",
+          "file": "carousel.spec.ts",
+          "line": 74,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "catalog-sort.spec.ts",
+      "file": "catalog-sort.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the themed sort supports keyboard selection, Escape and focus restoration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "21ec936c9ed6127af23d-f0c2477221cad84b91f8",
+          "file": "catalog-sort.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "price sorting by pointer preserves applied minimum and maximum filters after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "21ec936c9ed6127af23d-a7741c530d5dd0824ac5",
+          "file": "catalog-sort.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "the themed sort supports keyboard selection, Escape and focus restoration",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "21ec936c9ed6127af23d-5ee94dbc1a0ee1314494",
+          "file": "catalog-sort.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "price sorting by pointer preserves applied minimum and maximum filters after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "21ec936c9ed6127af23d-3884f3ad6c644760223e",
+          "file": "catalog-sort.spec.ts",
+          "line": 76,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "checkout-wallet-selection.spec.ts",
+      "file": "checkout-wallet-selection.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "changing a saved wallet leaves manual mode and purchases with the selected API wallet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fc099437d16f2c86602c-4e8aed7d71d0013ba919",
+          "file": "checkout-wallet-selection.spec.ts",
+          "line": 17,
+          "column": 1
+        },
+        {
+          "title": "changing a saved wallet leaves manual mode and purchases with the selected API wallet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fc099437d16f2c86602c-109768b57e29952997ba",
+          "file": "checkout-wallet-selection.spec.ts",
+          "line": 17,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "drafts.spec.ts",
+      "file": "drafts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "profile draft survives a changed account response for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "e417140b1e763296e66e-8021ba9513423ba993ab",
+          "file": "drafts.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "checkout collector draft survives session refetch for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "e417140b1e763296e66e-ec331bf73d5631accbdc",
+          "file": "drafts.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "profile draft survives a changed account response for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "e417140b1e763296e66e-a59cfad8b8d46bbe7505",
+          "file": "drafts.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "checkout collector draft survives session refetch for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "e417140b1e763296e66e-430a34215b91934d4406",
+          "file": "drafts.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "editorial.spec.ts",
+      "file": "editorial.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "editorial previews come from REST and open a lazy simulated reading with focus restored",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-c6a209ae8f64b073ef29",
+          "file": "editorial.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "editorial reader failures show a real retry and closing returns focus to the same card",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-9d2208c883cb904fd6b7",
+          "file": "editorial.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "editorial list failure and empty state recover through the simulated API",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-326ebd7d3ef1b55eab81",
+          "file": "editorial.spec.ts",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "all four editorial cards request their own content without creating editorial routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-09dfed29419ee354a69b",
+          "file": "editorial.spec.ts",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "editorial previews come from REST and open a lazy simulated reading with focus restored",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-f03d17fd09421c819e43",
+          "file": "editorial.spec.ts",
+          "line": 16,
+          "column": 1
+        },
+        {
+          "title": "editorial reader failures show a real retry and closing returns focus to the same card",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-cd8201ec212d399a894f",
+          "file": "editorial.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "editorial list failure and empty state recover through the simulated API",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-79ea9f5df86ef4cb410f",
+          "file": "editorial.spec.ts",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "all four editorial cards request their own content without creating editorial routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec079a02c0facf936b0d-b421f1a55898325b044d",
+          "file": "editorial.spec.ts",
+          "line": 97,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "favorite-login.spec.ts",
+      "file": "favorite-login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest favorite from catalog survives demo sign-in, refresh and removal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-804cebab85d10c52d125",
+          "file": "favorite-login.spec.ts",
+          "line": 6,
+          "column": 3
+        },
+        {
+          "title": "guest favorite from detail survives demo sign-in, refresh and removal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-4555cf15741232f3ff17",
+          "file": "favorite-login.spec.ts",
+          "line": 6,
+          "column": 3
+        },
+        {
+          "title": "demo prefill never resets a password changed by the collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-f8a396fa0cdbe610da2c",
+          "file": "favorite-login.spec.ts",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "guest favorite from catalog survives demo sign-in, refresh and removal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-e8d66fa791cf813281cd",
+          "file": "favorite-login.spec.ts",
+          "line": 6,
+          "column": 3
+        },
+        {
+          "title": "guest favorite from detail survives demo sign-in, refresh and removal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-b550d461e43ff7604d75",
+          "file": "favorite-login.spec.ts",
+          "line": 6,
+          "column": 3
+        },
+        {
+          "title": "demo prefill never resets a password changed by the collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "580766dd36c93ca1a932-fbe2a74ab2bc28fc3d20",
+          "file": "favorite-login.spec.ts",
+          "line": 97,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "favorites-navigation.spec.ts",
+      "file": "favorites-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "account menu hands favorites to the detail route and restores the outer trigger on close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "80dff7eea26fb6c6d219-859a7d87649dcb7cad54",
+          "file": "favorites-navigation.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "guest favorites navigate to a single usable login dialog without reopening the menu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "80dff7eea26fb6c6d219-a9503facf59c06fd5f84",
+          "file": "favorites-navigation.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "account menu hands favorites to the detail route and restores the outer trigger on close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "80dff7eea26fb6c6d219-7ef6df3ac1c8c3310a56",
+          "file": "favorites-navigation.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "guest favorites navigate to a single usable login dialog without reopening the menu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "80dff7eea26fb6c6d219-af8a838d10d28b1600d1",
+          "file": "favorites-navigation.spec.ts",
+          "line": 43,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hero-geometry.spec.ts",
+      "file": "hero-geometry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero geometry stays contained at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-297a8673a1284081d723",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 375px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-c9dbe2d88f9a2660f72b",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9dc3704b82edff2c7878",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 412px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-79b36347857f0c3d5b37",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-1b0c8a016d83dba3239f",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9b8022b10fb98b7a2964",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9d351a38d2e8d6164490",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-35666e11c8655258b4cc",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1920px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-91d0c5f92f4e305de061",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px with 125% content scaling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e5e0b906c0db4455b197",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-f3b879eddd3766fa185c",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 375px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-66f04b18d275986bfe77",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e8cdff815d3d66467517",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 412px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-adab456af0e56a7c39b0",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-91df16dc7ea72bc337d1",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-b203e013564281dadbc5",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-12b631198d882b49ed33",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-8802d5e6283c6ee1dc8a",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1920px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e9515a01319f2b4c12b8",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px with 125% content scaling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-c1ac5fd251ad27544cd3",
+          "file": "hero-geometry.spec.ts",
+          "line": 64,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "kurio.spec.ts",
+      "file": "kurio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Kurio is the only appearance across public, account, checkout and receipt routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-16da52804e0b558ca2aa",
+          "file": "kurio.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "a saved expedition preference migrates to Kurio without a switcher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-a8798fea31c74f317fad",
+          "file": "kurio.spec.ts",
+          "line": 77,
+          "column": 3
+        },
+        {
+          "title": "a saved unsupported preference migrates to Kurio without a switcher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-5959bffe84ad797c2ec4",
+          "file": "kurio.spec.ts",
+          "line": 77,
+          "column": 3
+        },
+        {
+          "title": "blocked appearance storage still renders Kurio and an accessible menu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-35c01e5ed6a4e4dca3d1",
+          "file": "kurio.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "opening the menu preserves URL filters and cart through refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-3ee67f245aa2645f20cd",
+          "file": "kurio.spec.ts",
+          "line": 133,
+          "column": 1
+        },
+        {
+          "title": "menu keyboard navigation preserves an unsaved profile and restores trigger focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-fb8cd0ea549df19b80b9",
+          "file": "kurio.spec.ts",
+          "line": 150,
+          "column": 1
+        },
+        {
+          "title": "opening the menu preserves a checkout draft and review without creating an order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-d5420bfc570b3f2a1f1f",
+          "file": "kurio.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-9b374f77cb8c579eb6de",
+          "file": "kurio.spec.ts",
+          "line": 202,
+          "column": 1
+        },
+        {
+          "title": "Kurio is the only appearance across public, account, checkout and receipt routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-a34e81a52f37270ed438",
+          "file": "kurio.spec.ts",
+          "line": 27,
+          "column": 1
+        },
+        {
+          "title": "a saved expedition preference migrates to Kurio without a switcher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-1af8949d880df92f4cd6",
+          "file": "kurio.spec.ts",
+          "line": 77,
+          "column": 3
+        },
+        {
+          "title": "a saved unsupported preference migrates to Kurio without a switcher",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-c1c06cacf213038583b6",
+          "file": "kurio.spec.ts",
+          "line": 77,
+          "column": 3
+        },
+        {
+          "title": "blocked appearance storage still renders Kurio and an accessible menu",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-1c97479b082b9fc8729d",
+          "file": "kurio.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "opening the menu preserves URL filters and cart through refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-a2db0794224371e91604",
+          "file": "kurio.spec.ts",
+          "line": 133,
+          "column": 1
+        },
+        {
+          "title": "menu keyboard navigation preserves an unsaved profile and restores trigger focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-21cd70a915623078ee2a",
+          "file": "kurio.spec.ts",
+          "line": 150,
+          "column": 1
+        },
+        {
+          "title": "opening the menu preserves a checkout draft and review without creating an order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-c1bd52fb3a00f264a01f",
+          "file": "kurio.spec.ts",
+          "line": 175,
+          "column": 1
+        },
+        {
+          "title": "Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "747ec1984a6cbaad94a8-90b8685bd6acb32308b1",
+          "file": "kurio.spec.ts",
+          "line": 202,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "marketplace.spec.ts",
+      "file": "marketplace.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "catalog is accessible, responsive and has working detail navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-a419cf248b0c5fe56135",
+          "file": "marketplace.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "direct missing NFT displays a recovery state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-b5a6d1339ccf88d9a000",
+          "file": "marketplace.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "URL filters survive refresh and do not overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-319aac2307c5c8fb0fb7",
+          "file": "marketplace.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "keyboard users can reach navigation and visible focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-8e6d284e772987a7cdeb",
+          "file": "marketplace.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "private routes require sign in and return context is preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-2f7d2cb2aec44fab6e1c",
+          "file": "marketplace.spec.ts",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-5bd79e8bac25f4ebde50",
+          "file": "marketplace.spec.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "catalog visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-9a2c091e5d1b2e8566fe",
+          "file": "marketplace.spec.ts",
+          "line": 97,
+          "column": 1
+        },
+        {
+          "title": "catalog is accessible, responsive and has working detail navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-07df007bc81bc17d8861",
+          "file": "marketplace.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "direct missing NFT displays a recovery state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-5b60f7448b73b0b760d1",
+          "file": "marketplace.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "URL filters survive refresh and do not overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-ce5d4fffb8ea5a3ce3f6",
+          "file": "marketplace.spec.ts",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "keyboard users can reach navigation and visible focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-06e244ddc6a698b6f940",
+          "file": "marketplace.spec.ts",
+          "line": 60,
+          "column": 1
+        },
+        {
+          "title": "private routes require sign in and return context is preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-adc472af54d08f2b8c95",
+          "file": "marketplace.spec.ts",
+          "line": 70,
+          "column": 1
+        },
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-9645267dda8f7dbbf926",
+          "file": "marketplace.spec.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "catalog visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-25a08e3e3e8d3ce52b61",
+          "file": "marketplace.spec.ts",
+          "line": 97,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "mobile-home-layout.spec.ts",
+      "file": "mobile-home-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-4c0db26e0f454f376e09",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 375px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-ec77fef27e0eeb0294c9",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-7691553d430e45d6c9e7",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-a8fa64bc8875cf2b0c08",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-c2343581ea31c1a20006",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-8ed944f35726d0bb82c3",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 375px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-17322ececf860b836ae2",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-dfe6a8f09c31c1812a54",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-6dd9befc6c80d93e7c5e",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "mobile catalog preserves artwork and usable navigation at 440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "fea510fa1a2e2ee7daa7-f9f1c5198c9a388dc85e",
+          "file": "mobile-home-layout.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "newsletter.spec.ts",
+      "file": "newsletter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "newsletter confirms a real simulated POST and deduplicates repeated subscriptions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-12395d7723136c340141",
+          "file": "newsletter.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "newsletter rejects invalid input and preserves the draft after a server failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-c81354a43c4d0c29b335",
+          "file": "newsletter.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "footer social icons are explicit platform links and open an independent tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-2e908e2a01b06f094953",
+          "file": "newsletter.spec.ts",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "newsletter drafts are cleared when guest navigation signs into another identity",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-e95996480bd903abf3ce",
+          "file": "newsletter.spec.ts",
+          "line": 110,
+          "column": 1
+        },
+        {
+          "title": "newsletter confirms a real simulated POST and deduplicates repeated subscriptions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-04c0423155c53bcc4d4e",
+          "file": "newsletter.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "newsletter rejects invalid input and preserves the draft after a server failure",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-97cb269c82640cf1573b",
+          "file": "newsletter.spec.ts",
+          "line": 54,
+          "column": 1
+        },
+        {
+          "title": "footer social icons are explicit platform links and open an independent tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-2b0c713220670c9acade",
+          "file": "newsletter.spec.ts",
+          "line": 80,
+          "column": 1
+        },
+        {
+          "title": "newsletter drafts are cleared when guest navigation signs into another identity",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "bf56ae4106871f847130-87b9c00d6e89b0b5cb36",
+          "file": "newsletter.spec.ts",
+          "line": 110,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "order-reconnect.spec.ts",
+      "file": "order-reconnect.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d79df32e6a663271a341-9a57b4120c592accad22",
+          "file": "order-reconnect.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Socket.IO reconnect reconciles a still-pending order before a controlled deadline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d79df32e6a663271a341-791dcde6e7ff9c778a06",
+          "file": "order-reconnect.spec.ts",
+          "line": 75,
+          "column": 1
+        },
+        {
+          "title": "a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d79df32e6a663271a341-69f8fc998b421ba06d6b",
+          "file": "order-reconnect.spec.ts",
+          "line": 30,
+          "column": 1
+        },
+        {
+          "title": "Socket.IO reconnect reconciles a still-pending order before a controlled deadline",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "d79df32e6a663271a341-ed11af78c9d0c252fd35",
+          "file": "order-reconnect.spec.ts",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "price-range.spec.ts",
+      "file": "price-range.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "real price targets accept pointer and keyboard input without rounding the other ETH boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d5c152beabb5d8a254b-02cccc15a33d5d8dbb9d",
+          "file": "price-range.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "keyboard minimum adjustment preserves an exact manual maximum through the API and refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d5c152beabb5d8a254b-72b4574862b4f9892c17",
+          "file": "price-range.spec.ts",
+          "line": 72,
+          "column": 1
+        },
+        {
+          "title": "real price targets accept pointer and keyboard input without rounding the other ETH boundary",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d5c152beabb5d8a254b-e7e89827eedf4de18db8",
+          "file": "price-range.spec.ts",
+          "line": 15,
+          "column": 1
+        },
+        {
+          "title": "keyboard minimum adjustment preserves an exact manual maximum through the API and refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "8d5c152beabb5d8a254b-5a25adbe9244fe48d863",
+          "file": "price-range.spec.ts",
+          "line": 72,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "purchase.spec.ts",
+      "file": "purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest cart merges on login, validates coupons and completes an immutable receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-4db15edf6a9cd51d60e8",
+          "file": "purchase.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "declined payment preserves the cart and never displays a success receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-837665b6b054f08e1ac3",
+          "file": "purchase.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "timeout recovers the same persisted purchase after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-e49bc1b835d22f7ebf27",
+          "file": "purchase.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "profile and wallet validation persist while a second collector has isolated data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-eaebd327835826cb3d41",
+          "file": "purchase.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "guest cart merges on login, validates coupons and completes an immutable receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-bc329d9154d7c3d11e6f",
+          "file": "purchase.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "declined payment preserves the cart and never displays a success receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-3f0e435101a0cade56cb",
+          "file": "purchase.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "timeout recovers the same persisted purchase after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-1ded029378c1d01c78cb",
+          "file": "purchase.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "profile and wallet validation persist while a second collector has isolated data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "993c92a1c717c9480450-d5ecc4ea54d82ca922d1",
+          "file": "purchase.spec.ts",
+          "line": 105,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "realtime.spec.ts",
+      "file": "realtime.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Socket.IO price event reconciles the visible cart and announces a changed quote",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-d6a9e2745bf002483174",
+          "file": "realtime.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "tablet 768px preserves content without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-9282a5bd782eeafd90da",
+          "file": "realtime.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "duplicate and older Socket.IO events do not regress the cart snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-7f58f5b9a7d3d12b1b0d",
+          "file": "realtime.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "decreasing a selected quantity recovers after Socket.IO reduces its inventory limit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-dfa8438952e7e4ec1ac8",
+          "file": "realtime.spec.ts",
+          "line": 94,
+          "column": 1
+        },
+        {
+          "title": "Socket.IO price event reconciles the visible cart and announces a changed quote",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-73e3999b5566922b9658",
+          "file": "realtime.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "tablet 768px preserves content without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-8632e3281d8cd836baa0",
+          "file": "realtime.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "duplicate and older Socket.IO events do not regress the cart snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-679ac95c3f0354a11a88",
+          "file": "realtime.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "decreasing a selected quantity recovers after Socket.IO reduces its inventory limit",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-92b8dc653f22ba4ca484",
+          "file": "realtime.spec.ts",
+          "line": 94,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "recovery.spec.ts",
+      "file": "recovery.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "opening an older receipt preserves an uncertain purchase and recovery never duplicates it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ef78f3da5c9c24fceacf-4af8397a1a7e18f2691f",
+          "file": "recovery.spec.ts",
+          "line": 5,
+          "column": 1
+        },
+        {
+          "title": "opening an older receipt preserves an uncertain purchase and recovery never duplicates it",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "ef78f3da5c9c24fceacf-cfac3e648bdccdb71282",
+          "file": "recovery.spec.ts",
+          "line": 5,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "resilience.spec.ts",
+      "file": "resilience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "slow data keeps skeletons, error state recovers through real network mocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-44f84f1889657a048901",
+          "file": "resilience.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "unknown routes provide a real recovery link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-3cbeae22d7f6bbfd12d0",
+          "file": "resilience.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "slow data keeps skeletons, error state recovers through real network mocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-c080bb495d3758164c62",
+          "file": "resilience.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "unknown routes provide a real recovery link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-1e8a3b470eeb12b9c97b",
+          "file": "resilience.spec.ts",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "routing.spec.ts",
+      "file": "routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "session transport failures do not masquerade as a signed-out user and can recover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "43935043b4e8ab2472fa-871ce8a7f335efa853dd",
+          "file": "routing.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "session transport failures do not masquerade as a signed-out user and can recover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "43935043b4e8ab2472fa-d77c36c2086f75549390",
+          "file": "routing.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "views.spec.ts",
+      "file": "views.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "detail visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-89452838dca6d5078a80",
+          "file": "views.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "cart visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-da0f67c5b9e6e7fe7cd6",
+          "file": "views.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "payment visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-cdc6e4686e71ebe69638",
+          "file": "views.spec.ts",
+          "line": 45,
+          "column": 1
+        },
+        {
+          "title": "detail visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-98324da23598b927bcf7",
+          "file": "views.spec.ts",
+          "line": 21,
+          "column": 1
+        },
+        {
+          "title": "cart visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-4ef2e4d0e7439052c103",
+          "file": "views.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "payment visual regression",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "131fbee99f89d8203d70-c34652bb478d6e247ff7",
+          "file": "views.spec.ts",
+          "line": 45,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T19:25:53.442Z",
+    "duration": 82.267,
+    "expected": 0,
+    "skipped": 164,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

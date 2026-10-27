@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 @import './styleguide/theme/theme.generated.css';
 :root {
+  color-scheme: dark;
   font-family: var(--font-body);
   color: var(--foreground);
   background: var(--background);

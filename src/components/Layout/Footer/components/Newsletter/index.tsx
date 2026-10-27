@@ -31,7 +31,7 @@ export function Newsletter() {
           <Button
             type="submit"
             disabled={disabled}
-            aria-label="Inscrever na newsletter"
+            aria-label="Enviar inscrição na newsletter"
             aria-busy={isPending}
           >
             {isPending ? 'Enviando…' : 'Enviar'}

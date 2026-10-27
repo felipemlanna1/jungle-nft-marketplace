@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import * as Tabs from '@radix-ui/react-tabs';
-import { ArrowLeft, ArrowRight, ShoppingBag, Star } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ChevronLeft, ShoppingCart, Star } from 'lucide-react';
 import { errorMessage } from '../../../../services/marketplace';
 import { Button, Notice, QuantityInput } from '../../../../styleguide';
 import { NftDetailsSkeleton } from '../../components/NftDetailsSkeleton';
@@ -43,7 +43,7 @@ export function NFTDetailPage({ id }: { id: string }) {
     <section className="page-shell detail-page commerce-page">
       <div className="detail-mobile-toolbar">
         <Link to="/" aria-label="Voltar ao marketplace">
-          <ArrowLeft size={18} aria-hidden="true" />
+          <ChevronLeft size={18} aria-hidden="true" />
         </Link>
         <NftFavoriteAction
           nftId={id}
@@ -68,7 +68,7 @@ export function NFTDetailPage({ id }: { id: string }) {
               <strong className="detail-price">{price} ETH</strong>
               {item.reviewCount !== undefined && (
                 <span className="detail-rating">
-                  <span aria-label={`${item.rating ?? 0} de 5 estrelas`}>
+                  <span role="img" aria-label={`${item.rating ?? 0} de 5 estrelas`}>
                     {Array.from({ length: 5 }, (_, index) => (
                       <Star
                         key={index}
@@ -152,7 +152,7 @@ export function NFTDetailPage({ id }: { id: string }) {
                 onClick={addToCart}
                 disabled={add.isPending || !canAdd}
               >
-                <ShoppingBag size={20} />
+                <ShoppingCart size={20} aria-hidden="true" />
               </Button>
             </div>
           </div>

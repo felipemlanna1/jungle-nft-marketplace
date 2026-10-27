@@ -129,8 +129,22 @@
       "sha256": "705342ec33e4f47eac670c34477f559211d8e319e0b71c7acd90979624dbfc40"
     }
   ],
-  "limits": "A leitura é restrita aos componentes informados e foi complementada pela suíte completa de 148 casos no build otimizado. Não representa nota global, fidelidade integral ao Figma nem auditoria exaustiva de segurança.",
+  "limits": "A leitura estática permanece restrita aos componentes e hashes informados em sourcesAtReview, preservados como histórico. A verificação automatizada mais recente aprovou 164 casos no build final. Nenhuma dessas evidências representa nota global, fidelidade integral ao Figma ou auditoria exaustiva de segurança. Nova CI e auditoria HTTPS são registros independentes.",
   "finalVerification": {
+    "passed": 164,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "retries": 0,
+    "buildPort": 4173,
+    "report": "reports/e2e-final-build-evidence.json",
+    "html": "reports/playwright-final-build-html/index.html",
+    "sourceHash": "23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e",
+    "buildHash": "d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f",
+    "sourceAndBuildUnchanged": true,
+    "scope": "Verificação automatizada do build final. Não reclassifica os hashes históricos da leitura estática como uma nova leitura."
+  },
+  "priorFinalVerification": {
     "passed": 148,
     "failed": 0,
     "skipped": 0,

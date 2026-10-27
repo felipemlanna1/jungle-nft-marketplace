@@ -1,0 +1,41 @@
+{
+  "scope": "Enforcement estático de estilos do código próprio em src.",
+  "previousConfig": "git HEAD:eslint.config.js",
+  "currentConfig": "eslint.config.js",
+  "probes": [
+    {
+      "source": "export const Probe = () => <div style={{ color: \"red\" }} />;",
+      "before": [],
+      "after": [
+        {
+          "rule": "no-restricted-syntax",
+          "message": "Use stylesheet classes or data attributes instead of inline styles."
+        }
+      ]
+    },
+    {
+      "source": "const element = document.createElement(\"div\"); element.style.color = \"red\";",
+      "before": [],
+      "after": [
+        {
+          "rule": "no-restricted-properties",
+          "message": "'style' is restricted from being used. Use stylesheet classes or data attributes instead of CSSOM style access."
+        }
+      ]
+    },
+    {
+      "source": "export const Probe = () => <div className=\"artwork\" data-state=\"selected\" />;",
+      "before": [],
+      "after": []
+    }
+  ],
+  "unitTests": {
+    "passed": 29,
+    "files": [
+      "tests/tooling/inline-styles.test.ts",
+      "tests/tooling/architecture.test.ts"
+    ]
+  },
+  "lint": "npm run lint: aprovado em todo o projeto.",
+  "thirdParty": "Radix e Embla continuam autorizados a gerar estilos internos de posicionamento e movimento no DOM; não há exceção para o nosso código em src. As dependências não são reescritas pelo lint."
+}

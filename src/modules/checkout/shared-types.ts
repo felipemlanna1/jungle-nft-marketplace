@@ -42,6 +42,17 @@ export interface CheckoutFields {
   walletType: WalletType;
 }
 
+export interface CheckoutWalletsProps {
+  wallets: Wallet[];
+  selectedId: string;
+  connected: boolean;
+  disabled: boolean;
+  pending: boolean;
+  error?: string;
+  onRetry: () => void;
+  onSelect: (id: string) => void;
+}
+
 export interface CollectorFormProps {
   name: string;
   email: string;

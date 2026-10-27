@@ -1,11 +1,12 @@
 import { Link } from '@tanstack/react-router';
 import * as RadioGroup from '@radix-ui/react-radio-group';
-import { ArrowLeft, Wallet } from 'lucide-react';
+import { ArrowLeft, ChevronLeft, Wallet } from 'lucide-react';
 import { Button, Notice } from '../../../../styleguide';
 import { multiplyEth } from '../../../../domain/money';
 import { messageOf } from '../../../account/hooks/useAccount';
 import { CollectorForm } from '../../components/CollectorForm';
 import { Summary } from '../../components/OrderSummary';
+import { CheckoutWallets } from '../../components/CheckoutWallets';
 import { useCheckout } from './useCheckout';
 
 export function CheckoutPage() {
@@ -49,6 +50,12 @@ export function CheckoutPage() {
     );
   return (
     <section className="page-shell checkout-page commerce-page">
+      <nav className="checkout-mobile-heading" aria-label="Voltar ao carrinho">
+        <Link to="/cart" aria-label="Voltar ao carrinho">
+          <ChevronLeft size={20} aria-hidden="true" />
+        </Link>
+        <span>Pagamento com carteira</span>
+      </nav>
       <nav className="breadcrumbs" aria-label="Caminho da página">
         <Link to="/">Início</Link>
         <span>/</span>
@@ -105,6 +112,16 @@ export function CheckoutPage() {
             onSubmit={proceed}
           />
           <aside className="checkout-summary">
+            <CheckoutWallets
+              wallets={wallets.data ?? []}
+              selectedId={walletId}
+              connected={connection === 'connected'}
+              disabled={pending || Boolean(attempt) || Boolean(review)}
+              pending={wallets.isPending}
+              error={wallets.error ? messageOf(wallets.error) : undefined}
+              onRetry={() => void wallets.refetch()}
+              onSelect={changeWallet}
+            />
             <h2>Seus NFTs</h2>
             <div className="checkout-items-heading">
               <span>NFTs</span>
@@ -126,7 +143,8 @@ export function CheckoutPage() {
               ))}
             </div>
             <Link className="checkout-coupon-link" to="/cart">
-              Tem um código promocional? Aplique aqui
+              <span className="kurio-desktop-copy">Tem um código promocional? Aplique aqui</span>
+              <span className="kurio-mobile-copy">Ver itens e cupom</span>
             </Link>
             <Summary quote={review ?? quote.data} pending={quote.isPending} />
             {quote.error && <Notice tone="error">{messageOf(quote.error)}</Notice>}
@@ -189,30 +207,34 @@ export function CheckoutPage() {
                 {quote.data?.fingerprint !== review.fingerprint && (
                   <Notice>A cotação mudou. Confirme novamente o valor atualizado.</Notice>
                 )}
-                <Button
-                  disabled={pending || Boolean(attempt)}
-                  onClick={() => void submitPurchase()}
-                >
-                  {pending ? 'Confirmando…' : 'Confirmar compra'}
-                </Button>
+                <div className="checkout-purchase-actions">
+                  <Button
+                    disabled={pending || Boolean(attempt)}
+                    onClick={() => void submitPurchase()}
+                  >
+                    {pending ? 'Confirmando…' : 'Confirmar compra'}
+                  </Button>
+                </div>
                 <Button variant="ghost" disabled={pending} onClick={editReview}>
                   Editar dados
                 </Button>
               </div>
             ) : (
-              <Button
-                type="submit"
-                form="collector-form"
-                disabled={
-                  !quote.data ||
-                  Boolean(quote.error) ||
-                  connection !== 'connected' ||
-                  mixedNetworks ||
-                  Boolean(attempt)
-                }
-              >
-                Revisar compra
-              </Button>
+              <div className="checkout-purchase-actions">
+                <Button
+                  type="submit"
+                  form="collector-form"
+                  disabled={
+                    !quote.data ||
+                    Boolean(quote.error) ||
+                    connection !== 'connected' ||
+                    mixedNetworks ||
+                    Boolean(attempt)
+                  }
+                >
+                  Revisar compra
+                </Button>
+              </div>
             )}
             <Link to="/cart" className="back-link">
               <ArrowLeft size={14} /> Voltar ao carrinho

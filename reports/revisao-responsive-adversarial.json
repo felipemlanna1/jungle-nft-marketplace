@@ -1,0 +1,112 @@
+{
+  "completedAt": "2026-10-27T19:06:52.968060+00:00",
+  "baseCommit": "c5e11f190ad612f53d4b665d6c89dbe30444704a",
+  "scope": "Revisão adversarial limitada ao patch responsivo posterior a c5, em CheckoutWallets/Checkout, CartCSS, Gallery data-view, apresentação de isFetching e fallback/tema.",
+  "runtimeSourceModifiedByReview": false,
+  "methods": [
+    "Leitura do diff e dos caminhos consumidores de estado, sessão e compra",
+    "Conferência dos quatro estados de galeria com os valores CSS correspondentes",
+    "Leitura dos guards de proprietário e de cotação/idempotência preservados",
+    "Fixture Chromium estática e isolada do novo markup/CSS de carteira para confirmar overflow de texto; nenhuma requisição de compra ou alteração de aplicação foi feita"
+  ],
+  "p0": [],
+  "p1": [],
+  "findings": [
+    {
+      "id": "checkout-wallet-unbroken-label",
+      "priority": "P2",
+      "surface": "Checkout mobile / seleção de carteira",
+      "paths": [
+        "src/modules/checkout/components/CheckoutWallets/index.tsx",
+        "src/modules/checkout/pages/Checkout/styles.template.css"
+      ],
+      "trigger": "Carteira com label de 60 caracteres sem espaços, valor aceito pelo contrato walletSchema.",
+      "observed": "Nas larguras 320 e 414px, o cartão passou a650,09375px e o documento a678px. O texto permanece com overflow-wrap:normal.",
+      "cause": "O grid interno admite o tamanho mínimo do conteúdo e o strong não permite quebra da sequência longa.",
+      "suggestedFix": "Conter os itens de grid/flex com min-width:0 onde necessário e permitir overflow-wrap:anywhere nos textos da carteira, preservando o rótulo integral e o valor enviado.",
+      "evidence": "reports/checkout-wallet-label-counterexample.json",
+      "validationLimit": "Capturas de Chromium com viewport mobile; não representam teste físico emSafari/iOS.",
+      "status": "corrigido",
+      "fix": "min-width:0 na seção, radiogroup e label; overflow-wrap:anywhere no texto da carteira, somente no breakpoint mobile.",
+      "red": "UI real: API200 aceitou o label de60 caracteres. Documento678px nas larguras320/414/440, antes do patch.",
+      "green": "UI real e fixture estática: scrollWidth igual ao viewport320/414/440. Screenshots do cartão normal são byteidênticos antes/depois nas3 larguras.",
+      "redGreenEvidence": "reports/checkout-wallet-overflow/evidence.json",
+      "fixtureGreen": "reports/checkout-wallet-overflow/static-green.json"
+    }
+  ],
+  "verifiedByReading": [
+    {
+      "surface": "Seleção de carteira",
+      "evidence": "IDs/labels/redes vêm da query de carteiras por usuário. changeWallet desativa manualWallet, seleciona a rede da carteira e reinicia conexão/review. RadioGroup recebe disabled durante compra/tentativa/revisão.",
+      "limit": "Callbacks de seleção alteram somente estado local; as mutações de compra continuam protegidas pelos guards de proprietário e pelo transporte previamente existente."
+    },
+    {
+      "surface": "Compra",
+      "evidence": "O novo seletor não substitui walletId no backend nem altera o fingerprint, a revalidação da cotação, a chave idempotente ou a recuperação. A confirmação continua produzindo input com walletId/network capturados."
+    },
+    {
+      "surface": "Galeria",
+      "evidence": "data-view full/portrait/composition/texture preserva scale1/1.55/1.3/1.8 e object-position50%50%/50%25%/25%70%/70%70%. Reset da imagem, modal e seleção continuam no mesmo hook."
+    },
+    {
+      "surface": "Catálogo",
+      "evidence": "Retirar isFetching da condição da barra de resultados não altera query/filtro/ordenação; aria-busy comunica o carregamento sem inserir uma faixa visual durante refetch sem filtro."
+    },
+    {
+      "surface": "Fallback e tema",
+      "evidence": "O fallback continua apresentando botão de recarga com listener. color-scheme:dark permanece no CSS base, sem depender de style.colorScheme no provider."
+    }
+  ],
+  "organizationRubric": {
+    "numericScore": null,
+    "claimAboveNineSupported": false,
+    "reason": "Esta revisão limitada do patch não sustenta uma nota global superior a9/10. Uma nota não será escolhida para satisfazer a meta. Organização é avaliada separadamente de Lighthouse, identidade com Figma e execução publicada.",
+    "criteria": [
+      {
+        "criterion": "Separação de responsabilidades",
+        "evidence": "CheckoutWallets é apresentação tipada; API e transação continuam nos serviços/hook existente.",
+        "residual": "useCheckout ainda concentra orquestração de conexão, compra e recuperação em um hook extenso."
+      },
+      {
+        "criterion": "Propriedade do CSS",
+        "evidence": "Templates de Detail, Checkout, Gallery, RelatedNfts e QuantityInput são colocalizados e compilados pelo gerador de tema.",
+        "residual": "Base global e templates legados fora desta extração permanecem; isso não é uma reorganização integral de todo o CSS."
+      },
+      {
+        "criterion": "Consistência de estados",
+        "evidence": "Troca de carteira invalida conexão/revisão e desliga o modo manual. Dados continuam oriundos da API, sem carteira fixa fabricada no componente."
+      },
+      {
+        "criterion": "Evidência de equivalência",
+        "evidence": "250 históricos de declarações preservados e12 comparações de estilos/geometria equivalentes na extração de CSS.",
+        "limit": "Prova de equivalência de extração não comprova fidelidade com todos os frames ou ausência de bugs em todos os estados."
+      }
+    ]
+  },
+  "independenceLimit": "O revisor implementou a extração mecânica do CSS e participou de partes anteriores do transporte/API; portanto não se apresenta como auditor integral sem participação no código. A nova lógica de CheckoutWallets/Checkout/Gallery foi revisada como contribuição de outro integrante.",
+  "notClaimed": [
+    "Ausência absoluta de vulnerabilidades ou regressões",
+    "Fidelidade100% ao Figma",
+    "Performance acima de90 no novo artefato",
+    "Aprovação do novo pacote pelo conjunto completo de testes",
+    "Publicação de todas estas mudanças"
+  ],
+  "pendingEvidence": [
+    "Concluir os gates do novo build congelado e suas provas responsivas",
+    "Conferir a entrega publicada e medir o novo candidato sem remover recursos da auditoria"
+  ],
+  "sourceHashes": {
+    "src/modules/checkout/components/CheckoutWallets/index.tsx": "5011f90704f1d3bc249589c833eafc9b1a93651b28703e3ab0cdde5236fdb02e",
+    "src/modules/checkout/pages/Checkout/index.tsx": "26f75152e67d747e7e0d0b37d3a9a9285996c71a659e6a34cad6d0b48d979106",
+    "src/modules/checkout/pages/Checkout/useCheckout.ts": "493060ce1e1a990769c7e1efe9b8b48a4662a2a1c49fbe8f7e1ced63657ae42f",
+    "src/modules/checkout/pages/Checkout/styles.template.css": "0ca54cb99a1b8f2d998018bdfbb66abdaff888a5ba30cdcb4dadefaba6a6b16a",
+    "src/styleguide/theme/kurio/styles/cart-order.template.css": "47d523cee2be4e744129084905b6ae667c858e5cf46874b703254c6e1f703038",
+    "src/modules/catalog/components/NftGallery/index.tsx": "650525b9dbcae777daea1e0507e5d73cc86f461592ea6d7c5a0460dd78bd2d4e",
+    "src/modules/catalog/components/NftGallery/useNftGallery.ts": "e94728554214dce6e79fb8d33ce96f52ce46a553d7130a5978a2c9a9e8a0eb03",
+    "src/modules/catalog/components/NftGallery/styles.template.css": "92b558d77258bb69cbffc338193372ee968d1bf0475349960daff89ee9eea4f5",
+    "src/modules/catalog/pages/Marketplace/index.tsx": "c3d751c398e6fdaa877889bc894ec3598366962f412bad1c244a99424e879606",
+    "src/styleguide/components/StyleguideProvider/useStyleguide.ts": "28eb001dba7aca492c8b0040c1ab9eab6935a6a8115e265e252532856c63ed5a",
+    "src/main.tsx": "fcce468cd829b0829f610983cc40e3ba70f321532e12f0b7e81721c44a4044e9"
+  },
+  "followupScope": "Apenas correção CSSP2 autorizada após a revisão read-only; nenhumJSX,hookHTTP ou transação foi alterado pelo revisor."
+}

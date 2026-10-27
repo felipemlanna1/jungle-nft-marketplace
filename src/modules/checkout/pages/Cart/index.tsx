@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowLeft } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { messageOf } from '../../../account/hooks/useAccount';
 import { RelatedNfts } from '../../../catalog/components/RelatedNfts';
 import { CartItemRow } from '../../components/CartItemRow';
@@ -25,7 +25,7 @@ export function CartPage() {
       <section className="page-shell commerce-cart-page" aria-labelledby="cart-title">
         <nav className="commerce-cart-breadcrumb" aria-label="Localização">
           <Link to="/" aria-label="Voltar ao mercado">
-            <ArrowLeft className="cart-mobile-back" size={20} aria-hidden="true" />
+            <ChevronLeft className="cart-mobile-back" size={20} aria-hidden="true" />
             <span className="cart-desktop-crumb">Início / Mercado / Carrinho</span>
           </Link>
           <span className="cart-mobile-title" aria-hidden="true">

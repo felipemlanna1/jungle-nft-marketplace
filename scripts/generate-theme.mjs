@@ -2,6 +2,7 @@ import { format, resolveConfig } from 'prettier';
 import { build } from 'vite';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
+import { resolveBreakpoints } from './lib/resolve-breakpoints.mjs';
 const formatOptions = { ...(await resolveConfig('src/styles.css')), parser: 'css' };
 const dir = new URL('../node_modules/.cache/kurio-theme/', import.meta.url);
 await mkdir(dir, { recursive: true });
@@ -48,15 +49,21 @@ async function compileStyles(sources, target) {
   let compiledStyles = (await Promise.all(sources.map((source) => readFile(source, 'utf8')))).join(
     '\n',
   );
-  for (const [name, value] of Object.entries(themes[DEFAULT_THEME].tokens.breakpoints)) {
-    compiledStyles = compiledStyles.replaceAll(`__BREAKPOINT_${name.toUpperCase()}__`, value);
-  }
+  compiledStyles = resolveBreakpoints(compiledStyles, themes[DEFAULT_THEME].tokens.breakpoints);
   await writeFile(target, await format(compiledStyles, formatOptions));
 }
 await compileStyles(['src/styles.template.css'], 'src/styles.css');
 await compileStyles(
-  ['shell', 'catalog', 'account', 'commerce', 'cart-order'].map(
-    (name) => `src/styleguide/theme/kurio/styles/${name}.template.css`,
-  ),
+  [
+    ...['shell', 'catalog', 'account', 'commerce'].map(
+      (name) => `src/styleguide/theme/kurio/styles/${name}.template.css`,
+    ),
+    'src/styleguide/components/QuantityInput/styles.template.css',
+    'src/modules/catalog/components/NftGallery/styles.template.css',
+    'src/modules/catalog/components/RelatedNfts/styles.template.css',
+    'src/modules/catalog/pages/NftDetails/styles.template.css',
+    'src/modules/checkout/pages/Checkout/styles.template.css',
+    'src/styleguide/theme/kurio/styles/cart-order.template.css',
+  ],
   'src/styles.kurio.css',
 );

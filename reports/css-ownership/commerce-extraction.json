@@ -1,0 +1,66 @@
+{
+  "scope": "Mechanical relocation of the commerce theme rules into component/page-owned templates. Shared chrome remains in commerce.template.css.",
+  "originalSourceSha256": "1650c1fc3a9af1e67c67b9c956a1dc9378da713bab972aec04c556767388a0da",
+  "normalizedResolvedHistorySha256": "c20f43c6d93106a29f2b2a786c7298ad768ffb645b43a5b0ad38b4a09598dca2",
+  "selectorContextHistories": 250,
+  "exactDeclarationHistoriesPreserved": true,
+  "removedDeclarations": 0,
+  "changedDeclarationValues": 0,
+  "finalSourcesEqualComputedStyleTestInput": true,
+  "breakpoints": {
+    "COMPACT": "374px",
+    "MOBILE": "767px",
+    "TABLET": "1000px",
+    "DESKTOP": "1440px"
+  },
+  "addedToken": "compact=374px, replacing existing literal media-query thresholds; no existing breakpoint value changed",
+  "files": [
+    {
+      "path": "src/styleguide/theme/kurio/styles/commerce.template.css",
+      "sha256": "eca40cde8426d3f02590588aa5429632e58a842060fdc1cc6e40853d7deadf99",
+      "bytes": 248
+    },
+    {
+      "path": "src/styleguide/components/QuantityInput/styles.template.css",
+      "sha256": "5602018c332c0c923b8ce4e4b2aaacb1a0045c2fc15ef27816204201db200d6d",
+      "bytes": 636
+    },
+    {
+      "path": "src/modules/catalog/components/NftGallery/styles.template.css",
+      "sha256": "92b558d77258bb69cbffc338193372ee968d1bf0475349960daff89ee9eea4f5",
+      "bytes": 3388
+    },
+    {
+      "path": "src/modules/catalog/components/RelatedNfts/styles.template.css",
+      "sha256": "f387e5d553b0c06b8b1354f9a90c8fc305002547a9aa17beef4e14cc06988158",
+      "bytes": 2061
+    },
+    {
+      "path": "src/modules/catalog/pages/NftDetails/styles.template.css",
+      "sha256": "8a902da208b8ef74b38405e26d155e13909ec84aa413e71e505333704d40a7b7",
+      "bytes": 10507
+    },
+    {
+      "path": "src/modules/checkout/pages/Checkout/styles.template.css",
+      "sha256": "18ea7c7124686cc1bdd8a75904bf3d97c920162fbbd741406637e405578e9415",
+      "bytes": 10370
+    }
+  ],
+  "computedStyleEvidence": "reports/css-ownership/computed-styles.json",
+  "computedStyles": {
+    "surfaces": [
+      "detail",
+      "cart",
+      "checkout"
+    ],
+    "widths": [
+      320,
+      414,
+      768,
+      1440
+    ],
+    "all12Equal": true
+  },
+  "initialComparison": "reports/css-ownership/computed-styles-initial.json retains the initial differences caused only by comparing different animation frames. The final static comparison pauses timelines at the same instant; runtime animations are unchanged.",
+  "limits": "This proves ownership refactoring equivalence for preserved declaration histories and the captured DOMs. It does not certify Figma fidelity, every application state or Lighthouse performance."
+}

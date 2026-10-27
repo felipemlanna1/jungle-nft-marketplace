@@ -1,0 +1,297 @@
+{
+  "reviewedAt": "2026-10-27T18:53:31.854674+00:00",
+  "scope": "Home, catálogo, navegação móvel e rodapé. Capturas antes de nova publicação; não é uma certificação de fidelidade integral.",
+  "sources": [
+    {
+      "file": "home-414.webp",
+      "width": 1290,
+      "height": 936,
+      "sha256": "be63e785af4c0d24e16734ba45842de4dea924705d8bc6b5722ca580b17963f4",
+      "decodedPixelsEqualToComposition": true,
+      "sources": [
+        {
+          "file": "/tmp/jungle-figma-native/Mobile/Início.png",
+          "width": 414,
+          "height": 896,
+          "sha256": "448add49455d9f2c6dc1018dd494c704a25a2b05d7b1c109f4cf90796105ab3d"
+        },
+        {
+          "file": "/tmp/jungle-mobile-review/public-414-final.png",
+          "width": 414,
+          "height": 896,
+          "sha256": "bfc99902b0eaf8c3f09c36694acc36eab44cc61c9c550950b8eea3dbe25cfc00"
+        },
+        {
+          "file": "/tmp/jungle-mobile-review/local-414-final.png",
+          "width": 414,
+          "height": 896,
+          "sha256": "e009338d97a361801b18908d1b9a9f1061314a1bcd7e8974997f0b032226a3f5"
+        }
+      ]
+    },
+    {
+      "file": "home-440.webp",
+      "width": 904,
+      "height": 936,
+      "sha256": "04d149affe2ab373fe8f3dc9c39195c683670ca74925c673c53f45e9240f6b73",
+      "decodedPixelsEqualToComposition": true,
+      "sources": [
+        {
+          "file": "/tmp/jungle-mobile-review/public-440-final.png",
+          "width": 440,
+          "height": 896,
+          "sha256": "f2b4ade3a22a75372bef1198e17a8b873e9e65955b6aed9938d1aa25d33dafa9"
+        },
+        {
+          "file": "/tmp/jungle-mobile-review/local-440-final.png",
+          "width": 440,
+          "height": 896,
+          "sha256": "9aed4d337e0e7100497cd02ad781a9d5df2ae72ffb3389139fca360a722ac950"
+        }
+      ]
+    }
+  ],
+  "captureState": [
+    {
+      "name": "public",
+      "base": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+      "route": "/",
+      "width": 414,
+      "height": 896,
+      "filename": "/tmp/jungle-mobile-review/public-414-final.png",
+      "at": "2026-10-27T18:52:56.909Z",
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 414,
+        "script": [
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/index-mQV5_tLN.js"
+        ],
+        "css": [
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/index-KDfoDU2i.css",
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/useAddToCart-CdPuZ9P_.css"
+        ],
+        "heroCopy": {
+          "x": 40,
+          "y": 117,
+          "width": 188,
+          "height": 164,
+          "top": 117,
+          "right": 228,
+          "bottom": 281,
+          "left": 40
+        },
+        "catalog": {
+          "x": 24,
+          "y": 343,
+          "width": 366,
+          "height": 1348,
+          "top": 343,
+          "right": 390,
+          "bottom": 1691,
+          "left": 24
+        }
+      }
+    },
+    {
+      "name": "public",
+      "base": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+      "route": "/?tab=trending",
+      "width": 440,
+      "height": 896,
+      "filename": "/tmp/jungle-mobile-review/public-440-final.png",
+      "at": "2026-10-27T18:52:58.238Z",
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 440,
+        "script": [
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/index-mQV5_tLN.js"
+        ],
+        "css": [
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/index-KDfoDU2i.css",
+          "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/assets/useAddToCart-CdPuZ9P_.css"
+        ],
+        "heroCopy": {
+          "x": 40,
+          "y": 117,
+          "width": 214,
+          "height": 164,
+          "top": 117,
+          "right": 254,
+          "bottom": 281,
+          "left": 40
+        },
+        "catalog": {
+          "x": 24,
+          "y": 343,
+          "width": 392,
+          "height": 1442.21875,
+          "top": 343,
+          "right": 416,
+          "bottom": 1785.21875,
+          "left": 24
+        }
+      }
+    },
+    {
+      "name": "local",
+      "base": "http://127.0.0.1:5174",
+      "route": "/",
+      "width": 414,
+      "height": 896,
+      "filename": "/tmp/jungle-mobile-review/local-414-final.png",
+      "at": "2026-10-27T18:52:59.527Z",
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 414,
+        "script": [
+          "http://127.0.0.1:5174/@vite/client",
+          "http://127.0.0.1:5174/src/main.tsx?t=1793127172239"
+        ],
+        "css": [
+          "http://127.0.0.1:5174/src/app/components/BootstrapSkeleton/styles.css"
+        ],
+        "heroCopy": {
+          "x": 40,
+          "y": 107,
+          "width": 188,
+          "height": 156,
+          "top": 107,
+          "right": 228,
+          "bottom": 263,
+          "left": 40
+        },
+        "catalog": {
+          "x": 24,
+          "y": 343,
+          "width": 366,
+          "height": 1348,
+          "top": 343,
+          "right": 390,
+          "bottom": 1691,
+          "left": 24
+        }
+      }
+    },
+    {
+      "name": "local",
+      "base": "http://127.0.0.1:5174",
+      "route": "/?tab=trending",
+      "width": 440,
+      "height": 896,
+      "filename": "/tmp/jungle-mobile-review/local-440-final.png",
+      "at": "2026-10-27T18:53:00.597Z",
+      "metrics": {
+        "overflow": false,
+        "bodyWidth": 440,
+        "script": [
+          "http://127.0.0.1:5174/@vite/client",
+          "http://127.0.0.1:5174/src/main.tsx?t=1793127172239"
+        ],
+        "css": [
+          "http://127.0.0.1:5174/src/app/components/BootstrapSkeleton/styles.css"
+        ],
+        "heroCopy": {
+          "x": 40,
+          "y": 107,
+          "width": 214,
+          "height": 156,
+          "top": 107,
+          "right": 254,
+          "bottom": 263,
+          "left": 40
+        },
+        "catalog": {
+          "x": 24,
+          "y": 343,
+          "width": 392,
+          "height": 1442.21875,
+          "top": 343,
+          "right": 416,
+          "bottom": 1785.21875,
+          "left": 24
+        }
+      }
+    }
+  ],
+  "findings": [
+    {
+      "id": "tabs-gap",
+      "before": "Abas separadas por 4 px, com aparência de texto colado no print de 440 px.",
+      "after": "16 px entre controles, alvo vertical24 px; barra com rolagem interna nos aparelhos estreitos, sem overflow da página.",
+      "deviation": "Figma usa4 px no primeiro espaço e16 px no segundo; o espaçamento uniforme16 px corrige a legibilidade pedida pelo usuário."
+    },
+    {
+      "id": "mobile-card-actions",
+      "before": "Três botões permanentes sobre a parte inferior da arte em dispositivos sem hover.",
+      "after": "Apenas coração28 px no topo no mobile, conforme frame. Carrinho e ampliação continuam funcionais no detalhe; desktop mantém as três ações."
+    },
+    {
+      "id": "hero-position",
+      "before": "Texto começava em y=117 e CTA tinha linha de base inline adicional.",
+      "after": "Texto em y=107 e CTA em y=247, com arte em y=111 e banner em y=101, altura de 190 px preservados em 414 px."
+    },
+    {
+      "id": "card-artwork",
+      "before": "Arte centrada verticalmente, variando seu topo conforme a largura.",
+      "after": "Topo de 12 px fixo dentro do cartão e arte quadrada; proporção do cartão175/200 preservada e coluna direita deslocada 32 px como na referência."
+    },
+    {
+      "id": "tablet-fold",
+      "before": "Hero450 px e intervalo96 px levavam o início dos cartões a y=755 em 768 px.",
+      "after": "Hero360 px e intervalo64 px somente no tablet; cartões começam em y=633. Geometrias414 e 1440 px preservadas."
+    },
+    {
+      "id": "menu-symbol",
+      "before": "Símbolo genérico Grid2X2.",
+      "after": "Cinco vetores originais do Figma compõem o símbolo central; ação de menu e rótulo acessível preservados."
+    },
+    {
+      "id": "tabs-typography",
+      "before": "Abas ativas e inativas tinham peso 500.",
+      "after": "Peso 400 nas inativas e 700 na ativa, conforme a fonte do Figma."
+    },
+    {
+      "id": "menu-disc",
+      "before": "Círculo central com fundo opaco uniforme.",
+      "after": "Disco usa o SVG original, com gradiente de opacidade de 0,4 até 1. Ícone mantém opacidade e nitidez independentes do fundo."
+    }
+  ],
+  "remainingDifferences": [
+    {
+      "id": "cross-frame-catalog-inconsistency",
+      "description": "Os frames divergem: o desktop define Cosmic Bloom #118 a 1.29 ETH com a arte Sage no quarto item (node70342:2805); o mobile usa a arte amarela, mas repete Sage Nomad #009 a 1.69 ETH do segundo item (node70410:4153). A API mantém uma identidade e ordenação canônica coerente entre tamanhos. Isso não é atribuído a falha de CSS ou a simples erro da fixture.",
+      "verifiedSources": [
+        "/tmp/jungle-figma-context/home-0.txt:419",
+        "/tmp/jungle-figma-context/mobile-home-0.txt:214"
+      ]
+    },
+    {
+      "id": "mobile-footer",
+      "description": "Newsletter e rodapé abaixo do catálogo não aparecem no recorte nativo896 px. Foram mantidos por pedido explícito de funcionalidade; seu fim permanece acima da navegação fixa."
+    },
+    {
+      "id": "viewport-extension",
+      "description": "440 px e 320 px são adaptações responsivas; existe frame nativo fornecido para414 px. Não se afirma equivalência pixel a pixel nesses tamanhos."
+    }
+  ],
+  "gates": {
+    "mobileLayout": "5/5 passaram nas larguras 320, 375, 390, 414 e 440 px com testes de geometria, arte, abas, menu/foco e rodapé.",
+    "heroGeometry": "10/10 passaram. Junto aos cinco testes de layout móvel, a execução direcionada concluiu 15/15 em 1,1 minuto, sem atualização de snapshots.",
+    "baselineUpdate": false,
+    "sourceEdits": [
+      "src/modules/catalog/components/NFTCard/index.tsx",
+      "src/components/Layout/MobileNavigation/index.tsx",
+      "src/styleguide/theme/kurio/styles/catalog.template.css",
+      "src/styleguide/theme/kurio/styles/shell.template.css",
+      "src/styles.kurio.css"
+    ],
+    "lintAndFormatting": "ESLint e Prettier passaram nos arquivos alterados neste escopo."
+  },
+  "sourceSHA256": {
+    "src/modules/catalog/components/NFTCard/index.tsx": "e97691372f12f9212b7f0134aae3116cb530463899f93742b79681df49987839",
+    "src/components/Layout/MobileNavigation/index.tsx": "b6679392cad48c29d744c2c8972accf109e70b1700ef06659a4b31515cabc028",
+    "src/styleguide/theme/kurio/styles/catalog.template.css": "47988082ea8db50d737521afe8f3b31fc11afb9f87fcc3177204d6d56933dadc",
+    "src/styleguide/theme/kurio/styles/shell.template.css": "c6102459c605e54d0fa1ee1f938d13895dcfc11b9b8078475819445cedc39752",
+    "src/styles.kurio.css": "e745c4686f6dcf7720baf0f3f6803e4af00af1786a1595954a35e978f2a74204"
+  }
+}

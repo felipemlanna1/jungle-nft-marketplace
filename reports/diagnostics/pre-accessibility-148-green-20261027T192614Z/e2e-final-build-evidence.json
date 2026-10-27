@@ -1,0 +1,64 @@
+{
+  "scope": "Suíte Playwright completa em build otimizado servido na porta 4173, incluindo comparações visuais vigentes.",
+  "baseURL": "http://127.0.0.1:4173",
+  "sourceBefore": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
+  "sourceAfter": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
+  "buildBefore": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
+  "buildAfter": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
+  "allFilesBefore": "8133887121d10b3738c947c966f831c73a258d4da0f7f63a8a0934ee22c6201f",
+  "allFilesAfter": "8133887121d10b3738c947c966f831c73a258d4da0f7f63a8a0934ee22c6201f",
+  "changedFiles": [],
+  "preflightBefore": [
+    {
+      "path": "/",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744"
+    },
+    {
+      "path": "/assets/index-KDfoDU2i.css",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "654973754dbe7c29dfc593cbc971051950f65a944ccaa7306ffe1243daa52f52"
+    },
+    {
+      "path": "/assets/index-mQV5_tLN.js",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "ab8e75a28c79f40c29358928fdbe1af5c957fd8b9a4a07d55c261b991e74fd4d"
+    }
+  ],
+  "preflightAfter": [
+    {
+      "path": "/",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744"
+    },
+    {
+      "path": "/assets/index-KDfoDU2i.css",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "654973754dbe7c29dfc593cbc971051950f65a944ccaa7306ffe1243daa52f52"
+    },
+    {
+      "path": "/assets/index-mQV5_tLN.js",
+      "httpStatus": 200,
+      "matchesBuild": true,
+      "servedSha256": "ab8e75a28c79f40c29358928fdbe1af5c957fd8b9a4a07d55c261b991e74fd4d"
+    }
+  ],
+  "expectedFromListing": 148,
+  "stats": {
+    "startTime": "2026-10-27T17:36:42.570Z",
+    "duration": 403453.264,
+    "expected": 148,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "node": "v22.22.0",
+  "report": "reports/e2e-final-build-verified.json",
+  "approval": true,
+  "snapshotPolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução."
+}

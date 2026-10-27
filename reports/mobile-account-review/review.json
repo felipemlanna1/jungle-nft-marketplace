@@ -1,0 +1,62 @@
+{
+  "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+  "publicVersion": 3,
+  "nativeMobileReferenceWidth": 414,
+  "measurementSource": "measurements.json",
+  "status": "Correção deLogin implementada emfonte,aguardando geração consolidada doCSS e captura local; não publicada ainda.",
+  "nativeReferences": {
+    "Login": "/tmp/jungle-figma-native/Mobile/Login.png",
+    "Cadastro": "/tmp/jungle-figma-native/Mobile/Cadastro.png"
+  },
+  "noNativeMobileFrame": [
+    "Perfil do Colecionador",
+    "Carteiras",
+    "Confirmação de Pedido"
+  ],
+  "findings": [
+    {
+      "severity": "P1-visual",
+      "surface": "Login414",
+      "measuredBefore": {
+        "submitY": 589,
+        "googleY": 717,
+        "signupFooterY": 853
+      },
+      "native": {
+        "submitY": 492,
+        "googleY": 620,
+        "signupFooterY": 756
+      },
+      "cause": "Bloco de acessoDemo entre senha e botão desloca o restante em97px.",
+      "sourceFix": "BlocoDemo realocado após rodapé do formulário,com texto compacto; nenhum hookHTTP ou fluxo de autenticação alterado.",
+      "validationPending": "Medir após geraçãoCSS consolidada."
+    },
+    {
+      "surface": "Cadastro414",
+      "evidence": "InputsY311/373/435/497 eCTAy587; nativo312/374/436/498 e588. Diferença aproximada1px,semoverflowhorizontal.",
+      "limit": "Não é declaração de identidade de todos os pixels ou estados de foco."
+    },
+    {
+      "surface": "Profile/Wallet/Order",
+      "widths": [
+        414,
+        320
+      ],
+      "evidence": "Todas as telas tiveram scrollWidth igual ao viewport; comprovante permanece contido nos dois tamanhos. Capturas completas preservadas.",
+      "limit": "Sem frameMobile correspondente noFigma; avaliação de responsividade, não pixelperfect."
+    },
+    {
+      "surface": "Foco deLogin/Cadastro",
+      "sourceFix": "Mobile foca o contêinerDialog na abertura para não selecionar automaticamente umcampo de texto. Desktop mantém o padrão anterior.",
+      "limit": "Captura por navegador emulado não comprova comportamento de teclado físico emSafari/iOS."
+    }
+  ],
+  "typecheck": "Aprovado após alteração de fonte.",
+  "runtimeScope": [
+    "src/modules/account/components/AuthForm/index.tsx",
+    "src/modules/account/components/AuthForm/useAuthPresentation.ts",
+    "src/styleguide/theme/kurio/styles/account.template.css"
+  ],
+  "authHandshakeChanged": false,
+  "approvedForRelease": false
+}

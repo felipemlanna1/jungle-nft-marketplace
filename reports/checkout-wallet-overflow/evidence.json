@@ -1,0 +1,412 @@
+{
+  "method": "Real application UI with two isolated browser contexts, seeded only through the real MSW API. Normal-label card control and API-valid 60-character unbroken label. Same contexts and viewport before/after CSS-only patch.",
+  "apiAcceptedLongLabel": true,
+  "records": [
+    {
+      "phase": "red",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-normal-320.png",
+      "sha256": "73aaa50b404464d6955a110c4b8c843fb98aa1af07b96883493b8ef1ce6ef1ac",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 156,
+            "width": 264,
+            "height": 130,
+            "top": 156,
+            "right": 292,
+            "bottom": 286,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "red",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-normal-414.png",
+      "sha256": "492106121b2354d9b75b11d1c4c755e48a56a2e5c23b2112c8ab062fc3401edc",
+      "viewport": 414,
+      "scrollWidth": 414,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 358,
+            "height": 93,
+            "top": 124,
+            "right": 386,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "red",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-normal-440.png",
+      "sha256": "9c9d8e9125aaa6b9be57f96677fdc60a661ca32b9d23ae0e4addd8332686c0cf",
+      "viewport": 440,
+      "scrollWidth": 440,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 384,
+            "height": 93,
+            "top": 124,
+            "right": 412,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "red",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-long-320.png",
+      "sha256": "fe5d955b26797a51c88658b5d1cb74dcfcad7d3884648696bae65a073ca3ede1",
+      "viewport": 678,
+      "scrollWidth": 678,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 136,
+            "width": 650.09375,
+            "height": 93,
+            "top": 136,
+            "right": 678.09375,
+            "bottom": 229,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 249,
+            "width": 650.09375,
+            "height": 93,
+            "top": 249,
+            "right": 678.09375,
+            "bottom": 342,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "red",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-long-414.png",
+      "sha256": "145f1b65aba4d38a3583e4891ba3163fda40d9b3189e7dd7da17861ceb2fcaac",
+      "viewport": 678,
+      "scrollWidth": 678,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 650.09375,
+            "height": 93,
+            "top": 124,
+            "right": 678.09375,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 237,
+            "width": 650.09375,
+            "height": 93,
+            "top": 237,
+            "right": 678.09375,
+            "bottom": 330,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "red",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/red-long-440.png",
+      "sha256": "7092e9f169274e798cafbaccbf41db8c9f5dd5acce91953e84b4f516803a75b5",
+      "viewport": 678,
+      "scrollWidth": 678,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 650.09375,
+            "height": 93,
+            "top": 124,
+            "right": 678.09375,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 237,
+            "width": 650.09375,
+            "height": 93,
+            "top": 237,
+            "right": 678.09375,
+            "bottom": 330,
+            "left": 28
+          },
+          "overflowWrap": "normal"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-normal-320.png",
+      "sha256": "73aaa50b404464d6955a110c4b8c843fb98aa1af07b96883493b8ef1ce6ef1ac",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 156,
+            "width": 264,
+            "height": 130,
+            "top": 156,
+            "right": 292,
+            "bottom": 286,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-normal-414.png",
+      "sha256": "492106121b2354d9b75b11d1c4c755e48a56a2e5c23b2112c8ab062fc3401edc",
+      "viewport": 414,
+      "scrollWidth": 414,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 358,
+            "height": 93,
+            "top": 124,
+            "right": 386,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "normal",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-normal-440.png",
+      "sha256": "9c9d8e9125aaa6b9be57f96677fdc60a661ca32b9d23ae0e4addd8332686c0cf",
+      "viewport": 440,
+      "scrollWidth": 440,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 384,
+            "height": 93,
+            "top": 124,
+            "right": 412,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-long-320.png",
+      "sha256": "14b6e21da4c96a288c78f88579df09e78442acd6c56a9b51d348754f3d09fee2",
+      "viewport": 320,
+      "scrollWidth": 320,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 156,
+            "width": 264,
+            "height": 130,
+            "top": 156,
+            "right": 292,
+            "bottom": 286,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 306,
+            "width": 264,
+            "height": 170,
+            "top": 306,
+            "right": 292,
+            "bottom": 476,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-long-414.png",
+      "sha256": "ca3bbdc91352675abcf5df015f2b5af8a8a108f41c505aed817db260f514e6e9",
+      "viewport": 414,
+      "scrollWidth": 414,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 358,
+            "height": 93,
+            "top": 124,
+            "right": 386,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 237,
+            "width": 358,
+            "height": 132,
+            "top": 237,
+            "right": 386,
+            "bottom": 369,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    },
+    {
+      "phase": "green",
+      "kind": "long",
+      "seedStatus": 200,
+      "path": "reports/checkout-wallet-overflow/green-long-440.png",
+      "sha256": "15a1f73f49b8032be3ff97e2c2962ac7e258caf3d9c256351c1d20cca185a366",
+      "viewport": 440,
+      "scrollWidth": 440,
+      "cards": [
+        {
+          "label": "My collection wallet",
+          "rect": {
+            "x": 28,
+            "y": 124,
+            "width": 384,
+            "height": 93,
+            "top": 124,
+            "right": 412,
+            "bottom": 217,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        },
+        {
+          "label": "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL",
+          "rect": {
+            "x": 28,
+            "y": 237,
+            "width": 384,
+            "height": 112,
+            "top": 237,
+            "right": 412,
+            "bottom": 349,
+            "left": 28
+          },
+          "overflowWrap": "anywhere"
+        }
+      ]
+    }
+  ],
+  "normalLabelPixelControls": [
+    {
+      "width": 320,
+      "pixelIdentical": true,
+      "before": "73aaa50b404464d6955a110c4b8c843fb98aa1af07b96883493b8ef1ce6ef1ac",
+      "after": "73aaa50b404464d6955a110c4b8c843fb98aa1af07b96883493b8ef1ce6ef1ac"
+    },
+    {
+      "width": 414,
+      "pixelIdentical": true,
+      "before": "492106121b2354d9b75b11d1c4c755e48a56a2e5c23b2112c8ab062fc3401edc",
+      "after": "492106121b2354d9b75b11d1c4c755e48a56a2e5c23b2112c8ab062fc3401edc"
+    },
+    {
+      "width": 440,
+      "pixelIdentical": true,
+      "before": "9c9d8e9125aaa6b9be57f96677fdc60a661ca32b9d23ae0e4addd8332686c0cf",
+      "after": "9c9d8e9125aaa6b9be57f96677fdc60a661ca32b9d23ae0e4addd8332686c0cf"
+    }
+  ],
+  "allGreenContained": true,
+  "allNormalControlsPixelIdentical": true
+}

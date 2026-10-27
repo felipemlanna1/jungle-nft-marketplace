@@ -58,6 +58,8 @@ Use **Redefinir todos os dados** antes de repetir cenários. A simulação persi
 
 O código segue módulos de domínio com páginas, componentes, hooks próximos da apresentação e `shared-types.ts`. Serviços concentram HTTP; regras de dinheiro, catálogo e edições ficam fora de React. O styleguide centraliza primitivas, receitas, tokens semânticos e geração de CSS.
 
+Galeria, quantidade, recomendações, detalhe e pagamento têm estilos próximos dos seus componentes e páginas. O gerador resolve os pontos de quebra definidos no tema e rejeita tokens desconhecidos. Os estados visuais usam classes e atributos de dados; o lint impede estilos inline no código próprio. A [revisão de responsividade](./docs/decisions-responsive.md) registra as medidas, correções e contraprovas dessa organização.
+
 A página inicial carrega diretamente. Conta, detalhe, carrinho, pagamento e pedido usam rotas com carregamento sob demanda. TanStack Query controla estado remoto; respostas obsoletas e ações de sessões anteriores são descartadas. React Context fornece os tokens do tema Kurio. Zustand guarda apenas o identificador da prévia global de uma obra; os dados continuam vindo da API e do cache de consultas.
 
 Leia [ARCHITECTURE.md](./ARCHITECTURE.md) para contratos, decisões, cache, sessão, dinheiro, idempotência e eventos. O [registro de decisões](./docs/decisions.json) reúne o motivo, a evidência e a forma de validação. As [verificações automáticas](./docs/quality-gates.md) também são executadas pelo workflow do repositório.
@@ -70,7 +72,7 @@ A revisão leu 62 comentários do arquivo original. O [registro da revisão](./d
 
 Perfil, carteiras e confirmação têm adaptação mobile, mesmo quando não existe frame específico. Campos obrigatórios do pagamento continuam disponíveis em telas pequenas. Contagens de filtros e totais são calculados a partir dos dados reais da simulação. No carrinho mobile do Figma, os totais de linha somam 8,14 ETH e o subtotal desenhado informa 8,92 ETH; a aplicação mantém o cálculo correto da API.
 
-Os cards oferecem carrinho, favorito e ampliação. O favorito de visitante conduz ao login e preserva a intenção; a tela permite preencher a conta demonstrativa, sem redefinir uma senha que tenha sido alterada. A prévia consulta os dados atuais da obra. As recomendações vêm de um endpoint próprio e usam popularidade fictícia das fixtures, sem alegar comportamento real de colecionadores.
+Os cards desktop oferecem carrinho, favorito e ampliação. No mobile, o coração ocupa o canto da arte, como no frame; compra e ampliação ficam no detalhe, acessível pelo card. O favorito de visitante conduz ao login e preserva a intenção; a tela permite preencher a conta demonstrativa, sem redefinir uma senha que tenha sido alterada. A prévia consulta os dados atuais da obra. As recomendações vêm de um endpoint próprio e usam popularidade fictícia das fixtures, sem alegar comportamento real de colecionadores.
 
 O Diário da Cunhagem usa quatro previews do template e uma leitura explicitamente ilustrativa pela API. A newsletter confirma um POST apenas na simulação local, sem envio real de e-mail; repetir o endereço não duplica a inscrição. OAuth e recuperação de senha mantêm estado indisponível explícito. Ícones Lucide substituem letras decorativas do rodapé, e as redes sociais abrem as plataformas como links ilustrativos, sem perfis oficiais inventados.
 

@@ -48,5 +48,6 @@ bootstrap().catch(() => {
   const root = document.getElementById('root');
   if (root)
     root.innerHTML =
-      '<main style="padding:3rem;font-family:system-ui"><h1>Unable to start the demo</h1><p>Please reload this page. A service worker is required for the simulated API.</p><button onclick="location.reload()">Reload</button></main>';
+      '<main class="startup-failure"><h1>Não foi possível carregar a demonstração</h1><p>Recarregue a página para tentar novamente.</p><button type="button">Recarregar</button></main>';
+  root?.querySelector('button')?.addEventListener('click', () => location.reload());
 });

@@ -1,0 +1,55 @@
+{
+  "method": "Static Chromium rendering of the exact current generated CSS and the new CheckoutWallets markup with an API-valid60-character label. No application or purchase request was made.",
+  "rows": [
+    {
+      "viewport": 320,
+      "documentScrollWidth": 678,
+      "card": {
+        "x": 28,
+        "y": 32,
+        "width": 650.09375,
+        "height": 93,
+        "top": 32,
+        "right": 678.09375,
+        "bottom": 125,
+        "left": 28
+      },
+      "label": {
+        "x": 82,
+        "y": 46.5,
+        "width": 576.09375,
+        "height": 20,
+        "top": 46.5,
+        "right": 658.09375,
+        "bottom": 66.5,
+        "left": 82
+      },
+      "overflowWrap": "normal"
+    },
+    {
+      "viewport": 414,
+      "documentScrollWidth": 678,
+      "card": {
+        "x": 28,
+        "y": 32,
+        "width": 650.09375,
+        "height": 93,
+        "top": 32,
+        "right": 678.09375,
+        "bottom": 125,
+        "left": 28
+      },
+      "label": {
+        "x": 82,
+        "y": 46.5,
+        "width": 576.09375,
+        "height": 20,
+        "top": 46.5,
+        "right": 658.09375,
+        "bottom": 66.5,
+        "left": 82
+      },
+      "overflowWrap": "normal"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/junglegaming/frontend-challenge",
   "referenceRead": "Enunciado integral fornecido pelo candidato e contextos do Figma.",
-  "status": "Implementação coberta; execução consolidada e publicação ainda em validação.",
+  "status": "Revisão responsiva aprovada localmente: 224 testes unitários e 164 E2E, incluindo oito regressões visuais. Nova publicação e Lighthouse HTTPS desta revisão ainda em validação.",
   "scope": [
     {
       "requirement": "Stack obrigatória em uso efetivo",
@@ -124,9 +124,9 @@
     },
     {
       "requirement": "Playwright e regressão visual",
-      "implementation": "148 casos configurados em 22 arquivos cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria e oito baselines de início, detalhe, carrinho e pagamento. A contagem configurada não substitui o resultado executado.",
+      "implementation": "164 casos em 25 arquivos cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria, nomes longos, seleção de carteira, precisão dos filtros e oito baselines de início, detalhe, carrinho e pagamento.",
       "evidence": ["playwright.config.ts", "tests/e2e", ".github/workflows/quality.yml"],
-      "limit": "Quantidade configurada não comprova execução. O relatório final registra o resultado das rodadas e a versão validada."
+      "limit": "A execução completa passou com 164/164, sem falhas, retries ou casos ignorados, com fonte e build imutáveis. A confirmação em produção é registrada separadamente."
     },
     {
       "requirement": "Lighthouse em build otimizado, três medições por página e perfil",

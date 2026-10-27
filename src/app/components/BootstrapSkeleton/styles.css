@@ -1,6 +1,10 @@
 .bootstrap-header {
   justify-content: space-between;
 }
+.startup-failure {
+  padding: 3rem;
+  font-family: system-ui, sans-serif;
+}
 .bootstrap-brand {
   width: 92px;
   height: 30px;

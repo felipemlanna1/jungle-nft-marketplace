@@ -6,7 +6,9 @@ import { PasswordField } from '../PasswordField';
 import { AuthBackdrop } from '../AuthBackdrop';
 import { SocialOptions } from '../SocialOptions';
 import { useAuthForm } from './useAuthForm';
+import { useAuthPresentation } from './useAuthPresentation';
 export function AuthForm({ register }: AuthFormProps) {
+  const { contentRef, focusContent } = useAuthPresentation();
   const {
     name,
     setName,
@@ -39,7 +41,11 @@ export function AuthForm({ register }: AuthFormProps) {
       >
         <Dialog.Portal>
           <Dialog.Overlay className="account-auth-overlay" />
-          <Dialog.Content className={`account-auth-card ${register ? 'is-register' : ''}`}>
+          <Dialog.Content
+            ref={contentRef}
+            onOpenAutoFocus={focusContent}
+            className={`account-auth-card ${register ? 'is-register' : ''}`}
+          >
             <Dialog.Close className="auth-close" aria-label="Fechar e voltar ao início">
               <img src="/figma/login/imgX.svg" alt="" />
             </Dialog.Close>
@@ -133,21 +139,6 @@ export function AuthForm({ register }: AuthFormProps) {
                   >
                     Esqueceu sua senha?
                   </button>
-                  <div className="auth-demo-access">
-                    <Button
-                      type="button"
-                      variant="secondary"
-                      onClick={fillDemoLogin}
-                      disabled={mutation.isPending}
-                    >
-                      Usar conta de demonstração
-                    </Button>
-                    <p role={demoFilled ? 'status' : undefined}>
-                      {demoFilled
-                        ? 'Credenciais preenchidas. Se você já alterou a senha, informe a senha atual antes de entrar.'
-                        : 'Preenche as credenciais fictícias. Depois, selecione Entrar. Não use dados pessoais.'}
-                    </p>
-                  </div>
                 </>
               )}
               {error && (
@@ -183,6 +174,23 @@ export function AuthForm({ register }: AuthFormProps) {
                 {register ? 'Entre' : 'Crie uma conta'}
               </Link>
             </p>
+            {!register && (
+              <div className="auth-demo-access">
+                <Button
+                  type="button"
+                  variant="secondary"
+                  onClick={fillDemoLogin}
+                  disabled={mutation.isPending}
+                >
+                  Usar conta de demonstração
+                </Button>
+                <p role={demoFilled ? 'status' : undefined}>
+                  {demoFilled
+                    ? 'Credenciais fictícias preenchidas. Se você alterou a senha, use a senha atual antes de entrar.'
+                    : 'Preenche os campos com dados fictícios. Depois, selecione Entrar.'}
+                </p>
+              </div>
+            )}
           </Dialog.Content>
         </Dialog.Portal>
       </Dialog.Root>

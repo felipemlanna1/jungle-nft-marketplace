@@ -1,0 +1,105 @@
+.related-nfts {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+.related-nfts > h2 {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--text-accent);
+  font-weight: 700;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+.related-nfts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 32px;
+}
+.related-nfts article {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 16px;
+}
+.related-nfts article > a:first-child {
+  width: 100%;
+  background: var(--surface);
+  padding: 16px 8px 8px;
+  margin-bottom: 12px;
+}
+.related-nfts article img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.related-nfts article strong {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-accent);
+}
+.related-nft-skeleton {
+  height: 280px;
+}
+@media (max-width: __BREAKPOINT_TABLET__) {
+  .related-nfts-grid {
+    gap: 16px;
+  }
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .related-nfts {
+    margin-top: 48px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+  .related-nfts-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+  }
+  .related-nfts article {
+    flex: 0 0 174px;
+    scroll-snap-align: start;
+  }
+  .related-nfts article > a:first-child {
+    padding: 8px;
+  }
+}
+
+.related-carousel .related-nfts-grid {
+  display: flex;
+  gap: 0;
+  margin-left: -32px;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.related-carousel .carousel-slide {
+  flex-basis: 20%;
+  padding-left: 32px;
+}
+.related-carousel article {
+  width: 100%;
+}
+@media (max-width: __BREAKPOINT_TABLET__) {
+  .related-carousel .related-nfts-grid {
+    margin-left: -16px;
+  }
+  .related-carousel .carousel-slide {
+    padding-left: 16px;
+  }
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .related-carousel .carousel-slide {
+    flex-basis: 190px;
+  }
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .related-nft-skeleton {
+    flex: 0 0 174px;
+  }
+}

@@ -16,6 +16,7 @@ Listing tests:
   [desktop] › carousel.spec.ts:74:1 › related collectibles navigate actual slides without leaving the current artwork
   [desktop] › catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration
   [desktop] › catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh
+  [desktop] › checkout-wallet-selection.spec.ts:17:1 › changing a saved wallet leaves manual mode and purchases with the selected API wallet
   [desktop] › drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user
   [desktop] › drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user
   [desktop] › editorial.spec.ts:16:1 › editorial previews come from REST and open a lazy simulated reading with focus restored
@@ -52,12 +53,19 @@ Listing tests:
   [desktop] › marketplace.spec.ts:70:1 › private routes require sign in and return context is preserved
   [desktop] › marketplace.spec.ts:78:1 › demo controls are keyboard accessible and focus returns after close
   [desktop] › marketplace.spec.ts:97:1 › catalog visual regression
+  [desktop] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 320px
+  [desktop] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 375px
+  [desktop] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 390px
+  [desktop] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 414px
+  [desktop] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 440px
   [desktop] › newsletter.spec.ts:22:1 › newsletter confirms a real simulated POST and deduplicates repeated subscriptions
   [desktop] › newsletter.spec.ts:54:1 › newsletter rejects invalid input and preserves the draft after a server failure
   [desktop] › newsletter.spec.ts:80:1 › footer social icons are explicit platform links and open an independent tab
   [desktop] › newsletter.spec.ts:110:1 › newsletter drafts are cleared when guest navigation signs into another identity
   [desktop] › order-reconnect.spec.ts:30:1 › a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect
   [desktop] › order-reconnect.spec.ts:75:1 › Socket.IO reconnect reconciles a still-pending order before a controlled deadline
+  [desktop] › price-range.spec.ts:15:1 › real price targets accept pointer and keyboard input without rounding the other ETH boundary
+  [desktop] › price-range.spec.ts:72:1 › keyboard minimum adjustment preserves an exact manual maximum through the API and refresh
   [desktop] › purchase.spec.ts:41:1 › guest cart merges on login, validates coupons and completes an immutable receipt
   [desktop] › purchase.spec.ts:67:1 › declined payment preserves the cart and never displays a success receipt
   [desktop] › purchase.spec.ts:83:1 › timeout recovers the same persisted purchase after refresh
@@ -90,6 +98,7 @@ Listing tests:
   [mobile] › carousel.spec.ts:74:1 › related collectibles navigate actual slides without leaving the current artwork
   [mobile] › catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration
   [mobile] › catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh
+  [mobile] › checkout-wallet-selection.spec.ts:17:1 › changing a saved wallet leaves manual mode and purchases with the selected API wallet
   [mobile] › drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user
   [mobile] › drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user
   [mobile] › editorial.spec.ts:16:1 › editorial previews come from REST and open a lazy simulated reading with focus restored
@@ -126,12 +135,19 @@ Listing tests:
   [mobile] › marketplace.spec.ts:70:1 › private routes require sign in and return context is preserved
   [mobile] › marketplace.spec.ts:78:1 › demo controls are keyboard accessible and focus returns after close
   [mobile] › marketplace.spec.ts:97:1 › catalog visual regression
+  [mobile] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 320px
+  [mobile] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 375px
+  [mobile] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 390px
+  [mobile] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 414px
+  [mobile] › mobile-home-layout.spec.ts:4:3 › mobile catalog preserves artwork and usable navigation at 440px
   [mobile] › newsletter.spec.ts:22:1 › newsletter confirms a real simulated POST and deduplicates repeated subscriptions
   [mobile] › newsletter.spec.ts:54:1 › newsletter rejects invalid input and preserves the draft after a server failure
   [mobile] › newsletter.spec.ts:80:1 › footer social icons are explicit platform links and open an independent tab
   [mobile] › newsletter.spec.ts:110:1 › newsletter drafts are cleared when guest navigation signs into another identity
   [mobile] › order-reconnect.spec.ts:30:1 › a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect
   [mobile] › order-reconnect.spec.ts:75:1 › Socket.IO reconnect reconciles a still-pending order before a controlled deadline
+  [mobile] › price-range.spec.ts:15:1 › real price targets accept pointer and keyboard input without rounding the other ETH boundary
+  [mobile] › price-range.spec.ts:72:1 › keyboard minimum adjustment preserves an exact manual maximum through the API and refresh
   [mobile] › purchase.spec.ts:41:1 › guest cart merges on login, validates coupons and completes an immutable receipt
   [mobile] › purchase.spec.ts:67:1 › declined payment preserves the cart and never displays a success receipt
   [mobile] › purchase.spec.ts:83:1 › timeout recovers the same persisted purchase after refresh
@@ -147,4 +163,4 @@ Listing tests:
   [mobile] › views.spec.ts:21:1 › detail visual regression
   [mobile] › views.spec.ts:32:1 › cart visual regression
   [mobile] › views.spec.ts:45:1 › payment visual regression
-Total: 148 tests in 22 files
+Total: 164 tests in 25 files

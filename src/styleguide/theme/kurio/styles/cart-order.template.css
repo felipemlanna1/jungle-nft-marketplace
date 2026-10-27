@@ -783,15 +783,33 @@
   }
   .commerce-cart-item > div {
     align-self: center;
+    grid-column: 2 / -1;
+    padding-right: 24px;
   }
   .commerce-cart-unit-price {
     display: none;
   }
   .commerce-cart-quantity {
     grid-area: quantity;
+    grid-row: 2;
     align-self: center;
     display: flex;
     justify-content: flex-end;
+  }
+  .commerce-cart-quantity .quantity-control {
+    gap: 8px;
+  }
+  .commerce-cart-quantity .quantity-control button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border-color: var(--border-soft);
+    color: var(--foreground);
+    background: var(--surface-dark);
+  }
+  .commerce-cart-quantity .quantity-control input {
+    width: 20px;
+    font-size: 16px;
   }
   .commerce-cart-item-total {
     grid-area: price;

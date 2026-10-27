@@ -1,31 +1,31 @@
 {
   "scope": "Suíte Playwright completa em build otimizado servido na porta 4173, incluindo comparações visuais vigentes.",
   "baseURL": "http://127.0.0.1:4173",
-  "sourceBefore": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
-  "sourceAfter": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
-  "buildBefore": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
-  "buildAfter": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
-  "allFilesBefore": "8133887121d10b3738c947c966f831c73a258d4da0f7f63a8a0934ee22c6201f",
-  "allFilesAfter": "8133887121d10b3738c947c966f831c73a258d4da0f7f63a8a0934ee22c6201f",
+  "sourceBefore": "23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e",
+  "sourceAfter": "23f9ddc2a92b5ff36c23a7887a252f1954e1dc97df71a73e4c0bce7d569ff16e",
+  "buildBefore": "d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f",
+  "buildAfter": "d965897bfb6fca9a9d0ebaa0cc241dcc6eb7bffb0371fcba992ca52971b89b9f",
+  "allFilesBefore": "7ab2ca1fb0c139cf17477e5944704c8dd7158e84896e2fd5e21fa7c7bb6ab66c",
+  "allFilesAfter": "7ab2ca1fb0c139cf17477e5944704c8dd7158e84896e2fd5e21fa7c7bb6ab66c",
   "changedFiles": [],
   "preflightBefore": [
     {
       "path": "/",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744"
+      "servedSha256": "f9afb476a4db6f88ca5c24f0d9762e21ee73436465031cc4b4d637c5bc67e9d7"
     },
     {
-      "path": "/assets/index-KDfoDU2i.css",
+      "path": "/assets/index-B-PX_qGf.js",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "654973754dbe7c29dfc593cbc971051950f65a944ccaa7306ffe1243daa52f52"
+      "servedSha256": "601d7b3b11fc5885931ce98f4a6622632ef28783837c1ecf1afcc029cd2a2073"
     },
     {
-      "path": "/assets/index-mQV5_tLN.js",
+      "path": "/assets/index-VwxeBbe1.css",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "ab8e75a28c79f40c29358928fdbe1af5c957fd8b9a4a07d55c261b991e74fd4d"
+      "servedSha256": "bb88c0e4c784ee6b2b56e0d0dd0a36fa7149a1e38fdaa5b7d6a70c1c1657380f"
     }
   ],
   "preflightAfter": [
@@ -33,26 +33,26 @@
       "path": "/",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744"
+      "servedSha256": "f9afb476a4db6f88ca5c24f0d9762e21ee73436465031cc4b4d637c5bc67e9d7"
     },
     {
-      "path": "/assets/index-KDfoDU2i.css",
+      "path": "/assets/index-B-PX_qGf.js",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "654973754dbe7c29dfc593cbc971051950f65a944ccaa7306ffe1243daa52f52"
+      "servedSha256": "601d7b3b11fc5885931ce98f4a6622632ef28783837c1ecf1afcc029cd2a2073"
     },
     {
-      "path": "/assets/index-mQV5_tLN.js",
+      "path": "/assets/index-VwxeBbe1.css",
       "httpStatus": 200,
       "matchesBuild": true,
-      "servedSha256": "ab8e75a28c79f40c29358928fdbe1af5c957fd8b9a4a07d55c261b991e74fd4d"
+      "servedSha256": "bb88c0e4c784ee6b2b56e0d0dd0a36fa7149a1e38fdaa5b7d6a70c1c1657380f"
     }
   ],
-  "expectedFromListing": 148,
+  "expectedFromListing": 164,
   "stats": {
-    "startTime": "2026-10-27T17:36:42.570Z",
-    "duration": 403453.264,
-    "expected": 148,
+    "startTime": "2026-10-27T19:26:32.535Z",
+    "duration": 368352.54,
+    "expected": 164,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
@@ -60,5 +60,22 @@
   "node": "v22.22.0",
   "report": "reports/e2e-final-build-verified.json",
   "approval": true,
-  "snapshotPolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução."
+  "snapshotPolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
+  "approvalScope": "Aprovação apenas desta execução automatizada. Não atribui nota de qualidade, segurança, fidelidade integral ou desempenho.",
+  "projects": {
+    "desktop": 82,
+    "mobile": 82
+  },
+  "testFiles": 25,
+  "visualComparisons": 8,
+  "runPolicy": {
+    "workers": 1,
+    "retryValuesObserved": [
+      0
+    ],
+    "updateSnapshots": "none"
+  },
+  "htmlReport": "reports/playwright-final-build-html/index.html",
+  "ciRevalidation": "Pendente de nova execução do GitHub Actions. Esta prova local não substitui o resultado do serviço de CI.",
+  "performance": "A auditoria HTTPS da nova versão é independente e permanece pendente neste registro. Notas de versões anteriores não são atribuídas a este build."
 }

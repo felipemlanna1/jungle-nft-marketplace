@@ -1,6 +1,7 @@
-import { Button } from '../../../../styleguide';
+import { Button, RangeSlider } from '../../../../styleguide';
 import { catalogCategories } from '../../../../domain/catalog';
 import type { CatalogFiltersProps } from '../../shared-types';
+import { usePriceRange } from './usePriceRange';
 
 export function CatalogFilters({
   search,
@@ -14,6 +15,7 @@ export function CatalogFilters({
   priceError,
   idPrefix,
 }: CatalogFiltersProps) {
+  const range = usePriceRange(minPrice, maxPrice, onMinPrice, onMaxPrice);
   return (
     <div className="catalog-filter-panel">
       <section className="filter-section">
@@ -42,23 +44,10 @@ export function CatalogFilters({
         <h3>Faixa de preço</h3>
         <div className="price-controls">
           <div className="price-range-sliders">
-            <input
-              aria-label="Preço mínimo em ETH"
-              type="range"
-              min="0"
-              max="20"
-              step="0.01"
-              value={minPrice}
-              onChange={(event) => onMinPrice(event.target.value)}
-            />
-            <input
-              aria-label="Preço máximo em ETH"
-              type="range"
-              min="0"
-              max="20"
-              step="0.01"
-              value={maxPrice}
-              onChange={(event) => onMaxPrice(event.target.value)}
+            <RangeSlider
+              value={range.value}
+              onValueChange={range.change}
+              labels={['Preço mínimo em ETH', 'Preço máximo em ETH']}
             />
           </div>
           <div className="price-value-controls">

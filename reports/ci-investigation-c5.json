@@ -1,0 +1,33 @@
+{
+  "reviewedAt": "2026-10-27T18:48:07.121Z",
+  "run": {
+    "id": 40558435367,
+    "jobId": 122381380028,
+    "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40558435367/job/122381380028",
+    "commit": "c5e11f190ad612f53d4b665d6c89dbe30444704a",
+    "runner": "macos-latest",
+    "command": "npm run test:e2e -- --update-snapshots=none"
+  },
+  "facts": {
+    "passed": 147,
+    "failed": 1,
+    "visualBaselinesPassed": 8,
+    "geometryCasesPassed": 20,
+    "failedTest": "[mobile] carousel.spec.ts:48: hero highlights support dots, keyboard navigation and real pointer dragging",
+    "assertion": "After the touch drag, highlight 1 remained aria-current=true for 8 seconds."
+  },
+  "evidence": {
+    "artifactDirectory": "/tmp/jungle-ci-40558435367",
+    "failedLog": "/tmp/jungle-ci-40558435367-failed.log",
+    "artifact": "chromium-failures/test-results/carousel-hero-highlights-s-c1978-n-and-real-pointer-dragging-mobile/trace.zip"
+  },
+  "assessment": {
+    "baselineOrPlatformMismatch": false,
+    "confirmed": "A sequência de toque não trocou o destaque no runner. Os oito visuais e os vinte testes geométricos passaram no mesmo job.",
+    "timingEvidence": "O agente responsável pelo carrossel identificou no trace que 12 chamadas CDP sequenciais duraram aproximadamente 1,81 segundo, em vez dos 192 ms planejados pelas pausas locais. O tempo das chamadas depende do runner.",
+    "correctionOwner": "market_flows",
+    "correction": "Gesto de toque Chromium sintetizado em uma única chamada, com velocidade explícita e espera por estabilidade geométrica. As asserções de navegação e arraste são mantidas.",
+    "ciRevalidation": "Pendente de nova execução do GitHub Actions. Não se declara CI verde com base nos testes locais."
+  },
+  "changesByThisReview": []
+}

@@ -1,0 +1,43 @@
+.range-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  /* Keep the original 15px thumb centers inside the real 24px pointer targets. */
+  width: calc(100% + 9px);
+  margin-left: -4.5px;
+  user-select: none;
+  touch-action: none;
+}
+.range-slider-track {
+  position: relative;
+  flex: 1;
+  height: 4px;
+  margin-inline: 4.5px;
+  background: var(--primary);
+}
+.range-slider-selection {
+  position: absolute;
+  height: 100%;
+  background: var(--primary);
+}
+.range-slider-thumb {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: ew-resize;
+}
+.range-slider-thumb::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--primary);
+  pointer-events: none;
+}
+.range-slider-thumb:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}

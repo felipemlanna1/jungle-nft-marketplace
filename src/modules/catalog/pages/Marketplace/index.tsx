@@ -155,8 +155,7 @@ export function CatalogPage() {
                   (search.category && search.category !== 'all') ||
                   search.network ||
                   search.minPrice !== undefined ||
-                  search.maxPrice !== undefined ||
-                  catalog.isFetching) && (
+                  search.maxPrice !== undefined) && (
                   <div className="results-bar" aria-live="polite">
                     <span>
                       {catalog.data.total} resultados{search.q ? ` para “${search.q}”` : ''}
@@ -166,7 +165,7 @@ export function CatalogPage() {
                     </button>
                   </div>
                 )}
-                <div className="nft-grid">
+                <div className="nft-grid" aria-busy={catalog.isFetching}>
                   {catalog.data.items.map((nft, index) => (
                     <NFTCard
                       key={nft.id}
