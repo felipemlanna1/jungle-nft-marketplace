@@ -1,0 +1,36 @@
+{
+  "recordedAt": "2026-10-27T22:26:39.398892+00:00",
+  "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+  "failedBrowser": "Playwright Chrome for Testing 156.0.8078.4",
+  "operatingSystemEvidence": [
+    {
+      "captureTime": "2026-10-27 19:04:13 -0300",
+      "process": "Google Chrome for Testing",
+      "exception": "EXC_BREAKPOINT",
+      "signal": "SIGTRAP",
+      "terminationCode": 5
+    },
+    {
+      "captureTime": "2026-10-27 19:08:41 -0300",
+      "process": "Google Chrome for Testing",
+      "exception": "EXC_BREAKPOINT",
+      "signal": "SIGTRAP",
+      "terminationCode": 5
+    }
+  ],
+  "failureBoundary": "Puppeteer conecta e configura Target.setAutoAttach antes de abrir a página auditada.",
+  "cause": "A causa interna do SIGTRAP não foi determinada. Não há evidência de que CSS, MSW ou a aplicação tenham causado o encerramento.",
+  "change": "AUDIT_CHROME_PATH seleciona o mesmo executável para preflight e Lighthouse.",
+  "replacement": "Google Chrome 155.0.8059.80, perfil temporário isolado.",
+  "unchanged": [
+    "Lighthouse 13.5.0 estável",
+    "Throttling simulado padrão",
+    "Imagens, fontes e funcionalidades reais da aplicação",
+    "Reset de armazenamento por medição",
+    "Três medições por página e perfil"
+  ],
+  "attemptsPreserved": [
+    "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+    "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+  ]
+}

@@ -9,6 +9,7 @@ import { resolveLighthouseEngine } from './lib/lighthouse-engine.mjs';
 
 const target = process.env.AUDIT_URL || 'http://127.0.0.1:4173';
 const engine = resolveLighthouseEngine(process.env.AUDIT_ENGINE);
+const browserExecutable = process.env.AUDIT_CHROME_PATH || chromium.executablePath();
 const startedAt = new Date().toISOString();
 const outputDirectory =
   process.env.AUDIT_OUTPUT_DIR ||
@@ -84,7 +85,7 @@ const sourceRevision = {
 
 // Check the functioning app before measurement. Each Lighthouse run still uses its own fresh profile.
 async function preflight(path) {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, executablePath: browserExecutable });
   try {
     browserVersion = browser.version();
     const page = await browser.newPage();
@@ -155,7 +156,7 @@ for (const path of paths) {
       const exit = await new Promise((resolve, reject) => {
         const child = spawn(process.execPath, args, {
           stdio: 'inherit',
-          env: { ...process.env, CHROME_PATH: chromium.executablePath() },
+          env: { ...process.env, CHROME_PATH: browserExecutable },
         });
         child.on('error', reject);
         child.on('exit', resolve);
@@ -261,7 +262,11 @@ const summary = {
   node: process.version,
   lighthouse: lighthousePackage.version,
   engine,
-  browser: `Playwright Chromium ${browserVersion}`,
+  browser: `${process.env.AUDIT_CHROME_PATH ? 'Chrome' : 'Playwright Chromium'} ${browserVersion}`,
+  browserConfiguration: {
+    provider: process.env.AUDIT_CHROME_PATH ? 'external-executable' : 'playwright',
+    executablePath: browserExecutable,
+  },
   target,
   build: {
     fingerprint: buildFingerprint,

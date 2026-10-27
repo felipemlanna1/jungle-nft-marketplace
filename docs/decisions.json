@@ -502,6 +502,14 @@
         "tests/e2e/card-frame.spec.ts"
       ],
       "validation": "Passaram 16 casos locais focados, oito comparações visuais e 24 testes de produção. A conferência de 768, 1024 e 1440 px verifica arredondamento, borda, dimensões de cada faixa e imagem quadrada. Os cinco tamanhos de mobile também foram conferidos. Somente o snapshot do catálogo desktop foi atualizado após inspeção. Evidências em reports/card-frame/summary.json."
+    },
+    {
+      "id": "chrome-audit-executable",
+      "evidence": "Duas tentativas de auditoria da versão d18f892 foram interrompidas pelo Chrome for Testing 156.0.8078.4. Os relatórios do macOS registram EXC_BREAKPOINT/SIGTRAP nos mesmos horários; o encerramento ocorreu na conexão de depuração, antes de abrir a aplicação. A causa interna do navegador não foi determinada.",
+      "decision": "Permitir escolher o executável por AUDIT_CHROME_PATH. O preflight e o Lighthouse usam o mesmo caminho, e o resumo registra a origem e a versão do navegador.",
+      "reason": "Executar uma nova matriz com o Chrome estável instalado, sem mudar a aplicação, as imagens, os mocks ou as condições de rede e CPU. As tentativas interrompidas continuam preservadas.",
+      "implementation": ["scripts/lighthouse.mjs"],
+      "validation": "Conferência de sintaxe, lint e formatação do script, além dos 32 testes dos verificadores. A nova matriz terá diretório próprio e somente será declarada completa após as 12 medições."
     }
   ],
   "detailedRecords": [
