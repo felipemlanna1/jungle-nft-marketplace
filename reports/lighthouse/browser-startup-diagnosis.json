@@ -21,7 +21,7 @@
   "failureBoundary": "Puppeteer conecta e configura Target.setAutoAttach antes de abrir a página auditada.",
   "cause": "A causa interna do SIGTRAP não foi determinada. Não há evidência de que CSS, MSW ou a aplicação tenham causado o encerramento.",
   "change": "AUDIT_CHROME_PATH seleciona o mesmo executável para preflight e Lighthouse.",
-  "replacement": "Google Chrome 155.0.8059.80, perfil temporário isolado.",
+  "replacement": "Chrome 156.0.8078.48, perfil temporário isolado.",
   "unchanged": [
     "Lighthouse 13.5.0 estável",
     "Throttling simulado padrão",
@@ -32,5 +32,90 @@
   "attemptsPreserved": [
     "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
     "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
-  ]
+  ],
+  "versionNote": "O processo Chrome já aberto informava 155.0.8059.80. O executável instalado usado na auditoria informou 156.0.8078.48; essa é a versão registrada na nova matriz.",
+  "resolution": {
+    "status": "complete",
+    "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "auditSourceCommit": "2ef1ae6d70f766f97cc0bc3619ab5218b2d682ea",
+    "summary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+    "completeMatrix": true,
+    "totalRuns": 12,
+    "approved": true,
+    "officialMediansMet": true,
+    "lighthouse": "13.5.0",
+    "browser": "Chrome 156.0.8078.48",
+    "browserConfiguration": {
+      "provider": "external-executable",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "scope": "Medição dos mesmos 343 arquivos da versão atual publicada. Apenas a seleção do executável de auditoria mudou; aplicação, assets, mocks e condições de medição foram preservados.",
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 93,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          93,
+          93,
+          93
+        ]
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 94,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          94,
+          94
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      }
+    ],
+    "previousIncompleteAttempts": [
+      "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+      "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+    ]
+  }
 }

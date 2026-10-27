@@ -87,6 +87,6 @@ Para o Lighthouse, gere o build e mantenha o preview aberto em outro terminal. A
 
 Na revisão atual, passaram 224 testes unitários, 32 testes dos scripts e [172 E2E](https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969), incluindo oito comparações visuais. Na aplicação publicada, passaram 24 testes dos principais fluxos e das mudanças de layout.
 
-A última rodada completa do Lighthouse na Vercel, do commit `db81f5d`, teve performance 93 no início mobile, 94 no detalhe mobile e 100 no desktop; acessibilidade e boas práticas 100, e SEO 92. Essas notas são anteriores ao ajuste de borda dos cards. A nova medição do commit `d18f892` foi interrompida pelo navegador e ainda não tem uma rodada completa. A [análise](./docs/quality-gates.md#lighthouse) separa os resultados e as execuções interrompidas.
+Na versão publicada, o Lighthouse estável teve performance 93 no início mobile, 94 no detalhe mobile e 100 no desktop; acessibilidade e boas práticas 100, e SEO 92. As metas do enunciado foram atendidas na rodada completa de 12 medições, já com o ajuste de borda dos cards. A [análise](./docs/quality-gates.md#lighthouse) reúne os resultados, as condições de execução e as tentativas anteriores.
 
 [Relatórios](./reports) · [Decisões técnicas](./docs/decisions.json) · [Publicação](./docs/hosting.md)

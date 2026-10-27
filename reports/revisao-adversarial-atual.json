@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Versão d18f892 publicada na Vercel, com 343 arquivos conferidos e 24 testes de produção aprovados. A suíte completa no GitHub passou com 224 Vitest, 32 Node e 172 Chromium. Moldura e selo de esgotado corrigidos; oito comparações visuais aprovadas. A última matriz Lighthouse completa é de db81f5d; a nova medição foi interrompida pelo navegador. Nota subjetiva não atribuída. Envio não realizado.",
+  "status": "Versão atual publicada na Vercel e conferida por 343 arquivos idênticos ao build. Passaram 224 Vitest, 32 Node, 172 Chromium e 24 casos em produção. Matriz Lighthouse completa com performance 93/94 mobile e 100 desktop, acessibilidade 100, boas práticas 100 e SEO 92. Metas do enunciado atendidas. Nota subjetiva não atribuída; avaliação humana e envio pendentes.",
   "reviewType": "Revisão cruzada por evidências, sem uso de notas históricas.",
   "independence": {
     "independentScope": "Componentes e hooks React de catálogo, carrinho, checkout, recibo, roteamento e conta escritos por outros integrantes.",
@@ -205,8 +205,7 @@
   ],
   "openP1": [],
   "pendingReleaseEvidence": [
-    "Avaliação humana e envio pelo candidato.",
-    "Matriz Lighthouse da revisão de moldura não concluída; consultar currentPerformanceEvidence."
+    "Avaliação humana e envio pelo candidato."
   ],
   "clockMethodology": "Somente um dos E2E usa setFixedTime para controlar Date e testar reconexão antes do prazo do modelo. Timers, requisições, Socket.IO e interações de browser permanecem ativos. O outro E2E usa tempo normal e verifica a confirmação por fallback REST. Nenhum controle de relógio é usado no Lighthouse.",
   "performanceEvidence": {
@@ -247,11 +246,12 @@
     "scope": "Suíte completa de código do commit d18f892. O build local servido na Vercel foi verificado separadamente; a auditoria Lighthouse atual permaneceu incompleta."
   },
   "finalPerformanceEvidence": {
-    "summary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
-    "runDirectory": "reports/lighthouse/vercel/2026-10-27-card-status",
+    "summary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+    "runDirectory": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable",
     "target": "https://jungle-nft-marketplace-felipe.vercel.app",
-    "commit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
-    "completedAt": "2026-10-27T21:47:22.037Z",
+    "commit": "2ef1ae6d70f766f97cc0bc3619ab5218b2d682ea",
+    "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "completedAt": "2026-10-27T22:29:48.953Z",
     "completeMatrix": true,
     "approved": true,
     "gate": {
@@ -281,7 +281,11 @@
     "throttlingMethod": "simulate",
     "lighthouse": "13.5.0",
     "node": "v22.22.0",
-    "browser": "Playwright Chromium 156.0.8078.4",
+    "browser": "Chrome 156.0.8078.48",
+    "browserConfiguration": {
+      "provider": "external-executable",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
     "medians": [
       {
         "path": "/",
@@ -344,17 +348,9 @@
         ]
       }
     ],
-    "artifactVerification": {
-      "mode": "exact",
-      "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-      "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
-      "injectionCount": 0
-    },
-    "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
-    "runtimeSourceFingerprint": "f94fde58f7b13e31436bcbaf316ba3bb5c5a265eac9e16503c220f8d99699113",
-    "runtimeApplicationUnchangedDuringAudit": true,
-    "measurementLimit": "Medições do build prebuilt na Vercel, sem alterar o cenário, bloquear scripts ou remover imagens. Resultados de outros domínios são históricos.",
-    "classification": "Última matriz completa; anterior ao ajuste de moldura em d18f892. Não é a medição completa da versão atual."
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "runtimeSourceFingerprint": "107a4b0c982a326f5e253f2528c87a67170df20ed96e4dca2f1ad1a87d831350",
+    "scope": "Matriz da versão atual publicada; harness de auditoria em commit separado do runtime."
   },
   "openReleaseBlockers": [],
   "additionalAccessibilityFindings": [
@@ -927,6 +923,116 @@
       "runtimeSourceFingerprint": "f94fde58f7b13e31436bcbaf316ba3bb5c5a265eac9e16503c220f8d99699113",
       "runtimeApplicationUnchangedDuringAudit": true,
       "measurementLimit": "Medições do build prebuilt na Vercel, sem alterar o cenário, bloquear scripts ou remover imagens. Resultados de outros domínios são históricos."
+    },
+    {
+      "summary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+      "runDirectory": "reports/lighthouse/vercel/2026-10-27-card-status",
+      "target": "https://jungle-nft-marketplace-felipe.vercel.app",
+      "commit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+      "completedAt": "2026-10-27T21:47:22.037Z",
+      "completeMatrix": true,
+      "approved": true,
+      "gate": {
+        "scope": "Official challenge medians reported separately from the candidate acceptance above 8/10.",
+        "completeMatrix": true,
+        "categoryThresholds": {
+          "performance": 90,
+          "accessibility": 95,
+          "best-practices": 95,
+          "seo": 90
+        },
+        "officialMediansMet": true,
+        "allPerformanceRunsAbove90": true,
+        "allCategoryRunsAbove80": true,
+        "candidateAcceptance": {
+          "date": "2026-10-27",
+          "minimumExclusive": 80,
+          "source": "Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje."
+        },
+        "approved": true,
+        "aspirations": {
+          "mobilePerformanceMediansAtLeast95": false,
+          "requiredForApproval": false
+        }
+      },
+      "totalRuns": 12,
+      "throttlingMethod": "simulate",
+      "lighthouse": "13.5.0",
+      "node": "v22.22.0",
+      "browser": "Playwright Chromium 156.0.8078.4",
+      "medians": [
+        {
+          "path": "/",
+          "profile": "mobile",
+          "categories": {
+            "performance": 93,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            93,
+            93,
+            93
+          ]
+        },
+        {
+          "path": "/",
+          "profile": "desktop",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            100,
+            100,
+            100
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "mobile",
+          "categories": {
+            "performance": 94,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            94,
+            94,
+            94
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "desktop",
+          "categories": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "performanceRuns": [
+            100,
+            100,
+            100
+          ]
+        }
+      ],
+      "artifactVerification": {
+        "mode": "exact",
+        "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "injectionCount": 0
+      },
+      "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+      "runtimeSourceFingerprint": "f94fde58f7b13e31436bcbaf316ba3bb5c5a265eac9e16503c220f8d99699113",
+      "runtimeApplicationUnchangedDuringAudit": true,
+      "measurementLimit": "Medições do build prebuilt na Vercel, sem alterar o cenário, bloquear scripts ou remover imagens. Resultados de outros domínios são históricos.",
+      "classification": "Última matriz completa; anterior ao ajuste de moldura em d18f892. Não é a medição completa da versão atual."
     }
   ],
   "historicalReleaseBlockers": [
@@ -1055,15 +1161,15 @@
     "mirrorVersion": 5,
     "ciApproved": true,
     "productionSubsetApproved": true,
-    "performanceApproved": null,
+    "performanceApproved": true,
     "humanReview": "pending",
     "submissionPerformed": false,
-    "overallComplete": false,
+    "overallComplete": true,
     "subjectiveCodeScore": null,
-    "performanceApprovalBasis": "Última matriz completa pertence ao commit anterior. Nova auditoria interrompida, sem aprovação completa atribuída ao d18f892.",
-    "officialPerformanceTargetMet": null,
-    "readyForSubmission": false,
-    "completionScope": "Correção visual, verificações funcionais e publicação concluídas; medição adicional de performance e avaliação humana pendentes.",
+    "performanceApprovalBasis": "Doze medições completas dos mesmos arquivos publicados, usando Lighthouse 13.5.0 e o Chrome instalado, com ambiente registrado.",
+    "officialPerformanceTargetMet": true,
+    "readyForSubmission": true,
+    "completionScope": "Implementação, verificações automatizadas e publicação concluídas. A avaliação humana e a submissão pertencem ao candidato.",
     "acceptanceEvidence": "reports/release-readiness.json",
     "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
     "deploymentId": "dpl_F7YqDUE6nrEhhmeRDCusbhvT9Voc",
@@ -1131,18 +1237,88 @@
     "limitation": "Correção oficial do modelo HTTP/3, sem alteração dos assets. Resultado não substitui a matriz estável."
   },
   "currentPerformanceEvidence": {
-    "status": "incomplete",
-    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
-    "attempts": [
+    "status": "complete",
+    "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "auditSourceCommit": "2ef1ae6d70f766f97cc0bc3619ab5218b2d682ea",
+    "summary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+    "completeMatrix": true,
+    "totalRuns": 12,
+    "approved": true,
+    "officialMediansMet": true,
+    "lighthouse": "13.5.0",
+    "browser": "Chrome 156.0.8078.48",
+    "browserConfiguration": {
+      "provider": "external-executable",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "scope": "Medição dos mesmos 343 arquivos da versão atual publicada. Apenas a seleção do executável de auditoria mudou; aplicação, assets, mocks e condições de medição foram preservados.",
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 93,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          93,
+          93,
+          93
+        ]
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 94,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          94,
+          94
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      }
+    ],
+    "previousIncompleteAttempts": [
       "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
       "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
-    ],
-    "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
-    "completeMatrix": false,
-    "approved": null,
-    "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
-    "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
-    "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
+    ]
   },
   "currentFunctionalEvidence": {
     "commit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
@@ -1203,5 +1379,24 @@
       "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
     },
     "fullE2eTests": 172
+  },
+  "previousIncompletePerformance": {
+    "status": "incomplete",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "attempts": [
+      "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+      "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+    ],
+    "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
+    "completeMatrix": false,
+    "approved": null,
+    "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+    "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+    "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
+  },
+  "playwrightHtmlEvidence": {
+    "current172": "CI e comandos reproduzíveis; HTML da rodada 172 não foi publicado pelo workflow anterior, que só enviava arquivos em falhas.",
+    "historical164": "reports/playwright-final-build-html/index.html",
+    "improvement": "O workflow agora preserva HTML e traces em toda execução. Os próximos artefatos ficam no respectivo run, sem reatribuir o HTML histórico à suíte atual."
   }
 }

@@ -1,6 +1,6 @@
 {
-  "recordedAt": "2026-10-27T22:13:30.568673+00:00",
-  "source": "Testes e conferência de arquivos da versão atual; última auditoria completa de performance identificada separadamente.",
+  "recordedAt": "2026-10-27T22:32:03.133548+00:00",
+  "source": "Suíte completa do runtime atual, 24 testes de produção e matriz Lighthouse completa dos mesmos arquivos publicados.",
   "instruction": "Se as notas ficatem acima de 8 esta aprovado, preciso mandar ainda hoje",
   "minimumExclusive": 80,
   "categories": [
@@ -9,13 +9,13 @@
     "best-practices",
     "seo"
   ],
-  "completeMatrix": false,
-  "totalRuns": 8,
-  "totalCategoryScores": 32,
-  "minimumObservedScore": null,
-  "approved": null,
-  "stableSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
-  "officialChallengeMediansMet": null,
+  "completeMatrix": true,
+  "totalRuns": 12,
+  "totalCategoryScores": 48,
+  "minimumObservedScore": 92,
+  "approved": true,
+  "stableSummary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+  "officialChallengeMediansMet": true,
   "experimentalComparison": {
     "version": "13.5.0-dev.20261023",
     "experimental": true,
@@ -41,14 +41,14 @@
     "focusedLocalE2e": 16,
     "ciE2eScope": "Execução completa do commit d18f892: 172/172 Chromium, incluindo as oito comparações visuais, sem atualizar snapshots no CI."
   },
-  "readyForCandidateReviewAndSubmission": false,
+  "readyForCandidateReviewAndSubmission": true,
   "submissionPerformed": false,
-  "limitation": "A correção visual foi publicada e verificada por testes. A medição adicional de performance não foi concluída por encerramento do navegador de auditoria; a matriz completa anterior permanece identificada pelo commit.",
+  "limitation": "Medições de laboratório em Chromium/Chrome, cenário padrão dos mocks e dados fictícios. Não representam certificação de identidade integral ao Figma nem garantia de contratação.",
   "security": {
     "tool": "gitleaks",
     "findings": 0,
     "report": "reports/secrets-review.json",
-    "bytesScanned": 62135657
+    "bytesScanned": 19213886
   },
   "finalChecks": {
     "command": "npm run check",
@@ -183,6 +183,106 @@
     }
   ],
   "currentPerformance": {
+    "status": "complete",
+    "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "auditSourceCommit": "2ef1ae6d70f766f97cc0bc3619ab5218b2d682ea",
+    "summary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+    "completeMatrix": true,
+    "totalRuns": 12,
+    "approved": true,
+    "officialMediansMet": true,
+    "lighthouse": "13.5.0",
+    "browser": "Chrome 156.0.8078.48",
+    "browserConfiguration": {
+      "provider": "external-executable",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "scope": "Medição dos mesmos 343 arquivos da versão atual publicada. Apenas a seleção do executável de auditoria mudou; aplicação, assets, mocks e condições de medição foram preservados.",
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 93,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          93,
+          93,
+          93
+        ]
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 94,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          94,
+          94
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      }
+    ],
+    "previousIncompleteAttempts": [
+      "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+      "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+    ]
+  },
+  "readyForCandidateReview": true,
+  "pendingChecks": [
+    "Avaliação humana e envio pelo candidato."
+  ],
+  "ci": {
+    "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
+    "status": "completed",
+    "conclusion": "success",
+    "checksJob": "success",
+    "browserJob": "success",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "completedAt": "2026-10-27T22:16:27Z",
+    "workers": 1,
+    "updateSnapshots": "none",
+    "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
+  },
+  "previousIncompletePerformance": {
     "status": "incomplete",
     "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
     "attempts": [
@@ -196,20 +296,9 @@
     "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
     "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
   },
-  "readyForCandidateReview": true,
-  "pendingChecks": [
-    "Concluir uma matriz Lighthouse da versão com a nova moldura, se exigida para liberar o envio. Avaliação humana e submissão seguem com o candidato."
-  ],
-  "ci": {
-    "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
-    "status": "completed",
-    "conclusion": "success",
-    "checksJob": "success",
-    "browserJob": "success",
-    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
-    "completedAt": "2026-10-27T22:16:27Z",
-    "workers": 1,
-    "updateSnapshots": "none",
-    "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
+  "playwrightHtmlEvidence": {
+    "current172": "CI e comandos reproduzíveis; HTML da rodada 172 não foi publicado pelo workflow anterior, que só enviava arquivos em falhas.",
+    "historical164": "reports/playwright-final-build-html/index.html",
+    "improvement": "O workflow agora preserva HTML e traces em toda execução. Os próximos artefatos ficam no respectivo run, sem reatribuir o HTML histórico à suíte atual."
   }
 }

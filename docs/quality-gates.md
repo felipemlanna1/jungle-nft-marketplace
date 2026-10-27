@@ -24,12 +24,16 @@ A primeira revisão do carrossel teve duas falhas de gesto e teclado no desktop.
 Para medir localmente, gere o build, execute `npm run preview` em outro terminal e depois `npm run audit:lighthouse`. Para repetir a medição do site publicado:
 
 ```bash
-AUDIT_URL=https://jungle-nft-marketplace-felipe.vercel.app npm run audit:lighthouse
+AUDIT_CHROME_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+AUDIT_URL=https://jungle-nft-marketplace-felipe.vercel.app \
+npm run audit:lighthouse
 ```
+
+`AUDIT_CHROME_PATH` permite usar o Chrome instalado. A conferência inicial e o Lighthouse usam o mesmo executável. Sem essa opção, o script usa o Chromium do Playwright. A simulação padrão de rede e processamento, os assets e os mocks são mantidos.
 
 Cada execução começa com os dados do navegador limpos e usa o cenário padrão dos mocks. O Lighthouse simula a velocidade de rede e processamento de cada perfil. São três medições de cada tela em mobile e desktop, com todos os relatórios HTML e JSON preservados. O script confere os arquivos publicados, a API e a conexão Socket.IO antes de medir.
 
-A [última rodada completa na Vercel](../reports/lighthouse/vercel/2026-10-27-card-status/summary.json) é do commit `db81f5d`, anterior ao ajuste de raio e borda dos cards em `d18f892`. Usou Lighthouse 13.5.0 estável, Node.js 22.22.0 e Chromium 156.0.8078.4. A tabela mostra a mediana, o valor do meio das três medições desse commit:
+A [rodada completa atual na Vercel](../reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json) já inclui o ajuste de raio e borda dos cards de `d18f892`. Os 343 arquivos publicados foram comparados com o build local. A execução usou Lighthouse 13.5.0 estável, Node.js 22.22.0 e Google Chrome 156.0.8078.48 instalado. A tabela mostra a mediana, o valor do meio das três medições:
 
 | Tela    | Perfil  | Performance | Acessibilidade | Boas práticas | SEO |
 | ------- | ------- | ----------- | -------------- | ------------- | --- |
@@ -38,11 +42,11 @@ A [última rodada completa na Vercel](../reports/lighthouse/vercel/2026-10-27-ca
 | Detalhe | Mobile  | 94          | 100            | 100           | 92  |
 | Detalhe | Desktop | 100         | 100            | 100           | 92  |
 
-As metas do enunciado são 90 em performance, 95 em acessibilidade e boas práticas e 90 em SEO. No commit `db81f5d`, todas foram atendidas nas quatro combinações de tela e perfil, com performance acima de 90 nas 12 execuções.
+As metas do enunciado são 90 em performance, 95 em acessibilidade e boas práticas e 90 em SEO. Todas foram atendidas nas quatro combinações de tela e perfil, com performance acima de 90 nas 12 execuções.
 
-Nessa rodada, o LCP mediano foi de 3.178,6 ms no início mobile e 3.029,1 ms no detalhe mobile; no desktop, 712,8 ms e 583,8 ms. O CLS ficou em zero nas 12 execuções. O TBT mediano foi de 8 ms no início mobile e zero nos demais casos.
+Nessa rodada, o LCP mediano foi de 3.187,1 ms no início mobile e 3.037,9 ms no detalhe mobile; no desktop, 722,1 ms e 628,5 ms. O CLS ficou em zero nas 12 execuções. O TBT mediano foi de 39 ms no início mobile, 14 ms no detalhe mobile e zero no desktop.
 
-Após o ajuste de borda em `d18f892`, a [primeira tentativa](../reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json) e a [segunda](../reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json) foram interrompidas pelo navegador com `TargetCloseError`. Os arquivos parciais foram mantidos. Ainda não há uma rodada Lighthouse completa dessa revisão; a tabela continua identificada com o commit anterior. O ajuste atual foi conferido pelos 224 testes Vitest, 32 testes Node e 172 testes no navegador, incluindo oito comparações visuais, além dos 24 testes na Vercel.
+Antes dessa rodada completa, a [primeira tentativa](../reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json) e a [segunda](../reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json) foram interrompidas pelo navegador com `TargetCloseError`. Os arquivos parciais continuam registrados. A tabela usa a execução completa posterior com o Chrome instalado.
 
 ## Histórico das outras medições
 

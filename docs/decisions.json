@@ -475,7 +475,7 @@
         "package.json",
         "package-lock.json"
       ],
-      "validation": "Os 343 arquivos da versão d18f892 foram comparados com o build local e 24 testes no domínio público passaram. A última matriz Lighthouse completa é de db81f5d, anterior ao ajuste da moldura. As tentativas posteriores interrompidas estão registradas separadamente em reports/vercel-deployment.json."
+      "validation": "Os 343 arquivos publicados são iguais ao build local e 24 testes de produção passaram. A matriz Lighthouse completa da versão atual atende às metas do enunciado. Detalhes em reports/vercel-deployment.json."
     },
     {
       "id": "card-status-label",
@@ -509,7 +509,15 @@
       "decision": "Permitir escolher o executável por AUDIT_CHROME_PATH. O preflight e o Lighthouse usam o mesmo caminho, e o resumo registra a origem e a versão do navegador.",
       "reason": "Executar uma nova matriz com o Chrome estável instalado, sem mudar a aplicação, as imagens, os mocks ou as condições de rede e CPU. As tentativas interrompidas continuam preservadas.",
       "implementation": ["scripts/lighthouse.mjs"],
-      "validation": "Conferência de sintaxe, lint e formatação do script, além dos 32 testes dos verificadores. A nova matriz terá diretório próprio e somente será declarada completa após as 12 medições."
+      "validation": "A nova matriz completou as 12 medições com Chrome 156.0.8078.48 e Lighthouse 13.5.0, sem modificar os arquivos da aplicação nem o throttling. Todas as metas foram atendidas. Resultado em reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json. A sintaxe, o lint, a formatação e os 32 verificadores do script também passaram."
+    },
+    {
+      "id": "ci-browser-report-retention",
+      "evidence": "O workflow guardava HTML e traces apenas em falhas; a suíte atual de 172 casos passou, mas seu HTML não ficou disponível como artefato. O HTML versionado de 164 casos continua identificado como histórico.",
+      "decision": "Guardar os arquivos do Playwright em toda execução do job, usando if: always(), com o nome chromium-report.",
+      "reason": "Permitir consultar o relatório também quando todos os testes passam, sem confundir versões e contagens.",
+      "implementation": [".github/workflows/quality.yml"],
+      "validation": "Leitura da configuração e conferência de diff. O artefato depende da próxima execução do workflow e não foi declarado disponível antecipadamente."
     }
   ],
   "detailedRecords": [

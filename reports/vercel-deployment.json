@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-27T22:13:30.568673+00:00",
+  "checkedAt": "2026-10-27T22:32:03.133548+00:00",
   "provider": "Vercel",
   "primaryUrl": "https://jungle-nft-marketplace-felipe.vercel.app",
   "projectId": "prj_AVFUVieqQKPLS4ekImrPjpXijDw9",
@@ -49,8 +49,8 @@
       "performanceSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json"
     }
   ],
-  "performanceSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
-  "officialPerformanceTargetsMet": null,
+  "performanceSummary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+  "officialPerformanceTargetsMet": true,
   "performanceMedians": [
     {
       "path": "/",
@@ -114,20 +114,90 @@
     }
   ],
   "performanceBrowserInterruption": "Tentativas incompletas preservadas separadamente. Nenhuma medição interrompida foi declarada como matriz completa.",
-  "performanceScope": "Última matriz completa do commit db81f5d, anterior ao ajuste da moldura.",
+  "performanceScope": "Matriz completa da versão atual da aplicação, identificada pelo fingerprint do build.",
   "currentPerformance": {
-    "status": "incomplete",
-    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
-    "attempts": [
+    "status": "complete",
+    "runtimeCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "auditSourceCommit": "2ef1ae6d70f766f97cc0bc3619ab5218b2d682ea",
+    "summary": "reports/lighthouse/vercel/2026-10-27-current-chrome-stable/summary.json",
+    "completeMatrix": true,
+    "totalRuns": 12,
+    "approved": true,
+    "officialMediansMet": true,
+    "lighthouse": "13.5.0",
+    "browser": "Chrome 156.0.8078.48",
+    "browserConfiguration": {
+      "provider": "external-executable",
+      "executablePath": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    },
+    "buildFingerprint": "e1aac6b74996c6556ee829ed3a9197840c6e377e0953d4f34f913ecc71e16162",
+    "scope": "Medição dos mesmos 343 arquivos da versão atual publicada. Apenas a seleção do executável de auditoria mudou; aplicação, assets, mocks e condições de medição foram preservados.",
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 93,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          93,
+          93,
+          93
+        ]
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 94,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          94,
+          94,
+          94
+        ]
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "performanceRuns": [
+          100,
+          100,
+          100
+        ]
+      }
+    ],
+    "previousIncompleteAttempts": [
       "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
       "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
-    ],
-    "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
-    "completeMatrix": false,
-    "approved": null,
-    "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
-    "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
-    "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
+    ]
   },
   "ci": {
     "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40591145969",
@@ -140,5 +210,19 @@
     "workers": 1,
     "updateSnapshots": "none",
     "evidenceMethod": "gh run view --json e contagens finais dos logs: 224 Vitest, 32 Node e 172 Chromium."
+  },
+  "historicalPerformanceScope": {
+    "status": "incomplete",
+    "sourceCommit": "d18f892c23b2556df2fe22f3c480cdcab0cacd23",
+    "attempts": [
+      "reports/lighthouse/vercel/2026-10-27-card-frame/incomplete.json",
+      "reports/lighthouse/vercel/2026-10-27-card-frame-final/incomplete.json"
+    ],
+    "reason": "O navegador de auditoria encerrou duas tentativas com TargetCloseError. A segunda preservou oito medições válidas; faltam quatro para uma matriz completa.",
+    "completeMatrix": false,
+    "approved": null,
+    "lastCompleteSummary": "reports/lighthouse/vercel/2026-10-27-card-status/summary.json",
+    "lastCompleteSourceCommit": "db81f5d47ea6d7c12bc912d59127cab06ec2ae66",
+    "scope": "A última matriz completa precede somente o ajuste de borda e raio da moldura. Não certifica novamente a performance desse ajuste."
   }
 }

@@ -51,9 +51,9 @@ jobs:
       - run: npx playwright install chromium
       - run: npm run test:e2e -- --update-snapshots=none
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        if: failure()
+        if: always()
         with:
-          name: chromium-failures
+          name: chromium-report
           path: |
             playwright-report/
             test-results/
