@@ -462,6 +462,20 @@
         "docs/hosting.md"
       ],
       "validation": "Comandos conferidos com package.json; cenários e reset conferidos no painel. Links locais e formatação conferidos. Resultados, limites e origem das imagens preservados."
+    },
+    {
+      "id": "vercel-hosting",
+      "evidence": "O enunciado recomenda Vercel. A aplicação usa rotas no navegador, MSW e um Service Worker, que precisam funcionar também no acesso direto e após atualizar a página.",
+      "decision": "Publicar como Vite SPA. Usar vercel.json para as rotas e o cache, manter Node.js 22 e enviar somente os arquivos necessários ao build.",
+      "reason": "Abrir detalhe, login, carrinho e pedido pelo link sem erro404, atualizar o Service Worker e manter o mesmo ambiente de build já validado.",
+      "implementation": [
+        "vercel.json",
+        ".vercelignore",
+        ".gitignore",
+        "package.json",
+        "package-lock.json"
+      ],
+      "validation": "Build local aprovado. Os343arquivos gerados têm os mesmos hashes da versão validada. A conferência do domínio público e dos fluxos será registrada nos relatórios da publicação."
     }
   ],
   "detailedRecords": [
