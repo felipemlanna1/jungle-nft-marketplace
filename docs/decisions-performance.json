@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Preparação técnica concluída. Aceitação posterior do candidato acima de8/10 atendida na matriz estável, com meta original P90 mobile não cumprida e comparação experimental HTTP/3 preservadas.",
+  "status": "Validação concluída. A matriz estável atende à aceitação interna acima de 8/10, mas não à meta original P90 mobile. Comparação experimental HTTP/3 registrada separadamente.",
   "entries": [
     {
       "id": "runtime-contracts-tree-shaking",
@@ -45,11 +45,11 @@
     },
     {
       "id": "repeatable-performance-evidence",
-      "evidence": "Uma execução isolada ou medição de build antigo não demonstra desempenho do artefato entregue. A revisão independente identificou que verificar apenas nomes de scripts não seria prova suficiente da versão servida.",
+      "evidence": "Medir uma versão antiga não mostra o desempenho da versão publicada. Além do nome dos scripts, é preciso comparar o conteúdo dos arquivos.",
       "decision": "Executar três medições por página e perfil, guardar todos os JSON/HTML em pasta datada, verificar SHA256 de cada arquivo servido contra dist e abortar se o build mudar durante a auditoria.",
-      "reason": "Permitir reprodução, impedir seleção do melhor resultado e vincular números ao artefato efetivamente medido.",
+      "reason": "Permitir repetir a medição e identificar a versão medida. Todos os resultados são guardados.",
       "implementation": ["scripts/lighthouse.mjs"],
-      "validation": "O preflight rejeita o servidor de desenvolvimento e verifica bytes, catálogo REST e Socket.IO. A matriz exige três medições por página e perfil. As medianas devem cumprir o enunciado: performance ≥90, acessibilidade e boas práticas ≥95, SEO ≥90. Para o pedido adicional acima de 9/10, cada execução de performance deve superar 90. A mediana mobile de 95 permanece como aspiração registrada, sem substituir a exigência do candidato. As condições padrão do Lighthouse permanecem intactas, com MSW, imagens, fontes e funções reais da entrega."
+      "validation": "O preflight rejeita o servidor de desenvolvimento e verifica bytes, catálogo REST e Socket.IO. A auditoria usa três medições por página e perfil, com MSW, imagens, fontes e funcionalidades ativos. Metas do enunciado: performance ≥90, acessibilidade e boas práticas ≥95 e SEO ≥90. O critério interno anterior acima de 9/10 exigia performance >90 em cada execução; a mediana mobile de 95 era uma meta adicional. Os resultados de cada etapa permanecem registrados."
     },
     {
       "id": "functional-catalogue-fidelity",
@@ -122,7 +122,7 @@
     },
     {
       "id": "recommendations-explicitly-simulated-api",
-      "evidence": "A faixa de itens relacionados era montada no cliente a partir do catálogo, embora o rótulo pudesse sugerir comportamento de colecionadores. O usuário pediu a origem dos dados e critérios reais da simulação.",
+      "evidence": "A faixa de itens relacionados era montada no cliente a partir do catálogo. Era necessário definir a origem dos dados e o critério da recomendação simulada.",
       "decision": "Criar GET /api/recommendations com contrato validado, exclusões e limite, ordenando popularidade fictícia das fixtures com desempate por ID. Retornar criterion, label e simulated:true; o cliente usa o endpoint e apresenta a procedência sem afirmar analytics real.",
       "reason": "Manter seleção e dados na API simulada, possibilitar estados de vazio/erro e deixar o significado dos dados explícito. A ordenação de lançamentos da homepage continua independente das recomendações.",
       "implementation": [
@@ -137,7 +137,7 @@
     },
     {
       "id": "second-page-original-generated-apes",
-      "evidence": "O usuário pediu seis novos macacos no mesmo meio visual com fundo simples e roupas/acessórios variados, preservando os nove itens originais do início.",
+      "evidence": "A segunda página recebeu seis novos macacos no mesmo estilo visual, com fundo simples e variações de roupas e acessórios. Os nove itens originais do início foram preservados.",
       "decision": "Gerar seis imagens originais pelo image_gen embutido, guardar masters e prompts/proveniência em português e servir WebP de 360, 600 e 900 pixels com mapa responsivo de apresentação. Substituir apenas os NFTs 10 a 15 da segunda página, variar raridade e popularidade fictícias e conservar a obra acessível de 0.28 ETH. Incrementar catalogRevision para 3 para atualizar visitantes antigos sem apagar compras.",
       "reason": "Evitar repetição de imagens e controles alimentados por dados fixos na interface. A revisão do catálogo reaproveita a migração que preserva estoques, carrinhos, tentativas e recibos, exigindo nova cotação quando a release muda valores.",
       "implementation": [
@@ -152,7 +152,7 @@
     },
     {
       "id": "local-simulated-newsletter",
-      "evidence": "O usuário pediu que o rodapé recebesse o e-mail e confirmasse uma inscrição pela API simulada, substituindo o texto estático anterior.",
+      "evidence": "O rodapé tinha apenas texto estático no espaço da newsletter. O formulário passou a receber e-mail e confirmar a inscrição pela API simulada.",
       "decision": "Criar POST /api/newsletter/subscriptions, validar e normalizar e-mail com limite de 160 caracteres, persistir a inscrição apenas na demonstração local e retornar simulated:true. Repetições retornam o mesmo identificador e data com alreadySubscribed:true. Não criar listagem de e-mails nem integração SMTP.",
       "reason": "Oferecer o comportamento solicitado sem alegar envio real ou expor endereços de outras pessoas. Erros de validação e disponibilidade são explícitos; reset da demonstração remove as inscrições locais.",
       "implementation": [
@@ -163,11 +163,11 @@
         "src/services/marketplace/index.ts",
         "src/domain/newsletter.test.ts"
       ],
-      "validation": "14 testes de API aprovados para normalização, duplicatas, persistência, reset, entradas inválidas, limite de tamanho, falha503 e rede offline. Suíte completa observada com 177 testes em 19 arquivos; TypeScript e lint aprovados. O teste de API não substitui as contraprovas do rascunho e do feedback no hook do rodapé."
+      "validation": "14 testes de API aprovados para normalização, duplicatas, persistência, reset, entradas inválidas, limite de tamanho, falha503 e rede offline. Suíte completa observada com 177 testes em 19 arquivos; TypeScript e lint aprovados. O rascunho e as mensagens do formulário também são verificados nos testes do hook do rodapé."
     },
     {
       "id": "illustrative-journal-template-api",
-      "evidence": "A nova revisão do escopo pediu restaurar a composição de quatro cards do Diário da Cunhagem presente no Figma. Os títulos, resumos, datas e tempos de leitura do template não comprovam publicações reais.",
+      "evidence": "O Figma contém quatro cards do Diário da Cunhagem. Títulos, resumos, datas e tempos de leitura são conteúdo ilustrativo do template.",
       "decision": "Expor apenas dois endpoints de leitura: GET /api/articles com previews e GET /api/articles/:id com parágrafos curtos e explicitamente ilustrativos. Usar os quatro títulos e resumos do quadro original, imagens dos itens 3, 1, 2 e 7 do catálogo e simulated:true. Não criar cadastro editorial, callback externo nem alegar uma lista real de dez artistas.",
       "reason": "Preencher a seção visual solicitada com uma leitura funcional e dados da API, preservando a honestidade do conteúdo e o limite do exercício. A interface pode abrir o texto em modal sem adicionar páginas editoriais ao escopo.",
       "implementation": [
@@ -193,20 +193,20 @@
         "scripts/lib/lighthouse-engine.mjs",
         "scripts/lighthouse-engine.test.mjs"
       ],
-      "validation": "32 testes Node aprovados, incluindo preservação do sumário padrão e rejeição de engines desconhecidas. As 164 dependências de runtime e os 343 arquivos do build permaneceram byte a byte iguais após instalar a ferramenta adicional. A matriz experimental registra as 12 medições e sua versão; seu gate se refere apenas a essa metodologia.",
+      "validation": "32 testes Node aprovados, incluindo preservação do sumário padrão e rejeição de engines desconhecidas. As 164 dependências de runtime e os 343 arquivos do build permaneceram byte a byte iguais após instalar a ferramenta adicional. A matriz experimental registra as 12 medições e sua versão; sua aprovação vale apenas para essa forma de medição.",
       "artifacts": ["reports/lighthouse/summary.json", "reports/lighthouse/h3-summary.json"]
     },
     {
       "id": "candidate-acceptance-above-eight",
-      "evidence": "Após receber os resultados e a ressalva de performance mobile, Felipe aprovou notas acima de8/10 para enviar o desafio em27/10/2026.",
-      "decision": "Aceitar cada nota acima de80 em todas as categorias das12execuções estáveis. Manter as metas originais e o resultado anterior do gate intactos; registrar a liberação separadamente.",
-      "reason": "Aplicar a instrução explícita mais recente do candidato sem reclassificar a medição antiga, ocultar resultados negativos ou alegar cumprimento da meta original P90.",
+      "evidence": "Em 27/10/2026, a liberação interna adotou notas acima de 8/10. A ressalva de performance mobile e as metas do enunciado foram mantidas.",
+      "decision": "Adotar internamente cada nota acima de 80 nas 12 execuções estáveis. Registrar a liberação separada das metas do enunciado e da aprovação anterior.",
+      "reason": "Separar o critério interno de liberação da avaliação do desafio. A meta original P90 continua não atendida na matriz estável mobile.",
       "implementation": [
         "scripts/lighthouse.mjs",
         "reports/release-readiness.json",
         "docs/quality-gates.md"
       ],
-      "validation": "Matriz completa com48notas e mínimo83; todas acima de80. A matriz experimental adicional tem medianas P95/100/95/100, sem mudar os343assets. Avaliação humana e envio permanecem ações do candidato."
+      "validation": "Matriz completa com 48 notas e mínimo 83; todas acima de 80. A matriz experimental adicional tem medianas P95/100/95/100, com os mesmos 343 assets. Avaliação humana e envio ainda pendentes."
     }
   ]
 }

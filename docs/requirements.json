@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/junglegaming/frontend-challenge",
-  "referenceRead": "Enunciado integral fornecido pelo candidato e contextos do Figma.",
-  "status": "Pronto para avaliação humana e envio pelo candidato, conforme a aceitação explícita de notas acima de 8/10 em 27/10/2026. Runtime c8fefe8 publicado em Workers e no mirror Sites v5; 224 Vitest, 32 verificadores Node, 166 E2E no CI e 18 testes de produção aprovados. Meta original de performance P90 não cumprida no Lighthouse estável mobile 83/85, com justificativa e comparação experimental preservadas. Envio não realizado.",
+  "referenceRead": "Enunciado integral do desafio e frames do Figma.",
+  "status": "Runtime c8fefe8 publicado em Workers e no mirror Sites v5. Validação em 27/10/2026: 224 Vitest, 32 verificadores Node, 166 E2E no CI e 18 testes de produção aprovados. Aceitação interna acima de 8/10 registrada separadamente. Performance mobile 83/85 no Lighthouse estável, abaixo da meta original P90; análise e comparação experimental disponíveis. Envio não realizado.",
   "scope": [
     {
       "requirement": "Stack obrigatória em uso efetivo",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "requirement": "Carrinho persistente, merge após login, cupom e resumo autoritativo",
+      "requirement": "Carrinho persistente, merge após login, cupom e resumo calculado pela API",
       "implementation": "Itens por edição, operações pela API, persistência local da simulação e cotação calculada em wei com BigInt.",
       "evidence": [
         "src/modules/checkout/pages/Cart",
@@ -138,7 +138,7 @@
         "reports/release-readiness.json",
         "reports/lighthouse/h3-summary.json"
       ],
-      "limit": "Matriz estável completa preservada: medianas P83/99/85/99 e A100/BP100/SEO92. Não atende P90 mobile do enunciado; atende a aceitação posterior do candidato acima de 80 em cada nota. A matriz experimental oficial 13.5.0-dev.20261023, com correção HTTP/3, obteve P95/100/95/100 e A100/BP100/SEO92. Não é otimização do aplicativo e não substitui o baseline estável."
+      "limit": "Matriz estável completa: medianas P83/99/85/99 e A100/BP100/SEO92. A performance mobile não atende P90 do enunciado; a aceitação interna acima de 80 foi registrada separadamente. A versão experimental oficial 13.5.0-dev.20261023, com correção HTTP/3, obteve P95/100/95/100 e A100/BP100/SEO92 sobre o mesmo aplicativo. O baseline estável permanece como referência principal."
     },
     {
       "requirement": "Deploy público correspondente ao repositório e execução limpa",
@@ -165,11 +165,11 @@
     "humanReview": "pending",
     "submissionPerformed": false,
     "overallComplete": true,
-    "performanceApprovalBasis": "Critério explícito posterior do candidato: cada nota acima de 80 em todas as 12 execuções estáveis.",
+    "performanceApprovalBasis": "Critério interno de liberação: cada nota acima de 80 nas 12 execuções estáveis. A meta original do desafio permanece P90.",
     "officialPerformanceTargetMet": false,
     "readyForSubmission": true,
     "technicalPreparationComplete": true,
-    "completionScope": "Implementação, validação automatizada e publicação; avaliação humana e envio pelo candidato são passos posteriores.",
+    "completionScope": "Implementação, validação automatizada e publicação concluídas. Avaliação humana e submissão ainda pendentes.",
     "acceptanceEvidence": "reports/release-readiness.json"
   },
   "documentedDifferences": [

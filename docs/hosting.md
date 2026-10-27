@@ -1,37 +1,35 @@
 # Publicação
 
-O build é estático. Não há backend de aplicação na hospedagem: API, autenticação, carteiras, pagamentos e Socket.IO continuam simulados no navegador, conforme o enunciado.
+[Aplicação no Cloudflare Workers](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev)
 
-## Verificação da primeira hospedagem
+O site usa Workers Static Assets, configurado em `wrangler.jsonc`. A pasta `dist` guarda os arquivos prontos do build: aplicação, imagens, fontes e mocks. API, login, carteiras, pagamentos e Socket.IO são simulados no navegador.
 
-A versão 4 no Sites foi publicada a partir do commit `17462b8340d7ed9a173a3c039687c133a73ec084`. Os 343 arquivos do runtime foram conferidos por SHA256 com o build aprovado nos 164 testes. Login, favoritos, newsletter e compra passaram em 14 testes adicionais no HTTPS público.
+A opção `single-page-application` permite abrir uma página pelo link e atualizá-la sem perder a rota. O servidor usa `index.html` para carregar a aplicação.
 
-A leitura das respostas HTTP mostrou que essa hospedagem entrega `_headers` como arquivo comum e mantém `Cache-Control: public, max-age=0, must-revalidate`. As regras do arquivo não foram aplicadas. O HTML também recebeu o script JavaScript Detections da Cloudflare, ausente do build local. A matriz anterior do Lighthouse identificou APIs obsoletas nesse script.
+## Publicar
 
-Essa diferença é registrada; o script do provedor não foi removido do navegador usado nas medições. A identificação do HTML reconhece somente o envelope conhecido e continua comparando integralmente os bytes da aplicação.
-
-## Publicação direta dos assets
-
-O Wrangler 4.78.0 já estava instalado e autenticado na conta existente. Foi preparada uma publicação independente, exclusiva deste projeto, usando `wrangler.jsonc`. Não foram reutilizados projetos ou dados de outros aplicativos.
-
-O modo `single-page-application` atende as rotas diretamente com `index.html`. A publicação usa o diretório `dist` já testado, sem recompilar nem introduzir um servidor de negócio. Os arquivos de configuração e os cabeçalhos seguem os recursos documentados de [Static Assets](https://developers.cloudflare.com/workers/static-assets/get-started/), [roteamento de SPA](https://developers.cloudflare.com/workers/static-assets/routing/single-page-application/) e [cabeçalhos](https://developers.cloudflare.com/workers/static-assets/headers/).
-
-HTML usa revalidação e `no-transform`; arquivos com hash no nome podem ser mantidos em cache por um ano; o Service Worker exige revalidação. A diretiva `no-transform` é o mecanismo documentado para preservar o HTML sem a [injeção automática de JavaScript Detections](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/).
+Entre na conta pelo Wrangler e defina `CLOUDFLARE_ACCOUNT_ID` no ambiente.
 
 ```bash
 npm run check
 npm run build
-npx wrangler@4.78.0 deploy --config wrangler.jsonc
+npx wrangler@4.78.0 deploy --config wrangler.jsonc --x-autoconfig=false
 ```
 
-A autenticação da hospedagem fica fora do repositório. Não há token, conta de cobrança ou chave de serviço no código. A confirmação da nova publicação, dos cabeçalhos efetivos e das medições deve ser consultada nos relatórios de produção; uma configuração, isoladamente, não comprova esses resultados.
+## Cache e conferência dos arquivos
 
-## Identidade da configuração na auditoria
+O navegador pode guardar arquivos para não precisar baixá-los novamente. As regras de `public/_headers` definem esse comportamento e são copiadas para o build:
 
-Workers Static Assets [interpreta `_headers` e não o publica como asset](https://developers.cloudflare.com/workers/static-assets/headers/). Por isso, a auditoria admite que apenas esse arquivo retorne 404 ou o HTML de fallback da SPA, desde que o SHA256 da fonte e do build seja `3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae`, correspondente à configuração revisada. Qualquer alteração exige nova revisão dessa exceção.
+| Arquivo                                | Cache-Control                         |
+| -------------------------------------- | ------------------------------------- |
+| HTML das páginas                       | `no-cache, no-transform`              |
+| Arquivos em `/assets` com hash no nome | `public, max-age=31536000, immutable` |
+| Service Worker                         | `no-cache`                            |
 
-Essa aceitação exige respostas HTTP 200 e políticas efetivas: `no-cache, no-transform` em `/` e `/nft/nft-1`; `public, max-age=31536000, immutable` no primeiro JavaScript com hash do build; `no-cache` em `/mockServiceWorker.js`. As respostas das duas rotas e do fallback são verificadas contra o HTML de produção; JavaScript, Service Worker e todos os demais assets continuam sujeitos à comparação de bytes. Não há exceção para outro arquivo de configuração.
+`no-transform` preserva o HTML sem o script automático JavaScript Detections da Cloudflare. Os arquivos com hash podem ser guardados por um ano. HTML e Service Worker precisam ser conferidos no servidor antes de serem reutilizados.
 
-O relatório registra o SHA256 da fonte, do build, da resposta de `_headers`, cada política observada e a modalidade de verificação. Se a hospedagem entregar `_headers` byte a byte, a auditoria mantém essa comparação normal e registra a configuração como `unsupported`, sem afirmar que suas regras foram aplicadas. Os testes de contraprova rejeitam política ausente, status incorreto, configuração desconhecida e alterações arbitrárias de HTML ou assets.
+A auditoria usa SHA256 para conferir se os arquivos publicados são iguais aos gerados localmente. Como o servidor aplica as regras de `_headers`, esse arquivo é conferido de outra forma: conteúdo esperado na fonte e no build, respostas HTTP 200 e regras de cache realmente aplicadas. Os demais arquivos são comparados por inteiro.
 
-Esse tratamento não modifica o HTML entregue ao navegador, as requisições ou as notas do Lighthouse. Os sete testes independentes do verificador do envelope Cloudflare permanecem preservados. A aprovação continua exigindo a matriz completa de três execuções, duas rotas e dois perfis, as medianas de 90/95/95/90 e performance acima de 90 em todas as execuções.
+Os [testes do site publicado](../reports/production-polish.json) e a [auditoria pública](../reports/lighthouse/summary.json) registram a versão conferida e os resultados.
+
+Referências: [Static Assets](https://developers.cloudflare.com/workers/static-assets/get-started/), [rotas de SPA](https://developers.cloudflare.com/workers/static-assets/routing/single-page-application/), [cabeçalhos](https://developers.cloudflare.com/workers/static-assets/headers/) e [JavaScript Detections](https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/).

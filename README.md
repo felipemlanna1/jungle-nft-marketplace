@@ -1,91 +1,92 @@
-# KURIO | Marketplace de NFTs
+# Kurio
 
-[Aplicação pública](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev) · [Repositório](https://github.com/felipemlanna1/jungle-nft-marketplace)
+Desafio Frontend da Jungle Gaming. Marketplace de NFTs com catálogo, favoritos, carrinho, compra e conta do colecionador.
 
-Implementação do desafio Frontend da Jungle Gaming em React e TypeScript. Catálogo, conta, carrinho e compra usam REST simulado com MSW. Os eventos percorrem um cliente Socket.IO. Carteiras e pagamentos são fictícios.
+[Aplicação](https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev) · [GitHub](https://github.com/felipemlanna1/jungle-nft-marketplace)
 
-## Executar
+Usei React, TypeScript, Vite, TanStack Router e Query, Axios, Socket.IO, MSW, Tailwind e componentes no padrão shadcn/ui com Radix.
 
-Use Node.js 22.19 ou superior e npm. A validação local usa Node.js 22.22. Não há serviço privado, chave ou arquivo de credenciais necessário.
+## Como rodar
+
+É necessário Node.js 22.19 ou superior e npm.
 
 ```bash
 npm ci
 npm run dev
 ```
 
-O endereço local é `http://127.0.0.1:5173`. Os mocks estão ativos por padrão. `VITE_MOCKS=false` os desativa para uma integração futura, que exige backend compatível; essa opção não é usada na demonstração publicada.
+Abra `http://127.0.0.1:5173`.
 
-```bash
-npm run check
-npm run build
-npm run preview
-npx playwright install chromium
-npm run test:e2e
-npm run audit:lighthouse
-```
+Os mocks vêm ligados e não exigem `.env`. `VITE_MOCKS=false` desliga a simulação e exige um backend compatível.
 
-A auditoria usa o build otimizado em `http://127.0.0.1:4173`, aberto por `npm run preview`. Desenvolvimento e demonstração compartilham os mesmos contratos, handlers e fixtures. `npm run check` reúne geração do tema, TypeScript, lint, formatação e testes unitários.
+A API REST, o Socket.IO, as carteiras e os pagamentos são simulados. Os dados ficam no navegador e são mantidos após atualizar a página.
 
-A publicação direta dos assets e a conferência dos cabeçalhos estão descritas em [docs/hosting.md](./docs/hosting.md). A [revisão dos quatro ajustes móveis](./docs/decisions-mobile-polish.md) registra o nivelamento dos cards, o contador do carrinho, o espaçamento do banner e o alinhamento do menu.
+## Contas e compra
 
-## Avaliação manual
-
-| Conta fictícia           | Senha fictícia   |
+| E-mail                   | Senha            |
 | ------------------------ | ---------------- |
 | `collector@example.test` | `Collect0r!Demo` |
 | `second@example.test`    | `Collect0r!Demo` |
 
-1. Explore busca, categoria, faixa de preço, rede, ordenação e paginação. Atualize a página e use o histórico para verificar a restauração dos filtros.
-2. Abra uma obra, altere a edição e a quantidade, adicione ao carrinho e autentique. O carrinho do visitante é preservado.
-3. No carrinho, aplique `JUNGLE10`, remova o cupom e altere as quantidades. `EXPIRED` representa um código expirado. O resumo vem da cotação da API.
-4. No pagamento, conecte uma carteira fictícia, revise os dados e confirme. O comprovante aparece após a confirmação efetiva da simulação.
-5. Edite perfil, avatar, senha e carteiras; atualize a página para verificar a persistência.
+Adicione uma obra ao carrinho e faça login: os itens são mantidos. Teste os cupons `JUNGLE10` (desconto) e `EXPIRED` (expirado).
 
-Abra **Demonstração** no rodapé e depois **Cenários de teste**. No mobile, a navegação também dá acesso ao menu. O painel altera as condições dos handlers de rede, sem substituir dados dentro dos componentes.
+No pagamento, conecte uma carteira fictícia, revise e confirme. O recibo aparece após a confirmação da API.
 
-| Cenário                             | Verificação                                                       |
-| ----------------------------------- | ----------------------------------------------------------------- |
-| Rede lenta                          | Skeletons, carregamento e preservação do espaço                   |
-| Catálogo vazio                      | Estado vazio e retorno aos resultados                             |
-| Sem conexão ou erro 503             | Erro acessível e nova tentativa                                   |
-| Sessão expirada                     | Autenticação e retorno ao contexto anterior                       |
-| Pagamento recusado                  | Estado recusado, itens preservados e estoque liberado             |
-| Timeout após criar pedido           | Recuperação da mesma tentativa após atualização, sem outra compra |
-| Alterar preço ou disponibilidade    | Evento `nft.updated`, aviso e nova cotação                        |
-| Desconectar e reconectar tempo real | Reconciliação REST do pedido pendente                             |
+## Como testar falhas
 
-Use **Redefinir todos os dados** antes de repetir cenários. A simulação persiste no navegador atual. Ela não compartilha estado entre dispositivos e não substitui autenticação ou persistência de um produto real.
+No rodapé, abra **Demonstração** e depois **Cenários de teste**. No mobile, use o menu central e escolha **Cenários de teste**.
+
+| Cenário                      | O que fazer                                                                                                               |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Rede lenta ou catálogo vazio | Selecione o cenário e abra o catálogo.                                                                                    |
+| Sem conexão ou erro 503      | Selecione o cenário, confira o erro e volte para **Rede normal** para tentar novamente.                                   |
+| Sessão expirada              | Entre na conta, selecione o cenário e tente abrir o perfil.                                                               |
+| Pagamento recusado           | Selecione antes de confirmar a compra e confira que o carrinho é mantido.                                                 |
+| Timeout após criar pedido    | Selecione antes de confirmar a compra e atualize a página para recuperar o mesmo pedido.                                  |
+| Preço, estoque e reconexão   | Com carrinho ou pagamento aberto, use os botões de alteração de preço, edição esgotada, desconexão e reconexão do painel. |
+
+Use **Redefinir todos os dados** para voltar às contas, senhas e itens iniciais. Isso também encerra a sessão.
 
 ## Organização
 
-O código segue módulos de domínio com páginas, componentes, hooks próximos da apresentação e `shared-types.ts`. Serviços concentram HTTP; regras de dinheiro, catálogo e edições ficam fora de React. O styleguide centraliza primitivas, receitas, tokens semânticos e geração de CSS.
+Em `src/modules`, separei catálogo, compra e conta. O componente mostra a tela e o hook cuida dos dados e das ações. As chamadas HTTP ficam em `src/services`; as regras de preço, estoque e pedido, em `src/domain`.
 
-Galeria, quantidade, recomendações, detalhe e pagamento têm estilos próximos dos seus componentes e páginas. O gerador resolve os pontos de quebra definidos no tema e rejeita tokens desconhecidos. Os estados visuais usam classes e atributos de dados; o lint impede estilos inline no código próprio. A [revisão de responsividade](./docs/decisions-responsive.md) registra as medidas, correções e contraprovas dessa organização.
+O `src/styleguide` reúne componentes compartilhados, tema, cores e tamanhos. O CSS fica no componente ou no tema. `src/mocks` contém a API, os eventos e os cenários de erro.
 
-A página inicial carrega diretamente. Conta, detalhe, carrinho, pagamento e pedido usam rotas com carregamento sob demanda. TanStack Query controla estado remoto; respostas obsoletas e ações de sessões anteriores são descartadas. React Context fornece os tokens do tema Kurio. Zustand guarda apenas o identificador da prévia global de uma obra; os dados continuam vindo da API e do cache de consultas.
+TanStack Query cuida dos dados da API, Context fornece o tema e Zustand guarda a obra aberta na prévia. Os filtros ficam na URL; as páginas secundárias carregam quando acessadas.
 
-Leia [ARCHITECTURE.md](./ARCHITECTURE.md) para contratos, decisões, cache, sessão, dinheiro, idempotência e eventos. O [registro de decisões](./docs/decisions.json) reúne o motivo, a evidência e a forma de validação. As [verificações automáticas](./docs/quality-gates.md) também são executadas pelo workflow do repositório.
+[Contratos, sessão, cache e recuperação de pedidos](./ARCHITECTURE.md).
 
-## Design e fidelidade
+## Adaptações do layout
 
-Kurio é a única aparência ativa, baseada nos frames e assets do Figma. A fonte Roboto Mono é local. As imagens originais foram deduplicadas e convertidas para WebP, preservando composição e proporção; essa compressão não é uma reprodução binária dos PNGs. Os primeiros nove itens preservam o conjunto do design. A segunda página recebeu seis retratos originais gerados, com variantes de 360, 600 e 900 pixels e [prompts e procedência registrados](./docs/generated-apes-provenance.json).
+- No catálogo mobile, alinhei os cards por linha para manter título e preço na mesma altura.
+- Perfil, carteiras e recibo têm versão mobile, mesmo sem frames próprios no Figma.
+- O carrinho usa o total calculado pela API. No desenho mobile, os itens somam 8,14 ETH, mas o subtotal informa 8,92 ETH.
+- As miniaturas da galeria são enquadramentos da mesma arte. As seis imagens adicionais do catálogo têm [origem e arquivos registrados](./docs/generated-apes-provenance.json).
 
-A revisão leu 62 comentários do arquivo original. O [registro da revisão](./docs/figma-comments-review.json) distingue correções aplicadas, dúvidas sem resposta e adaptações exigidas pelo enunciado. Não houve edição nem resolução de comentários no Figma.
+A newsletter registra a inscrição só na simulação. Login social e recuperação de senha estão indisponíveis. As demais diferenças do Figma estão na [arquitetura](./ARCHITECTURE.md).
 
-Perfil, carteiras e confirmação têm adaptação mobile, mesmo quando não existe frame específico. Campos obrigatórios do pagamento continuam disponíveis em telas pequenas. Contagens de filtros e totais são calculados a partir dos dados reais da simulação. No carrinho mobile do Figma, os totais de linha somam 8,14 ETH e o subtotal desenhado informa 8,92 ETH; a aplicação mantém o cálculo correto da API.
+## Comandos
 
-Os cards desktop oferecem carrinho, favorito e ampliação. No mobile, o coração ocupa o canto da arte, como no frame; compra e ampliação ficam no detalhe, acessível pelo card. O favorito de visitante conduz ao login e preserva a intenção; a tela permite preencher a conta demonstrativa, sem redefinir uma senha que tenha sido alterada. A prévia consulta os dados atuais da obra. As recomendações vêm de um endpoint próprio e usam popularidade fictícia das fixtures, sem alegar comportamento real de colecionadores.
+| Comando                    | Uso                                                                  |
+| -------------------------- | -------------------------------------------------------------------- |
+| `npm run build`            | Gerar os arquivos de produção.                                       |
+| `npm run preview`          | Abrir o build em `http://127.0.0.1:4173`.                            |
+| `npm run typecheck`        | Conferir os tipos.                                                   |
+| `npm run lint`             | Conferir as regras de código.                                        |
+| `npm test`                 | Rodar os testes unitários.                                           |
+| `npm run check`            | Gerar o tema e conferir tipos, lint, formatação e testes.            |
+| `npm run test:e2e`         | Rodar os fluxos e comparações visuais em Chromium, desktop e mobile. |
+| `npm run audit:lighthouse` | Medir início e detalhe no build de produção.                         |
 
-O Diário da Cunhagem usa quatro previews do template e uma leitura explicitamente ilustrativa pela API. A newsletter confirma um POST apenas na simulação local, sem envio real de e-mail; repetir o endereço não duplica a inscrição. OAuth e recuperação de senha mantêm estado indisponível explícito. Ícones Lucide substituem letras decorativas do rodapé, e as redes sociais abrem as plataformas como links ilustrativos, sem perfis oficiais inventados.
+Instale o Chromium com `npx playwright install chromium`. O Playwright abre o servidor local e salva o relatório em `playwright-report/`; os registros de falha ficam em `test-results/`.
 
-## Evidências e limites
+Para o Lighthouse, gere o build e mantenha o preview aberto em outro terminal. A auditoria faz três medições por página e perfil, no cenário padrão. HTML e JSON ficam em `reports/lighthouse/runs/`.
 
-Os relatórios da rodada atual ficam em `reports/`. Resultados de rodadas anteriores são históricos e não certificam esta revisão. As comparações visuais devem usar a mesma dimensão, conteúdo e estado; diferenças dinâmicas e adaptações estão documentadas.
+## Resultados
 
-Playwright cobre desktop e mobile com dados isolados, API MSW e Socket.IO efetivos. As baselines visuais são versionadas; sua atualização exige inspeção. Relatório HTML e traces locais são gerados em `playwright-report/` e `test-results/`.
+Foram aprovados 224 testes unitários, 166 E2E com oito comparações visuais e 18 testes na aplicação publicada.
 
-Lighthouse executa três medições por página e perfil, preserva cada execução e informa as medianas, LCP, CLS, TBT, ambiente e identidade do build. A auditoria valida catálogo e conexão antes de medir; imagens, fonte e mocks permanecem ativos. As metas originais do enunciado são Performance 90, Acessibilidade 95, Boas práticas 95 e SEO 90. Felipe autorizou posteriormente a liberação com cada nota acima de 80 em todas as categorias e nas 12 execuções. Essa aceitação está atendida e registrada em `reports/release-readiness.json`; a meta original do enunciado continua documentada separadamente. O resultado medido deve ser consultado no relatório atual; a existência do script não comprova o cumprimento das metas. A matriz estável atual registra Performance mobile 83 no início e 85 no detalhe, abaixo da meta. O diagnóstico experimental `AUDIT_ENGINE=h3 npm run audit:lighthouse` usa a versão oficial fixada 13.5.0-dev.20261023, com a correção de HTTP/3 do Lantern, e guarda `h3-summary.json` separado. Essa comparação não sobrescreve o resultado estável nem representa melhoria da aplicação. As versões e os resultados completos estão em `docs/quality-gates.md`.
+Lighthouse estável: performance 83 no início mobile, 85 no detalhe mobile e 99 no desktop. Acessibilidade e boas práticas: 100; SEO: 92. A performance mobile ficou abaixo da meta de 90. A [análise](./docs/quality-gates.md#lighthouse) traz as medianas, LCP, CLS, TBT e a comparação com a correção experimental de HTTP/3.
 
-Nenhum código de projetos profissionais anteriores, credencial real ou registro de cliente integra a entrega. As contas de demonstração usam `example.test`. A validação automática de segredos reduz o risco de exposição; ela não equivale a uma prova absoluta de ausência de dados sensíveis.
-
-Publicação e envio do teste são etapas distintas. A entrega ao processo seletivo permanece a cargo do candidato após a avaliação humana.
+[Relatórios](./reports) · [Decisões técnicas](./docs/decisions.json) · [Publicação](./docs/hosting.md)

@@ -1,6 +1,6 @@
 # Polimento móvel da Home e da navegação
 
-Em 27/10/2026, Felipe pediu quatro correções adicionais e autorizou afastar o catálogo do desenho original para nivelar os cartões. As capturas fornecidas mostram o deslocamento da coluna direita, o dígito do carrinho fora do badge, a diferença de eixo entre o botão central e seu recorte e os intervalos apertados no hero.
+A revisão de 27/10/2026 corrigiu quatro pontos: desnível dos cartões, contador do carrinho, eixo do menu central e espaçamento do hero. O catálogo mobile passou a alinhar os cartões por linha, como adaptação ao desenho original.
 
 ## Decisões
 
@@ -11,12 +11,12 @@ Em 27/10/2026, Felipe pediu quatro correções adicionais e autorizou afastar o 
 
 ## Organização dos estilos
 
-Todas as regras novas pertencem a `catalog.template.css` e `shell.template.css`, sob o ponto de quebra canônico `__BREAKPOINT_MOBILE__`. O CSS entregue é produzido por `npm run theme:generate`. Não foram adicionados estilos inline. O componente de navegação contém apenas a troca do ícone e o atributo de acessibilidade do badge.
+As regras ficam em `catalog.template.css` e `shell.template.css`, usando `__BREAKPOINT_MOBILE__` para o limite mobile. O CSS entregue é produzido por `npm run theme:generate`. Não foram adicionados estilos inline. O componente de navegação contém apenas a troca do ícone e o atributo de acessibilidade do badge.
 
 ## Evidências e critérios
 
-As capturas e as medidas antes/depois estão em `reports/mobile-polish/`. As larguras verificadas são 320, 375, 390, 414 e 440 px; a captura de 440 px usa a altura pedida de 956 px. O hero também mantém as verificações já existentes de tablet, desktop, ampliação, gesto e teclado.
+As capturas e as medidas antes/depois estão em `reports/mobile-polish/`. As larguras verificadas são 320, 375, 390, 414 e 440 px; a captura de 440 px tem 956 px de altura. O hero também mantém as verificações já existentes de tablet, desktop, ampliação, gesto e teclado.
 
-Os testes focados exigem igualdade de bordas entre pares de cartões, medidas das margens e intervalos, texto e imagem sem interseção, separação positiva entre texto e CTA, indicadores abaixo do conteúdo, alinhamento concêntrico do menu, estabilidade do hover e abertura/fechamento por teclado com retorno de foco. Os badges 1, 2, 9, 10, 99 e 100 são exercitados como variações visuais da mesma superfície; as medições incluem a caixa real dos caracteres e seus limites de rolagem.
+Os testes verificam cartões alinhados, margens e espaços, texto sem encostar na imagem ou no botão, indicadores abaixo do conteúdo e menu centralizado. Também conferem o hover, a abertura e o fechamento pelo teclado e a volta do foco. Os contadores 1, 2, 9, 10, 99 e 100 são variações visuais do mesmo badge; o teste mede se os caracteres cabem nele.
 
-O snapshot da Home móvel é atualizado somente após essas verificações e a inspeção das capturas. A mudança é intencional: os critérios anteriores de altura fixa e coluna deslocada foram substituídos pelo pedido posterior do usuário. Nenhum snapshot desktop ou de outras páginas deve ser atualizado por esta revisão. Não há declaração de reprodução integral do Figma.
+A referência visual da Home móvel foi atualizada após as medições e a inspeção das capturas. A altura fixa e a coluna deslocada deram lugar à altura conforme o conteúdo e aos cartões alinhados. Os snapshots desktop e das demais páginas foram preservados.
