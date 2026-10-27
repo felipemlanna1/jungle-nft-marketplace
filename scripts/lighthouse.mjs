@@ -5,11 +5,14 @@ import { createHash } from 'node:crypto';
 import { chromium } from '@playwright/test';
 import { verifyHostedHtml } from './lib/verified-html.mjs';
 import { verifyHostedBuild } from './lib/hosted-artifacts.mjs';
+import { resolveLighthouseEngine } from './lib/lighthouse-engine.mjs';
 
 const target = process.env.AUDIT_URL || 'http://127.0.0.1:4173';
+const engine = resolveLighthouseEngine(process.env.AUDIT_ENGINE);
 const startedAt = new Date().toISOString();
 const outputDirectory =
-  process.env.AUDIT_OUTPUT_DIR || `reports/lighthouse/runs/${startedAt.replaceAll(/[:.]/g, '-')}`;
+  process.env.AUDIT_OUTPUT_DIR ||
+  `reports/lighthouse/${engine.experimental ? 'h3-runs' : 'runs'}/${startedAt.replaceAll(/[:.]/g, '-')}`;
 const paths = process.env.AUDIT_PATHS?.split(',') || ['/', '/nft/nft-1'];
 const profiles = process.env.AUDIT_PROFILES?.split(',') || ['mobile', 'desktop'];
 const runCount = Number(process.env.AUDIT_RUNS || 3);
@@ -22,7 +25,9 @@ if (
 )
   throw new Error('Audit configuration must use known routes, profiles and 1–5 runs.');
 await mkdir(outputDirectory, { recursive: true });
-const lighthousePackage = JSON.parse(await readFile('node_modules/lighthouse/package.json'));
+const lighthousePackage = JSON.parse(
+  await readFile(`node_modules/${engine.packageName}/package.json`),
+);
 const rows = [];
 let browserVersion;
 const sha256 = (value) => createHash('sha256').update(value).digest('hex');
@@ -137,7 +142,7 @@ for (const path of paths) {
         );
       const file = `${outputDirectory}/${path === '/' ? 'home' : 'detail'}-${profile}-${run}`;
       const args = [
-        'node_modules/lighthouse/cli/index.js',
+        `node_modules/${engine.packageName}/cli/index.js`,
         target + path,
         '--output=json',
         '--output=html',
@@ -226,13 +231,22 @@ const officialMediansMet = rows.every((row) =>
 const allPerformanceRunsAbove90 = rows.every((row) =>
   row.runs.every((run) => run.categories.performance > 90),
 );
+const allCategoryRunsAbove80 = rows.every((row) =>
+  row.runs.every((run) => Object.values(run.categories).every((score) => score > 80)),
+);
 const gate = {
-  scope: 'Challenge category medians and the requested performance above 9/10 in every run.',
+  scope: 'Official challenge medians reported separately from the candidate acceptance above 8/10.',
   completeMatrix: fullMatrix,
   categoryThresholds,
   officialMediansMet,
   allPerformanceRunsAbove90,
-  approved: fullMatrix && officialMediansMet && allPerformanceRunsAbove90,
+  allCategoryRunsAbove80,
+  candidateAcceptance: {
+    date: '2026-10-27',
+    minimumExclusive: 80,
+    source: 'Se as notas ficarem acima de 8 esta aprovado, preciso mandar ainda hoje.',
+  },
+  approved: fullMatrix && allCategoryRunsAbove80,
   aspirations: {
     mobilePerformanceMediansAtLeast95: rows
       .filter((row) => row.profile === 'mobile')
@@ -246,6 +260,7 @@ const summary = {
   completedAt: new Date().toISOString(),
   node: process.version,
   lighthouse: lighthousePackage.version,
+  engine,
   browser: `Playwright Chromium ${browserVersion}`,
   target,
   build: {
@@ -263,9 +278,9 @@ const summary = {
   gate,
   rows,
 };
-await writeFile(`${outputDirectory}/summary.json`, JSON.stringify(summary, null, 2));
+await writeFile(`${outputDirectory}/${engine.summary}`, JSON.stringify(summary, null, 2));
 if (fullMatrix)
-  await writeFile('reports/lighthouse/summary.json', JSON.stringify(summary, null, 2));
+  await writeFile(`reports/lighthouse/${engine.summary}`, JSON.stringify(summary, null, 2));
 console.log(
   JSON.stringify(
     {

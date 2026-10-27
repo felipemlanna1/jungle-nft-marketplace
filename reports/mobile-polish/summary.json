@@ -84,8 +84,28 @@
   },
   "onlyUpdatedSnapshot": "tests/e2e/marketplace.spec.ts-snapshots/catalog-mobile-darwin.png",
   "limits": [
-    "A suíte completa anterior de 164 testes não foi repetida nesta revisão.",
     "A área segura usa env(safe-area-inset-bottom); o navegador automatizado destas capturas reporta zero.",
-    "A validação de produção depende da publicação realizada pelo agente principal."
-  ]
+    "Os hashes de origem registram o congelamento inicial; o refinamento posterior do teste está identificado separadamente.",
+    "A matriz estável mantém performance mobile abaixo da meta originalP90. A aceitação posterior do candidato acima de80 está registrada em reports/release-readiness.json."
+  ],
+  "postPublicationValidation": {
+    "runtimeCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "ci": {
+      "run": 40575466182,
+      "passed": 166,
+      "total": 166,
+      "visuals": 8,
+      "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182"
+    },
+    "production": {
+      "passed": 18,
+      "total": 18,
+      "report": "reports/production-polish.json"
+    },
+    "refinedBadgeTest": {
+      "sha256": "6d15d93601b5d598e9c64de1b6fe46bdd853423fc967401df4b30715506f6395",
+      "validation": "API quantity 2 and reload first; CSS fixture counts only in the existing badge. This refinement passed the production layout tests and was introduced after the cited CI revision."
+    }
+  }
 }

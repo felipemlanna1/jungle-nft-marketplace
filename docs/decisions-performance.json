@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Implementação com provas parciais; matriz Lighthouse final aguarda congelamento de interface e assets.",
+  "status": "Preparação técnica concluída. Aceitação posterior do candidato acima de8/10 atendida na matriz estável, com meta original P90 mobile não cumprida e comparação experimental HTTP/3 preservadas.",
   "entries": [
     {
       "id": "runtime-contracts-tree-shaking",
@@ -179,6 +179,34 @@
         "src/domain/articles.test.ts"
       ],
       "validation": "Cinco testes verificam previews, leitura ilustrativa, erro404, cenário vazio e rejeição de datas inválidas ou de simulated:false. TypeScript e lint do escopo aprovados. Fontes dos textos de preview: /tmp/jungle-figma-context/home-0.txt, linhas620a730, obtidas do Figma autorizado; conteúdo dos parágrafos criado apenas como exemplo."
+    },
+    {
+      "id": "http3-audit-engine-comparison",
+      "evidence": "O build publicado no Workers usa HTTP/3. A matriz de Lighthouse13.5.0 obteve medianas P83/99/85/99, com A100/BP100/SEO92. O ConnectionPool do trace_engine0.0.65 reconhece apenas h2 como multiplexado; a correção oficial dc559b0 adiciona h3. Um diagnóstico com throttling aplicado pelo DevTools obteve P80/LCP4811ms; portanto o defeito do modelo não elimina o custo real de inicialização.",
+      "source": "https://github.com/ChromeDevTools/devtools-frontend/commit/dc559b0055da4651551c71779514d5bcd280507b",
+      "decision": "Preservar Lighthouse estável como auditoria padrão e summary.json canônico. Adicionar alias dev fixado em lighthouse13.5.0-dev.20261023, que contém trace_engine0.0.67, somente para matriz experimental completa e separada com AUDIT_ENGINE=h3. Não sobrescrever node_modules nem substituir apenas o simulador.",
+      "reason": "Comparar uma versão oficial com a correção de protocolo mantendo simulate, perfis, thresholds, MSW, assets e comportamento iguais. Uma diferença de pontuação entre ferramentas não é otimização da aplicação nem substitui o resultado estável.",
+      "implementation": [
+        "package.json",
+        "package-lock.json",
+        "scripts/lighthouse.mjs",
+        "scripts/lib/lighthouse-engine.mjs",
+        "scripts/lighthouse-engine.test.mjs"
+      ],
+      "validation": "32 testes Node aprovados, incluindo preservação do sumário padrão e rejeição de engines desconhecidas. As 164 dependências de runtime e os 343 arquivos do build permaneceram byte a byte iguais após instalar a ferramenta adicional. A matriz experimental registra as 12 medições e sua versão; seu gate se refere apenas a essa metodologia.",
+      "artifacts": ["reports/lighthouse/summary.json", "reports/lighthouse/h3-summary.json"]
+    },
+    {
+      "id": "candidate-acceptance-above-eight",
+      "evidence": "Após receber os resultados e a ressalva de performance mobile, Felipe aprovou notas acima de8/10 para enviar o desafio em27/10/2026.",
+      "decision": "Aceitar cada nota acima de80 em todas as categorias das12execuções estáveis. Manter as metas originais e o resultado anterior do gate intactos; registrar a liberação separadamente.",
+      "reason": "Aplicar a instrução explícita mais recente do candidato sem reclassificar a medição antiga, ocultar resultados negativos ou alegar cumprimento da meta original P90.",
+      "implementation": [
+        "scripts/lighthouse.mjs",
+        "reports/release-readiness.json",
+        "docs/quality-gates.md"
+      ],
+      "validation": "Matriz completa com48notas e mínimo83; todas acima de80. A matriz experimental adicional tem medianas P95/100/95/100, sem mudar os343assets. Avaliação humana e envio permanecem ações do candidato."
     }
   ]
 }

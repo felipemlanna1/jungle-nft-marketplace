@@ -188,15 +188,22 @@ for (const width of [320, 375, 390, 414, 440]) {
     await expect(opener).toBeFocused();
     await expect(opener).toHaveCSS('outline-style', 'solid');
     await expect(opener).toHaveCSS('outline-width', '3px');
+    const cartStatus = await page.evaluate(async () => {
+      const response = await fetch('/api/cart/items', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nftId: 'nft-1', quantity: 2 }),
+      });
+      return response.status;
+    });
+    expect(cartStatus).toBe(200);
+    await page.reload();
+    await expect(page.locator('.mobile-bottom-nav .mobile-cart-count')).toHaveText('2');
     for (const count of [1, 2, 9, 10, 99, 100]) {
       const badgeGeometry = await page.evaluate((value) => {
         const cart = document.querySelector('.mobile-bottom-nav a[href="/cart"]')!;
-        let badge = cart.querySelector<HTMLSpanElement>('.mobile-cart-count');
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'mobile-cart-count';
-          cart.append(badge);
-        }
+        const badge = cart.querySelector<HTMLSpanElement>('.mobile-cart-count');
+        if (!badge) throw new Error('The API cart count must render before measuring typography.');
         badge.textContent = String(value);
         const range = document.createRange();
         range.selectNodeContents(badge);

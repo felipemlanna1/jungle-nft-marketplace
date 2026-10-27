@@ -1,7 +1,7 @@
 {
   "source": "https://github.com/junglegaming/frontend-challenge",
   "referenceRead": "Enunciado integral fornecido pelo candidato e contextos do Figma.",
-  "status": "Revisão responsiva aprovada localmente: 224 testes unitários e 164 E2E, incluindo oito regressões visuais. Nova publicação e Lighthouse HTTPS desta revisão ainda em validação.",
+  "status": "Pronto para avaliação humana e envio pelo candidato, conforme a aceitação explícita de notas acima de 8/10 em 27/10/2026. Runtime c8fefe8 publicado em Workers e no mirror Sites v5; 224 Vitest, 32 verificadores Node, 166 E2E no CI e 18 testes de produção aprovados. Meta original de performance P90 não cumprida no Lighthouse estável mobile 83/85, com justificativa e comparação experimental preservadas. Envio não realizado.",
   "scope": [
     {
       "requirement": "Stack obrigatória em uso efetivo",
@@ -124,23 +124,54 @@
     },
     {
       "requirement": "Playwright e regressão visual",
-      "implementation": "164 casos em 25 arquivos cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria, nomes longos, seleção de carteira, precisão dos filtros e oito baselines de início, detalhe, carrinho e pagamento.",
+      "implementation": "166 casos no CI do commit c8fefe8 cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria, nomes longos, seleção de carteira, precisão dos filtros e oito baselines de início, detalhe, carrinho e pagamento.",
       "evidence": ["playwright.config.ts", "tests/e2e", ".github/workflows/quality.yml"],
-      "limit": "A execução completa passou com 164/164, sem falhas, retries ou casos ignorados, com fonte e build imutáveis. A confirmação em produção é registrada separadamente."
+      "limit": "CI 40575466182: 166/166 aprovados sem atualização de snapshots. A prova local anterior de 164/164 permanece histórica. O teste do badge foi refinado depois do commit, sem mudar o runtime: exige contador real 2 após POST/reload e mede as geometrias CSS 1/2/9/10/99/100 no elemento existente, sem criar span. Esse refinamento passou nos 18 testes HTTPS de produção; não é atribuído retroativamente ao CI."
     },
     {
       "requirement": "Lighthouse em build otimizado, três medições por página e perfil",
       "implementation": "Configuração versionada, preflight REST/Socket.IO, verificação dos bytes servidos, preservação dos relatórios e medianas com LCP, CLS, TBT e ambiente.",
-      "evidence": ["scripts/lighthouse.mjs", "reports/performance", "reports/lighthouse/runs"],
-      "limit": "A matriz final precisa ser concluída. Não se infere nota a partir do tamanho do bundle."
+      "evidence": [
+        "scripts/lighthouse.mjs",
+        "reports/performance",
+        "reports/lighthouse/runs",
+        "reports/release-readiness.json",
+        "reports/lighthouse/h3-summary.json"
+      ],
+      "limit": "Matriz estável completa preservada: medianas P83/99/85/99 e A100/BP100/SEO92. Não atende P90 mobile do enunciado; atende a aceitação posterior do candidato acima de 80 em cada nota. A matriz experimental oficial 13.5.0-dev.20261023, com correção HTTP/3, obteve P95/100/95/100 e A100/BP100/SEO92. Não é otimização do aplicativo e não substitui o baseline estável."
     },
     {
       "requirement": "Deploy público correspondente ao repositório e execução limpa",
-      "implementation": "Build estático com todos os assets e mocks locais, configuração Sites e publicação do mesmo commit no repositório.",
-      "evidence": [".openai/hosting.json", "package-lock.json", "README.md"],
-      "limit": "A revisão atual ainda precisa de publicação e teste de acesso direto e atualização em produção."
+      "implementation": "Build estático do commit c8fefe8686114be4db364d43a87469ce09cf8e0f publicado em Workers e no mirror Sites versão 5, com assets e mocks locais; sem backend de negócio na hospedagem.",
+      "evidence": [
+        "wrangler.jsonc",
+        ".openai/hosting.json",
+        "docs/hosting.md",
+        "reports/production-polish.json",
+        "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json"
+      ],
+      "limit": "18 testes HTTPS Workers passaram: dez de layout, quatro de favoritos/login, dois de newsletter e dois de compra. Esse escopo não substitui a suíte completa nem certifica o mirror Sites ou todos os navegadores. Publicação não significa envio do desafio ou aprovação humana."
     }
   ],
+  "currentRelease": {
+    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+    "mirrorVersion": 5,
+    "ci": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182",
+    "mobileDecisions": "docs/decisions-mobile-polish.md",
+    "subjectiveCodeScore": null,
+    "performanceApproved": true,
+    "humanReview": "pending",
+    "submissionPerformed": false,
+    "overallComplete": true,
+    "performanceApprovalBasis": "Critério explícito posterior do candidato: cada nota acima de 80 em todas as 12 execuções estáveis.",
+    "officialPerformanceTargetMet": false,
+    "readyForSubmission": true,
+    "technicalPreparationComplete": true,
+    "completionScope": "Implementação, validação automatizada e publicação; avaliação humana e envio pelo candidato são passos posteriores.",
+    "acceptanceEvidence": "reports/release-readiness.json"
+  },
   "documentedDifferences": [
     "Dados e contagens refletem a simulação e não os números ilustrativos do Figma.",
     "O total matematicamente inconsistente no carrinho mobile foi corrigido pela cotação da API.",

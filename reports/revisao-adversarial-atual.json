@@ -1,7 +1,7 @@
 {
   "updatedOn": "2026-10-27",
   "language": "pt-BR",
-  "status": "Revisão responsiva aprovada em 224 testes unitários e 164 E2E, com oito regressões visuais. Sem P0/P1 aberto nessa revisão. A publicação desta revisão e a nova matriz Lighthouse HTTPS ainda estão em validação. A matriz anterior do HTTPS, referente a c5e11f1, permanece reprovada e preservada; não representa a nova medição.",
+  "status": "Preparação técnica concluída e versão publicada pronta para avaliação humana e envio pelo candidato. CI224/29/166 e produção18 aprovados; verificadores Node atuais32. Notas estáveis acima de80 em todas as categorias e execuções, conforme autorização posterior de Felipe. Meta original P90 mobile não cumprida no estável; comparação experimental H3 preservada. Nota subjetiva null e envio não realizado.",
   "reviewType": "Revisão cruzada por evidências, sem uso de notas históricas.",
   "independence": {
     "independentScope": "Componentes e hooks React de catálogo, carrinho, checkout, recibo, roteamento e conta escritos por outros integrantes.",
@@ -75,17 +75,23 @@
       "maximum": 10,
       "points": null,
       "evidence": [
-        "Última suíte completa observada: 187 testes em 21 arquivos aprovados antes do último patch HTTP. Após o patch, os 12 testes de transporte passaram, incluindo nove anteriores e três novos; TypeScript e lint do escopo aprovados. A validação geral do artefato final permanece separada.",
-        "Quatro contraprovas independentes do hook de detalhe aprovadas",
-        "Quatro E2E de desconexão/reconexão aprovados em desktop e mobile",
-        "76/76 E2E, zero skips ou flaky, com fingerprint de fonte idêntico antes/depois (dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c). Essa rodada precede o fallback de geração em memória e clearAttemptForOrder; a validação posterior desses dois ajustes será registrada separadamente.",
-        "Após o último ajuste de feedback, alvo de19 testes aprovado:12 de transporte e7 de adição por conta, incluindo os três consumidores e invariantes anteriores. Tsc e lint aprovados; não representa uma nova suíte ampla do artefato final.",
-        "A rodada geral147/148 preservou a falha real de bootstrap; após a correção,14 testes de transporte e7 de ownership passaram. A rodada geral anterior não é declarada aprovada nem reaproveitada como certificação da versão corrigida.",
-        "Rodada geral posterior à primeira correção do bootstrap:148/148 aprovada, 0 skips/retries/flaky e hashes imutáveis. Essa rodada antecede os últimos ajustes de carregamento/prefetch e handshake legado; não certifica o novo artefato.",
-        "Check/build final do responsável:207/207 em 24 arquivos, tipos/lint/formato aprovados. Cinco casos de prefetch verificam deduplicação, contrato de busca, rotas públicas, erros sem dados inventados e hints responsivos; Auth comprovou RED 2→GREEN 5 com Hook/MSW real.",
-        "Probes locais finais no build congelado:Home 83/Detail 85 de performance, A100/B100/SEO92, CLS0. A matriz local incompleta não está aprovada; JSON/HTML preservados em reports/lighthouse/probes/public-query-prefetch-retry."
+        "Histórico: Última suíte completa observada: 187 testes em 21 arquivos aprovados antes do último patch HTTP. Após o patch, os 12 testes de transporte passaram, incluindo nove anteriores e três novos; TypeScript e lint do escopo aprovados. A validação geral do artefato final permanece separada.",
+        "Histórico: Quatro contraprovas independentes do hook de detalhe aprovadas",
+        "Histórico: Quatro E2E de desconexão/reconexão aprovados em desktop e mobile",
+        "Histórico: 76/76 E2E, zero skips ou flaky, com fingerprint de fonte idêntico antes/depois (dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c). Essa rodada precede o fallback de geração em memória e clearAttemptForOrder; a validação posterior desses dois ajustes será registrada separadamente.",
+        "Histórico: Após o último ajuste de feedback, alvo de19 testes aprovado:12 de transporte e7 de adição por conta, incluindo os três consumidores e invariantes anteriores. Tsc e lint aprovados; não representa uma nova suíte ampla do artefato final.",
+        "Histórico: A rodada geral147/148 preservou a falha real de bootstrap; após a correção,14 testes de transporte e7 de ownership passaram. A rodada geral anterior não é declarada aprovada nem reaproveitada como certificação da versão corrigida.",
+        "Histórico: Rodada geral posterior à primeira correção do bootstrap:148/148 aprovada, 0 skips/retries/flaky e hashes imutáveis. Essa rodada antecede os últimos ajustes de carregamento/prefetch e handshake legado; não certifica o novo artefato.",
+        "Histórico: Check/build final do responsável:207/207 em 24 arquivos, tipos/lint/formato aprovados. Cinco casos de prefetch verificam deduplicação, contrato de busca, rotas públicas, erros sem dados inventados e hints responsivos; Auth comprovou RED 2→GREEN 5 com Hook/MSW real.",
+        "Histórico: Probes locais finais no build congelado:Home 83/Detail 85 de performance, A100/B100/SEO92, CLS0. A matriz local incompleta não está aprovada; JSON/HTML preservados em reports/lighthouse/probes/public-query-prefetch-retry.",
+        "CI 40575466182 no commit c8fefe8: 224/224 Vitest em 26 arquivos, 29/29 verificadores de artefatos e 166/166 E2E Chromium aprovados; oito comparações visuais, sem atualização de snapshots.",
+        "18/18 HTTPS Workers: dez layouts, quatro favoritos/login, dois newsletter e dois compra. A versão refinada do teste verifica badge real 2 via API e reload, depois geometrias CSS 1/2/9/10/99/100 sem criar span; esse refinamento posterior não é atribuído ao CI de c8fefe8."
       ],
       "residuals": [
+        "Os 18 casos de produção são um recorte da suíte, não uma repetição dos 166 após o refinamento do teste. Chromium mobile não comprova Safari/iOS, Firefox ou aparelhos físicos.",
+        "A rodada focada inicial do polimento teve duas falhas desktop de gesto/teclado. As repetições isoladas e a confirmação 16/16 passaram; as execuções distintas permanecem registradas, sem concluir ausência de intermitência."
+      ],
+      "historicalResiduals": [
         "A rodada final deve cobrir a composição do Diário, newsletter, novas ações de cards, tema único e patches recentes de navegação e transporte. E2E de mobile em Chromium não constitui prova de execução em Safari ou Firefox."
       ]
     },
@@ -96,9 +102,13 @@
       "evidence": [
         "Decisões registram evidência, motivo e validação",
         "Relatórios antigos foram arquivados como históricos",
-        "O harness Lighthouse retém todas as execuções e identifica o artefato por SHA256"
+        "O harness Lighthouse retém todas as execuções e identifica o artefato por SHA256",
+        "Estado atual reconciliado com publicação, CI, 18 testes HTTPS e matriz estável completa. A aceitação posterior acima de80 foi registrada separadamente das metas originais e da comparação experimental HTTP/3."
       ],
       "residuals": [
+        "Revisão humana de Felipe e envio do desafio permanecem ações posteriores do candidato. A nota subjetiva continua null; o novo critério de liberação acima de80 foi autorizado explicitamente, sem alterar o resultado da meta original."
+      ],
+      "historicalResiduals": [
         "Os relatórios finais precisam ser atualizados com os resultados após o congelamento da versão entregue"
       ]
     }
@@ -181,9 +191,7 @@
   ],
   "openP1": [],
   "pendingReleaseEvidence": [
-    "Resolver ou registrar explicitamente os bloqueios reais de performance mobile e de hosting, sem declarar gates cumpridos",
-    "Qualquer artefato futuro corrigido exige evidência correspondente; não reutilizar esta matriz como aprovação",
-    "Smoke pós-publicação e recibos de entrega sob responsabilidade do publicador"
+    "Avaliação humana de Felipe e envio pelo próprio candidato, sem alteração automática de ATS ou mensagens."
   ],
   "clockMethodology": "Somente um dos E2E usa setFixedTime para controlar Date e testar reconexão antes do prazo do modelo. Timers, requisições, Socket.IO e interações de browser permanecem ativos. O outro E2E usa tempo normal e verifica a confirmação por fallback REST. Nenhum controle de relógio é usado no Lighthouse.",
   "performanceEvidence": {
@@ -195,27 +203,55 @@
     "allBestPractices": 100,
     "allSeo": 92,
     "allCls": 0,
-    "gate": "Oficial mediana P>=90, A/B>=95, SEO>=90; exigência adicional todo P>90. Mobile P95 é aspiração não obrigatória. Não há aprovação por escolher o melhor run.",
+    "gate": "Registro anterior à autorização de notas acima de8/10: medianas oficiais P>=90,A/B>=95,SEO>=90 e requisito adicional anterior todoP>90. Aceitação atual em reports/release-readiness.json.",
     "browserStartupFailure": "reports/lighthouse/probes/public-query-prefetch/execution-failure.json",
-    "limits": "Probes locais são HTTP/1.1 com throttling simulado padrão. Não se presume aprovação HTTPS/h2 sem medir."
+    "limits": "Probes locais são HTTP/1.1 com throttling simulado padrão. Não se presume aprovação HTTPS/h2 sem medir.",
+    "classification": "Probe local histórico, distinto da matriz HTTPS atual em finalPerformanceEvidence."
   },
   "finalFunctionalEvidence": {
-    "unitTests": 207,
-    "e2eTests": 148,
-    "e2eUnexpected": 0,
-    "e2eSkipped": 0,
-    "e2eFlaky": 0,
-    "sourceFingerprint": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
-    "buildFingerprint": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
-    "changedFiles": [],
-    "evidence": "reports/e2e-final-build-evidence.json",
-    "baselinePolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
-    "durationMs": 403453.264
+    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "unitTests": 224,
+    "unitTestFiles": 26,
+    "artifactVerifierTests": 29,
+    "e2eTests": 166,
+    "visualRegressions": 8,
+    "ci": {
+      "url": "https://github.com/felipemlanna1/jungle-nft-marketplace/actions/runs/40575466182",
+      "status": "completed",
+      "conclusion": "success",
+      "checksJob": "success",
+      "browserJob": "success",
+      "sourceCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+      "completedAt": "2026-10-27T20:23:53Z",
+      "workers": 1,
+      "updateSnapshots": "none",
+      "evidenceMethod": "gh run view --json e contagens finais do log dos dois jobs."
+    },
+    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
+    "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+    "sourceRevisionAtPerformanceAudit": {
+      "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+      "changedFiles": [
+        "M reports/favorite-login-catalog-desktop.png",
+        " M reports/favorite-login-catalog-mobile.png",
+        " M reports/favorite-login-detail-desktop.png",
+        " M reports/favorite-saved-catalog-desktop.png",
+        " M reports/favorite-saved-catalog-mobile.png",
+        " M reports/favorite-saved-detail-desktop.png",
+        " M reports/favorite-saved-detail-mobile.png",
+        " M tests/e2e/mobile-home-layout.spec.ts",
+        "?? reports/production-polish.json"
+      ]
+    },
+    "productionEvidence": "reports/production-polish.json",
+    "testRevisionLimit": "O CI executou o teste do contador versionado em c8fefe8. O ajuste posterior exige badge real 2 pela API e elimina criação de span de fallback; somente os 18 testes de produção posteriores são a prova desse refinamento. Nenhum runtime foi alterado por esse ajuste."
   },
   "finalPerformanceEvidence": {
-    "summary": "reports/lighthouse/summary.json",
-    "runDirectory": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z",
-    "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+    "summary": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
+    "runDirectory": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z",
+    "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "completedAt": "2026-10-27T20:17:21.450Z",
     "completeMatrix": true,
     "approved": false,
     "gate": {
@@ -235,49 +271,54 @@
         "requiredForApproval": false
       }
     },
+    "totalRuns": 12,
+    "throttlingMethod": "simulate",
+    "lighthouse": "13.5.0",
+    "node": "v22.22.0",
+    "browser": "Playwright Chromium 156.0.8078.4",
     "medians": [
       {
         "path": "/",
         "profile": "mobile",
         "categories": {
-          "performance": 87,
+          "performance": 83,
           "accessibility": 100,
-          "best-practices": 81,
+          "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          87,
-          84,
-          87
+          83,
+          83,
+          83
         ]
       },
       {
         "path": "/",
         "profile": "desktop",
         "categories": {
-          "performance": 97,
-          "accessibility": 96,
-          "best-practices": 81,
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          93,
-          97,
-          100
+          99,
+          98,
+          99
         ]
       },
       {
         "path": "/nft/nft-1",
         "profile": "mobile",
         "categories": {
-          "performance": 88,
+          "performance": 85,
           "accessibility": 100,
-          "best-practices": 81,
+          "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          94,
-          88,
+          84,
+          85,
           85
         ]
       },
@@ -285,65 +326,129 @@
         "path": "/nft/nft-1",
         "profile": "desktop",
         "categories": {
-          "performance": 94,
-          "accessibility": 97,
-          "best-practices": 81,
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
           "seo": 92
         },
         "performanceRuns": [
-          94,
-          94,
-          93
+          99,
+          99,
+          98
         ]
       }
     ],
     "artifactVerification": {
-      "mode": "known-cloudflare-jsd-envelope",
-      "rawSha256": "8c72bd03dc89221ae908e538c1a889fb31aadbd75411fec0464a5194f7f70590",
-      "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-      "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-      "injectionCount": 1,
-      "scriptSha256": "daf5c1a41abe00f7ae3c5078c7fb3c3d49dd6847bc533899f80e67da6a823217",
-      "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-      "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-      "volatileFields": [
-        "rayId",
-        "base64UnixTimestamp"
-      ],
-      "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-      "measurement": "The browser receives the original response and executes the platform script unchanged."
+      "mode": "exact",
+      "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+      "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+      "injectionCount": 0
     },
-    "platformIssue": "Best Practices 81 é causado por FencedFrame e StorageType.persistent no JavaScript Detections injetado pela Cloudflare. O script foi executado normalmente e não removido da medição.",
-    "platformDocumentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-    "runtimeApplicationUnchanged": true
+    "hostingConfigurationVerification": [
+      {
+        "path": "_headers",
+        "sourcePath": "public/_headers",
+        "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "sourceBytes": 604,
+        "buildBytes": 604,
+        "responseStatus": 200,
+        "responseSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "responseBytes": 889,
+        "mode": "consumed-static-asset-configuration",
+        "support": "verified",
+        "policiesApplied": true,
+        "knownConfigurationSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "configurationResponse": "verified-spa-fallback",
+        "fallbackDocumentVerification": {
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
+        },
+        "runtimePolicyChecks": [
+          {
+            "path": "/",
+            "status": 200,
+            "cacheControl": "no-cache, no-transform",
+            "expectedCacheControl": "no-cache, no-transform",
+            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+            "documentVerification": {
+              "mode": "exact",
+              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "injectionCount": 0
+            }
+          },
+          {
+            "path": "/nft/nft-1",
+            "status": 200,
+            "cacheControl": "no-cache, no-transform",
+            "expectedCacheControl": "no-cache, no-transform",
+            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+            "documentVerification": {
+              "mode": "exact",
+              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "injectionCount": 0
+            }
+          },
+          {
+            "path": "/assets/application-CnWYuhBj.js",
+            "status": 200,
+            "cacheControl": "public, max-age=31536000, immutable",
+            "expectedCacheControl": "public, max-age=31536000, immutable",
+            "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
+          },
+          {
+            "path": "/mockServiceWorker.js",
+            "status": 200,
+            "cacheControl": "no-cache",
+            "expectedCacheControl": "no-cache",
+            "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
+          }
+        ],
+        "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+      }
+    ],
+    "buildFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
+    "platformIssue": "Workers serve HTML idêntico ao build sem JSD, com Best Practices100. A performance mobile estável permanece abaixo da meta originalP90; o mínimo83 atende ao critério posterior do candidato acima de80.",
+    "runtimeApplicationUnchangedDuringAudit": true,
+    "measurementLimit": "Auditoria das duas rotas no Workers, sem bloquear scripts ou substituir recursos. Não certifica o mirror Sites v5; performance aprovada não pode ser inferida do CI.",
+    "candidateAcceptance": "reports/release-readiness.json"
   },
-  "openReleaseBlockers": [
-    {
-      "id": "public-mobile-performance-below-gate",
-      "evidence": "Home mobile 87,84,87; Detail mobile 94,88,85. Medianas 87/88 e execuções<=90 não atendem ao gate.",
-      "owner": "Aplicação/entrega; causa observada envolve LCP de imagens reais, SpeedIndex e variabilidade de rede. Não atribuir tudo à plataforma sem prova."
-    },
-    {
-      "id": "hosting-jsd-deprecations",
-      "evidence": "Best Practices 81 em todos os 12 runs; auditoria deprecations aponta exclusivamente /cdn-cgi/challenge-platform/scripts/jsd/main.js.",
-      "owner": "Hosting; qualquer correção deve ser geral/documentada, sem bloquear scripts na auditoria."
-    }
-  ],
+  "openReleaseBlockers": [],
   "additionalAccessibilityFindings": [
     {
       "severity": "P2",
       "id": "newsletter-label-content-name-mismatch",
-      "evidence": "Botão visível Enviar usa aria-label Inscrever na newsletter; o nome acessível não contém o texto visível."
+      "evidence": "Botão visível Enviar usa aria-label Inscrever na newsletter; o nome acessível não contém o texto visível.",
+      "classification": "Achado histórico da matriz anterior do Sites, preservado.",
+      "currentStatus": "Não reproduzido pelas auditorias correspondentes nos 12 runs atuais de Workers; score 1 em label-content-name-mismatch, aria-prohibited-attr e target-size. Não é garantia de ausência de outros problemas de acessibilidade.",
+      "currentEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.json",
+      "currentAuditId": "label-content-name-mismatch",
+      "currentMatrixEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json"
     },
     {
       "severity": "P2",
       "id": "rating-prohibited-aria-label",
-      "evidence": "Span do rating contém aria-label sem role que aceite nome acessível."
+      "evidence": "Span do rating contém aria-label sem role que aceite nome acessível.",
+      "classification": "Achado histórico da matriz anterior do Sites, preservado.",
+      "currentStatus": "Não reproduzido pelas auditorias correspondentes nos 12 runs atuais de Workers; score 1 em label-content-name-mismatch, aria-prohibited-attr e target-size. Não é garantia de ausência de outros problemas de acessibilidade.",
+      "currentEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.json",
+      "currentAuditId": "aria-prohibited-attr",
+      "currentMatrixEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json"
     },
     {
       "severity": "P2",
       "id": "price-range-target-size",
-      "evidence": "Ranges de preço têm área 258x4px sobreposta, abaixo do alvo mínimo 24x24px."
+      "evidence": "Ranges de preço têm área 258x4px sobreposta, abaixo do alvo mínimo 24x24px.",
+      "classification": "Achado histórico da matriz anterior do Sites, preservado.",
+      "currentStatus": "Não reproduzido pelas auditorias correspondentes nos 12 runs atuais de Workers; score 1 em label-content-name-mismatch, aria-prohibited-attr e target-size. Não é garantia de ausência de outros problemas de acessibilidade.",
+      "currentEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.json",
+      "currentAuditId": "target-size",
+      "currentMatrixEvidence": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json"
     }
   ],
   "responsiveReview": {
@@ -362,6 +467,328 @@
       "reports/revisao-responsive-adversarial.json",
       "reports/inline-style-enforcement.json"
     ],
-    "productionVerification": "pending"
+    "productionVerification": "Evidência posterior do runtime publicado registrada separadamente em productionEvidence; a rodada local de 164 não é a suíte CI de 166.",
+    "classification": "Suíte local anterior ao polimento móvel; hashes e contagens originais preservados.",
+    "productionVerificationAtTime": "pending"
+  },
+  "historicalFunctionalEvidence": [
+    {
+      "unitTests": 207,
+      "e2eTests": 148,
+      "e2eUnexpected": 0,
+      "e2eSkipped": 0,
+      "e2eFlaky": 0,
+      "sourceFingerprint": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
+      "buildFingerprint": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
+      "changedFiles": [],
+      "evidence": "reports/e2e-final-build-evidence.json",
+      "baselinePolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
+      "durationMs": 403453.264,
+      "classification": "Registro histórico preservado; não certifica c8fefe8. O caminho genérico de evidência pode receber provas posteriores."
+    }
+  ],
+  "historicalPerformanceEvidence": [
+    {
+      "summary": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/summary.json",
+      "runDirectory": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z",
+      "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+      "completeMatrix": true,
+      "approved": false,
+      "gate": {
+        "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
+        "completeMatrix": true,
+        "categoryThresholds": {
+          "performance": 90,
+          "accessibility": 95,
+          "best-practices": 95,
+          "seo": 90
+        },
+        "officialMediansMet": false,
+        "allPerformanceRunsAbove90": false,
+        "approved": false,
+        "aspirations": {
+          "mobilePerformanceMediansAtLeast95": false,
+          "requiredForApproval": false
+        }
+      },
+      "medians": [
+        {
+          "path": "/",
+          "profile": "mobile",
+          "categories": {
+            "performance": 87,
+            "accessibility": 100,
+            "best-practices": 81,
+            "seo": 92
+          },
+          "performanceRuns": [
+            87,
+            84,
+            87
+          ]
+        },
+        {
+          "path": "/",
+          "profile": "desktop",
+          "categories": {
+            "performance": 97,
+            "accessibility": 96,
+            "best-practices": 81,
+            "seo": 92
+          },
+          "performanceRuns": [
+            93,
+            97,
+            100
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "mobile",
+          "categories": {
+            "performance": 88,
+            "accessibility": 100,
+            "best-practices": 81,
+            "seo": 92
+          },
+          "performanceRuns": [
+            94,
+            88,
+            85
+          ]
+        },
+        {
+          "path": "/nft/nft-1",
+          "profile": "desktop",
+          "categories": {
+            "performance": 94,
+            "accessibility": 97,
+            "best-practices": 81,
+            "seo": 92
+          },
+          "performanceRuns": [
+            94,
+            94,
+            93
+          ]
+        }
+      ],
+      "artifactVerification": {
+        "mode": "known-cloudflare-jsd-envelope",
+        "rawSha256": "8c72bd03dc89221ae908e538c1a889fb31aadbd75411fec0464a5194f7f70590",
+        "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
+        "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
+        "injectionCount": 1,
+        "scriptSha256": "daf5c1a41abe00f7ae3c5078c7fb3c3d49dd6847bc533899f80e67da6a823217",
+        "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
+        "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+        "volatileFields": [
+          "rayId",
+          "base64UnixTimestamp"
+        ],
+        "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
+        "measurement": "The browser receives the original response and executes the platform script unchanged."
+      },
+      "platformIssue": "Best Practices 81 é causado por FencedFrame e StorageType.persistent no JavaScript Detections injetado pela Cloudflare. O script foi executado normalmente e não removido da medição.",
+      "platformDocumentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
+      "runtimeApplicationUnchanged": true,
+      "originalSummaryAlias": "reports/lighthouse/summary.json",
+      "classification": "Matriz anterior do Sites preservada como reprovada; não representa o runtime Workers atual."
+    }
+  ],
+  "historicalReleaseBlockers": [
+    {
+      "blockers": [
+        {
+          "id": "public-mobile-performance-below-gate",
+          "evidence": "Home mobile 87,84,87; Detail mobile 94,88,85. Medianas 87/88 e execuções<=90 não atendem ao gate.",
+          "owner": "Aplicação/entrega; causa observada envolve LCP de imagens reais, SpeedIndex e variabilidade de rede. Não atribuir tudo à plataforma sem prova."
+        },
+        {
+          "id": "hosting-jsd-deprecations",
+          "evidence": "Best Practices 81 em todos os 12 runs; auditoria deprecations aponta exclusivamente /cdn-cgi/challenge-platform/scripts/jsd/main.js.",
+          "owner": "Hosting; qualquer correção deve ser geral/documentada, sem bloquear scripts na auditoria."
+        }
+      ],
+      "pendingReleaseEvidence": [
+        "Resolver ou registrar explicitamente os bloqueios reais de performance mobile e de hosting, sem declarar gates cumpridos",
+        "Qualquer artefato futuro corrigido exige evidência correspondente; não reutilizar esta matriz como aprovação",
+        "Smoke pós-publicação e recibos de entrega sob responsabilidade do publicador"
+      ],
+      "evidence": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/summary.json"
+    }
+  ],
+  "mobilePolishReview": {
+    "decisions": "docs/decisions-mobile-polish.md",
+    "areas": [
+      "Alinhamento dos cartões",
+      "Badge do carrinho",
+      "Eixo e ícone do menu",
+      "Intervalos do hero"
+    ],
+    "widths": [
+      320,
+      375,
+      390,
+      414,
+      440
+    ],
+    "requestedViewport": {
+      "width": 440,
+      "height": 956
+    },
+    "focusedEvidence": "reports/mobile-polish/summary.json",
+    "initialCombinedRun": {
+      "startTime": "2026-10-27T19:54:39.305Z",
+      "duration": 138668.302,
+      "expected": 30,
+      "skipped": 0,
+      "unexpected": 2,
+      "flaky": 0,
+      "report": "focused-results.json",
+      "note": "Duas falhas intermitentes no gesto/teclado desktop; repetição isolada 2/2 e confirmação desktop completa 16/16 passaram sem mudança da aplicação ou redução dos critérios.",
+      "byProject": {
+        "mobile": {
+          "passed": 16,
+          "total": 16
+        },
+        "desktop": {
+          "passed": 14,
+          "total": 16
+        }
+      }
+    },
+    "interpretation": "Execuções distintas. As repetições passaram sem alterar a aplicação nem reduzir critérios; não se conclui ausência de intermitência. O campo flaky do Playwright mede novas tentativas dentro da mesma execução, não estas repetições manuais.",
+    "badgeEvidence": {
+      "apiCount": 2,
+      "apiAndReloadVerified": true,
+      "geometryFixtures": [
+        1,
+        2,
+        9,
+        10,
+        99,
+        100
+      ],
+      "existingBadgeRequired": true,
+      "createsFallbackSpan": false,
+      "geometryLimit": "As demais contagens são fixtures de tipografia CSS no elemento real; não simulam compras dessas quantidades.",
+      "evidence": "reports/production-polish.json",
+      "revision": "Refinamento posterior somente do teste; runtime c8fefe8 inalterado."
+    }
+  },
+  "productionEvidence": {
+    "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "report": "reports/production-polish.json",
+    "stats": {
+      "startTime": "2026-10-27T20:12:07.162Z",
+      "duration": 77844.84800000001,
+      "expected": 18,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "passed": 18,
+    "retriesObserved": [
+      0
+    ],
+    "scope": {
+      "layout": 10,
+      "favoriteLogin": 4,
+      "newsletter": 2,
+      "purchase": 2
+    },
+    "layoutWidths": [
+      320,
+      375,
+      390,
+      414,
+      440
+    ],
+    "projects": [
+      "desktop",
+      "mobile"
+    ],
+    "limits": "Dez casos de layout são cinco larguras nos dois projetos; a validação funcional é simulada no navegador. Não equivale a toda a suíte ou à validação do mirror Sites."
+  },
+  "releaseReadiness": {
+    "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "published": true,
+    "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+    "mirrorVersion": 5,
+    "ciApproved": true,
+    "productionSubsetApproved": true,
+    "performanceApproved": true,
+    "humanReview": "pending",
+    "submissionPerformed": false,
+    "overallComplete": true,
+    "subjectiveCodeScore": null,
+    "performanceApprovalBasis": "Critério posterior acima de80; aprovação não altera as metas originais.",
+    "officialPerformanceTargetMet": false,
+    "readyForSubmission": true,
+    "completionScope": "Preparação técnica, validação automatizada e publicação.",
+    "acceptanceEvidence": "reports/release-readiness.json"
+  },
+  "acceptedReleaseLimitations": [
+    {
+      "id": "public-mobile-performance-below-gate",
+      "evidence": "Workers c8fefe8: Home mobile 83/83/83, mediana 83; Detail mobile 84/85/85, mediana 85. Medianas inferiores a 90 e execuções inferiores ou iguais a 90 reprovam o gate.",
+      "owner": "Aplicação/entrega. Não há diagnóstico causal novo nesta atualização documental.",
+      "source": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
+      "state": "accepted-by-candidate",
+      "acceptance": "Critério posterior explícito em 27/10/2026: notas acima de 8/10.",
+      "originalTargetMet": false
+    }
+  ],
+  "experimentalPerformanceEvidence": {
+    "summary": "reports/lighthouse/h3-summary.json",
+    "version": "13.5.0-dev.20261023",
+    "experimental": true,
+    "approved": true,
+    "medians": [
+      {
+        "path": "/",
+        "profile": "mobile",
+        "categories": {
+          "performance": 95,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "path": "/",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "mobile",
+        "categories": {
+          "performance": 95,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        }
+      },
+      {
+        "path": "/nft/nft-1",
+        "profile": "desktop",
+        "categories": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        }
+      }
+    ],
+    "limitation": "Correção oficial do modelo HTTP/3, sem alteração dos assets. Resultado não substitui a matriz estável."
   }
 }

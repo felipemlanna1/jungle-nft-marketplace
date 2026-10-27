@@ -1,13 +1,18 @@
 {
-  "startedAt": "2026-10-27T18:23:32.039Z",
-  "completedAt": "2026-10-27T18:27:49.588Z",
+  "startedAt": "2026-10-27T20:14:23.823Z",
+  "completedAt": "2026-10-27T20:17:21.450Z",
   "node": "v22.22.0",
   "lighthouse": "13.5.0",
   "browser": "Playwright Chromium 156.0.8078.4",
-  "target": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+  "target": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
   "build": {
-    "fingerprint": "85b6a2462dac92e1b0fab1ab01f389d48bdda74ff03ad8366d391002c47b613c",
+    "fingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
     "files": [
+      {
+        "path": "_headers",
+        "bytes": 604,
+        "sha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae"
+      },
       {
         "path": "art/apes/burgundy-collector-360.webp",
         "bytes": 25844,
@@ -174,14 +179,14 @@
         "sha256": "967bd848ac145ed5df31e98b75c6f022ef7790b3ec213e5c5eeb39df6ca3ed7b"
       },
       {
-        "path": "assets/application-i_v95IIs.js",
-        "bytes": 106480,
-        "sha256": "fe0f97451b2d93a957884ceb8ab104aa015cd8517642620d06d65285adaafd5e"
+        "path": "assets/application-CnWYuhBj.js",
+        "bytes": 117783,
+        "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
       },
       {
-        "path": "assets/arrow-left-C6JdNh8E.js",
-        "bytes": 340,
-        "sha256": "ae1400252cd36568bf36be661c6020fa383fa8413121fa8cc60c4007813af26b"
+        "path": "assets/arrow-left-CoJX7ZK0.js",
+        "bytes": 4543,
+        "sha256": "63f359a3223647a74561dfbff594c0a357a19d208cd77afb2e0bced97138444b"
       },
       {
         "path": "assets/attempt-o7wZlnVp.js",
@@ -189,9 +194,9 @@
         "sha256": "a47d8eebcc3b4586114eb610a30034a32ea955a493f62ae9db76902d1e282039"
       },
       {
-        "path": "assets/bootstrap-Crspub1a.js",
+        "path": "assets/bootstrap-Dc2Cj1w3.js",
         "bytes": 2312,
-        "sha256": "d4d1ac47be12e28f546dca593243956361b711fc56d0c115c807e69951999c2c"
+        "sha256": "96be1d18f23311cda880fcdf29de779b9959f507fe52e56d300b433915d07068"
       },
       {
         "path": "assets/browser-mLzkjooY.js",
@@ -209,19 +214,29 @@
         "sha256": "fc4244edb31dd07411034aab35314dab0bf3ab28cbfdcc4f76b490507f7e4cbe"
       },
       {
-        "path": "assets/index--lzxbFSE.js",
-        "bytes": 3670,
-        "sha256": "87d01a265193b78a414ce6f1c4ea9a3214a5a9b621f93489069b1cc034fdd809"
-      },
-      {
         "path": "assets/index-1haAk8x8.js",
         "bytes": 978,
         "sha256": "2759e40f5b81c5548f9553b5c1aeb9f78e7a715c4e694f26de8886fde7500af3"
       },
       {
-        "path": "assets/index-BgUSUnQW.js",
-        "bytes": 457,
-        "sha256": "49b63d28a63f5cbb769def0e93223353e319a9237ca8aaa28473bb789d772060"
+        "path": "assets/index-BCSdGZ60.js",
+        "bytes": 8087,
+        "sha256": "564324d4b21ab171b688e1b1e15550a71786521db78b28aa682adc59203d74d0"
+      },
+      {
+        "path": "assets/index-BFK_gRJ8.js",
+        "bytes": 1174,
+        "sha256": "2deb8bfabe1010b4ae7ff1786115ac358dfd3da3ee67c940079eece26af9d066"
+      },
+      {
+        "path": "assets/index-BFsp0Yzm.js",
+        "bytes": 7191,
+        "sha256": "8637b25bfaa7a9af5ee36c1bf9bf3afdb75b275ba97edde44eabfff98aae7fa0"
+      },
+      {
+        "path": "assets/index-BK4BjSYa.js",
+        "bytes": 12684,
+        "sha256": "ee3c5d78a64cf6ed4e365640644be130b51edaeea71b117b3711a0831ca7c7f5"
       },
       {
         "path": "assets/index-BTHX-3pp.js",
@@ -234,9 +249,9 @@
         "sha256": "d114d7a66d081c344bb991c94603a791643e80e3b0a8e81ec33c07a4c0f52e54"
       },
       {
-        "path": "assets/index-C8VvfI6p.js",
-        "bytes": 2334,
-        "sha256": "2a0bfbe56b4f7dd2d42ebbc0ddb19b8dc2d6bcbab598ce3b8a51a4467e9f8b6c"
+        "path": "assets/index-C6cs5luM.js",
+        "bytes": 1775,
+        "sha256": "d628cc6dff3a5cb7574e26fd5bf188d0dae1ba0b3aaf1e5889a23b8a61bd39ae"
       },
       {
         "path": "assets/index-CC3bPbej.js",
@@ -249,79 +264,64 @@
         "sha256": "70edae97744e24716333d0b5271013613662d4a462fb8158cffc00f9b9b79fdc"
       },
       {
-        "path": "assets/index-CD8tjsMu.js",
+        "path": "assets/index-CvvGsjRd.js",
         "bytes": 1472,
-        "sha256": "12fcef26280040af3279f3675677f963c5d3e52ed5788bf44efb7e2ff6972110"
+        "sha256": "42a05824741845ff9ef3b6a45f033fcb61702bc2864d00d99c4e0441a6bfce70"
       },
       {
-        "path": "assets/index-CMjBdfE6.js",
-        "bytes": 12779,
-        "sha256": "aea879a1e7c60d82ab460a75fc6914c985162e17212ab3bc2a58a3eb8e969b7e"
+        "path": "assets/index-D5oQfqxt.js",
+        "bytes": 6644,
+        "sha256": "682211d4861662432839f43481ac08cb9aa05d7e3fa7b605a09019841d94651e"
       },
       {
-        "path": "assets/index-Cpz3nXY1.js",
-        "bytes": 4248,
-        "sha256": "6eacc7f8ddf01f6355172a274e4998212902f4ddeb166165ca9e2045ea8e2530"
+        "path": "assets/index-DAsOHOfR.js",
+        "bytes": 457,
+        "sha256": "9a2e7da88fd8edcc854b7aba1260bad69f33e320e2b95ab7aed63ef5e9fcd024"
       },
       {
-        "path": "assets/index-CX0D8RO5.js",
-        "bytes": 6782,
-        "sha256": "6b2599fd543f8de253ebd4109606084251bcbdf5dba51b36b509016bf9a7699b"
+        "path": "assets/index-dh8Bfhrl.js",
+        "bytes": 23100,
+        "sha256": "10c7e31d39524fb182289eba6b72325d1acf3e3f4121081ab7732e46f2488b7e"
       },
       {
-        "path": "assets/index-D1RvlwYH.js",
-        "bytes": 21255,
-        "sha256": "6a478b60846e0130dec073acf7c618e4715d827b48d1afaa41c37ca4970c93f7"
-      },
-      {
-        "path": "assets/index-D7hRBzCw.js",
-        "bytes": 454,
-        "sha256": "e94671797b288afb8742f8e75d96537017894ac496f6df94a4e35f47b3195696"
-      },
-      {
-        "path": "assets/index-Dqf3jVfv.js",
-        "bytes": 7469,
-        "sha256": "a6a7d41ad480f97fa9434d71d398b4895356442aa6f2624eaf65083f10cdc19c"
-      },
-      {
-        "path": "assets/index-DSetx9sM.js",
-        "bytes": 7229,
-        "sha256": "a32078c4d2159f0080996767eac8f3fdb3fd11db9df06dcf076216ceda3b7a6c"
-      },
-      {
-        "path": "assets/index-DZXQB2Ed.js",
-        "bytes": 1174,
-        "sha256": "fe21c22f636d784da3eb4afe2ae1bfad4f2eb66de355dd77269d5d050b6e6723"
-      },
-      {
-        "path": "assets/index-ef9ZN12g.js",
+        "path": "assets/index-DKXDncH6.js",
         "bytes": 3241,
-        "sha256": "7f8887f266ff52c05ea4e5d7835f34b014193ed70dc4928c6c1e16bb3ad9d3cb"
+        "sha256": "9753e2830ac85fc36a3aa27e0321315658bd3ad0519c5c91a6b7cb694e77f4a6"
       },
       {
-        "path": "assets/index-gpFROJWa.js",
-        "bytes": 6643,
-        "sha256": "954807310d41cec9a671c6ffb64a365622a87b6c2af873d29ce5fb0db447a93e"
+        "path": "assets/index-DMrk8NXe.js",
+        "bytes": 4080,
+        "sha256": "ce82cf1a80bc55e2f27c425516ebcd9387e5bcd2fafdb8c572ecd0ca8ad6c016"
       },
       {
-        "path": "assets/index-h8rRm-0K.js",
-        "bytes": 8087,
-        "sha256": "84ac3dba8495c8f5802d09445d014041d94e3e3bd28423699cf49a5f8d82728e"
+        "path": "assets/index-DrIibKDZ.js",
+        "bytes": 6782,
+        "sha256": "3b0012aa2e0d1a634db2d1deebe5c812fe061972be4c5be4428452dbc485d060"
       },
       {
-        "path": "assets/index-KDfoDU2i.css",
-        "bytes": 115859,
-        "sha256": "654973754dbe7c29dfc593cbc971051950f65a944ccaa7306ffe1243daa52f52"
+        "path": "assets/index-DzB6VF5b.css",
+        "bytes": 121046,
+        "sha256": "c9b43786664f74a76d28835d131280fc78257a17275ac7b14031e4578acb7570"
       },
       {
-        "path": "assets/index-mQV5_tLN.js",
-        "bytes": 4044,
-        "sha256": "ab8e75a28c79f40c29358928fdbe1af5c957fd8b9a4a07d55c261b991e74fd4d"
+        "path": "assets/index-eXkaLDfP.js",
+        "bytes": 2334,
+        "sha256": "32386d8f7b7635cedd711625d8c566b1d4f2d0973cd668107bbd367224097d0d"
       },
       {
-        "path": "assets/index-uRCKA6Mv.js",
-        "bytes": 1775,
-        "sha256": "15240889428afc6ef2e69694a6e6ac02edfba1171e94754049246cd200681fc6"
+        "path": "assets/index-Kkz3mllO.js",
+        "bytes": 454,
+        "sha256": "a07873c6777f3805c1d47a52a75ddd6549667ca5d9859cf3871e1cb4dc6358c4"
+      },
+      {
+        "path": "assets/index-svXclce4.js",
+        "bytes": 3671,
+        "sha256": "fdf500dda0b5934ab47846a61165f5d42c3e9a7b26fd9b89cc9295b95e9737c0"
+      },
+      {
+        "path": "assets/index-XmldA4bB.js",
+        "bytes": 7752,
+        "sha256": "1de660065d2f0301b8bb1daa57791800a3a02c07e3ca965c62b3b190a368e615"
       },
       {
         "path": "assets/react-runtime-BpIJT8mN.js",
@@ -369,19 +369,19 @@
         "sha256": "2e0f4cdd5bd38d009fd80c816c5b20cd06cacc91cd93b3b288c577f2dcda8ea6"
       },
       {
-        "path": "assets/useAddToCart-CdPuZ9P_.css",
-        "bytes": 1790,
-        "sha256": "ed4b8f5f69e760539c28614966d6f2c6475f71038c0c75f573723fe7c8f3071e"
+        "path": "assets/useAddToCart-Cd315iAj.css",
+        "bytes": 2468,
+        "sha256": "eeb71c7879813018c6970ec0b1734f74c80b9746c3a11c7b6336148d7f405dfa"
       },
       {
-        "path": "assets/useAddToCart-CPNk6lQL.js",
-        "bytes": 147748,
-        "sha256": "dd3df19e9812a1c269bc7e414d932dcbc29caae9a2135d315350c764b0443b83"
+        "path": "assets/useAddToCart-Dkpsnts_.js",
+        "bytes": 147763,
+        "sha256": "179c48bced5aa87b22fb386568d8e5c671c32b96a887bacb80dfb7a5094534d9"
       },
       {
-        "path": "assets/useCart-CcrUFirP.js",
+        "path": "assets/useCart-DSPuorH0.js",
         "bytes": 969,
-        "sha256": "a71b38ba28dac5dfd3148e74e9d0fcc9f8be179434e155438953a5d14dc98520"
+        "sha256": "4d3c87670e9574e1c01c28c26a5344f2af84a274b77e1699518c39aecd99d9ef"
       },
       {
         "path": "favicon.svg",
@@ -1716,7 +1716,7 @@
       {
         "path": "index.html",
         "bytes": 889,
-        "sha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744"
+        "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35"
       },
       {
         "path": "mockServiceWorker.js",
@@ -1725,15 +1725,20 @@
       }
     ],
     "sourceRevision": {
-      "commit": "c5e11f190ad612f53d4b665d6c89dbe30444704a",
+      "commit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
       "changedFiles": [
-        "M scripts/lighthouse.mjs",
-        "?? reports/lighthouse/runs/2026-10-27T18-14-14-524Z/",
-        "?? scripts/lib/",
-        "?? scripts/verified-html.test.mjs"
+        "M reports/favorite-login-catalog-desktop.png",
+        " M reports/favorite-login-catalog-mobile.png",
+        " M reports/favorite-login-detail-desktop.png",
+        " M reports/favorite-saved-catalog-desktop.png",
+        " M reports/favorite-saved-catalog-mobile.png",
+        " M reports/favorite-saved-detail-desktop.png",
+        " M reports/favorite-saved-detail-mobile.png",
+        " M tests/e2e/mobile-home-layout.spec.ts",
+        "?? reports/production-polish.json"
       ]
     },
-    "runtimeSourceFingerprint": "22491d49ffc97d83f2119972802cc3eaa859b55725504ee84a325c6bb36d8f9f",
+    "runtimeSourceFingerprint": "fcf2714bab4ebfae8c39e9e6f9d740eddc294b1f7c676df504aad12aec87cd3e",
     "runtimeSources": [
       {
         "path": "src/app/components/AppShell/index.tsx",
@@ -1752,8 +1757,8 @@
       },
       {
         "path": "src/app/components/BootstrapSkeleton/styles.css",
-        "bytes": 1317,
-        "sha256": "48a62ed5c4e72a9640c845e62e63c374f1ca345c1276fe8be2634d410c0a07a7"
+        "bytes": 1393,
+        "sha256": "0c03c99e9b69e50b8e7108a64477e89a367c8c61eaabad7a54c71fae00098991"
       },
       {
         "path": "src/app/components/GenericPageSkeleton/index.tsx",
@@ -1882,8 +1887,8 @@
       },
       {
         "path": "src/components/Layout/Footer/components/Newsletter/index.tsx",
-        "bytes": 1815,
-        "sha256": "1c86c9e651590c5ff197d0a787633f3fcfd849b768fc9b8888036f213e5fc473"
+        "bytes": 1824,
+        "sha256": "85529e614c2e8f3f20a608caf9946707a50da3d56c22080c3719aa6c6ef0a9d4"
       },
       {
         "path": "src/components/Layout/Footer/components/Newsletter/shared-types.ts",
@@ -1917,8 +1922,8 @@
       },
       {
         "path": "src/components/Layout/MobileNavigation/index.tsx",
-        "bytes": 1392,
-        "sha256": "45c98bcd1853b61ed9f594430b57b986732165b26ac4e51a50c49267f9885f45"
+        "bytes": 1686,
+        "sha256": "08bc23dc2a39ef8cd682bd9d972de4d4d0fc035282176db756ea80f512bd93d3"
       },
       {
         "path": "src/components/Layout/shared-types.ts",
@@ -2072,8 +2077,8 @@
       },
       {
         "path": "src/main.tsx",
-        "bytes": 2045,
-        "sha256": "dd8890ac51454ebcca1bb1d497fd333f9d3f34f3ed22882fd18a3c473ad7ca64"
+        "bytes": 2088,
+        "sha256": "fcce468cd829b0829f610983cc40e3ba70f321532e12f0b7e81721c44a4044e9"
       },
       {
         "path": "src/mocks/articles.ts",
@@ -2177,8 +2182,8 @@
       },
       {
         "path": "src/modules/account/components/AuthForm/index.tsx",
-        "bytes": 7105,
-        "sha256": "8fbcc77cd14a70060cc0fc7ce110626ff7b6785d3ce2efee1718fe781061efbd"
+        "bytes": 7289,
+        "sha256": "44ecf159a2f7beecf1c04736de93e692fb111827903a1a32d30515919247f016"
       },
       {
         "path": "src/modules/account/components/AuthForm/useAuthForm.test.ts",
@@ -2189,6 +2194,11 @@
         "path": "src/modules/account/components/AuthForm/useAuthForm.ts",
         "bytes": 4190,
         "sha256": "0bf54461abf88681d827f53fbe072bb4f38d6f8b3fde634e469c468d8f50e170"
+      },
+      {
+        "path": "src/modules/account/components/AuthForm/useAuthPresentation.ts",
+        "bytes": 444,
+        "sha256": "084728ca6d410c91264b8ea83740c6aa16a0e0eba42214289dea9c5f27e01015"
       },
       {
         "path": "src/modules/account/components/EnsField/index.tsx",
@@ -2277,8 +2287,13 @@
       },
       {
         "path": "src/modules/catalog/components/CatalogFilters/index.tsx",
-        "bytes": 3850,
-        "sha256": "6bda898816c6a8bd55a1f42928e9370871a8e86cc1d8b337717c30c7dae124ec"
+        "bytes": 3620,
+        "sha256": "2e2d12b2c825a1c5f09443b74012229d6cfb7bb2ee5a0d8098291dda114ff5c9"
+      },
+      {
+        "path": "src/modules/catalog/components/CatalogFilters/usePriceRange.ts",
+        "bytes": 1203,
+        "sha256": "3dadc4fcc99dd0570c867f694b52ec656e51ff2388036a676099d1ebe3f1ee20"
       },
       {
         "path": "src/modules/catalog/components/CatalogPromotions/index.tsx",
@@ -2342,8 +2357,8 @@
       },
       {
         "path": "src/modules/catalog/components/MarketplaceHero/components/HeroBackdrop/index.tsx",
-        "bytes": 2086,
-        "sha256": "8abd331dac566690476f2ce3d9d7bc60a07c234dffdeae7eb89cc1badc8fc7ea"
+        "bytes": 2087,
+        "sha256": "f5fe01c3c20a0a04c1f85a0e7476c685a9367646db2bd2505d73cce2bda3e9d6"
       },
       {
         "path": "src/modules/catalog/components/MarketplaceHero/components/HeroBackdrop/useHeroBackdrop.ts",
@@ -2372,8 +2387,8 @@
       },
       {
         "path": "src/modules/catalog/components/NFTCard/index.tsx",
-        "bytes": 4136,
-        "sha256": "b243bf3ca70f5f8c877873380fb64e81587a988097fd0de49b23ba26130d9d80"
+        "bytes": 4246,
+        "sha256": "e97691372f12f9212b7f0134aae3116cb530463899f93742b79681df49987839"
       },
       {
         "path": "src/modules/catalog/components/NFTCard/useNftCard.ts",
@@ -2392,13 +2407,18 @@
       },
       {
         "path": "src/modules/catalog/components/NftGallery/index.tsx",
-        "bytes": 2197,
-        "sha256": "20087b2aaae9fc0439e1d8dd15d79114ff95ed5188c301f2ff87b776df4575d4"
+        "bytes": 2129,
+        "sha256": "650525b9dbcae777daea1e0507e5d73cc86f461592ea6d7c5a0460dd78bd2d4e"
+      },
+      {
+        "path": "src/modules/catalog/components/NftGallery/styles.template.css",
+        "bytes": 3388,
+        "sha256": "92b558d77258bb69cbffc338193372ee968d1bf0475349960daff89ee9eea4f5"
       },
       {
         "path": "src/modules/catalog/components/NftGallery/useNftGallery.ts",
-        "bytes": 703,
-        "sha256": "8afb55e24a6a8e7da4d16b3ce1d5fa46f28e513e0f6d9f9a3c78645d7623cc65"
+        "bytes": 638,
+        "sha256": "e94728554214dce6e79fb8d33ce96f52ce46a553d7130a5978a2c9a9e8a0eb03"
       },
       {
         "path": "src/modules/catalog/components/NftPreview/index.tsx",
@@ -2414,6 +2434,11 @@
         "path": "src/modules/catalog/components/RelatedNfts/index.tsx",
         "bytes": 2748,
         "sha256": "034e9cbe5564b10b419cb9f3dcb400cc619365b32cac2285b6c0d65ed6cc8a02"
+      },
+      {
+        "path": "src/modules/catalog/components/RelatedNfts/styles.template.css",
+        "bytes": 2061,
+        "sha256": "f387e5d553b0c06b8b1354f9a90c8fc305002547a9aa17beef4e14cc06988158"
       },
       {
         "path": "src/modules/catalog/components/RelatedNfts/useRelatedNfts.ts",
@@ -2447,8 +2472,8 @@
       },
       {
         "path": "src/modules/catalog/pages/Marketplace/index.tsx",
-        "bytes": 10027,
-        "sha256": "f199817c5d7f8bd16c38faa85f233a1ad89c4af77eca66d69b07f6ccc5e6fd2a"
+        "bytes": 10018,
+        "sha256": "c3d751c398e6fdaa877889bc894ec3598366962f412bad1c244a99424e879606"
       },
       {
         "path": "src/modules/catalog/pages/Marketplace/useMarketplace.ts",
@@ -2457,8 +2482,13 @@
       },
       {
         "path": "src/modules/catalog/pages/NftDetails/index.tsx",
-        "bytes": 8621,
-        "sha256": "cd94cbc6420e4ea255902ae651e94de8f07e6aae6b04ed879eb6bbdc1dbc7608"
+        "bytes": 8668,
+        "sha256": "bd457acda65fd5e7bb518db4ddeb82833a7770fafaf1305627994b523caecf86"
+      },
+      {
+        "path": "src/modules/catalog/pages/NftDetails/styles.template.css",
+        "bytes": 10979,
+        "sha256": "49dae3a972533288d9e84fba30b692f572df1907bff2ab5cc9eaa1cfe1421ab4"
       },
       {
         "path": "src/modules/catalog/pages/NftDetails/useNftDetails.test.ts",
@@ -2506,6 +2536,11 @@
         "sha256": "797474833274faa758350997ca299793622bf0d22b183e1ef43eb70e981738f0"
       },
       {
+        "path": "src/modules/checkout/components/CheckoutWallets/index.tsx",
+        "bytes": 1997,
+        "sha256": "5011f90704f1d3bc249589c833eafc9b1a93651b28703e3ab0cdde5236fdb02e"
+      },
+      {
         "path": "src/modules/checkout/components/CollectorForm/index.tsx",
         "bytes": 6042,
         "sha256": "0b0fc83b7cd40ffb5553ab025c03c4015587c47e6611cedeb6c2935848aa0c6f"
@@ -2542,8 +2577,8 @@
       },
       {
         "path": "src/modules/checkout/pages/Cart/index.tsx",
-        "bytes": 3752,
-        "sha256": "06d1d375dabf293646ad41aace76899fe4e32d57403c51764b32012996de6b3e"
+        "bytes": 3756,
+        "sha256": "ff5ac422b01d97064b3da620f65548669b9c60045582b102e749ad19b2bcd2f6"
       },
       {
         "path": "src/modules/checkout/pages/Cart/useCartPage.ts",
@@ -2552,13 +2587,18 @@
       },
       {
         "path": "src/modules/checkout/pages/Checkout/index.tsx",
-        "bytes": 8080,
-        "sha256": "909fe612bef26fff963bc94a43d945de00f3d31896248b823d670b3f0646eec0"
+        "bytes": 9202,
+        "sha256": "4459065e4f11b203bb5385db49ef395296fbcc2c89074f77ea498f37347e5bae"
+      },
+      {
+        "path": "src/modules/checkout/pages/Checkout/styles.template.css",
+        "bytes": 10437,
+        "sha256": "e94d941474d304868f6a3f098d60d8222e0762f9f6637e9a02ee60406f83466f"
       },
       {
         "path": "src/modules/checkout/pages/Checkout/useCheckout.ts",
-        "bytes": 12330,
-        "sha256": "c06cf070756f6065ac8e72dd5bd61faeb53c289142dc9e1ca5d9ef37a5587753"
+        "bytes": 12367,
+        "sha256": "493060ce1e1a990769c7e1efe9b8b48a4662a2a1c49fbe8f7e1ced63657ae42f"
       },
       {
         "path": "src/modules/checkout/pages/Checkout/useCheckoutFields.ts",
@@ -2577,8 +2617,8 @@
       },
       {
         "path": "src/modules/checkout/shared-types.ts",
-        "bytes": 1650,
-        "sha256": "eff1ea8bb3e28966c9c1bab2d6442eee19cbe41a632f4697430a41355c39d1ff"
+        "bytes": 1874,
+        "sha256": "b596a76409908ea5e125322b5ac67aa58a87703fe98319524ae035f177406fe2"
       },
       {
         "path": "src/router.tsx",
@@ -2661,6 +2701,11 @@
         "sha256": "d538cc86f8b16a166451eb8bef5882c2348a094df78a6112c95414f9a1f5441f"
       },
       {
+        "path": "src/styleguide/components/QuantityInput/styles.template.css",
+        "bytes": 636,
+        "sha256": "5602018c332c0c923b8ce4e4b2aaacb1a0045c2fc15ef27816204201db200d6d"
+      },
+      {
         "path": "src/styleguide/components/QuantityInput/useQuantityInput.test.ts",
         "bytes": 989,
         "sha256": "b625b2ed0702b33c5405ff13db49631415c2cd9f87516c88f8de3b8f8e238d88"
@@ -2669,6 +2714,21 @@
         "path": "src/styleguide/components/QuantityInput/useQuantityInput.ts",
         "bytes": 703,
         "sha256": "c1949e8c8bbfa23c3d9a3df88abbb9ddf5f7f89011b39bc17b4067a1e23a2325"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/index.tsx",
+        "bytes": 819,
+        "sha256": "db71b6dddcdc419d416fc7ea805c0a4505d5bfc27f14bb2cfbe5a2ce5cb6a81e"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/shared-types.ts",
+        "bytes": 244,
+        "sha256": "8f12715179ad76406b9b7c11e7525555cb0813f8df9c38dfe15e015a6e450410"
+      },
+      {
+        "path": "src/styleguide/components/RangeSlider/styles.css",
+        "bytes": 881,
+        "sha256": "25d1bf362113efc053f7847e432e3ec0b5156470476da45503f7b3411685572b"
       },
       {
         "path": "src/styleguide/components/Select/index.tsx",
@@ -2697,8 +2757,8 @@
       },
       {
         "path": "src/styleguide/components/StyleguideProvider/useStyleguide.ts",
-        "bytes": 2075,
-        "sha256": "ee0ee3e612c0d449dd31925c3399913f2b9d788a22f239c33b3c2b48014f5e26"
+        "bytes": 2018,
+        "sha256": "28eb001dba7aca492c8b0040c1ab9eab6935a6a8115e265e252532856c63ed5a"
       },
       {
         "path": "src/styleguide/hooks/useTheme.ts",
@@ -2707,8 +2767,8 @@
       },
       {
         "path": "src/styleguide/index.ts",
-        "bytes": 741,
-        "sha256": "fe2be6318d0d97badb325a8e2923f970a3ec87eb4eacbccb0bda599fc53244ed"
+        "bytes": 797,
+        "sha256": "ffe938a0538cd99206219402be6136672599f71d737fabacc840f741d8cd6286"
       },
       {
         "path": "src/styleguide/theme/index.ts",
@@ -2717,28 +2777,28 @@
       },
       {
         "path": "src/styleguide/theme/kurio/styles/account.template.css",
-        "bytes": 16038,
-        "sha256": "798410508e3d00c1d28a45cea6ebdf4c154c636db7d68866e59050a8c6b8bbb5"
+        "bytes": 16122,
+        "sha256": "517ff581cd753e8df87a3061b8665bdf2c4fcdd9ab160d76ee444443fe2513e2"
       },
       {
         "path": "src/styleguide/theme/kurio/styles/cart-order.template.css",
-        "bytes": 18154,
-        "sha256": "24333244027c5b0364768d7a1a73fb3c2d16fab92461d74a38f8219dfff64650"
+        "bytes": 18600,
+        "sha256": "47d523cee2be4e744129084905b6ae667c858e5cf46874b703254c6e1f703038"
       },
       {
         "path": "src/styleguide/theme/kurio/styles/catalog.template.css",
-        "bytes": 21133,
-        "sha256": "663d051cd54e4d67749ab4d4285ce1b98bfcdb32e67c2178b7f9896ff43aec21"
+        "bytes": 21066,
+        "sha256": "b84d51b0d71dc75b58a90fc0d94c653298cd61f23701597ae202aad3c6d6df15"
       },
       {
         "path": "src/styleguide/theme/kurio/styles/commerce.template.css",
-        "bytes": 22265,
-        "sha256": "5dd593a29947c520d72a37de136ca5a5259ef98b47991db62e24cdcbe111c90d"
+        "bytes": 248,
+        "sha256": "eca40cde8426d3f02590588aa5429632e58a842060fdc1cc6e40853d7deadf99"
       },
       {
         "path": "src/styleguide/theme/kurio/styles/shell.template.css",
-        "bytes": 9631,
-        "sha256": "17d08c1c67ef035668292ff5e40831ceb26e39cd526ff32f71356a5ec6055c41"
+        "bytes": 10776,
+        "sha256": "fa7d828d615fd32bf41fa594b1220945f90f9d0ac2f7008f52210c9522c1d236"
       },
       {
         "path": "src/styleguide/theme/preference.test.ts",
@@ -2767,28 +2827,33 @@
       },
       {
         "path": "src/styleguide/theme/theme.generated.css",
-        "bytes": 1048,
-        "sha256": "42411ddc31c7fe016fd4cfeb5a9ab68c658ea96991fc6b7cb47cd27cd4c03073"
+        "bytes": 1079,
+        "sha256": "11b761e70a99b7b4cb00dc650cfa06932b2054a4db60337b37d4d93592f6493b"
       },
       {
         "path": "src/styleguide/theme/tokens.ts",
-        "bytes": 799,
-        "sha256": "1e7e904d8e33ea1bc082d4903c4955048e97f335385f0553ad7f930ffc5edb5c"
+        "bytes": 817,
+        "sha256": "58ca5d47373ce4a8fddaf8e45213e3c4ca23a2a0d6b1ecbcaaa5a67035431f0e"
       },
       {
         "path": "src/styles.css",
-        "bytes": 33164,
-        "sha256": "f63324bf4012570e19fa5f703d546885c415ca99ea80c21fb9116fa2dccbbea0"
+        "bytes": 33186,
+        "sha256": "9c8663cf14ab2159cf7ae56904aa089b2e30bf0ce336ccb0ed583f4ed8893519"
       },
       {
         "path": "src/styles.kurio.css",
-        "bytes": 86943,
-        "sha256": "87d97f3dcd124c56a06599de203149f750d69de2454655bc6262a0d3b26a944d"
+        "bytes": 93815,
+        "sha256": "2f4dfbcfa1c11d949dbb79df43ccece82ab68abbc1c9ba98cad23aad2bc8a584"
       },
       {
         "path": "src/styles.template.css",
-        "bytes": 33259,
-        "sha256": "0599f7f228f7671f9392696d7b051026f07629e69348f1cbc226c3e740b78829"
+        "bytes": 33281,
+        "sha256": "3d9f0985848de631f24f0ccb13be1d59eeec380cd6268e36b3fc37e8f00b9cca"
+      },
+      {
+        "path": "public/_headers",
+        "bytes": 604,
+        "sha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae"
       },
       {
         "path": "public/art/apes/burgundy-collector-360.webp",
@@ -4302,34 +4367,91 @@
       },
       {
         "path": "package.json",
-        "bytes": 2277,
-        "sha256": "43cf1d882a5ffe4f3ee4cb68b027f9f74b916ada678cf87aa4df8c146772df58"
+        "bytes": 2445,
+        "sha256": "97adbd93822724baa974faac96a655ec6e1bb731b23bf0db7a7ec102c44431ea"
       },
       {
         "path": "package-lock.json",
-        "bytes": 291103,
-        "sha256": "3156f499940b819ae57f722c56141ae780ab393f4aa226dff4ace0b2d57e6e61"
+        "bytes": 292369,
+        "sha256": "2207baceea68f17166702d8f70687d55e14e293da0ff87bc776cb833a19aa0f3"
       }
     ],
     "hostedDocumentVerification": {
-      "mode": "known-cloudflare-jsd-envelope",
-      "rawSha256": "8c72bd03dc89221ae908e538c1a889fb31aadbd75411fec0464a5194f7f70590",
-      "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-      "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-      "injectionCount": 1,
-      "scriptSha256": "daf5c1a41abe00f7ae3c5078c7fb3c3d49dd6847bc533899f80e67da6a823217",
-      "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-      "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-      "volatileFields": [
-        "rayId",
-        "base64UnixTimestamp"
-      ],
-      "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-      "measurement": "The browser receives the original response and executes the platform script unchanged."
-    }
+      "mode": "exact",
+      "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+      "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+      "injectionCount": 0
+    },
+    "hostingConfigurationVerification": [
+      {
+        "path": "_headers",
+        "sourcePath": "public/_headers",
+        "sourceSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "buildSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "sourceBytes": 604,
+        "buildBytes": 604,
+        "responseStatus": 200,
+        "responseSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+        "responseBytes": 889,
+        "mode": "consumed-static-asset-configuration",
+        "support": "verified",
+        "policiesApplied": true,
+        "knownConfigurationSha256": "3a1a46255d7e26661f8a523c5a19d403e91f7246c878fe086cc4dda7994ebbae",
+        "configurationResponse": "verified-spa-fallback",
+        "fallbackDocumentVerification": {
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
+        },
+        "runtimePolicyChecks": [
+          {
+            "path": "/",
+            "status": 200,
+            "cacheControl": "no-cache, no-transform",
+            "expectedCacheControl": "no-cache, no-transform",
+            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+            "documentVerification": {
+              "mode": "exact",
+              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "injectionCount": 0
+            }
+          },
+          {
+            "path": "/nft/nft-1",
+            "status": 200,
+            "cacheControl": "no-cache, no-transform",
+            "expectedCacheControl": "no-cache, no-transform",
+            "sha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+            "documentVerification": {
+              "mode": "exact",
+              "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+              "injectionCount": 0
+            }
+          },
+          {
+            "path": "/assets/application-CnWYuhBj.js",
+            "status": 200,
+            "cacheControl": "public, max-age=31536000, immutable",
+            "expectedCacheControl": "public, max-age=31536000, immutable",
+            "sha256": "c880c08359dc4dfc58b5503bdb69b6ab0118ebb81278bfd56f08efe5b00b8e71"
+          },
+          {
+            "path": "/mockServiceWorker.js",
+            "status": 200,
+            "cacheControl": "no-cache",
+            "expectedCacheControl": "no-cache",
+            "sha256": "26171599d94d5445297303f3a1f1cedec26835ea3d0057dcfa92ec520cb35cca"
+          }
+        ],
+        "documentation": "https://developers.cloudflare.com/workers/static-assets/headers/"
+      }
+    ]
   },
-  "methodology": "Production build verified against served artifact SHA256 hashes. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.",
-  "outputDirectory": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z",
+  "methodology": "Production build verified against served artifact SHA256 hashes. Only the exact reviewed _headers configuration may be consumed rather than served, after matching local source/build hashes and verifying HTTP 200, cache policies and document/asset identity for both measured routes, a hashed JavaScript asset and the service worker; its identity and runtime evidence are recorded. A byte-identical raw _headers response remains verified as bytes and is explicitly recorded as unsupported configuration. For HTML only, the exact observed Cloudflare JSD template may be recognized, permitting only its volatile ray ID and timestamp; the remaining application document must be byte-identical. Raw, script/template and normalized hashes are recorded. The browser still receives and measures the original HTML and all platform resources unchanged. Sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; application MSW and Socket.IO simulation run unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.",
+  "outputDirectory": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z",
   "gate": {
     "scope": "Challenge category medians and the requested performance above 9/10 in every run.",
     "completeMatrix": true,
@@ -4352,12 +4474,12 @@
       "path": "/",
       "profile": "mobile",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
+        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
         "title": "KURIO: O futuro da arte digital",
         "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-mQV5_tLN.js"
+          "/assets/index-DMrk8NXe.js"
         ],
         "api": {
           "status": 200,
@@ -4367,45 +4489,35 @@
         "realtimeConnected": true,
         "pageErrors": [],
         "documentVerification": {
-          "mode": "known-cloudflare-jsd-envelope",
-          "rawSha256": "a47337f099622dec44732a563e7a5f1475cfd9b5ea4130df95731ed15ae77a52",
-          "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "injectionCount": 1,
-          "scriptSha256": "ee8aec220b5e326c54a26148e9fe75b22c087c5d8b005c4bc7305232446c3c27",
-          "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-          "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-          "volatileFields": [
-            "rayId",
-            "base64UnixTimestamp"
-          ],
-          "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-          "measurement": "The browser receives the original response and executes the platform script unchanged."
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 87,
+        "performance": 83,
         "accessibility": 100,
-        "best-practices": 81,
+        "best-practices": 100,
         "seo": 92
       },
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-1.report.html",
-          "fetchTime": "2026-10-27T18:24:21.889Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-1.report.html",
+          "fetchTime": "2026-10-27T20:14:53.365Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 87,
+            "performance": 83,
             "accessibility": 100,
-            "best-practices": 81,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 2136.6625,
-          "LCP": 3251.6625,
+          "FCP": 1309.086,
+          "LCP": 4778.236499999999,
           "CLS": 0,
-          "TBT": 99,
+          "TBT": 21,
           "config": {
             "formFactor": "mobile",
             "throttlingMethod": "simulate",
@@ -4429,7 +4541,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 1872.5,
+            "benchmarkIndex": 3702.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4438,382 +4550,18 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-2.report.html",
-          "fetchTime": "2026-10-27T18:24:37.879Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-2.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-2.report.html",
+          "fetchTime": "2026-10-27T20:15:05.135Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 84,
+            "performance": 83,
             "accessibility": 100,
-            "best-practices": 81,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1145.556,
-          "LCP": 3245.556,
-          "CLS": 0.02347885978801915,
-          "TBT": 84,
-          "config": {
-            "formFactor": "mobile",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 150,
-              "throughputKbps": 1638.4,
-              "requestLatencyMs": 562.5,
-              "downloadThroughputKbps": 1474.5600000000002,
-              "uploadThroughputKbps": 675,
-              "cpuSlowdownMultiplier": 4
-            },
-            "screenEmulation": {
-              "mobile": true,
-              "width": 412,
-              "height": 823,
-              "deviceScaleFactor": 1.75,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 1887.5,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        },
-        {
-          "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-mobile-3.report.html",
-          "fetchTime": "2026-10-27T18:24:57.233Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
-          "categories": {
-            "performance": 87,
-            "accessibility": 100,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 1149.3274999999999,
-          "LCP": 3249.3275,
-          "CLS": 0.0469577195760383,
-          "TBT": 29,
-          "config": {
-            "formFactor": "mobile",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 150,
-              "throughputKbps": 1638.4,
-              "requestLatencyMs": 562.5,
-              "downloadThroughputKbps": 1474.5600000000002,
-              "uploadThroughputKbps": 675,
-              "cpuSlowdownMultiplier": 4
-            },
-            "screenEmulation": {
-              "mobile": true,
-              "width": 412,
-              "height": 823,
-              "deviceScaleFactor": 1.75,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3744.5,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        }
-      ]
-    },
-    {
-      "path": "/",
-      "profile": "desktop",
-      "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
-        "title": "KURIO: O futuro da arte digital",
-        "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
-        "theme": "kurio",
-        "scripts": [
-          "/assets/index-mQV5_tLN.js"
-        ],
-        "api": {
-          "status": 200,
-          "items": 9,
-          "total": 18
-        },
-        "realtimeConnected": true,
-        "pageErrors": [],
-        "documentVerification": {
-          "mode": "known-cloudflare-jsd-envelope",
-          "rawSha256": "3424ceb71cdfce9ca97d6e74547f4bcfd2c22bea0e7387692a6d3f2d377283e4",
-          "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "injectionCount": 1,
-          "scriptSha256": "c07e5a4e2ff8573b7fe0f9139516793a96540dc4c6eea4c05378beaefd803fb5",
-          "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-          "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-          "volatileFields": [
-            "rayId",
-            "base64UnixTimestamp"
-          ],
-          "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-          "measurement": "The browser receives the original response and executes the platform script unchanged."
-        }
-      },
-      "medians": {
-        "performance": 97,
-        "accessibility": 96,
-        "best-practices": 81,
-        "seo": 92
-      },
-      "runs": [
-        {
-          "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-1.report.html",
-          "fetchTime": "2026-10-27T18:25:18.643Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
-          "categories": {
-            "performance": 93,
-            "accessibility": 96,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 371.209,
-          "LCP": 778.2090000000001,
-          "CLS": 0,
-          "TBT": 0,
-          "config": {
-            "formFactor": "desktop",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 40,
-              "throughputKbps": 10240,
-              "requestLatencyMs": 0,
-              "downloadThroughputKbps": 0,
-              "uploadThroughputKbps": 0,
-              "cpuSlowdownMultiplier": 1
-            },
-            "screenEmulation": {
-              "mobile": false,
-              "width": 1350,
-              "height": 940,
-              "deviceScaleFactor": 1,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3647,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        },
-        {
-          "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-2.report.html",
-          "fetchTime": "2026-10-27T18:25:35.747Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
-          "categories": {
-            "performance": 97,
-            "accessibility": 96,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 365.727,
-          "LCP": 773.727,
-          "CLS": 0.008330580081138118,
-          "TBT": 0,
-          "config": {
-            "formFactor": "desktop",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 40,
-              "throughputKbps": 10240,
-              "requestLatencyMs": 0,
-              "downloadThroughputKbps": 0,
-              "uploadThroughputKbps": 0,
-              "cpuSlowdownMultiplier": 1
-            },
-            "screenEmulation": {
-              "mobile": false,
-              "width": 1350,
-              "height": 940,
-              "deviceScaleFactor": 1,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3689,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        },
-        {
-          "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/home-desktop-3.report.html",
-          "fetchTime": "2026-10-27T18:25:51.268Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/?q=&category=all&sort=newest&page=1&tab=all",
-          "categories": {
-            "performance": 100,
-            "accessibility": 96,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 365.443,
-          "LCP": 774.443,
-          "CLS": 0,
-          "TBT": 0,
-          "config": {
-            "formFactor": "desktop",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 40,
-              "throughputKbps": 10240,
-              "requestLatencyMs": 0,
-              "downloadThroughputKbps": 0,
-              "uploadThroughputKbps": 0,
-              "cpuSlowdownMultiplier": 1
-            },
-            "screenEmulation": {
-              "mobile": false,
-              "width": 1350,
-              "height": 940,
-              "deviceScaleFactor": 1,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3649.5,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        }
-      ]
-    },
-    {
-      "path": "/nft/nft-1",
-      "profile": "mobile",
-      "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
-        "title": "Obra · KURIO",
-        "heading": "Emerald Ape #042",
-        "theme": "kurio",
-        "scripts": [
-          "/assets/index-mQV5_tLN.js"
-        ],
-        "api": {
-          "status": 200,
-          "items": 9,
-          "total": 18
-        },
-        "realtimeConnected": true,
-        "pageErrors": [],
-        "documentVerification": {
-          "mode": "known-cloudflare-jsd-envelope",
-          "rawSha256": "7f4e46dfd34c86e1c099fb133886e363324ff2dd9026faed4d2f3e4ead615931",
-          "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "injectionCount": 1,
-          "scriptSha256": "6cf0928c2c04e72a1277069d82f8f89e2f3f200bd51413f5c8bd152adbed7b16",
-          "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-          "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-          "volatileFields": [
-            "rayId",
-            "base64UnixTimestamp"
-          ],
-          "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-          "measurement": "The browser receives the original response and executes the platform script unchanged."
-        }
-      },
-      "medians": {
-        "performance": 88,
-        "accessibility": 100,
-        "best-practices": 81,
-        "seo": 92
-      },
-      "runs": [
-        {
-          "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-1.report.html",
-          "fetchTime": "2026-10-27T18:26:08.830Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
-          "categories": {
-            "performance": 94,
-            "accessibility": 100,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 1130.3400000000001,
-          "LCP": 3094.34,
-          "CLS": 0,
-          "TBT": 11,
-          "config": {
-            "formFactor": "mobile",
-            "throttlingMethod": "simulate",
-            "throttling": {
-              "rttMs": 150,
-              "throughputKbps": 1638.4,
-              "requestLatencyMs": 562.5,
-              "downloadThroughputKbps": 1474.5600000000002,
-              "uploadThroughputKbps": 675,
-              "cpuSlowdownMultiplier": 4
-            },
-            "screenEmulation": {
-              "mobile": true,
-              "width": 412,
-              "height": 823,
-              "deviceScaleFactor": 1.75,
-              "disabled": false
-            },
-            "disableStorageReset": false
-          },
-          "environment": {
-            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
-            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3710,
-            "credits": {
-              "axe-core": "4.14.0"
-            }
-          },
-          "warnings": []
-        },
-        {
-          "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-2.report.html",
-          "fetchTime": "2026-10-27T18:26:21.123Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
-          "categories": {
-            "performance": 88,
-            "accessibility": 100,
-            "best-practices": 81,
-            "seo": 92
-          },
-          "FCP": 1135.755,
-          "LCP": 3102.755,
+          "FCP": 1259.462,
+          "LCP": 4738.520499999999,
           "CLS": 0,
           "TBT": 10,
           "config": {
@@ -4839,7 +4587,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3689.5,
+            "benchmarkIndex": 3713.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4848,20 +4596,20 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-mobile-3.report.html",
-          "fetchTime": "2026-10-27T18:26:36.869Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-3.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-mobile-3.report.html",
+          "fetchTime": "2026-10-27T20:15:17.030Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
           "categories": {
-            "performance": 85,
+            "performance": 83,
             "accessibility": 100,
-            "best-practices": 81,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 1146.9365,
-          "LCP": 3156.9365,
+          "FCP": 1113.05,
+          "LCP": 4673.3875,
           "CLS": 0,
-          "TBT": 12,
+          "TBT": 6,
           "config": {
             "formFactor": "mobile",
             "throttlingMethod": "simulate",
@@ -4885,7 +4633,351 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3695,
+            "benchmarkIndex": 3728,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "path": "/",
+      "profile": "desktop",
+      "preflight": {
+        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+        "title": "KURIO: O futuro da arte digital",
+        "heading": "SEJA DONO DO FUTURO\nDA ARTE DIGITAL",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DMrk8NXe.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-1.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-1.report.html",
+          "fetchTime": "2026-10-27T20:15:30.208Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 383.094,
+          "LCP": 1033.282,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3718.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-2.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-2.report.html",
+          "fetchTime": "2026-10-27T20:15:41.790Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 387.392,
+          "LCP": 1045.1759999999997,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3683,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-3.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/home-desktop-3.report.html",
+          "fetchTime": "2026-10-27T20:15:53.339Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/?q=&category=all&sort=newest&page=1&tab=all",
+          "categories": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 385.724,
+          "LCP": 1040.1720000000003,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "desktop",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 40,
+              "throughputKbps": 10240,
+              "requestLatencyMs": 0,
+              "downloadThroughputKbps": 0,
+              "uploadThroughputKbps": 0,
+              "cpuSlowdownMultiplier": 1
+            },
+            "screenEmulation": {
+              "mobile": false,
+              "width": 1350,
+              "height": 940,
+              "deviceScaleFactor": 1,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3700.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    },
+    {
+      "path": "/nft/nft-1",
+      "profile": "mobile",
+      "preflight": {
+        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+        "title": "Obra · KURIO",
+        "heading": "Emerald Ape #042",
+        "theme": "kurio",
+        "scripts": [
+          "/assets/index-DMrk8NXe.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": [],
+        "documentVerification": {
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
+        }
+      },
+      "medians": {
+        "performance": 85,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-1.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-1.report.html",
+          "fetchTime": "2026-10-27T20:16:09.213Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "categories": {
+            "performance": 84,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1271.994,
+          "LCP": 4462.478999999999,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3725,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 2,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-2.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-2.report.html",
+          "fetchTime": "2026-10-27T20:16:21.177Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "categories": {
+            "performance": 85,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1248.997,
+          "LCP": 4378.4895,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3674.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        },
+        {
+          "run": 3,
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-3.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-mobile-3.report.html",
+          "fetchTime": "2026-10-27T20:16:32.703Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
+          "categories": {
+            "performance": 85,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 1230.962,
+          "LCP": 4315.866999999999,
+          "CLS": 0,
+          "TBT": 0,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 3714.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4898,12 +4990,12 @@
       "path": "/nft/nft-1",
       "profile": "desktop",
       "preflight": {
-        "url": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
+        "url": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
         "title": "Obra · KURIO",
         "heading": "Emerald Ape #042",
         "theme": "kurio",
         "scripts": [
-          "/assets/index-mQV5_tLN.js"
+          "/assets/index-DMrk8NXe.js"
         ],
         "api": {
           "status": 200,
@@ -4913,43 +5005,33 @@
         "realtimeConnected": true,
         "pageErrors": [],
         "documentVerification": {
-          "mode": "known-cloudflare-jsd-envelope",
-          "rawSha256": "7858db10cbb5dc742e2a5ca329d405cf0b9ab1fac4fb7d2b86a9aab1eca4a7bc",
-          "normalizedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "expectedSha256": "a87dff2164a024e5cd0315dd85878e2276b6eea6e1f1e48db88b2a0e1abed744",
-          "injectionCount": 1,
-          "scriptSha256": "18b34e960f947d5d55a2a56b2f4a061c1873e8591edf2ebcc2755304a863746f",
-          "templateSha256": "5ac2e2ca5c2dd88d033a5cf3edd3a5e8aa8ada2478e06df151043af69d2a560c",
-          "scriptPath": "/cdn-cgi/challenge-platform/scripts/jsd/main.js",
-          "volatileFields": [
-            "rayId",
-            "base64UnixTimestamp"
-          ],
-          "documentation": "https://developers.cloudflare.com/cloudflare-challenges/challenge-types/javascript-detections/",
-          "measurement": "The browser receives the original response and executes the platform script unchanged."
+          "mode": "exact",
+          "rawSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "normalizedSha256": "ad8bdb6ed603069e26530ba59dccc81bc35b8f1a8abd1c6e9ef055acca4e0a35",
+          "injectionCount": 0
         }
       },
       "medians": {
-        "performance": 94,
-        "accessibility": 97,
-        "best-practices": 81,
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
         "seo": 92
       },
       "runs": [
         {
           "run": 1,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-1.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-1.report.html",
-          "fetchTime": "2026-10-27T18:27:02.938Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-1.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-1.report.html",
+          "fetchTime": "2026-10-27T20:16:48.733Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
           "categories": {
-            "performance": 94,
-            "accessibility": 97,
-            "best-practices": 81,
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 347.0525,
-          "LCP": 686.0525,
+          "FCP": 370.23199999999997,
+          "LCP": 1040.464,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -4975,7 +5057,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3687.5,
+            "benchmarkIndex": 3705.5,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -4984,18 +5066,18 @@
         },
         {
           "run": 2,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-2.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-2.report.html",
-          "fetchTime": "2026-10-27T18:27:18.699Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-2.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-2.report.html",
+          "fetchTime": "2026-10-27T20:17:00.423Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
           "categories": {
-            "performance": 94,
-            "accessibility": 97,
-            "best-practices": 81,
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 354.23699999999997,
-          "LCP": 651.237,
+          "FCP": 359.422,
+          "LCP": 1018.844,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -5021,7 +5103,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3665.5,
+            "benchmarkIndex": 3725,
             "credits": {
               "axe-core": "4.14.0"
             }
@@ -5030,18 +5112,18 @@
         },
         {
           "run": 3,
-          "json": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-3.report.json",
-          "html": "reports/lighthouse/runs/2026-10-27T18-23-32-039Z/detail-desktop-3.report.html",
-          "fetchTime": "2026-10-27T18:27:34.145Z",
-          "finalUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site/nft/nft-1",
+          "json": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-3.report.json",
+          "html": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/detail-desktop-3.report.html",
+          "fetchTime": "2026-10-27T20:17:12.029Z",
+          "finalUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev/nft/nft-1",
           "categories": {
-            "performance": 93,
-            "accessibility": 97,
-            "best-practices": 81,
+            "performance": 98,
+            "accessibility": 100,
+            "best-practices": 100,
             "seo": 92
           },
-          "FCP": 353.597,
-          "LCP": 649.597,
+          "FCP": 363.904,
+          "LCP": 1047.808,
           "CLS": 0,
           "TBT": 0,
           "config": {
@@ -5067,7 +5149,7 @@
           "environment": {
             "networkUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
             "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
-            "benchmarkIndex": 3699,
+            "benchmarkIndex": 3686.5,
             "credits": {
               "axe-core": "4.14.0"
             }

@@ -1,0 +1,59 @@
+{
+  "recordedAt": "2026-10-27T20:38:09.615Z",
+  "source": "Pedido explícito de Felipe no chat em 27/10/2026",
+  "instruction": "Se as notas ficatem acima de 8 esta aprovado, preciso mandar ainda hoje",
+  "minimumExclusive": 80,
+  "categories": [
+    "performance",
+    "accessibility",
+    "best-practices",
+    "seo"
+  ],
+  "completeMatrix": true,
+  "totalRuns": 12,
+  "totalCategoryScores": 48,
+  "minimumObservedScore": 83,
+  "approved": true,
+  "stableSummary": "reports/lighthouse/runs/2026-10-27T20-14-23-823Z/summary.json",
+  "officialChallengeMediansMet": false,
+  "experimentalComparison": {
+    "version": "13.5.0-dev.20261023",
+    "experimental": true,
+    "summary": "reports/lighthouse/h3-summary.json",
+    "officialChallengeMediansMet": true,
+    "scope": "Comparação entre ferramentas sobre os mesmos 343 arquivos, sem alteração da aplicação."
+  },
+  "publication": {
+    "primaryUrl": "https://kurio-jungle-marketplace-felipe.lannaitechnology.workers.dev",
+    "mirrorUrl": "https://kurio-jungle-marketplace-felipe.lanna-it.chatgpt.site",
+    "runtimeCommit": "c8fefe8686114be4db364d43a87469ce09cf8e0f",
+    "runtimeFingerprint": "e1627baac53eb0ae3966f10688166a7443699b7343b389e2cce00b84d6bdc901",
+    "verifiedRuntimeFiles": 343
+  },
+  "tests": {
+    "vitest": 224,
+    "nodeArtifactVerifiers": 32,
+    "ciE2e": 166,
+    "visuals": 8,
+    "productionE2e": 18
+  },
+  "readyForCandidateReviewAndSubmission": true,
+  "submissionPerformed": false,
+  "limitation": "A matriz estável mantém performance mobile 83/85 abaixo da meta original P90. O candidato aceitou a liberação acima de 80; a divergência e a comparação experimental permanecem documentadas.",
+  "security": {
+    "tool": "gitleaks",
+    "findings": 0,
+    "report": "reports/secrets-review.json",
+    "bytesScanned": 43431851
+  },
+  "finalChecks": {
+    "command": "npm run check",
+    "approved": true,
+    "vitestPassed": 224,
+    "vitestFiles": 26,
+    "nodeVerifiersPassed": 32,
+    "types": true,
+    "lint": true,
+    "format": true
+  }
+}
