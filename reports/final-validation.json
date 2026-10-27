@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-27",
+  "codeQualityInternal": {
+    "score": 9.1,
+    "outOf": 10,
+    "scope": "Qualidade interna do código de demonstração. Não é nota oficial da Jungle nem completude visual integral."
+  },
+  "checks": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "unitAndHttp": {
+      "passed": 38
+    },
+    "consolidatedE2E": {
+      "passed": 54,
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "note": "Rodada antes dos últimos schemas e preservação de rascunhos"
+    },
+    "finalTargetedRegressions": {
+      "passed": 22,
+      "projects": [
+        "desktop",
+        "mobile"
+      ],
+      "note": "Depois dos schemas runtime, preservação de rascunhos e organização final"
+    },
+    "productionDependencyAudit": "zero known vulnerabilities",
+    "secretScan": "zero candidates in src; no prior project paths or imports"
+  },
+  "adversarial": "Reports reviewed and release-critical findings corrected. Development server restarted after module relocations; generated reports excluded from dev watcher.",
+  "limitations": [
+    "Arte SVG sintética substitui assets inacessíveis do Figma",
+    "Galeria e variantes independentes de edição simplificadas",
+    "Autenticação, wallets e pagamentos simulados no navegador; não é backend financeiro real"
+  ],
+  "deployment": "pending verification",
+  "sourcePrivacy": "Only newly authored marketplace code and synthetic data; no previous repository source/history or private data."
+}

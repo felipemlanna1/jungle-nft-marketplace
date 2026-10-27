@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-27",
+  "scope": "New marketplace API/domain implementation, cross-review findings from root/visual plus independent review of account/checkout UI. No source or data copied from Agentura, Pipeline Studio or Veera.",
+  "findings": [
+    {
+      "id": "API-01",
+      "severity": "high",
+      "finding": "An in-flight account-A mutation could operate on account B after a session change because the mock looked up the active identity only at execution time.",
+      "fix": "Snapshot session generation in Axios header and reject stale supplied generation before private/cart operations. Session changes increment generation. Stale logout is also rejected.",
+      "evidence": "src/domain/session-transport.test.ts: stale mutation/current generation/stale logout tests pass"
+    },
+    {
+      "id": "API-02",
+      "severity": "medium",
+      "finding": "A stale 401 response could clear the newer valid client session even after server-side identity guarding.",
+      "fix": "Transport compares captured generation to the current generation and does not clear newer session cache for an outdated request.",
+      "evidence": "session-transport test a stale response cannot clear newer valid client account passes"
+    },
+    {
+      "id": "API-03",
+      "severity": "medium",
+      "finding": "Hashing raw JSON made semantically identical idempotency payloads conflict when key order changed.",
+      "fix": "Normalize and validate explicit order fields in fixed order before hashing; strip unknown fields.",
+      "evidence": "marketplace test semantic reordered payload recovers same order passes"
+    },
+    {
+      "id": "API-04",
+      "severity": "medium",
+      "finding": "Zero quantities from corrupted storage or a sold-out guest merge could produce a fee-only quote.",
+      "fix": "Reject nonpositive/invalid persisted quantities, remove zero merged entries at login.",
+      "evidence": "marketplace test rejects zero quantity passes"
+    },
+    {
+      "id": "API-05",
+      "severity": "medium",
+      "finding": "Reset left scheduled order identities in memory, blocking a later scenario with the same deterministic order ID.",
+      "fix": "Track timer handles and cancel/clear all scheduled orders during full reset.",
+      "evidence": "isolated confirmation/refusal/reset tests pass"
+    },
+    {
+      "id": "REALTIME-01",
+      "severity": "high",
+      "finding": "Socket.IO initially bypassed or missed MSW due early constructor capture and MSW2.15 Socket.IO path normalization.",
+      "fix": "Dynamic client import after worker installation and explicit custom Engine.IO path /marketplace-events/ matched by MSW. Binding handles protocol encoding and handshake.",
+      "evidence": "Browser test proved connected status and visible cart price update via socket; global live announcement added by parent"
+    },
+    {
+      "id": "UI-01",
+      "severity": "high",
+      "finding": "A definitively rejected order left its persisted attempt disabling checkout forever.",
+      "fix": "Flow author clears only definitively rejected attempts after lookup confirms no committed order; uncertain network/timeouts keep the key.",
+      "evidence": "src/modules/checkout/pages/Checkout/useCheckout.ts"
+    },
+    {
+      "id": "UI-02",
+      "severity": "medium",
+      "finding": "Wallet/network mismatch could create an invalid persisted attempt.",
+      "fix": "Validate network against saved wallet before review; API also rejects mismatches.",
+      "evidence": "checkout hook/UI author fix"
+    },
+    {
+      "id": "UI-03",
+      "severity": "medium",
+      "finding": "Profile mutation could overwrite a newer session cache with a response from a previous user.",
+      "fix": "UI onSuccess checks active session ID before setting profile; transport also guards generations.",
+      "evidence": "src/modules/account/pages/Profile/useProfile.ts"
+    },
+    {
+      "id": "UI-04",
+      "severity": "low",
+      "finding": "Nested main landmarks and mismatched avatar limit impaired accessibility/validation.",
+      "fix": "Single main in Layout and feature sections, avatar350KB validation aligned.",
+      "evidence": "Account/checkout components refactored by flow author"
+    },
+    {
+      "id": "AUTH-05",
+      "severity": "high",
+      "finding": "An older successful GET session null response could arrive after login, downgrade transport generation and clear the new session.",
+      "fix": "Reject older-generation successful auth/session responses before any state write; propagate AbortSignal to every session query; await query cancellation before accepting a new user.",
+      "evidence": "src/domain/session-transport.test.ts: an old successful null session cannot overwrite a newer login;28/28 domain+HTTP tests pass; TypeScript passes."
+    },
+    {
+      "id": "CONTRACT-01",
+      "severity": "medium",
+      "finding": "Transport relied on TypeScript generics for complete critical response shapes.",
+      "fix": "Full Zod4 runtime schemas now validate NFT, catalog, user, wallet, cart, quote, order, favorites and session responses in actual service methods.",
+      "evidence": "10 malformed/valid payload tests added;38/38domainHTTPtests pass,tsc and targetedESLint pass."
+    }
+  ],
+  "tests": {
+    "unitAndHttp": "38/38 domain+HTTP tests pass after runtime response schemas.",
+    "typescript": "tsc --noEmit passed after services split and deterministic replay/sold-out endpoints.",
+    "independentUi": "2/2 desktop browser tests passed in stable run: changed quote requires second explicit confirmation with zero orders before it; logout/account switch isolates favorites and profile.",
+    "runtime": "All data fictional and persisted locally for demonstration; no real payments, credentials or private API dependencies"
+  },
+  "limitations": [
+    "This is a browser demo, not a production authentication boundary. Direct fixture fetches without generation headers remain supported for test setup.",
+    "No formal claim of full Figma fidelity: upstream Figma access unavailable.",
+    "Unit and HTTP tests do not substitute the parent final full Playwright/visual/Lighthouse gate."
+  ],
+  "architecture": "Actual Axios creation/interceptors are in src/services/http/index.ts; endpoint facade is in src/services/marketplace/index.ts; src/lib/api.ts only compatibility reexports.",
+  "fixedDemoScenarios": {
+    "nftReplay": "POST /api/demo/nft-replay emits duplicate current event twice then one older version without mutating database. Socket.IO binding transport only.",
+    "soldOut": "POST /api/demo/nft-update supports soldOut:true and increments NFT version."
+  }
+}

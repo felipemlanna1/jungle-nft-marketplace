@@ -1,0 +1,54 @@
+{
+  "reviewer": "market_visual agent, reviewing API/realtime written by another agent",
+  "scope": ["Socket.IO transport", "MSW binding", "query invalidation", "order idempotency", "cart quantity integrity", "768px content geometry", "Figma visual limits"],
+  "findings": [
+    {
+      "id": "ADV-RT-01",
+      "severity": "blocker",
+      "problem": "Socket.IO client did not connect, despite existing UI tests passing.",
+      "evidence": "tests/e2e/realtime.spec.ts connection indicator stayed disconnected for 8 seconds.",
+      "fix": "Client library imported after MSW initialization; custom /marketplace-events/ path used to avoid MSW socket.io path handling.",
+      "status": "retested connection and cart price update successfully; final global-notice assertion pending root fix"
+    },
+    {
+      "id": "ADV-RT-02",
+      "severity": "high",
+      "problem": "Price event dispatched an internal notice but no component displayed it.",
+      "evidence": "Socket event reconciled visible cart from 0.32 ETH to 0.33 ETH; live status text absent.",
+      "status": "root notified; final regression pending"
+    },
+    {
+      "id": "ADV-IDEM-01",
+      "severity": "medium",
+      "problem": "JSON.stringify(input) idempotency signature depends on property insertion order and unknown fields.",
+      "recommendation": "Hash a canonical object of approved fields in fixed order.",
+      "status": "API owner notified for correction and validation"
+    },
+    {
+      "id": "ADV-CART-01",
+      "severity": "medium",
+      "problem": "Guest cart merge may clamp an unavailable NFT quantity to zero and keep its entry.",
+      "recommendation": "Delete zero quantity entries and reject nonpositive quantities when building quotes.",
+      "status": "API owner notified for correction and validation"
+    },
+    {
+      "id": "ADV-CLS-01",
+      "severity": "medium",
+      "problem": "Detail loading skeleton used different outer padding and breadcrumb geometry than final content.",
+      "fix": "Loading state now composes detail-page, breadcrumb, detail-grid and detail-art wrappers matching final layout.",
+      "status": "implemented; Lighthouse remeasurement owned by root"
+    }
+  ],
+  "verification": {
+    "typecheck": "Passed before skeleton geometry correction; correction typecheck in progress.",
+    "tablet768": "Passed Playwright visible content and document width <= viewport +1px.",
+    "realtime": "Real socket.io-client + MSW binding connection and visible cart update proven, not direct component cache setter.",
+    "remaining": "Final all-tests run and final live-notice assertion required after source settles."
+  },
+  "visualLimitations": [
+    "Figma connector could not create a file session or return design context because of file access restrictions.",
+    "Public browser canvas was readable and informed KURIO branding, Portuguese hero, dark warm palette, monospaced headings and sidebar composition.",
+    "Original NFT artwork could not be exported; all included SVG artwork is newly authored, synthetic and local. Exact asset fidelity to Figma is not claimed."
+  ],
+  "privacy": "No legacy repository code, production database, private artwork, user data or credential was copied into the implementation."
+}

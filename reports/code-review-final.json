@@ -1,0 +1,106 @@
+{
+  "reviewType": "Revisão interna independente, somente leitura do código de outros autores da equipe",
+  "scope": "Styleguide, geração de tema, Shell e cenários, serviços HTTP, módulos de conta e checkout. A nota não é avaliação oficial da Jungle nem medida de completude do desafio.",
+  "score": {
+    "value": 9.1,
+    "maximum": 10,
+    "nature": "Juízo técnico interno sobre qualidade do código de demonstração deste snapshot, não avaliação oficial, medição objetiva ou garantia de contratação",
+    "aboveNineJustified": true,
+    "reason": "A revisão após correções verificou preservação de rascunhos por identidade com dois testes E2E desktop aprovados, validação runtime dos payloads de serviço e geração ampliada de tokens/medias. A combinação de separação efetiva, contratos, controles de compra e regressões adversariais sustenta9.1 neste escopo restrito. Não significa9.1 no atendimento integral ao desafio."
+  },
+  "rubric": [
+    {
+      "category": "Organização e padrão pessoal solicitado",
+      "assessment": "Forte",
+      "evidence": [
+        "src/modules/account e src/modules/checkout usam pages/<Nome>/index.tsx e hooks próximos da página",
+        "src/components/ScenarioPanel/index.tsx compõe a UI; useScenarioPanel.ts separa as ações",
+        "src/services/http e src/services/marketplace separam transporte e operações"
+      ],
+      "caveat": "O Shell ainda coordena sessão, realtime e efeitos globais no arquivo de rotas; é pequeno, mas pode ter seu próprio hook para uniformizar a convenção."
+    },
+    {
+      "category": "Tema, primitivas e geração",
+      "assessment": "Forte após ampliação do gerador",
+      "evidence": [
+        "src/styleguide/theme/tokens.ts contém valores base",
+        "semantic-tokens/colors.ts oferece aliases semânticos",
+        "recipes/button.ts centraliza variantes CVA",
+        "scripts/generate-theme.mjs compila somente dados do tema e emite CSS",
+        "StyleguideProvider e useTheme oferecem acesso tipado"
+      ],
+      "caveat": "Gerador ampliado para todos os raios e breakpoints; template CSS agora compila media queries a partir dos tokens. Permanece espaço para reduzir o CSS global por componente."
+    },
+    {
+      "category": "Estado assíncrono e sessão",
+      "assessment": "Forte após correção de rascunhos",
+      "evidence": [
+        "services/http controla geração da sessão e descarta respostas antigas",
+        "Query keys incluem usuário e parâmetros",
+        "Mutations de compra não repetem automaticamente",
+        "Socket faz reconciliação REST e ignora versões antigas"
+      ],
+      "caveat": "Refs por identidade evitam rehidratar o rascunho em mudanças da mesma sessão. Dois E2Es exercitaram resposta de conta alterada e invalidação por ação real da interface."
+    },
+    {
+      "category": "Contratos e correção do domínio",
+      "assessment": "Forte",
+      "evidence": [
+        "ETH usa strings e BigInt em wei",
+        "Cotação possui fingerprint e expiração",
+        "Tentativas de compra são persistidas e idempotentes",
+        "Snapshot do recibo é separado do catálogo"
+      ],
+      "caveat": "A lacuna de generic sem validação foi corrigida: o transporte passa unknown a schemas runtime nos serviços. Autenticação/persistência continuam limitadas à simulação documentada."
+    },
+    {
+      "category": "Testabilidade e evidência adversarial",
+      "assessment": "Boa arquitetura para testes, finalização a confirmar",
+      "evidence": [
+        "Há testes de domínio, transporte de sessão e E2E reais",
+        "A revisão independente encontrou Socket.IO desconectado e ausência de aviso, em vez de confiar apenas nas dependências declaradas",
+        "Um teste de tablet 768px foi executado com sucesso pelo revisor",
+        "O teste realtime comprovou conexão e alteração visível do preço após correção do transporte"
+      ],
+      "caveat": "A execução final de todas as suítes pertence ao root. Não tomo contagens em execução como resultados aprovados nem certifico ausência completa de defeitos."
+    }
+  ],
+  "releaseAssessment": {
+    "codeOnlyBlockerObservedInThisFinalRead": false,
+    "prePublicationConditions": [
+      "Root deve confirmar typecheck, lint, build e suítes finais na mesma revisão, após inclusão dos schemas runtime e preservação de rascunhos.",
+      "Root deve conferir o pacote publicado e os valores reais de Lighthouse."
+    ],
+    "notCodeHygiene": [
+      "Arte sintética substitui assets não exportados do Figma",
+      "Galeria e variantes de edição estão simplificadas",
+      "Esses limites afetam atendimento ao desafio, mas não foram usados para reduzir artificialmente a avaliação de organização do código"
+    ]
+  },
+  "privacy": "Nenhum segredo, dado privado, banco ou código corporativo foi consultado nesta leitura final.",
+  "followup": {
+    "draftCorrections": "useProfile/useCheckout hidratam somente na primeira leitura da identidade; checkout limpa carteira, conexão, revisão e tentativa ao mudar usuário.",
+    "testsExecutedByReviewer": {
+      "command": "npx playwright test tests/e2e/drafts.spec.ts --project=desktop --reporter=line --output=/tmp/jungle-drafts-tests",
+      "result": "2 passed (3.4s)",
+      "cases": [
+        "Nome do perfil não salvo preservado depois de resposta de sessão alterada do mesmo usuário",
+        "Nome do colecionador no checkout preservado depois de refetch de sessão do mesmo usuário"
+      ]
+    },
+    "typecheck": "tsc --noEmit passou após correções",
+    "themeVerified": "Gerador percorre todos os raios e breakpoints, emite aliases e compila placeholders de media query de styles.template.css.",
+    "runtimeVerified": "Serviços agora recebem unknown e chamam parseResponse com schemas de catálogo, NFT, sessão, carrinho, cotação, pedido, perfil e carteiras.",
+    "remainingLimits": [
+      "Algumas regras visuais e valores de layout continuam no CSS global, adequados a este produto pequeno mas passíveis de organização por componente",
+      "Revisão completa de dados em múltiplas abas/dispositivos não é alegada",
+      "Root deve verificar o resultado final de todas as suítes no mesmo snapshot, incluindo os schemas recém-adicionados"
+    ],
+    "runtimeSchemaProbe": {
+      "decimal032": true,
+      "zero": true,
+      "whole12": true,
+      "method": "node --experimental-strip-types, ethSchema.safeParse against current source"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-27",
+  "mode": "final read-only source gate before any public release",
+  "sourceChangesDuringGate": false,
+  "status": "NO_REMAINING_HIGH_FINDING_IN_SCOPED_REVIEW; final consolidated test/build/secret checks must pass",
+  "scope": [
+    "src/services/http/index.ts",
+    "src/services/marketplace/index.ts",
+    "src/mocks/database.ts",
+    "src/mocks/handlers.ts",
+    "src/modules/account/hooks/useAccount.ts",
+    "src/modules/account/components/AuthForm/useAuthForm.ts",
+    "src/lib/realtime.ts",
+    "src/main.tsx",
+    "package.json",
+    ".env.example",
+    ".gitignore",
+    "public/art asset inventory",
+    "README and architecture claims",
+    "src/domain/schemas.ts",
+    "src/domain/schemas.test.ts"
+  ],
+  "checks": [
+    {
+      "check": "Private-source or prior-project data import",
+      "result": "No private project path/import or prior Agentura/Pipeline/Veera source markers found in source/art/scripts. All implementation was written independently. No databases/dumps/cookies or captured user state are supplied as app assets."
+    },
+    {
+      "check": "Mock availability in production bundle",
+      "result": "VITE_MOCKS defaults enabled and .env.example sets true. Browser worker initializes before React; public/mockServiceWorker.js exists. No real backend, secrets or private service is needed."
+    },
+    {
+      "check": "Late successful session response",
+      "result": "Older-generation successful auth/session responses throw CanceledError before generation or query-cache writes. All session query functions forward AbortSignal; accepted login awaits cancellation before clear/setuser. Deterministic old200null regression passed."
+    },
+    {
+      "check": "Late failure and mutation across user change",
+      "result": "Captured generation is validated on private/cart requests; stale401 does not clear a newer client session. Regression covers staleprofile mutation and stale logout."
+    },
+    {
+      "check": "Order isolation and idempotency",
+      "result": "Order lookup validates current user owns order; attempt lookup keys include user ID. Creation normalizes exact fields, compares canonical content for repeated keys and validates the immutable quote. Idempotency key is in JSON body, as documented; no Idempotency-Key header claim is made."
+    },
+    {
+      "check": "Money, inventory and receipt",
+      "result": "ETH arithmetic uses BigInt with decimal-string transport. Quantity validation forbids zero/fractional persisted values. Reservation, confirmation/refusal and cart subtraction are serialized in the mock instance; receipts retain price snapshots."
+    },
+    {
+      "check": "Actual event transport",
+      "result": "socket.io-client is dynamically imported after MSW interception and uses custom marketplace-events path with socket.io-binding. New events invalidate REST projections; versions and session scope discard old/foreign updates. Fixed replay and soldout scenarios use network handlers, not component cache mutation."
+    },
+    {
+      "check": "Runtime transport contracts",
+      "result": "Actual GET/POST/PATCH/DELETE service responses are parsed with complete Zod4schemas. DecimalETHstrings preserve18places; invalid versions, quantities, catalogpagination, walletshape and orderstatus are rejected before cache/application state."
+    }
+  ],
+  "priorHighFindingsFixed": [
+    "In-flight old-user mutation acting on new-user state",
+    "Stale401 clearing newer client session",
+    "Stale200null clearing new login",
+    "Socket connection bypassing/missing MSW",
+    "Definitive order validation failure stranding persisted attempt"
+  ],
+  "validatedEvidence": {
+    "domainHttp": "38/38tests passed after runtime schema completion;tsc and targetedESLint passed.",
+    "adversarialBrowser": "2/2 mobile and2/2 desktop independent adversarial UI cases passed in stable runs",
+    "typescript": "passed after final auth race fix",
+    "consolidatedSuite": "Parent final54 E2E run underway at gate time; do not infer pass from this report"
+  },
+  "simulationLimits": [
+    "Browser-local demo with fictitious identities, not production authentication or authorization. Any user controlling the browser can inspect/change its demo state.",
+    "Session-generation headers prevent UI races; they are not cryptographic access tokens. Raw fixture fetch without generation remains supported.",
+    "Mutation serialization is per mock instance. It does not guarantee transactions across tabs/devices or a distributed payment system.",
+    "No real blockchain, wallet connection, payment gateway or personal-data processing is performed.",
+    "Assets are synthetic; exact Figma fidelity was not certified because the upstream design was inaccessible."
+  ],
+  "releaseConditions": [
+    "Final consolidated tests, typecheck/build and package secret review pass for the same source snapshot.",
+    "Publish as demonstration with simulation limits visible. Do not describe this gate as a production-security certification.",
+    "Actual candidacy submission must preserve known design/performance/coverage limitations, not claim every assessment requirement was certified."
+  ]
+}

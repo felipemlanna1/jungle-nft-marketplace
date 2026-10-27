@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-27",
+  "scope": [
+    "account",
+    "checkout",
+    "purchase e2e"
+  ],
+  "sourceStatus": "Independent implementation; no source or sensitive data copied from other projects. Latest structure changes preserve exported page interfaces.",
+  "fixedFindings": [
+    "Definitive 4xx attempt is only discarded after server confirms no order; uncertain outcomes retain recovery key.",
+    "Recovery after refresh handles stale rejected attempt and permits updated quote.",
+    "Checkout blocks new purchase when browser cannot persist idempotency metadata.",
+    "Profile/checkout callbacks cannot apply private response to different active session.",
+    "Wallet network mismatch rejected before review.",
+    "Nested main landmarks removed; receipt heading semantic role restored; wallet input accessible name fixed.",
+    "Invalid coupon and corrected JUNGLE10 path tested."
+  ],
+  "structure": [
+    "modules/account/pages/Login/index.tsx",
+    "modules/account/pages/Register/index.tsx",
+    "modules/account/pages/Profile/index.tsx and useProfile.ts",
+    "modules/account/pages/Wallets/index.tsx and useWallets.ts",
+    "modules/account/components/AuthForm/index.tsx and useAuthForm.ts",
+    "modules/account/components/PasswordForm/index.tsx and usePasswordForm.ts",
+    "modules/account/hooks/useAccount.ts",
+    "modules/checkout/pages/Cart/index.tsx and useCartPage.ts",
+    "modules/checkout/pages/Checkout/index.tsx and useCheckout.ts",
+    "modules/checkout/pages/Order/index.tsx and useOrder.ts",
+    "modules/checkout/components/OrderSummary/index.tsx",
+    "modules/checkout/hooks/useCart.ts"
+  ],
+  "executedTests": {
+    "file": "tests/e2e/purchase.spec.ts",
+    "desktop": {
+      "passed": 4,
+      "failed": 0,
+      "seconds": 19.2
+    },
+    "mobile": {
+      "passed": 4,
+      "failed": 0,
+      "seconds": 18.5
+    },
+    "cases": [
+      "Guest cart merge, invalid/valid coupon, confirmed immutable receipt and refresh",
+      "Refused payment preserves cart",
+      "Timeout recovery after refresh returns same order and count remains one",
+      "Profile/wallet validation, persistence and second-user isolation"
+    ]
+  },
+  "testLimit": "8 passing tests preceded latest file-move-only restructure and last storage/recovery hardening; consolidated run must validate final source.",
+  "publication": "Not published or submitted."
+}
