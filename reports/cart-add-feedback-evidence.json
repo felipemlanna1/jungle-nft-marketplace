@@ -1,0 +1,31 @@
+{
+  "completedAt": "2026-10-27T15:36:49.164580+00:00",
+  "finding": "cross-account-addition-feedback",
+  "severity": "P2",
+  "evidence": "Os três consumidores mantinham o sucesso de uma adição concluída em A depois de a sessão mudar para B. A contraprova de hooks teve três falhas e quatro passes antes da correção. Não houve escrita na conta B.",
+  "decision": {
+    "choice": "Vincular a chave da mutation ao proprietário e derivar os indicadores de sucesso, carregamento e erro das variáveis da mutation comparadas ao proprietário atual. Remover os booleanos locais de Card/Detail. Detail usa reset da mutation ao alterar quantidade ou edição.",
+    "reason": "Uma operação confirmada em outra identidade não deve produzir um aviso no contexto atual, e o feedback não deve duplicar estado remoto. Guardas existentes antes do HTTP e antes da invalidação continuam ativas."
+  },
+  "validation": {
+    "red": {
+      "failed": 3,
+      "passed": 4
+    },
+    "green": {
+      "passed": 7,
+      "failed": 0
+    },
+    "combinedTarget": "19/19 aprovados em useNftDetails.test.ts e session-transport.test.ts",
+    "typecheck": "aprovado",
+    "lint": "aprovado",
+    "scope": "RenderHook em Card, Detail e Preview após sucessoA e troca paraB; quatro testes anteriores continuam cobrindo handlerantigoA→B, convidado→A, adição deconvidado e sucessoatrasado semalterarcacheB."
+  },
+  "sourceHashes": {
+    "src/modules/catalog/hooks/useAddToCart.ts": "70dc89508a529a113082c3d60a08b6b0e9e2bb4a50c96eb912d751d4a345f6ed",
+    "src/modules/catalog/components/NFTCard/useNftCard.ts": "e2279aa6683b0fe2f2018fa78da6d6540e8b3f7bf18d3c866c9eb39613da766c",
+    "src/modules/catalog/components/NftPreview/useNftPreview.ts": "e6baa8eecded189aa05bc52f732e1e73720dcc642c7cf81ac0e1819a137423c2",
+    "src/modules/catalog/pages/NftDetails/useNftDetails.ts": "a693fcd0b6dfa3a6479404645cdafc72c01e9321d736bbc12a147793907b26e1",
+    "src/modules/catalog/pages/NftDetails/useNftDetails.test.ts": "d846cd317607985fd45ff1e09f2210ee0a2b6d08d8d4bfe2f8c490b31ec9c9da"
+  }
+}

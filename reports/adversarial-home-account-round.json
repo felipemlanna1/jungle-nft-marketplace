@@ -1,0 +1,59 @@
+{
+  "reviewerScope": "Leitura independente das novas fontes do catálogo, componentes visuais e harness de desempenho; conta é implementação do próprio autor e não recebe avaliação independente neste relatório.",
+  "findings": [
+    {
+      "priority": "P2",
+      "status": "Corrigido pelo autor visual: minPrice e maxPrice agora participam da condição.",
+      "file": "src/modules/catalog/pages/Marketplace/index.tsx",
+      "line": 180,
+      "evidence": "A condição da barra de resultados considera termo, categoria, rede e carregamento, mas omite minPrice e maxPrice. Após estabilizar uma busca apenas por preço, o comando Limpar filtros deixa de aparecer nessa barra.",
+      "validation": "Confirmado por leitura da condição; autor visual confirmou o mesmo achado."
+    },
+    {
+      "priority": "P1",
+      "status": "Reproduzido e corrigido com testes de regressão",
+      "file": "src/modules/catalog/hooks/useCatalog.ts",
+      "line": 31,
+      "evidence": "Antes da correção, três testes falharam: favoritos do primeiro usuário foram restaurados na chave de visitante e na chave do segundo usuário; uma ação iniciada na sessão anterior também chegou ao serviço após um hiato assíncrono. O controle de rollback na mesma conta passou.",
+      "recommendation": "Capturar usuário e chave por operação; conferir sessão ativa antes da requisição e dos callbacks; testar resposta tardia depois de sair e entrar com outra conta.",
+      "validation": "Após a correção, os quatro casos em src/modules/catalog/hooks/useCatalog.test.ts passaram. A operação captura ownerId e key, verifica sessão antes/depois de cancelQueries e antes da requisição, e só restaura/invalida cache para o proprietário ainda ativo.",
+      "beforeLog": "reports/favorite-race-before.txt"
+    },
+    {
+      "priority": "P2",
+      "status": "Limitação de fidelidade funcional, sem ação silenciosa",
+      "file": "src/modules/catalog/components/CatalogPromotions/index.tsx",
+      "line": 22,
+      "evidence": "A promoção reproduz o texto do desenho sobre compra antes da revelação pública, mas o destino é uma obra já visível e comprável da demonstração. A frase não comprova um mecanismo de pré-lançamento.",
+      "recommendation": "Identificar a chamada como conteúdo demonstrativo ou substituir por descrição compatível com a obra, se a prioridade permitir divergir da copy do Figma."
+    }
+  ],
+  "structure": {
+    "observed": [
+      "Marketplace usa hook colocado para efeitos, estado e navegação.",
+      "MarketplaceHero, NFTCard e CatalogPromotions são componentes de apresentação.",
+      "Catálogo passa por contratos, validação e serviço; comparações de preço usam precisão inteira.",
+      "Tokens e estilos de Kurio e Expedition estão separados; geração produz CSS consumido pela aplicação.",
+      "Não existe GenericGallery nestas fontes. Nenhuma abstração foi adicionada sem um segundo consumidor real.",
+      "CatalogFiltersProps foi movido para shared-types, alinhando o contrato com os demais componentes do módulo."
+    ],
+    "remaining": [
+      "Existem valores geométricos específicos de Figma nos templates; separação por tema não equivale a uma biblioteca de design totalmente tokenizada."
+    ]
+  },
+  "performanceHarness": {
+    "review": "O harness compara bytes servidos com SHA-256 dos arquivos do build, confere o documento da rota, verifica API e conexão e invalida mudanças no build entre rodadas. Bootstrap só monta a aplicação após preparar o transporte simulado.",
+    "caveat": "O indicador Socket conectado permanece no shell como estado acessível; sua presença não depende de abrir o menu de cenários. A auditoria de desempenho final é responsabilidade de uma rodada separada.",
+    "measurement": "Nenhuma nota de desempenho foi produzida por este autor nesta rodada."
+  },
+  "claimLimits": "Não há prova de fidelidade integral, ausência de todo defeito ou nota numérica de qualidade. Os achados estáticos são distintos de falhas reproduzidas.",
+  "verification": {
+    "unit": "15/15 PASS: quatro casos de ownership de favoritos e onze parâmetros de rota.",
+    "sourceSHA256": "80c26e6dfb6bd7f6e40c9c65156350e72e9334fb8c7983aa2de26fc6c00058a5",
+    "integration": "Consumidor em Marketplace adaptado; consumidor em NftDetails encaminhado ao autor da página durante sua edição."
+  },
+  "additionalVerifiedFixes": {
+    "scenarioFocus": "A primeira correção restaurou o foco ao botão de cenários; a segunda adicionou captura/restauração por instância ao Modal compartilhado, cobrindo também a volta ao rodapé ou navegação móvel.",
+    "carousel": "Seis verificações E2E passaram: pontos, teclado, arraste real por mouse/toque, movimento reduzido dinâmico e navegação de obras relacionadas."
+  }
+}

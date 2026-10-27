@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:95120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal (3.9s)
+(node:95131) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal (3.4s)
+
+  2 passed (9.4s)

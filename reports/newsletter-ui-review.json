@@ -1,0 +1,66 @@
+{
+  "scope": "Rodapé, inscrição demonstrativa e navegação social.",
+  "api": "POST /api/newsletter/subscriptions. Serviço simulado local, sem SMTP e sem listagem de endereços.",
+  "feedback": "Inscrição simulada confirmada. Nenhum e-mail real será enviado.",
+  "ownerIsolation": "Rascunho e feedback vinculados à identidade; dono e época verificados antes do HTTP e da resposta.",
+  "verification": {
+    "hookTests": {
+      "passed": 5,
+      "failed": 0,
+      "file": "src/components/Layout/Footer/components/Newsletter/useNewsletter.test.tsx"
+    },
+    "browserTests": {
+      "passed": 8,
+      "failed": 0,
+      "target": "Candidato estático local, sem HMR",
+      "candidateId": "a551da907fa8c94ebbc4555ed69d38ef097903b7670e2595f875ddb16146002f",
+      "report": "reports/newsletter-e2e-static-results.json",
+      "digests": "reports/newsletter-static-candidate.json"
+    },
+    "responsive": {
+      "themes": [
+        "kurio",
+        "expedition"
+      ],
+      "widths": [
+        320,
+        414,
+        768,
+        1440
+      ],
+      "horizontalOverflow": false,
+      "report": "reports/footer-responsive-check.json"
+    },
+    "typecheck": "passed",
+    "targetedLint": "passed",
+    "developmentRepeat": {
+      "passed": 7,
+      "failed": 1,
+      "assessment": "O trace do caso mobile registrou um segundo carregamento de documento na home durante a prova, apagando o rascunho antes da mudança de identidade. A rodada não foi aprovada; os 8 casos foram repetidos na cópia estática, sem afrouxar a asserção."
+    }
+  },
+  "provenBehavior": [
+    "Sem sucesso antecipado durante POST lento.",
+    "Resposta simulada confirmada e repetição deduplicada com mesmo ID e data.",
+    "Validação pelo schema compartilhado antes de enviar entrada malformada.",
+    "Falha 503 preserva rascunho e não exibe sucesso; nova tentativa confirma.",
+    "Troca de identidade limpa rascunho; resposta tardia e handler obsoleto não contaminam o novo usuário.",
+    "Ícones possuem links reais às plataformas, abrem nova aba e deixam window.opener nulo.",
+    "aria-invalid distingue e-mail inválido de uma falha 503 com entrada válida."
+  ],
+  "screenshots": [
+    {
+      "originalPath": "reports/footer-desktop.png",
+      "sha256": "e9c4ec4f995c5dd0dc936f150d0f9555500e5638109fac5bd8ef4a906d1db138",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-desktop.png",
+      "availability": "local-archive-only"
+    },
+    {
+      "originalPath": "reports/footer-mobile.png",
+      "sha256": "98dbd2b19cd4e957875b8ac927a62c1baea86da9219a07a5cd4d30616e209a04",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-mobile.png",
+      "availability": "local-archive-only"
+    }
+  ],
+  "visualBaselineApproval": "Pendente da interface e dos dados definitivos. Os comparativos anteriores foram marcados como anteriores a esta mudança."
+}

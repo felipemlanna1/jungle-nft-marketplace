@@ -1,0 +1,60 @@
+[
+  {
+    "width": 414,
+    "boxes": {
+      ".carousel-viewport": {
+        "x": 24,
+        "y": 101,
+        "width": 366,
+        "height": 190
+      },
+      ".carousel-slide:not([inert])": {
+        "x": 24,
+        "y": 101,
+        "width": 366,
+        "height": 190
+      },
+      ".carousel-slide:not([inert]) .hero-copy": {
+        "x": 40,
+        "y": 117,
+        "width": 188,
+        "height": 164
+      },
+      ".carousel-slide:not([inert]) .hero-art": {
+        "x": 236,
+        "y": 111,
+        "width": 138,
+        "height": 138
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "boxes": {
+      ".carousel-viewport": {
+        "x": 120,
+        "y": 101,
+        "width": 1200,
+        "height": 450
+      },
+      ".carousel-slide:not([inert])": {
+        "x": 120,
+        "y": 101,
+        "width": 1200,
+        "height": 450
+      },
+      ".carousel-slide:not([inert]) .hero-copy": {
+        "x": 160,
+        "y": 144,
+        "width": 600,
+        "height": 364
+      },
+      ".carousel-slide:not([inert]) .hero-art": {
+        "x": 870,
+        "y": 101,
+        "width": 450,
+        "height": 450
+      }
+    }
+  }
+]

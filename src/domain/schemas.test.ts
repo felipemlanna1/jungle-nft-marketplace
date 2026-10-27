@@ -16,8 +16,8 @@ const quote = {
   fingerprint: 'quote-1',
   subtotal: '0.32',
   discount: '0',
-  networkFee: '0.002',
-  total: '0.322',
+  networkFee: '0.016',
+  total: '0.336',
   items: [{ nftId: nft.id, title: nft.title, image: nft.image, unitPrice: nft.price, quantity: 1 }],
   expiresAt: 2_000_000_000_000,
 };
@@ -25,6 +25,15 @@ describe('runtime network contracts', () => {
   it('accepts complete fixture resources', () => {
     expect(nftSchema.parse(nft)).toEqual(nft);
     expect(quoteSchema.parse(quote)).toEqual(quote);
+    expect(
+      catalogSchema.parse({
+        items: [nft],
+        total: 1,
+        page: 1,
+        pageSize: 9,
+        facets: { categories: { [nft.category]: 1 }, networks: { [nft.network]: 1 } },
+      }).total,
+    ).toBe(1);
   });
   it.each(['-0.1', '1e5', '0.1234567890123456789', 'NaN'])('rejects invalid ETH %s', (value) =>
     expect(ethSchema.safeParse(value).success).toBe(false),
@@ -32,6 +41,14 @@ describe('runtime network contracts', () => {
   it('rejects malformed NFT availability and missing fields', () => {
     expect(nftSchema.safeParse({ ...nft, available: -1 }).success).toBe(false);
     expect(nftSchema.safeParse({ id: 'x' }).success).toBe(false);
+    const edition = { id: 'edition-a', label: '1/1', price: nft.price, available: 1 };
+    expect(
+      nftSchema.safeParse({ ...nft, editions: [edition], defaultEditionId: 'unknown' }).success,
+    ).toBe(false);
+    expect(
+      nftSchema.safeParse({ ...nft, editions: [edition, edition], defaultEditionId: edition.id })
+        .success,
+    ).toBe(false);
   });
   it('rejects malformed catalogue and cart quantities', () => {
     expect(catalogSchema.safeParse({ items: [nft], total: 1, page: 0, pageSize: 9 }).success).toBe(

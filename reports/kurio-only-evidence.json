@@ -1,0 +1,71 @@
+{
+  "decision": "O usuário retirou a alternância Jungle/Kurio e definiu Kurio como o único visual entregue, em aderência ao Figma.",
+  "uiScope": [
+    "src/components/Layout/index.tsx",
+    "src/components/Layout/useLayout.ts",
+    "src/modules/catalog/pages/Marketplace/index.tsx",
+    "src/modules/catalog/pages/Marketplace/useMarketplace.ts"
+  ],
+  "uiChanges": "O menu mantém cenários, links da conta e Lista de interesse, sem controle de tema. Marca e catálogo usam a composição Kurio. Os hooks não consultam mais uma escolha visual inexistente.",
+  "helpers": "A abertura e o fechamento aguardam o diálogo Menu ou Sua conta; não dependem mais do grupo Tema visual. O fechamento de cenários preserva a verificação do menu subjacente.",
+  "history": {
+    "source": "tests/history/themes-v2.spec.ts.txt",
+    "sha256": "1750b15e5a1d0420225e59996f58d83abeee7287e4005799b26958fb2faed17a",
+    "snapshots": "tests/history/themes-v2-snapshots",
+    "explanation": "tests/history/README.md",
+    "retiredCases": {
+      "functionalThemeSwitching": 12,
+      "expeditionVisual": 2
+    },
+    "retirementReason": "Esses comportamentos deixaram de pertencer ao produto por decisão explícita; não foram removidos para considerar uma falha aprovada."
+  },
+  "activeCoverage": {
+    "replacement": "tests/e2e/kurio.spec.ts",
+    "replacementCases": 16,
+    "existingDraftRefetch": "tests/e2e/drafts.spec.ts",
+    "existingDraftRefetchCases": 4,
+    "existingDraftTestsModified": false,
+    "assertions": [
+      "Kurio em todas as rotas, incluindo compra real simulada até comprovante confirmado.",
+      "Preferência antiga Expedition e preferência inválida migram para Kurio com versão 3.",
+      "Bloqueio do armazenamento de preferência não impede catálogo nem menu.",
+      "Menu não contém alternância visual e mantém Lista de interesse.",
+      "Filtros e carrinho continuam na URL e após refresh.",
+      "Teclado, foco e rascunhos de perfil e pagamento permanecem ao abrir e fechar o menu.",
+      "O menu não cria pedidos e os controles cabem em 320, 390, 768 e 1440 pixels.",
+      "Os 4 casos existentes de rascunho após refetch remoto continuam ativos e passaram."
+    ]
+  },
+  "verification": {
+    "typecheck": "pass",
+    "scopedLint": "pass",
+    "e2e": {
+      "startTime": "2026-10-27T15:13:33.302Z",
+      "duration": 48706.393000000004,
+      "expected": 20,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report": "reports/e2e-kurio-verified.json"
+  },
+  "countingPolicy": "A contagem anterior tinha 14 casos específicos de alternância visual; a substituição possui 16 casos para o contrato novo. As rodadas e os escopos são registrados separadamente, sem somar testes históricos ao resultado atual nem atribuir nota.",
+  "limits": "Esta rodada de 20 casos não substitui as comparações visuais vigentes do Kurio nem atesta execução dos testes históricos na nova versão.",
+  "followUpRegression": {
+    "cases": 34,
+    "report": "reports/e2e-menu-regression-evidence.json",
+    "stats": {
+      "startTime": "2026-10-27T15:15:46.273Z",
+      "duration": 113875.31,
+      "expected": 34,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "sourceBefore": "f5b71c9afceaab66da04cc6cb91e3cdfef233a70cb2cb5acc0a1a05d67f0d736",
+    "sourceAfter": "f5b71c9afceaab66da04cc6cb91e3cdfef233a70cb2cb5acc0a1a05d67f0d736",
+    "changedFiles": [],
+    "scope": "Favoritos/login, ordenação, newsletter, foco do menu, reconexão, eventos de preço e isolamento entre contas."
+  },
+  "publicationLimit": "A rodada ampla final permanece separada: limpeza posterior de CSS e edição do diário visual não são cobertas pelo hash desta regressão. Nenhuma nova execução será iniciada antes do congelamento final coordenado."
+}

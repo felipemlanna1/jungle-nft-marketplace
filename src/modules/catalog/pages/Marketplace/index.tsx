@@ -1,20 +1,31 @@
+import { figmaAssets } from '../../../../assets/figma';
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, ChevronLeft, ChevronRight, Search, SlidersHorizontal } from 'lucide-react';
-import type { CatalogSearch } from '../../shared-types';
+import { ChevronLeft, ChevronRight, Search } from 'lucide-react';
+import type { CatalogSort } from '../../shared-types';
+import { catalogSortOptions } from '../../config';
+import { Select } from '../../../../styleguide';
 import { errorMessage } from '../../../../services/marketplace';
-import { Button, Input, Notice } from '../../../../components/ui';
+import { Button, Input, Modal, Notice } from '../../../../components/ui';
 import { NFTCard } from '../../components/NFTCard';
 import { CatalogSkeleton } from '../../components/CatalogSkeleton';
-import { categories, useMarketplace } from './useMarketplace';
+import { useMarketplace } from './useMarketplace';
 import { MarketplaceHero } from '../../components/MarketplaceHero';
-import { CollectionStrip } from '../../components/CollectionStrip';
+import { CatalogPromotions } from '../../components/CatalogPromotions';
+import { EditorialHighlights } from '../../components/EditorialHighlights';
+import { CatalogFilters } from '../../components/CatalogFilters';
 export function CatalogPage() {
   const {
-    themeName,
+    minPrice,
+    setMinPrice,
+    maxPrice,
+    setMaxPrice,
+    priceError,
+    applyPrice,
+    filtersOpen,
+    setFiltersOpen,
     search,
     term,
     setTerm,
-    authNotice,
     catalog,
     totalPages,
     mutation,
@@ -26,118 +37,94 @@ export function CatalogPage() {
   } = useMarketplace();
   return (
     <>
-      <MarketplaceHero appearance={themeName} />
-      {themeName === 'expedition' && (
-        <CollectionStrip
-          category={search.category}
-          onSelect={(category) => update({ category: category || undefined, page: 1 })}
-        />
-      )}
-      <section
-        className="marketplace-section page-shell"
-        id="marketplace"
-        aria-labelledby="marketplace-title"
-      >
-        <div
-          className={`section-heading ${themeName === 'expedition' ? 'game-lobby-heading' : ''}`}
+      <div className="mobile-catalog-tools page-shell">
+        <form className="catalog-search" role="search" onSubmit={submit}>
+          <img src={figmaAssets['mobile-home'].imgSearch} width="22" height="22" alt="" />
+          <Input
+            id="mobile-catalog-search"
+            type="search"
+            aria-label="Buscar obras ou criadores"
+            placeholder="Explorar coleções"
+            value={term}
+            onChange={(event) => setTerm(event.target.value)}
+          />
+          <button className="sr-only" type="submit">
+            Buscar
+          </button>
+        </form>
+        <button
+          className="mobile-filter-button"
+          type="button"
+          aria-label="Abrir filtros"
+          onClick={() => setFiltersOpen(true)}
         >
-          <div>
-            <p className="eyebrow">
-              {themeName === 'expedition'
-                ? 'SEU PRÓXIMO TESOURO'
-                : 'Encontre sua próxima descoberta'}
-            </p>
-            <h2 id="marketplace-title">
-              {themeName === 'expedition'
-                ? 'O próximo item da sua coleção'
-                : 'Explore o marketplace'}
-              <span className="accent">.</span>
-            </h2>
-          </div>
-          <span className="collection-count">
-            {catalog.data?.total ?? ' - '} obras selecionadas
-          </span>
-        </div>
+          <img src={figmaAssets['mobile-home'].imgFilter} width="22" height="22" alt="" />
+        </button>
+      </div>
+      <MarketplaceHero />
+      <section className="marketplace-section page-shell" id="marketplace" aria-label="Marketplace">
+        <h2 className="sr-only">Marketplace</h2>
         <div className="catalog-layout">
           <aside className="catalog-sidebar">
-            <h3>Coleções</h3>
-            <nav aria-label="Filtrar coleção">
-              {categories.map((category) => (
-                <button
-                  type="button"
-                  key={category.value}
-                  className={
-                    ((!search.category || search.category === 'all') && !category.value) ||
-                    search.category === category.value
-                      ? 'category-active'
-                      : ''
-                  }
-                  aria-pressed={
-                    ((!search.category || search.category === 'all') && !category.value) ||
-                    search.category === category.value
-                  }
-                  onClick={() => update({ category: category.value || undefined, page: 1 })}
-                >
-                  {category.label}
-                  <ChevronRight size={13} />
-                </button>
-              ))}
-            </nav>
-            <div className="sidebar-note">
-              <span className="small-spark">✦</span>
-              <h4>
-                Sua próxima
-                <br />
-                grande descoberta.
-              </h4>
-              <p>Obras digitais que merecem fazer parte da sua coleção.</p>
-            </div>
+            <CatalogFilters
+              search={search}
+              facets={catalog.data?.facets}
+              update={update}
+              minPrice={minPrice}
+              maxPrice={maxPrice}
+              onMinPrice={setMinPrice}
+              onMaxPrice={setMaxPrice}
+              applyPrice={applyPrice}
+              priceError={priceError}
+              idPrefix="desktop-price"
+            />
+            <Link className="featured-nft-banner" to="/nft/$id" params={{ id: 'nft-2' }}>
+              <strong>NFT EM DESTAQUE</strong>
+              <span>OFERTA LIMITADA</span>
+              <img
+                src={figmaAssets.home.imgNftArtwork18}
+                width="250"
+                height="368"
+                alt="Sage Nomad, personagem com chapéu e moletom roxo"
+              />
+            </Link>
           </aside>
           <div className="catalog-content">
             <div className="catalog-toolbar">
-              <form className="catalog-search" role="search" onSubmit={submit}>
-                <Search size={17} aria-hidden="true" />
-                <Input
-                  id="catalog-search"
-                  type="search"
-                  aria-label="Buscar obras ou criadores"
-                  placeholder="Buscar obras, coleções ou criadores"
-                  value={term}
-                  onChange={(event) => setTerm(event.target.value)}
-                />
-                <button type="submit" aria-label="Buscar">
-                  <ArrowRight size={17} />
-                </button>
-              </form>
+              <nav className="catalog-tabs" aria-label="Seleção do catálogo">
+                {(
+                  [
+                    { value: 'all', label: 'Todos os NFTs' },
+                    { value: 'new', label: 'Novos lançamentos' },
+                    { value: 'trending', label: 'Em alta' },
+                  ] as const
+                ).map((tab) => (
+                  <button
+                    key={tab.value}
+                    className={(search.tab ?? 'all') === tab.value ? 'is-active' : ''}
+                    type="button"
+                    aria-pressed={(search.tab ?? 'all') === tab.value}
+                    onClick={() =>
+                      update({ tab: tab.value === 'all' ? undefined : tab.value, page: 1 })
+                    }
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </nav>
               <div className="sort-control">
-                <SlidersHorizontal size={15} aria-hidden="true" />
-                <label htmlFor="catalog-sort" className="sr-only">
-                  Ordenar obras
+                <label id="catalog-sort-label" htmlFor="catalog-sort">
+                  Ordenar por:
                 </label>
-                <select
+                <Select<CatalogSort>
                   id="catalog-sort"
+                  aria-labelledby="catalog-sort-label"
                   value={search.sort ?? 'newest'}
-                  onChange={(event) =>
-                    update({
-                      sort: event.target.value as CatalogSearch['sort'],
-                      page: 1,
-                    })
-                  }
-                >
-                  <option value="newest">Mais recentes</option>
-                  <option value="price-asc">Menor preço</option>
-                  <option value="price-desc">Maior preço</option>
-                </select>
+                  options={catalogSortOptions}
+                  onValueChange={(sort) => update({ sort, page: 1 })}
+                />
               </div>
             </div>
-            {authNotice && (
-              <Notice>
-                Entre na sua conta para salvar favoritos.{' '}
-                <Link to="/login" search={{ redirect: '/' }}>
-                  Entrar
-                </Link>
-              </Notice>
-            )}
             {mutation.isError && (
               <Notice tone="error">
                 {errorMessage(mutation.error)} O favorito foi restaurado.
@@ -164,22 +151,27 @@ export function CatalogPage() {
               </div>
             ) : (
               <>
-                <div className="results-bar" aria-live="polite">
-                  <span>
-                    {!search.category || search.category === 'all'
-                      ? 'Todas as coleções'
-                      : search.category}{' '}
-                    {search.q ? `· “${search.q}”` : ''}
-                  </span>
-                  <span>
-                    {catalog.isFetching ? 'Atualizando…' : `${catalog.data.total} resultados`}
-                  </span>
-                </div>
+                {(search.q ||
+                  (search.category && search.category !== 'all') ||
+                  search.network ||
+                  search.minPrice !== undefined ||
+                  search.maxPrice !== undefined ||
+                  catalog.isFetching) && (
+                  <div className="results-bar" aria-live="polite">
+                    <span>
+                      {catalog.data.total} resultados{search.q ? ` para “${search.q}”` : ''}
+                    </span>
+                    <button type="button" onClick={clearFilters}>
+                      Limpar filtros
+                    </button>
+                  </div>
+                )}
                 <div className="nft-grid">
-                  {catalog.data.items.map((nft) => (
+                  {catalog.data.items.map((nft, index) => (
                     <NFTCard
                       key={nft.id}
                       nft={nft}
+                      priority={index < 4}
                       favorite={favorites.includes(nft.id)}
                       onFavorite={() => favorite(nft)}
                       busy={mutation.isPending}
@@ -196,9 +188,22 @@ export function CatalogPage() {
                   >
                     <ChevronLeft size={17} />
                   </Button>
-                  <span>
+                  <span className="sr-only" aria-live="polite">
                     Página {catalog.data.page} de {totalPages}
                   </span>
+                  {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                    <Button
+                      key={page}
+                      variant="secondary"
+                      size="icon"
+                      className={catalog.data.page === page ? 'page-active' : undefined}
+                      aria-label={`Ir para página ${page}`}
+                      aria-current={catalog.data.page === page ? 'page' : undefined}
+                      onClick={() => update({ page })}
+                    >
+                      {page}
+                    </Button>
+                  ))}
                   <Button
                     variant="secondary"
                     size="icon"
@@ -214,21 +219,46 @@ export function CatalogPage() {
           </div>
         </div>
       </section>
-      <section className="collector-banner page-shell">
-        <div>
-          <p className="eyebrow">Uma nova forma de colecionar</p>
-          <h2>
-            Arte que conecta.
-            <br />
-            Coleções que contam histórias.
-          </h2>
+      <CatalogPromotions />
+      <EditorialHighlights />
+      <Modal
+        open={filtersOpen}
+        onOpenChange={setFiltersOpen}
+        title="Filtrar NFTs"
+        description="Selecione uma coleção, faixa de preço ou rede."
+      >
+        <CatalogFilters
+          search={search}
+          facets={catalog.data?.facets}
+          update={(values) => {
+            update(values);
+            setFiltersOpen(false);
+          }}
+          minPrice={minPrice}
+          maxPrice={maxPrice}
+          onMinPrice={setMinPrice}
+          onMaxPrice={setMaxPrice}
+          applyPrice={applyPrice}
+          priceError={priceError}
+          idPrefix="mobile-price"
+        />
+        <div className="field mobile-filter-sort">
+          <label id="mobile-sort-label" htmlFor="mobile-catalog-sort">
+            Ordenar NFTs
+          </label>
+          <Select<CatalogSort>
+            id="mobile-catalog-sort"
+            className="select-trigger-full"
+            aria-labelledby="mobile-sort-label"
+            value={search.sort ?? 'newest'}
+            options={catalogSortOptions}
+            onValueChange={(sort) => {
+              update({ sort, page: 1 });
+              setFiltersOpen(false);
+            }}
+          />
         </div>
-        <Button asChild variant="secondary">
-          <Link to="/register">
-            Comece sua coleção <ArrowRight size={16} />
-          </Link>
-        </Button>
-      </section>
+      </Modal>
     </>
   );
 }

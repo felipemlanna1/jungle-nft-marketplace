@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "startTime": "2026-10-27T13:17:54.219Z",
+    "duration": 332903.766,
+    "expected": 52,
+    "skipped": 0,
+    "unexpected": 18,
+    "flaky": 0
+  },
+  "status": "Não aprovado; rodada encontrou falhas e alterações de runtime foram informadas pela equipe durante a execução.",
+  "triage": {
+    "helperReadiness": "11 falhas: cabeçalho oculto em Kurio móvel foi tratado erroneamente como requisito de visibilidade; helper corrigido para presença, preservando a exigência de controle visível ao clicar.",
+    "translatedQuoteMessage": "2 falhas: expectativa antiga não reconhecia plural mudaram; texto exato atual adotado.",
+    "realFocusBug": "1 falha desktop reproduzida independentemente: document.activeElement=BODY após Escape com menu ainda aberto. Correção delegada ao responsável visual.",
+    "mobileAccountMenu": "1 falha: botão de conta do cabeçalho não pertence à superfície móvel; agora o menu é aberto pela navegação apropriada.",
+    "unexpectedNavigation": "2 falhas: evaluate/reload abortados; runtime foi alterado durante a primeira metade, conforme informação da coordenação. Causa exata não afirmada apenas pelos traces.",
+    "loginDuringReload": "1 falha móvel: campos estavam vazios após clique e nenhuma autenticação ocorreu; nova execução com fingerprint de fontes será exigida."
+  },
+  "note": "A classificação detalhada deve ser conferida com os resultados originais; categorias podem se sobrepor em cenários dependentes do helper."
+}

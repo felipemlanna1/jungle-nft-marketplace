@@ -1,5 +1,5 @@
-import type { Quote } from '../../../../contracts';
-export function Summary({ quote, pending = false }: { quote?: Quote; pending?: boolean }) {
+import type { OrderSummaryProps } from '../../shared-types';
+export function Summary({ quote, pending = false, estimatedFee = false }: OrderSummaryProps) {
   if (pending)
     return (
       <div className="summary-skeleton" role="status" aria-label="Updating your total">
@@ -21,7 +21,10 @@ export function Summary({ quote, pending = false }: { quote?: Quote; pending?: b
       </div>
       <div className="price-line">
         <dt>Taxa de rede</dt>
-        <dd>{quote.networkFee} ETH</dd>
+        <dd className={estimatedFee ? 'estimated-network-fee' : undefined}>
+          <span>{quote.networkFee} ETH</span>
+          {estimatedFee && <small>Taxa estimada</small>}
+        </dd>
       </div>
       <div className="price-line total">
         <dt>Total</dt>

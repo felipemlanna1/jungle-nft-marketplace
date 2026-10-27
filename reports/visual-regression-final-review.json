@@ -1,0 +1,27 @@
+{
+  "scope": "Oito baselines da implementação final Kurio, desktop e mobile.",
+  "updated": 8,
+  "manuallyReviewed": 8,
+  "maxDiffPixelRatio": 0.02,
+  "readiness": "Fontes prontas, rolagem vertical para carregar artes lazy e retorno ao topo; nenhum carrossel é deslocado por preparação.",
+  "reports": [
+    "reports/visual-regression-final-update.json",
+    "reports/visual-regression-final-detail-update.json",
+    "reports/visual-regression-final-home-update.json"
+  ],
+  "regressionWithoutUpdate": "A rodada completa executou 147/148 casos; a falha foi um P1 no bootstrap HTTP. A validação definitiva aguarda a correção e o novo fullE2E, sem recapturar baselines por mudança apenas de transporte.",
+  "nativeComparisons": {
+    "count": 15,
+    "sameBuild": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ],
+    "horizontalOverflow": false,
+    "manifest": "reports/visual-comparison/manifest.json"
+  },
+  "limitations": [
+    "Os baselines verificam estabilidade da implementação, não igualdade com o Figma.",
+    "Diferenças estruturais do pagamento mobile e demais desvios estão registrados por tela no manifesto.",
+    "Nenhuma tolerância foi ampliada nem fonte de design modificada para obter aprovação."
+  ],
+  "captureBuild": "X0vaGc14"
+}

@@ -1,0 +1,95 @@
+.select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 224px;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.select-trigger > svg {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.select-trigger:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+.select-trigger:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+.select-trigger[data-state='open'] {
+  border-color: var(--primary);
+}
+.select-trigger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.select-content {
+  z-index: 200;
+  min-width: min(224px, calc(100vw - 24px));
+  width: var(--radix-select-trigger-width);
+  max-width: calc(100vw - 24px);
+  max-height: var(--radix-select-content-available-height);
+  overflow: hidden;
+  border: 1px solid var(--border-soft, var(--border));
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  color: var(--foreground);
+  box-shadow: 0 12px 32px #0006;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+}
+.select-viewport {
+  padding: 5px;
+}
+.select-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  min-height: 38px;
+  padding: 8px 25px 8px 8px;
+  border-radius: var(--radius-sm);
+  outline: none;
+  user-select: none;
+  cursor: pointer;
+}
+.select-item[data-highlighted] {
+  background: var(--primary);
+  color: var(--accent-foreground);
+}
+.select-item[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.select-item-indicator {
+  position: absolute;
+  right: 7px;
+  display: grid;
+  place-items: center;
+}
+.select-scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  color: var(--muted);
+}
+.select-trigger-full {
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "Configuração local e de integração contínua, sem publicação ou execução remota de workflow.",
+  "decisions": [
+    "ESLint bloqueia imports estáticos e dinâmicos de mocks fora de bootstrap e testes; domínio não importa UI, transporte ou camadas de aplicação.",
+    "any explícito passou de aviso a erro; nenhuma desativação geral foi adicionada.",
+    "A formatação compartilha uma única lista de diretórios e inclui o template CSS antes ignorado.",
+    "A integração contínua usa Node.js 22, npm ci, ações fixadas por commit, permissão contents:read e checkout sem persistir credenciais.",
+    "Chromium executa no macOS para as referências Darwin; atualização automática de snapshots está desativada.",
+    "Não há hooks Git, publicação, segredos ou transmissão de mensagens no workflow."
+  ],
+  "verification": {
+    "architectureCases": "14/14 PASS; configuração ESLint preparada em beforeAll com timeout de 20 segundos, sem ampliar o tempo das asserções.",
+    "favoriteOwnership": "4/4 PASS: regressões de troca de sessão e controle de rollback.",
+    "combinedRun": "21 testes passaram em 1,16 s com Vitest 5.0.5 e Node.js 22.22.0.",
+    "typecheck": "PASS: npm run typecheck após integrar o segundo consumidor de favoritos.",
+    "lint": "PASS apenas nos arquivos de configuração e hooks/testes alterados nesta tarefa. Verificação global reservada à rodada consolidada após estabilização das fontes.",
+    "format": "PASS nos arquivos de configuração, documentação de qualidade e teste de fronteiras; não foi executada formatação global sobre arquivos de outros autores.",
+    "workflow": "Sintaxe conferida pelo Prettier; commits das três ações consultados na API oficial GitHub. Não executado no GitHub.",
+    "accountOwnership": "5/5 PASS: requisições de perfil, carteira e senha após troca de conta, resposta tardia de perfil e proteção do rascunho durante carga inicial de carteiras.",
+    "cartOwnership": "2/2 PASS: remoção antiga bloqueada antes do HTTP e sucesso tardio sem invalidar carrinho/cotação da próxima conta.",
+    "toolchain": "Node.js 22.22.0, Vitest 5.0.5; suítes de navegador usam Playwright 1.64.1.",
+    "rootCheck": "A coordenação confirmou npm run check com 135 testes, lint, tipo, formatação e build após as migrações de catálogo e tema.",
+    "browserConsolidated": "76/76 PASS em 205 segundos, Node.js 22.22.0, sem retries, skip ou flakes; integridade das fontes confirmada por SHA-256.",
+    "evidence": "reports/e2e-consolidated-evidence.json"
+  },
+  "sourceSHA256": {
+    "eslint.config.js": "28f03cf2bee4e927a9fd0e2226b6d113c44f87a40d1a2ba2efcb53cf107c3bf6",
+    "vitest.config.ts": "aa5fcba591a3dd909564e9ae241d523ce1ebd6f86667c525b33b7cd495d07f65",
+    ".prettierignore": "7bc1666e485e4175186dc48c762b60faca77515ac3739335516d9872107ecf7b",
+    "scripts/format.mjs": "302c7eb58fc541288013efe859b267cf82bf842434796dfdab91aa2251f51f38",
+    ".github/workflows/quality.yml": "6ade8310df7696aa9f2a1efc858fa9dc1237b858cf621ed323148a7583ab5823",
+    "tests/tooling/architecture.test.ts": "086f0bca179b68df383e8752e43bfda6b810d41ffd0cbc509b272d9e8f52e39b",
+    "docs/quality-gates.md": "81cabd5ecea0544e7291a35153860325e61257325a72c908e0a9dcbffedc266a"
+  },
+  "limits": [
+    "A configuração não comprova aprovação futura da integração contínua.",
+    "macos-latest e Node.js 22 podem receber atualizações; referências visuais exigem revisão quando o ambiente mudar.",
+    "Uma nota numérica de qualidade ou desempenho não foi atribuída."
+  ]
+}

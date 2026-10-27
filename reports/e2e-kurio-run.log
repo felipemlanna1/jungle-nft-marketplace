@@ -1,0 +1,29 @@
+
+Running 20 tests using 1 worker
+
+(node:33179) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/e2e/drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user (2.8s)
+  ✓   2 [desktop] › tests/e2e/drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user (2.8s)
+  ✓   3 [desktop] › tests/e2e/kurio.spec.ts:27:1 › Kurio is the only appearance across public, account, checkout and receipt routes (7.4s)
+  ✓   4 [desktop] › tests/e2e/kurio.spec.ts:77:3 › a saved expedition preference migrates to Kurio without a switcher (1.4s)
+  ✓   5 [desktop] › tests/e2e/kurio.spec.ts:77:3 › a saved unsupported preference migrates to Kurio without a switcher (1.3s)
+  ✓   6 [desktop] › tests/e2e/kurio.spec.ts:105:1 › blocked appearance storage still renders Kurio and an accessible menu (908ms)
+  ✓   7 [desktop] › tests/e2e/kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh (2.6s)
+  ✓   8 [desktop] › tests/e2e/kurio.spec.ts:150:1 › menu keyboard navigation preserves an unsaved profile and restores trigger focus (1.2s)
+  ✓   9 [desktop] › tests/e2e/kurio.spec.ts:175:1 › opening the menu preserves a checkout draft and review without creating an order (2.1s)
+  ✓  10 [desktop] › tests/e2e/kurio.spec.ts:202:1 › Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports (849ms)
+(node:33195) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [mobile] › tests/e2e/drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user (1.9s)
+  ✓  12 [mobile] › tests/e2e/drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user (2.9s)
+  ✓  13 [mobile] › tests/e2e/kurio.spec.ts:27:1 › Kurio is the only appearance across public, account, checkout and receipt routes (7.3s)
+  ✓  14 [mobile] › tests/e2e/kurio.spec.ts:77:3 › a saved expedition preference migrates to Kurio without a switcher (1.6s)
+  ✓  15 [mobile] › tests/e2e/kurio.spec.ts:77:3 › a saved unsupported preference migrates to Kurio without a switcher (1.5s)
+  ✓  16 [mobile] › tests/e2e/kurio.spec.ts:105:1 › blocked appearance storage still renders Kurio and an accessible menu (889ms)
+  ✓  17 [mobile] › tests/e2e/kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh (2.6s)
+  ✓  18 [mobile] › tests/e2e/kurio.spec.ts:150:1 › menu keyboard navigation preserves an unsaved profile and restores trigger focus (1.2s)
+  ✓  19 [mobile] › tests/e2e/kurio.spec.ts:175:1 › opening the menu preserves a checkout draft and review without creating an order (2.1s)
+  ✓  20 [mobile] › tests/e2e/kurio.spec.ts:202:1 › Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports (1.5s)
+
+  20 passed (48.7s)

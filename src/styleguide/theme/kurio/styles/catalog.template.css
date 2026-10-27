@@ -1,0 +1,993 @@
+html[data-theme='kurio'] .kurio-hero {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  height: 450px;
+  margin-top: 32px;
+  padding: 0;
+}
+.kurio-hero-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+html[data-theme='kurio'] .hero-copy {
+  position: relative;
+  z-index: 1;
+  width: 600px;
+  padding: 0;
+}
+html[data-theme='kurio'] .hero .eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: var(--foreground);
+}
+html[data-theme='kurio'] .hero h1 {
+  font-size: 43px;
+  line-height: 70px;
+  letter-spacing: normal;
+  font-weight: 700;
+}
+html[data-theme='kurio'] .hero-description {
+  font-size: 14px;
+  line-height: 24px;
+  max-width: 557px;
+  margin: 4px 0 32px;
+  color: var(--muted);
+}
+html[data-theme='kurio'] .hero .kurio-explore {
+  width: 140px;
+  min-height: 40px;
+  height: 40px;
+  padding: 10px 28px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  border: 0;
+  border-radius: 6px;
+}
+.kurio-hero-pagination {
+  margin: 44px 0 0 auto;
+}
+html[data-theme='kurio'] .hero-art {
+  width: 450px;
+  height: 450px;
+  max-width: none;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 24px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+html[data-theme='kurio'] .hero-art picture,
+html[data-theme='kurio'] .hero-art picture > img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+html[data-theme='kurio'] .marketplace-section {
+  margin-top: 96px;
+  padding: 0;
+}
+html[data-theme='kurio'] .catalog-layout {
+  grid-template-columns: 310px minmax(0, 1fr);
+  gap: 48px;
+}
+html[data-theme='kurio'] .catalog-sidebar {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.catalog-filter-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background: var(--surface);
+}
+.catalog-filter-panel h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--foreground);
+  margin: 0 0 12px;
+}
+.catalog-filter-panel nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-inline: 12px;
+}
+.catalog-filter-panel nav button,
+html[data-theme='kurio'] .catalog-sidebar nav button {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 15px;
+  line-height: 40px;
+  color: var(--muted);
+  background: transparent;
+  text-align: left;
+}
+.catalog-filter-panel nav button.category-active,
+html[data-theme='kurio'] .catalog-sidebar nav button.category-active {
+  background: transparent;
+  color: var(--text-accent);
+}
+.catalog-filter-panel nav button:hover {
+  color: var(--text-accent);
+}
+.price-controls {
+  padding-left: 12px;
+}
+.price-range-sliders {
+  position: relative;
+  display: grid;
+  height: 20px;
+  margin-bottom: 12px;
+}
+.price-range-sliders input {
+  appearance: none;
+  -webkit-appearance: none;
+  grid-area: 1 / 1;
+  height: 4px;
+  align-self: center;
+  margin: 0;
+  width: 100%;
+  pointer-events: none;
+  background: var(--primary);
+}
+.price-range-sliders input::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  pointer-events: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  cursor: ew-resize;
+}
+.price-range-sliders input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  cursor: ew-resize;
+}
+.price-value-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.price-value-controls input {
+  width: 46px;
+  padding: 2px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-soft);
+  color: var(--foreground);
+  font-size: 13px;
+  text-align: center;
+}
+.price-controls > .button {
+  min-height: 36px;
+  padding: 8px 12px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 16px;
+}
+.featured-nft-banner {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 24px;
+  height: 470px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--primary) 10%, transparent),
+    color-mix(in srgb, var(--primary) 3%, transparent)
+  );
+}
+.featured-nft-banner strong {
+  color: var(--text-accent);
+  font-size: 18px;
+  line-height: 16px;
+}
+.featured-nft-banner span {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.featured-nft-banner img {
+  width: 286px;
+  height: 368px;
+  border-radius: 22px;
+  margin-top: 8px;
+}
+html[data-theme='kurio'] .catalog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0;
+  gap: 20px;
+}
+.catalog-tabs {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+.catalog-tabs button {
+  position: relative;
+  padding: 0;
+  color: var(--foreground);
+  background: transparent;
+  border: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.catalog-tabs button.is-active {
+  color: var(--text-accent);
+}
+.catalog-tabs button.is-active::after {
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  content: '';
+  background: var(--primary);
+}
+html[data-theme='kurio'] .sort-control {
+  display: flex;
+  flex-wrap: wrap;
+  border: 0;
+  padding: 0;
+  gap: 8px;
+  width: auto;
+  color: var(--foreground);
+  font-size: 15px;
+  line-height: 18px;
+}
+html[data-theme='kurio'] .sort-control select {
+  padding: 0 20px 0 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 15px;
+  max-width: 210px;
+  min-height: 18px;
+  height: 18px;
+}
+html[data-theme='kurio'] .nft-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 72px 34px;
+}
+html[data-theme='kurio'] .nft-card {
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+  overflow: visible;
+}
+html[data-theme='kurio'] .nft-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  aspect-ratio: auto;
+  padding: 24px 4px 26px;
+  border-radius: 0;
+  background: var(--surface);
+}
+html[data-theme='kurio'] .nft-card-image > a {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+html[data-theme='kurio'] .nft-card-image img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: inherit;
+  object-fit: cover;
+  transform: none;
+}
+html[data-theme='kurio'] .nft-card-copy {
+  padding: 12px 0 0;
+}
+html[data-theme='kurio'] .nft-card-top h3 {
+  color: var(--foreground);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+html[data-theme='kurio'] .creator-label,
+html[data-theme='kurio'] .nft-card-bottom .overline,
+html[data-theme='kurio'] .card-arrow,
+html[data-theme='kurio'] .nft-card-image .edition-badge {
+  display: none;
+}
+html[data-theme='kurio'] .nft-card-bottom {
+  border: 0;
+  padding: 0;
+  margin-top: 12px;
+}
+html[data-theme='kurio'] .nft-card-price-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  line-height: 16px;
+}
+html[data-theme='kurio'] .previous-price {
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 400;
+  color: var(--secondary);
+}
+html[data-theme='kurio'] .eth-price,
+html[data-theme='kurio'] .eth-price span {
+  color: var(--text-accent);
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: normal;
+}
+html[data-theme='kurio'] .favorite-button {
+  opacity: 0;
+  transition: opacity 150ms;
+  color: var(--text-accent);
+  background: var(--surface);
+  border-color: var(--primary);
+}
+html[data-theme='kurio'] .nft-card:hover .favorite-button,
+html[data-theme='kurio'] .nft-card:focus-within .favorite-button,
+html[data-theme='kurio'] .favorite-button.is-favorite {
+  opacity: 1;
+}
+html[data-theme='kurio'] .pagination {
+  justify-content: flex-end;
+  gap: 6px;
+  margin: 88px 0 0;
+  font-size: 14px;
+}
+html[data-theme='kurio'] .pagination .button {
+  width: 35px;
+  height: 35px;
+  min-height: 35px;
+  padding: 8px;
+  border-color: var(--border);
+  border-radius: 4px;
+}
+html[data-theme='kurio'] .pagination .page-active {
+  color: var(--background);
+  background: var(--primary);
+  border-color: var(--primary);
+}
+html[data-theme='kurio'] .skeleton-card .art-skeleton {
+  height: 300px;
+  aspect-ratio: auto;
+}
+html[data-theme='kurio'] .skeleton-card .text-skeleton {
+  height: 16px;
+  margin: 0 0 12px;
+}
+html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
+  margin: 0;
+}
+.catalog-promotions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 96px;
+}
+.catalog-promotion {
+  display: flex;
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface);
+}
+.catalog-promotion > img {
+  width: 49%;
+  height: 250px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+.catalog-promotion > div {
+  position: relative;
+  flex: 1;
+  padding: 37px 30px 0 0;
+  text-align: right;
+}
+.catalog-promotion h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.catalog-promotion p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 24px;
+  margin: 9px 0 25px;
+}
+.catalog-promotion .button {
+  width: 140px;
+  height: 40px;
+  min-height: 40px;
+  padding: 10px 26px;
+  border-radius: 6px;
+  background: var(--primary);
+  color: var(--background);
+  font-size: 14px;
+  font-weight: 500;
+}
+@media (max-width: 1240px) {
+  html[data-theme='kurio'] .hero-copy {
+    width: min(55%, 600px);
+  }
+  html[data-theme='kurio'] .hero h1 {
+    font-size: clamp(26px, 3vw, 43px);
+    line-height: 1.6;
+  }
+  html[data-theme='kurio'] .hero-art {
+    width: 40%;
+    height: auto;
+  }
+  html[data-theme='kurio'] .catalog-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 28px;
+  }
+  html[data-theme='kurio'] .nft-grid {
+    gap: 40px 20px;
+  }
+  html[data-theme='kurio'] .nft-card-image {
+    height: auto;
+    aspect-ratio: 258 / 300;
+  }
+}
+@media (max-width: __BREAKPOINT_TABLET__) {
+  html[data-theme='kurio'] .catalog-layout {
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 24px;
+  }
+  .catalog-filter-panel {
+    padding: 16px;
+  }
+  .catalog-filter-panel nav {
+    padding: 0;
+  }
+  html[data-theme='kurio'] .nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .catalog-tabs {
+    gap: 12px;
+  }
+  .catalog-tabs button {
+    font-size: 13px;
+  }
+  .price-controls {
+    padding-left: 0;
+  }
+  .price-value-controls {
+    gap: 2px;
+    font-size: 12px;
+  }
+  .price-value-controls input {
+    width: 42px;
+    font-size: 12px;
+  }
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  html[data-theme='kurio'] .kurio-desktop-art,
+  html[data-theme='kurio'] .kurio-desktop-copy {
+    display: none;
+  }
+  html[data-theme='kurio'] .kurio-mobile-art,
+  html[data-theme='kurio'] .kurio-mobile-copy {
+    display: block;
+  }
+  html[data-theme='kurio'] .mobile-catalog-tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 45px;
+  }
+  html[data-theme='kurio'] .mobile-catalog-tools .catalog-search {
+    height: 45px;
+    min-height: 45px;
+    padding: 12px;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  html[data-theme='kurio'] .mobile-catalog-tools .catalog-search .input {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0;
+    min-height: 0;
+    color: var(--foreground);
+    background: transparent;
+    border: 0;
+    min-width: 0;
+  }
+  html[data-theme='kurio'] .mobile-catalog-tools .input::placeholder {
+    color: var(--secondary);
+    opacity: 1;
+  }
+  .mobile-catalog-tools .catalog-search > img {
+    flex: 0 0 22px;
+  }
+  .mobile-filter-button {
+    display: grid;
+    place-items: center;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 14px;
+    background: var(--primary);
+    color: var(--background);
+    flex-shrink: 0;
+  }
+  html[data-theme='kurio'] .kurio-hero {
+    height: 190px;
+    padding: 0;
+    margin-top: 16px;
+    border-radius: 32px;
+    overflow: hidden;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  html[data-theme='kurio'] .hero-copy {
+    width: calc(100% - 146px);
+    padding: 0;
+  }
+  html[data-theme='kurio'] .hero .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: normal;
+    margin-bottom: 6px;
+  }
+  html[data-theme='kurio'] .hero h1 {
+    font-size: clamp(13.5px, 4.35vw, 18px);
+    line-height: 29px;
+    min-width: 0;
+  }
+  html[data-theme='kurio'] .hero-description {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 6px 0 0;
+    max-width: 190px;
+    width: 100%;
+  }
+  html[data-theme='kurio'] .hero .kurio-explore {
+    width: auto;
+    height: 16px;
+    min-height: 16px;
+    justify-content: flex-start;
+    padding: 0;
+    border-radius: 0;
+    gap: 8px;
+    background: transparent;
+    color: var(--text-accent);
+    font-size: 12px;
+    line-height: 14px;
+  }
+  html[data-theme='kurio'] .hero-art {
+    width: 138px;
+    height: 138px;
+    border-radius: 16px;
+    position: relative;
+    z-index: 1;
+    margin-top: -6px;
+  }
+  html[data-theme='kurio'] .hero-art .kurio-hero-thumbnail {
+    position: absolute;
+    left: 14px;
+    top: 88px;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+  }
+  .kurio-hero-pagination-mobile {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  html[data-theme='kurio'] .marketplace-section {
+    margin-top: 16px;
+  }
+  html[data-theme='kurio'] .catalog-layout {
+    display: block;
+  }
+  html[data-theme='kurio'] .catalog-promotions {
+    display: none;
+  }
+  html[data-theme='kurio'] .catalog-sidebar,
+  html[data-theme='kurio'] .sort-control {
+    display: none;
+  }
+  html[data-theme='kurio'] .catalog-toolbar {
+    display: block;
+    margin-bottom: 16px;
+    padding: 0;
+    overflow-x: auto;
+  }
+  .catalog-tabs {
+    width: max-content;
+    gap: 4px;
+  }
+  .catalog-tabs button {
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 4px;
+  }
+  .catalog-tabs button.is-active::after {
+    bottom: 0;
+  }
+  .catalog-tabs button + button {
+    margin-left: 0;
+  }
+  html[data-theme='kurio'] .nft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+    align-items: start;
+    padding-bottom: 32px;
+  }
+  html[data-theme='kurio'] .nft-card:nth-child(even) {
+    transform: translateY(32px);
+  }
+  html[data-theme='kurio'] .nft-card-image {
+    height: auto;
+    aspect-ratio: 175 / 200;
+    border-radius: 20px;
+    padding: 12px 4px 20px;
+    background: linear-gradient(140deg, var(--surface), var(--surface-raised));
+  }
+  html[data-theme='kurio'] .skeleton-card .art-skeleton {
+    height: auto;
+    aspect-ratio: 175 / 200;
+    border-radius: 20px;
+  }
+  html[data-theme='kurio'] .skeleton-card .text-skeleton {
+    height: 20px;
+    margin: 0;
+  }
+  html[data-theme='kurio'] .skeleton-card .text-skeleton.short {
+    height: 16px;
+  }
+  html[data-theme='kurio'] .nft-card-image > a {
+    border-radius: 16px;
+  }
+  html[data-theme='kurio'] .nft-card-copy {
+    padding: 8px 0 0 8px;
+  }
+  html[data-theme='kurio'] .nft-card-top h3 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  html[data-theme='kurio'] .nft-card-bottom {
+    margin-top: 0;
+  }
+  html[data-theme='kurio'] .eth-price,
+  html[data-theme='kurio'] .eth-price span {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  html[data-theme='kurio'] .previous-price {
+    display: none;
+  }
+  html[data-theme='kurio'] .favorite-button {
+    opacity: 1;
+    top: 12px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+  }
+  html[data-theme='kurio'] .pagination {
+    margin-top: 24px;
+    justify-content: center;
+  }
+  .dialog-content .catalog-filter-panel {
+    padding: 20px 0 0;
+  }
+}
+@media (max-width: 374px) {
+  html[data-theme='kurio'] .hero h1 {
+    font-size: 15px;
+    line-height: 24px;
+    min-width: 0;
+  }
+  html[data-theme='kurio'] .hero-art {
+    width: 108px;
+    height: 108px;
+    margin-right: 0;
+  }
+  html[data-theme='kurio'] .hero-copy {
+    width: calc(100% - 116px);
+  }
+  html[data-theme='kurio'] .hero .eyebrow {
+    font-size: 10px;
+  }
+  html[data-theme='kurio'] .hero-description {
+    font-size: 11px;
+  }
+  html[data-theme='kurio'] .hero-art .kurio-hero-thumbnail {
+    left: 8px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.mobile-filter-sort {
+  margin-top: 24px;
+}
+
+.kurio-hero-carousel,
+.kurio-hero-viewport,
+.kurio-hero-track {
+  width: 100%;
+  height: 100%;
+}
+.kurio-hero-slide {
+  display: flex;
+  padding-left: 40px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  height: 100%;
+}
+.kurio-hero-control-space {
+  height: 52px;
+}
+.kurio-hero-carousel-dots {
+  position: absolute;
+  left: calc(40px + min(55%, 600px) - 56px);
+  bottom: 43px;
+  height: 32px;
+  z-index: 2;
+}
+.kurio-hero-carousel-dots button {
+  align-items: end;
+}
+html[data-theme='kurio'] .kurio-hero-slide-secondary h1 {
+  font-size: clamp(22px, 2.5vw, 36px);
+  line-height: 1.6667;
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .kurio-hero-slide {
+    padding: 16px;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .kurio-hero-control-space {
+    display: none;
+  }
+  .kurio-hero-carousel-dots {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 6px;
+  }
+  html[data-theme='kurio'] .kurio-hero-slide-secondary h1 {
+    font-size: clamp(13.5px, 4.35vw, 18px);
+    line-height: 29px;
+  }
+}
+@media (max-width: 374px) {
+  html[data-theme='kurio'] .kurio-hero-slide h1 {
+    min-width: 0;
+    font-size: 13.5px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 413px) {
+  html[data-theme='kurio'] .kurio-hero-slide .hero-description {
+    line-height: 16px;
+  }
+}
+.account-menu > button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border: 0;
+  background: transparent;
+  color: var(--foreground);
+  font: inherit;
+  cursor: pointer;
+}
+
+html[data-theme='kurio'] .nft-card-image .edition-badge.is-sold-out {
+  display: inline-flex;
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  left: auto;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: var(--surface-dark);
+  color: var(--foreground);
+  font-size: 11px;
+}
+
+.editorial-highlights {
+  margin-top: 96px;
+}
+.editorial-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.editorial-heading h2 {
+  font-size: 28px;
+  line-height: 37px;
+  font-weight: 700;
+}
+.editorial-heading > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 19px;
+}
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1144px;
+}
+.editorial-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--surface);
+}
+.editorial-card-image {
+  width: 100%;
+  height: 195px;
+  object-fit: cover;
+}
+.editorial-card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+  padding: 12px 16px 16px;
+}
+.editorial-meta {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  white-space: pre-wrap;
+}
+.editorial-card h3 {
+  color: var(--foreground);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.editorial-excerpt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+.editorial-read-button.button {
+  position: relative;
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 4px;
+  min-height: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.editorial-read-button::after {
+  content: '';
+  position: absolute;
+  inset: -4px 0;
+}
+.editorial-error {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  padding: 32px 16px;
+  color: var(--muted);
+  text-align: center;
+}
+.editorial-skeleton-copy {
+  min-height: 174px;
+}
+.editorial-skeleton-copy > div {
+  min-height: 32px;
+}
+.dialog-content:has(.article-reader) {
+  width: min(720px, calc(100vw - 32px));
+  max-height: 88dvh;
+  overflow-y: auto;
+}
+.article-reader {
+  display: grid;
+  gap: 20px;
+  margin-top: 24px;
+}
+.article-reader-image {
+  width: 100%;
+  height: 260px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.article-reader-paragraphs {
+  display: grid;
+  gap: 16px;
+  color: var(--foreground);
+  font-size: 14px;
+  line-height: 1.8;
+}
+@media (max-width: __BREAKPOINT_TABLET__) {
+  .editorial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: __BREAKPOINT_MOBILE__) {
+  .editorial-highlights {
+    margin-top: 48px;
+  }
+  .editorial-heading h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .editorial-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .article-reader-image {
+    height: 200px;
+  }
+}

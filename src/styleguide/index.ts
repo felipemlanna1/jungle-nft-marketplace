@@ -8,5 +8,15 @@ export { StyleguideProvider } from './components/StyleguideProvider';
 export { useTheme } from './hooks/useTheme';
 export { theme } from './theme';
 
-export { ThemeSwitcher } from './components/ThemeSwitcher';
 export { themes, DEFAULT_THEME, type ThemeName } from './theme';
+
+export { QuantityInput } from './components/QuantityInput';
+export { Select } from './components/Select';
+export {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselDots,
+  CarouselControls,
+  useCarouselContext,
+} from './components/Carousel';

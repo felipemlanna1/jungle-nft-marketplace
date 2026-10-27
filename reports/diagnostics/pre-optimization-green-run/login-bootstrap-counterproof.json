@@ -1,0 +1,30 @@
+{
+  "firstRun": {
+    "expected": 148,
+    "passed": 147,
+    "failed": 1,
+    "report": null,
+    "reportOriginalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+    "reportSha256": "51c8f4cbe2b07a0f0d21fde93ab39282edd67c9f4e23f1a3350c8aba0dc0e260",
+    "reportLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+    "reportAvailability": "local-archive-only"
+  },
+  "cause": "A descoberta inicial da geração de sessão foi tratada como mudança de identidade e cancelou um login válido simultâneo, apesar de HTTP 200.",
+  "changedSourceSinceFirstRun": [
+    "src/domain/session-transport.test.ts",
+    "src/services/http/generation.ts"
+  ],
+  "loginTest": {
+    "path": "tests/e2e/favorites-navigation.spec.ts",
+    "unchanged": true,
+    "sha256": "8f6a142c53b976be9e7c2a80a973493dec30a1321c2fd45b2095ee245b2d93e3"
+  },
+  "finalRun": {
+    "expected": 148,
+    "passed": 148,
+    "failed": 0,
+    "report": "reports/playwright-final-build-html/index.html",
+    "evidence": "reports/e2e-final-build-evidence.json"
+  },
+  "policy": "Nenhuma espera pela sessão foi adicionada ao E2E; nenhuma baseline visual foi atualizada durante as duas rodadas."
+}

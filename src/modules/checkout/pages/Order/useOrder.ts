@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
+import { useNavigate } from '@tanstack/react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { market } from '../../../../services/marketplace';
 import { useAuthenticatedUser } from '../../../account/hooks/useAccount';
-import { clearAttempt } from '../../attempt';
+import { clearAttemptForOrder } from '../../attempt';
 export function useOrder(id: string) {
   const session = useAuthenticatedUser();
+  const navigate = useNavigate();
   const user = session.data;
   const client = useQueryClient();
   const order = useQuery({
@@ -16,10 +18,11 @@ export function useOrder(id: string) {
   });
   useEffect(() => {
     if (user && order.data && order.data.status !== 'pending') {
-      clearAttempt(user.id);
+      clearAttemptForOrder(user.id, order.data.id);
       void client.invalidateQueries({ queryKey: ['cart', user.id] });
     }
   }, [user, order.data, client]);
 
-  return { session, order };
+  const close = () => void navigate({ to: '/' });
+  return { session, order, close };
 }

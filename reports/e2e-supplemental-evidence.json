@@ -1,0 +1,20 @@
+{
+  "sourceBefore": "23dbc11f2465880be4e57d7951a093346667ea729b8d1f3a319b6513c4343b20",
+  "sourceAfter": "bdae65da9ce011da8cbd3e457af12ab7e1803d635c3af7c81fb10a6a03043f0a",
+  "unchangedSource": false,
+  "changedFiles": [
+    "tests/e2e/views.spec.ts"
+  ],
+  "stats": {
+    "startTime": "2026-10-27T14:16:09.118Z",
+    "duration": 149836.735,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report": "reports/e2e-supplemental-verified.json",
+  "scope": "30 casos suplementares nos fluxos afetados por limpeza de tentativa e isolamento de sessão; não substitui a rodada anterior de 76 casos.",
+  "baselineExclusion": "PNG de comparação visual em tests/e2e excluídos; atualizados em rodada independente autorizada.",
+  "approval": false
+}

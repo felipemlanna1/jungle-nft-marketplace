@@ -1,8 +1,12 @@
+import { prepareVisualPage } from './helpers/visual';
+import { openOptions, closeOptions, openDemoScenarios } from './helpers/interface';
 import { test, expect, type Page } from '@playwright/test';
 
 async function boot(page: Page) {
   await page.goto('/');
   await page.waitForFunction(() => navigator.serviceWorker.controller !== null);
+  await expect(page.getByRole('main')).toBeVisible();
+  await expect(page.locator('#hero-title')).toBeVisible();
 }
 async function request(page: Page, path: string, method = 'GET', body?: unknown) {
   return page.evaluate(
@@ -66,26 +70,35 @@ test('keyboard users can reach navigation and visible focus', async ({ page }) =
 test('private routes require sign in and return context is preserved', async ({ page }) => {
   await boot(page);
   await page.goto('/checkout');
-  await expect(page.getByRole('link', { name: 'Sign in to continue' })).toBeVisible();
-  await page.getByRole('link', { name: 'Sign in to continue' }).click();
+  await expect(page.getByRole('link', { name: 'Entrar para continuar' })).toBeVisible();
+  await page.getByRole('link', { name: 'Entrar para continuar' }).click();
   await expect(page).toHaveURL(/redirect=%2Fcheckout|redirect=\/checkout/);
 });
 
 test('demo controls are keyboard accessible and focus returns after close', async ({ page }) => {
   await boot(page);
+  await openOptions(page);
   const trigger = page.getByRole('button', { name: 'Open demo scenarios' });
-  await trigger.click();
-  await expect(page.getByRole('dialog')).toBeVisible();
+  await openDemoScenarios(page);
   await page.keyboard.press('Escape');
-  await expect(page.getByRole('dialog')).not.toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Explore todos os estados', exact: true }),
+  ).not.toBeVisible();
   await expect(trigger).toBeFocused();
+  await closeOptions(page);
+  const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });
+  if (await footer.isVisible()) await expect(footer).toBeFocused();
+  else
+    await expect(
+      page.getByRole('button', { name: 'Abrir navegação', exact: true }).first(),
+    ).toBeFocused();
 });
 
 test('catalog visual regression', async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem('jungle.marketplace.theme', 'kurio'));
   await boot(page);
-  await expect(page.locator('img').first()).toBeVisible();
-  await page.evaluate(() => document.fonts.ready);
+  await expect(page.locator('.nft-card')).toHaveCount(9);
+  await prepareVisualPage(page);
   await expect(page).toHaveScreenshot('catalog.png', {
     fullPage: true,
     animations: 'disabled',

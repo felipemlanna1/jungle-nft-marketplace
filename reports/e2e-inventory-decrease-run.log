@@ -1,0 +1,11 @@
+
+Running 2 tests using 1 worker
+
+(node:66430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/realtime.spec.ts:94:1 › decreasing a selected quantity recovers after Socket.IO reduces its inventory limit (2.2s)
+(node:66436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [mobile] › tests/e2e/realtime.spec.ts:94:1 › decreasing a selected quantity recovers after Socket.IO reduces its inventory limit (1.9s)
+
+  2 passed (5.9s)

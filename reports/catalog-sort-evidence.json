@@ -1,0 +1,117 @@
+{
+  "scope": "Ordenação do catálogo, incluindo a versão dentro do diálogo de filtros mobile.",
+  "cause": "O select nativo usava a interface de opções do sistema operacional, fora do tema, e a largura anterior cortava o texto.",
+  "implementation": {
+    "primitive": "@radix-ui/react-select 2.4.1",
+    "component": "src/styleguide/components/Select",
+    "composition": "index.tsx com composição Radix, tipos em shared-types.ts e estilos próprios. Não há hook adicional: estado de abertura e foco pertencem ao Radix; o valor continua controlado pela rota.",
+    "optionsSource": "src/modules/catalog/config.ts",
+    "theme": "Superfície, borda, foco e realce usam tokens semânticos. Portal mantém as variáveis herdadas do tema. Fonte 14px; controle desktop 224px; largura total no diálogo mobile.",
+    "state": "onValueChange envia o enum validado ao mesmo update de URL e React Query. Não há ordenação local nem alteração do contrato HTTP."
+  },
+  "verification": {
+    "typecheck": "pass",
+    "scopedLint": "pass",
+    "installAudit": {
+      "packages": 499,
+      "vulnerabilities": 0
+    },
+    "e2e": {
+      "startTime": "2026-10-27T14:53:01.471Z",
+      "duration": 12948.172,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report": "reports/e2e-catalog-sort-verified.json",
+    "assertions": [
+      "ArrowDown abre o menu; End e Enter selecionam Maior preço.",
+      "Escape fecha apenas as opções, preserva a URL e retorna o foco ao controle.",
+      "Menor preço e Maior preço funcionam por clique e disparam GET /api/nfts com sort correspondente e status 200.",
+      "A ordem dos preços visíveis é conferida com precisão inteira de ETH.",
+      "Filtros mínimo 0.7, máximo 2 e rede Ethereum permanecem na requisição e na URL após refresh.",
+      "Cor escura do menu, fonte 14px e largura desktop 224px são verificadas no navegador."
+    ],
+    "screenshots": [
+      {
+        "originalPath": "reports/catalog-sort-keyboard-desktop.png",
+        "sha256": "f90bec1526ccda8beaf1ec9fcacc80e6937a8e79de9abff5475825879e4c0de8",
+        "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/catalog-sort-keyboard-desktop.png",
+        "availability": "local-archive-only"
+      },
+      {
+        "originalPath": "reports/catalog-sort-keyboard-mobile.png",
+        "sha256": "3b58ff1f3d93d1e478cefefcf273cdc9d7a6052f74ce3f117269ffa7b39303b2",
+        "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/catalog-sort-keyboard-mobile.png",
+        "availability": "local-archive-only"
+      }
+    ],
+    "inspection": "As duas capturas foram abertas e inspecionadas; todas as opções aparecem completas no menu temático."
+  },
+  "probeCorrections": [
+    "O teste inicial enviava End antes de o Radix concluir o foco da opção selecionada. A versão final aguarda o foco real, sem pausa fixa.",
+    "TanStack serializa preços decimais como strings JSON para preservar o tipo. O teste final compara o valor semântico exato da URL e também o parâmetro HTTP, sem coerção por ponto flutuante."
+  ],
+  "sourceSnapshotAfterExecution": [
+    {
+      "path": "src/styleguide/components/Select/index.tsx",
+      "sha256": "8bf99cd427272802eb4a4ea4fa1f88057654d4121c7cd6de7becd6529a5a598c"
+    },
+    {
+      "path": "src/styleguide/components/Select/shared-types.ts",
+      "sha256": "0af79ef8341ee36532de53d94b8d0406311c019c48205d9a375257030e56ed20"
+    },
+    {
+      "path": "src/styleguide/components/Select/styles.css",
+      "sha256": "15d8cef400782d566b7bbdb3df611e38898ef5977fbbbc960a7309a7bc13c70c"
+    },
+    {
+      "path": "src/styleguide/index.ts",
+      "sha256": "cd6e90fd84006fe84365e989e714a235d8e72ced14872e333d04a7ea0b1ba171"
+    },
+    {
+      "path": "src/modules/catalog/config.ts",
+      "sha256": "7bd7b3fc0a1466f73fbfe5c7d71c7c7c68ca08cfe145282eeae7d4a3fde41e6c"
+    },
+    {
+      "path": "src/modules/catalog/shared-types.ts",
+      "sha256": "a45141f32bf57a548fa8e000d25acc96ff59ac3363974520e66974f761ee46b1"
+    },
+    {
+      "path": "src/modules/catalog/pages/Marketplace/index.tsx",
+      "sha256": "3110543858c48d6bf96e2af78441f05da6f33f7b571da4d516a07a17b99e277d"
+    },
+    {
+      "path": "src/styleguide/theme/kurio/styles/catalog.template.css",
+      "sha256": "b76428540acbd78fdaa9c83e956705723d2e8410e7050c0fada030472dc3ecfd"
+    },
+    {
+      "path": "src/styleguide/theme/expedition/styles/catalog.template.css",
+      "sha256": "22fb53efbbed1ba07a12c7600530d1d265a9af724c6cbee5628a57299c806368"
+    },
+    {
+      "path": "src/styles.kurio.css",
+      "sha256": "3d3ce20df3f8ab78f03b1bc2bec4d5b02143b8ed6631576a5fadd3eef5a4cb5f"
+    },
+    {
+      "path": "src/styles.expedition.css",
+      "sha256": "2ff551c88f8934be3f71308309543c1adbf47e95a18bc2e6ea62b0534cbd135d"
+    },
+    {
+      "path": "tests/e2e/catalog-sort.spec.ts",
+      "sha256": "a432fcfdbdc75a1e91af8b104b0c0627b1a8eea86380bd4be340f392c6ee1778"
+    },
+    {
+      "path": "package.json",
+      "sha256": "43cf1d882a5ffe4f3ee4cb68b027f9f74b916ada678cf87aa4df8c146772df58"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "3156f499940b819ae57f722c56141ae780ab393f4aa226dff4ace0b2d57e6e61"
+    }
+  ],
+  "snapshotLimit": "Este registro contém os hashes após a execução, sem alegação de congelamento de todo o repositório durante estes 4 casos.",
+  "limits": "Os selects de outros formulários foram preservados por escopo. Mobile foi verificado por emulação Chromium, sem alegação de execução em dispositivo iOS físico.",
+  "primaryReference": "https://www.radix-ui.com/primitives/docs/components/select"
+}

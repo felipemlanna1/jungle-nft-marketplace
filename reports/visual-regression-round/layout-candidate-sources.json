@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-10-27T14:45:06.548799+00:00",
+  "scope": "Fontes de Hero, carrossel e CSS copiadas para um candidato estático local. Não é uma publicação nem uma auditoria Lighthouse final.",
+  "sources": [
+    {
+      "file": "src/modules/catalog/components/MarketplaceHero/components/HeroSlide/index.tsx",
+      "sha256": "287d6e1e2b52f502eead37ed5d54980cef77d2cd6e2f159a9beaa7ca83b40651"
+    },
+    {
+      "file": "src/modules/catalog/components/MarketplaceHero/content.ts",
+      "sha256": "16fcb94b886d481e0ca7c8b71f33fed92fc9d767ac7370322f63f7cee1db7763"
+    },
+    {
+      "file": "src/modules/catalog/components/MarketplaceHero/index.tsx",
+      "sha256": "d6ced7eef0c1461c3526885d10731a7b1c1fe399e57fdde5d1178c3281e92ee3"
+    },
+    {
+      "file": "src/modules/catalog/components/MarketplaceHero/useMarketplaceHero.ts",
+      "sha256": "305dd3d0f76ed90a4c4d58dda2bb0acda65289c63bb910bb677dfc3fa665a3b0"
+    },
+    {
+      "file": "src/styleguide/components/Carousel/index.tsx",
+      "sha256": "b97bc95a7e34b72b6e26a6d3ef8a67b9c559b298635b19cb75ea4fe0c124d2c8"
+    },
+    {
+      "file": "src/styleguide/components/Carousel/useCarousel.ts",
+      "sha256": "a545d02c1dc9ff10bf48994f6e6c056d6d0304700d3ddb0d3f04b72c2f2b399a"
+    },
+    {
+      "file": "src/styleguide/theme/kurio/styles/catalog.template.css",
+      "sha256": "8f9ceba540087c5ce85af53a3a02c4ba3b5c26a1867ee61f048b744eb6913d9b"
+    },
+    {
+      "file": "src/styleguide/theme/kurio/styles/commerce.template.css",
+      "sha256": "c4c8ffb031ce297adb844c7c376bbb85875ef61f3b26e88164edf60249541129"
+    },
+    {
+      "file": "src/styles.css",
+      "sha256": "effcda4cb5ddc0b284d18b04d23d8016aa0fc0e14159d1911dcfdb1f366fca34"
+    },
+    {
+      "file": "src/styles.expedition.css",
+      "sha256": "4bf2cb687e5b270615bdefe07e2529f8088140736034692f65b78cfe499fc090"
+    },
+    {
+      "file": "src/styles.kurio.css",
+      "sha256": "4882adf409a5af2d451ee62a30f57860f5911cc2235923343d0a0c0572a3bc02"
+    }
+  ]
+}

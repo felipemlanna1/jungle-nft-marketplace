@@ -1,64 +1,30 @@
-:root[data-theme="kurio"] {
-  --background: #120e0b;
-  --surface: #1a1410;
-  --surface-raised: #211a14;
-  --border: #362a20;
-  --foreground: #f1e7d9;
-  --muted: #ad9f8c;
-  --accent: #d2a35e;
-  --accent-hover: #e3b674;
-  --focus: #f2c985;
+:root,
+:root[data-theme='kurio'] {
+  --primary: #d28a4c;
+  --text-accent: #e89b55;
+  --secondary: #b39463;
+  --surface-dark: #38220f;
+  --border-soft: #55321f;
+  --background: #140d0a;
+  --surface: #241612;
+  --surface-raised: #38220f;
+  --border: #3f2319;
+  --foreground: #f5f1eb;
+  --muted: #cfb28c;
+  --accent: #d28a4c;
+  --accent-hover: #e89b55;
+  --focus: #e89b55;
   --danger: #f29388;
   --success: #96c6a0;
-  --accent-foreground: #120e0b;
+  --accent-foreground: #140d0a;
   --header-background: #120e0bf5;
   --overlay: #080604cc;
   --game-glow: #d2a35e26;
   --game-progress: #96c6a0;
   --danger-surface: #351b18;
   --success-surface: #172b1b;
-  --font-body:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  --font-display: ui-monospace, "SFMono-Regular", Consolas, monospace;
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 40px;
-  --radius-sm: 5px;
-  --radius-md: 9px;
-  --radius-lg: 12px;
-  --breakpoint-mobile: 767px;
-  --breakpoint-tablet: 1000px;
-  --breakpoint-desktop: 1440px;
-  --radius: 9px;
-}
-
-:root,
-:root[data-theme="expedition"] {
-  --background: #071713;
-  --surface: #0c211b;
-  --surface-raised: #132e25;
-  --border: #294136;
-  --foreground: #edf4ed;
-  --muted: #a4b8ab;
-  --accent: #e6bf77;
-  --accent-hover: #f5dba5;
-  --accent-foreground: #071713;
-  --focus: #f5dba5;
-  --danger: #f5a39b;
-  --success: #a1dbb0;
-  --header-background: #071713f5;
-  --overlay: #020b08cc;
-  --game-glow: #e6bf7726;
-  --game-progress: #8bc5a2;
-  --danger-surface: #351c1b;
-  --success-surface: #153324;
-  --font-body:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
-  --font-display: "Arial Black", "Arial", ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'Roboto Mono Variable', 'Roboto Mono', ui-monospace, monospace;
+  --font-display: 'Roboto Mono Variable', 'Roboto Mono', ui-monospace, monospace;
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;

@@ -1,0 +1,184 @@
+{
+  "updatedOn": "2026-10-27",
+  "language": "pt-BR",
+  "status": "Implementação com provas parciais; matriz Lighthouse final aguarda congelamento de interface e assets.",
+  "entries": [
+    {
+      "id": "runtime-contracts-tree-shaking",
+      "evidence": "A auditoria anterior registrou mediana mobile 90 e cerca de 130 KB de JavaScript transferido sem uso. O diagnóstico esbuild atribuiu 454.302 bytes minificados ao Zod clássico e 23.165 bytes ao Zod Mini; esses números são diagnóstico por módulo, não tamanho gzip do Vite nem nota de desempenho.",
+      "source": "https://zod.dev/packages/mini",
+      "decision": "Usar Zod Mini nos schemas HTTP e de eventos e construir os schemas de eventos uma única vez.",
+      "reason": "A API funcional permite remover funcionalidades e locales não utilizados sem abandonar a validação de payloads em tempo de execução.",
+      "implementation": [
+        "src/domain/schemas.ts",
+        "src/services/marketplace/index.ts",
+        "src/lib/realtime.ts"
+      ],
+      "validation": "Os 38 testes existentes passaram após a conversão. Após os novos contratos, a suíte completa atingiu 86 testes aprovados, incluindo precisão, HTTP, isolamento, edições e recibos. A auditoria final ainda depende do congelamento da interface.",
+      "artifacts": [
+        "reports/performance/esbuild-diagnostic-before.json",
+        "reports/performance/esbuild-diagnostic-after.json"
+      ]
+    },
+    {
+      "id": "parallel-application-transport-bootstrap",
+      "evidence": "Antes, o bundle principal precisava executar para iniciar o download do MSW. A rede do probe registra agora aplicação e MSW iniciando juntos. O probe isolado ainda obteve 90, portanto essa mudança não comprova a meta final.",
+      "decision": "Manter o inicializador pequeno e baixar aplicação e transporte simulado em paralelo, montando React apenas após worker.start concluir. Antecipar o download da arte principal da homepage conforme o tema salvo, com fallback seguro quando o armazenamento é bloqueado.",
+      "reason": "Reduzir a sequência de downloads sem permitir que consultas HTTP ou o Socket.IO iniciem antes da interceptação estar pronta.",
+      "implementation": [
+        "src/main.tsx",
+        "src/application.tsx",
+        "src/mocks/browser.ts",
+        "src/lib/realtime.ts",
+        "src/styleguide/theme/preference.ts"
+      ],
+      "validation": "Revisão independente confirmou a ordem de montagem e importação do socket. O preflight do probe verificou página, dados REST e conexão Socket.IO reais da aplicação.",
+      "artifacts": ["reports/lighthouse/probes/bootstrap-mini/summary.json"]
+    },
+    {
+      "id": "dependency-chunk-boundaries",
+      "evidence": "O build intermediário concentrou 518,67 KB minificados, 168,05 KB gzip, no chunk da aplicação. O probe mobile apresentou cerca de 100 ms de bloqueio total, sob carga concorrente do ambiente.",
+      "decision": "Separar React/ReactDOM/scheduler e TanStack em chunks de dependências. Preservar o carregamento sob demanda de páginas secundárias e Socket.IO.",
+      "reason": "Evitar um chunk único grande e permitir cache das bibliotecas entre alterações da aplicação, sem agrupar todos os vendors e antecipar bibliotecas que deveriam continuar lazy.",
+      "implementation": ["vite.config.ts", "src/router.tsx"],
+      "validation": "Em validação. Manter apenas se o build funcional e a matriz de desempenho final não regredirem. A nota final não é inferida a partir de tamanho de bundle."
+    },
+    {
+      "id": "repeatable-performance-evidence",
+      "evidence": "Uma execução isolada ou medição de build antigo não demonstra desempenho do artefato entregue. A revisão independente identificou que verificar apenas nomes de scripts não seria prova suficiente da versão servida.",
+      "decision": "Executar três medições por página e perfil, guardar todos os JSON/HTML em pasta datada, verificar SHA256 de cada arquivo servido contra dist e abortar se o build mudar durante a auditoria.",
+      "reason": "Permitir reprodução, impedir seleção do melhor resultado e vincular números ao artefato efetivamente medido.",
+      "implementation": ["scripts/lighthouse.mjs"],
+      "validation": "O preflight rejeita o servidor de desenvolvimento e verifica bytes, catálogo REST e Socket.IO. A matriz exige três medições por página e perfil. As medianas devem cumprir o enunciado: performance ≥90, acessibilidade e boas práticas ≥95, SEO ≥90. Para o pedido adicional acima de 9/10, cada execução de performance deve superar 90. A mediana mobile de 95 permanece como aspiração registrada, sem substituir a exigência do candidato. As condições padrão do Lighthouse permanecem intactas, com MSW, imagens, fontes e funções reais da entrega."
+    },
+    {
+      "id": "functional-catalogue-fidelity",
+      "evidence": "O Figma inclui categorias, faixa de preço, redes e abas que o catálogo anterior não atendia. Exibir controles sem efeitos verificáveis prejudicaria a entrega funcional.",
+      "decision": "Combinar filtros no endpoint real da simulação, comparar ETH com BigInt em todas as 18 casas, retornar facets globais calculadas do dataset e basear abas em releasedAt e popularity das fixtures.",
+      "reason": "Preservar precisão, URL e paginação e evitar contagens inventadas para imitar o Figma. A aba Novos usa os 30 dias anteriores à maior data de lançamento da coleção demonstrativa para manter o cenário determinístico.",
+      "implementation": [
+        "src/contracts.ts",
+        "src/domain/catalog.ts",
+        "src/mocks/handlers.ts",
+        "src/domain/schemas.ts"
+      ],
+      "validation": "Seis testes de filtros e treze testes HTTP passaram, incluindo combinações, limites exatos, intervalo inválido e edição. As contagens representam apenas dados fictícios do mock, sem alegação de atividade real."
+    },
+    {
+      "id": "purchase-network-invariant",
+      "evidence": "Ao atribuir rede aos NFTs, a validação anterior de carteira e rede selecionada deixaria passar uma carteira incompatível com os itens adquiridos.",
+      "decision": "Incluir rede no fingerprint da cotação e recusar carrinhos mistos ou rede de carteira incompatível antes de criar pedido ou reservar estoque.",
+      "reason": "Uma alteração visual não pode introduzir uma compra semanticamente inválida. Repetições de tentativas já concluídas continuam retornando o recibo imutável existente.",
+      "implementation": ["src/mocks/database.ts", "src/domain/marketplace.test.ts"],
+      "validation": "Os dois testes de rede passaram e verificam recusa antes de qualquer pedido ou reserva. A suíte completa teve 86 testes aprovados antes da última revisão visual."
+    },
+    {
+      "id": "edition-inventory-and-immutable-receipts",
+      "evidence": "A seleção de edições existe no Figma e precisa alterar preço, quantidade e compra. Uma troca apenas visual manteria a mesma reserva para opções diferentes. Os campos adicionais do comprador também precisam sobreviver ao pedido e a alterações posteriores do perfil.",
+      "decision": "Representar quatro edições com estoque independente e chave de carrinho canônica por edição. Manter a edição padrão 1/50 compatível com o item legado. Normalizar os novos metadados do pedido antes de calcular a assinatura e copiar snapshots do colecionador e carteira apenas para novos recibos.",
+      "reason": "Preservar o comportamento anterior e a recuperação idempotente, impedir venda duplicada de uma edição única e evitar que uma alteração de perfil ou carteira reescreva recibos. Os preços das outras edições são fixtures determinísticas calculadas com BigInt, sem conversão financeira por ponto flutuante.",
+      "implementation": [
+        "src/domain/editions.ts",
+        "src/mocks/database.ts",
+        "src/mocks/handlers.ts",
+        "src/contracts.ts",
+        "src/domain/schemas.ts",
+        "src/services/marketplace/index.ts"
+      ],
+      "validation": "Dez testes específicos de edições e recibos passaram. A integração HTTP verifica adição/alteração/remoção por chave codificada, merge de convidado e sincronização da edição padrão em evento. Duas tentativas HTTP concorrentes para a edição 1/1 resultaram em 200 e 409, um único pedido e estoque zero. Recibos antigos continuam opcionais nos novos campos e não recebem dados retroativos."
+    },
+    {
+      "id": "pricing-authority-and-fee-reconfirmation",
+      "evidence": "O carrinho desktop de referência usa as quantidades 2, 6 e 9 dos NFTs 1, 5 e 6, somando 26.83 ETH, e taxa de 0.016 ETH. A referência mobile contém valores que não reconciliam com seus próprios itens. A taxa anterior da simulação era 0.002 e não participava do fingerprint.",
+      "decision": "Usar os itens reais e a taxa demonstrativa 0.016 no cálculo com BigInt, sem reproduzir uma soma inconsistente. Incluir todos os componentes financeiros no fingerprint e comparar a cotação atual com a snapshot salva antes de reservar estoque.",
+      "reason": "A interface deve seguir o design sem emitir um total incorreto. Uma mudança de taxa ou desconto também precisa exigir nova revisão explícita, preservando pedidos já existentes e sua recuperação idempotente.",
+      "implementation": ["src/mocks/database.ts", "src/domain/marketplace.test.ts"],
+      "validation": "O teste de referência verifica subtotal26.83, taxa0.016 e total26.846. Um teste de snapshot de taxa divergente confirma QUOTE_CHANGED, zero pedidos e estoque inalterado. Valores do mock são demonstração, sem consulta a preço de gas real."
+    },
+    {
+      "id": "persisted-catalog-release-migration",
+      "evidence": "A aplicação mantém a simulação entre visitas. A versão anterior preservava título, imagem SVG e preço legados mesmo após a publicação dos assets e valores do Figma. Fixtures reais do commit 34ba5b5 reproduziram o problema com cinco testes falhando antes da correção.",
+      "decision": "Versionar o catálogo separadamente do armazenamento de contas. Migrar uma única vez para catalogRevision 2, renovar dados de apresentação e preços das edições, preservar estoque por variante e todo o histórico de compras; incrementar versões de catálogo e carrinho e descartar cotações antigas.",
+      "reason": "Atualizar a experiência de quem já usava a demonstração sem apagar sua sessão, favoritos, carrinho, tentativas ou recibos, e exigir nova confirmação de valores sem alterar uma compra antiga.",
+      "implementation": [
+        "src/mocks/migrations/catalog.ts",
+        "src/mocks/database.ts",
+        "src/domain/catalog-migration.test.ts",
+        "tests/fixtures/legacy-catalog-v1.json"
+      ],
+      "validation": "RED: cinco falhas e um passe antes da migração. GREEN: seis testes aprovados após a migração, com conclusão e recusa de pedidos legados e estoques independentes. A suíte completa observada passou 135 testes em 17 arquivos, além de TypeScript e lint dos arquivos alterados."
+    },
+    {
+      "id": "blocked-storage-session-generation",
+      "evidence": "A revisão identificou que armazenar a geração apenas em sessionStorage removia a identidade capturada quando o navegador bloqueava leitura ou escrita. Três regressões reproduziram a escrita de A em B, a aceitação de sessão nula antiga e o retorno à geração persistida desatualizada.",
+      "decision": "Centralizar a geração do transporte em helper com memória e reconciliação de persistência pendente. Atualizar memória antes da escrita opcional, manter captura síncrona por requisição e usar a mesma leitura para rejeitar respostas antigas.",
+      "reason": "O isolamento entre sessões não pode depender da disponibilidade de armazenamento. O bloqueio do armazenamento continua impedindo iniciar uma compra que não poderia ser recuperada após atualizar a página, mas consultas e edições preservam a identidade capturada.",
+      "implementation": [
+        "src/services/http/generation.ts",
+        "src/services/http/index.ts",
+        "src/domain/session-transport.test.ts"
+      ],
+      "validation": "RED três novos casos falhando e seis anteriores aprovados; GREEN nove casos aprovados após o fallback. Suíte completa observada com 141 testes em 17 arquivos, TypeScript e lint aprovados. Nenhum endpoint, DTO ou comportamento de mock alterado."
+    },
+    {
+      "id": "recommendations-explicitly-simulated-api",
+      "evidence": "A faixa de itens relacionados era montada no cliente a partir do catálogo, embora o rótulo pudesse sugerir comportamento de colecionadores. O usuário pediu a origem dos dados e critérios reais da simulação.",
+      "decision": "Criar GET /api/recommendations com contrato validado, exclusões e limite, ordenando popularidade fictícia das fixtures com desempate por ID. Retornar criterion, label e simulated:true; o cliente usa o endpoint e apresenta a procedência sem afirmar analytics real.",
+      "reason": "Manter seleção e dados na API simulada, possibilitar estados de vazio/erro e deixar o significado dos dados explícito. A ordenação de lançamentos da homepage continua independente das recomendações.",
+      "implementation": [
+        "src/domain/recommendations.ts",
+        "src/mocks/handlers/recommendations.ts",
+        "src/contracts.ts",
+        "src/domain/schemas.ts",
+        "src/services/marketplace/index.ts",
+        "src/domain/recommendations.test.ts"
+      ],
+      "validation": "17 casos aprovados para exclusões, limite, desempate, vazio, parâmetros inválidos, identificação de simulação e acesso às novas imagens e à obra rara de 0.28 ETH pelo catálogo real. Suíte completa observada com 163 testes em 18 arquivos."
+    },
+    {
+      "id": "second-page-original-generated-apes",
+      "evidence": "O usuário pediu seis novos macacos no mesmo meio visual com fundo simples e roupas/acessórios variados, preservando os nove itens originais do início.",
+      "decision": "Gerar seis imagens originais pelo image_gen embutido, guardar masters e prompts/proveniência em português e servir WebP de 360, 600 e 900 pixels com mapa responsivo de apresentação. Substituir apenas os NFTs 10 a 15 da segunda página, variar raridade e popularidade fictícias e conservar a obra acessível de 0.28 ETH. Incrementar catalogRevision para 3 para atualizar visitantes antigos sem apagar compras.",
+      "reason": "Evitar repetição de imagens e controles alimentados por dados fixos na interface. A revisão do catálogo reaproveita a migração que preserva estoques, carrinhos, tentativas e recibos, exigindo nova cotação quando a release muda valores.",
+      "implementation": [
+        "src/mocks/fixtures.ts",
+        "src/mocks/migrations/catalog.ts",
+        "src/assets/figma/responsiveArtwork.ts",
+        "public/art/apes",
+        "assets/generated/apes",
+        "docs/generated-apes-provenance.json"
+      ],
+      "validation": "Seis gerações inspecionadas: personagens únicos, fundo creme/oliva, sem logotipos ou texto. Dezoito WebPs foram gerados com cwebp na qualidade 90 e método 6: 360 px entre 21.512 e 32.194 bytes; 600 px entre 61.838 e 81.228 bytes; 900 px entre 133.062 e 162.304 bytes. Primeiros nove itens preservados. Os seis testes de migração e a suíte completa de 163 testes passaram; TypeScript e lint do escopo aprovados."
+    },
+    {
+      "id": "local-simulated-newsletter",
+      "evidence": "O usuário pediu que o rodapé recebesse o e-mail e confirmasse uma inscrição pela API simulada, substituindo o texto estático anterior.",
+      "decision": "Criar POST /api/newsletter/subscriptions, validar e normalizar e-mail com limite de 160 caracteres, persistir a inscrição apenas na demonstração local e retornar simulated:true. Repetições retornam o mesmo identificador e data com alreadySubscribed:true. Não criar listagem de e-mails nem integração SMTP.",
+      "reason": "Oferecer o comportamento solicitado sem alegar envio real ou expor endereços de outras pessoas. Erros de validação e disponibilidade são explícitos; reset da demonstração remove as inscrições locais.",
+      "implementation": [
+        "src/contracts.ts",
+        "src/domain/schemas.ts",
+        "src/mocks/database.ts",
+        "src/mocks/handlers/newsletter.ts",
+        "src/services/marketplace/index.ts",
+        "src/domain/newsletter.test.ts"
+      ],
+      "validation": "14 testes de API aprovados para normalização, duplicatas, persistência, reset, entradas inválidas, limite de tamanho, falha503 e rede offline. Suíte completa observada com 177 testes em 19 arquivos; TypeScript e lint aprovados. O teste de API não substitui as contraprovas do rascunho e do feedback no hook do rodapé."
+    },
+    {
+      "id": "illustrative-journal-template-api",
+      "evidence": "A nova revisão do escopo pediu restaurar a composição de quatro cards do Diário da Cunhagem presente no Figma. Os títulos, resumos, datas e tempos de leitura do template não comprovam publicações reais.",
+      "decision": "Expor apenas dois endpoints de leitura: GET /api/articles com previews e GET /api/articles/:id com parágrafos curtos e explicitamente ilustrativos. Usar os quatro títulos e resumos do quadro original, imagens dos itens 3, 1, 2 e 7 do catálogo e simulated:true. Não criar cadastro editorial, callback externo nem alegar uma lista real de dez artistas.",
+      "reason": "Preencher a seção visual solicitada com uma leitura funcional e dados da API, preservando a honestidade do conteúdo e o limite do exercício. A interface pode abrir o texto em modal sem adicionar páginas editoriais ao escopo.",
+      "implementation": [
+        "src/mocks/articles.ts",
+        "src/mocks/handlers/articles.ts",
+        "src/contracts.ts",
+        "src/domain/schemas.ts",
+        "src/services/marketplace/index.ts",
+        "src/domain/articles.test.ts"
+      ],
+      "validation": "Cinco testes verificam previews, leitura ilustrativa, erro404, cenário vazio e rejeição de datas inválidas ou de simulated:false. TypeScript e lint do escopo aprovados. Fontes dos textos de preview: /tmp/jungle-figma-context/home-0.txt, linhas620a730, obtidas do Figma autorizado; conteúdo dos parágrafos criado apenas como exemplo."
+    }
+  ]
+}

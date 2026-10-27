@@ -1,0 +1,544 @@
+{
+  "config": {
+    "argv": [
+      "/Users/felipemoreiralanna/.npm/_npx/6d82ddbdd7da268b/node_modules/node/bin/node",
+      "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/carousel.spec.ts",
+      "tests/e2e/marketplace.spec.ts",
+      "--grep",
+      "hero highlights|reduced motion|related collectibles|demo controls",
+      "--output=test-results-carousel-focus",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/playwright.config.ts",
+    "rootDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "carousel.spec.ts",
+      "file": "carousel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero highlights support dots, keyboard navigation and real pointer dragging",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4115,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:37.001Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-343968486ddcb63156c4",
+          "file": "carousel.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "reduced motion changes are honored by immediate highlight positioning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1075,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:41.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-20b88fc2beff231539cd",
+          "file": "carousel.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "related collectibles navigate actual slides without leaving the current artwork",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1580,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:42.746Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-da57be4c8e2a23146256",
+          "file": "carousel.spec.ts",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "hero highlights support dots, keyboard navigation and real pointer dragging",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3434,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:54.944Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-5129401d6b9f4c1d4beb",
+          "file": "carousel.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "reduced motion changes are honored by immediate highlight positioning",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1318,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:58.544Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-b8d96dd7e52e3e9a1293",
+          "file": "carousel.spec.ts",
+          "line": 82,
+          "column": 1
+        },
+        {
+          "title": "related collectibles navigate actual slides without leaving the current artwork",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1574,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:59.873Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "057dc0a839e1a5ce9f3c-7c2e07615959492a302b",
+          "file": "carousel.spec.ts",
+          "line": 104,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "marketplace.spec.ts",
+      "file": "marketplace.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9923,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Opções da demonstração', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Opções da demonstração', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Opções da demonstração', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"demo-options-link\" aria-label=\"Opções da demonstração\">Demonstração</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Opções da demonstração', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Opções da demonstração', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Opções da demonstração', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"demo-options-link\" aria-label=\"Opções da demonstração\">Demonstração</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:87:54",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                      "column": 54,
+                      "line": 87
+                    },
+                    "snippet": "  85 |   await closeOptions(page);\n  86 |   const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n> 87 |   if (await footer.isVisible()) await expect(footer).toBeFocused();\n     |                                                      ^\n  88 |   else\n  89 |     await expect(\n  90 |       page.getByRole('button', { name: 'Abrir navegação', exact: true }).first(),"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                        "column": 54,
+                        "line": 87
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Opções da demonstração', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Opções da demonstração', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Opções da demonstração', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"demo-options-link\" aria-label=\"Opções da demonstração\">Demonstração</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  85 |   await closeOptions(page);\n  86 |   const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n> 87 |   if (await footer.isVisible()) await expect(footer).toBeFocused();\n     |                                                      ^\n  88 |   else\n  89 |     await expect(\n  90 |       page.getByRole('button', { name: 'Abrir navegação', exact: true }).first(),\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:87:54"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:38:44.349Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                    "column": 54,
+                    "line": 87
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-5bd79e8bac25f4ebde50",
+          "file": "marketplace.spec.ts",
+          "line": 75,
+          "column": 1
+        },
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10378,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Abrir navegação', exact: true }).first()\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Abrir navegação', exact: true }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Abrir navegação', exact: true }).first()\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"mobile-nav-center\" aria-label=\"Abrir navegação\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Abrir navegação', exact: true }).first()\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Abrir navegação', exact: true }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Abrir navegação', exact: true }).first()\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"mobile-nav-center\" aria-label=\"Abrir navegação\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:91:7",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                      "column": 7,
+                      "line": 91
+                    },
+                    "snippet": "  89 |     await expect(\n  90 |       page.getByRole('button', { name: 'Abrir navegação', exact: true }).first(),\n> 91 |     ).toBeFocused();\n     |       ^\n  92 | });\n  93 |\n  94 | test('catalog visual regression', async ({ page }) => {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                        "column": 7,
+                        "line": 91
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Abrir navegação', exact: true }).first()\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Abrir navegação', exact: true }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Abrir navegação', exact: true }).first()\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" class=\"mobile-nav-center\" aria-label=\"Abrir navegação\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  89 |     await expect(\n  90 |       page.getByRole('button', { name: 'Abrir navegação', exact: true }).first(),\n> 91 |     ).toBeFocused();\n     |       ^\n  92 | });\n  93 |\n  94 | test('catalog visual regression', async ({ page }) => {\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:91:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:39:01.465Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-carousel-focus/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                    "column": 7,
+                    "line": 91
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-9645267dda8f7dbbf926",
+          "file": "marketplace.spec.ts",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T13:38:35.435Z",
+    "duration": 36782.45,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

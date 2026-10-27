@@ -1,0 +1,111 @@
+{
+  "outputs": [
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/main.js",
+      "bytes": 976586
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/esm-6WZPSH5X.js",
+      "bytes": 32261
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/graphql-F3VP4NKJ.js",
+      "bytes": 174868
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/browser-ZVLVGXYH.js",
+      "bytes": 323140
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-S3GGLA7T.js",
+      "bytes": 10756
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-5TBO732O.js",
+      "bytes": 605
+    }
+  ],
+  "groups": [
+    [
+      "zod",
+      454302
+    ],
+    [
+      "msw",
+      275591
+    ],
+    [
+      "react-dom",
+      210068
+    ],
+    [
+      "graphql",
+      169798
+    ],
+    [
+      "application",
+      94832
+    ],
+    [
+      "axios",
+      58762
+    ],
+    [
+      "@tanstack/router-core",
+      52014
+    ],
+    [
+      "@tanstack/query-core",
+      32797
+    ],
+    [
+      "engine.io-client",
+      19612
+    ],
+    [
+      "@tanstack/react-router",
+      14634
+    ],
+    [
+      "socket.io-client",
+      12342
+    ],
+    [
+      "react",
+      8478
+    ],
+    [
+      "tldts-core",
+      6938
+    ],
+    [
+      "react-remove-scroll",
+      5951
+    ],
+    [
+      "socket.io-parser",
+      5702
+    ],
+    [
+      "lucide-react",
+      5342
+    ],
+    [
+      "@radix-ui/react-dismissable-layer",
+      5319
+    ],
+    [
+      "@radix-ui/react-dialog",
+      5053
+    ],
+    [
+      "path-to-regexp",
+      4787
+    ],
+    [
+      "@tanstack/history",
+      4518
+    ]
+  ],
+  "zodLocales": 64
+}

@@ -1,0 +1,238 @@
+{
+  "tool": "image_gen embutido",
+  "mode": "geração original",
+  "assets": [
+    {
+      "id": "linen-scholar",
+      "subject": "macaco antropomórfico de pelo castanho escuro, expressão tranquila, blazer de linho marfim sobre camiseta creme, óculos redondos de acetato âmbar, corrente fina dourada",
+      "background": "creme claro",
+      "original": "assets/generated/apes/linen-scholar.png",
+      "originalSha256": "dec058e57333787e33def9f57c2000b715cf17720fdf3f3d567c831b020d73b7",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/linen-scholar-360.webp",
+          "bytes": 23896,
+          "sha256": "d4653d63e606516b73ec840562abfdcbe7d2cf849c7f7fea61c1af68ebef5af4"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/linen-scholar-600.webp",
+          "bytes": 68350,
+          "sha256": "84ffa6557c16bc069304101582f79ea3fa7dd07ca15a858275f632cd51e64096"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/linen-scholar.webp",
+          "bytes": 159120,
+          "sha256": "920a8b363e3671f7c9d50421ab5f35093fd91d9b423227aa4e4640583041aaa3"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo castanho escuro, expressão tranquila, blazer de linho marfim sobre camiseta creme, óculos redondos de acetato âmbar, corrente fina dourada.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: creme claro, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    },
+    {
+      "id": "olive-explorer",
+      "subject": "macaco antropomórfico de pelo castanho dourado, olhar curioso, suéter de tricô verde oliva, lenço bege curto no pescoço, óculos redondos de metal dourado",
+      "background": "oliva suave",
+      "original": "assets/generated/apes/olive-explorer.png",
+      "originalSha256": "cbf414908aa314a8d5a2475f7d2cef0d901fe2e9bb84c943dae8773ed0d20362",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/olive-explorer-360.webp",
+          "bytes": 32194,
+          "sha256": "c78bef7bb6029e4994938ef708b00bc503415aab21d2dff174da9e67b2e2341f"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/olive-explorer-600.webp",
+          "bytes": 81228,
+          "sha256": "660f446c4f2e67ff3a61e85b727a4fbe2b350224c163a18b07d5388b904c151c"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/olive-explorer.webp",
+          "bytes": 162304,
+          "sha256": "20c5dd4933986b34a7834a48a1fce252ecf1a8a76cea6ba040a97ea5c183cc40"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo castanho dourado, olhar curioso, suéter de tricô verde oliva, lenço bege curto no pescoço, óculos redondos de metal dourado.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: oliva suave, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    },
+    {
+      "id": "terracotta-traveler",
+      "subject": "macaco antropomórfico de pelo chocolate, expressão confiante e amigável, jaqueta utilitária terracota, óculos de sol aviador de lentes escuras, pequenos detalhes de metal escovado",
+      "background": "creme quente",
+      "original": "assets/generated/apes/terracotta-traveler.png",
+      "originalSha256": "fc90c0e3fc2271663d9b30f425d5247f80d6c6030bed7d80aa88df45ae796bb1",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/terracotta-traveler-360.webp",
+          "bytes": 26694,
+          "sha256": "3e75792867da40cb1181b8e3c8eafd21eb1a0f3301df77fa3a8ebb17c2738e8c"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/terracotta-traveler-600.webp",
+          "bytes": 67780,
+          "sha256": "40ee1433a6111890151d5e243fc3178554fe556c4b94fe78ac95ed8431eab1c3"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/terracotta-traveler.webp",
+          "bytes": 138922,
+          "sha256": "8054fa1e05b22fbf0fd1c9603bc42602f72fdec1a449008213622da08e77eacd"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo chocolate, expressão confiante e amigável, jaqueta utilitária terracota, óculos de sol aviador de lentes escuras, pequenos detalhes de metal escovado.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: creme quente, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    },
+    {
+      "id": "midnight-curator",
+      "subject": "macaco antropomórfico de pelo castanho médio, expressão contemplativa, blazer azul marinho sobre gola alta clara, óculos retangulares de tartaruga, broche geométrico simples sem letras",
+      "background": "oliva claro",
+      "original": "assets/generated/apes/midnight-curator.png",
+      "originalSha256": "e2b55ca0280111dd745f4345ac2f541c85d46ff789879496003f7a9efe4d3d31",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/midnight-curator-360.webp",
+          "bytes": 21512,
+          "sha256": "2b51d829d3f488af3083eb579f27dc2e2cf09af83db282c96d8e561744f06f97"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/midnight-curator-600.webp",
+          "bytes": 61838,
+          "sha256": "da6611e5a0ea8377ada3933156483fe1678ba9bee31c8fedddd539865be1178f"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/midnight-curator.webp",
+          "bytes": 133062,
+          "sha256": "31ffe997c1cccee120fd72e912f4e14cd8162a4c344bb33f7c23436d1421eac5"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo castanho médio, expressão contemplativa, blazer azul marinho sobre gola alta clara, óculos retangulares de tartaruga, broche geométrico simples sem letras.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: oliva claro, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    },
+    {
+      "id": "ivory-listener",
+      "subject": "macaco antropomórfico de pelo castanho escuro e topete curto, expressão serena, moletom de algodão marfim, fones de ouvido verde escuro ao redor do pescoço, óculos pequenos de armação fosca",
+      "background": "creme claro",
+      "original": "assets/generated/apes/ivory-listener.png",
+      "originalSha256": "be5c8299bc107e85fa9c9a1a548b18b8918b6883e3d6f75bf0052ad25709b769",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/ivory-listener-360.webp",
+          "bytes": 21566,
+          "sha256": "33db469e2df8603e9ba7e24cf0bf33920a108a6450d37f3b519d30d36a2373aa"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/ivory-listener-600.webp",
+          "bytes": 61906,
+          "sha256": "7fccfdca05ffb708002c56dc7b340d14cdf6c7d6951f09992ace73cab94fe4c9"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/ivory-listener.webp",
+          "bytes": 139298,
+          "sha256": "19fbc674cd86795d7c0f349644d34625ee659f02bfaf7e402e8aacfff1020c33"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo castanho escuro e topete curto, expressão serena, moletom de algodão marfim, fones de ouvido verde escuro ao redor do pescoço, óculos pequenos de armação fosca.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: creme claro, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    },
+    {
+      "id": "burgundy-collector",
+      "subject": "macaco antropomórfico de pelo castanho avermelhado, leve sorriso, colete de lã vinho sobre camisa de linho bege, boina marrom de couro, óculos redondos verde escuro",
+      "background": "oliva suave",
+      "original": "assets/generated/apes/burgundy-collector.png",
+      "originalSha256": "8b90a559ec6fc91587daf216d0107c1859310f15c862229a48f8b7375e47a240",
+      "variants": [
+        {
+          "width": 360,
+          "height": 360,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/burgundy-collector-360.webp",
+          "bytes": 25844,
+          "sha256": "39bddaf86763c8f4db832fb5049560c402266f73cd831cd1eec3bd324166acd6"
+        },
+        {
+          "width": 600,
+          "height": 600,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/burgundy-collector-600.webp",
+          "bytes": 67322,
+          "sha256": "2c51715e0d111598b3f0ae8a98ec2855e10cbdf9e5619b6a7684b2fe388b7458"
+        },
+        {
+          "width": 900,
+          "height": 900,
+          "quality": 90,
+          "method": 6,
+          "path": "public/art/apes/burgundy-collector.webp",
+          "bytes": 138674,
+          "sha256": "6f29bdfe8273e71bf67c90c9832b6f2e51ecc961c60d6a060225711a8ac18615"
+        }
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: arte quadrada original para cartão de marketplace demonstrativo de colecionáveis digitais.\nCrie um retrato 3D premium, humanizado e simpático de macaco antropomórfico de pelo castanho avermelhado, leve sorriso, colete de lã vinho sobre camisa de linho bege, boina marrom de couro, óculos redondos verde escuro.\nEnquadramento: busto do peito para cima, personagem centralizado em três quartos suaves, cabeça inteira e ombros visíveis, sem cortar cabelo ou orelhas. Composição consistente de coleção, ocupando a maior parte do quadrado sem encostar nas bordas.\nEstilo: render 3D de alta qualidade, pelo com fios finos visíveis, pele quente com textura delicada, roupas com tecido realista, materiais refinados. Aparência estilizada e expressiva, sem hiper-realismo assustador.\nFundo: oliva suave, liso e básico, leve gradiente de estúdio sem cenário, sem objetos. Luz de estúdio suave e quente, sombra discreta, paleta creme, oliva e marrom coerente.\nRestrições: apenas um personagem original, sem texto, sem números, sem logotipos, sem marca d'água, sem moldura, sem interface, sem copiar personagem de coleção existente. Resultado quadrado."
+    }
+  ],
+  "promptTemplate": "Use case: stylized-concept. Arte quadrada original para cartão de marketplace demonstrativo. Retrato 3D premium, humanizado e simpático do personagem descrito. Busto do peito para cima, centralizado em três quartos, cabeça inteira e ombros visíveis. Pelo fino, pele quente delicada e roupas com tecido realista. Fundo liso e básico na cor descrita, leve gradiente de estúdio, sem cenário e objetos. Luz de estúdio suave e quente. Apenas um personagem original; sem texto, números, logotipos, marca d’água, moldura ou interface; sem copiar personagem de coleção existente.",
+  "provenance": "Seis gerações originais por image_gen embutido, com prompts em português e características descritas em cada asset. Não derivadas de código ou dados privados e não apresentadas como obras de artistas reais. A similaridade procurada é o meio visual e a paleta da interface autorizada, sem alegação de identidade ou autoria de coleção externa.",
+  "purpose": "Substituir seis imagens repetidas da segunda página da simulação. Itens 1 a 9 preservados.",
+  "originalsRetained": true,
+  "originalMasters": {
+    "includedInPublicRepository": false,
+    "reason": "Os masters PNG foram preservados localmente para reduzir o envio à hospedagem. A entrega contém todas as variantes WebP necessárias ao build, inclusive 900 pixels.",
+    "archive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/assets",
+    "contentChanged": false
+  }
+}

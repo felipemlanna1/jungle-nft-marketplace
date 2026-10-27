@@ -1,0 +1,150 @@
+Listing tests:
+  [desktop] › account-edit.spec.ts:2:1 › avatar and password changes persist through real profile forms
+  [desktop] › account.spec.ts:11:1 › auth controls reveal passwords and report disconnected identity providers honestly
+  [desktop] › account.spec.ts:33:1 › registration requires matching passwords and creates an isolated collector
+  [desktop] › account.spec.ts:55:1 › profile and expanded wallet data persist and secondary wallet controls are functional
+  [desktop] › adversarial-ui.spec.ts:33:1 › a changed quote requires a second explicit confirmation before any order exists
+  [desktop] › adversarial-ui.spec.ts:65:1 › favorites and private profile do not cross a logout and account switch
+  [desktop] › api-contracts.spec.ts:24:1 › guest cart survives login; private resources never leak between accounts
+  [desktop] › api-contracts.spec.ts:42:1 › idempotent order is unique, immutable and inaccessible to another user
+  [desktop] › api-contracts.spec.ts:73:1 › price change invalidates an accepted quote before order creation
+  [desktop] › api-contracts.spec.ts:90:1 › validation rejects bad quantities, profile values and wallet addresses
+  [desktop] › api-contracts.spec.ts:111:1 › duplicate registration and session expiration are explicit failures
+  [desktop] › card-actions.spec.ts:3:1 › card preview, cart and rarity follow the mocked API
+  [desktop] › carousel.spec.ts:14:1 › hero highlights support dots, keyboard navigation and real pointer dragging
+  [desktop] › carousel.spec.ts:52:1 › reduced motion changes are honored by immediate highlight positioning
+  [desktop] › carousel.spec.ts:74:1 › related collectibles navigate actual slides without leaving the current artwork
+  [desktop] › catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration
+  [desktop] › catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh
+  [desktop] › drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user
+  [desktop] › drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user
+  [desktop] › editorial.spec.ts:16:1 › editorial previews come from REST and open a lazy simulated reading with focus restored
+  [desktop] › editorial.spec.ts:58:1 › editorial reader failures show a real retry and closing returns focus to the same card
+  [desktop] › editorial.spec.ts:80:1 › editorial list failure and empty state recover through the simulated API
+  [desktop] › editorial.spec.ts:97:1 › all four editorial cards request their own content without creating editorial routes
+  [desktop] › favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal
+  [desktop] › favorite-login.spec.ts:6:3 › guest favorite from detail survives demo sign-in, refresh and removal
+  [desktop] › favorite-login.spec.ts:97:1 › demo prefill never resets a password changed by the collector
+  [desktop] › favorites-navigation.spec.ts:4:1 › account menu hands favorites to the detail route and restores the outer trigger on close
+  [desktop] › favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 320px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 375px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 390px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 412px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 414px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 768px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1024px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1440px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1920px
+  [desktop] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1440px with 125% content scaling
+  [desktop] › kurio.spec.ts:27:1 › Kurio is the only appearance across public, account, checkout and receipt routes
+  [desktop] › kurio.spec.ts:77:3 › a saved expedition preference migrates to Kurio without a switcher
+  [desktop] › kurio.spec.ts:77:3 › a saved unsupported preference migrates to Kurio without a switcher
+  [desktop] › kurio.spec.ts:105:1 › blocked appearance storage still renders Kurio and an accessible menu
+  [desktop] › kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh
+  [desktop] › kurio.spec.ts:150:1 › menu keyboard navigation preserves an unsaved profile and restores trigger focus
+  [desktop] › kurio.spec.ts:175:1 › opening the menu preserves a checkout draft and review without creating an order
+  [desktop] › kurio.spec.ts:202:1 › Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports
+  [desktop] › marketplace.spec.ts:25:1 › catalog is accessible, responsive and has working detail navigation
+  [desktop] › marketplace.spec.ts:43:1 › direct missing NFT displays a recovery state
+  [desktop] › marketplace.spec.ts:51:1 › URL filters survive refresh and do not overflow
+  [desktop] › marketplace.spec.ts:60:1 › keyboard users can reach navigation and visible focus
+  [desktop] › marketplace.spec.ts:70:1 › private routes require sign in and return context is preserved
+  [desktop] › marketplace.spec.ts:78:1 › demo controls are keyboard accessible and focus returns after close
+  [desktop] › marketplace.spec.ts:97:1 › catalog visual regression
+  [desktop] › newsletter.spec.ts:22:1 › newsletter confirms a real simulated POST and deduplicates repeated subscriptions
+  [desktop] › newsletter.spec.ts:54:1 › newsletter rejects invalid input and preserves the draft after a server failure
+  [desktop] › newsletter.spec.ts:80:1 › footer social icons are explicit platform links and open an independent tab
+  [desktop] › newsletter.spec.ts:110:1 › newsletter drafts are cleared when guest navigation signs into another identity
+  [desktop] › order-reconnect.spec.ts:30:1 › a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect
+  [desktop] › order-reconnect.spec.ts:75:1 › Socket.IO reconnect reconciles a still-pending order before a controlled deadline
+  [desktop] › purchase.spec.ts:41:1 › guest cart merges on login, validates coupons and completes an immutable receipt
+  [desktop] › purchase.spec.ts:67:1 › declined payment preserves the cart and never displays a success receipt
+  [desktop] › purchase.spec.ts:83:1 › timeout recovers the same persisted purchase after refresh
+  [desktop] › purchase.spec.ts:105:1 › profile and wallet validation persist while a second collector has isolated data
+  [desktop] › realtime.spec.ts:5:1 › Socket.IO price event reconciles the visible cart and announces a changed quote
+  [desktop] › realtime.spec.ts:49:1 › tablet 768px preserves content without horizontal overflow
+  [desktop] › realtime.spec.ts:61:1 › duplicate and older Socket.IO events do not regress the cart snapshot
+  [desktop] › realtime.spec.ts:94:1 › decreasing a selected quantity recovers after Socket.IO reduces its inventory limit
+  [desktop] › recovery.spec.ts:5:1 › opening an older receipt preserves an uncertain purchase and recovery never duplicates it
+  [desktop] › resilience.spec.ts:2:1 › slow data keeps skeletons, error state recovers through real network mocks
+  [desktop] › resilience.spec.ts:38:1 › unknown routes provide a real recovery link
+  [desktop] › routing.spec.ts:3:1 › session transport failures do not masquerade as a signed-out user and can recover
+  [desktop] › views.spec.ts:21:1 › detail visual regression
+  [desktop] › views.spec.ts:32:1 › cart visual regression
+  [desktop] › views.spec.ts:45:1 › payment visual regression
+  [mobile] › account-edit.spec.ts:2:1 › avatar and password changes persist through real profile forms
+  [mobile] › account.spec.ts:11:1 › auth controls reveal passwords and report disconnected identity providers honestly
+  [mobile] › account.spec.ts:33:1 › registration requires matching passwords and creates an isolated collector
+  [mobile] › account.spec.ts:55:1 › profile and expanded wallet data persist and secondary wallet controls are functional
+  [mobile] › adversarial-ui.spec.ts:33:1 › a changed quote requires a second explicit confirmation before any order exists
+  [mobile] › adversarial-ui.spec.ts:65:1 › favorites and private profile do not cross a logout and account switch
+  [mobile] › api-contracts.spec.ts:24:1 › guest cart survives login; private resources never leak between accounts
+  [mobile] › api-contracts.spec.ts:42:1 › idempotent order is unique, immutable and inaccessible to another user
+  [mobile] › api-contracts.spec.ts:73:1 › price change invalidates an accepted quote before order creation
+  [mobile] › api-contracts.spec.ts:90:1 › validation rejects bad quantities, profile values and wallet addresses
+  [mobile] › api-contracts.spec.ts:111:1 › duplicate registration and session expiration are explicit failures
+  [mobile] › card-actions.spec.ts:3:1 › card preview, cart and rarity follow the mocked API
+  [mobile] › carousel.spec.ts:14:1 › hero highlights support dots, keyboard navigation and real pointer dragging
+  [mobile] › carousel.spec.ts:52:1 › reduced motion changes are honored by immediate highlight positioning
+  [mobile] › carousel.spec.ts:74:1 › related collectibles navigate actual slides without leaving the current artwork
+  [mobile] › catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration
+  [mobile] › catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh
+  [mobile] › drafts.spec.ts:34:1 › profile draft survives a changed account response for the same user
+  [mobile] › drafts.spec.ts:46:1 › checkout collector draft survives session refetch for the same user
+  [mobile] › editorial.spec.ts:16:1 › editorial previews come from REST and open a lazy simulated reading with focus restored
+  [mobile] › editorial.spec.ts:58:1 › editorial reader failures show a real retry and closing returns focus to the same card
+  [mobile] › editorial.spec.ts:80:1 › editorial list failure and empty state recover through the simulated API
+  [mobile] › editorial.spec.ts:97:1 › all four editorial cards request their own content without creating editorial routes
+  [mobile] › favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal
+  [mobile] › favorite-login.spec.ts:6:3 › guest favorite from detail survives demo sign-in, refresh and removal
+  [mobile] › favorite-login.spec.ts:97:1 › demo prefill never resets a password changed by the collector
+  [mobile] › favorites-navigation.spec.ts:4:1 › account menu hands favorites to the detail route and restores the outer trigger on close
+  [mobile] › favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 320px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 375px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 390px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 412px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 414px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 768px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1024px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1440px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1920px
+  [mobile] › hero-geometry.spec.ts:64:3 › hero geometry stays contained at 1440px with 125% content scaling
+  [mobile] › kurio.spec.ts:27:1 › Kurio is the only appearance across public, account, checkout and receipt routes
+  [mobile] › kurio.spec.ts:77:3 › a saved expedition preference migrates to Kurio without a switcher
+  [mobile] › kurio.spec.ts:77:3 › a saved unsupported preference migrates to Kurio without a switcher
+  [mobile] › kurio.spec.ts:105:1 › blocked appearance storage still renders Kurio and an accessible menu
+  [mobile] › kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh
+  [mobile] › kurio.spec.ts:150:1 › menu keyboard navigation preserves an unsaved profile and restores trigger focus
+  [mobile] › kurio.spec.ts:175:1 › opening the menu preserves a checkout draft and review without creating an order
+  [mobile] › kurio.spec.ts:202:1 › Kurio critical controls stay within 320, 390, 768 and 1440 pixel viewports
+  [mobile] › marketplace.spec.ts:25:1 › catalog is accessible, responsive and has working detail navigation
+  [mobile] › marketplace.spec.ts:43:1 › direct missing NFT displays a recovery state
+  [mobile] › marketplace.spec.ts:51:1 › URL filters survive refresh and do not overflow
+  [mobile] › marketplace.spec.ts:60:1 › keyboard users can reach navigation and visible focus
+  [mobile] › marketplace.spec.ts:70:1 › private routes require sign in and return context is preserved
+  [mobile] › marketplace.spec.ts:78:1 › demo controls are keyboard accessible and focus returns after close
+  [mobile] › marketplace.spec.ts:97:1 › catalog visual regression
+  [mobile] › newsletter.spec.ts:22:1 › newsletter confirms a real simulated POST and deduplicates repeated subscriptions
+  [mobile] › newsletter.spec.ts:54:1 › newsletter rejects invalid input and preserves the draft after a server failure
+  [mobile] › newsletter.spec.ts:80:1 › footer social icons are explicit platform links and open an independent tab
+  [mobile] › newsletter.spec.ts:110:1 › newsletter drafts are cleared when guest navigation signs into another identity
+  [mobile] › order-reconnect.spec.ts:30:1 › a pending edition purchase finishes offline and preserves its receipt after Socket.IO reconnect
+  [mobile] › order-reconnect.spec.ts:75:1 › Socket.IO reconnect reconciles a still-pending order before a controlled deadline
+  [mobile] › purchase.spec.ts:41:1 › guest cart merges on login, validates coupons and completes an immutable receipt
+  [mobile] › purchase.spec.ts:67:1 › declined payment preserves the cart and never displays a success receipt
+  [mobile] › purchase.spec.ts:83:1 › timeout recovers the same persisted purchase after refresh
+  [mobile] › purchase.spec.ts:105:1 › profile and wallet validation persist while a second collector has isolated data
+  [mobile] › realtime.spec.ts:5:1 › Socket.IO price event reconciles the visible cart and announces a changed quote
+  [mobile] › realtime.spec.ts:49:1 › tablet 768px preserves content without horizontal overflow
+  [mobile] › realtime.spec.ts:61:1 › duplicate and older Socket.IO events do not regress the cart snapshot
+  [mobile] › realtime.spec.ts:94:1 › decreasing a selected quantity recovers after Socket.IO reduces its inventory limit
+  [mobile] › recovery.spec.ts:5:1 › opening an older receipt preserves an uncertain purchase and recovery never duplicates it
+  [mobile] › resilience.spec.ts:2:1 › slow data keeps skeletons, error state recovers through real network mocks
+  [mobile] › resilience.spec.ts:38:1 › unknown routes provide a real recovery link
+  [mobile] › routing.spec.ts:3:1 › session transport failures do not masquerade as a signed-out user and can recover
+  [mobile] › views.spec.ts:21:1 › detail visual regression
+  [mobile] › views.spec.ts:32:1 › cart visual regression
+  [mobile] › views.spec.ts:45:1 › payment visual regression
+Total: 148 tests in 22 files

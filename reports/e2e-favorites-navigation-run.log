@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+(node:57423) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/favorites-navigation.spec.ts:4:1 › account menu hands favorites to the detail route and restores the outer trigger on close (2.4s)
+  ✓  2 [desktop] › tests/e2e/favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu (1.8s)
+(node:57430) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [mobile] › tests/e2e/favorites-navigation.spec.ts:4:1 › account menu hands favorites to the detail route and restores the outer trigger on close (2.2s)
+  ✓  4 [mobile] › tests/e2e/favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu (1.9s)
+
+  4 passed (10.6s)

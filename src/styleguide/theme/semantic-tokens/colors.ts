@@ -1,5 +1,10 @@
 import { tokens } from '../tokens';
 export const colors = {
+  primary: tokens.colors.amber[500],
+  textAccent: tokens.colors.amber[300],
+  secondary: '#b39463',
+  surfaceDark: tokens.colors.brown[850],
+  borderSoft: tokens.colors.brown[700],
   background: tokens.colors.brown[950],
   surface: tokens.colors.brown[900],
   surfaceRaised: tokens.colors.brown[850],

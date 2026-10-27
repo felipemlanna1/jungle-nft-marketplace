@@ -5,7 +5,7 @@ test('avatar and password changes persist through real profile forms', async ({ 
   await page.getByLabel('Senha', { exact: true }).fill('Collect0r!Demo');
   await page.getByRole('button', { name: 'Entrar', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();
-  await page.getByLabel('Enviar avatar').setInputFiles({
+  await page.getByLabel('Alterar avatar').setInputFiles({
     name: 'avatar.png',
     mimeType: 'image/png',
     buffer: Buffer.from(

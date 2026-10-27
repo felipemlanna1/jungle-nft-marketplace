@@ -4,19 +4,20 @@ import { useQuery } from '@tanstack/react-query';
 import type { CatalogSearch, NFT } from '../../shared-types';
 import { market } from '../../../../services/marketplace';
 import { useCatalog, useFavorite } from '../../hooks/useCatalog';
-import { useTheme } from '../../../../styleguide';
-export const categories = [
-  { label: 'Todas as coleções', value: '' },
-  { label: 'Arte digital', value: 'Art' },
-  { label: 'Arte abstrata', value: 'Abstract' },
-  { label: 'Fotografia', value: 'Photography' },
-];
+import { toWei } from '../../../../domain/money';
 export function useMarketplace() {
-  const { themeName } = useTheme();
   const search = useSearch({ strict: false }) as CatalogSearch;
   const navigate = useNavigate();
   const [term, setTerm] = useState(search.q ?? '');
-  const [authNotice, setAuthNotice] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [minPrice, setMinPrice] = useState(search.minPrice ?? '0.02');
+  const [maxPrice, setMaxPrice] = useState(search.maxPrice ?? '12.30');
+  const [priceError, setPriceError] = useState('');
+  useEffect(() => {
+    setMinPrice(search.minPrice ?? '0.02');
+    setMaxPrice(search.maxPrice ?? '12.30');
+    setPriceError('');
+  }, [search.minPrice, search.maxPrice]);
   useEffect(() => {
     setTerm(search.q ?? '');
   }, [search.q]);
@@ -38,24 +39,53 @@ export function useMarketplace() {
     event.preventDefault();
     update({ q: term.trim() || undefined, page: 1 });
   }
+  function applyPrice(event: FormEvent) {
+    event.preventDefault();
+    try {
+      const minimum = minPrice.trim().replace(',', '.') || undefined;
+      const maximum = maxPrice.trim().replace(',', '.') || undefined;
+      const minimumWei = minimum === undefined ? undefined : toWei(minimum);
+      const maximumWei = maximum === undefined ? undefined : toWei(maximum);
+      if (minimumWei !== undefined && maximumWei !== undefined && minimumWei > maximumWei) {
+        setPriceError('O preço mínimo deve ser menor ou igual ao máximo.');
+        return;
+      }
+      setPriceError('');
+      update({ minPrice: minimum, maxPrice: maximum, page: 1 });
+      setFiltersOpen(false);
+    } catch {
+      setPriceError('Informe preços válidos em ETH.');
+    }
+  }
   function favorite(nft: NFT) {
     if (!session.data) {
-      setAuthNotice(true);
+      void navigate({
+        to: '/login',
+        search: {
+          redirect: window.location.pathname + window.location.search + window.location.hash,
+          favorite: nft.id,
+        },
+      });
       return;
     }
-    setAuthNotice(false);
-    mutation.mutate({ id: nft.id, active: !favorites.includes(nft.id) });
+    mutation.mutate({ id: nft.id, active: !favorites.includes(nft.id), ownerId: session.data.id });
   }
   function clearFilters() {
     setTerm('');
     void navigate({ to: '/', search: {} });
   }
   return {
-    themeName,
+    minPrice,
+    setMinPrice,
+    maxPrice,
+    setMaxPrice,
+    priceError,
+    applyPrice,
+    filtersOpen,
+    setFiltersOpen,
     search,
     term,
     setTerm,
-    authNotice,
     catalog,
     totalPages,
     mutation,

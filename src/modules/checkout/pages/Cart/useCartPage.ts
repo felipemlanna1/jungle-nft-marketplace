@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { market } from '../../../../services/marketplace';
+import type { CartItem } from '../../shared-types';
 import { readCoupon, storeCoupon, useCart } from '../../hooks/useCart';
 
 export function useCartPage() {
@@ -23,7 +24,23 @@ export function useCartPage() {
     setCoupon(draft.trim().toUpperCase());
     storeCoupon(owner, draft.trim().toUpperCase());
   };
+  const removeCoupon = () => {
+    setCoupon('');
+    setDraft('');
+    storeCoupon(owner, '');
+  };
+  const updateQuantity = (item: CartItem, quantity: number) => {
+    if (Number.isSafeInteger(quantity) && quantity >= 1 && quantity <= item.nft.available)
+      mutation.mutate({ id: item.id ?? item.nftId, quantity, ownerId: owner });
+  };
+  const removeItem = (item: CartItem) =>
+    mutation.mutate({ id: item.id ?? item.nftId, quantity: 0, ownerId: owner });
+  const excludedIds = [...new Set(cart.data?.items.map((item) => item.nftId) ?? [])];
   return {
+    removeCoupon,
+    updateQuantity,
+    removeItem,
+    excludedIds,
     cart,
     mutation,
     owner,

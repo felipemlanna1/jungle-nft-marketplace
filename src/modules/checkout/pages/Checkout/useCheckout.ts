@@ -2,15 +2,17 @@ import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useNavigate } from '@tanstack/react-router';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-import type { Network, Order, OrderInput, Quote } from '../../../../contracts';
+import type { Network, Order, OrderInput, Quote, User, WalletType } from '../../../../contracts';
 import { market } from '../../../../services/marketplace';
 import { messageOf, useAuthenticatedUser } from '../../../account/hooks/useAccount';
 import { readCoupon } from '../../hooks/useCart';
+import { useCheckoutFields } from './useCheckoutFields';
 import { clearAttempt, readAttempt, saveAttempt, type PurchaseAttempt } from '../../attempt';
 
 export function useCheckout() {
   const session = useAuthenticatedUser();
   const user = session.data;
+  const { fields, setField } = useCheckoutFields(user);
   const navigate = useNavigate();
   const client = useQueryClient();
   const cart = useQuery({
@@ -18,6 +20,8 @@ export function useCheckout() {
     queryFn: () => market.cart(),
     enabled: !!user,
   });
+  const ownsSession = () =>
+    Boolean(user && client.getQueryData<User | null>(['session'])?.id === user.id);
   const coupon = user ? readCoupon(user.id) : '';
   const quote = useQuery({
     queryKey: ['quote', user?.id, cart.data?.version, coupon],
@@ -33,7 +37,7 @@ export function useCheckout() {
   const [collectorName, setCollectorName] = useState('');
   const [collectorEmail, setCollectorEmail] = useState('');
   const [walletId, setWalletId] = useState('');
-  const [network, setRede] = useState<Network>('Ethereum');
+  const [network, setNetwork] = useState<Network>('Ethereum');
   const [connection, setConnection] = useState<'idle' | 'connected' | 'declined'>('idle');
   const [review, setReview] = useState<Quote | null>(null);
   const [error, setError] = useState('');
@@ -48,7 +52,7 @@ export function useCheckout() {
     setCollectorEmail(user.email);
     setAttempt(readAttempt(user.id));
     setWalletId('');
-    setRede('Ethereum');
+    setNetwork('Ethereum');
     setConnection('idle');
     setReview(null);
     setError('');
@@ -59,12 +63,104 @@ export function useCheckout() {
     const primary = wallets.data?.find((w) => w.primary) ?? wallets.data?.[0];
     if (primary && !walletId) {
       setWalletId(primary.id);
-      setRede(primary.network);
+      setNetwork(primary.network);
     }
   }, [wallets.data, walletId]);
+  const selectedWallet = wallets.data?.find((wallet) => wallet.id === walletId);
+  const cartNetworks = new Set(cart.data?.items.map((item) => item.nft.network));
+  const mixedNetworks = cartNetworks.size > 1;
+  const connect = async () => {
+    if (!user || !ownsSession() || busy.current) return;
+    setError('');
+    busy.current = true;
+    setPending(true);
+    try {
+      if (mixedNetworks) throw new Error('Remova os itens de outra rede antes de continuar.');
+      if (cartNetworks.size && !cartNetworks.has(network))
+        throw new Error('A rede da carteira deve ser a mesma dos NFTs.');
+      if (fields.manualWallet) {
+        if (!/^0x[a-fA-F0-9]{40}$/.test(fields.address))
+          throw new Error('Informe um endereço válido iniciado por 0x.');
+        const saved = await market.saveWallet({
+          label: fields.profileName || 'Carteira da compra',
+          address: fields.address,
+          network,
+          primary: false,
+          walletType: fields.walletType,
+          displayName: collectorName,
+          profileName: fields.profileName,
+          secondaryAddress: fields.secondaryAddress,
+          email: collectorEmail,
+          ens: fields.ens || undefined,
+          referralCode: fields.referralCode,
+        });
+        if (!ownsSession()) return;
+        const wallet = saved.find(
+          (item) =>
+            item.address.toLowerCase() === fields.address.toLowerCase() && item.network === network,
+        );
+        if (!wallet) throw new Error('Não foi possível salvar a carteira.');
+        client.setQueryData(['wallets', user.id], saved);
+        setWalletId(wallet.id);
+      } else if (!selectedWallet || selectedWallet.network !== network) {
+        throw new Error('Selecione uma carteira da mesma rede dos NFTs.');
+      }
+      if (ownsSession()) setConnection('connected');
+    } catch (cause) {
+      if (!ownsSession()) return;
+      setError(messageOf(cause));
+      setConnection('idle');
+    } finally {
+      if (ownsSession()) {
+        busy.current = false;
+        setPending(false);
+      }
+    }
+  };
+  const updateField: typeof setField = (field, value) => {
+    setField(field, value);
+    if (['manualWallet', 'address', 'secondaryAddress', 'walletType'].includes(field)) {
+      setConnection('idle');
+      setReview(null);
+    }
+  };
+  const changeWallet = (id: string) => {
+    setWalletId(id);
+    const wallet = wallets.data?.find((item) => item.id === id);
+    if (wallet) setNetwork(wallet.network);
+    setConnection('idle');
+    setReview(null);
+  };
+  const changeNetwork = (value: Network) => {
+    setNetwork(value);
+    setConnection('idle');
+    setReview(null);
+  };
+  const changeProvider = (value: string) => {
+    if (!(['MetaMask', 'WalletConnect', 'Coinbase'] as string[]).includes(value)) return;
+    updateField('walletType', value as WalletType);
+  };
+  const disconnect = () => {
+    setConnection('idle');
+    setReview(null);
+  };
+  const declineConnection = () => {
+    setConnection('declined');
+    setReview(null);
+  };
+  const editReview = () => setReview(null);
   const proceed = (event: FormEvent) => {
     event.preventDefault();
+    if (!ownsSession()) return;
     setError('');
+    if (mixedNetworks) {
+      setError('O carrinho contém NFTs de redes diferentes. Revise os itens.');
+      return;
+    }
+    if (cartNetworks.size && !cartNetworks.has(network)) {
+      setError('A rede da carteira deve ser a mesma dos NFTs.');
+      return;
+    }
     if (!walletId || connection !== 'connected') {
       setError('Conecte uma carteira salva para continuar.');
       return;
@@ -76,7 +172,7 @@ export function useCheckout() {
     if (quote.data) setReview(quote.data);
   };
   const showOrder = (order: Order, input: OrderInput) => {
-    if (!user) return;
+    if (!user || !ownsSession()) return;
     const next = { userId: user.id, input, orderId: order.id };
     saveAttempt(next);
     setAttempt(next);
@@ -85,7 +181,7 @@ export function useCheckout() {
     void navigate({ to: '/orders/$id', params: { id: order.id } });
   };
   const submitPurchase = async () => {
-    if (!user || !review || busy.current) return;
+    if (!user || !ownsSession() || !review || busy.current) return;
     busy.current = true;
     setPending(true);
     setError('');
@@ -97,15 +193,17 @@ export function useCheckout() {
           showOrder(existing, attempt.input);
           return;
         }
+        if (!ownsSession()) return;
         showOrder(await market.order(attempt.input), attempt.input);
         return;
       }
       const fresh = await market.quote(coupon || undefined);
+      if (!ownsSession()) return;
       client.setQueryData(['quote', user.id, cart.data?.version, coupon], fresh);
       if (fresh.fingerprint !== review.fingerprint) {
         setReview(fresh);
         setError(
-          'The price, availability or fees changed. Review the updated order and confirm again.',
+          'O preço, a disponibilidade ou as taxas mudaram. Revise os valores e confirme novamente.',
         );
         return;
       }
@@ -116,6 +214,14 @@ export function useCheckout() {
         network,
         collectorName: collectorName.trim(),
         collectorEmail: collectorEmail.trim(),
+        provider: fields.walletType,
+        collectorDetails: {
+          username: fields.username.trim(),
+          profileName: fields.profileName.trim(),
+          ens: fields.ens.trim() || undefined,
+          referralCode: fields.referralCode.trim() || undefined,
+          notes: fields.notes.trim() || undefined,
+        },
         ...(coupon ? { coupon } : {}),
       };
       submittedInput = input;
@@ -129,6 +235,7 @@ export function useCheckout() {
       setAttempt(saved);
       showOrder(await market.order(input), input);
     } catch (cause) {
+      if (!ownsSession()) return;
       let rejectedBeforeCreation = false;
       if (
         submittedInput &&
@@ -143,6 +250,7 @@ export function useCheckout() {
             showOrder(existing, submittedInput);
             return;
           }
+          if (!ownsSession()) return;
           rejectedBeforeCreation = true;
           clearAttempt(user.id);
           setAttempt(null);
@@ -160,20 +268,24 @@ export function useCheckout() {
             : ' Seus itens foram preservados. Recupere esta tentativa antes de iniciar outra compra.'),
       );
     } finally {
-      busy.current = false;
-      setPending(false);
+      if (ownsSession()) {
+        busy.current = false;
+        setPending(false);
+      }
     }
   };
   const recover = async () => {
-    if (!user || !attempt || busy.current) return;
+    if (!user || !ownsSession() || !attempt || busy.current) return;
     busy.current = true;
     setPending(true);
     setError('');
     try {
       const existing = await market.findOrderByAttempt(attempt.input.idempotencyKey);
+      if (!ownsSession()) return;
       if (existing) showOrder(existing, attempt.input);
       else showOrder(await market.order(attempt.input), attempt.input);
     } catch (cause) {
+      if (!ownsSession()) return;
       if (
         axios.isAxiosError(cause) &&
         cause.response &&
@@ -186,6 +298,7 @@ export function useCheckout() {
             showOrder(existing, attempt.input);
             return;
           }
+          if (!ownsSession()) return;
           clearAttempt(user.id);
           setAttempt(null);
           setReview(null);
@@ -202,12 +315,19 @@ export function useCheckout() {
       }
       setError(messageOf(cause));
     } finally {
-      busy.current = false;
-      setPending(false);
+      if (ownsSession()) {
+        busy.current = false;
+        setPending(false);
+      }
     }
   };
   return {
     user,
+    fields,
+    setField: updateField,
+    selectedWallet,
+    mixedNetworks,
+    connect,
     cart,
     quote,
     wallets,
@@ -216,13 +336,15 @@ export function useCheckout() {
     collectorEmail,
     setCollectorEmail,
     walletId,
-    setWalletId,
+    changeWallet,
     network,
-    setRede,
+    changeNetwork,
     connection,
-    setConnection,
+    changeProvider,
+    disconnect,
+    declineConnection,
     review,
-    setReview,
+    editReview,
     error,
     pending,
     attempt,

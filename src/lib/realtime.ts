@@ -1,10 +1,24 @@
 import { useEffect, useState } from 'react';
 import type { Socket } from 'socket.io-client';
-import { z } from 'zod';
+import * as z from 'zod/mini';
 import type { NFT, Order, User } from '../contracts';
 import { keys, queryClient } from './query';
 
-const versioned = z.object({ eventId: z.string().min(1), version: z.number().int().positive() });
+const versioned = z.object({
+  eventId: z.string().check(z.minLength(1)),
+  version: z.int().check(z.positive()),
+});
+const nftEventSchema = z.extend(versioned, {
+  nft: z.looseObject({ id: z.string(), version: z.int().check(z.positive()) }),
+});
+const orderEventSchema = z.extend(versioned, {
+  userId: z.string(),
+  order: z.looseObject({
+    id: z.string(),
+    version: z.int().check(z.positive()),
+    status: z.enum(['pending', 'confirmed', 'refused']),
+  }),
+});
 let currentSocket: Socket | undefined;
 export function disconnectRealtime() {
   currentSocket?.disconnect();
@@ -50,11 +64,7 @@ export function useRealtime(user: User | null | undefined) {
       };
       const onDisconnect = () => setConnected(false);
       const onNft = (input: unknown) => {
-        const parsed = versioned
-          .extend({
-            nft: z.object({ id: z.string(), version: z.number().int().positive() }).passthrough(),
-          })
-          .safeParse(input);
+        const parsed = nftEventSchema.safeParse(input);
         if (!parsed.success || !activeUser()) return;
         const { nft, version } = parsed.data;
         const latest = Math.max(
@@ -73,18 +83,7 @@ export function useRealtime(user: User | null | undefined) {
         );
       };
       const onOrder = (input: unknown) => {
-        const parsed = versioned
-          .extend({
-            userId: z.string(),
-            order: z
-              .object({
-                id: z.string(),
-                version: z.number().int().positive(),
-                status: z.enum(['pending', 'confirmed', 'refused']),
-              })
-              .passthrough(),
-          })
-          .safeParse(input);
+        const parsed = orderEventSchema.safeParse(input);
         if (!parsed.success || !activeUser() || parsed.data.userId !== userId) return;
         const { order, version } = parsed.data;
         const key = keys.order(order.id, userId);

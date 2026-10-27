@@ -1,28 +1,49 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { QueryClientProvider } from '@tanstack/react-query';
-import { RouterProvider } from '@tanstack/react-router';
-import { queryClient } from './lib/query';
-import { router } from './router';
 import './styles.css';
-import './styles.expedition.css';
-import { StyleguideProvider } from './styleguide';
+import '@fontsource-variable/roboto-mono/wght.css';
+import './styles.kurio.css';
+import { criticalMedia } from './assets/critical-media';
+
+function preloadHomepageArtwork() {
+  if (location.pathname !== '/') return;
+  const preload = document.createElement('link');
+  preload.rel = 'preload';
+  preload.as = 'image';
+  preload.fetchPriority = 'high';
+  preload.href = matchMedia('(max-width: 767px)').matches
+    ? criticalMedia.kurioHeroMobile
+    : criticalMedia.kurioHero;
+  if (matchMedia('(max-width: 767px)').matches) {
+    preload.imageSrcset = criticalMedia.kurioHeroMobileSrcSet;
+    preload.imageSizes = criticalMedia.kurioHeroMobileSizes;
+  }
+  document.head.append(preload);
+}
 
 async function bootstrap() {
-  if (import.meta.env.VITE_MOCKS !== 'false') {
-    const { startMocks } = await import('./mocks/browser');
-    await startMocks();
+  const loadingModule = import('./bootstrap');
+  const loadingRoot = loadingModule.then(({ mountLoading }) => mountLoading(location.pathname));
+  if (location.pathname.startsWith('/nft/')) {
+    void import('./app/routes/NftRoute').catch(() => {
+      // The router presents a chunk-loading failure if this route is actually requested.
+    });
   }
-  createRoot(document.getElementById('root')!).render(
-    <React.StrictMode>
-      <StyleguideProvider>
-        <QueryClientProvider client={queryClient}>
-          <RouterProvider router={router} />
-        </QueryClientProvider>
-      </StyleguideProvider>
-    </React.StrictMode>,
-  );
+  try {
+    // Paint only placeholders early; application queries and sockets wait for interception.
+    const [application, root] = await Promise.all([
+      import('./application'),
+      loadingRoot,
+      import.meta.env.VITE_MOCKS !== 'false'
+        ? import('./mocks/browser').then(({ startMocks }) => startMocks())
+        : Promise.resolve(),
+    ]);
+    void application.prefetchPublicRoute(location);
+    application.mountApplication(root);
+  } catch {
+    const [loading, root] = await Promise.all([loadingModule, loadingRoot]);
+    loading.showStartupFailure(root);
+  }
 }
+preloadHomepageArtwork();
 bootstrap().catch(() => {
   const root = document.getElementById('root');
   if (root)

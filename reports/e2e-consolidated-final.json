@@ -1,0 +1,3365 @@
+{
+  "config": {
+    "argv": [
+      "/Users/felipemoreiralanna/.npm/_npx/6d82ddbdd7da268b/node_modules/node/bin/node",
+      "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/account.spec.ts",
+      "tests/e2e/account-edit.spec.ts",
+      "tests/e2e/api-contracts.spec.ts",
+      "tests/e2e/adversarial-ui.spec.ts",
+      "tests/e2e/drafts.spec.ts",
+      "tests/e2e/marketplace.spec.ts",
+      "tests/e2e/purchase.spec.ts",
+      "tests/e2e/realtime.spec.ts",
+      "tests/e2e/resilience.spec.ts",
+      "tests/e2e/routing.spec.ts",
+      "tests/e2e/themes.spec.ts",
+      "--grep-invert",
+      "visual regression",
+      "--output=test-results-consolidated-final",
+      "--reporter=line,json"
+    ],
+    "configFile": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/playwright.config.ts",
+    "rootDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "line"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "account-edit.spec.ts",
+      "file": "account-edit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "avatar and password changes persist through real profile forms",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2572,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:17:55.016Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "46791f9a79a9775c9012-c829ab1e1a741da78ac3",
+          "file": "account-edit.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "avatar and password changes persist through real profile forms",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8905,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Perfil do colecionador' })\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Perfil do colecionador' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Perfil do colecionador' })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Perfil do colecionador' })\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Perfil do colecionador' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Perfil do colecionador' })\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/account-edit.spec.ts:7:79",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/account-edit.spec.ts",
+                      "column": 79,
+                      "line": 7
+                    },
+                    "snippet": "   5 |   await page.getByLabel('Senha', { exact: true }).fill('Collect0r!Demo');\n   6 |   await page.getByRole('button', { name: 'Entrar', exact: true }).click();\n>  7 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n     |                                                                               ^\n   8 |   await page.getByLabel('Alterar avatar').setInputFiles({\n   9 |     name: 'avatar.png',\n  10 |     mimeType: 'image/png',"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/account-edit.spec.ts",
+                        "column": 79,
+                        "line": 7
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: 'Perfil do colecionador' })\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: 'Perfil do colecionador' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Perfil do colecionador' })\u001b[22m\n\n\n   5 |   await page.getByLabel('Senha', { exact: true }).fill('Collect0r!Demo');\n   6 |   await page.getByRole('button', { name: 'Entrar', exact: true }).click();\n>  7 |   await expect(page.getByRole('heading', { name: 'Perfil do colecionador' })).toBeVisible();\n     |                                                                               ^\n   8 |   await page.getByLabel('Alterar avatar').setInputFiles({\n   9 |     name: 'avatar.png',\n  10 |     mimeType: 'image/png',\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/account-edit.spec.ts:7:79"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:47.632Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/account-edit-avatar-and-pa-542ff--through-real-profile-forms-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/account-edit-avatar-and-pa-542ff--through-real-profile-forms-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/account-edit-avatar-and-pa-542ff--through-real-profile-forms-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/account-edit.spec.ts",
+                    "column": 79,
+                    "line": 7
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "46791f9a79a9775c9012-be464ec0cf6894012040",
+          "file": "account-edit.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "account.spec.ts",
+      "file": "account.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "auth controls reveal passwords and report disconnected identity providers honestly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1403,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:17:57.928Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-8c1513b5c9452226883b",
+          "file": "account.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registration requires matching passwords and creates an isolated collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1744,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:17:59.340Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-7cdfaade328117e9fe9b",
+          "file": "account.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "profile and expanded wallet data persist and secondary wallet controls are functional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4127,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:01.094Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-73f248f3a11b94c1c8e3",
+          "file": "account.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "auth controls reveal passwords and report disconnected identity providers honestly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:57.264Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-43fdc94acecad31d67f4",
+          "file": "account.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registration requires matching passwords and creates an isolated collector",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1249,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:58.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-507c72e0417d0d17c269",
+          "file": "account.spec.ts",
+          "line": 33,
+          "column": 1
+        },
+        {
+          "title": "profile and expanded wallet data persist and secondary wallet controls are functional",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6258,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:59.663Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ad4620ead4e6d9cc2627-2cc8b6edd29a5643dd0d",
+          "file": "account.spec.ts",
+          "line": 55,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "adversarial-ui.spec.ts",
+      "file": "adversarial-ui.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a changed quote requires a second explicit confirmation before any order exists",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11342,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts:51:5",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                      "column": 5,
+                      "line": 51
+                    },
+                    "snippet": "  49 |       .filter({ hasText: /changed.*confirm again|mudou.*confirm/i })\n  50 |       .first(),\n> 51 |   ).toBeVisible();\n     |     ^\n  52 |   expect(\n  53 |     await page.evaluate(\n  54 |       () => Object.keys(JSON.parse(localStorage.getItem('jungle.demo.database.v1')!).orders).length,"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                        "column": 5,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n\n\n  49 |       .filter({ hasText: /changed.*confirm again|mudou.*confirm/i })\n  50 |       .first(),\n> 51 |   ).toBeVisible();\n     |     ^\n  52 |   expect(\n  53 |     await page.evaluate(\n  54 |       () => Object.keys(JSON.parse(localStorage.getItem('jungle.demo.database.v1')!).orders).length,\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts:51:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:05.235Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                    "column": 5,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-604ac892f4f056ed4f34",
+          "file": "adversarial-ui.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "favorites and private profile do not cross a logout and account switch",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4173,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:17.394Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-53d8afe085bc1ce8631e",
+          "file": "adversarial-ui.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "a changed quote requires a second explicit confirmation before any order exists",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11490,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts:51:5",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                      "column": 5,
+                      "line": 51
+                    },
+                    "snippet": "  49 |       .filter({ hasText: /changed.*confirm again|mudou.*confirm/i })\n  50 |       .first(),\n> 51 |   ).toBeVisible();\n     |     ^\n  52 |   expect(\n  53 |     await page.evaluate(\n  54 |       () => Object.keys(JSON.parse(localStorage.getItem('jungle.demo.database.v1')!).orders).length,"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                        "column": 5,
+                        "line": 51
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\nExpected: visible\nTimeout: 8000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first() with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('alert').filter({ hasText: /changed.*confirm again|mudou.*confirm/i }).first()\u001b[22m\n\n\n  49 |       .filter({ hasText: /changed.*confirm again|mudou.*confirm/i })\n  50 |       .first(),\n> 51 |   ).toBeVisible();\n     |     ^\n  52 |   expect(\n  53 |     await page.evaluate(\n  54 |       () => Object.keys(JSON.parse(localStorage.getItem('jungle.demo.database.v1')!).orders).length,\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts:51:5"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:05.935Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-a-changed-q-57b34-ion-before-any-order-exists-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                    "column": 5,
+                    "line": 51
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-2baabdbd3ac3924b3969",
+          "file": "adversarial-ui.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "favorites and private profile do not cross a logout and account switch",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 30261,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts",
+                        "column": 62,
+                        "line": 69
+                      },
+                      "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /Alex Collector/ })\u001b[22m\n\n\n  67 |     page.getByRole('button', { name: 'Remover dos favoritos', exact: true }),\n  68 |   ).toHaveAttribute('aria-pressed', 'true');\n> 69 |   await page.getByRole('button', { name: /Alex Collector/ }).click();\n     |                                                              ^\n  70 |   await page.getByRole('button', { name: 'Sair', exact: true }).click();\n  71 |   await login(page, 'second@example.test');\n  72 |   await page.goto('/nft/nft-1');\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/adversarial-ui.spec.ts:69:62"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:18.153Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-favorites-a-a6255-a-logout-and-account-switch-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-favorites-a-a6255-a-logout-and-account-switch-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/adversarial-ui-favorites-a-a6255-a-logout-and-account-switch-mobile/trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c98cc90757f83f1391b7-adf7724861ca9262c72e",
+          "file": "adversarial-ui.spec.ts",
+          "line": 61,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "api-contracts.spec.ts",
+      "file": "api-contracts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest cart survives login; private resources never leak between accounts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1474,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:21.732Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-01260c57259cdfe0b0a9",
+          "file": "api-contracts.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "idempotent order is unique, immutable and inaccessible to another user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4266,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:23.216Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-97bea8a79dc7d345995f",
+          "file": "api-contracts.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "price change invalidates an accepted quote before order creation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1112,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:27.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-b8ca41c19c1bbe9a50bb",
+          "file": "api-contracts.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "validation rejects bad quantities, profile values and wallet addresses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1369,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:28.614Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-448ec0ad43b10e7cee12",
+          "file": "api-contracts.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "duplicate registration and session expiration are explicit failures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1020,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:29.991Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-a61f9cda598a8c59db07",
+          "file": "api-contracts.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "guest cart survives login; private resources never leak between accounts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1703,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:49.216Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-c06a22fa094f4c52b9e9",
+          "file": "api-contracts.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "idempotent order is unique, immutable and inaccessible to another user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4520,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:51.065Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-48973f1d8e15f7ce1695",
+          "file": "api-contracts.spec.ts",
+          "line": 42,
+          "column": 1
+        },
+        {
+          "title": "price change invalidates an accepted quote before order creation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1887,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:55.593Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-9ed094a4481bdf2c71f7",
+          "file": "api-contracts.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "validation rejects bad quantities, profile values and wallet addresses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1786,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:57.511Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-3c5573a3078dbc5a08f4",
+          "file": "api-contracts.spec.ts",
+          "line": 90,
+          "column": 1
+        },
+        {
+          "title": "duplicate registration and session expiration are explicit failures",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1280,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:20:59.312Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "aa3677a73aad62004270-4251f870649d0c16f7c3",
+          "file": "api-contracts.spec.ts",
+          "line": 111,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "drafts.spec.ts",
+      "file": "drafts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "profile draft survives a changed account response for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1979,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:31.028Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e417140b1e763296e66e-8021ba9513423ba993ab",
+          "file": "drafts.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "checkout collector draft survives session refetch for the same user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2664,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:33.015Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e417140b1e763296e66e-ec331bf73d5631accbdc",
+          "file": "drafts.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "profile draft survives a changed account response for the same user",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9176,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at changeRemoteProfileAndRefetch (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:23:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:42:3",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at changeRemoteProfileAndRefetch (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:23:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:42:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:00.609Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-profile-draft-survi-1298a--response-for-the-same-user-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-profile-draft-survi-1298a--response-for-the-same-user-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-profile-draft-survi-1298a--response-for-the-same-user-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e417140b1e763296e66e-a59cfad8b8d46bbe7505",
+          "file": "drafts.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "checkout collector draft survives session refetch for the same user",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10053,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at changeRemoteProfileAndRefetch (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:23:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:54:3",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at changeRemoteProfileAndRefetch (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:23:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/drafts.spec.ts:54:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:10.427Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-checkout-collector--60e89-n-refetch-for-the-same-user-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-checkout-collector--60e89-n-refetch-for-the-same-user-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/drafts-checkout-collector--60e89-n-refetch-for-the-same-user-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e417140b1e763296e66e-430a34215b91934d4406",
+          "file": "drafts.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "marketplace.spec.ts",
+      "file": "marketplace.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "catalog is accessible, responsive and has working detail navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:35.691Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-a419cf248b0c5fe56135",
+          "file": "marketplace.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "direct missing NFT displays a recovery state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 888,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:36.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-b5a6d1339ccf88d9a000",
+          "file": "marketplace.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "URL filters survive refresh and do not overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 963,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:37.772Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-319aac2307c5c8fb0fb7",
+          "file": "marketplace.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "keyboard users can reach navigation and visible focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 638,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:38.742Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-8e6d284e772987a7cdeb",
+          "file": "marketplace.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "private routes require sign in and return context is preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1029,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:39.390Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-2f7d2cb2aec44fab6e1c",
+          "file": "marketplace.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9807,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Open demo scenarios' })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Open demo scenarios' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Open demo scenarios' })\u001b[22m\n\u001b[2m    20 × locator resolved to <button class=\"button button-ghost\" aria-label=\"Open demo scenarios\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Open demo scenarios' })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Open demo scenarios' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Open demo scenarios' })\u001b[22m\n\u001b[2m    20 × locator resolved to <button class=\"button button-ghost\" aria-label=\"Open demo scenarios\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:84:25",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                      "column": 25,
+                      "line": 84
+                    },
+                    "snippet": "  82 |     page.getByRole('heading', { name: 'Explore todos os estados', exact: true }),\n  83 |   ).not.toBeVisible();\n> 84 |   await expect(trigger).toBeFocused();\n     |                         ^\n  85 |   await closeOptions(page);\n  86 |   const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n  87 |   if (await footer.isVisible()) await expect(footer).toBeFocused();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                        "column": 25,
+                        "line": 84
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Open demo scenarios' })\nExpected: focused\nReceived: inactive\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" getByRole('button', { name: 'Open demo scenarios' }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Open demo scenarios' })\u001b[22m\n\u001b[2m    20 × locator resolved to <button class=\"button button-ghost\" aria-label=\"Open demo scenarios\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  82 |     page.getByRole('heading', { name: 'Explore todos os estados', exact: true }),\n  83 |   ).not.toBeVisible();\n> 84 |   await expect(trigger).toBeFocused();\n     |                         ^\n  85 |   await closeOptions(page);\n  86 |   const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n  87 |   if (await footer.isVisible()) await expect(footer).toBeFocused();\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:84:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:40.425Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts",
+                    "column": 25,
+                    "line": 84
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-5bd79e8bac25f4ebde50",
+          "file": "marketplace.spec.ts",
+          "line": 75,
+          "column": 1
+        },
+        {
+          "title": "catalog is accessible, responsive and has working detail navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1309,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:21.349Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-07df007bc81bc17d8861",
+          "file": "marketplace.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "direct missing NFT displays a recovery state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 874,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:22.807Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-5b60f7448b73b0b760d1",
+          "file": "marketplace.spec.ts",
+          "line": 40,
+          "column": 1
+        },
+        {
+          "title": "URL filters survive refresh and do not overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1205,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:23.688Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-ce5d4fffb8ea5a3ce3f6",
+          "file": "marketplace.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "keyboard users can reach navigation and visible focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 798,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:24.901Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-06e244ddc6a698b6f940",
+          "file": "marketplace.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "private routes require sign in and return context is preserved",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1123,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:25.706Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-adc472af54d08f2b8c95",
+          "file": "marketplace.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "demo controls are keyboard accessible and focus returns after close",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8743,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    19 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    19 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:77:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    19 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/marketplace.spec.ts:77:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:26.837Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/marketplace-demo-controls--12ef4-d-focus-returns-after-close-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "170e8a9d719db4caeb1d-9645267dda8f7dbbf926",
+          "file": "marketplace.spec.ts",
+          "line": 75,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "purchase.spec.ts",
+      "file": "purchase.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guest cart merges on login, validates coupons and completes an immutable receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6077,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:50.917Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-4db15edf6a9cd51d60e8",
+          "file": "purchase.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "declined payment preserves the cart and never displays a success receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4815,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:18:57.141Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-837665b6b054f08e1ac3",
+          "file": "purchase.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "timeout recovers the same persisted purchase after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:01.962Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-e49bc1b835d22f7ebf27",
+          "file": "purchase.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "profile and wallet validation persist while a second collector has isolated data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4917,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:10.887Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-eaebd327835826cb3d41",
+          "file": "purchase.spec.ts",
+          "line": 105,
+          "column": 1
+        },
+        {
+          "title": "guest cart merges on login, validates coupons and completes an immutable receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6144,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:36.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-bc329d9154d7c3d11e6f",
+          "file": "purchase.spec.ts",
+          "line": 41,
+          "column": 1
+        },
+        {
+          "title": "declined payment preserves the cart and never displays a success receipt",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:42.522Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-3f0e435101a0cade56cb",
+          "file": "purchase.spec.ts",
+          "line": 67,
+          "column": 1
+        },
+        {
+          "title": "timeout recovers the same persisted purchase after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9234,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:47.398Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-1ded029378c1d01c78cb",
+          "file": "purchase.spec.ts",
+          "line": 83,
+          "column": 1
+        },
+        {
+          "title": "profile and wallet validation persist while a second collector has isolated data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6125,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:21:56.641Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "993c92a1c717c9480450-d5ecc4ea54d82ca922d1",
+          "file": "purchase.spec.ts",
+          "line": 105,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "realtime.spec.ts",
+      "file": "realtime.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Socket.IO price event reconciles the visible cart and announces a changed quote",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:15.819Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-d6a9e2745bf002483174",
+          "file": "realtime.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "tablet 768px preserves content without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 744,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:18.211Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-9282a5bd782eeafd90da",
+          "file": "realtime.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "duplicate and older Socket.IO events do not regress the cart snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1841,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:18.965Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-7f58f5b9a7d3d12b1b0d",
+          "file": "realtime.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "Socket.IO price event reconciles the visible cart and announces a changed quote",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9467,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/realtime.spec.ts:13:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at openDemoScenarios (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:18:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/realtime.spec.ts:13:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:02.783Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/realtime-Socket-IO-price-e-2b428-d-announces-a-changed-quote-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/realtime-Socket-IO-price-e-2b428-d-announces-a-changed-quote-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/realtime-Socket-IO-price-e-2b428-d-announces-a-changed-quote-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-73e3999b5566922b9658",
+          "file": "realtime.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "tablet 768px preserves content without horizontal overflow",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1117,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:12.966Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-8632e3281d8cd836baa0",
+          "file": "realtime.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "duplicate and older Socket.IO events do not regress the cart snapshot",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2970,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:14.261Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f9e2d0c80f3a45ae9766-679ac95c3f0354a11a88",
+          "file": "realtime.spec.ts",
+          "line": 44,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "resilience.spec.ts",
+      "file": "resilience.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "slow data keeps skeletons, error state recovers through real network mocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:20.819Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-44f84f1889657a048901",
+          "file": "resilience.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "unknown routes provide a real recovery link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 730,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:24.958Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-3cbeae22d7f6bbfd12d0",
+          "file": "resilience.spec.ts",
+          "line": 38,
+          "column": 1
+        },
+        {
+          "title": "slow data keeps skeletons, error state recovers through real network mocks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5490,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:17.262Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-c080bb495d3758164c62",
+          "file": "resilience.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "unknown routes provide a real recovery link",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:22.763Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c1cdccb29e536012e9c2-1e8a3b470eeb12b9c97b",
+          "file": "resilience.spec.ts",
+          "line": 38,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "routing.spec.ts",
+      "file": "routing.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "session transport failures do not masquerade as a signed-out user and can recover",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 556,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/routing.spec.ts:8:14",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/routing.spec.ts",
+                      "column": 14,
+                      "line": 8
+                    },
+                    "snippet": "   6 |   await page.goto('/');\n   7 |   await expect(page.locator('#hero-title')).toBeVisible();\n>  8 |   await page.evaluate(() =>\n     |              ^\n   9 |     fetch('/api/demo/scenario', {\n  10 |       method: 'POST',\n  11 |       headers: { 'Content-Type': 'application/json' },"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/routing.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n\n   6 |   await page.goto('/');\n   7 |   await expect(page.locator('#hero-title')).toBeVisible();\n>  8 |   await page.evaluate(() =>\n     |              ^\n   9 |     fetch('/api/demo/scenario', {\n  10 |       method: 'POST',\n  11 |       headers: { 'Content-Type': 'application/json' },\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/routing.spec.ts:8:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:25.701Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/routing-session-transport--ab03d-ed-out-user-and-can-recover-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/routing-session-transport--ab03d-ed-out-user-and-can-recover-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/routing-session-transport--ab03d-ed-out-user-and-can-recover-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/routing.spec.ts",
+                    "column": 14,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "43935043b4e8ab2472fa-871ce8a7f335efa853dd",
+          "file": "routing.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "session transport failures do not masquerade as a signed-out user and can recover",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:23.724Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "43935043b4e8ab2472fa-d77c36c2086f75549390",
+          "file": "routing.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "themes.spec.ts",
+      "file": "themes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "theme changes preserve URL filters and cart and persist after refresh",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2738,
+                  "error": {
+                    "message": "Error: page.reload: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.reload: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:36:14",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts",
+                      "column": 14,
+                      "line": 36
+                    },
+                    "snippet": "  34 |   await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();\n  35 |   expect(new URL(page.url()).searchParams.get('q')).toBe('art');\n> 36 |   await page.reload();\n     |              ^\n  37 |   await ready(page);\n  38 |   await expect(page.locator('html')).toHaveAttribute('data-theme', 'kurio');\n  39 |   expect(page.url()).toBe(before);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts",
+                        "column": 14,
+                        "line": 36
+                      },
+                      "message": "Error: page.reload: net::ERR_ABORTED; maybe frame was detached?\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n\n\n  34 |   await expect(page.getByRole('link', { name: 'Carrinho, 1 itens', exact: true })).toBeVisible();\n  35 |   expect(new URL(page.url()).searchParams.get('q')).toBe('art');\n> 36 |   await page.reload();\n     |              ^\n  37 |   await ready(page);\n  38 |   await expect(page.locator('html')).toHaveAttribute('data-theme', 'kurio');\n  39 |   expect(page.url()).toBe(before);\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:36:14"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:27.047Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts",
+                    "column": 14,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-11c3c29fe39b99aeec65",
+          "file": "themes.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "theme switches preserve unsaved profile form values and keyboard focus",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2225,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:30.688Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-dbed5f25523203df0735",
+          "file": "themes.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "theme switches preserve checkout data and review without creating an order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2919,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:33.046Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-51f49888a5f0d6cd9994",
+          "file": "themes.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "an invalid saved theme falls back safely and remains switchable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1058,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:35.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-343f60aa1fa8132520f2",
+          "file": "themes.spec.ts",
+          "line": 93,
+          "column": 1
+        },
+        {
+          "title": "blocked preference storage does not crash the catalog or in-memory theme changes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1332,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:37.038Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-8256698d881f50818707",
+          "file": "themes.spec.ts",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "both themes keep critical controls within 320, 390, 768 and 1440 pixels",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8637,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:138:13",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:138:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:19:38.376Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-f7aa4e4457d73d85494b",
+          "file": "themes.spec.ts",
+          "line": 129,
+          "column": 1
+        },
+        {
+          "title": "theme changes preserve URL filters and cart and persist after refresh",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9698,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:29:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:29:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:25.640Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-changes-prese-7c9f3-t-and-persist-after-refresh-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-1e7e95ca98f883bdf1c0",
+          "file": "themes.spec.ts",
+          "line": 24,
+          "column": 1
+        },
+        {
+          "title": "theme switches preserve unsaved profile form values and keyboard focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9262,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:48:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:48:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:36.081Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-64aa1-m-values-and-keyboard-focus-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-64aa1-m-values-and-keyboard-focus-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-64aa1-m-values-and-keyboard-focus-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-3927f47c30c70545299c",
+          "file": "themes.spec.ts",
+          "line": 43,
+          "column": 1
+        },
+        {
+          "title": "theme switches preserve checkout data and review without creating an order",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10021,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:74:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:74:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:46.636Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-85de7-w-without-creating-an-order-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-85de7-w-without-creating-an-order-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-theme-switches-pres-85de7-w-without-creating-an-order-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-ff91ec4eb0f7662aada5",
+          "file": "themes.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "an invalid saved theme falls back safely and remains switchable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 15,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9096,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:100:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:100:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:22:57.505Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-an-invalid-saved-th-b58ea-fely-and-remains-switchable-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-an-invalid-saved-th-b58ea-fely-and-remains-switchable-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-an-invalid-saved-th-b58ea-fely-and-remains-switchable-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-f869187a997355a3ed0a",
+          "file": "themes.spec.ts",
+          "line": 93,
+          "column": 1
+        },
+        {
+          "title": "blocked preference storage does not crash the catalog or in-memory theme changes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 16,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9043,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:124:9",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:124:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:23:07.526Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-blocked-preference--988af--or-in-memory-theme-changes-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-blocked-preference--988af--or-in-memory-theme-changes-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-blocked-preference--988af--or-in-memory-theme-changes-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-a7cfbedb6bac5a5eaf42",
+          "file": "themes.spec.ts",
+          "line": 104,
+          "column": 1
+        },
+        {
+          "title": "both themes keep critical controls within 320, 390, 768 and 1440 pixels",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 17,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9253,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:138:13",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                      "column": 46,
+                      "line": 4
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                        "column": 46,
+                        "line": 4
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.site-header')\nExpected: visible\nReceived: hidden\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.site-header') with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for locator('.site-header')\u001b[22m\n\u001b[2m    20 × locator resolved to <header class=\"site-header\">…</header>\u001b[22m\n\u001b[2m       - unexpected value \"hidden\"\u001b[22m\n\n\n   at helpers/interface.ts:4\n\n  2 |\n  3 | export async function openOptions(page: Page) {\n> 4 |   await expect(page.locator('.site-header')).toBeVisible();\n    |                                              ^\n  5 |   const theme = page.getByRole('group', { name: 'Tema visual', exact: true });\n  6 |   if (!(await theme.isVisible())) {\n  7 |     const footer = page.getByRole('button', { name: 'Opções da demonstração', exact: true });\n    at openOptions (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:4:46)\n    at selectTheme (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts:25:9)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/themes.spec.ts:138:13"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T13:23:17.437Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/test-results-consolidated-final/themes-both-themes-keep-cr-3fb9e-320-390-768-and-1440-pixels-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/helpers/interface.ts",
+                    "column": 46,
+                    "line": 4
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "d9a1a05a5866edb60a2f-711c843179a98ba93a79",
+          "file": "themes.spec.ts",
+          "line": 129,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T13:17:54.219Z",
+    "duration": 332903.766,
+    "expected": 52,
+    "skipped": 0,
+    "unexpected": 18,
+    "flaky": 0
+  }
+}

@@ -1,6 +1,23 @@
-import type { NFT, Order, OrderInput, Quote, Scenario, User, Wallet } from '../contracts';
+import type {
+  CollectorDetails,
+  NFT,
+  NewsletterSubscription,
+  Order,
+  OrderInput,
+  Quote,
+  Scenario,
+  User,
+  Wallet,
+} from '../contracts';
 import { fromWei, toWei } from '../domain/money';
-import { createNfts, DEMO_PASSWORD } from './fixtures';
+import {
+  editionCartKey,
+  ensureEditions,
+  selectEdition,
+  setEditionAvailability,
+} from '../domain/editions';
+import { createNfts, DEMO_LOGIN } from './fixtures';
+import { CATALOG_REVISION, migrateCatalog } from './migrations/catalog';
 
 interface StoredUser extends User {
   passwordHash: string;
@@ -18,6 +35,7 @@ interface StoredOrder {
 }
 interface Database {
   schema: 1;
+  catalogRevision?: number;
   nfts: NFT[];
   users: StoredUser[];
   currentUserId: string | null;
@@ -30,6 +48,10 @@ interface Database {
   scenario: Scenario;
   sequence: number;
   sessionGeneration: number;
+  newsletterSubscriptions?: Record<
+    string,
+    Omit<NewsletterSubscription, 'simulated' | 'alreadySubscribed'>
+  >;
 }
 const STORAGE_KEY = 'jungle.demo.database.v1';
 let memory: Database | undefined;
@@ -86,15 +108,62 @@ export async function initializeDatabase(force = false) {
   }
   const existing = !force && read();
   if (existing) {
+    let migrated = false;
+    if (existing.newsletterSubscriptions === undefined) {
+      existing.newsletterSubscriptions = {};
+      migrated = true;
+    }
+    if ((existing.catalogRevision ?? 0) < CATALOG_REVISION) {
+      existing.nfts = migrateCatalog(existing.nfts, createNfts());
+      existing.catalogRevision = CATALOG_REVISION;
+      existing.quotes = {};
+      existing.guestVersion++;
+      for (const user of existing.users) user.cartVersion++;
+      migrated = true;
+    }
+    const fixtures = new Map(createNfts().map((nft) => [nft.id, nft]));
+    existing.nfts = existing.nfts.map((nft) => {
+      if (!nft.editions?.length) migrated = true;
+      ensureEditions(nft);
+      const fixture = fixtures.get(nft.id);
+      if (!fixture) return nft;
+      if (nft.network !== undefined && nft.releasedAt !== undefined && nft.popularity !== undefined)
+        return nft;
+      migrated = true;
+      return {
+        ...nft,
+        network: nft.network ?? fixture.network,
+        releasedAt: nft.releasedAt ?? fixture.releasedAt,
+        popularity: nft.popularity ?? fixture.popularity,
+      };
+    });
+    for (const user of existing.users) {
+      if (user.username === undefined) {
+        user.username =
+          user.id === 'user-1'
+            ? 'alex.collector'
+            : user.id === 'user-2'
+              ? 'taylor.collector'
+              : `collector.${user.id.replace(/[^a-z0-9]/gi, '')}`;
+        migrated = true;
+      }
+      for (const wallet of user.wallets)
+        if (wallet.walletType === undefined) {
+          wallet.walletType = 'MetaMask';
+          migrated = true;
+        }
+    }
     memory = existing;
+    if (migrated) persist(existing);
     scheduleOrders(existing);
     return existing;
   }
-  const passwordHash = await hash(DEMO_PASSWORD);
+  const passwordHash = await hash(DEMO_LOGIN.password);
   const users: StoredUser[] = ['collector', 'second'].map((name, index) => ({
     id: `user-${index + 1}`,
-    email: `${name}@example.test`,
+    email: index ? `${name}@example.test` : DEMO_LOGIN.email,
     name: index ? 'Taylor Collector' : 'Alex Collector',
+    username: index ? 'taylor.collector' : 'alex.collector',
     passwordHash,
     favorites: [],
     cart: {},
@@ -106,12 +175,17 @@ export async function initializeDatabase(force = false) {
         address: `0x${String(index + 1).repeat(40)}`,
         network: 'Ethereum',
         primary: true,
+        walletType: 'MetaMask',
       },
     ],
   }));
   const db: Database = {
     schema: 1,
-    nfts: createNfts(),
+    catalogRevision: CATALOG_REVISION,
+    nfts: createNfts().map((nft) => {
+      ensureEditions(nft);
+      return nft;
+    }),
     users,
     currentUserId: null,
     expiresAt: 0,
@@ -123,6 +197,7 @@ export async function initializeDatabase(force = false) {
     scenario: 'default',
     sequence: 1000,
     sessionGeneration: 1,
+    newsletterSubscriptions: {},
   };
   persist(db);
   return db;
@@ -141,6 +216,9 @@ export function publicUser(user: StoredUser): User {
     id: user.id,
     email: user.email,
     name: user.name,
+    username: user.username,
+    ens: user.ens,
+    walletNickname: user.walletNickname,
     ...(user.avatar ? { avatar: user.avatar } : {}),
   };
 }
@@ -174,13 +252,17 @@ export function ownerCart(db: Database) {
 export function cartResponse(db: Database) {
   const cart = ownerCart(db);
   return {
-    items: Object.entries(cart.items)
-      .map(([nftId, quantity]) => ({
-        nftId,
+    items: Object.entries(cart.items).map(([id, quantity]) => {
+      const { nft, edition } = resolveCartItem(db, id);
+      return {
+        id,
+        nftId: nft.id,
+        editionId: edition.id,
+        editionLabel: edition.label,
         quantity,
-        nft: db.nfts.find((nft) => nft.id === nftId)!,
-      }))
-      .filter((item) => item.nft),
+        nft: { ...nft, price: edition.price, available: edition.available },
+      };
+    }),
     version: cart.version,
   };
 }
@@ -193,39 +275,93 @@ export function touchCart(db: Database) {
 export function nftById(db: Database, id: string) {
   const nft = db.nfts.find((item) => item.id === id);
   if (!nft) throw new ApiError('This collectible could not be found.', 404, 'NOT_FOUND');
+  ensureEditions(nft);
   return nft;
 }
+export function resolveCartItem(db: Database, key: string) {
+  const [nftId, editionId, ...extra] = key.split('::');
+  if (!nftId || extra.length) throw new ApiError('The cart item is invalid.');
+  const nft = nftById(db, nftId);
+  try {
+    const edition = selectEdition(nft, editionId);
+    return { nft, edition, key: editionCartKey(nft, edition.id) };
+  } catch {
+    throw new ApiError('This edition could not be found.', 404, 'EDITION_NOT_FOUND');
+  }
+}
+export function selectedCartItem(db: Database, nftId: string, editionId?: string) {
+  if (
+    editionId !== undefined &&
+    (typeof editionId !== 'string' || !editionId || editionId.includes('::'))
+  )
+    throw new ApiError('Choose a valid edition.');
+  return resolveCartItem(db, editionId ? `${nftId}::${editionId}` : nftId);
+}
 export function quantity(value: unknown) {
-  const n = Number(value);
-  if (!Number.isSafeInteger(n) || n < 1 || n > 99)
+  if (typeof value !== 'number' || !Number.isSafeInteger(value) || value < 1 || value > 99)
     throw new ApiError('Choose a whole quantity between 1 and 99.');
-  return n;
+  return value;
 }
 export function walletValidation(input: Partial<Wallet>) {
-  if (!input.label?.trim() || input.label.length > 60)
+  if (typeof input.label !== 'string' || !input.label.trim() || input.label.length > 60)
     throw new ApiError('A wallet label of 1 a 60 characters is required.');
   if (!/^0x[a-fA-F0-9]{40}$/.test(input.address ?? ''))
     throw new ApiError('Enter a valid 0x wallet address (40 hexadecimal characters).');
   if (!['Ethereum', 'Polygon'].includes(input.network ?? ''))
     throw new ApiError('Select Ethereum or Polygon.');
+  if (input.primary !== undefined && typeof input.primary !== 'boolean')
+    throw new ApiError('The primary wallet flag must be a boolean.');
+  if (
+    input.walletType !== undefined &&
+    !['MetaMask', 'Coinbase', 'WalletConnect'].includes(input.walletType)
+  )
+    throw new ApiError('Choose a supported wallet type.');
+  for (const [field, maximum] of [
+    ['displayName', 120],
+    ['profileName', 120],
+    ['secondaryAddress', 100],
+    ['referralCode', 80],
+    ['email', 200],
+    ['ens', 100],
+  ] as const) {
+    const value = input[field];
+    if (value !== undefined && (typeof value !== 'string' || value.length > maximum))
+      throw new ApiError(`The wallet ${field} is too long or invalid.`);
+  }
+  if (input.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.email))
+    throw new ApiError('Enter a valid wallet email address.');
+  if (input.ens && !isEnsName(input.ens)) throw new ApiError('Enter a valid .eth name.');
+  if (
+    input.secondaryAddress &&
+    !/^0x[a-fA-F0-9]{40}$/.test(input.secondaryAddress) &&
+    !isEnsName(input.secondaryAddress)
+  )
+    throw new ApiError('Use a 0x wallet address or a .eth name as the secondary address.');
+}
+export function isEnsName(value: string) {
+  return /^(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+eth$/i.test(value);
 }
 export async function buildQuote(db: Database, coupon = '', persistQuote = true): Promise<Quote> {
   const user = session(db, false);
   const cart = ownerCart(db);
   const items = Object.entries(cart.items).map(([id, amount]) => {
-    const nft = nftById(db, id);
+    const { nft, edition } = resolveCartItem(db, id);
     quantity(amount);
-    if (nft.available < amount)
+    if (edition.available < amount)
       throw new ApiError(
         `${nft.title} availability changed. Update the quantity in your cart.`,
         409,
         'AVAILABILITY_CHANGED',
       );
     return {
-      nftId: id,
+      nftId: nft.id,
+      cartItemId: id,
+      editionId: edition.id,
+      editionLabel: edition.label,
+      ...(nft.tokenId ? { tokenId: nft.tokenId } : {}),
       title: nft.title,
       image: nft.image,
-      unitPrice: nft.price,
+      unitPrice: edition.price,
       quantity: amount,
     };
   });
@@ -243,13 +379,23 @@ export async function buildQuote(db: Database, coupon = '', persistQuote = true)
     0n,
   );
   const discount = code ? subtotal / 10n : 0n;
-  const networkFee = toWei('0.002');
+  const networkFee = toWei('0.016');
   const fingerprint = await hash(
     JSON.stringify({
       user: user?.id ?? 'guest',
       version: cart.version,
-      items: items.map((item) => ({ ...item, version: nftById(db, item.nftId).version })),
+      items: items.map((item) => ({
+        ...item,
+        version: nftById(db, item.nftId).version,
+        network: nftById(db, item.nftId).network,
+      })),
       code,
+      pricing: {
+        subtotal: fromWei(subtotal),
+        discount: fromWei(discount),
+        networkFee: fromWei(networkFee),
+        total: fromWei(subtotal - discount + networkFee),
+      },
     }),
   );
   const quote: Quote = {
@@ -303,15 +449,17 @@ export function settleOrder(id: string) {
   if (stored.refusal) {
     for (const item of stored.order.items) {
       const nft = nftById(db, item.nftId);
-      nft.available += item.quantity;
+      const edition = selectEdition(nft, item.editionId);
+      setEditionAvailability(nft, item.editionId, edition.available + item.quantity);
       nft.version++;
       emitNft(nft);
     }
   } else {
     for (const item of stored.order.items) {
-      const remaining = (user.cart[item.nftId] ?? 0) - item.quantity;
-      if (remaining > 0) user.cart[item.nftId] = remaining;
-      else delete user.cart[item.nftId];
+      const key = item.cartItemId ?? editionCartKey(nftById(db, item.nftId), item.editionId);
+      const remaining = (user.cart[key] ?? 0) - item.quantity;
+      if (remaining > 0) user.cart[key] = remaining;
+      else delete user.cart[key];
     }
     user.cartVersion++;
   }
@@ -348,6 +496,39 @@ function normalizeOrderInput(input: OrderInput): OrderInput {
     throw new ApiError('Select a supported network.');
   if (input.coupon !== undefined && (typeof input.coupon !== 'string' || input.coupon.length > 32))
     throw new ApiError('Invalid coupon.');
+  if (
+    input.provider !== undefined &&
+    !['MetaMask', 'Coinbase', 'WalletConnect'].includes(input.provider)
+  )
+    throw new ApiError('Choose a supported wallet provider.');
+  let collectorDetails: CollectorDetails | undefined;
+  if (input.collectorDetails !== undefined) {
+    if (
+      !input.collectorDetails ||
+      typeof input.collectorDetails !== 'object' ||
+      Array.isArray(input.collectorDetails)
+    )
+      throw new ApiError('Collector details must be an object.');
+    collectorDetails = {};
+    for (const [field, maximum] of [
+      ['username', 40],
+      ['profileName', 120],
+      ['ens', 100],
+      ['referralCode', 80],
+      ['notes', 1000],
+    ] as const) {
+      const value = input.collectorDetails[field];
+      if (value === undefined) continue;
+      if (typeof value !== 'string' || value.length > maximum)
+        throw new ApiError(`The collector ${field} is too long or invalid.`);
+      const normalized = value.trim();
+      if (!normalized) continue;
+      if (field === 'username' && !/^[a-zA-Z0-9._-]{3,40}$/.test(normalized))
+        throw new ApiError('Use a valid collector username.');
+      if (field === 'ens' && !isEnsName(normalized)) throw new ApiError('Enter a valid .eth name.');
+      collectorDetails[field] = field === 'ens' ? normalized.toLowerCase() : normalized;
+    }
+  }
   return {
     quoteFingerprint: input.quoteFingerprint,
     idempotencyKey: input.idempotencyKey,
@@ -356,6 +537,8 @@ function normalizeOrderInput(input: OrderInput): OrderInput {
     collectorName: input.collectorName.trim(),
     collectorEmail: input.collectorEmail.trim().toLowerCase(),
     ...(input.coupon ? { coupon: input.coupon.trim().toUpperCase() } : {}),
+    ...(collectorDetails && Object.keys(collectorDetails).length ? { collectorDetails } : {}),
+    ...(input.provider ? { provider: input.provider } : {}),
   };
 }
 export async function createOrder(db: Database, input: OrderInput) {
@@ -391,11 +574,30 @@ export async function createOrder(db: Database, input: OrderInput) {
       'QUOTE_CHANGED',
     );
   const current = await buildQuote(db, input.coupon, false);
-  if (current.fingerprint !== input.quoteFingerprint)
+  if (
+    current.fingerprint !== input.quoteFingerprint ||
+    current.subtotal !== savedQuote.subtotal ||
+    current.discount !== savedQuote.discount ||
+    current.networkFee !== savedQuote.networkFee ||
+    current.total !== savedQuote.total
+  )
     throw new ApiError(
       'Prices or availability changed. Review the updated quote and confirm again.',
       409,
       'QUOTE_CHANGED',
+    );
+  const networks = new Set(current.items.map((item) => nftById(db, item.nftId).network));
+  if (networks.size !== 1)
+    throw new ApiError(
+      'Purchase collectibles from one network at a time. Remove items from other networks.',
+      409,
+      'MIXED_NETWORKS',
+    );
+  if (!networks.has(input.network))
+    throw new ApiError(
+      'Select a saved wallet on the same network as the collectibles in your cart.',
+      409,
+      'NETWORK_MISMATCH',
     );
   const id = `order-${++db.sequence}`;
   const order: Order = {
@@ -407,6 +609,19 @@ export async function createOrder(db: Database, input: OrderInput) {
     transactionId: `0x${id.replace('order-', '').padStart(64, '0')}`,
     walletId: wallet.id,
     network: wallet.network,
+    collector: {
+      name: input.collectorName,
+      email: input.collectorEmail,
+      ...input.collectorDetails,
+    },
+    wallet: {
+      label: wallet.label,
+      address: wallet.address,
+      network: wallet.network,
+      ...((input.provider ?? wallet.walletType)
+        ? { provider: input.provider ?? wallet.walletType }
+        : {}),
+    },
   };
   db.orders[id] = {
     userId: user.id,
@@ -418,7 +633,8 @@ export async function createOrder(db: Database, input: OrderInput) {
   db.attempts[attempt] = id;
   for (const item of order.items) {
     const nft = nftById(db, item.nftId);
-    nft.available -= item.quantity;
+    const edition = selectEdition(nft, item.editionId);
+    setEditionAvailability(nft, item.editionId, edition.available - item.quantity);
     nft.version++;
     emitNft(nft);
   }

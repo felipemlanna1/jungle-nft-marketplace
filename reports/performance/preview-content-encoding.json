@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-27T13:43:50.315Z",
+  "target": "http://127.0.0.1:4173",
+  "method": "Raw node:http body counting, no client decompression. These are response body bytes, not estimated gzip sizes or browser transferSize including headers.",
+  "rows": [
+    {
+      "path": "/assets/index-C4c8O8Ad.js",
+      "status": 200,
+      "encoding": "gzip",
+      "originalBytes": 3568,
+      "actualResponseBodyBytes": 1763,
+      "transferEncoding": "chunked"
+    },
+    {
+      "path": "/assets/browser-Cg5TYTUX.js",
+      "status": 200,
+      "encoding": "gzip",
+      "originalBytes": 334149,
+      "actualResponseBodyBytes": 109785,
+      "transferEncoding": "chunked"
+    },
+    {
+      "path": "/assets/react-runtime-Dg_oQ7P3.js",
+      "status": 200,
+      "encoding": "gzip",
+      "originalBytes": 223639,
+      "actualResponseBodyBytes": 69407,
+      "transferEncoding": "chunked"
+    },
+    {
+      "path": "/assets/application-DfZh-EP8.js",
+      "status": 200,
+      "encoding": "gzip",
+      "originalBytes": 218960,
+      "actualResponseBodyBytes": 73158,
+      "transferEncoding": "chunked"
+    },
+    {
+      "path": "/assets/tanstack-DbX0Ee4r.js",
+      "status": 200,
+      "encoding": "gzip",
+      "originalBytes": 125561,
+      "actualResponseBodyBytes": 41725,
+      "transferEncoding": "chunked"
+    }
+  ]
+}

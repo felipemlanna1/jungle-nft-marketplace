@@ -1,0 +1,45 @@
+{
+  "scope": "Correção de prontidão dos testes após introdução do placeholder inicial e handshake de autenticação.",
+  "runtimeChanged": false,
+  "referencesChanged": false,
+  "assertionsRemoved": false,
+  "cases": [
+    {
+      "test": "favorites-navigation.spec.ts guest",
+      "falseSignal": "A classe .nft-card já existe no placeholder; a escolha do acionador era capturada antes do rodapé real.",
+      "newSignal": "Link acessível Ver Emerald Ape #042 antes de escolher o acionador e controle acessível real na abertura do menu.",
+      "preserved": "Foco no acionador correto, menu ausente, diálogo de login único e login utilizável."
+    },
+    {
+      "test": "kurio.spec.ts filters",
+      "falseSignal": "A classe .nft-card do placeholder antecede a canonização da URL pela aplicação.",
+      "newSignal": "Link acessível da obra filtrada antes de capturar a URL.",
+      "preserved": "Igualdade exata da URL após abrir/fechar menu e após refresh, filtros e carrinho."
+    },
+    {
+      "test": "recovery.spec.ts login setup",
+      "falseSignal": "O hero do AuthBackdrop já é visível enquanto o login está pendente.",
+      "newSignal": "Redirect para início e encerramento do diálogo de login antes das fixtures REST autenticadas.",
+      "preserved": "Resultado incerto permanece ao abrir recibo antigo; recuperação devolve o mesmo pedido e não duplica a compra."
+    }
+  ],
+  "policy": "Nenhuma pausa fixa e nenhuma espera direta pela sessão foram acrescentadas. Erro ou cancelamento de login continua impedindo o redirect e falhando no teste.",
+  "before": "reports/diagnostics/bootstrap-readiness-run/manifest.json",
+  "after": {
+    "stats": {
+      "startTime": "2026-10-27T17:34:04.219Z",
+      "duration": 31464.767,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "report": "reports/e2e-readiness-cases-build-verified.json"
+  },
+  "fullRun": {
+    "passed": 148,
+    "failed": 0,
+    "report": "reports/e2e-final-build-evidence.json",
+    "buildSameAsDiagnostic": true
+  }
+}

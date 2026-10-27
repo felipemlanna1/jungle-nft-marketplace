@@ -1,0 +1,31 @@
+{
+  "source": "Authorized Figma copy",
+  "originalUniqueBytes": 7959897,
+  "assets": [
+    {
+      "sourceHash": "f20b58b99de12b6eceede2090607e4b999275bba95de7674bb14f26b59666b21",
+      "local": "/figma/art/f20b58b99de12b6e.webp",
+      "bytes": 121896,
+      "encoding": "WebP q95, 900x900, original aspect ratio 1:1"
+    },
+    {
+      "sourceHash": "9b25d8d72395aa62f919f6ad33b95b7ba7bbfee6049e95cf159a319b03ecb8d9",
+      "local": "/figma/art/9b25d8d72395aa62.webp",
+      "bytes": 139954,
+      "encoding": "WebP q95, 900x900, original aspect ratio 1:1"
+    },
+    {
+      "sourceHash": "326df4c1c08c31c88b9f407e51be3991e46667183af62aa1501927adc76f52b5",
+      "local": "/figma/art/326df4c1c08c31c8.webp",
+      "bytes": 121208,
+      "encoding": "WebP q95, 900x900, original aspect ratio 1:1"
+    },
+    {
+      "sourceHash": "2a42ba5adc341c3d0e1ad6905058e2762d995fc988113a7cd28b0d15f6a4ba28",
+      "local": "/figma/art/2a42ba5adc341c3d.webp",
+      "bytes": 147234,
+      "encoding": "WebP q95, 900x900, original aspect ratio 1:1"
+    }
+  ],
+  "visualComparison": "Pending same-size screenshot comparison; no claim of byte-identical raster after encoding."
+}

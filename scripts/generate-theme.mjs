@@ -1,8 +1,8 @@
-import { format } from 'prettier';
+import { format, resolveConfig } from 'prettier';
 import { build } from 'vite';
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-// Compile theme data in isolation. Components and application services never execute here.
+const formatOptions = { ...(await resolveConfig('src/styles.css')), parser: 'css' };
 const dir = new URL('../node_modules/.cache/kurio-theme/', import.meta.url);
 await mkdir(dir, { recursive: true });
 await build({
@@ -15,7 +15,7 @@ await build({
     minify: false,
   },
 });
-const { themes } = await import(
+const { themes, DEFAULT_THEME } = await import(
   pathToFileURL(dir.pathname + 'theme.mjs').href + '?v=' + Date.now()
 );
 const kebab = (value) => value.replace(/[A-Z]/g, (letter) => '-' + letter.toLowerCase());
@@ -37,29 +37,26 @@ function serializeTheme(theme) {
 const generated = Object.entries(themes)
   .map(([name, value]) => {
     const selector =
-      name === 'expedition' ? `:root, :root[data-theme='${name}']` : `:root[data-theme='${name}']`;
+      name === DEFAULT_THEME ? `:root, :root[data-theme='${name}']` : `:root[data-theme='${name}']`;
     return selector + ' {\n' + serializeTheme(value) + '\n}';
   })
   .join('\n\n');
-await writeFile(
-  'src/styleguide/theme/theme.generated.css',
-  await format(generated, { parser: 'css' }),
-);
+await writeFile('src/styleguide/theme/theme.generated.css', await format(generated, formatOptions));
 await rm(dir, { recursive: true, force: true });
 
 async function compileStyles(sources, target) {
   let compiledStyles = (await Promise.all(sources.map((source) => readFile(source, 'utf8')))).join(
     '\n',
   );
-  for (const [name, value] of Object.entries(themes.expedition.tokens.breakpoints)) {
+  for (const [name, value] of Object.entries(themes[DEFAULT_THEME].tokens.breakpoints)) {
     compiledStyles = compiledStyles.replaceAll(`__BREAKPOINT_${name.toUpperCase()}__`, value);
   }
-  await writeFile(target, await format(compiledStyles, { parser: 'css' }));
+  await writeFile(target, await format(compiledStyles, formatOptions));
 }
 await compileStyles(['src/styles.template.css'], 'src/styles.css');
 await compileStyles(
-  ['shell', 'primitives', 'catalog', 'flows'].map(
-    (name) => `src/styleguide/theme/expedition/styles/${name}.template.css`,
+  ['shell', 'catalog', 'account', 'commerce', 'cart-order'].map(
+    (name) => `src/styleguide/theme/kurio/styles/${name}.template.css`,
   ),
-  'src/styles.expedition.css',
+  'src/styles.kurio.css',
 );

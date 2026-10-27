@@ -1,0 +1,30 @@
+{
+  "source": "Authorized Figma copy, same artwork and composition",
+  "original": {
+    "sha256": "f20b58b99de12b6eceede2090607e4b999275bba95de7674bb14f26b59666b21",
+    "bytes": 1885435
+  },
+  "desktop": {
+    "path": "public/figma/art/f20b58b99de12b6e.webp",
+    "sha256": "d75120fe23d50cf1ce78579759c25a8d947417d583c048dfef1475c2540a1153",
+    "bytes": 121896,
+    "unchanged": true
+  },
+  "mobile": {
+    "path": "public/figma/art/f20b58b99de12b6e-300.webp",
+    "sha256": "1eaf6dcf08291e9f40feccc1fcfcc3eadfc4384447ae29be3bd257c413de9010",
+    "bytes": 21062,
+    "width": 300,
+    "height": 300,
+    "encoder": "cwebp1.6.0",
+    "quality": 95,
+    "method": 6,
+    "metadata": "none",
+    "psnrAllDb": 49.62,
+    "ssimToolReported": 19.74
+  },
+  "savedBytesVsDesktop": 100834,
+  "savedPercentVsDesktop": 82.72,
+  "reason": "The mobile hero renders at138px (108px below374px viewport), so300px covers1.75xDPR without downloading the900px desktop asset.",
+  "limitations": "Lossy encoding; no byte-identical pixel claim. PSNR is the encoder metric after deterministic resizing, not a measurement against a900px image at equal dimensions."
+}

@@ -1,0 +1,30 @@
+{
+  "reason": "Evitar dezenas de megabytes de imagens base64 repetidas em relatórios de texto. O HTML e os traces permanecem completos. Hashes de arquivos brutos dos manifests anteriores se referem à serialização original, retida no arquivo local; a versão publicada usa anexos externos equivalentes.",
+  "archive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27",
+  "files": [
+    {
+      "path": "reports/e2e-final-build-verified.json",
+      "rawSha256": "216e83beb2ab47a400d7bcaae3e981139b284527ede38a0b9a3d4e3e8b98a39e",
+      "packagedSha256": "637ba0572b0f501a52ad2264fd0ae520b62e9258fe6e34836a718d0978a82efc",
+      "imageAttachments": 20
+    },
+    {
+      "path": "reports/diagnostics/login-bootstrap-first-full-run/e2e-final-build-verified.json",
+      "rawSha256": "32c7e855ea6d880bc30c443a2649c948825086bd7a3646ff955f9d55abe6d22d",
+      "packagedSha256": "d6759239da72f4c46723fe9b026186c04b42bc9c23c590caf6d6c97c651c7bdb",
+      "imageAttachments": 20
+    },
+    {
+      "path": "reports/diagnostics/pre-optimization-green-run/e2e-final-build-verified.json",
+      "rawSha256": "f654b135b70f8f744173e5ec37a71571adb64ca3840b10a931d2b4f2510dc9b8",
+      "packagedSha256": "dc656e8e8635c7d314bb3db1d24d806287b68ac408a8ac70acd94d3ddea1a01e",
+      "imageAttachments": 20
+    },
+    {
+      "path": "reports/diagnostics/bootstrap-readiness-run/e2e-final-build-verified.json",
+      "rawSha256": "e52d0ac7eb733a415aab76a2f77cd705603fc82206d6085e6d722efaba4e153b",
+      "packagedSha256": "ea538d86855244d7fa647eee7e24a72d4054f9804547b3ddaf66d934c1c1b160",
+      "imageAttachments": 20
+    }
+  ]
+}

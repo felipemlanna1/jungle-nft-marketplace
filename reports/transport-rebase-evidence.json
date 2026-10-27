@@ -1,0 +1,79 @@
+{
+  "completedAt": "2026-10-27T15:30:10.747003+00:00",
+  "finding": "session-generation-partial-reset",
+  "severity": "P1",
+  "problem": "Recriar apenas o armazenamento da base mantinha uma geração mais alta em sessionStorage. O cliente rejeitava a sessão autoritativa menor e o login seguinte; uma resposta antiga numericamente igual ou maior também podia sobreviver a um reset.",
+  "initialProbe": {
+    "method": "Código HTTP real compilado em /tmp com adapter Axios sintético; não representa um E2E de browser. Nenhuma fonte de runtime foi alterada pelo probe.",
+    "storedGeneration": "17",
+    "results": [
+      {
+        "path": "/session",
+        "incomingGeneration": "1",
+        "outcome": "ERR_CANCELED"
+      },
+      {
+        "path": "/session/login",
+        "incomingGeneration": "2",
+        "outcome": "ERR_CANCELED"
+      }
+    ]
+  },
+  "red": {
+    "command": "npx vitest run src/domain/session-transport.test.ts",
+    "passed": 9,
+    "failed": 3,
+    "cases": [
+      "DB recriada com geração1 e transporte17 impede GET sessão e login",
+      "Resposta atrasada de A com geração2 é aceita depois de reset e login de B com geração2",
+      "Resposta atrasada de A com geração17 é aceita depois de reset e login de B com geração2"
+    ]
+  },
+  "green": {
+    "command": "npx vitest run src/domain/session-transport.test.ts",
+    "passed": 12,
+    "failed": 0,
+    "typecheck": "npx tsc -b aprovado",
+    "lint": "ESLint do cliente HTTP e testes aprovado",
+    "scope": "Os nove testes anteriores continuam aprovados. O novo caso de reset parcial atravessa MSW real para GET sessão, POST login e PATCH perfil. Os dois casos de resposta antiga atrasam apenas a resposta GET e usam reset e login reais do MSW."
+  },
+  "decision": {
+    "choice": "Capturar uma época local no interceptor síncrono e associá-la à configuração de cada requisição por WeakMap. Apenas respostas da época atual podem reconciliar a geração. Aceitar login, logout ou reset avança a época mesmo quando o número recebido se repete.",
+    "reason": "O número do mock pode ser reiniciado e não é suficiente para ordenar respostas entre instâncias da base. A época local conserva a proteção contra respostas de outra conta e permite recuperar uma base recriada sem bloquear a autenticação.",
+    "limits": "A época permanece interna ao cliente. Não cria header, DTO ou API nem substitui autenticação de produção. Respostas em voo invalidadas por uma transição são descartadas conservadoramente."
+  },
+  "sourceHashes": {
+    "src/services/http/index.ts": "29159fef32567fd6049bd9861a9511837ae1a1ae9db09ce1f05ac191c2dc53ea",
+    "src/services/http/generation.ts": "173cd24eca1bdfc653fc9f6359adb68a80cc1ffbbdd3c0b53141d808256d403d",
+    "src/domain/session-transport.test.ts": "bbff7543d0af28b44b3e26e8c25081d4163c8b200f9828a8b0c5fdb9e606c247"
+  },
+  "pending": "Build e E2E finais pertencem aos gates gerais; este relatório não substitui essas execuções.",
+  "followupBootstrap": {
+    "completedAt": "2026-10-27T16:05:40.209897+00:00",
+    "finding": "bootstrap-login-initial-generation",
+    "severity": "P1",
+    "cause": "A primeira adoção de geração undefined→1 avançava a época como se houvesse uma troca de proprietário. Um login já iniciado na época0 era cancelado quando o GET de bootstrap chegava imediatamente antes do POST200 de login2.",
+    "fullBrowserEvidence": "A rodada geral preservada terminou147/148, com fontes e build imutáveis. Trace real registra GET/session1 encerrando15:58:17.785 e POST/login2 iniciando15:58:17.784. Artefatos em reports/diagnostics/login-bootstrap-first-full-run/.",
+    "red": {
+      "passed": 13,
+      "failed": 1,
+      "command": "npx vitest run src/domain/session-transport.test.ts"
+    },
+    "decision": "Descoberta inicial não é uma transição de identidade. Incrementar a época apenas quando uma geração conhecida muda ou quando login/logout/reset é explicitamente aceito. Essa distinção conserva o rebase autoritativo e não invalida o login legítimo em voo.",
+    "green": {
+      "transportPassed": 14,
+      "transportFailed": 0,
+      "combinedWithAdditionOwnership": 21,
+      "typecheck": "aprovado",
+      "lint": "aprovado",
+      "format": "aprovado"
+    },
+    "coverage": "Duas ordens determinísticas com cliente HTTP recém-importado: GET inicial antes da resposta de login deve permitir login2; login2 antes do GET nulo deve descartar a resposta antiga. Os doze testes anteriores, incluindo resets com números reutilizados, permanecem aprovados.",
+    "pending": "Nova execução geral de build/E2E e Lighthouse antes da liberação."
+  },
+  "finalSourceHashes": {
+    "src/services/http/index.ts": "29159fef32567fd6049bd9861a9511837ae1a1ae9db09ce1f05ac191c2dc53ea",
+    "src/services/http/generation.ts": "84b21d620d877bf25ec189394924cfe917b0c33b6befa9e3d33c081aa3aea9c1",
+    "src/domain/session-transport.test.ts": "ff62c6f9c69f1048d877739ae06c70bd800c53e8064f7e5a521f8bb95ce514ba"
+  }
+}

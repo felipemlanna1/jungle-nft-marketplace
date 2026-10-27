@@ -1,0 +1,50 @@
+[
+  {
+    "theme": "kurio",
+    "width": 320,
+    "horizontalOverflow": false,
+    "inputWidth": 149.578125
+  },
+  {
+    "theme": "kurio",
+    "width": 414,
+    "horizontalOverflow": false,
+    "inputWidth": 243.578125
+  },
+  {
+    "theme": "kurio",
+    "width": 768,
+    "horizontalOverflow": false,
+    "inputWidth": 221.578125
+  },
+  {
+    "theme": "kurio",
+    "width": 1440,
+    "horizontalOverflow": false,
+    "inputWidth": 262.140625
+  },
+  {
+    "theme": "expedition",
+    "width": 320,
+    "horizontalOverflow": false,
+    "inputWidth": 139.1875
+  },
+  {
+    "theme": "expedition",
+    "width": 414,
+    "horizontalOverflow": false,
+    "inputWidth": 233.1875
+  },
+  {
+    "theme": "expedition",
+    "width": 768,
+    "horizontalOverflow": false,
+    "inputWidth": 213.1875
+  },
+  {
+    "theme": "expedition",
+    "width": 1440,
+    "horizontalOverflow": false,
+    "inputWidth": 264.15625
+  }
+]

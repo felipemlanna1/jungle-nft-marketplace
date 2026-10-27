@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useQueryClient, type QueryClient } from '@tanstack/react-query';
 import { useNavigate } from '@tanstack/react-router';
 import axios from 'axios';
 import { market } from '../../../services/marketplace';
@@ -13,26 +13,7 @@ export function messageOf(error: unknown): string {
   }
   return error instanceof Error ? error.message : 'Something went wrong. Please try again.';
 }
-export function safeRedirect(value: unknown): string {
-  if (
-    typeof value !== 'string' ||
-    !value.startsWith('/') ||
-    value.startsWith('//') ||
-    value.includes('\\')
-  )
-    return '/';
-  try {
-    const url = new URL(value, window.location.origin);
-    return url.origin === window.location.origin &&
-      /^\/(?:$|nft\/|cart(?:\?|$)|checkout(?:\?|$)|profile(?:\?|$)|wallets(?:\?|$)|orders\/)/.test(
-        url.pathname + url.search,
-      )
-      ? url.pathname + url.search
-      : '/';
-  } catch {
-    return '/';
-  }
-}
+export { safeRedirect } from '../../../lib/returnTo';
 export function useSession() {
   return useQuery<User | null>({
     queryKey: ['session'],
@@ -64,3 +45,8 @@ export function useAcceptSession() {
 }
 export const passwordValid = (value: string) =>
   value.length >= 8 && /[A-Z]/.test(value) && /[a-z]/.test(value) && /[0-9]/.test(value);
+
+export function assertSessionOwner(client: QueryClient, owner: string) {
+  if (!owner || client.getQueryData<User | null>(['session'])?.id !== owner)
+    throw new Error('A sessão mudou. Entre novamente antes de salvar.');
+}

@@ -1,87 +1,131 @@
-import { Link } from '@tanstack/react-router';
+import { Input, Button } from '../../../../styleguide';
 import { messageOf } from '../../hooks/useAccount';
 import { PasswordForm } from '../../components/PasswordForm';
+import { AccountSidebar } from '../../components/AccountSidebar';
+import { EnsField } from '../../components/EnsField';
 import { useProfile } from './useProfile';
 export function ProfilePage() {
-  const { session, name, setName, avatar, localError, save, submit, loadAvatar } = useProfile();
-  if (session.isPending)
+  const { ready, session, values, setField, localError, save, submit, loadAvatar } = useProfile();
+  if (!session.data)
     return (
       <section className="page-shell">
         <p role="status">Carregando seu perfil…</p>
       </section>
     );
-  if (!session.data)
-    return (
-      <section className="page-shell">
-        <Link to="/login">Entrar</Link>
-      </section>
-    );
   return (
-    <section className="page-shell">
-      <div className="flow-heading">
-        <span className="eyebrow">Sua conta</span>
+    <section className="page-shell collector-account">
+      <AccountSidebar active="profile" />
+      <div className="collector-content">
         <h1>Perfil do colecionador</h1>
-        <p className="muted">Uma coleção com a sua identidade.</p>
-      </div>
-      <div className="flow-grid">
-        <section className="form-card">
-          <h2>Dados pessoais</h2>
-          <form className="stack" onSubmit={submit}>
-            <div className="profile-avatar">
-              {avatar ? (
-                <img src={avatar} alt="Seu avatar" />
-              ) : (
-                <span aria-hidden="true">{session.data.name.slice(0, 1)}</span>
-              )}
-              <label className="button button-secondary">
-                Enviar avatar
-                <input
-                  className="visually-hidden"
-                  type="file"
-                  accept="image/png,image/jpeg,image/webp"
-                  onChange={(e) => loadAvatar(e.target.files?.[0])}
-                />
-              </label>
-            </div>
+        <form id="collector-profile-form" className="collector-profile-form" onSubmit={submit}>
+          <fieldset className="collector-field-grid" disabled={save.isPending || !ready}>
             <label className="field">
               Nome de exibição
-              <input
-                className="input"
+              <span className="required-mark" aria-hidden="true">
+                *
+              </span>
+              <Input
                 required
+                aria-label="Nome de exibição"
                 maxLength={80}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                autoComplete="name"
+                value={values.name}
+                onChange={(event) => setField('name', event.target.value)}
+              />
+            </label>
+            <label className="field">
+              Nome de usuário
+              <span className="required-mark" aria-hidden="true">
+                *
+              </span>
+              <Input
+                required
+                aria-label="Nome de usuário"
+                minLength={3}
+                maxLength={40}
+                autoComplete="username"
+                pattern="[A-Za-z0-9._\-]{3,40}"
+                value={values.username}
+                onChange={(event) => setField('username', event.target.value)}
               />
             </label>
             <label className="field">
               E-mail
-              <input className="input" type="email" value={session.data.email} readOnly />
-              <small className="muted">O e-mail de acesso não pode ser alterado aqui.</small>
+              <span className="required-mark" aria-hidden="true">
+                *
+              </span>
+              <Input
+                required
+                aria-label="E-mail"
+                type="email"
+                maxLength={160}
+                autoComplete="email"
+                value={values.email}
+                onChange={(event) => setField('email', event.target.value)}
+              />
             </label>
-            {(localError || save.error) && (
-              <p role="alert" className="field-error">
-                {localError || messageOf(save.error)}
-              </p>
-            )}
-            {save.isSuccess && (
-              <p role="status" className="notice">
-                Seu perfil foi salvo.
-              </p>
-            )}
-            <button className="button" disabled={save.isPending}>
-              {save.isPending ? 'Salvando…' : 'Salvar alterações'}
-            </button>
-          </form>
-        </section>
-        <section className="form-card">
-          <PasswordForm />
-          <hr />
-          <h2>Suas carteiras</h2>
-          <p className="muted">Gerencie as carteiras das suas compras simuladas.</p>
-          <Link className="button button-secondary" to="/wallets">
-            Gerenciar carteiras →
-          </Link>
-        </section>
+            <EnsField value={values.ens} onChange={(value) => setField('ens', value)} />
+            <label className="field">
+              Apelido da carteira
+              <Input
+                maxLength={60}
+                value={values.walletNickname}
+                onChange={(event) => setField('walletNickname', event.target.value)}
+              />
+            </label>
+            <div className="collector-avatar-field">
+              <span>Avatar</span>
+              <div className="collector-avatar-controls">
+                {values.avatar ? (
+                  <img className="collector-avatar" src={values.avatar} alt="Seu avatar" />
+                ) : (
+                  <span className="collector-avatar collector-avatar-placeholder">
+                    <img src="/figma/profile/imgImage2.svg" alt="" />
+                  </span>
+                )}
+                <label className="avatar-upload button button-secondary">
+                  Alterar
+                  <input
+                    className="visually-hidden"
+                    aria-label="Alterar avatar"
+                    type="file"
+                    accept="image/png,image/jpeg,image/webp"
+                    onChange={(event) => loadAvatar(event.target.files?.[0])}
+                  />
+                </label>
+                <Button
+                  variant="ghost"
+                  type="button"
+                  className="avatar-remove"
+                  onClick={() => setField('avatar', '')}
+                  disabled={!values.avatar}
+                  title={!values.avatar ? 'Não há avatar para remover.' : 'Remover avatar'}
+                >
+                  Remover
+                </Button>
+              </div>
+            </div>
+          </fieldset>
+          {(localError || save.error) && (
+            <p role="alert" className="field-error">
+              {localError || messageOf(save.error)}
+            </p>
+          )}
+          {save.isSuccess && (
+            <p role="status" className="notice">
+              Seu perfil foi salvo.
+            </p>
+          )}
+        </form>
+        <PasswordForm />
+        <Button
+          className="collector-save collector-profile-save"
+          form="collector-profile-form"
+          aria-label="Salvar alterações"
+          disabled={save.isPending || !ready}
+        >
+          {save.isPending ? 'Salvando…' : 'Salvar'}
+        </Button>
       </div>
     </section>
   );

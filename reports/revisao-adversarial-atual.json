@@ -1,0 +1,214 @@
+{
+  "updatedOn": "2026-10-27",
+  "language": "pt-BR",
+  "status": "Fonte e build finais aprovados em 207 testes unitários e 148 E2E, com hashes imutáveis e comparações visuais sem atualização automática. Entrega ainda pendente da matriz de 12 medições Lighthouse no candidato HTTPS exato e do smoke após publicação. Nota interna nula até fechar esses gates.",
+  "reviewType": "Revisão cruzada por evidências, sem uso de notas históricas.",
+  "independence": {
+    "independentScope": "Componentes e hooks React de catálogo, carrinho, checkout, recibo, roteamento e conta escritos por outros integrantes.",
+    "limitation": "Este revisor implementou partes do transporte, contratos, simulação de API e otimização de entrega e também corrigiu o feedback compartilhado de adição em Card, Detail e Preview. A revisão do projeto inteiro não é uma auditoria integral conduzida por alguém sem participação no código. Essas partes também precisam da leitura cruzada do responsável pela entrega; a nota interna só poderá refletir esse escopo declarado."
+  },
+  "rubric": [
+    {
+      "criterion": "Organização e responsabilidades",
+      "maximum": 20,
+      "points": null,
+      "evidence": [
+        "Módulos por domínio, apresentação separada dos hooks, serviços HTTP e marketplace",
+        "Handlers separados por recurso com fachada compatível",
+        "Assets responsivos tratados como apresentação, sem alterar o modelo de compra",
+        "Prévias globais usam Zustand apenas para o ID da obra, Context fornece o tema único Kurio e Query continua como proprietário dos dados remotos."
+      ],
+      "residuals": [
+        "database.ts ainda reúne persistência e transações da simulação",
+        "useCheckout concentra a orquestração de compra e recuperação em um hook extenso"
+      ]
+    },
+    {
+      "criterion": "Contratos e tipagem",
+      "maximum": 15,
+      "points": null,
+      "evidence": [
+        "TypeScript estrito e validação Zod Mini em respostas de transporte",
+        "Valores ETH como strings e operações exatas com BigInt",
+        "Schemas aceitam recibos legados e validam identidade das edições",
+        "readAttempt usa parse integral de purchaseAttemptSchema; seis casos de legado e armazenamento inválido aprovados.",
+        "Novas respostas de recomendações, newsletter e artigos têm schemas completos; dados de demonstração são identificados por simulated:true."
+      ],
+      "residuals": [
+        "A leitura do snapshot completo da base local ainda faz validação estrutural limitada; o formato é uma implementação interna da simulação e não deve ser tratado como entrada confiável de um backend real."
+      ]
+    },
+    {
+      "criterion": "Estado e isolamento",
+      "maximum": 25,
+      "points": null,
+      "evidence": [
+        "Geração capturada de forma síncrona no transporte e conferida no processamento",
+        "Mutação captura proprietário e verifica a sessão antes do envio e após respostas",
+        "Chaves privadas por usuário, descarte de respostas obsoletas e reconciliação por versões",
+        "Migração versionada do catálogo renova apresentação e preços e conserva inventário por edição, proprietário, carrinhos e recibos antigos.",
+        "Época local protege respostas entre resets que reutilizam números de geração; um rebase autoritativo só é aceito sem transição concorrente.",
+        "Card, Detail e Preview derivam o feedback da mutation por proprietário; nenhuma flag local de sucesso atravessa a troca de conta.",
+        "Descoberta inicial de sessão é distinguida de mudança de proprietário, evitando cancelar o primeiro login legítimo sem aceitar respostas antigas após ele.",
+        "Login/registro aguardam a consulta compartilhada de sessão antes do POST, reconciliando geração persistida antiga sem relaxar a rejeição de respostas de outra época. Leitura cruzada do hook confirmou a ordenação e as guardas de favoritos."
+      ],
+      "residuals": [
+        "A manutenção depende de preservar o mesmo padrão de proprietário em novas mutações",
+        "A simulação no navegador não representa uma fronteira de autenticação de produção"
+      ]
+    },
+    {
+      "criterion": "Regras e correção",
+      "maximum": 20,
+      "points": null,
+      "evidence": [
+        "Cotação revalidada, incluindo taxas e desconto, antes da reserva",
+        "Idempotência canônica, recuperação de resultado incerto e snapshots de recibo",
+        "Estoque por edição, recusa com restauração e rejeição de redes incompatíveis"
+      ],
+      "residuals": [
+        "O modelo de transação é uma simulação local por contexto JavaScript, não um banco distribuído nem um processador de pagamentos"
+      ]
+    },
+    {
+      "criterion": "Testes e contraprovas",
+      "maximum": 10,
+      "points": null,
+      "evidence": [
+        "Última suíte completa observada: 187 testes em 21 arquivos aprovados antes do último patch HTTP. Após o patch, os 12 testes de transporte passaram, incluindo nove anteriores e três novos; TypeScript e lint do escopo aprovados. A validação geral do artefato final permanece separada.",
+        "Quatro contraprovas independentes do hook de detalhe aprovadas",
+        "Quatro E2E de desconexão/reconexão aprovados em desktop e mobile",
+        "76/76 E2E, zero skips ou flaky, com fingerprint de fonte idêntico antes/depois (dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c). Essa rodada precede o fallback de geração em memória e clearAttemptForOrder; a validação posterior desses dois ajustes será registrada separadamente.",
+        "Após o último ajuste de feedback, alvo de19 testes aprovado:12 de transporte e7 de adição por conta, incluindo os três consumidores e invariantes anteriores. Tsc e lint aprovados; não representa uma nova suíte ampla do artefato final.",
+        "A rodada geral147/148 preservou a falha real de bootstrap; após a correção,14 testes de transporte e7 de ownership passaram. A rodada geral anterior não é declarada aprovada nem reaproveitada como certificação da versão corrigida.",
+        "Rodada geral posterior à primeira correção do bootstrap:148/148 aprovada, 0 skips/retries/flaky e hashes imutáveis. Essa rodada antecede os últimos ajustes de carregamento/prefetch e handshake legado; não certifica o novo artefato.",
+        "Check/build final do responsável:207/207 em 24 arquivos, tipos/lint/formato aprovados. Cinco casos de prefetch verificam deduplicação, contrato de busca, rotas públicas, erros sem dados inventados e hints responsivos; Auth comprovou RED 2→GREEN 5 com Hook/MSW real.",
+        "Probes locais finais no build congelado:Home 83/Detail 85 de performance, A100/B100/SEO92, CLS0. A matriz local incompleta não está aprovada; JSON/HTML preservados em reports/lighthouse/probes/public-query-prefetch-retry."
+      ],
+      "residuals": [
+        "A rodada final deve cobrir a composição do Diário, newsletter, novas ações de cards, tema único e patches recentes de navegação e transporte. E2E de mobile em Chromium não constitui prova de execução em Safari ou Firefox."
+      ]
+    },
+    {
+      "criterion": "Documentação e rastreabilidade",
+      "maximum": 10,
+      "points": null,
+      "evidence": [
+        "Decisões registram evidência, motivo e validação",
+        "Relatórios antigos foram arquivados como históricos",
+        "O harness Lighthouse retém todas as execuções e identifica o artefato por SHA256"
+      ],
+      "residuals": [
+        "Os relatórios finais precisam ser atualizados com os resultados após o congelamento da versão entregue"
+      ]
+    }
+  ],
+  "subjectiveCodeScore": null,
+  "scoringRules": [
+    "Somar apenas pontos justificados na revisão final, sem selecionar uma nota para satisfazer o pedido.",
+    "Um P1 aberto bloqueia a liberação, independentemente da soma.",
+    "A nota de código é uma avaliação interna subjetiva e não se confunde com métricas Lighthouse nem garante contratação."
+  ],
+  "fixedFindings": [
+    {
+      "id": "actor-generation-microtask",
+      "severity": "P1",
+      "evidence": "A contraprova falhou antes da correção com allowed:true após uma troca imediata de conta.",
+      "fix": "Interceptor de requisição síncrono, preservando a geração do instante da chamada.",
+      "validation": "Seis testes de transporte aprovados, incluindo STALE_SESSION e preservação da conta nova."
+    },
+    {
+      "id": "stale-ui-action-owner",
+      "severity": "P1",
+      "fix": "Proprietário capturado nas variáveis de mutação e guardas antes de ações de conta, favoritos, carrinho e detalhe.",
+      "validation": "Hook de detalhe: A para B, convidado para A, sucesso atrasado e adição normal de convidado aprovados; testes cruzados de conta e carrinho também aprovados."
+    },
+    {
+      "id": "saved-fee-snapshot",
+      "severity": "P1",
+      "fix": "Componentes financeiros entram no fingerprint e a snapshot salva é comparada com a cotação atual.",
+      "validation": "Taxa divergente exige QUOTE_CHANGED, sem pedido nem reserva. Carrinho desktop validado como26.83+0.016=26.846."
+    },
+    {
+      "id": "persisted-catalog-outdated-release",
+      "severity": "P1",
+      "evidence": "O catálogo armazenado pelo commit 34ba5b5 continuava exibindo título, SVG e preço antigos após a nova versão: a contraprova inicial teve cinco falhas e um passe.",
+      "fix": "catalogRevision 2 atualiza metadados e preços por edição, preserva inventários e recibos e invalida cotações através de versões e limpeza das snapshots. Migração isolada em src/mocks/migrations/catalog.ts.",
+      "validation": "Seis testes passaram: atualização das fixtures antigas, estoques independentes, projeção do carrinho versus recibo imutável, execução única e conclusão ou recusa de pedido legado pendente."
+    },
+    {
+      "id": "blocked-storage-actor-generation",
+      "severity": "P1",
+      "evidence": "Três contraprovas falharam antes da correção: requisição A alterava B com armazenamento bloqueado, resposta nula antiga substituía sessão mais nova e a volta da escrita recuperava geração velha.",
+      "fix": "Helper de geração em memória captura a geração aceita antes de tentar persistir. Escrita pendente é reconciliada quando o armazenamento volta, mantendo a captura síncrona e a rejeição de respostas antigas.",
+      "validation": "RED três falhas/seis passes; GREEN nove testes de transporte aprovados, incluindo seis anteriores."
+    },
+    {
+      "id": "old-receipt-clears-other-attempt",
+      "severity": "P2",
+      "evidence": "O efeito terminal de useOrder removia a tentativa do usuário independentemente do recibo aberto. Uma URL antiga poderia eliminar a recuperação de outra compra.",
+      "fix": "clearAttemptForOrder remove apenas a tentativa cujo orderId é igual ao recibo terminal, preservando tentativas desconhecidas ou de outros pedidos.",
+      "validation": "Três testes aprovados: outro pedido e pedido sem ID preservados; apenas a tentativa correspondente removida. Incluídos na rodada de 141 unitários."
+    },
+    {
+      "id": "session-generation-partial-reset",
+      "severity": "P1",
+      "evidence": "O probe do código HTTP real cancelou sessão1 e login2 quando sessionStorage conservava17. A contraprova MSW teve três falhas e nove passes antes da correção.",
+      "fix": "Época local capturada síncronamente, mantida em WeakMap e avançada em transições aceitas. Apenas a época atual pode reconciliar uma geração menor; respostas antigas continuam descartadas mesmo quando o número é igual ou maior.",
+      "validation": "12/12 testes de transporte aprovados, com reset parcial, login e PATCH perfil no MSW, além de respostas A atrasadas após reset e loginB. Tsc e lint aprovados. Evidência em reports/transport-rebase-evidence.json."
+    },
+    {
+      "id": "cross-account-addition-feedback",
+      "severity": "P2",
+      "evidence": "As contraprovas de Card, Detail e Preview falharam antes da correção: sucessoA permanecia emB, sem escrita na conta nova.",
+      "fix": "Chave da mutation incluiowner; projeção do feedback exige variables.ownerId igual ao dono atual. Booleanos locais removidos, reset na troca de quantidade ou edição.",
+      "validation": "RED três falhas/quatro passes; GREEN sete testes aprovados e19/19 no alvo conjunto com transporte. Prova em reports/cart-add-feedback-evidence.json."
+    },
+    {
+      "id": "bootstrap-login-initial-generation",
+      "severity": "P1",
+      "evidence": "A rodada geral147/148, sem mudança de fonte/build, capturou GET/session1 ePOST/login2 sobrepostos. A contraprova isolada teve uma falha e13 passes antes da correção.",
+      "fix": "Adoção inicial de geração não é transição de proprietário e não avança a época. Mudança de uma geração conhecida e transições explícitas continuam invalidando respostas antigas.",
+      "validation": "14/14 transporte,21/21 no alvo com ownership; tsc/lint/format aprovados. As duas ordens de bootstrap são determinísticas e os12 invariantes anteriores permanecem ativos. Rodada geral deve ser repetida sem esconder o teste que encontrou a falha."
+    },
+    {
+      "id": "legacy-generation-concurrent-login",
+      "severity": "P1",
+      "evidence": "Geração 17 no transporte e base nova 1 permitiam que o GET de bootstrap invalidasse a época de um POST de login legítimo concorrente. A contraprova do hook com MSW real falhou nos dois casos novos antes do ajuste.",
+      "fix": "Antes de login/registro, useAuthForm aguarda fetchQuery da mesma chave de sessão, com AbortSignal e sem retry. A consulta deduplica o bootstrap e termina o rebase antes da captura síncrona do POST; o transporte não foi enfraquecido.",
+      "validation": "RED 2/2→GREEN 5/5, incluindo favorito persistido, senha alterada preservada e 503 sem POST ou perda de campos. Provas reports/auth-handshake-before.log e reports/auth-handshake-after.log; revisão cruzada de ordenação e ownerguards concluída."
+    }
+  ],
+  "openP1": [],
+  "pendingReleaseEvidence": [
+    "Matriz de 12 execuções Lighthouse 13.5 no candidato HTTPS exato, com categorias oficiais e todas as execuções de performance acima de 90",
+    "Smoke pós-publicação, hashes do artefato e recibos de entrega sob responsabilidade do publicador"
+  ],
+  "clockMethodology": "Somente um dos E2E usa setFixedTime para controlar Date e testar reconexão antes do prazo do modelo. Timers, requisições, Socket.IO e interações de browser permanecem ativos. O outro E2E usa tempo normal e verifica a confirmação por fallback REST. Nenhum controle de relógio é usado no Lighthouse.",
+  "performanceEvidence": {
+    "localFinalProbe": "reports/lighthouse/probes/public-query-prefetch-retry/summary.json",
+    "localProbeApproved": false,
+    "homePerformance": 83,
+    "detailPerformance": 85,
+    "allAccessibility": 100,
+    "allBestPractices": 100,
+    "allSeo": 92,
+    "allCls": 0,
+    "gate": "Oficial mediana P>=90, A/B>=95, SEO>=90; exigência adicional todo P>90. Mobile P95 é aspiração não obrigatória. Não há aprovação por escolher o melhor run.",
+    "browserStartupFailure": "reports/lighthouse/probes/public-query-prefetch/execution-failure.json",
+    "limits": "Probes locais são HTTP/1.1 com throttling simulado padrão. Não se presume aprovação HTTPS/h2 sem medir."
+  },
+  "finalFunctionalEvidence": {
+    "unitTests": 207,
+    "e2eTests": 148,
+    "e2eUnexpected": 0,
+    "e2eSkipped": 0,
+    "e2eFlaky": 0,
+    "sourceFingerprint": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
+    "buildFingerprint": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993",
+    "changedFiles": [],
+    "evidence": "reports/e2e-final-build-evidence.json",
+    "baselinePolicy": "Comparações vigentes incluídas nos hashes; nenhuma atualização de baseline durante esta execução.",
+    "durationMs": 403453.264
+  }
+}

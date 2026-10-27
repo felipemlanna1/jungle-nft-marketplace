@@ -1,0 +1,147 @@
+{
+  "scope": "Interface da página inicial, navegação compartilhada e rodapé do marketplace Kurio.",
+  "reference": {
+    "source": "Contexto e capturas do Figma disponibilizados nesta sessão, incluindo quadros desktop e mobile.",
+    "files": ["home-0.txt", "home-3.txt", "home-4.txt", "mobile-home-0.txt"],
+    "implementation": "Componentes React e CSS gerado por tema. As capturas do Figma não são usadas como imagem da página."
+  },
+  "decisions": [
+    {
+      "subject": "Arte original",
+      "decision": "Usar os arquivos originais exportados do Figma, preservando as quatro artes de personagens e os ícones do quadro. A conversão para WebP conserva a composição e reduz transferência; os caminhos são centralizados no manifesto tipado figmaAssets.",
+      "reason": "A primeira aproximação com arte sintética não correspondia à referência solicitada."
+    },
+    {
+      "subject": "Estrutura",
+      "decision": "Página composta por componentes de catálogo; estado, navegação e mutações em useMarketplace; filtros em CatalogFilters; navegação e busca em useLayout; rodapé e navegação móvel em componentes próprios.",
+      "reason": "Manter as convenções de organização indicadas pelo candidato sem copiar implementação de projetos anteriores."
+    },
+    {
+      "subject": "Filtros",
+      "decision": "Categorias, rede, preço e abas alteram a URL e a consulta. Facetas vêm da coleção simulada. Preços são validados e comparados em wei, usando bigint; entrada com vírgula é normalizada.",
+      "reason": "Preservar o desenho dos controles com comportamento verificável e sem contagens fictícias."
+    },
+    {
+      "subject": "Aparência da interface",
+      "decision": "Kurio é a única aparência disponibilizada na interface, seguindo a referência do desafio. A opção de aparência alternativa foi removida.",
+      "reason": "Manter a apresentação e a navegação coerentes com a prioridade visual solicitada."
+    },
+    {
+      "subject": "Ações fora do desafio",
+      "decision": "Criadores, Aprenda e itens editoriais ficam como texto sem ação. Por solicitação adicional, a newsletter tem POST simulado com confirmação posterior à resposta, e os ícones sociais abrem as plataformas em nova aba com aviso ilustrativo. Contatos continuam identificados como demonstrativos.",
+      "reason": "Tornar as ações solicitadas verificáveis, sem simular envio real de e-mail nem inventar perfis oficiais."
+    },
+    {
+      "subject": "Navegação móvel",
+      "decision": "A navegação inferior mantém ícones originais e ações reais. O coração abre uma lista de interesse com favoritos da conta, consultados pelo REST existente e por chaves de cache isoladas pelo usuário; visitantes recebem acesso ao login. O mesmo acesso existe no rodapé desktop.",
+      "reason": "Não simular um leitor de carteiras ou uma projeção privada de favoritos sem contrato e isolamento próprios."
+    },
+    {
+      "subject": "Conteúdo editorial",
+      "decision": "Restaurar as quatro prévias do Diário da Cunhagem na Home. Listagem e leitura usam GETs da API simulada; o leitor é carregado sob demanda em um modal, sem criar páginas editoriais adicionais. Textos, datas e tempos são declarados ilustrativos no leitor.",
+      "reason": "A exclusão de páginas editoriais adicionais no enunciado não justificava retirar uma seção que integra a Home do Figma."
+    },
+    {
+      "subject": "Responsividade",
+      "decision": "Usar a geometria de 1440 e 414 px como referência e adaptar larguras intermediárias sem rolagem horizontal. No mobile, os filtros abrem diálogo com foco gerenciado pelo Radix.",
+      "reason": "Os quadros de referência não cobrem todas as larguras de uso real."
+    },
+    {
+      "subject": "Carrossel de destaques",
+      "decision": "Três slides usam textos e artes da referência. O primeiro conserva as dimensões e a composição originais; os outros dois reutilizam as chamadas de catálogo do Figma. Embla é o único mecanismo, fornecido pelo Carousel do styleguide, sem autoplay. Slides inativos ficam inertes; o primeiro mantém prioridade de carregamento e os seguintes usam carregamento lazy e baixa prioridade.",
+      "reason": "Os indicadores passam a operar por toque, clique e teclado, com movimento reduzido respeitado e área de navegação separada das artes."
+    }
+  ],
+  "geometryMeasured": {
+    "desktop1440": {
+      "hero": {
+        "x": 120,
+        "y": 101,
+        "width": 1200,
+        "height": 450
+      },
+      "sidebarWidth": 310,
+      "columnGap": 48,
+      "toolbar": {
+        "x": 478,
+        "y": 647,
+        "width": 842,
+        "height": 18
+      },
+      "grid": {
+        "x": 478,
+        "y": 697,
+        "width": 842
+      },
+      "cardWidth": 258
+    },
+    "mobile414": {
+      "search": {
+        "x": 24,
+        "y": 40,
+        "height": 45
+      },
+      "hero": {
+        "x": 24,
+        "y": 101,
+        "width": 366,
+        "height": 190
+      },
+      "tabs": {
+        "x": 24,
+        "y": 307,
+        "width": 366,
+        "height": 20
+      },
+      "grid": {
+        "x": 24,
+        "y": 343,
+        "width": 366
+      }
+    }
+  },
+  "checksExecuted": [
+    "Navegação real no Chromium com larguras 320, 390, 414, 768 e 1440: sem rolagem horizontal e nove itens no catálogo inicial.",
+    "Busca desktop pelo botão do cabeçalho: Emerald retornou um item e manteve o termo na URL.",
+    "Faixa de preço com vírgula: 1,00 a 1,50 retornou três itens, com normalização para 1.00 e 1.50.",
+    "Rede Solana retornou estado vazio, coerente com a ausência de itens dessa rede na simulação.",
+    "Filtro de Fotografia no diálogo mobile retornou dois itens e fechou o diálogo.",
+    "TypeScript global e ESLint do escopo de catálogo e Layout passaram após a inclusão do campo opcional previousPrice e a centralização dos tipos dos filtros.",
+    "A lista de interesse foi aberta no mobile e exibiu uma NFT salva por meio do REST simulado e de consultas isoladas pelo usuário.",
+    "Destaques em 1440, 414 e 320 px: indicadores e teclas Home/ArrowRight alteraram o slide, sem overflow e com apenas um título principal acessível. A geometria do primeiro slide permaneceu igual.",
+    "Navegação verificada em seis URLs com um único aria-current. Fechar cenários restaurou o foco ao botão Open demo scenarios e manteve o menu de opções aberto.",
+    "Oito capturas adicionais cobrem login, cadastro, perfil, carteiras e vistas mobile nas dimensões nativas. Os quinze quadros foram capturados sem overflow horizontal e os estados estão explícitos no manifesto."
+  ],
+  "knownDifferences": [
+    "Contagens de filtros e quantidade de páginas refletem as 18 peças simuladas, em vez das contagens ilustrativas do Figma.",
+    "O Diário da Cunhagem integra a Home; o conteúdo de leitura é simulado e não cria páginas editoriais adicionais.",
+    "O rodapé apresenta inscrição de newsletter simulada, links sociais ilustrativos e contatos demonstrativos; não há envio real de e-mail ou conexão a carteiras reais.",
+    "O ícone do botão central móvel representa menu; o desenho original sugeria leitura de carteira, função ausente no desafio.",
+    "Ícones de benefício no rodapé usam Lucide em vez das letras decorativas W, C e D do quadro.",
+    "Não houve certificação de equivalência pixel a pixel: é necessária comparação final com exportação nativa, especialmente após os ajustes de outras páginas."
+  ],
+  "status": "Código de interface congelado para a rodada consolidada de testes. Os quinze quadros nativos possuem comparação lado a lado em reports/visual-comparison; fidelidade integral não certificada.",
+  "heroGeometryReview": {
+    "finding": "A área recortada era menor que o banner no mobile, e texto podia exceder o limite antes de 414 px.",
+    "decision": "Padding em cada slide, viewport integral, pintura contida e tipografia adaptativa nas larguras intermediárias. A composição original do primeiro slide em414 e1440 foi medida e preservada.",
+    "evidence": "reports/hero-geometry-review.json",
+    "baselineApproval": "Oito baselines revisados; validação sem update ocorre no fullE2E final."
+  },
+  "newsletterReview": {
+    "scope": "Função adicional solicitada explicitamente, com API simulada local e sem SMTP.",
+    "structure": "Footer compõe Newsletter, que mantém index.tsx, useNewsletter.ts e shared-types.ts colocalizados. O schema de e-mail é compartilhado com a API.",
+    "identity": "Dono e época são capturados por envio; há conferência antes do HTTP e antes de exibir retorno. Rascunho e feedback são limpos na troca de identidade.",
+    "confirmation": "Sucesso é exibido somente após a resposta validada, com aviso de que nenhum e-mail real será enviado.",
+    "socials": "Facebook, Instagram, X, LinkedIn e YouTube apontam às plataformas. Não representam perfis oficiais. Os links usam nova aba e noopener noreferrer.",
+    "responsive": "O rodapé passa a existir no mobile abaixo do conteúdo. A coluna única preserva a primeira dobra e reserva 120 px para navegação, ou 180 px no detalhe com compra fixa.",
+    "evidence": "reports/newsletter-ui-review.json"
+  },
+  "editorialReview": {
+    "source": "Contexto da Home, seção Blog, nós 70343:253 a 70343:293 e exportação PNG nativa.",
+    "structure": "EditorialHighlights compõe EditorialCard e ArticleReader lazy. Hooks separados cuidam da consulta de prévias/seleção e da consulta de conteúdo por ID.",
+    "geometry": "Em 1440 px, quatro cartões de 268 × 369 px, imagens de 195 px, intervalo de 24 px, título da seção em 28/37 px e subtítulo em 14/19 px. A margem anterior é de 96 px; a coordenada absoluta depende do catálogo acima.",
+    "mockDisclosure": "O leitor informa conteúdo ilustrativo. O título de dez artistas reproduz o template e o texto não inventa uma lista ou pesquisa real.",
+    "verification": "reports/editorial-ui-review.json",
+    "finalCaptures": "Quinze comparativos do build de interface X0vaGc14 foram renovados, sem redimensionamento. Uma correção posterior de transporte HTTP aguarda validação funcional e não altera a interface capturada."
+  }
+}

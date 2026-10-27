@@ -1,0 +1,203 @@
+{
+  "sourceCommit": "34ba5b5",
+  "nfts": [
+    {
+      "id": "nft-1",
+      "title": "The future of ETH®",
+      "creator": "Marco Conti",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.32",
+      "image": "/art/nft-1.svg",
+      "available": 3,
+      "version": 1
+    },
+    {
+      "id": "nft-2",
+      "title": "Silent dimensions",
+      "creator": "Sofia Reyes",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.48",
+      "image": "/art/nft-2.svg",
+      "available": 4,
+      "version": 1
+    },
+    {
+      "id": "nft-3",
+      "title": "Beyond the horizon",
+      "creator": "Eli Nova",
+      "collection": "Beyond imagination",
+      "category": "Photography",
+      "price": "0.19",
+      "image": "/art/nft-3.svg",
+      "available": 5,
+      "version": 1
+    },
+    {
+      "id": "nft-4",
+      "title": "Dream in color",
+      "creator": "Maya Chen",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.72",
+      "image": "/art/nft-4.svg",
+      "available": 6,
+      "version": 1
+    },
+    {
+      "id": "nft-5",
+      "title": "Crystal universe",
+      "creator": "Kai Studio",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.24",
+      "image": "/art/nft-5.svg",
+      "available": 7,
+      "version": 1
+    },
+    {
+      "id": "nft-6",
+      "title": "A different kind of blue",
+      "creator": "Luca Moreau",
+      "collection": "Beyond imagination",
+      "category": "Photography",
+      "price": "0.56",
+      "image": "/art/nft-6.svg",
+      "available": 8,
+      "version": 1
+    },
+    {
+      "id": "nft-7",
+      "title": "Electric bloom",
+      "creator": "Nina Park",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.37",
+      "image": "/art/nft-7.svg",
+      "available": 3,
+      "version": 1
+    },
+    {
+      "id": "nft-8",
+      "title": "The observer",
+      "creator": "Theo West",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.91",
+      "image": "/art/nft-8.svg",
+      "available": 4,
+      "version": 1
+    },
+    {
+      "id": "nft-9",
+      "title": "Golden hour",
+      "creator": "Ava Lake",
+      "collection": "Beyond imagination",
+      "category": "Photography",
+      "price": "0.15",
+      "image": "/art/nft-9.svg",
+      "available": 5,
+      "version": 1
+    },
+    {
+      "id": "nft-10",
+      "title": "Orbital stories",
+      "creator": "Marco Conti",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.63",
+      "image": "/art/nft-10.svg",
+      "available": 6,
+      "version": 1
+    },
+    {
+      "id": "nft-11",
+      "title": "Still in motion",
+      "creator": "Sofia Reyes",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.41",
+      "image": "/art/nft-11.svg",
+      "available": 7,
+      "version": 1
+    },
+    {
+      "id": "nft-12",
+      "title": "Soft geometry",
+      "creator": "Eli Nova",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.28",
+      "image": "/art/nft-12.svg",
+      "available": 8,
+      "version": 1
+    },
+    {
+      "id": "nft-13",
+      "title": "Ritual of light",
+      "creator": "Maya Chen",
+      "collection": "Beyond imagination",
+      "category": "Photography",
+      "price": "0.82",
+      "image": "/art/nft-1.svg",
+      "available": 3,
+      "version": 1
+    },
+    {
+      "id": "nft-14",
+      "title": "Parallel worlds",
+      "creator": "Kai Studio",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.34",
+      "image": "/art/nft-2.svg",
+      "available": 4,
+      "version": 1
+    },
+    {
+      "id": "nft-15",
+      "title": "Out of the ordinary",
+      "creator": "Nina Park",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.47",
+      "image": "/art/nft-3.svg",
+      "available": 5,
+      "version": 1
+    },
+    {
+      "id": "nft-16",
+      "title": "Moonlight signal",
+      "creator": "Theo West",
+      "collection": "Beyond imagination",
+      "category": "Art",
+      "price": "0.29",
+      "image": "/art/nft-4.svg",
+      "available": 6,
+      "version": 1
+    },
+    {
+      "id": "nft-17",
+      "title": "Chromatic island",
+      "creator": "Ava Lake",
+      "collection": "Beyond imagination",
+      "category": "Photography",
+      "price": "0.67",
+      "image": "/art/nft-5.svg",
+      "available": 7,
+      "version": 1
+    },
+    {
+      "id": "nft-18",
+      "title": "Infinite potential",
+      "creator": "Luca Moreau",
+      "collection": "Beyond imagination",
+      "category": "Abstract",
+      "price": "0.53",
+      "image": "/art/nft-6.svg",
+      "available": 0,
+      "version": 1
+    }
+  ]
+}

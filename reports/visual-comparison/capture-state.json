@@ -1,0 +1,181 @@
+[
+  {
+    "key": "home-desktop",
+    "path": "/",
+    "width": 1440,
+    "height": 3668,
+    "state": {
+      "session": "guest",
+      "query": "all",
+      "editorial": "four API previews",
+      "newsletter": "empty"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 3807,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "home-mobile",
+    "path": "/",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "guest",
+      "query": "all"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 5665,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "detail-desktop",
+    "path": "/nft/nft-1",
+    "width": 1440,
+    "height": 2246,
+    "state": {
+      "session": "guest",
+      "nftId": "nft-1",
+      "edition": "1/50"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 2456,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "cart-desktop",
+    "path": "/cart",
+    "width": 1440,
+    "height": 1754,
+    "state": {
+      "session": "guest",
+      "items": [
+        [
+          "nft-1",
+          2
+        ],
+        [
+          "nft-5",
+          6
+        ],
+        [
+          "nft-6",
+          9
+        ]
+      ],
+      "fee": "0.016"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 1836,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "checkout-desktop",
+    "path": "/checkout",
+    "width": 1440,
+    "height": 1657,
+    "state": {
+      "session": "fictional collector",
+      "userId": "user-1",
+      "items": [
+        [
+          "nft-1",
+          2
+        ],
+        [
+          "nft-5",
+          6
+        ],
+        [
+          "nft-6",
+          9
+        ]
+      ],
+      "wallet": "wallet-1",
+      "connected": false
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 1914,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "order-desktop",
+    "path": "/orders/order-1001",
+    "width": 1440,
+    "height": 1657,
+    "state": {
+      "session": "fictional collector",
+      "items": [
+        [
+          "nft-1",
+          2
+        ],
+        [
+          "nft-5",
+          6
+        ],
+        [
+          "nft-6",
+          9
+        ]
+      ],
+      "total": "26.846"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 1657,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "cart-mobile",
+    "path": "/cart",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "guest",
+      "items": [
+        [
+          "nft-1",
+          1
+        ],
+        [
+          "nft-5",
+          1
+        ],
+        [
+          "nft-6",
+          2
+        ],
+        [
+          "nft-7",
+          2
+        ]
+      ],
+      "sourceSubtotal": "8.92",
+      "actualSubtotal": "8.14",
+      "editionNotes": "Canonical editions retained; the reference variant totals are inconsistent."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 3457,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  }
+]

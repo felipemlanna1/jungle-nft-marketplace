@@ -1,0 +1,55 @@
+{
+  "firstRun": {
+    "passed": 147,
+    "failed": 1,
+    "report": null,
+    "reportOriginalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+    "reportSha256": "51c8f4cbe2b07a0f0d21fde93ab39282edd67c9f4e23f1a3350c8aba0dc0e260",
+    "reportLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+    "reportAvailability": "local-archive-only",
+    "cause": "A adoção inicial de uma geração desconhecida cancelava um login simultâneo válido, apesar de HTTP 200."
+  },
+  "firstFixVerification": {
+    "passed": 148,
+    "failed": 0,
+    "report": null,
+    "reportOriginalPath": "reports/diagnostics/pre-optimization-green-run/html/index.html",
+    "reportSha256": "b1e2d7b82bd9f519327bb749b272c7b1348f7eb9beaa947e88c46c71fe88b95c",
+    "reportLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/index.html",
+    "reportAvailability": "local-archive-only",
+    "changedSourceForThatFix": [
+      "src/domain/session-transport.test.ts",
+      "src/services/http/generation.ts"
+    ],
+    "loginTestAtThatStage": {
+      "path": "tests/e2e/favorites-navigation.spec.ts",
+      "unchanged": true,
+      "sha256": "8f6a142c53b976be9e7c2a80a973493dec30a1321c2fd45b2095ee245b2d93e3"
+    }
+  },
+  "knownGenerationHandshake": {
+    "case": "Geração 17 conservada no navegador com banco recém-iniciado na geração 1.",
+    "fix": "O fluxo de entrada e cadastro aguarda a consulta de sessão compartilhada, sem enfraquecer os guards de epoch.",
+    "before": "reports/auth-handshake-before.log",
+    "after": "reports/auth-handshake-after.log",
+    "regressions": 5,
+    "scope": "Login/cadastro com GET controlado e POST real; favorito, senha modificada e falha de consulta sem envio de credenciais."
+  },
+  "readinessChangesAfterOptimization": {
+    "report": "reports/e2e-readiness-correction.json",
+    "diagnosticRun": null,
+    "diagnosticRunOriginalPath": "reports/diagnostics/bootstrap-readiness-run/html/index.html",
+    "diagnosticRunSha256": "e0bb49a5a80e437122f0d5448cd040929fe970d23b57b4e495ede3444b73d26d",
+    "diagnosticRunLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/index.html",
+    "diagnosticRunAvailability": "local-archive-only",
+    "policy": "As esperas mudaram somente para sinais reais de conteúdo e conclusão de navegação. Nenhuma espera de sessão foi adicionada ao E2E; o envio rápido de login continua exercitado."
+  },
+  "finalRun": {
+    "passed": 148,
+    "failed": 0,
+    "report": "reports/playwright-final-build-html/index.html",
+    "evidence": "reports/e2e-final-build-evidence.json",
+    "sourceSha256": "6310f695397e53af21c40ac89973da1fcbc07058dacdb9f235ec1af833d6c0f9",
+    "buildSha256": "fea3e5c26045162e7940cb74afe8e5342e3ae6bca2f64167dd796077d8266993"
+  }
+}

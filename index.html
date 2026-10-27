@@ -1,18 +1,24 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="kurio">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#071713" />
+    <meta name="theme-color" content="#140D0A" />
     <meta
       name="description"
       content="Explore arte digital e colecione NFTs extraordinários. Marketplace demonstrativo com dados inteiramente fictícios."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/src/app/components/BootstrapSkeleton/styles.css" />
     <title>KURIO | Explore e colecione arte digital</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="bootstrap-status" role="status">
+        <strong>kurio</strong>
+        <span>Carregando a demonstração…</span>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,43 @@
+{
+  "scope": "Diário da Cunhagem na Home, prévias e leitura ilustrativa em modal.",
+  "decision": "A exclusão de páginas editoriais adicionais no enunciado não justificava retirar uma seção existente da Home do Figma. A seção foi restaurada sem novas rotas.",
+  "structure": "EditorialHighlights, EditorialCard e ArticleReader; hooks de listagem/seleção e detalhe separados. O leitor é lazy e suas consultas consomem AbortSignal.",
+  "verification": {
+    "typecheck": "passed",
+    "targetedLint": "passed",
+    "staticE2E": {
+      "passed": 8,
+      "failed": 0,
+      "report": "reports/editorial-e2e-static-results.json",
+      "candidateId": "a4c934a0fc31add77bc9bd21d787eb1a5657f6063fdea9061b6b4ef576b6c6ce"
+    },
+    "responsive": {
+      "widths": [
+        320,
+        414,
+        768,
+        1440
+      ],
+      "horizontalOverflow": false,
+      "report": "reports/editorial-responsive-check.json"
+    },
+    "desktopGeometry": {
+      "cardWidth": 268,
+      "cardHeight": 369,
+      "imageHeight": 195,
+      "gap": 24,
+      "headerFont": 28,
+      "subtitleFont": 14
+    }
+  },
+  "provenBehavior": [
+    "Prévias solicitadas por GET e nenhum conteúdo de leitura buscado antecipadamente.",
+    "Quatro cartões abrem seus próprios IDs pela API, sem navegar para páginas editoriais.",
+    "Falha 503 e lista vazia têm estados reais; retry volta a consultar a API.",
+    "Escape e Fechar diálogo retornam foco ao cartão que abriu o leitor.",
+    "Texto do leitor declara datas, tempos e conteúdo ilustrativos, sem inventar pesquisa ou artistas reais."
+  ],
+  "reference": "Contexto Home Blog, nós 70343:253 a 70343:293, e exportação PNG nativa.",
+  "finalNativeComparison": "reports/visual-comparison/home-desktop.side-by-side.webp",
+  "claim": "A seção preserva medidas da referência. Dados dinâmicos e correções do catálogo/rodapé podem alterar sua coordenada absoluta; não se declara equivalência integral."
+}

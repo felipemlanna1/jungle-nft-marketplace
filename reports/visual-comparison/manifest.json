@@ -1,0 +1,729 @@
+{
+  "method": "Exportação PNG 1x pela interface do Figma; captura Chromium na largura e altura exatas de cada quadro. Composição lado a lado sem redimensionamento.",
+  "exportArchive": "Frontend Challenge (cópia).zip",
+  "labelHeight": 40,
+  "gap": 24,
+  "sourceLeft": true,
+  "rescaled": false,
+  "screens": [
+    {
+      "key": "home-desktop",
+      "reference": "Desktop/Início.png",
+      "comparisonFile": "home-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 3668,
+      "canvasWidth": 2904,
+      "canvasHeight": 3708,
+      "state": {
+        "session": "guest",
+        "query": "all",
+        "editorial": "four API previews",
+        "newsletter": "empty"
+      },
+      "overflow": false,
+      "differences": [
+        "Os cartões desktop foram uniformizados, atendendo aos comentários 60/61. Foram removidos ajustes de imagem e espaçamento baseados na posição; não se reproduzem os desalinhamentos do quadro estático.",
+        "Categorias, paginação, preço e raridade refletem os 18 itens da API simulada. Contagens ilustrativas do Figma não foram inventadas na interface.",
+        "O Diário da Cunhagem e o campo da newsletter estão restaurados e funcionais. Avisos de simulação e links ilustrativos acrescentam texto ao rodapé.",
+        "O documento da aplicação tem altura 3807 px e ultrapassa o quadro nativo de 3668 px; o rodapé final continua disponível por rolagem."
+      ],
+      "documentHeight": 3807,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "home-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 3708,
+        "originalPngSHA256": "fff4ed2dbcbaab616de972f9b0968479342848c430673a91b3f7d186c7117bd1",
+        "webpSHA256": "630595f89281dc48bdee0ca45697d929ae447852bb3778a25d055607835d1047",
+        "decodedRGBASHA256Before": "b930850e79fa4dd38742c98096d49fc84995c4df86a29d4cef87dc4f09010d64",
+        "decodedRGBASHA256After": "b930850e79fa4dd38742c98096d49fc84995c4df86a29d4cef87dc4f09010d64",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 4005063,
+        "afterBytes": 2914184
+      },
+      "archivedAppFile": "home-desktop.app.png",
+      "archivedAppSHA256": "1cc0cd7a9fb3baf9edb9672c9ae5d5b03aa26fc1611ffbedcfc4719bab49343d"
+    },
+    {
+      "key": "home-mobile",
+      "reference": "Mobile/Início.png",
+      "comparisonFile": "home-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "guest",
+        "query": "all"
+      },
+      "overflow": false,
+      "differences": [
+        "A primeira dobra mantém arte original, composição em duas colunas e deslocamento da coluna direita. A ordem dos itens vem da mesma API usada no desktop, enquanto o quadro mobile ilustra uma seleção diferente.",
+        "Os indicadores do destaque são botões reais. Na captura padrão, ações dos cartões por hover/foco não aparecem como os corações estáticos do Figma.",
+        "Diário e rodapé responsivo existem abaixo da dobra, com leitura, newsletter e links sociais funcionais."
+      ],
+      "documentHeight": 5665,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "home-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "3a8977bca2cfdacff513e721e8083b9a5d22e07301e3d1438da4613b89cb0b26",
+        "webpSHA256": "aacb7539cc450779ffb61b67164ba95f5e7cdd7218f7a9e3ea16f5e61f98f6dc",
+        "decodedRGBASHA256Before": "d6f439a40cb720cae75616b2feb1b67c39e5b067ff75fde340d98975fa1ec5b1",
+        "decodedRGBASHA256After": "d6f439a40cb720cae75616b2feb1b67c39e5b067ff75fde340d98975fa1ec5b1",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 588518,
+        "afterBytes": 408462
+      },
+      "archivedAppFile": "home-mobile.app.png",
+      "archivedAppSHA256": "8e0a49957141b9328b890cd93d8b938a5e98ca66cd024d5d8349c68b9971f934"
+    },
+    {
+      "key": "detail-desktop",
+      "reference": "Desktop/Detalhes do NFT.png",
+      "comparisonFile": "detail-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 2246,
+      "canvasWidth": 2904,
+      "canvasHeight": 2286,
+      "state": {
+        "session": "guest",
+        "nftId": "nft-1",
+        "edition": "1/50"
+      },
+      "overflow": false,
+      "differences": [
+        "Descrição, estoque, edições e avaliações são metadados simulados. Não se afirmam verificação real, IPFS, royalties ou direitos não implementados.",
+        "A descrição e os detalhes têm extensão diferente da referência. A lista de itens relacionados é obtida pela API, incluindo novas artes de demonstração.",
+        "Token e edição são canônicos e independentes da seleção de enquadramento, conforme as correções apontadas no design."
+      ],
+      "documentHeight": 2456,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "detail-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 2286,
+        "originalPngSHA256": "18ce32ffa1de89cfb27b78942781884e9aa053179c748e6d137f42a0ceb3639e",
+        "webpSHA256": "8203b9d2295ddcb9e901ddced19d2199b39af941203a180344ede473b22512f2",
+        "decodedRGBASHA256Before": "247f479fb1b31d732610ddc8074e8ba01da82c70eb30df713bac81db8f964081",
+        "decodedRGBASHA256After": "247f479fb1b31d732610ddc8074e8ba01da82c70eb30df713bac81db8f964081",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 1668443,
+        "afterBytes": 1148182
+      },
+      "archivedAppFile": "detail-desktop.app.png",
+      "archivedAppSHA256": "6bd1f9298a1a180258f202b0e424324912b5b649bccb499c72f168005eeebfe5"
+    },
+    {
+      "key": "cart-desktop",
+      "reference": "Desktop/Carrinho de NFTs.png",
+      "comparisonFile": "cart-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1754,
+      "canvasWidth": 2904,
+      "canvasHeight": 1794,
+      "state": {
+        "session": "guest",
+        "items": [
+          [
+            "nft-1",
+            2
+          ],
+          [
+            "nft-5",
+            6
+          ],
+          [
+            "nft-6",
+            9
+          ]
+        ],
+        "fee": "0.016"
+      },
+      "overflow": false,
+      "differences": [
+        "Itens e quantidades 2, 6, 9 foram preparados pela API; total de 26.846 ETH com taxa de 0.016 ETH.",
+        "A edição selecionada e o token canônico diferenciam variantes e evitam IDs conflitantes do quadro.",
+        "Recomendações vêm da API e não reproduzem a curadoria estática. Avisos do rodapé ampliam a altura total."
+      ],
+      "documentHeight": 1836,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "cart-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 1794,
+        "originalPngSHA256": "73d5b43ba7bcbc68b8dbf106978ca82a0f7cd97ad4113cccaecfddef76320edd",
+        "webpSHA256": "057a08c80ff4f5349f80a5eb796c30e591e1e8bdaad389c3af02f660df009038",
+        "decodedRGBASHA256Before": "62e9abeb550f7907204158d6ea824e5131a84bcac3ba8de84e9339386a72f7d1",
+        "decodedRGBASHA256After": "62e9abeb550f7907204158d6ea824e5131a84bcac3ba8de84e9339386a72f7d1",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 1104752,
+        "afterBytes": 766478
+      },
+      "archivedAppFile": "cart-desktop.app.png",
+      "archivedAppSHA256": "391992f65d4d8d0b7b2a3b768dbf3208c457d312c574da60e528421aaa8c4914"
+    },
+    {
+      "key": "checkout-desktop",
+      "reference": "Desktop/Pagamento.png",
+      "comparisonFile": "checkout-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1657,
+      "canvasWidth": 2904,
+      "canvasHeight": 1697,
+      "state": {
+        "session": "fictional collector",
+        "userId": "user-1",
+        "items": [
+          [
+            "nft-1",
+            2
+          ],
+          [
+            "nft-5",
+            6
+          ],
+          [
+            "nft-6",
+            9
+          ]
+        ],
+        "wallet": "wallet-1",
+        "connected": false
+      },
+      "overflow": false,
+      "differences": [
+        "Sessão autenticada com coletor fictício e carteira salva, enquanto o desenho mostra Entrar e campos vazios.",
+        "A aplicação exige conexão simulada da carteira e revisão antes de confirmar a compra. Campos e ações adicionais ampliam a altura em relação ao quadro.",
+        "Nenhuma conexão ou transação em blockchain real foi simulada como sucesso."
+      ],
+      "documentHeight": 1914,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "checkout-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 1697,
+        "originalPngSHA256": "d5d146f8981386b561d236aef3ca41d03f5fb461e1de9ca72d6abde4fd2289db",
+        "webpSHA256": "87505539c9d84903f11e6935aa4b925748d0873dfd4542d690adc4d5f147ef42",
+        "decodedRGBASHA256Before": "0eb2c3a0372fef65401dcae72c209af3621f84c43b543e1f49476e3dc12ae64d",
+        "decodedRGBASHA256After": "0eb2c3a0372fef65401dcae72c209af3621f84c43b543e1f49476e3dc12ae64d",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 487242,
+        "afterBytes": 193908
+      },
+      "archivedAppFile": "checkout-desktop.app.png",
+      "archivedAppSHA256": "8c6dd313e557ef4070dfefd1463c19f535646a2136e6164d9a63105700c8d148"
+    },
+    {
+      "key": "order-desktop",
+      "reference": "Desktop/Confirmação de Pedido.png",
+      "comparisonFile": "order-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1657,
+      "canvasWidth": 2904,
+      "canvasHeight": 1697,
+      "state": {
+        "session": "fictional collector",
+        "items": [
+          [
+            "nft-1",
+            2
+          ],
+          [
+            "nft-5",
+            6
+          ],
+          [
+            "nft-6",
+            9
+          ]
+        ],
+        "total": "26.846"
+      },
+      "overflow": false,
+      "differences": [
+        "Itens 2, 6, 9 e total de 26.846 ETH são preservados no snapshot do pedido.",
+        "Data, transação e carteira são valores efetivos da simulação. O CTA explora o catálogo; não há uma transação real para abrir no Etherscan."
+      ],
+      "documentHeight": 1657,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "order-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 1697,
+        "originalPngSHA256": "7152705c5b3343295770f0f8cfbf540fb70004c4cee9a33564addd1db3cfcfc6",
+        "webpSHA256": "0c4dd4ddae89897b5ec5fd2800ea4bedb51310edc979688a5aadeb66d1adc967",
+        "decodedRGBASHA256Before": "0ca4e32c4fa6d268a6d0a19898d076cbb2b3788a1745bc3626368f70240733e7",
+        "decodedRGBASHA256After": "0ca4e32c4fa6d268a6d0a19898d076cbb2b3788a1745bc3626368f70240733e7",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 217378,
+        "afterBytes": 102052
+      },
+      "archivedAppFile": "order-desktop.app.png",
+      "archivedAppSHA256": "52d42e555313afcbbeb23fffd291b4bdf773134a406ff4a4188474a89684e6aa"
+    },
+    {
+      "key": "cart-mobile",
+      "reference": "Mobile/Carrinho de NFTs.png",
+      "comparisonFile": "cart-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "guest",
+        "items": [
+          [
+            "nft-1",
+            1
+          ],
+          [
+            "nft-5",
+            1
+          ],
+          [
+            "nft-6",
+            2
+          ],
+          [
+            "nft-7",
+            2
+          ]
+        ],
+        "sourceSubtotal": "8.92",
+        "actualSubtotal": "8.14",
+        "editionNotes": "Canonical editions retained; the reference variant totals are inconsistent."
+      },
+      "overflow": false,
+      "differences": [
+        "Quatro linhas com quantidades 1, 1, 2, 2. A soma correta é 8.14 ETH, com total de 8.156 ETH; o quadro ilustra subtotal de 8.92 ETH incompatível com os itens.",
+        "Edições padrão e preços canônicos foram mantidos. As variantes e poses ilustradas no desenho não são consistentes com todos os valores da referência.",
+        "O título Violet Nomad pode ocupar duas linhas. Quantidade, remoção e cupom permanecem disponíveis."
+      ],
+      "documentHeight": 3457,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "cart-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "6be1a2d7283a2666b3710334d5ec903a0b930da8a24ec443e739c3bf775fb58b",
+        "webpSHA256": "3fbbfe942254bf1ae04b0def849356d5149f8af679a37f0b6fc3c87f646133f0",
+        "decodedRGBASHA256Before": "5df47ceb44c1c1a9620f5b88e1d26a8a9eacba94d4f6418672783439d61455cb",
+        "decodedRGBASHA256After": "5df47ceb44c1c1a9620f5b88e1d26a8a9eacba94d4f6418672783439d61455cb",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 297489,
+        "afterBytes": 185532
+      },
+      "archivedAppFile": "cart-mobile.app.png",
+      "archivedAppSHA256": "5614da246830ca32f26508df2acf5430e4bdbf0aa515e16c3f09fa31cac0c6ed"
+    },
+    {
+      "key": "login-desktop",
+      "reference": "Desktop/Login.png",
+      "comparisonFile": "login-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1981,
+      "canvasWidth": 2904,
+      "canvasHeight": 2021,
+      "state": {
+        "session": "guest",
+        "form": "Empty login fields; no credentials entered."
+      },
+      "overflow": false,
+      "differences": [
+        "Campos vazios e fundo do catálogo com dados reais da simulação; a curadoria do fundo difere da referência.",
+        "O acesso à conta demonstrativa é uma ação adicional explícita. OAuth e recuperação de senha não são declarados conectados."
+      ],
+      "documentHeight": 3807,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "login-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 2021,
+        "originalPngSHA256": "71a350ba8512ba7edd6f81646b807174376cc7e48008aac66394eb996d9382e1",
+        "webpSHA256": "b2070d2c8f5dda04da00cbfc93c313c16003043328db05b70a00491a950f7560",
+        "decodedRGBASHA256Before": "f6ba420d53fe50792276fff5689f9787c27d8b6fc1221b8dffc222a142f6b9fe",
+        "decodedRGBASHA256After": "f6ba420d53fe50792276fff5689f9787c27d8b6fc1221b8dffc222a142f6b9fe",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 2202652,
+        "afterBytes": 1546398
+      },
+      "archivedAppFile": "login-desktop.app.png",
+      "archivedAppSHA256": "dada70b4f4609181ad71f79804b26c05eb658a6ce906bb57939c8aa866bb537c"
+    },
+    {
+      "key": "register-desktop",
+      "reference": "Desktop/Cadastro.png",
+      "comparisonFile": "register-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1981,
+      "canvasWidth": 2904,
+      "canvasHeight": 2021,
+      "state": {
+        "session": "guest",
+        "form": "Empty registration fields; no account created."
+      },
+      "overflow": false,
+      "differences": [
+        "Formulário vazio; nenhuma conta criada para a captura. Fundo usa catálogo atual com cartões uniformizados.",
+        "Validações, confirmação de senha e avisos do protótipo podem mudar dimensões de conteúdo em relação ao quadro."
+      ],
+      "documentHeight": 3807,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "register-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 2021,
+        "originalPngSHA256": "5d064a44e88d8bebe65f9b549016a3be3a039c3c6cfbe3cf93906f2f38e93a75",
+        "webpSHA256": "c8bd8ce79478de63d6960ba3d85dcd1569dfbbae78fb6bb7828f00741b9d7776",
+        "decodedRGBASHA256Before": "49e2e0592e485bcb59e57058504627c7ccec61b878dbaa60118ce184d76373f9",
+        "decodedRGBASHA256After": "49e2e0592e485bcb59e57058504627c7ccec61b878dbaa60118ce184d76373f9",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 2213441,
+        "afterBytes": 1567056
+      },
+      "archivedAppFile": "register-desktop.app.png",
+      "archivedAppSHA256": "3b6ae705d0ffc00dc0e7b94117d7a59d9c3c1b1ae2f11682beb6902b18ec4bc6"
+    },
+    {
+      "key": "profile-desktop",
+      "reference": "Desktop/Perfil do Colecionador.png",
+      "comparisonFile": "profile-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1080,
+      "canvasWidth": 2904,
+      "canvasHeight": 1120,
+      "state": {
+        "session": "fictional collector",
+        "form": "Saved fictional profile; reference fields are empty.",
+        "savedProfile": {
+          "name": "Alex Collector",
+          "username": "alex.collector",
+          "email": "collector@example.test"
+        },
+        "passwordFields": "Empty"
+      },
+      "overflow": false,
+      "differences": [
+        "A aplicação mostra o perfil fictício já autenticado; o Figma contém campos vazios. Nenhuma senha foi preenchida.",
+        "O rodapé compartilhado aparece na parte inferior e o documento estende-se além da altura de 1080 px do quadro."
+      ],
+      "documentHeight": 1671,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "profile-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 1120,
+        "originalPngSHA256": "5185d05f1ff264aa4d6b10c7ec9aa8a2b49d78f5648e9a26be546fe43486dd47",
+        "webpSHA256": "f05b4d9db7134c401feab21d0ba787ac8491f891e9721680491df5a3a1ce53a2",
+        "decodedRGBASHA256Before": "e43d5a17ca6ce1f98e4c00391a0133c176ecc6cd050ad65a24f5ddf4384f0b8b",
+        "decodedRGBASHA256After": "e43d5a17ca6ce1f98e4c00391a0133c176ecc6cd050ad65a24f5ddf4384f0b8b",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 153392,
+        "afterBytes": 48890
+      },
+      "archivedAppFile": "profile-desktop.app.png",
+      "archivedAppSHA256": "a81634437e57b419562869528352ac1f07578210c72d068e8c4c01c9ae9e77d0"
+    },
+    {
+      "key": "wallets-desktop",
+      "reference": "Desktop/Carteiras.png",
+      "comparisonFile": "wallets-desktop.side-by-side.webp",
+      "width": 1440,
+      "height": 1080,
+      "canvasWidth": 2904,
+      "canvasHeight": 1120,
+      "state": {
+        "session": "fictional collector",
+        "wallets": "One fictional primary Ethereum wallet; no secondary wallets.",
+        "form": "Initial editor state, not changed to mimic empty reference fields."
+      },
+      "overflow": false,
+      "differences": [
+        "A carteira primária fictícia existe na aplicação; a referência mostra campos vazios. Não se alteraram dados para forçar aparência idêntica.",
+        "O rodapé compartilhado aparece abaixo do formulário e o documento continua além da altura do quadro."
+      ],
+      "documentHeight": 1678,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "wallets-desktop.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 2904,
+        "height": 1120,
+        "originalPngSHA256": "72efc9ef1bae31c04b709bda8bc8b3e451b31eef008cbc75e7d6e3f807899d03",
+        "webpSHA256": "2d8b24c673340c56893ecf6dae7bf3560de55f90ec96503116fbe649156131f7",
+        "decodedRGBASHA256Before": "fd573ad4f3cc5adac742a9fccc5b7fd6f5e044ef1d717c8ae1c126de892585b5",
+        "decodedRGBASHA256After": "fd573ad4f3cc5adac742a9fccc5b7fd6f5e044ef1d717c8ae1c126de892585b5",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 194444,
+        "afterBytes": 63946
+      },
+      "archivedAppFile": "wallets-desktop.app.png",
+      "archivedAppSHA256": "6afa35c4686ff439e04fd3f76a0dcff254d7acbf619b0eaf694e527a691986c7"
+    },
+    {
+      "key": "detail-mobile",
+      "reference": "Mobile/Detalhes do NFT.png",
+      "comparisonFile": "detail-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "guest",
+        "nftId": "nft-1",
+        "edition": "1/50",
+        "quantity": 1
+      },
+      "overflow": false,
+      "differences": [
+        "A barra superior, arte e compra estão na primeira dobra. O padding superior adicional e a legenda de compra foram corrigidos; não há galeria de miniaturas nem navegação inferior cobrindo a compra.",
+        "Descrição, coleção, avaliação 4.5 e token 042 vêm da simulação, diferentes de alguns valores ilustrativos do quadro.",
+        "Edições 1/1, 1/10, 1/50 e aberta são distintas; não se duplica a opção 1/10 conflitante do desenho."
+      ],
+      "documentHeight": 4070,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "detail-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "c118be664fcf65beb15858250dc025df07c73fa3dda244b6076e98e10f688b7c",
+        "webpSHA256": "9bf038a793f6fad6a39b35cfbfd17dda328f387bfbab0532de713c748dd7c1c3",
+        "decodedRGBASHA256Before": "373daab06ea49b068839de77456c3c9b7a43f3ff2e456a35af7fe0704ec66ea6",
+        "decodedRGBASHA256After": "373daab06ea49b068839de77456c3c9b7a43f3ff2e456a35af7fe0704ec66ea6",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 447712,
+        "afterBytes": 309256
+      },
+      "archivedAppFile": "detail-mobile.app.png",
+      "archivedAppSHA256": "c519611ff67c2fed56c2e641f3f2bf7fe768ee147bbb336550d20326ae0326fd"
+    },
+    {
+      "key": "checkout-mobile",
+      "reference": "Mobile/Pagamento.png",
+      "comparisonFile": "checkout-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "fictional collector",
+        "items": [
+          [
+            "nft-1",
+            1
+          ],
+          [
+            "nft-5",
+            1
+          ],
+          [
+            "nft-6",
+            2
+          ],
+          [
+            "nft-7",
+            2
+          ]
+        ],
+        "sourceTotal": "8.936",
+        "actualTotal": "8.156",
+        "connected": false,
+        "form": "Required collector fields and actual saved wallet remain accessible."
+      },
+      "overflow": false,
+      "differences": [
+        "Diferença estrutural mantida: a referência prioriza carteiras e Confirmar compra na primeira dobra; a aplicação mantém os campos obrigatórios do coletor antes da conexão e revisão.",
+        "Os itens 1, 1, 2, 2 produzem total correto de 8.156 ETH. A carteira ainda não está conectada na captura.",
+        "Navegação inferior e rodapé continuam acessíveis por rolagem. Esta captura não representa equivalência integral da tela mobile do Figma."
+      ],
+      "documentHeight": 4287,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "checkout-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "4fa8be8a99dc29c32ffa6a0fbda23e907c8d0b1ba785f329c33bef3958c5fbd4",
+        "webpSHA256": "91b34e03d08afd73c5d32237de6c84e8c524494a716cd0c063d8500be9126482",
+        "decodedRGBASHA256Before": "fcd9b8c18e06496f87618cebfe4a5759bb68ce418078eef36618dc3206c9da69",
+        "decodedRGBASHA256After": "fcd9b8c18e06496f87618cebfe4a5759bb68ce418078eef36618dc3206c9da69",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 137426,
+        "afterBytes": 54932
+      },
+      "archivedAppFile": "checkout-mobile.app.png",
+      "archivedAppSHA256": "62c39364830ca0ae0fe89d61fde5902d1a93bb90ed912776ed92cb725d6ee7b4"
+    },
+    {
+      "key": "login-mobile",
+      "reference": "Mobile/Login.png",
+      "comparisonFile": "login-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "guest",
+        "form": "Empty login fields; no credentials entered."
+      },
+      "overflow": false,
+      "differences": [
+        "Formulário vazio e foco inicial no e-mail; o desenho contém credenciais ilustrativas e foco na senha.",
+        "O botão para preencher a conta fictícia e o aviso de privacidade são adicionais, deslocando as ações inferiores."
+      ],
+      "documentHeight": 896,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "login-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "f23b913d821c19b688bf14d2bef798e0eb8e84306de108d4313de924bd2789fd",
+        "webpSHA256": "c85aab8aa5cc6a0c14bc9aa93b599249d984e877e2ce5a42e570c18b44e7f9d7",
+        "decodedRGBASHA256Before": "0980cb13943bda7bcf4ab33a9a3cfd4b1d91b2713db1d5e017f58a5212820fb3",
+        "decodedRGBASHA256After": "0980cb13943bda7bcf4ab33a9a3cfd4b1d91b2713db1d5e017f58a5212820fb3",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 64550,
+        "afterBytes": 24436
+      },
+      "archivedAppFile": "login-mobile.app.png",
+      "archivedAppSHA256": "6ce6f0d216077f38878ab5a0ea582a73ecc1b7f143bf4fac787ec0e93d414fe0"
+    },
+    {
+      "key": "register-mobile",
+      "reference": "Mobile/Cadastro.png",
+      "comparisonFile": "register-mobile.side-by-side.webp",
+      "width": 414,
+      "height": 896,
+      "canvasWidth": 852,
+      "canvasHeight": 936,
+      "state": {
+        "session": "guest",
+        "form": "Empty registration fields; no account created."
+      },
+      "overflow": false,
+      "differences": [
+        "Cadastro vazio, sem submissão. O foco inicial real destaca o nome de usuário.",
+        "Confirmação e validações pertencem ao fluxo real; não há cadastro social declarado conectado."
+      ],
+      "documentHeight": 896,
+      "buildScripts": [
+        "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+      ],
+      "losslessVerification": {
+        "file": "register-mobile.side-by-side.webp",
+        "encoding": "WebP lossless",
+        "width": 852,
+        "height": 936,
+        "originalPngSHA256": "b499d3c16ff078172daddf9e20698ddad395934c41271375ea34c942c4fb9d47",
+        "webpSHA256": "bf9b4ba324e0c14f8959704f51eae98729ecdb39c54bea238bd4ec87caae5e32",
+        "decodedRGBASHA256Before": "4037333e33080dab30077b70f8e2cf4d0b597236b1957696d92645dcc294cae5",
+        "decodedRGBASHA256After": "4037333e33080dab30077b70f8e2cf4d0b597236b1957696d92645dcc294cae5",
+        "decodedPixelsIdentical": true,
+        "beforeBytes": 64445,
+        "afterBytes": 22144
+      },
+      "archivedAppFile": "register-mobile.app.png",
+      "archivedAppSHA256": "e774fe7ad584476c3c7cf4ece09a95681020ffad8c3780aa9931fb5ca673ffca"
+    }
+  ],
+  "certification": "Comparação factual de dimensões e estado. Não certifica equivalência integral nem representa um score de fidelidade.",
+  "postReviewCorrections": [
+    "Cabeçalho distingue Início de Mercado sem impor filtro de arte ao navegar para o catálogo.",
+    "Fechar os cenários devolve o foco ao botão que os abriu, dentro do menu de opções ainda aberto.",
+    "Destaques possuem três slides derivados do Figma, arraste e controles por clique/teclado, sem autoplay."
+  ],
+  "screenCount": 15,
+  "sourceFrameCount": 15,
+  "allNativeFramesCovered": true,
+  "modalFocusVerification": {
+    "desktop": "Fechar opções devolveu foco ao botão Opções da demonstração.",
+    "mobile": "Fechar opções devolveu foco ao botão Abrir navegação.",
+    "nestedScenario": "Fechar cenários devolveu foco ao botão que os abriu, mantendo o menu de opções aberto."
+  },
+  "manualReview": {
+    "reviewedNativeComparisons": 15,
+    "reviewMethod": "Inspeção das composições nativas e folhas de revisão, sem alterar ou redimensionar os originais.",
+    "materialMobileDifferences": [
+      "checkout-mobile"
+    ],
+    "resolvedSincePreviousRound": [
+      "Padding superior e compra no detalhe mobile.",
+      "Diário da Cunhagem restaurado.",
+      "Campo de newsletter e links sociais funcionais.",
+      "Cartões desktop uniformizados conforme os comentários 60/61."
+    ],
+    "claim": "Capturas iguais em dimensão não certificam equivalência integral. Não foi atribuído score de fidelidade."
+  },
+  "captureStatus": "As 15 capturas de interface foram renovadas e revisadas no build X0vaGc14, com Figma à esquerda e aplicação à direita, sem redimensionamento. Uma correção posterior apenas no transporte HTTP exige nova validação funcional, sem alteração prevista de UI/CSS/assets.",
+  "changesAfterCapture": [],
+  "capturedAt": "2026-10-27T15:56:20.143292+00:00",
+  "buildScripts": [
+    "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+  ],
+  "captureBuild": "X0vaGc14",
+  "transportValidation": {
+    "status": "pending",
+    "lastFullRun": {
+      "passed": 147,
+      "failed": 1,
+      "total": 148,
+      "finding": "P1 no bootstrap HTTP durante login rápido."
+    },
+    "scope": "As capturas registram o build de interface identificado. Os oito baselines serão revalidados no novo build após a correção de transporte; não foram aprovados como validação funcional definitiva."
+  },
+  "comparisonEncoding": "WebP lossless; dimensões e pixels RGBA decodificados preservados.",
+  "originalCapturesLocation": "Arquivo local de evidências preservado fora do repositório antes da publicação; os nomes archivedAppFile identificam as capturas PNG nesse arquivo.",
+  "publicationPackaging": {
+    "reason": "A hospedagem recusou o pacote anterior por tamanho. As 15 composições foram codificadas em WebP lossless, sem redimensionamento ou alteração dos pixels. PNGs auxiliares e montagens redundantes foram retirados do pacote após verificar suas cópias externas.",
+    "encodedAt": "2026-10-27T18:00:44.263224+00:00",
+    "verifiedComparisons": 15,
+    "decodedRGBAIdentical": true,
+    "beforeDirectoryBytes": 22972778,
+    "archivedBeforeRemoval": true,
+    "removedAuxiliaryImageCount": 35,
+    "afterDirectoryBytes": 9396413,
+    "reductionPercent": 59.1
+  }
+}

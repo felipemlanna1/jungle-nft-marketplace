@@ -1,0 +1,64 @@
+{
+  "scope": "Telas de acesso, cadastro, perfil e carteiras; validação de parâmetros de rota",
+  "implementation": {
+    "source": "Implementação independente, baseada na estrutura de pastas observada e nos desenhos fornecidos. Nenhuma implementação ou dado privado foi copiado.",
+    "organization": "Páginas compõem componentes; hooks colocados concentram estado, efeitos e operações; shared-types.ts contém contratos efetivamente utilizados; serviços ficam fora das visualizações.",
+    "components": [
+      "AuthForm",
+      "AuthBackdrop",
+      "PasswordField",
+      "PasswordForm",
+      "SocialOptions",
+      "AccountSidebar",
+      "EnsField",
+      "WalletFields"
+    ],
+    "design": "Modal de acesso sobre catálogo real no desktop; formulário de página inteira no celular; perfil e carteiras com navegação lateral e grade de campos.",
+    "assets": "SVGs originais baixados de contextos Figma para public/figma/login e public/figma/profile; ícone Google composto com as sete camadas originais, sem redesenho.",
+    "language": "Identificadores em inglês e textos da interface em português."
+  },
+  "behavior": {
+    "authentication": "Cadastro exige senhas coincidentes e política de senha; olhos revelam e ocultam o valor; senha não é persistida pelos formulários. Login conserva destino interno validado.",
+    "unavailableIntegrations": "Google, Facebook e recuperação de senha informam explicitamente a ausência de conexão, sem simular autenticação bem-sucedida.",
+    "profile": "Nome, usuário, e-mail, ENS, apelido e avatar são gravados pelo serviço; alteração de senha é uma operação separada. A ação de senha aparece quando seus campos são preenchidos.",
+    "wallets": "Campos exibidos são persistidos, incluindo tipo de carteira, ENS e endereço secundário. Uma carteira secundária pode ser adicionada e editada. A opção de usar a principal seleciona o registro existente, sem duplicar um endereço.",
+    "asyncSafety": "As gravações enviam snapshots com proprietário; a mutation confere a sessão antes de iniciar o HTTP e antes de alterar cache/estado. Os campos aguardam a inicialização da conta e ficam bloqueados durante a gravação; a resposta inicial de carteiras não pode sobrescrever um rascunho iniciado antes dela.",
+    "avatar": "PNG, JPEG ou WebP de até 350 KB; leitura assíncrona confere o usuário antes de aplicar o resultado.",
+    "routeSearch": "Preços permanecem strings com até 18 casas e 32 dígitos inteiros. Rede, categoria e aba passam por listas permitidas; faixa invertida segue para a validação do serviço, sem troca silenciosa."
+  },
+  "verification": {
+    "typecheck": "PASS: npm run typecheck",
+    "lint": "PASS: npx eslint src/modules/account src/app/routing/search.ts src/app/routing/search.test.ts tests/e2e/account.spec.ts",
+    "routeUnit": "PASS: 11 testes em src/app/routing/search.test.ts",
+    "browser": "PASS: rodada consolidada de 76 testes funcionais desktop/mobile, sem retries, ignorados ou falhas; inclui cadastro, conta, compra, recuperação, temas, navegação e carrosséis.",
+    "covered": [
+      "mostrar e ocultar senha",
+      "erros honestos de integrações ausentes",
+      "confirmação de senha no cadastro",
+      "cadastro isolado",
+      "persistência de perfil e ENS",
+      "validação de endereço",
+      "persistência de carteira secundária e WalletConnect",
+      "rádio de carteira principal",
+      "ausência de overflow horizontal",
+      "falha de sessão recuperável",
+      "retorno a rota protegida com query e fragmento"
+    ],
+    "screenshots": "reports/account-{desktop,mobile}-{login,register,profile,wallets}.png",
+    "accountMutationUnit": "PASS: cinco testes em mutationOwnership.test.ts, incluindo a carga inicial tardia da carteira.",
+    "sourceIntegrity": "SHA-256 de 485 arquivos de fontes, testes, pacotes e assets permaneceu idêntico antes/depois: dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c.",
+    "evidence": "reports/e2e-consolidated-evidence.json"
+  },
+  "limitations": [
+    "Os testes de navegador não demonstram identidade de pixels com o Figma. Os screenshots MCP de desktop foram redimensionados pela origem; as capturas de teste usam viewports próprios.",
+    "Os dados reais do estado de demonstração aparecem nos formulários, enquanto algumas referências visuais mostram campos vazios.",
+    "A integração de identidade social e recuperação de senha depende de serviços que não existem nesta demonstração.",
+    "Áreas adicionais da navegação lateral aparecem indisponíveis, pois não fazem parte dos fluxos implementados.",
+    "Não foi atribuída nota numérica pelo autor nem alegada fidelidade integral.",
+    "Após a rodada consolidada, a revisão informou um ajuste adicional de escopo local em useOrder para não limpar a tentativa de outro pedido. Sua validação deve ser registrada separadamente."
+  ],
+  "additionalFix": {
+    "favoriteOwnership": "Falha reproduzida por três contraprovas antes do patch. A operação de favoritos agora carrega seu proprietário e chave; callbacks tardios não restauram dados após logout ou na conta seguinte.",
+    "tests": "Quatro testes de regressão passaram, incluindo o rollback normal na mesma conta."
+  }
+}

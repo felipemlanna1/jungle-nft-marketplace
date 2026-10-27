@@ -1,0 +1,151 @@
+{
+  "source": "https://github.com/junglegaming/frontend-challenge",
+  "referenceRead": "Enunciado integral fornecido pelo candidato e contextos do Figma.",
+  "status": "Implementação coberta; execução consolidada e publicação ainda em validação.",
+  "scope": [
+    {
+      "requirement": "Stack obrigatória em uso efetivo",
+      "implementation": "React, TypeScript, TanStack Router e Query, Axios, REST, Socket.IO, Tailwind, primitivas shadcn/Radix, MSW, Playwright e Lighthouse.",
+      "evidence": [
+        "src/router.tsx",
+        "src/application.tsx",
+        "src/services/marketplace",
+        "src/lib/realtime.ts",
+        "src/mocks/handlers",
+        "src/styleguide",
+        "tests/e2e",
+        "scripts/lighthouse.mjs"
+      ]
+    },
+    {
+      "requirement": "Catálogo com URL, filtros combináveis, ordem, paginação e respostas obsoletas",
+      "implementation": "Parâmetros validados por rota, filtros e comparação exata de ETH no domínio, facetas da API e consultas canceláveis por chave.",
+      "evidence": [
+        "src/app/routing",
+        "src/domain/catalog.ts",
+        "src/domain/catalog.test.ts",
+        "src/domain/catalog-api.test.ts",
+        "tests/e2e/marketplace.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Detalhe, galeria, edição, quantidade e favoritos",
+      "implementation": "Galeria com enquadramentos e ampliação; edições independentes; quantidade limitada ao estoque; favoritos persistentes e otimistas com rollback.",
+      "evidence": [
+        "src/modules/catalog/pages/NftDetails",
+        "src/modules/catalog/components/NftGallery",
+        "src/domain/editions.test.ts",
+        "src/modules/catalog/hooks/useCatalog.test.ts",
+        "src/modules/catalog/pages/NftDetails/useNftDetails.test.ts"
+      ]
+    },
+    {
+      "requirement": "Carrinho persistente, merge após login, cupom e resumo autoritativo",
+      "implementation": "Itens por edição, operações pela API, persistência local da simulação e cotação calculada em wei com BigInt.",
+      "evidence": [
+        "src/modules/checkout/pages/Cart",
+        "src/mocks/handlers/cart.ts",
+        "src/domain/money.ts",
+        "src/domain/marketplace.test.ts",
+        "tests/e2e/purchase.spec.ts",
+        "tests/e2e/api-contracts.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Pagamento com revisão, revalidação, idempotência e recuperação",
+      "implementation": "Carteira cadastrada ou salva pela compra, validação de rede, revisão obrigatória, fingerprint financeiro, tentativa persistida antes do envio e recuperação da mesma chave.",
+      "evidence": [
+        "src/modules/checkout/pages/Checkout",
+        "src/modules/checkout/attempt.ts",
+        "src/mocks/database.ts",
+        "tests/e2e/purchase.spec.ts",
+        "tests/e2e/adversarial-ui.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Pedido pendente, confirmado, recusado e recibo imutável",
+      "implementation": "Reserva por edição, estados terminais, reconciliação REST, liberação na recusa e comprovante somente após confirmação da simulação.",
+      "evidence": [
+        "src/modules/checkout/pages/Order",
+        "src/modules/checkout/components/OrderReceipt",
+        "src/domain/editions.test.ts",
+        "tests/e2e/order-reconnect.spec.ts",
+        "tests/e2e/purchase.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Cadastro, login, sessão, perfil, avatar, senha e carteiras",
+      "implementation": "Formulários validados pela interface e API, dados fictícios persistentes, senha derivada por hash e retorno interno validado após autenticação.",
+      "evidence": [
+        "src/modules/account",
+        "src/mocks/handlers/session.ts",
+        "src/mocks/handlers/account.ts",
+        "tests/e2e/account.spec.ts",
+        "tests/e2e/account-edit.spec.ts",
+        "tests/e2e/routing.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Isolamento entre usuários e descarte de ações antigas",
+      "implementation": "Chaves privadas por proprietário, limpeza de cache e listeners, geração de transporte capturada sincronicamente e guards antes de enviar e aplicar respostas.",
+      "evidence": [
+        "src/services/http",
+        "src/lib/query.ts",
+        "src/lib/realtime.ts",
+        "src/domain/session-transport.test.ts",
+        "src/modules/account/hooks/mutationOwnership.test.ts",
+        "src/modules/catalog/hooks/useCatalog.test.ts",
+        "src/modules/checkout/hooks/useCart.test.ts"
+      ]
+    },
+    {
+      "requirement": "MSW na rede, cenários reproduzíveis e Socket.IO efetivo",
+      "implementation": "Handlers por recurso, wrapper de latência/erros, binding de WebSocket compatível com Socket.IO e eventos versionados; nenhuma resposta fictícia dentro dos componentes.",
+      "evidence": [
+        "src/mocks/browser.ts",
+        "src/mocks/handlers",
+        "src/components/ScenarioPanel",
+        "tests/e2e/realtime.spec.ts",
+        "tests/e2e/resilience.spec.ts",
+        "tests/e2e/order-reconnect.spec.ts"
+      ]
+    },
+    {
+      "requirement": "Responsividade e acessibilidade",
+      "implementation": "Layouts desktop/tablet/mobile, foco visível, labels, diálogos Radix, avisos acessíveis, movimento reduzido e skeletons com dimensões reservadas.",
+      "evidence": [
+        "src/styleguide",
+        "src/styleguide/theme/kurio/styles",
+        "tests/e2e/kurio.spec.ts",
+        "tests/e2e/marketplace.spec.ts",
+        "tests/e2e/account.spec.ts",
+        "reports/visual-comparison"
+      ]
+    },
+    {
+      "requirement": "Playwright e regressão visual",
+      "implementation": "148 casos configurados em 22 arquivos cobrem desktop/mobile, fluxos, falhas, tempo real, conta, ações de cards, carrosséis, geometria e oito baselines de início, detalhe, carrinho e pagamento. A contagem configurada não substitui o resultado executado.",
+      "evidence": ["playwright.config.ts", "tests/e2e", ".github/workflows/quality.yml"],
+      "limit": "Quantidade configurada não comprova execução. O relatório final registra o resultado das rodadas e a versão validada."
+    },
+    {
+      "requirement": "Lighthouse em build otimizado, três medições por página e perfil",
+      "implementation": "Configuração versionada, preflight REST/Socket.IO, verificação dos bytes servidos, preservação dos relatórios e medianas com LCP, CLS, TBT e ambiente.",
+      "evidence": ["scripts/lighthouse.mjs", "reports/performance", "reports/lighthouse/runs"],
+      "limit": "A matriz final precisa ser concluída. Não se infere nota a partir do tamanho do bundle."
+    },
+    {
+      "requirement": "Deploy público correspondente ao repositório e execução limpa",
+      "implementation": "Build estático com todos os assets e mocks locais, configuração Sites e publicação do mesmo commit no repositório.",
+      "evidence": [".openai/hosting.json", "package-lock.json", "README.md"],
+      "limit": "A revisão atual ainda precisa de publicação e teste de acesso direto e atualização em produção."
+    }
+  ],
+  "documentedDifferences": [
+    "Dados e contagens refletem a simulação e não os números ilustrativos do Figma.",
+    "O total matematicamente inconsistente no carrinho mobile foi corrigido pela cotação da API.",
+    "Perfil, carteiras e confirmação têm adaptação mobile sem frame original equivalente.",
+    "Comparativos do Figma não certificam identidade integral de pixels; as diferenças observadas estão registradas.",
+    "As prévias editoriais da Home abrem conteúdo ilustrativo em diálogo. Redes sociais abrem as plataformas e a newsletter confirma apenas uma assinatura local simulada, sem envio de e-mail."
+  ]
+}

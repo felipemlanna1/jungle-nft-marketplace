@@ -1,24 +1,25 @@
-import type { Network } from '../../../../contracts';
+import { Button } from '../../../../styleguide';
 import { messageOf } from '../../hooks/useAccount';
+import { AccountSidebar } from '../../components/AccountSidebar';
+import { WalletFields } from '../../components/WalletFields';
 import { useWallets } from './useWallets';
 export function WalletsPage() {
   const {
+    ready,
     user,
     wallets,
-    editing,
-    setEditing,
-    label,
-    setLabel,
-    address,
-    setAddress,
-    network,
-    setRede,
-    primary,
-    setPrincipal,
+    editor,
+    values,
+    setField,
     error,
     save,
     edit,
+    add,
     submit,
+    primaryWallet,
+    secondaryWallets,
+    sameAsPrimary,
+    copyPrimary,
   } = useWallets();
   if (!user)
     return (
@@ -27,117 +28,112 @@ export function WalletsPage() {
       </section>
     );
   return (
-    <section className="page-shell">
-      <div className="flow-heading">
-        <span className="eyebrow">Sua coleção, conectada</span>
-        <h1>Minhas carteiras</h1>
-        <p className="muted">
-          Conexões são simuladas. Nunca informe uma frase de recuperação real.
+    <section className="page-shell collector-account">
+      <AccountSidebar active="wallets" />
+      <div className="collector-content collector-wallets">
+        <div className="collector-title-row">
+          <h1>{editor.primary ? 'Carteira principal' : 'Carteira secundária'}</h1>
+          <button
+            type="button"
+            className="collector-text-action"
+            disabled={save.isPending || !ready}
+            onClick={() => add(editor.primary)}
+          >
+            Adicionar
+          </button>
+        </div>
+        <p className="collector-help">
+          Estas carteiras ficam disponíveis no pagamento e para receber NFTs comprados.
         </p>
-      </div>
-      <div className="flow-grid">
-        <section className="stack" aria-label="Carteiras salvas">
-          {wallets.isPending && <p role="status">Carregando carteiras…</p>}
-          {wallets.error && (
-            <p role="alert">
-              {messageOf(wallets.error)}{' '}
-              <button className="button button-secondary" onClick={() => void wallets.refetch()}>
-                Tentar novamente
-              </button>
+        {wallets.isPending && <p role="status">Carregando carteiras…</p>}
+        {wallets.error && (
+          <p role="alert" className="field-error">
+            {messageOf(wallets.error)}{' '}
+            <button type="button" onClick={() => void wallets.refetch()}>
+              Tentar novamente
+            </button>
+          </p>
+        )}
+        <form className="collector-wallet-form" onSubmit={submit}>
+          <fieldset disabled={save.isPending || !ready} className="wallet-fields-lock">
+            <WalletFields values={values} setField={setField} />
+          </fieldset>
+          {(error || save.error) && (
+            <p role="alert" className="field-error">
+              {error || messageOf(save.error)}
             </p>
           )}
-          {wallets.data?.map((wallet) => (
-            <article className="wallet-card form-card" key={wallet.id}>
-              <span className="eyebrow">
-                {wallet.network} {wallet.primary && '· Principal'}
-              </span>
-              <h2>{wallet.label}</h2>
-              <p className="wallet-address">{wallet.address}</p>
-              <button className="button button-secondary" onClick={() => edit(wallet)}>
-                Edit {wallet.label}
-              </button>
-            </article>
-          ))}
-          {wallets.data?.length === 0 && (
-            <div className="empty-state">Você ainda não tem carteiras salvas.</div>
+          {save.isSuccess && (
+            <p role="status" className="notice">
+              Carteira salva.
+            </p>
           )}
-        </section>
-        <section className="form-card">
-          <h2>{editing ? 'Editar carteira' : 'Adicionar carteira'}</h2>
-          <form className="stack" onSubmit={submit}>
-            <label className="field">
-              Nome da carteira
-              <input
-                className="input"
-                required
-                maxLength={60}
-                value={label}
-                onChange={(e) => setLabel(e.target.value)}
-              />
-            </label>
-            <label className="field">
-              Endereço da carteira
-              <input
-                className="input"
-                required
-                placeholder="0x…"
-                aria-label="Endereço da carteira"
-                spellCheck={false}
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                aria-describedby="wallet-help"
-              />
-              <small id="wallet-help" className="muted">
-                Use um endereço fictício compatível com Ethereum.
-              </small>
-            </label>
-            <label className="field">
-              Rede
-              <select
-                className="input"
-                value={network}
-                onChange={(e) => setRede(e.target.value as Network)}
-              >
-                <option>Ethereum</option>
-                <option>Polygon</option>
-              </select>
-            </label>
-            <label className="checkbox-field">
-              <input
-                type="checkbox"
-                checked={primary}
-                onChange={(e) => setPrincipal(e.target.checked)}
-              />{' '}
-              Usar como minha carteira principal
-            </label>
-            {(error || save.error) && (
-              <p role="alert" className="field-error">
-                {error || messageOf(save.error)}
-              </p>
-            )}
-            {save.isSuccess && (
-              <p role="status" className="notice">
-                Carteira salva.
-              </p>
-            )}
-            <button className="button" disabled={save.isPending}>
-              {save.isPending ? 'Salvando…' : editing ? 'Salvar carteira' : 'Adicionar carteira'}
-            </button>
-            {editing && (
+          <Button className="collector-save" disabled={save.isPending || !ready}>
+            {save.isPending ? 'Salvando…' : 'Salvar carteira'}
+          </Button>
+        </form>
+        <section className="secondary-wallet-section" aria-labelledby="secondary-wallet-title">
+          <div className="collector-title-row">
+            <h2 id="secondary-wallet-title">Carteira secundária</h2>
+            <div className="secondary-wallet-actions">
+              <label className="checkbox-field">
+                <input
+                  type="radio"
+                  name="secondary-wallet-mode"
+                  checked={sameAsPrimary}
+                  onChange={copyPrimary}
+                  disabled={!primaryWallet || save.isPending || !ready}
+                />
+                Igual à carteira principal
+              </label>
               <button
                 type="button"
-                className="button button-secondary"
-                onClick={() => {
-                  setEditing(null);
-                  setLabel('');
-                  setAddress('');
-                }}
+                className="collector-text-action"
+                disabled={save.isPending || !ready}
+                onClick={() => add(false)}
               >
-                Cancelar edição
+                Adicionar
               </button>
-            )}
-          </form>
+            </div>
+          </div>
+          {secondaryWallets.length === 0 ? (
+            <p className="collector-help">
+              {sameAsPrimary
+                ? 'A carteira principal está selecionada para suas compras.'
+                : 'Você ainda não adicionou uma carteira secundária.'}
+            </p>
+          ) : (
+            secondaryWallets.map((wallet) => (
+              <article className="saved-wallet-row" key={wallet.id}>
+                <div>
+                  <h3>{wallet.label}</h3>
+                  <p>
+                    {wallet.network} · {wallet.address.slice(0, 8)}…{wallet.address.slice(-5)}
+                  </p>
+                </div>
+                <Button
+                  variant="ghost"
+                  type="button"
+                  disabled={save.isPending || !ready}
+                  onClick={() => edit(wallet)}
+                >
+                  Editar {wallet.label}
+                </Button>
+              </article>
+            ))
+          )}
         </section>
+        {!editor.primary && primaryWallet && (
+          <Button
+            variant="ghost"
+            type="button"
+            className="return-primary"
+            disabled={save.isPending || !ready}
+            onClick={() => edit(primaryWallet)}
+          >
+            Voltar à carteira principal
+          </Button>
+        )}
       </div>
     </section>
   );

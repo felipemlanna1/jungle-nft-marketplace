@@ -1,0 +1,13 @@
+
+Running 4 tests using 1 worker
+
+(node:15013) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration (2.3s)
+  ✓  2 [desktop] › tests/e2e/catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh (3.4s)
+(node:15019) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  3 [mobile] › tests/e2e/catalog-sort.spec.ts:36:1 › the themed sort supports keyboard selection, Escape and focus restoration (2.4s)
+  ✓  4 [mobile] › tests/e2e/catalog-sort.spec.ts:76:1 › price sorting by pointer preserves applied minimum and maximum filters after refresh (2.7s)
+
+  4 passed (12.9s)

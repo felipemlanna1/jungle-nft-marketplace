@@ -1,11 +1,55 @@
+import { FavoritesList } from '../../modules/catalog/components/FavoritesList';
+import { figmaAssets } from '../../assets/figma';
 import { useLayout } from './useLayout';
 import type { ReactNode } from 'react';
 import { Link } from '@tanstack/react-router';
-import { ArrowUpRight, ChevronDown, Gem, Menu, Search, ShoppingBag } from 'lucide-react';
-import { Button, Modal, ThemeSwitcher } from '../../styleguide';
-export function Layout({ children }: { children: ReactNode }) {
-  const { themeName, menuOpen, setMenuOpen, logoutError, leaving, session, count, logout } =
-    useLayout();
+import {
+  ChevronDown,
+  Menu,
+  Search,
+  Heart,
+  ShoppingBag,
+  House,
+  UserRound,
+  Wallet,
+  LogOut,
+  LogIn,
+  FlaskConical,
+} from 'lucide-react';
+import { Button, Input, Modal } from '../../styleguide';
+import { Footer } from './Footer';
+import { MobileNavigation } from './MobileNavigation';
+export function Layout({
+  children,
+  onOpenScenarios,
+}: {
+  children: ReactNode;
+  onOpenScenarios: () => void;
+}) {
+  const {
+    activeSection,
+    homeCurrent,
+    marketCurrent,
+    favoritesOpen,
+    setFavoritesOpen,
+    openFavorites,
+    navigateFromFavorites,
+    restoreFavoritesFocus,
+    searchOpen,
+    setSearchOpen,
+    searchTerm,
+    setSearchTerm,
+    submitSearch,
+    menuOpen,
+    openMenu,
+    setMenuOpen,
+    restoreMenuFocus,
+    logoutError,
+    leaving,
+    session,
+    count,
+    logout,
+  } = useLayout();
   return (
     <>
       <a className="skip-link" href="#main-content">
@@ -14,40 +58,60 @@ export function Layout({ children }: { children: ReactNode }) {
       <header className="site-header">
         <div className="header-inner">
           <Link to="/" className="wordmark" aria-label="Página inicial da Kurio">
-            {themeName === 'expedition' ? (
-              <>
-                <span className="game-brand-emblem">
-                  <Gem size={24} strokeWidth={1.5} />
-                </span>
-                <span className="game-brand-copy">
-                  kurio<small>EXPLORE. COLECIONE.</small>
-                </span>
-              </>
-            ) : (
-              <>kurio</>
-            )}
+            kurio
           </Link>
           <div className="header-divider" />
           <nav className="desktop-nav" aria-label="Navegação principal">
-            <Link to="/" search={{}} activeOptions={{ exact: true }}>
+            <Link
+              to="/"
+              hash=""
+              search={{}}
+              activeOptions={{ exact: true, includeHash: true, includeSearch: false }}
+              activeProps={{}}
+              className={activeSection === 'home' ? 'is-active' : undefined}
+              aria-current={homeCurrent}
+            >
               Início
             </Link>
-            <Link to="/" search={{ category: 'Art' }}>
-              Mercado <ChevronDown size={14} />
+            <Link
+              to="/"
+              hash="marketplace"
+              search={{}}
+              activeOptions={{ exact: true, includeHash: true, includeSearch: false }}
+              activeProps={{}}
+              className={activeSection === 'market' ? 'is-active' : undefined}
+              aria-current={marketCurrent}
+            >
+              Mercado
             </Link>
-            <Link to="/wallets">Carteiras</Link>
+            <span className="nav-unavailable" title="Conteúdo editorial fora desta demonstração">
+              Criadores
+            </span>
+            <span className="nav-unavailable" title="Conteúdo editorial fora desta demonstração">
+              Aprenda
+            </span>
           </nav>
           <div className="header-actions">
-            <ThemeSwitcher />
-            <Link to="/" search={{}} className="header-search" aria-label="Buscar NFTs">
-              <Search size={19} />
-            </Link>
+            <button
+              type="button"
+              className="header-search"
+              aria-label="Buscar obras ou criadores"
+              onClick={() => setSearchOpen(true)}
+            >
+              <img src={figmaAssets.home.imgSearchIcon} width="20" height="20" alt="" />
+            </button>
             <Link to="/cart" className="cart-link" aria-label={`Carrinho, ${count} itens`}>
-              <ShoppingBag size={20} />
+              <img
+                className="kurio-cart-icon"
+                src={figmaAssets.home.imgCartIcon}
+                width="24"
+                height="24"
+                alt=""
+              />
               {count > 0 && <span className="cart-count">{count}</span>}
             </Link>
             {session.data ? (
-              <Button variant="secondary" size="small" onClick={() => setMenuOpen(true)}>
+              <Button variant="secondary" size="small" onClick={openMenu}>
                 <span className="tiny-avatar">{session.data.name.slice(0, 1)}</span>
                 <span className="account-label">{session.data.name}</span>
                 <ChevronDown size={14} />
@@ -55,7 +119,14 @@ export function Layout({ children }: { children: ReactNode }) {
             ) : (
               <Button asChild variant="secondary" size="small">
                 <Link to="/login">
-                  Entrar <ArrowUpRight size={14} />
+                  <img
+                    className="kurio-login-icon"
+                    src={figmaAssets.home.imgLogout}
+                    width="18"
+                    height="18"
+                    alt=""
+                  />{' '}
+                  Entrar
                 </Link>
               </Button>
             )}
@@ -64,7 +135,7 @@ export function Layout({ children }: { children: ReactNode }) {
               variant="ghost"
               size="icon"
               aria-label="Abrir navegação"
-              onClick={() => setMenuOpen(true)}
+              onClick={openMenu}
             >
               <Menu size={22} />
             </Button>
@@ -74,47 +145,78 @@ export function Layout({ children }: { children: ReactNode }) {
       <main id="main-content" tabIndex={-1}>
         {children}
       </main>
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <Link to="/" className="wordmark">
-            <span className="brand-symbol">c</span>kurio
-            <span className="brand-dot">.</span>
-          </Link>
-          <p>Descubra. Colecione. Faça parte.</p>
-          <span>Marketplace demonstrativo · Sem transações reais</span>
-        </div>
-        <div className="footer-bottom">
-          <span>© 2026 Kurio. Arte digital, imaginação humana.</span>
-          <span>Desafio Jungle Gaming</span>
-        </div>
-      </footer>
+      <Footer onOpenOptions={openMenu} onOpenFavorites={openFavorites} />
+      <MobileNavigation
+        count={count}
+        signedIn={Boolean(session.data)}
+        onMenu={openMenu}
+        onFavorites={openFavorites}
+      />
+      <Modal
+        open={favoritesOpen}
+        onOpenChange={setFavoritesOpen}
+        onCloseAutoFocus={restoreFavoritesFocus}
+        title="Lista de interesse"
+        description="As obras que você salvou na sua conta."
+      >
+        <FavoritesList onNavigate={navigateFromFavorites} />
+      </Modal>
+      <Modal
+        open={searchOpen}
+        onOpenChange={setSearchOpen}
+        title="Explorar coleções"
+        description="Busque pelo nome da obra ou do criador."
+      >
+        <form className="header-search-form stack" role="search" onSubmit={submitSearch}>
+          <label className="field" htmlFor="header-catalog-search">
+            Buscar obras ou criadores
+            <Input
+              id="header-catalog-search"
+              type="search"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Buscar obras ou criadores"
+            />
+          </label>
+          <Button type="submit">
+            <Search size={17} aria-hidden="true" /> Buscar
+          </Button>
+        </form>
+      </Modal>
       <Modal
         open={menuOpen}
         onOpenChange={setMenuOpen}
-        title={session.data ? 'Sua conta' : 'Explore a Kurio'}
-        description="Gerencie sua coleção e sua conta."
+        onCloseAutoFocus={restoreMenuFocus}
+        title={session.data ? 'Sua conta' : 'Menu'}
+        description="Acesse sua conta e seus itens."
       >
+        <Button variant="ghost" aria-label="Open demo scenarios" onClick={onOpenScenarios}>
+          <FlaskConical size={18} aria-hidden="true" /> Cenários de teste
+        </Button>
         <nav className="account-menu" aria-label="Navegação da conta">
           <Link to="/" onClick={() => setMenuOpen(false)}>
-            Início
+            <House size={18} aria-hidden="true" /> Início
           </Link>
           <Link to="/cart" onClick={() => setMenuOpen(false)}>
-            Carrinho ({count})
+            <ShoppingBag size={18} aria-hidden="true" /> Carrinho ({count})
           </Link>
+          <button type="button" onClick={openFavorites}>
+            <Heart size={18} aria-hidden="true" /> Lista de interesse
+          </button>
           <Link to="/profile" onClick={() => setMenuOpen(false)}>
-            Perfil do colecionador
+            <UserRound size={18} aria-hidden="true" /> Perfil
           </Link>
           <Link to="/wallets" onClick={() => setMenuOpen(false)}>
-            Carteiras
+            <Wallet size={18} aria-hidden="true" /> Carteiras
           </Link>
           {session.data ? (
             <Button variant="secondary" onClick={logout} disabled={leaving}>
-              {leaving ? 'Saindo…' : 'Sair'}
+              <LogOut size={18} aria-hidden="true" /> {leaving ? 'Saindo…' : 'Sair'}
             </Button>
           ) : (
             <Button asChild>
               <Link to="/login" onClick={() => setMenuOpen(false)}>
-                Entrar
+                <LogIn size={18} aria-hidden="true" /> Entrar
               </Link>
             </Button>
           )}

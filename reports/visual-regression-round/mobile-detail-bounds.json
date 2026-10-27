@@ -1,0 +1,62 @@
+{
+  "candidateId": "5ff40d1fe71c88c8c6d388f95db1a05c33dd86f760d256a7d94ce5893773eccd",
+  "checks": [
+    {
+      "width": 320,
+      "height": 896,
+      "buyButton": {
+        "x": 24,
+        "y": 808,
+        "width": 200,
+        "height": 60
+      },
+      "quantityControls": [
+        {
+          "x": 69.609375,
+          "y": 760,
+          "width": 81,
+          "height": 30
+        }
+      ],
+      "horizontalOverflow": false
+    },
+    {
+      "width": 390,
+      "height": 896,
+      "buyButton": {
+        "x": 24,
+        "y": 808,
+        "width": 196,
+        "height": 60
+      },
+      "quantityControls": [
+        {
+          "x": 69.609375,
+          "y": 760,
+          "width": 81,
+          "height": 30
+        }
+      ],
+      "horizontalOverflow": false
+    },
+    {
+      "width": 414,
+      "height": 896,
+      "buyButton": {
+        "x": 24,
+        "y": 808,
+        "width": 196,
+        "height": 60
+      },
+      "quantityControls": [
+        {
+          "x": 69.609375,
+          "y": 760,
+          "width": 81,
+          "height": 30
+        }
+      ],
+      "horizontalOverflow": false
+    }
+  ]
+}

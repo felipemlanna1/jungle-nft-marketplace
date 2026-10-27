@@ -1,0 +1,55 @@
+{
+  "scope": "Carrinho e confirmação do pedido.",
+  "reference": "Quadros cart-0.txt e order-0.txt do Figma; referências PNG fornecidas nesta sessão.",
+  "structure": [
+    "CartPage compõe CartItemRow, CartSummary e RelatedNfts.",
+    "Estado e operações de carrinho ficam em useCartPage.",
+    "OrderPage compõe estados e OrderReceipt; consulta e recuperação ficam em useOrder.",
+    "OrderReceipt usa hook colocado para formatação e foco, Radix Dialog e Summary compartilhado."
+  ],
+  "decisions": [
+    {
+      "subject": "Identidade das edições",
+      "decision": "Chaves e operações usam CartItem.id quando disponível, com fallback para nftId. O comprovante usa cartItemId e editionId do snapshot."
+    },
+    {
+      "subject": "Valores financeiros",
+      "decision": "Totais por linha usam multiplyEth com bigint. Resumo e comprovante usam os valores retornados pelo contrato, sem recomputar a compra por preços atuais."
+    },
+    {
+      "subject": "Modal",
+      "decision": "O recibo usa foco gerenciado, Escape e fechamento para o catálogo. O foco inicial fica no conteúdo para impedir que a página role diretamente ao CTA."
+    },
+    {
+      "subject": "Dados históricos",
+      "decision": "Nenhum dado corrente de NFT ou carteira é buscado para substituir valores do recibo. Data, transação e carteira vêm do pedido."
+    },
+    {
+      "subject": "Etherscan",
+      "decision": "O CTA leva ao catálogo. Não há link inventado para uma transação real; o recibo informa que a compra é simulada."
+    },
+    {
+      "subject": "Inconsistência do total mobile",
+      "decision": "A soma dos valores visíveis de 1.19 + 1.39 + 3.58 + 1.98 é 8.14, diferente do subtotal ilustrativo 8.92. A implementação preserva o cálculo financeiro exato do contrato."
+    },
+    {
+      "subject": "Reuso",
+      "decision": "QuantityInput, RelatedNfts e Summary são compartilhados; não há uma implementação separada dos controles de quantidade para mobile."
+    },
+    {
+      "subject": "Token ID histórico",
+      "decision": "O tokenId é persistido no OrderItem e exibido junto à edição. A divergência de IDs entre os quadros do Figma não foi reproduzida."
+    }
+  ],
+  "verification": [
+    "TypeScript global e ESLint do escopo passaram.",
+    "Navegador Chromium com carrinho e pedido criados pelo REST simulado: 1440, 414 e 320 px sem overflow horizontal.",
+    "Comprovante com três itens iniciou com scrollTop zero e fechou para o catálogo.",
+    "Comparação nativa final: carrinho desktop reproduziu quantidades 2, 6 e 9, subtotal 26.83 e total 26.846 ETH; carrinho mobile preservou subtotal correto 8.14 e total 8.156 ETH."
+  ],
+  "limitations": [
+    "Os valores visíveis dependem do estado real da simulação e dos itens escolhidos; não há linhas ou totais fixados para imitar um screenshot.",
+    "A comparação final exige exportação nativa com a mesma resolução e o mesmo estado.",
+    "Não existe quadro mobile original de confirmação do pedido."
+  ]
+}

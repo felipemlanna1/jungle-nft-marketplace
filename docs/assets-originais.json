@@ -1,0 +1,17 @@
+{
+  "data": "2026-10-27",
+  "finalidade": "Duas obras adicionais da segunda página, sem substituir os assets originais do primeiro conjunto do Figma.",
+  "origem": "Geração de imagem autorizada pelo candidato nesta conversa.",
+  "transformacao": "Conversão para WebP em 900 x 900, qualidade 92; sem texto, logo ou personagem existente solicitado.",
+  "imagens": [
+    {
+      "arquivo": "public/art/atlantic-cartographer.webp",
+      "prompt": "Use case: stylized-concept. Asset type: square premium NFT collectible portrait for the second page of a curated digital art marketplace. Original anthropomorphic capuchin monkey character with expressive thoughtful human eyes and individually groomed chestnut fur, wearing a finely textured sage linen overshirt and round antique brass spectacles, a folded hand-drawn nautical chart tucked into the collar. Three quarter portrait, shoulders and head, compassionate asymmetrical small smile, elegant warm cream and desaturated sea-green studio background, tactile 3D sculpture rendering, physically plausible material details, photographed with portrait lens and soft late afternoon window light. Human-crafted character design with subtle imperfections, no plastic shine, no stereotypical gaming neon, no text, no watermark, no logo. Warm brown and muted green colors compatible with a refined earthy NFT gallery. Distinct original character, not an existing franchise."
+    },
+    {
+      "arquivo": "public/art/ceramic-maker.webp",
+      "prompt": "Use case: stylized-concept. Asset type: square premium NFT collectible portrait for a curated digital art marketplace, companion in an original small art collection. A kind mature anthropomorphic golden tamarin monkey artisan with detailed fine tawny fur and hazel human-like eyes, wearing a weathered indigo work jacket and a clay-stained terracotta scarf, holding a small hand-thrown green ceramic bowl at chest height. Gentle confident expression, three quarter bust portrait with realistic hands and natural proportions, tangible sculptural 3D illustration with the care of a collectible studio maquette, quiet warm pale ochre and sage backdrop. Natural soft side light, rich tactile linen, glazed ceramic and fur detail, understated editorial art direction. No text, no logos, no watermark, no neon, no exaggerated shiny plastic. Original personable character, not a known cartoon or game character."
+    }
+  ],
+  "limite": "As imagens são fictícias e não representam artistas, coleções ou verificações comerciais reais."
+}

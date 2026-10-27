@@ -1,8 +1,8 @@
-import { Skeleton } from '../../../../components/ui';
+import { Skeleton } from '../../../../styleguide/components/Skeleton';
 export function CatalogSkeleton() {
   return (
     <div className="nft-grid" role="status" aria-label="Carregando coleção">
-      {Array.from({ length: 6 }, (_, i) => (
+      {Array.from({ length: 9 }, (_, i) => (
         <div className="nft-card skeleton-card" key={i}>
           <Skeleton className="art-skeleton" />
           <div className="nft-card-copy">

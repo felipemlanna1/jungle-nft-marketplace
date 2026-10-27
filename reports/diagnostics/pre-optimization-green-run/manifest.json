@@ -1,0 +1,117 @@
+{
+  "status": "aprovada no escopo e no build registrados antes da otimização",
+  "expected": 148,
+  "passed": 148,
+  "failed": 0,
+  "followUp": "Novas otimizações, handshake de autenticação e tratamento de prefetch serão verificados em uma nova execução completa. Esta rodada histórica não atesta o código posterior.",
+  "files": [
+    {
+      "path": "e2e-final-build-evidence.json",
+      "sha256": "e43a30bc0339224b40562cc7702d17e29a8f01d8ba609fdcb2e290a98c808460"
+    },
+    {
+      "path": "e2e-final-build-list.txt",
+      "sha256": "55686660d11ec2d827e3afc2107580be8f77767b0e0efa538a92c448bce2640a"
+    },
+    {
+      "path": "e2e-final-build-run.log",
+      "sha256": "34df94e45370fd19aa726ebb3731a404dc5cbc899590024b838b0f24404bf5a3"
+    },
+    {
+      "path": "e2e-final-build-source-after.json",
+      "sha256": "89b44fe2556632095028d49033cfc0ca669c33af0166ee75251aa7c5e7ca8772"
+    },
+    {
+      "path": "e2e-final-build-source-before.json",
+      "sha256": "89b44fe2556632095028d49033cfc0ca669c33af0166ee75251aa7c5e7ca8772"
+    },
+    {
+      "path": "e2e-final-build-summary.md",
+      "sha256": "c2b19187f0a2769c50d555215126247ca147908d2070a70ea8ce15b762be909c"
+    },
+    {
+      "path": "e2e-final-build-verified.json",
+      "sha256": "f654b135b70f8f744173e5ec37a71571adb64ca3840b10a931d2b4f2510dc9b8"
+    },
+    {
+      "path": "html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6"
+    },
+    {
+      "path": "html/data/21f0d505550a62b6478894b8a2f0d53e6c40716b.png",
+      "sha256": "f8a6ee02deae7c09733b692ee4d8aa522399c8be54f26ddb06fc9d9629b4a98c"
+    },
+    {
+      "path": "html/data/28eab583b8f88542a8215510154ec7f3cd8ababa.png",
+      "sha256": "c96806033c3c8c2124c308f359a7207d6dacef8ffd7d09eaf33db1dd3fdfc0c9"
+    },
+    {
+      "path": "html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965"
+    },
+    {
+      "path": "html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "sha256": "c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544"
+    },
+    {
+      "path": "html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897"
+    },
+    {
+      "path": "html/data/64fb5f08ff55a62075fdbffbf165c449b0358301.png",
+      "sha256": "c8ee7d5b97843f98d969a633e16cea38cc8825b2e51af4e350cc46b323c4e7b8"
+    },
+    {
+      "path": "html/data/6edb381fb0e9f6359316d69f826f397eaa95361e.png",
+      "sha256": "d2ddbdfe222a1a46df0e9a97bdbac252f6f0b88ad187aaccd2e49e95ea81a147"
+    },
+    {
+      "path": "html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "sha256": "6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4"
+    },
+    {
+      "path": "html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107"
+    },
+    {
+      "path": "html/data/760dc8f19fa545f836116ce80d903c8b1f01f096.png",
+      "sha256": "f187f24c50203140af504f493cfaed1cc4df23fd1cfc04b931ad9ebde1582a3f"
+    },
+    {
+      "path": "html/data/b83f76dfab5a8a2da5af2e229c9a4a11f11f7d56.png",
+      "sha256": "32d13ec2278f6bf5217d83c6da60f9642cee8a49c2ca6752a0613fd463a3f204"
+    },
+    {
+      "path": "html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964"
+    },
+    {
+      "path": "html/data/dbb9bd0d95bde740cd7e9edbdf4ee2758ffa83b7.png",
+      "sha256": "ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027"
+    },
+    {
+      "path": "html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d"
+    },
+    {
+      "path": "html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a"
+    },
+    {
+      "path": "html/data/ee3ff3bbed1f556b170329ba32796c5a56998da0.png",
+      "sha256": "1f70524df95ec1aceceb9cc5f95b926285ed3061e64e22df03cd4a71ab4759e5"
+    },
+    {
+      "path": "html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6"
+    },
+    {
+      "path": "html/index.html",
+      "sha256": "b1e2d7b82bd9f519327bb749b272c7b1348f7eb9beaa947e88c46c71fe88b95c"
+    },
+    {
+      "path": "login-bootstrap-counterproof.json",
+      "sha256": "e17696602767fc5b173390662775a268f908ee021a1acd8ee7d591ca10160d95"
+    }
+  ]
+}

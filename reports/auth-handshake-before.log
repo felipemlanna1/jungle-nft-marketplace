@@ -1,0 +1,154 @@
+
+ RUN  v5.0.5 /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace
+
+ ❯ src/modules/account/components/AuthForm/useAuthForm.test.ts (2 tests | 2 failed) 242ms
+   ❯ authentication session handshake (2)
+     × deduplicates bootstrap before the real authentication POST (register=false) 140ms
+     × deduplicates bootstrap before the real authentication POST (register=true) 98ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/modules/account/components/AuthForm/useAuthForm.test.ts > authentication session handshake > deduplicates bootstrap before the real authentication POST (register=false)
+AssertionError: expected CanceledError: Discarded an outdated sess… { …(4) } to match object { email: 'collector@example.test' }
+(23 matching properties omitted from actual)
+
+- Expected
++ Received
+
+- {
+-   "email": "collector@example.test",
++ CanceledError {
++   "message": "Discarded an outdated session response.",
++   "name": "CanceledError",
++   "isAxiosError": true,
++   "code": "ERR_CANCELED",
++   "config": {
++     "adapter": [
++       "xhr",
++       "http",
++       "fetch",
++     ],
++     "allowAbsoluteUrls": true,
++     "baseURL": "http://localhost:3000/api",
++     "data": "{\"email\":\"collector@example.test\",\"password\":\"Collect0r!Demo\"}",
++     "env": {
++       "Blob": [Function Blob],
++       "FormData": [Function FormData],
++     },
++     "headers": {
++       "Accept": "application/json, text/plain, */*",
++       "Content-Type": "application/json",
++       "X-Demo-Session": "17",
++     },
++     "maxBodyLength": -1,
++     "maxContentLength": -1,
++     "method": "post",
++     "timeout": 5000,
++     "transformRequest": [
++       [Function transformRequest],
++     ],
++     "transformResponse": [
++       [Function transformResponse],
++     ],
++     "transitional": {
++       "advertiseZstdAcceptEncoding": false,
++       "clarifyTimeoutError": false,
++       "encodeBasicAuthUsername": false,
++       "forcedJSONParsing": true,
++       "legacyInterceptorReqResOrdering": true,
++       "silentJSONParsing": true,
++       "validateStatusUndefinedResolves": true,
++     },
++     "url": "/session/login",
++     "validateStatus": [Function validateStatus],
++     "xsrfCookieName": "XSRF-TOKEN",
++     "xsrfHeaderName": "X-XSRF-TOKEN",
++   },
++   "__CANCEL__": true,
+  }
+
+ ❯ src/modules/account/components/AuthForm/useAuthForm.test.ts:110:20
+    108|         user = await submitted;
+    109|       });
+    110|       expect(user).toMatchObject({
+       |                    ^
+    111|         email: register ? 'new.collector@example.test' : DEMO_LOGIN.em…
+    112|       });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/modules/account/components/AuthForm/useAuthForm.test.ts > authentication session handshake > deduplicates bootstrap before the real authentication POST (register=true)
+AssertionError: expected CanceledError: Discarded an outdated sess… { …(4) } to match object { email: 'new.collector@example.test' }
+(23 matching properties omitted from actual)
+
+- Expected
++ Received
+
+- {
+-   "email": "new.collector@example.test",
++ CanceledError {
++   "message": "Discarded an outdated session response.",
++   "name": "CanceledError",
++   "isAxiosError": true,
++   "code": "ERR_CANCELED",
++   "config": {
++     "adapter": [
++       "xhr",
++       "http",
++       "fetch",
++     ],
++     "allowAbsoluteUrls": true,
++     "baseURL": "http://localhost:3000/api",
++     "data": "{\"name\":\"New collector\",\"email\":\"new.collector@example.test\",\"password\":\"Collect0r!New\"}",
++     "env": {
++       "Blob": [Function Blob],
++       "FormData": [Function FormData],
++     },
++     "headers": {
++       "Accept": "application/json, text/plain, */*",
++       "Content-Type": "application/json",
++       "X-Demo-Session": "17",
++     },
++     "maxBodyLength": -1,
++     "maxContentLength": -1,
++     "method": "post",
++     "timeout": 5000,
++     "transformRequest": [
++       [Function transformRequest],
++     ],
++     "transformResponse": [
++       [Function transformResponse],
++     ],
++     "transitional": {
++       "advertiseZstdAcceptEncoding": false,
++       "clarifyTimeoutError": false,
++       "encodeBasicAuthUsername": false,
++       "forcedJSONParsing": true,
++       "legacyInterceptorReqResOrdering": true,
++       "silentJSONParsing": true,
++       "validateStatusUndefinedResolves": true,
++     },
++     "url": "/session/register",
++     "validateStatus": [Function validateStatus],
++     "xsrfCookieName": "XSRF-TOKEN",
++     "xsrfHeaderName": "X-XSRF-TOKEN",
++   },
++   "__CANCEL__": true,
+  }
+
+ ❯ src/modules/account/components/AuthForm/useAuthForm.test.ts:110:20
+    108|         user = await submitted;
+    109|       });
+    110|       expect(user).toMatchObject({
+       |                    ^
+    111|         email: register ? 'new.collector@example.test' : DEMO_LOGIN.em…
+    112|       });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  14:10:56
+   Duration  1.18s (import 35%, environment 33%, tests 23%, transform 9%)
+

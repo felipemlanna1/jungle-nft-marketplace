@@ -1,0 +1,15 @@
+
+Running 6 tests using 1 worker
+
+(node:29522) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu (1.6s)
+  ✓  2 [desktop] › tests/e2e/kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh (1.6s)
+  ✓  3 [desktop] › tests/e2e/recovery.spec.ts:5:1 › opening an older receipt preserves an uncertain purchase and recovery never duplicates it (11.7s)
+(node:29529) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [mobile] › tests/e2e/favorites-navigation.spec.ts:43:1 › guest favorites navigate to a single usable login dialog without reopening the menu (1.5s)
+  ✓  5 [mobile] › tests/e2e/kurio.spec.ts:133:1 › opening the menu preserves URL filters and cart through refresh (1.4s)
+  ✓  6 [mobile] › tests/e2e/recovery.spec.ts:5:1 › opening an older receipt preserves an uncertain purchase and recovery never duplicates it (11.8s)
+
+  6 passed (31.5s)

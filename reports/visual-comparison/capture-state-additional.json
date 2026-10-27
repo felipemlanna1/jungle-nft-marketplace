@@ -1,0 +1,160 @@
+[
+  {
+    "key": "login-desktop",
+    "path": "/login",
+    "width": 1440,
+    "height": 1981,
+    "state": {
+      "session": "guest",
+      "form": "Empty login fields; no credentials entered."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 3807,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "register-desktop",
+    "path": "/register",
+    "width": 1440,
+    "height": 1981,
+    "state": {
+      "session": "guest",
+      "form": "Empty registration fields; no account created."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 3807,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "login-mobile",
+    "path": "/login",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "guest",
+      "form": "Empty login fields; no credentials entered."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 896,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "register-mobile",
+    "path": "/register",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "guest",
+      "form": "Empty registration fields; no account created."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 896,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "detail-mobile",
+    "path": "/nft/nft-1",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "guest",
+      "nftId": "nft-1",
+      "edition": "1/50",
+      "quantity": 1
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 4070,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "profile-desktop",
+    "path": "/profile",
+    "width": 1440,
+    "height": 1080,
+    "state": {
+      "session": "fictional collector",
+      "form": "Saved fictional profile; reference fields are empty.",
+      "savedProfile": {
+        "name": "Alex Collector",
+        "username": "alex.collector",
+        "email": "collector@example.test"
+      },
+      "passwordFields": "Empty"
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 1671,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "wallets-desktop",
+    "path": "/wallets",
+    "width": 1440,
+    "height": 1080,
+    "state": {
+      "session": "fictional collector",
+      "wallets": "One fictional primary Ethereum wallet; no secondary wallets.",
+      "form": "Initial editor state, not changed to mimic empty reference fields."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 1678,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  },
+  {
+    "key": "checkout-mobile",
+    "path": "/checkout",
+    "width": 414,
+    "height": 896,
+    "state": {
+      "session": "fictional collector",
+      "items": [
+        [
+          "nft-1",
+          1
+        ],
+        [
+          "nft-5",
+          1
+        ],
+        [
+          "nft-6",
+          2
+        ],
+        [
+          "nft-7",
+          2
+        ]
+      ],
+      "sourceTotal": "8.936",
+      "actualTotal": "8.156",
+      "connected": false,
+      "form": "Required collector fields and actual saved wallet remain accessible."
+    },
+    "overflow": false,
+    "scrollTop": 0,
+    "documentHeight": 4287,
+    "scripts": [
+      "http://127.0.0.1:4173/assets/index-X0vaGc14.js"
+    ]
+  }
+]

@@ -3,4 +3,4 @@ dist
 reports
 playwright-report
 test-results*
-src/styles.template.css
+public/mockServiceWorker.js

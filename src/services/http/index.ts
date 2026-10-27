@@ -1,21 +1,23 @@
 import axios from 'axios';
 import { clearPrivateCache, keys, queryClient } from '../../lib/query';
 import type { User } from '../../contracts';
+import { readGenerationSnapshot, rememberGeneration } from './generation';
 export const http = axios.create({
   baseURL: '/api',
   timeout: 5_000,
   headers: { 'Content-Type': 'application/json' },
 });
-const GENERATION_KEY = 'jungle:transport-generation';
-http.interceptors.request.use((config) => {
-  try {
-    const generation = sessionStorage.getItem(GENERATION_KEY);
+const requestEpochs = new WeakMap<object, number>();
+http.interceptors.request.use(
+  (config) => {
+    const { generation, epoch } = readGenerationSnapshot();
+    requestEpochs.set(config, epoch);
     if (generation) config.headers.set('X-Demo-Session', generation);
-  } catch {
-    /* Private mode still receives cache isolation. */
-  }
-  return config;
-});
+    return config;
+  },
+  undefined,
+  { synchronous: true },
+);
 http.interceptors.response.use(
   (response) => {
     if (
@@ -24,27 +26,11 @@ http.interceptors.response.use(
       response.config.url === '/demo/reset'
     ) {
       const generation = response.headers['x-demo-session'];
-      let olderGeneration = false;
-      try {
-        const current = Number(sessionStorage.getItem(GENERATION_KEY) ?? '0');
-        const incoming = Number(generation);
-        olderGeneration =
-          response.config.url !== '/demo/reset' &&
-          Number.isSafeInteger(incoming) &&
-          incoming > 0 &&
-          incoming < current;
-      } catch {
-        /* Continue with cancellation and cache guards when storage is blocked. */
-      }
-      if (olderGeneration)
+      const current = readGenerationSnapshot();
+      // A reset can reuse a numeric generation; only the request's current local epoch may rebase it.
+      if (requestEpochs.get(response.config) !== current.epoch)
         throw new axios.CanceledError('Discarded an outdated session response.', response.config);
-      if (generation) {
-        try {
-          sessionStorage.setItem(GENERATION_KEY, String(generation));
-        } catch {
-          /* Optional persistence. */
-        }
-      }
+      rememberGeneration(generation, response.config.url !== '/session');
     }
     if (
       response.config.url === '/session' &&
@@ -57,18 +43,16 @@ http.interceptors.response.use(
     return response;
   },
   async (error) => {
-    let outdatedRequest = false;
-    try {
-      outdatedRequest =
-        error.response?.data?.code === 'STALE_SESSION' &&
+    const current = readGenerationSnapshot();
+    const capturedEpoch = error.config ? requestEpochs.get(error.config) : undefined;
+    const outdatedRequest =
+      (capturedEpoch !== undefined && capturedEpoch !== current.epoch) ||
+      (error.response?.data?.code === 'STALE_SESSION' &&
         String(
           error.config?.headers?.get?.('X-Demo-Session') ??
             error.config?.headers?.['X-Demo-Session'] ??
             '',
-        ) !== sessionStorage.getItem(GENERATION_KEY);
-    } catch {
-      /* Use conservative expiry handling if storage is unavailable. */
-    }
+        ) !== current.generation);
     if (
       error.response?.status === 401 &&
       !outdatedRequest &&

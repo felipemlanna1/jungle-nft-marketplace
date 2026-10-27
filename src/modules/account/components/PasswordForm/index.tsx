@@ -1,60 +1,65 @@
+import { Button } from '../../../../styleguide';
 import { messageOf } from '../../hooks/useAccount';
+import { PasswordField } from '../PasswordField';
 import { usePasswordForm } from './usePasswordForm';
 export function PasswordForm() {
-  const { current, setCurrent, password, setSenha, confirm, setConfirm, error, mutation, submit } =
-    usePasswordForm();
+  const {
+    current,
+    setCurrent,
+    password,
+    setPassword,
+    confirm,
+    setConfirm,
+    error,
+    mutation,
+    submit,
+  } = usePasswordForm();
   return (
-    <>
-      <h2>Alterar senha</h2>
-      <form className="stack" onSubmit={submit}>
-        <label className="field">
-          Senha atual
-          <input
-            className="input"
-            type="password"
+    <section className="collector-password-section" aria-labelledby="password-section-title">
+      <h2 id="password-section-title" className="visually-hidden">
+        Alterar senha
+      </h2>
+      <form className="collector-password-form" onSubmit={submit}>
+        <fieldset className="password-fields-lock" disabled={mutation.isPending}>
+          <PasswordField
+            label="Senha atual"
             autoComplete="current-password"
             required
             value={current}
-            onChange={(e) => setCurrent(e.target.value)}
+            onChange={(event) => setCurrent(event.target.value)}
           />
-        </label>
-        <label className="field">
-          Nova senha
-          <input
-            className="input"
-            type="password"
+          <PasswordField
+            label="Nova senha"
             autoComplete="new-password"
             required
             minLength={8}
             value={password}
-            onChange={(e) => setSenha(e.target.value)}
+            onChange={(event) => setPassword(event.target.value)}
           />
-        </label>
-        <label className="field">
-          Confirmar nova senha
-          <input
-            className="input"
-            type="password"
+          <PasswordField
+            label="Confirmar nova senha"
             autoComplete="new-password"
             required
             value={confirm}
-            onChange={(e) => setConfirm(e.target.value)}
+            onChange={(event) => setConfirm(event.target.value)}
           />
-        </label>
-        {(error || mutation.error) && (
-          <p role="alert" className="field-error">
-            {error || messageOf(mutation.error)}
-          </p>
-        )}
-        {mutation.isSuccess && (
-          <p role="status" className="notice">
-            Senha atualizada.
-          </p>
-        )}
-        <button className="button button-secondary" disabled={mutation.isPending}>
-          {mutation.isPending ? 'Atualizando…' : 'Atualizar senha'}
-        </button>
+          {(error || mutation.error) && (
+            <p role="alert" className="field-error">
+              {error || messageOf(mutation.error)}
+            </p>
+          )}
+          {mutation.isSuccess && (
+            <p role="status" className="notice">
+              Senha atualizada.
+            </p>
+          )}
+          {(current || password || confirm) && (
+            <Button className="collector-save" disabled={mutation.isPending}>
+              {mutation.isPending ? 'Atualizando…' : 'Atualizar senha'}
+            </Button>
+          )}
+        </fieldset>
       </form>
-    </>
+    </section>
   );
 }

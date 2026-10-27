@@ -1,12 +1,22 @@
 import { Link } from '@tanstack/react-router';
-import type { Network } from '../../../../contracts';
+import * as RadioGroup from '@radix-ui/react-radio-group';
+import { ArrowLeft, Wallet } from 'lucide-react';
+import { Button, Notice } from '../../../../styleguide';
+import { multiplyEth } from '../../../../domain/money';
 import { messageOf } from '../../../account/hooks/useAccount';
+import { CollectorForm } from '../../components/CollectorForm';
 import { Summary } from '../../components/OrderSummary';
 import { useCheckout } from './useCheckout';
 
 export function CheckoutPage() {
+  const checkout = useCheckout();
   const {
     user,
+    fields,
+    setField,
+    selectedWallet,
+    mixedNetworks,
+    connect,
     cart,
     quote,
     wallets,
@@ -15,20 +25,22 @@ export function CheckoutPage() {
     collectorEmail,
     setCollectorEmail,
     walletId,
-    setWalletId,
+    changeWallet,
     network,
-    setRede,
+    changeNetwork,
     connection,
-    setConnection,
+    changeProvider,
+    disconnect,
+    declineConnection,
     review,
-    setReview,
+    editReview,
     error,
     pending,
     attempt,
     proceed,
     submitPurchase,
     recover,
-  } = useCheckout();
+  } = checkout;
   if (!user)
     return (
       <section className="page-shell">
@@ -36,222 +48,174 @@ export function CheckoutPage() {
       </section>
     );
   return (
-    <section className="page-shell">
-      <div className="flow-heading">
-        <span className="eyebrow">O último passo</span>
-        <h1>{review ? 'Revise sua compra' : 'Pagamento seguro'}</h1>
-        <p className="muted">
-          Carteiras e pagamentos simulados. Nenhum valor real será movimentado.
-        </p>
-      </div>
+    <section className="page-shell checkout-page commerce-page">
+      <nav className="breadcrumbs" aria-label="Caminho da página">
+        <Link to="/">Início</Link>
+        <span>/</span>
+        <Link to="/cart">Mercado</Link>
+        <span>/</span>
+        <span>Pagamento</span>
+      </nav>
+      <h1 className="sr-only">{review ? 'Revise sua compra' : 'Pagamento seguro'}</h1>
       {attempt && (
-        <aside className="notice" role="status">
+        <Notice>
           <strong>Uma tentativa anterior de compra foi salva.</strong>
-          <p>Recupere o status para evitar uma compra duplicada.</p>
-          <button className="button" disabled={pending} onClick={() => void recover()}>
+          <p>Recupere o resultado antes de iniciar outro pedido.</p>
+          <Button disabled={pending} onClick={() => void recover()}>
             {pending ? 'Recuperando…' : 'Recuperar compra anterior'}
-          </button>
-        </aside>
+          </Button>
+        </Notice>
       )}
-      {error && (
-        <div className="notice field-error" role="alert">
-          {error}
-        </div>
+      {error && <Notice tone="error">{error}</Notice>}
+      {mixedNetworks && (
+        <Notice tone="error">
+          O carrinho contém NFTs de redes diferentes. <Link to="/cart">Revise os itens.</Link>
+        </Notice>
       )}
       {cart.error && (
-        <p role="alert">
+        <Notice tone="error">
           {messageOf(cart.error)}{' '}
-          <button className="text-link" onClick={() => void cart.refetch()}>
+          <Button variant="ghost" onClick={() => void cart.refetch()}>
             Tentar novamente
-          </button>
-        </p>
+          </Button>
+        </Notice>
       )}
       {cart.data?.items.length === 0 && !attempt && (
-        <section className="empty-state">
+        <div className="empty-state">
           <h2>Seu carrinho está vazio</h2>
-          <Link className="button" to="/">
-            Explorar marketplace
-          </Link>
-        </section>
+          <Link to="/">Explorar marketplace</Link>
+        </div>
       )}
       {!!cart.data?.items.length && (
-        <div className="flow-grid">
-          <section className="form-card">
-            {!review ? (
-              <form className="stack" onSubmit={proceed}>
-                <h2>Dados do colecionador</h2>
-                <label className="field">
-                  Nome completo
-                  <input
-                    className="input"
-                    required
-                    maxLength={80}
-                    autoComplete="name"
-                    value={collectorName}
-                    onChange={(e) => setCollectorName(e.target.value)}
-                  />
-                </label>
-                <label className="field">
-                  E-mail
-                  <input
-                    className="input"
-                    type="email"
-                    required
-                    maxLength={160}
-                    autoComplete="email"
-                    value={collectorEmail}
-                    onChange={(e) => setCollectorEmail(e.target.value)}
-                  />
-                </label>
-                <h2>Escolha sua carteira</h2>
-                {wallets.isPending && <p role="status">Carregando carteiras…</p>}
-                {wallets.error && <p role="alert">{messageOf(wallets.error)}</p>}
-                {wallets.data?.length === 0 ? (
-                  <p>
-                    Adicione uma carteira para continuar.{' '}
-                    <Link to="/wallets">Gerenciar carteiras</Link>
-                  </p>
-                ) : (
-                  <label className="field">
-                    Carteira salva
-                    <select
-                      className="input"
-                      value={walletId}
-                      onChange={(e) => {
-                        setWalletId(e.target.value);
-                        const wallet = wallets.data?.find((w) => w.id === e.target.value);
-                        if (wallet) setRede(wallet.network);
-                        setConnection('idle');
-                      }}
-                    >
-                      {wallets.data?.map((w) => (
-                        <option key={w.id} value={w.id}>
-                          {w.label} ({w.network})
-                        </option>
-                      ))}
-                    </select>
+        <div className="checkout-layout">
+          <CollectorForm
+            name={collectorName}
+            email={collectorEmail}
+            network={network}
+            wallets={wallets.data ?? []}
+            walletId={walletId}
+            fields={fields}
+            address={selectedWallet?.address ?? ''}
+            disabled={pending || Boolean(attempt) || Boolean(review)}
+            onName={setCollectorName}
+            onEmail={setCollectorEmail}
+            onNetwork={changeNetwork}
+            onWallet={changeWallet}
+            onField={setField}
+            onSubmit={proceed}
+          />
+          <aside className="checkout-summary">
+            <h2>Seus NFTs</h2>
+            <div className="checkout-items-heading">
+              <span>NFTs</span>
+              <span>Subtotal</span>
+            </div>
+            <div className="checkout-items">
+              {cart.data.items.map((item) => (
+                <article key={item.id ?? item.nftId}>
+                  <img src={item.nft.image} width="70" height="70" alt="" />
+                  <div>
+                    <strong>{item.nft.title}</strong>
+                    <small>ID do token: {item.nft.tokenId ?? item.nftId}</small>
+                    <span>
+                      {item.editionLabel} (x {item.quantity})
+                    </span>
+                  </div>
+                  <strong>{multiplyEth(item.nft.price, item.quantity)} ETH</strong>
+                </article>
+              ))}
+            </div>
+            <Link className="checkout-coupon-link" to="/cart">
+              Tem um código promocional? Aplique aqui
+            </Link>
+            <Summary quote={review ?? quote.data} pending={quote.isPending} />
+            {quote.error && <Notice tone="error">{messageOf(quote.error)}</Notice>}
+            <fieldset
+              className="checkout-providers"
+              disabled={pending || Boolean(attempt) || Boolean(review)}
+            >
+              <legend>Carteira e rede</legend>
+              <RadioGroup.Root
+                aria-label="Provedor da carteira"
+                value={fields.walletType}
+                onValueChange={changeProvider}
+              >
+                {(['WalletConnect', 'MetaMask', 'Coinbase'] as const).map((provider) => (
+                  <label key={provider}>
+                    <RadioGroup.Item value={provider} aria-label={provider}>
+                      <RadioGroup.Indicator />
+                    </RadioGroup.Item>
+                    <Wallet size={17} aria-hidden="true" />
+                    <span>{provider === 'Coinbase' ? 'Coinbase Wallet' : provider}</span>
                   </label>
-                )}
-                <label className="field">
-                  Rede
-                  <select
-                    className="input"
-                    value={network}
-                    onChange={(e) => {
-                      setRede(e.target.value as Network);
-                      setConnection('idle');
-                    }}
+                ))}
+              </RadioGroup.Root>
+            </fieldset>
+            <div className="wallet-connection" aria-live="polite">
+              {connection === 'connected' ? (
+                <>
+                  <p>Carteira conectada (simulação).</p>
+                  <button className="text-link" type="button" onClick={disconnect}>
+                    Desconectar carteira
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Button
+                    variant="secondary"
+                    type="button"
+                    disabled={pending || mixedNetworks || (!walletId && !fields.manualWallet)}
+                    onClick={() => void connect()}
                   >
-                    <option>Ethereum</option>
-                    <option>Polygon</option>
-                  </select>
-                </label>
-                <div className="wallet-connection" aria-live="polite">
-                  {connection === 'connected' ? (
-                    <>
-                      <p className="notice">Carteira conectada (simulação).</p>
-                      <button
-                        className="button button-secondary"
-                        type="button"
-                        onClick={() => setConnection('idle')}
-                      >
-                        Desconectar carteira
-                      </button>
-                    </>
-                  ) : (
-                    <>
-                      <button
-                        type="button"
-                        className="button button-secondary"
-                        disabled={!walletId}
-                        onClick={() => setConnection('connected')}
-                      >
-                        Conectar carteira
-                      </button>
-                      <button
-                        type="button"
-                        className="text-link"
-                        onClick={() => setConnection('declined')}
-                      >
-                        Simular recusa de conexão
-                      </button>
-                      {connection === 'declined' && (
-                        <p role="alert">
-                          Conexão recusada. Tente conectar novamente quando estiver pronto.
-                        </p>
-                      )}
-                    </>
+                    Conectar carteira
+                  </Button>
+                  <button type="button" className="text-link" onClick={declineConnection}>
+                    Simular recusa de conexão
+                  </button>
+                  {connection === 'declined' && (
+                    <p role="alert">Conexão recusada. Você pode tentar novamente.</p>
                   )}
-                </div>
-                <button
-                  className="button"
-                  disabled={!quote.data || !!quote.error || connection !== 'connected' || !!attempt}
-                >
-                  Revisar compra →
-                </button>
-              </form>
-            ) : (
-              <div className="stack">
-                <h2>Está tudo certo?</h2>
+                </>
+              )}
+            </div>
+            {review ? (
+              <div className="checkout-review" role="region" aria-label="Revisão do pedido">
+                <h2>Revise sua compra</h2>
+                <p>{collectorName}</p>
+                <p>{collectorEmail}</p>
                 <p>
-                  Colecionando como <strong>{collectorName}</strong>
-                  <br />
-                  <span className="muted">{collectorEmail}</span>
+                  {selectedWallet?.label} · {network}
                 </p>
-                <p>
-                  Carteira: <strong>{wallets.data?.find((w) => w.id === walletId)?.label}</strong> ·{' '}
-                  {network}
-                </p>
-                <div className="review-items">
-                  {review.items.map((item) => (
-                    <div className="cart-row compact" key={item.nftId}>
-                      <img src={item.image} width="64" height="64" alt="" />
-                      <div>
-                        <strong>{item.title}</strong>
-                        <p className="muted">
-                          {item.quantity} × {item.unitPrice} ETH
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {quote.data && quote.data.fingerprint !== review.fingerprint && (
-                  <p className="notice" role="status">
-                    A cotação mudou. Mostraremos o valor atualizado antes de solicitar outra
-                    confirmação.
-                  </p>
+                {quote.data?.fingerprint !== review.fingerprint && (
+                  <Notice>A cotação mudou. Confirme novamente o valor atualizado.</Notice>
                 )}
-                <button
-                  className="button"
-                  disabled={pending || !!attempt}
+                <Button
+                  disabled={pending || Boolean(attempt)}
                   onClick={() => void submitPurchase()}
                 >
                   {pending ? 'Confirmando…' : 'Confirmar compra'}
-                </button>
-                <button
-                  className="button button-secondary"
-                  disabled={pending}
-                  onClick={() => setReview(null)}
-                >
+                </Button>
+                <Button variant="ghost" disabled={pending} onClick={editReview}>
                   Editar dados
-                </button>
+                </Button>
               </div>
+            ) : (
+              <Button
+                type="submit"
+                form="collector-form"
+                disabled={
+                  !quote.data ||
+                  Boolean(quote.error) ||
+                  connection !== 'connected' ||
+                  mixedNetworks ||
+                  Boolean(attempt)
+                }
+              >
+                Revisar compra
+              </Button>
             )}
-          </section>
-          <aside className="form-card summary-card">
-            <h2>Resumo do pedido</h2>
-            <Summary quote={review ?? quote.data} pending={quote.isPending} />
-            {quote.error && (
-              <p className="field-error" role="alert">
-                {messageOf(quote.error)}
-              </p>
-            )}
-            <p className="muted">
-              O pedido só é concluído após a confirmação do pagamento simulado. Os preços são
-              revalidados antes do envio.
-            </p>
-            <Link to="/cart" className="text-link">
-              ← Voltar ao carrinho
+            <Link to="/cart" className="back-link">
+              <ArrowLeft size={14} /> Voltar ao carrinho
             </Link>
           </aside>
         </div>

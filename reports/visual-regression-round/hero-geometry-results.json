@@ -1,0 +1,1021 @@
+{
+  "config": {
+    "argv": [
+      "/Users/felipemoreiralanna/.nvm/versions/node/v22.16.0/bin/node",
+      "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/node_modules/.bin/playwright",
+      "test",
+      "tests/e2e/hero-geometry.spec.ts",
+      "--reporter=list,json",
+      "--output=reports/visual-regression-round/hero-geometry-artifacts"
+    ],
+    "configFile": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/playwright.config.ts",
+    "rootDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "snapshotDir": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5173",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Mobile/15E148 Safari/604.1",
+          "viewport": {
+            "width": 390,
+            "height": 664
+          },
+          "screen": {
+            "width": 390,
+            "height": 844
+          },
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list"
+      ],
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://127.0.0.1:5173",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "hero-geometry.spec.ts",
+      "file": "hero-geometry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "hero geometry stays contained at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:27:48.187Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800.png",
+                      "pathSha256": "88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-297a8673a1284081d723",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 390px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7682,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate\n    at expectContainedSlide (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:36:6)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:65:11",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                      "column": 6,
+                      "line": 36
+                    },
+                    "snippet": "  34 |       }),\n  35 |     )\n> 36 |     .toBeLessThanOrEqual(1);\n     |      ^\n  37 |   await expect(region.locator('.carousel-viewport')).toHaveCSS('overflow-x', 'hidden');\n  38 | }\n  39 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                        "column": 6,
+                        "line": 36
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate\n\n  34 |       }),\n  35 |     )\n> 36 |     .toBeLessThanOrEqual(1);\n     |      ^\n  37 |   await expect(region.locator('.carousel-viewport')).toHaveCSS('overflow-x', 'hidden');\n  38 | }\n  39 |\n    at expectContainedSlide (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:36:6)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:65:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:27:52.911Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                    "column": 6,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9dc3704b82edff2c7878",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4092,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:01.240Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90.png",
+                      "pathSha256": "7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-1b0c8a016d83dba3239f",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 768px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 11691,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:75:7",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                      "column": 7,
+                      "line": 75
+                    },
+                    "snippet": "  73 |     await expect(\n  74 |       region.getByRole('button', { name: 'Ir para destaque 3', exact: true }),\n> 75 |     ).toHaveAttribute('aria-current', 'true');\n     |       ^\n  76 |     await expectContainedSlide(region);\n  77 |     await region.focus();\n  78 |     await page.keyboard.press('ArrowRight');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                        "column": 7,
+                        "line": 75
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  73 |     await expect(\n  74 |       region.getByRole('button', { name: 'Ir para destaque 3', exact: true }),\n> 75 |     ).toHaveAttribute('aria-current', 'true');\n     |       ^\n  76 |     await expectContainedSlide(region);\n  77 |     await region.focus();\n  78 |     await page.keyboard.press('ArrowRight');\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:75:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:05.484Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+                      "originalPath": "reports/attachments/928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a.png",
+                      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                    "column": 7,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9b8022b10fb98b7a2964",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6378,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:18.259Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+                      "originalPath": "reports/attachments/a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965.png",
+                      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-9d351a38d2e8d6164490",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6097,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:24.849Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+                      "originalPath": "reports/attachments/db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897.png",
+                      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-35666e11c8655258b4cc",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1920px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6108,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:30.954Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+                      "originalPath": "reports/attachments/db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897.png",
+                      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-91d0c5f92f4e305de061",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px with 125% content scaling",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:37.070Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+                      "originalPath": "reports/attachments/8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107.png",
+                      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e5e0b906c0db4455b197",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 320px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5106,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:43.852Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d.png",
+                      "pathSha256": "f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-f3b879eddd3766fa185c",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 390px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9228,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate\n    at expectContainedSlide (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:36:6)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:65:11",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                      "column": 6,
+                      "line": 36
+                    },
+                    "snippet": "  34 |       }),\n  35 |     )\n> 36 |     .toBeLessThanOrEqual(1);\n     |      ^\n  37 |   await expect(region.locator('.carousel-viewport')).toHaveCSS('overflow-x', 'hidden');\n  38 | }\n  39 |"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                        "column": 6,
+                        "line": 36
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m1\u001b[39m\nReceived:    \u001b[31m8\u001b[39m\n\nCall Log:\n- Timeout 8000ms exceeded while waiting on the predicate\n\n  34 |       }),\n  35 |     )\n> 36 |     .toBeLessThanOrEqual(1);\n     |      ^\n  37 |   await expect(region.locator('.carousel-viewport')).toHaveCSS('overflow-x', 'hidden');\n  38 | }\n  39 |\n    at expectContainedSlide (/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:36:6)\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:65:11"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:49.116Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                    "column": 6,
+                    "line": 36
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e8cdff815d3d66467517",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 414px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5073,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:28:59.145Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f.png",
+                      "pathSha256": "fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-91df16dc7ea72bc337d1",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 768px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6805,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:29:04.418Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+                      "originalPath": "reports/attachments/c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6.png",
+                      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-b203e013564281dadbc5",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1024px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7728,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:29:11.236Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": "reports/playwright-final-build-html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+                      "originalPath": "reports/attachments/3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964.png",
+                      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-12b631198d882b49ed33",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7386,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:29:18.974Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+                      "pathSha256": "158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-8802d5e6283c6ee1dc8a",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1920px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7587,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:29:26.368Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+                      "pathSha256": "158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-e9515a01319f2b4c12b8",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        },
+        {
+          "title": "hero geometry stays contained at 1440px with 125% content scaling",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 13497,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:75:7",
+                    "location": {
+                      "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                      "column": 7,
+                      "line": 75
+                    },
+                    "snippet": "  73 |     await expect(\n  74 |       region.getByRole('button', { name: 'Ir para destaque 3', exact: true }),\n> 75 |     ).toHaveAttribute('aria-current', 'true');\n     |       ^\n  76 |     await expectContainedSlide(region);\n  77 |     await region.focus();\n  78 |     await page.keyboard.press('ArrowRight');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                        "column": 7,
+                        "line": 75
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\nExpected: \u001b[32m\"true\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  8000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true }) with timeout 8000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('region', { name: 'Destaques do marketplace', exact: true }).getByRole('button', { name: 'Ir para destaque 3', exact: true })\u001b[22m\n\u001b[2m    20 × locator resolved to <button type=\"button\" aria-label=\"Ir para destaque 3\">…</button>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  73 |     await expect(\n  74 |       region.getByRole('button', { name: 'Ir para destaque 3', exact: true }),\n> 75 |     ).toHaveAttribute('aria-current', 'true');\n     |       ^\n  76 |     await expectContainedSlide(region);\n  77 |     await region.focus();\n  78 |     await page.keyboard.press('ArrowRight');\n    at /Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts:75:7"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-27T14:29:33.963Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "second-slide",
+                      "contentType": "image/png",
+                      "path": null,
+                      "pathOriginalPath": "reports/attachments/892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377.png",
+                      "pathSha256": "892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377",
+                      "pathLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377.png",
+                      "pathAvailability": "local-archive-only",
+                      "sha256": "892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-marketplace/tests/e2e/hero-geometry.spec.ts",
+                    "column": 7,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c21a4af4a003e1468e4a-c1ac5fd251ad27544cd3",
+          "file": "hero-geometry.spec.ts",
+          "line": 50,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-27T14:27:47.482Z",
+    "duration": 120560.205,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "evidencePackaging": {
+    "method": "Screenshots extraídos sem alteração de bytes; nomes SHA256 deduplicam anexos idênticos entre rodadas.",
+    "rawLocalArchive": "/tmp/jungle-evidence-full",
+    "assertionsChanged": false
+  }
+}

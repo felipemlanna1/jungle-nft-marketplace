@@ -1,3 +1,4 @@
+import { openDemoScenarios, closeDemoScenarios } from './helpers/interface';
 import { test, expect, type Page } from '@playwright/test';
 
 async function login(page: Page, redirect: string) {
@@ -19,7 +20,7 @@ async function changeRemoteProfileAndRefetch(page: Page) {
     return response.status;
   });
   expect(status).toBe(200);
-  await page.getByRole('button', { name: 'Open demo scenarios' }).click();
+  await openDemoScenarios(page);
   // This actual interface action invalidates the session query; no private cache setter is used.
   await Promise.all([
     page.waitForResponse(
@@ -27,7 +28,7 @@ async function changeRemoteProfileAndRefetch(page: Page) {
     ),
     page.getByLabel('Rede e pagamento').selectOption('empty'),
   ]);
-  await page.getByRole('button', { name: 'Close demo scenarios' }).click();
+  await closeDemoScenarios(page);
 }
 
 test('profile draft survives a changed account response for the same user', async ({ page }) => {
@@ -44,7 +45,7 @@ test('profile draft survives a changed account response for the same user', asyn
 
 test('checkout collector draft survives session refetch for the same user', async ({ page }) => {
   await page.goto('/nft/nft-1');
-  await page.getByRole('button', { name: /^Adicionar ao carrinho/ }).click();
+  await page.getByRole('button', { name: 'Comprar NFT', exact: true }).click();
   await expect(page.getByText('A obra está no seu carrinho.')).toBeVisible();
   await login(page, '/checkout');
   const name = page.getByLabel('Nome completo', { exact: true });

@@ -1,0 +1,39 @@
+{
+  "scope": "30 casos suplementares em Chromium desktop e mobile após correção da limpeza de tentativa e persistência da geração de sessão.",
+  "runtimeAndExecutedTestsUnchanged": true,
+  "scopeSourceBefore": "9c4fabea05fb46f93ba2c8dd217709ad82bc050186e34584481499c11d1e445b",
+  "scopeSourceAfter": "9c4fabea05fb46f93ba2c8dd217709ad82bc050186e34584481499c11d1e445b",
+  "fileCount": 479,
+  "changedFilesInScope": [],
+  "concurrentExcludedChange": {
+    "path": "tests/e2e/views.spec.ts",
+    "reason": "Teste visual independente, não selecionado nesta execução. O relatório amplo registra a alteração e mantém approval=false para o escopo que o inclui.",
+    "beforeSha256": "08a225e59c57681fb07d8632c4e4eb92301dafecb34efb3ab53e64aa4d4d22c0",
+    "afterSha256": "f822ef55f515473b498de305a3f9a4e6ba1ef8eac26166f6bbd2009b4bb3c462"
+  },
+  "captureIntegrity": {
+    "method": "A lista final foi reconstruída com a única divergência registrada na captura de encerramento. O SHA dessa lista reproduz exatamente sourceAfter do relatório amplo; o subhash exclui apenas o teste visual não executado.",
+    "reconstructedFullHash": "bdae65da9ce011da8cbd3e457af12ab7e1803d635c3af7c81fb10a6a03043f0a",
+    "capturedFullHash": "bdae65da9ce011da8cbd3e457af12ab7e1803d635c3af7c81fb10a6a03043f0a",
+    "matching": true,
+    "laterFileChange": "themes.spec.ts foi alterado após a captura final; não participou destes 30 casos e não foi usado para reconstruir a captura histórica."
+  },
+  "baselineExclusion": "PNG de comparação visual em tests/e2e excluídos; atualizados em rodada independente autorizada.",
+  "stats": {
+    "startTime": "2026-10-27T14:16:09.118Z",
+    "duration": 149836.735,
+    "expected": 30,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report": "reports/e2e-supplemental-verified.json",
+  "broadFingerprintEvidence": "reports/e2e-supplemental-evidence.json",
+  "newRegression": {
+    "file": "tests/e2e/recovery.spec.ts",
+    "cases": 2,
+    "method": "Pedido A criado por REST MSW e confirmado; tentativa B criada pela interface com timeout real do cliente; abertura do comprovante A preserva o conteúdo da tentativa B; recuperação retorna o ID B existente, elimina a tentativa correspondente e mantém exatamente dois pedidos."
+  },
+  "approval": true,
+  "limits": "Esta rodada não reexecuta os 76 casos completos nem atribui fidelidade visual, segurança absoluta ou nota de qualidade. A prova anterior de 76 casos permanece referente ao hash registrado em seu próprio relatório."
+}

@@ -1,0 +1,8 @@
+reports/** linguist-documentation=true
+tests/history/** linguist-documentation=true
+public/figma/** linguist-vendored=true
+public/mockServiceWorker.js linguist-vendored=true
+src/styles.css linguist-generated=true
+src/styles.kurio.css linguist-generated=true
+src/styleguide/theme/theme.generated.css linguist-generated=true
+package-lock.json linguist-generated=true

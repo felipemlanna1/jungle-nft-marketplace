@@ -1,0 +1,23 @@
+{
+  "scope": "6 casos de favorito visitante, acesso de demonstração explícito e senha modificada, Chromium desktop/mobile.",
+  "sourceBefore": "170da97dca4e4470c36f981b2d43be22f52c8bb86a9e5717a172a38cae1ae274",
+  "sourceAfter": "6fae107a46db7f62af3053e4f68d771b2e05b6b3877030d5386283235185471c",
+  "changedFiles": [
+    "tests/e2e/hero-geometry.spec.ts"
+  ],
+  "stats": {
+    "startTime": "2026-10-27T14:33:50.891Z",
+    "duration": 23662.585,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report": "reports/e2e-favorite-login-verified.json",
+  "approval": false,
+  "baselineExclusion": "PNG dos testes visuais separados; demais arquivos de src/public e código dos testes incluídos.",
+  "runtimeAssetsAndConfigUnchanged": true,
+  "executedTestCodeUnchanged": true,
+  "executedScopeApproval": true,
+  "concurrentChange": "A outra tarefa escreveu o teste de geometria do hero durante a rodada. Esse arquivo não foi selecionado nestes 6 casos. approval permanece false para o hash amplo; executedScopeApproval refere-se somente ao runtime e aos testes executados, que não mudaram."
+}

@@ -1,7 +1,13 @@
 import { createContext, useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { DEFAULT_THEME, isThemeName, themes, type Theme, type ThemeName } from '../../theme';
+import {
+  THEME_STORAGE_KEY,
+  THEME_VERSION_KEY,
+  THEME_VERSION,
+  resolveThemePreference,
+} from '../../theme/preference';
+export { THEME_STORAGE_KEY } from '../../theme/preference';
 
-export const THEME_STORAGE_KEY = 'jungle.marketplace.theme';
 export interface ThemeContextValue {
   themeName: ThemeName;
   setTheme: (name: ThemeName) => void;
@@ -13,8 +19,7 @@ export const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 export function readThemePreference(): ThemeName {
   try {
-    const saved = window.localStorage.getItem(THEME_STORAGE_KEY);
-    return isThemeName(saved) ? saved : DEFAULT_THEME;
+    return resolveThemePreference(window.localStorage);
   } catch {
     return DEFAULT_THEME;
   }
@@ -31,6 +36,7 @@ export function useStyleguide(): ThemeContextValue {
     document.documentElement.style.colorScheme = 'dark';
     try {
       window.localStorage.setItem(THEME_STORAGE_KEY, themeName);
+      window.localStorage.setItem(THEME_VERSION_KEY, THEME_VERSION);
     } catch {
       // The current tab remains fully usable when storage is unavailable.
     }
@@ -38,8 +44,12 @@ export function useStyleguide(): ThemeContextValue {
 
   useEffect(() => {
     const synchronize = (event: StorageEvent) => {
-      if (event.key === THEME_STORAGE_KEY || event.key === null) {
-        setThemeName(isThemeName(event.newValue) ? event.newValue : DEFAULT_THEME);
+      if (
+        event.key === THEME_STORAGE_KEY ||
+        event.key === THEME_VERSION_KEY ||
+        event.key === null
+      ) {
+        setThemeName(readThemePreference());
       }
     };
     window.addEventListener('storage', synchronize);

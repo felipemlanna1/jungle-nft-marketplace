@@ -1,0 +1,207 @@
+{
+  "status": "reprovada",
+  "cause": "Adoção inicial de geração de sessão invalidou um login simultâneo aceito com HTTP 200.",
+  "expected": 148,
+  "passed": 147,
+  "failed": 1,
+  "retries": 0,
+  "followUp": "A implementação será corrigida com contraprova; a suíte completa será executada de novo sem alteração das esperas de login.",
+  "files": [
+    {
+      "path": "e2e-final-build-evidence.json",
+      "sha256": "8354405c9faa0410546deb6ac1d9c0d5c1a4faf4cd98c96ffde5a13fd28fe8f8"
+    },
+    {
+      "path": "e2e-final-build-list.txt",
+      "sha256": "55686660d11ec2d827e3afc2107580be8f77767b0e0efa538a92c448bce2640a"
+    },
+    {
+      "path": "e2e-final-build-run.log",
+      "sha256": "b2a847fa02826dd9f0b0cf000b3e873d0befa2ef338aab7fc099460b73e70699"
+    },
+    {
+      "path": "e2e-final-build-source-after.json",
+      "sha256": "16039ae37fc24343ac73274d5a6c51ca60bacbbdda3c9bc8b79cc8461c1b5811"
+    },
+    {
+      "path": "e2e-final-build-source-before.json",
+      "sha256": "16039ae37fc24343ac73274d5a6c51ca60bacbbdda3c9bc8b79cc8461c1b5811"
+    },
+    {
+      "path": "e2e-final-build-verified.json",
+      "sha256": "32c7e855ea6d880bc30c443a2649c948825086bd7a3646ff955f9d55abe6d22d"
+    },
+    {
+      "path": "failure/error-context.md",
+      "sha256": "cff73396ae5d8fde6fd4f2accfebbc1a0e35ec4863c15f3b7a8c2180b54b0da6"
+    },
+    {
+      "path": "failure/test-failed-1.png",
+      "sha256": "ccad0c277c1fcf51f5750c066da8a248891f35c5405a26883dd549f424e8ea58"
+    },
+    {
+      "path": "failure/trace.zip",
+      "sha256": "0319e4bdcfaf0378e18f37b3a93b9a6d18161a266cc5a0a7416ec3613c94f85c"
+    },
+    {
+      "path": "html/data/034ce325778bb059cedc7c951bd1b9f0dd00b95b.png",
+      "sha256": "7b0750c6e0dd6a2745484c3ff6f700eb592d023a5b882a7e214567b67393d68b"
+    },
+    {
+      "path": "html/data/0cc17c1c4d59c3bf59db6b0a1882d4ba077c91d9.png",
+      "sha256": "ccad0c277c1fcf51f5750c066da8a248891f35c5405a26883dd549f424e8ea58"
+    },
+    {
+      "path": "html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6"
+    },
+    {
+      "path": "html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965"
+    },
+    {
+      "path": "html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "sha256": "c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544"
+    },
+    {
+      "path": "html/data/42d277e2533f1d0e033dae727456b8a3e95e88f6.png",
+      "sha256": "a417ed634960f7b1a415fee7bea47a78fad50333c681448d7b82ae4995161d56"
+    },
+    {
+      "path": "html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897"
+    },
+    {
+      "path": "html/data/5d2932052ed9df96b68c1b3aa2038984c63f4d9f.png",
+      "sha256": "c04910eafe9205ea479e73ac722633d01ba455193dffdb1149f7e16d7a066063"
+    },
+    {
+      "path": "html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "sha256": "6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4"
+    },
+    {
+      "path": "html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107"
+    },
+    {
+      "path": "html/data/8ceefba1914778cd519408b38e3115fa627b0cab.png",
+      "sha256": "65d5874ff708c9b65bbfaa029a6e534acb974705ad1c3fcdf85e19bdc5bf94a1"
+    },
+    {
+      "path": "html/data/926547776343fd97f65179dd4aaf688c2b2c8efc.png",
+      "sha256": "0353aa22bfbe514952cd166a40cf58b0980906b6fbaa1e3da046abdd32d90fb3"
+    },
+    {
+      "path": "html/data/98c48324965fccce3a7fe4747891729adc2bfa3b.png",
+      "sha256": "4e647ec370c849235fe013ceed7daf484430b2cc685a19da1e17dea9ae83595c"
+    },
+    {
+      "path": "html/data/9efaf95094dbd5ddc8867b5298bd019257c5569e.md",
+      "sha256": "cff73396ae5d8fde6fd4f2accfebbc1a0e35ec4863c15f3b7a8c2180b54b0da6"
+    },
+    {
+      "path": "html/data/adc92661a5f28c771b348e10244ba72ea0776766.png",
+      "sha256": "46d892cc1a057c296e57c2d498a6a80f72b013838b54aae9c26ab59d27110229"
+    },
+    {
+      "path": "html/data/c19bb413bd67fbe8188342c6b7412cb72d20c162.zip",
+      "sha256": "0319e4bdcfaf0378e18f37b3a93b9a6d18161a266cc5a0a7416ec3613c94f85c"
+    },
+    {
+      "path": "html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964"
+    },
+    {
+      "path": "html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d"
+    },
+    {
+      "path": "html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a"
+    },
+    {
+      "path": "html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6"
+    },
+    {
+      "path": "html/data/ffd207685b129fe30e0b7bc3b1d0ffdf5f307afc.png",
+      "sha256": "2d2bdcec531e5d1606d02b5fbc42539c93e8c10627442a5f2de0131c7d0cd943"
+    },
+    {
+      "path": "html/index.html",
+      "sha256": "51c8f4cbe2b07a0f0d21fde93ab39282edd67c9f4e23f1a3350c8aba0dc0e260"
+    },
+    {
+      "path": "html/trace/assets/codeMirrorModule-BEB2e8M3.js",
+      "sha256": "0da75d228abc1d8b940aa04ec086570dace7b2e7b2ccc5f4bc16f05e79bdb7d7"
+    },
+    {
+      "path": "html/trace/assets/defaultSettingsView-D-g2vrvf.js",
+      "sha256": "554bdef910d18e763118f1221667b809edafba46e29e3f8de4b9dcf21c6b7d79"
+    },
+    {
+      "path": "html/trace/assets/urlMatch-L3liM589.js",
+      "sha256": "1bc6321e32d11c31a452bc75896f0b344e6153321854d9f1658818be7f845c16"
+    },
+    {
+      "path": "html/trace/codeMirrorModule.-QdMvsKi.css",
+      "sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8"
+    },
+    {
+      "path": "html/trace/codicon.DCmgc-ay.ttf",
+      "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9"
+    },
+    {
+      "path": "html/trace/defaultSettingsView.C8BeHuxd.css",
+      "sha256": "278101b68ab48ee6323a6afbf4e0e629324e10e96902a62a0875643a1bba3d94"
+    },
+    {
+      "path": "html/trace/index.B_TqY17P.css",
+      "sha256": "08a212fcacae1866f44f065654afcc4c7d03409c68c74b3315c5bda17a0ca003"
+    },
+    {
+      "path": "html/trace/index.html",
+      "sha256": "4c168083713c6868f577f492f3d50eecdfbf6235e0b0af421796b7ddd9013bd6"
+    },
+    {
+      "path": "html/trace/index.oNry3Hjv.js",
+      "sha256": "87f339e5e169f67633a91e17d9c8f65afb8de66d9b88a4167c79da78f562518d"
+    },
+    {
+      "path": "html/trace/manifest.webmanifest",
+      "sha256": "d8540500603a32a39fe7e5a0375dc0f9ebafd11118e06a846db7efc608223ab9"
+    },
+    {
+      "path": "html/trace/playwright-logo.svg",
+      "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9"
+    },
+    {
+      "path": "html/trace/snapshot.B_Jk1wbt.js",
+      "sha256": "d4d09e05451d107d8e1a6bbd041405fe518b9fd2833890e4ebaaad83b7f554f5"
+    },
+    {
+      "path": "html/trace/snapshot.html",
+      "sha256": "c608c8899c95c5a74d3f556e20146c3d852b9df85ae2854c659a7cc773c9b727"
+    },
+    {
+      "path": "html/trace/sw.bundle.js",
+      "sha256": "d1d6fec6687eb3fd93a8990bd9daa3951422695afffae2382f97f10811cf1c30"
+    },
+    {
+      "path": "html/trace/uiMode.CYwC_gH1.js",
+      "sha256": "c920eaa161f65b6c0dd431a642c4bdf2e6262ae51335c02d155b187f48c0296c"
+    },
+    {
+      "path": "html/trace/uiMode.CyMfwkXJ.css",
+      "sha256": "fb403cf0b07007bc1d771e29737f7408924da300e2fab8b289a3ef2e8fc08d7b"
+    },
+    {
+      "path": "html/trace/uiMode.html",
+      "sha256": "6de2f5db7f7532c30e8b1381752a1daf23facbdef6bea130cef0cfa5a003eb22"
+    },
+    {
+      "path": "html/trace/xtermModule.kHJ-D0s7.css",
+      "sha256": "0dd60056134e6a2994a86b59a1e9789b9f04e92924da109aef8c923acaf08ce5"
+    }
+  ]
+}

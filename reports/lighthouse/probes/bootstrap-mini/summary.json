@@ -1,0 +1,91 @@
+{
+  "startedAt": "2026-10-27T11:50:16.824Z",
+  "completedAt": "2026-10-27T11:50:36.427Z",
+  "node": "v22.16.0",
+  "lighthouse": "12.8.2",
+  "browser": "Playwright Chromium 156.0.8078.4",
+  "target": "http://127.0.0.1:4173",
+  "methodology": "Production build, sequential Lighthouse navigations, default Lighthouse simulated throttling, fresh browser storage per measured run. No audit-level request blocking or network overrides; the application MSW and Socket.IO simulation runs unchanged. Preflight rejects the development server and verifies API data, visible page and Socket.IO connection. Every run is retained; median does not discard any run.",
+  "outputDirectory": "reports/lighthouse/probes/bootstrap-mini",
+  "gate": {
+    "completeMatrix": false,
+    "allPerformanceRunsAbove90": false,
+    "mobilePerformanceMediansAtLeast95": false
+  },
+  "rows": [
+    {
+      "path": "/",
+      "profile": "mobile",
+      "preflight": {
+        "url": "http://127.0.0.1:4173/?q=&category=all&sort=newest&page=1",
+        "title": "KURIO: O futuro da arte digital",
+        "heading": "Sua próxima\ngrande descoberta.",
+        "theme": "expedition",
+        "scripts": [
+          "/assets/index-B57gZQic.js"
+        ],
+        "api": {
+          "status": 200,
+          "items": 9,
+          "total": 18
+        },
+        "realtimeConnected": true,
+        "pageErrors": []
+      },
+      "medians": {
+        "performance": 90,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "runs": [
+        {
+          "run": 1,
+          "json": "reports/lighthouse/probes/bootstrap-mini/home-mobile-1.report.json",
+          "html": "reports/lighthouse/probes/bootstrap-mini/home-mobile-1.report.html",
+          "fetchTime": "2026-10-27T11:50:25.532Z",
+          "finalUrl": "http://127.0.0.1:4173/?q=&category=all&sort=newest&page=1",
+          "categories": {
+            "performance": 90,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 92
+          },
+          "FCP": 2163.23075,
+          "LCP": 3276.641,
+          "CLS": 0.001126264993448639,
+          "TBT": 99.5,
+          "config": {
+            "formFactor": "mobile",
+            "throttlingMethod": "simulate",
+            "throttling": {
+              "rttMs": 150,
+              "throughputKbps": 1638.4,
+              "requestLatencyMs": 562.5,
+              "downloadThroughputKbps": 1474.5600000000002,
+              "uploadThroughputKbps": 675,
+              "cpuSlowdownMultiplier": 4
+            },
+            "screenEmulation": {
+              "mobile": true,
+              "width": 412,
+              "height": 823,
+              "deviceScaleFactor": 1.75,
+              "disabled": false
+            },
+            "disableStorageReset": false
+          },
+          "environment": {
+            "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+            "hostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+            "benchmarkIndex": 1214.5,
+            "credits": {
+              "axe-core": "4.14.0"
+            }
+          },
+          "warnings": []
+        }
+      ]
+    }
+  ]
+}

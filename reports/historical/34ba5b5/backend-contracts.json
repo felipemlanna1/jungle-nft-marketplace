@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-27T12:51:38.587Z",
+  "scope": "Validação do núcleo de uma simulação local. Não representa autenticação, pagamentos ou blockchain em produção.",
+  "validationType": "Testes do autor; revisão independente e E2E final ficam registrados pelo responsável pela entrega.",
+  "command": "npx vitest run src/domain",
+  "result": {
+    "files": 7,
+    "passed": 75,
+    "failed": 0
+  },
+  "checks": [
+    "Filtros combináveis, valores ETH com 18 casas e facets calculadas",
+    "Isolamento por geração, resposta antiga 200/401 e logout obsoleto",
+    "Snapshot síncrona da geração antes da microtarefa de transporte",
+    "Edições com preço/estoque próprios, chaves de carrinho codificadas e merge de convidado",
+    "Duas tentativas HTTP concorrentes para edição única: 200 e 409, uma reserva",
+    "Recusa restaura apenas a edição reservada; confirmação mantém quantidades novas",
+    "Snapshot de colecionador/carteira, idempotência canônica e compatibilidade de recibos antigos",
+    "Mudança de taxa exige nova revisão; carrinho desktop soma26.83+0.016=26.846",
+    "Corpo de quantidade com string/array/boolean rejeitado antes de alterar carrinho"
+  ],
+  "reproducedAndFixed": {
+    "case": "Troca imediata de conta antes da execução do interceptor Axios",
+    "before": "A regressão observou {allowed:true}, violando a expectativa STALE_SESSION.",
+    "after": "Interceptor synchronous:true: os seis testes de transporte passaram; a chamada obsoleta recebe401 e preserva a conta nova.",
+    "test": "src/domain/session-transport.test.ts"
+  },
+  "sourceFingerprints": [
+    {
+      "path": "src/contracts.ts",
+      "sha256": "1cdb91b5e714c1e835923dfdd84eba5b3a1975f26e98d0afcbd15a213ed8e064"
+    },
+    {
+      "path": "src/domain/catalog.ts",
+      "sha256": "34837db137eb5273e282221f509e3d3197e1d7beb535946fbfba9a1a01207c73"
+    },
+    {
+      "path": "src/domain/editions.ts",
+      "sha256": "20690f57fa87fb203986384d6c91af57fe2056cbd787da97578ed277b3bd473c"
+    },
+    {
+      "path": "src/domain/schemas.ts",
+      "sha256": "08b579a8270395eb167e6a1e307c92b7fc66ec87db23b34f1f409a4496de3bde"
+    },
+    {
+      "path": "src/mocks/database.ts",
+      "sha256": "9bbffada7c2220bf29867933dc1a5711ce45268093fe311ba110502639556458"
+    },
+    {
+      "path": "src/mocks/handlers.ts",
+      "sha256": "72b9992feeaca5f3bdd7d2b93382d97617bb4aa1ebd9a5f1633f5c6e608d01a8"
+    },
+    {
+      "path": "src/services/http/index.ts",
+      "sha256": "9903c972f09a6653c438eea008d218ee0827abd7ae8fb46e3b7264a3b721f4e0"
+    },
+    {
+      "path": "src/services/marketplace/index.ts",
+      "sha256": "06baed9508ca0fbb2096333d39e8f7118475c1d3cbad7b31e9a8d6327aa0ec37"
+    }
+  ],
+  "pending": [
+    "E2E order-reconnect.spec.ts após congelamento visual",
+    "Matriz Lighthouse completa após build final"
+  ]
+}

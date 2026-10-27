@@ -1,0 +1,213 @@
+{
+  "date": "2026-10-27",
+  "baselineCommit": "34ba5b5",
+  "scope": "Router orchestration, AppShell, access guard, render recovery, return destination contracts and module structure consistency.",
+  "sourceReference": {
+    "method": "Read selected private corporate wallet sources to observe file organization and responsibilities; no corporate implementation copied or included in this project.",
+    "observedPatterns": [
+      "Domain modules with pages and components",
+      "Component directory index.tsx with colocated use<Component> hook",
+      "Services imported by hooks instead of view components",
+      "Shared domain types",
+      "Shared styleguide and theme/recipes"
+    ],
+    "limits": "Presence of a file or historical code is not proof of individual authorship of every line or an objective quality score. Reference code was not treated as flawless."
+  },
+  "sourceHashes": {
+    "src/router.tsx": "36e5a0fb0bb0a6463032b34e5e1debee4d0a5fd6c240314d9251d2f3c8ed309e",
+    "src/app/components/AppShell/index.tsx": "c4b880ce7a387197d053d0fdd67262584b1b92b436e940d303e04dc0020c7d06",
+    "src/app/components/AppShell/useAppShell.ts": "7e4f5a2b6136f9fbb01d1162ce1734bc274d7ddb70f1f1c100a73f138b309fb4",
+    "src/app/components/SessionGuard/index.tsx": "081297bd1aa7e5737a2079ec76959049d5e6a82119d964c064702340e3bb0c2c",
+    "src/app/components/SessionGuard/useSessionGuard.ts": "da6aff123c3dc4c03e35216c226bfe72a4607e35269357de9022a00b3e2ae099",
+    "src/app/components/RouteErrorBoundary/index.tsx": "12845af831667f317ab8c62a37c951d3b1b0162c0d7cfd36d2e368ad5e9819af",
+    "src/app/components/RouteErrorFallback/index.tsx": "09239dc790edf40350cfb537ef63152e9e93c9ef2b9889c1e49984c4f5c837fc",
+    "src/app/components/RouteErrorFallback/useErrorRecovery.ts": "501628709154dd5373c3ed0216aad5aeb0862bc10eaa6322f0ddf73edd6b4b32",
+    "src/app/shared-types.ts": "eb2ebe5725215c6524482eeac2b1e2d22380a6d2c31b7e1b7af104b653c0ea80",
+    "src/app/routing/search.ts": "ab70057f8a6dfc9703d4fe396513697b7f196a711fc288534cb2ed59a8963808",
+    "src/lib/returnTo.ts": "f731bca4e3825e31193d62c805ef86a446119e1096da49fe0aa47313042bdc68",
+    "src/app/routes/NftRoute/index.tsx": "69e278b8906b2b1be4457db5f6c7b71b3b15bb572a6c15efa76bfec1deaf3d67",
+    "src/app/routes/OrderRoute/index.tsx": "153745cce3d965c89b741fe339b6dc9c95fe6788504830ac929a78ba95cd3c68"
+  },
+  "adherenceMatrix": [
+    {
+      "criterion": "Router contains route declarations rather than UI/state/effects",
+      "status": "implemented",
+      "evidence": [
+        {
+          "file": "src/router.tsx",
+          "line": 15
+        },
+        {
+          "file": "src/app/components/AppShell/index.tsx",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "criterion": "State and effects colocated in dedicated hooks",
+      "status": "implemented",
+      "evidence": [
+        {
+          "file": "src/app/components/AppShell/useAppShell.ts",
+          "line": 18
+        },
+        {
+          "file": "src/app/components/SessionGuard/useSessionGuard.ts",
+          "line": 8
+        },
+        {
+          "file": "src/app/components/RouteErrorFallback/useErrorRecovery.ts",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "criterion": "Services remain outside render components",
+      "status": "implemented_in_reviewed_app_scope",
+      "evidence": [
+        {
+          "file": "src/app/components/SessionGuard/useSessionGuard.ts",
+          "line": 3
+        },
+        {
+          "file": "src/app/components/AppShell/useAppShell.ts",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "criterion": "Shared types follow real ownership",
+      "status": "partial_project_wide",
+      "evidence": [
+        {
+          "file": "src/app/shared-types.ts",
+          "line": 1
+        },
+        {
+          "file": "src/modules/catalog/shared-types.ts",
+          "line": 1
+        },
+        {
+          "file": "src/contracts.ts",
+          "line": 1
+        }
+      ],
+      "limit": "Account and checkout still consume shared transport contracts and infer local form state; no unused re-export files were fabricated to claim literal parity."
+    },
+    {
+      "criterion": "Error boundary uses supported React mechanism",
+      "status": "implemented_with_explicit_exception",
+      "evidence": [
+        {
+          "file": "src/app/components/RouteErrorBoundary/index.tsx",
+          "line": 5
+        }
+      ],
+      "limit": "React render-error capture requires the class boundary; extracting it into an unsupported hook would be artificial. The recovery action is a colocated hook."
+    },
+    {
+      "criterion": "Secondary routes are lazy without delaying homepage UI behind a module barrel",
+      "status": "implemented_not_yet_quantified",
+      "evidence": [
+        {
+          "file": "src/router.tsx",
+          "line": 13
+        },
+        {
+          "file": "src/router.tsx",
+          "line": 30
+        },
+        {
+          "file": "src/router.tsx",
+          "line": 52
+        }
+      ],
+      "limit": "Bundle size and Lighthouse improvement must be measured by the separate performance reviewer."
+    },
+    {
+      "criterion": "Theme changes do not reset route forms",
+      "status": "preserved_by_structure",
+      "evidence": [
+        {
+          "file": "src/app/components/AppShell/useAppShell.ts",
+          "line": 32
+        }
+      ],
+      "limit": "Recovery key depends on pathname/search, not theme or fragment. Final cross-theme E2Es owned by independent reviewer."
+    }
+  ],
+  "fixedFindings": [
+    {
+      "id": "APP-01",
+      "issue": "router.tsx bundled route declarations, four UI components, session fetching and document effects in one file.",
+      "fix": "Extracted app components, colocated hooks and shared types."
+    },
+    {
+      "id": "APP-02",
+      "issue": "Session verification failure was shown as signed-out state because Guard ignored query errors.",
+      "fix": "Access model distinguishes loading/unavailable/guest/authenticated; failed verification has retry UI and never mounts protected children."
+    },
+    {
+      "id": "APP-03",
+      "issue": "Return-to helper discarded root catalog query strings and Guard only kept pathname.",
+      "fix": "Pure allowlisted destination normalization preserves internal query/fragment and rejects external, unrelated and control-character destinations."
+    },
+    {
+      "id": "APP-04",
+      "issue": "Forced scrollTo on pathname transitions competed with TanStack scroll restoration.",
+      "fix": "Removed imperative scrolling; router scrollRestoration remains the single owner."
+    },
+    {
+      "id": "APP-05",
+      "issue": "All secondary page implementations were imported eagerly through module barrels.",
+      "fix": "Homepage direct import; secondary named-export lazy route components; authenticated pathless parent retains public URLs."
+    },
+    {
+      "id": "APP-06",
+      "issue": "Render fallback claimed cart persistence regardless of storage availability and framework route errors lacked a uniform custom fallback.",
+      "fix": "Neutral Portuguese recovery UI with no persistence promise; both React boundary and router default error fallback use it."
+    }
+  ],
+  "commentReview": {
+    "removedOrRewritten": [
+      "Replaced vague no-persistence and private-storage comments in checkout helpers with the actual recovery/in-memory invariant."
+    ],
+    "preserved": [
+      "ETH decimal precision rule",
+      "Unknown idempotency outcomes preserve attempt",
+      "Socket.IO import must occur after MSW patches WebSocket",
+      "MSW readiness before mounting app",
+      "Required Vitest environment directives"
+    ],
+    "reserved": "Did not mutate performance/domain/HTTP comments or visual-agent source."
+  },
+  "executedValidation": {
+    "unitTests": {
+      "searchAndRedirect": 10,
+      "renderRecovery": 2,
+      "passed": 12,
+      "failed": 0
+    },
+    "existingE2EsDesktop": {
+      "directMissingNFT": true,
+      "privateRouteReturnContext": true,
+      "unknownRouteRecovery": true,
+      "passed": 3
+    },
+    "newE2E": {
+      "file": "tests/e2e/routing.spec.ts",
+      "desktopPassed": 1,
+      "mobilePassed": 1,
+      "durationSeconds": 14.3,
+      "covers": "Session failure retry, guest distinction and full login deep link preserving query/hash."
+    },
+    "typecheck": "passed",
+    "eslintReviewedScope": "passed"
+  },
+  "independentReview": "API reviewer reported no blocker in route guard/returnTo after source reading; new patches still require final root/independent consolidated run.",
+  "qualityScore": {
+    "value": null,
+    "reason": "No self-awarded numeric score. This matrix records observable adherence, measured validation and limitations; a prior score is not evidence."
+  },
+  "publication": "No publication or submission performed by this agent."
+}

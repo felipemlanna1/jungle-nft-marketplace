@@ -1,0 +1,43 @@
+{
+  "scope": "Correção do acesso de demonstração e intenção de favorito, sem alteração dos dados persistidos da conta.",
+  "findings": [
+    {
+      "problem": "O coração no catálogo de visitante apenas mostrava uma mensagem acima da grade, que podia ficar fora da tela.",
+      "change": "O coração abre o login com ID da obra e destino interno validados. A autenticação salva o favorito pela API normal e devolve a pessoa à URL anterior, incluindo filtros e fragmento.",
+      "files": [
+        "src/modules/catalog/pages/Marketplace/useMarketplace.ts",
+        "src/app/routing/search.ts",
+        "src/modules/account/components/AuthForm/useAuthForm.ts"
+      ],
+      "evidence": "Dois cenários de catálogo e dois de detalhe verificam os POSTs reais, persistência após refresh e remoção."
+    },
+    {
+      "problem": "As credenciais fictícias estavam visíveis apenas no painel de cenários.",
+      "change": "A ação Usar conta de demonstração preenche os campos sem autenticar automaticamente. DEMO_LOGIN é configuração pública compartilhada com a criação das fixtures e o painel.",
+      "files": [
+        "src/config/demo.ts",
+        "src/modules/account/components/AuthForm/index.tsx",
+        "src/mocks/fixtures.ts",
+        "src/mocks/database.ts",
+        "src/components/ScenarioPanel/index.tsx"
+      ],
+      "evidence": "Os testes contam zero POSTs ao preencher e um POST no envio normal; a senha alterada pelo colecionador continua exigida e funciona."
+    },
+    {
+      "problem": "A ajuda adicional empurrava o botão de entrar para baixo em telas curtas.",
+      "change": "O espaçamento do login é compacto até 768px de largura e 760px de altura. O cadastro e a geometria de telas altas continuam usando as regras anteriores.",
+      "files": [
+        "src/styleguide/theme/kurio/styles/account.template.css"
+      ],
+      "evidence": "Os cenários verificam pelos limites reais do botão que Entrar cabe inteiro no viewport."
+    }
+  ],
+  "verification": {
+    "typecheck": "pass",
+    "scopedLint": "pass",
+    "unitTests": 20,
+    "e2e": 6,
+    "e2eReport": "reports/e2e-favorite-login-evidence.json"
+  },
+  "limits": "A ação de demonstração usa credenciais fictícias iniciais e não redefine senha ou e-mail de uma conta modificada. Esta revisão não atribui nota nem fidelidade visual integral."
+}

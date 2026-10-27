@@ -1,0 +1,419 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: recovery.spec.ts >> opening an older receipt preserves an uncertain purchase and recovery never duplicates it
+- Location: tests/e2e/recovery.spec.ts:5:1
+
+# Error details
+
+```
+Error: page.evaluate: TypeError: Cannot read properties of null (reading 'name')
+    at eval (eval at evaluate (:370:30), <anonymous>:28:27)
+    at async <anonymous>:396:30
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - link "Pular para o conteúdo" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Página inicial da Kurio" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - text: kurio
+      - navigation "Navegação principal" [ref=e7]:
+        - link "Início" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "Mercado" [ref=e9] [cursor=pointer]:
+          - /url: /#marketplace
+        - generic "Conteúdo editorial fora desta demonstração" [ref=e10]: Criadores
+        - generic "Conteúdo editorial fora desta demonstração" [ref=e11]: Aprenda
+      - generic [ref=e12]:
+        - button "Buscar obras ou criadores" [ref=e13] [cursor=pointer]
+        - link "Carrinho, 0 itens" [ref=e14] [cursor=pointer]:
+          - /url: /cart
+        - button "A Alex Collector" [ref=e15] [cursor=pointer]:
+          - generic [ref=e16]: A
+          - generic [ref=e17]: Alex Collector
+  - main [ref=e20]:
+    - status "Socket conectado" [ref=e21]
+    - region [ref=e22]:
+      - region "Destaques do marketplace" [ref=e23]:
+        - generic [ref=e25]:
+          - group "1 de 3" [ref=e26]:
+            - generic [ref=e27]:
+              - paragraph [ref=e28]: Bem-vindo à Kurio
+              - heading [level=1] [ref=e29]:
+                - generic [ref=e30]: SEJA DONO DO FUTURODA ARTE DIGITAL
+              - paragraph [ref=e31]: Descubra NFTs selecionados de criadores emergentes e consagrados. Colecione arte digital rara, apoie artistas e tenha uma parte da cultura da internet.
+              - link "EXPLORAR" [ref=e32] [cursor=pointer]:
+                - /url: "#marketplace"
+            - img "Emerald Ape, personagem de arte digital em verde esmeralda" [ref=e36]
+          - group [aria-hidden] [ref=e37]:
+            - generic [ref=e38]:
+              - paragraph [ref=e39]: Coleções em destaque
+              - heading [level=1] [ref=e40]:
+                - generic [ref=e41]: LANÇAMENTOS GÊNESIS DE EDIÇÃO LIMITADA
+              - paragraph [ref=e42]: Colecione edições escassas diretamente dos criadores antes da revelação pública.
+              - link [ref=e43] [cursor=pointer]:
+                - /url: /nft/nft-1
+                - text: EXPLORAR
+          - group [aria-hidden] [ref=e48]:
+            - generic [ref=e49]:
+              - paragraph [ref=e50]: Coleções em destaque
+              - heading [level=1] [ref=e51]:
+                - generic [ref=e52]: ARTE DIGITAL SELECIONADA E MUITO MAIS
+              - paragraph [ref=e53]: Explore novos artistas, coleções e obras digitais que definem a cultura.
+              - link [ref=e54] [cursor=pointer]:
+                - /url: /nft/nft-3
+                - text: EXPLORAR
+        - group "Selecionar destaque" [ref=e59]:
+          - button "Ir para destaque 1" [ref=e60] [cursor=pointer]
+          - button "Ir para destaque 2" [ref=e62] [cursor=pointer]
+          - button "Ir para destaque 3" [ref=e64] [cursor=pointer]
+    - region "Marketplace" [ref=e66]:
+      - heading "Marketplace" [level=2] [ref=e67]
+      - generic [ref=e68]:
+        - complementary [ref=e69]:
+          - generic [ref=e70]:
+            - generic [ref=e71]:
+              - heading "Coleções" [level=3] [ref=e72]
+              - navigation "Filtrar coleção" [ref=e73]:
+                - button "Arte digital (5)" [ref=e74] [cursor=pointer]:
+                  - generic [ref=e75]: Arte digital
+                  - generic [ref=e76]: (5)
+                - button "Fotografia (2)" [ref=e77] [cursor=pointer]:
+                  - generic [ref=e78]: Fotografia
+                  - generic [ref=e79]: (2)
+                - button "Música (1)" [ref=e80] [cursor=pointer]:
+                  - generic [ref=e81]: Música
+                  - generic [ref=e82]: (1)
+                - button "Arte 3D (2)" [ref=e83] [cursor=pointer]:
+                  - generic [ref=e84]: Arte 3D
+                  - generic [ref=e85]: (2)
+                - button "Colecionáveis (2)" [ref=e86] [cursor=pointer]:
+                  - generic [ref=e87]: Colecionáveis
+                  - generic [ref=e88]: (2)
+                - button "Generativa (2)" [ref=e89] [cursor=pointer]:
+                  - generic [ref=e90]: Generativa
+                  - generic [ref=e91]: (2)
+                - button "Jogos (1)" [ref=e92] [cursor=pointer]:
+                  - generic [ref=e93]: Jogos
+                  - generic [ref=e94]: (1)
+                - button "Assinaturas (1)" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]: Assinaturas
+                  - generic [ref=e97]: (1)
+                - button "Utilidade (2)" [ref=e98] [cursor=pointer]:
+                  - generic [ref=e99]: Utilidade
+                  - generic [ref=e100]: (2)
+            - generic [ref=e101]:
+              - heading "Faixa de preço" [level=3] [ref=e102]
+              - generic [ref=e103]:
+                - generic [ref=e104]:
+                  - slider "Preço mínimo em ETH": "0.02"
+                  - slider "Preço máximo em ETH": "12.3"
+                - generic [ref=e105]:
+                  - generic [ref=e106]: "Preço:"
+                  - generic [ref=e107]: Preço mínimo
+                  - textbox "Preço mínimo" [ref=e108]: "0.02"
+                  - generic [ref=e109]: "-"
+                  - generic [ref=e110]: Preço máximo
+                  - textbox "Preço máximo" [ref=e111]: "12.30"
+                  - generic [ref=e112]: ETH
+                - button "Aplicar" [ref=e113] [cursor=pointer]
+            - generic [ref=e114]:
+              - heading "Rede" [level=3] [ref=e115]
+              - navigation "Filtrar rede" [ref=e116]:
+                - button "Ethereum (12)" [ref=e117] [cursor=pointer]:
+                  - generic [ref=e118]: Ethereum
+                  - generic [ref=e119]: (12)
+                - button "Polygon (6)" [ref=e120] [cursor=pointer]:
+                  - generic [ref=e121]: Polygon
+                  - generic [ref=e122]: (6)
+                - button "Solana (0)" [ref=e123] [cursor=pointer]:
+                  - generic [ref=e124]: Solana
+                  - generic [ref=e125]: (0)
+          - link "NFT EM DESTAQUE OFERTA LIMITADA Sage Nomad, personagem com chapéu e moletom roxo" [ref=e126] [cursor=pointer]:
+            - /url: /nft/nft-2
+            - strong [ref=e127]: NFT EM DESTAQUE
+            - generic [ref=e128]: OFERTA LIMITADA
+            - img "Sage Nomad, personagem com chapéu e moletom roxo" [ref=e129]
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - navigation "Seleção do catálogo" [ref=e132]:
+              - button "Todos os NFTs" [pressed] [ref=e133] [cursor=pointer]
+              - button "Novos lançamentos" [ref=e134] [cursor=pointer]
+              - button "Em alta" [ref=e135] [cursor=pointer]
+            - generic [ref=e136]:
+              - generic [ref=e137]: "Ordenar por:"
+              - combobox "Ordenar por:" [ref=e138] [cursor=pointer]:
+                - generic: Listados recentemente
+          - generic [ref=e141]:
+            - article [ref=e142]:
+              - generic [ref=e143]:
+                - 'link "Ver Emerald Ape #042" [ref=e144] [cursor=pointer]':
+                  - /url: /nft/nft-1
+                  - 'img "Emerald Ape #042" [ref=e145]'
+                - 'group "Ações de Emerald Ape #042" [ref=e146]':
+                  - 'button "Adicionar Emerald Ape #042 ao carrinho" [ref=e147] [cursor=pointer]'
+                  - 'button "Adicionar Emerald Ape #042 aos favoritos" [ref=e152] [cursor=pointer]'
+                  - 'button "Ampliar Emerald Ape #042" [ref=e155] [cursor=pointer]'
+              - generic [ref=e159]:
+                - link [ref=e161] [cursor=pointer]:
+                  - /url: /nft/nft-1
+                  - 'heading "Emerald Ape #042" [level=3] [ref=e162]'
+                - strong [ref=e165]: 1.19 ETH
+            - article [ref=e166]:
+              - generic [ref=e167]:
+                - 'link "Ver Sage Nomad #009" [ref=e168] [cursor=pointer]':
+                  - /url: /nft/nft-2
+                  - 'img "Sage Nomad #009" [ref=e169]'
+                - 'group "Ações de Sage Nomad #009" [ref=e170]':
+                  - 'button "Adicionar Sage Nomad #009 ao carrinho" [ref=e171] [cursor=pointer]'
+                  - 'button "Adicionar Sage Nomad #009 aos favoritos" [ref=e176] [cursor=pointer]'
+                  - 'button "Ampliar Sage Nomad #009" [ref=e179] [cursor=pointer]'
+              - generic [ref=e183]:
+                - link [ref=e185] [cursor=pointer]:
+                  - /url: /nft/nft-2
+                  - 'heading "Sage Nomad #009" [level=3] [ref=e186]'
+                - strong [ref=e189]: 1.69 ETH
+            - article [ref=e190]:
+              - generic [ref=e191]:
+                - 'link "Ver Neon Vessel #552" [ref=e192] [cursor=pointer]':
+                  - /url: /nft/nft-3
+                  - 'img "Neon Vessel #552" [ref=e193]'
+                - 'group "Ações de Neon Vessel #552" [ref=e194]':
+                  - 'button "Adicionar Neon Vessel #552 ao carrinho" [ref=e195] [cursor=pointer]'
+                  - 'button "Adicionar Neon Vessel #552 aos favoritos" [ref=e200] [cursor=pointer]'
+                  - 'button "Ampliar Neon Vessel #552" [ref=e203] [cursor=pointer]'
+                - generic [ref=e207]: RARO
+              - generic [ref=e208]:
+                - link [ref=e210] [cursor=pointer]:
+                  - /url: /nft/nft-3
+                  - 'heading "Neon Vessel #552" [level=3] [ref=e211]'
+                - generic [ref=e213]:
+                  - strong [ref=e214]: 1.99 ETH
+                  - generic "Preço anterior 2.29 ETH" [ref=e215]: 2.29 ETH
+            - article [ref=e216]:
+              - generic [ref=e217]:
+                - 'link "Ver Cosmic Bloom #118" [ref=e218] [cursor=pointer]':
+                  - /url: /nft/nft-4
+                  - 'img "Cosmic Bloom #118" [ref=e219]'
+                - 'group "Ações de Cosmic Bloom #118" [ref=e220]':
+                  - 'button "Adicionar Cosmic Bloom #118 ao carrinho" [ref=e221] [cursor=pointer]'
+                  - 'button "Adicionar Cosmic Bloom #118 aos favoritos" [ref=e226] [cursor=pointer]'
+                  - 'button "Ampliar Cosmic Bloom #118" [ref=e229] [cursor=pointer]'
+              - generic [ref=e233]:
+                - link [ref=e235] [cursor=pointer]:
+                  - /url: /nft/nft-4
+                  - 'heading "Cosmic Bloom #118" [level=3] [ref=e236]'
+                - strong [ref=e239]: 1.29 ETH
+            - article [ref=e240]:
+              - generic [ref=e241]:
+                - 'link "Ver Violet Nomad #314" [ref=e242] [cursor=pointer]':
+                  - /url: /nft/nft-5
+                  - 'img "Violet Nomad #314" [ref=e243]'
+                - 'group "Ações de Violet Nomad #314" [ref=e244]':
+                  - 'button "Adicionar Violet Nomad #314 ao carrinho" [ref=e245] [cursor=pointer]'
+                  - 'button "Adicionar Violet Nomad #314 aos favoritos" [ref=e250] [cursor=pointer]'
+                  - 'button "Ampliar Violet Nomad #314" [ref=e253] [cursor=pointer]'
+              - generic [ref=e257]:
+                - link [ref=e259] [cursor=pointer]:
+                  - /url: /nft/nft-5
+                  - 'heading "Violet Nomad #314" [level=3] [ref=e260]'
+                - strong [ref=e263]: 1.39 ETH
+            - article [ref=e264]:
+              - generic [ref=e265]:
+                - 'link "Ver Ivory Baron #088" [ref=e266] [cursor=pointer]':
+                  - /url: /nft/nft-6
+                  - 'img "Ivory Baron #088" [ref=e267]'
+                - 'group "Ações de Ivory Baron #088" [ref=e268]':
+                  - 'button "Adicionar Ivory Baron #088 ao carrinho" [ref=e269] [cursor=pointer]'
+                  - 'button "Adicionar Ivory Baron #088 aos favoritos" [ref=e274] [cursor=pointer]'
+                  - 'button "Ampliar Ivory Baron #088" [ref=e277] [cursor=pointer]'
+              - generic [ref=e281]:
+                - link [ref=e283] [cursor=pointer]:
+                  - /url: /nft/nft-6
+                  - 'heading "Ivory Baron #088" [level=3] [ref=e284]'
+                - strong [ref=e287]: 1.79 ETH
+            - article [ref=e288]:
+              - generic [ref=e289]:
+                - 'link "Ver Golden Beat #207" [ref=e290] [cursor=pointer]':
+                  - /url: /nft/nft-7
+                  - 'img "Golden Beat #207" [ref=e291]'
+                - 'group "Ações de Golden Beat #207" [ref=e292]':
+                  - 'button "Adicionar Golden Beat #207 ao carrinho" [ref=e293] [cursor=pointer]'
+                  - 'button "Adicionar Golden Beat #207 aos favoritos" [ref=e298] [cursor=pointer]'
+                  - 'button "Ampliar Golden Beat #207" [ref=e301] [cursor=pointer]'
+              - generic [ref=e305]:
+                - link [ref=e307] [cursor=pointer]:
+                  - /url: /nft/nft-7
+                  - 'heading "Golden Beat #207" [level=3] [ref=e308]'
+                - strong [ref=e311]: 0.99 ETH
+            - article [ref=e312]:
+              - generic [ref=e313]:
+                - 'link "Ver Golden Pulse #099" [ref=e314] [cursor=pointer]':
+                  - /url: /nft/nft-8
+                  - 'img "Golden Pulse #099" [ref=e315]'
+                - 'group "Ações de Golden Pulse #099" [ref=e316]':
+                  - 'button "Adicionar Golden Pulse #099 ao carrinho" [ref=e317] [cursor=pointer]'
+                  - 'button "Adicionar Golden Pulse #099 aos favoritos" [ref=e322] [cursor=pointer]'
+                  - 'button "Ampliar Golden Pulse #099" [ref=e325] [cursor=pointer]'
+              - generic [ref=e329]:
+                - link [ref=e331] [cursor=pointer]:
+                  - /url: /nft/nft-8
+                  - 'heading "Golden Pulse #099" [level=3] [ref=e332]'
+                - strong [ref=e335]: 0.79 ETH
+            - article [ref=e336]:
+              - generic [ref=e337]:
+                - 'link "Ver Golden Signal #160" [ref=e338] [cursor=pointer]':
+                  - /url: /nft/nft-9
+                  - 'img "Golden Signal #160" [ref=e339]'
+                - 'group "Ações de Golden Signal #160" [ref=e340]':
+                  - 'button "Adicionar Golden Signal #160 ao carrinho" [ref=e341] [cursor=pointer]'
+                  - 'button "Adicionar Golden Signal #160 aos favoritos" [ref=e346] [cursor=pointer]'
+                  - 'button "Ampliar Golden Signal #160" [ref=e349] [cursor=pointer]'
+              - generic [ref=e353]:
+                - link [ref=e355] [cursor=pointer]:
+                  - /url: /nft/nft-9
+                  - 'heading "Golden Signal #160" [level=3] [ref=e356]'
+                - strong [ref=e359]: 0.39 ETH
+          - navigation "Paginação do catálogo" [ref=e360]:
+            - button "Página anterior" [disabled] [ref=e361]
+            - generic [ref=e364]: Página 1 de 2
+            - button "Ir para página 1" [ref=e365] [cursor=pointer]: "1"
+            - button "Ir para página 2" [ref=e366] [cursor=pointer]: "2"
+            - button "Próxima página" [ref=e367] [cursor=pointer]
+    - region "Coleções em destaque" [ref=e370]:
+      - article [ref=e371]:
+        - img "Emerald Ape" [ref=e372]
+        - generic [ref=e373]:
+          - heading "Lançamentos gênesis de edição limitada" [level=2] [ref=e374]: Lançamentos gênesisde edição limitada
+          - paragraph [ref=e375]: Colecione edições escassas diretamente dos criadores antes da revelação pública.
+          - link "Explorar" [ref=e376] [cursor=pointer]:
+            - /url: /nft/nft-1
+      - article [ref=e379]:
+        - img "Neon Vessel" [ref=e380]
+        - generic [ref=e381]:
+          - heading "Arte digital selecionada e muito mais" [level=2] [ref=e382]: Arte digital selecionadae muito mais
+          - paragraph [ref=e383]: Explore novos artistas, coleções e obras digitais que definem a cultura.
+          - link "Explorar" [ref=e384] [cursor=pointer]:
+            - /url: /nft/nft-3
+    - region [ref=e387]:
+      - generic [ref=e388]:
+        - heading "Diário da Cunhagem" [level=2] [ref=e389]
+        - paragraph [ref=e390]: Histórias, guias e insights para colecionadores sobre o universo da propriedade digital.
+      - generic [ref=e391]:
+        - article [ref=e392]:
+          - generic [ref=e393]:
+            - paragraph [ref=e394]:
+              - time [ref=e395]: 12 de setembro
+              - text: "| Leitura de 6 min"
+            - heading "Como funciona a propriedade de NFTs" [level=3] [ref=e396]
+            - paragraph [ref=e397]: Aprenda a colecionar, negociar e verificar ativos digitais.
+            - 'button "Ler mais: Como funciona a propriedade de NFTs" [ref=e398] [cursor=pointer]': Ler mais
+        - article [ref=e401]:
+          - generic [ref=e402]:
+            - paragraph [ref=e403]:
+              - time [ref=e404]: 13 de setembro
+              - text: "| Leitura de 2 min"
+            - heading "10 artistas digitais para acompanhar" [level=3] [ref=e405]
+            - paragraph [ref=e406]: Conheça criadores que moldam a cultura digital.
+            - 'button "Ler mais: 10 artistas digitais para acompanhar" [ref=e407] [cursor=pointer]': Ler mais
+        - article [ref=e410]:
+          - generic [ref=e411]:
+            - paragraph [ref=e412]:
+              - time [ref=e413]: 15 de setembro
+              - text: "| Leitura de 3 min"
+            - heading "Raridade, atributos e procedência" [level=3] [ref=e414]
+            - paragraph [ref=e415]: Entenda raridade, procedência, direitos autorais e utilidade.
+            - 'button "Ler mais: Raridade, atributos e procedência" [ref=e416] [cursor=pointer]': Ler mais
+        - article [ref=e419]:
+          - generic [ref=e420]:
+            - paragraph [ref=e421]:
+              - time [ref=e422]: 15 de setembro
+              - text: "| Leitura de 2 min"
+            - heading "Como proteger sua carteira" [level=3] [ref=e423]
+            - paragraph [ref=e424]: Proteja sua carteira, seus ativos e sua identidade.
+            - 'button "Ler mais: Como proteger sua carteira" [ref=e425] [cursor=pointer]': Ler mais
+  - contentinfo "Rodapé" [ref=e428]:
+    - generic [ref=e429]:
+      - generic [ref=e430]:
+        - heading "Segurança da carteira" [level=3] [ref=e435]
+        - paragraph [ref=e436]: Proteja sua carteira e colecione arte digital com confiança.
+      - generic [ref=e437]:
+        - heading "Criadores em destaque" [level=3] [ref=e445]
+        - paragraph [ref=e446]: Conheça artistas, estúdios e comunidades que moldam a cultura digital na rede.
+      - generic [ref=e447]:
+        - heading "Alertas de lançamentos" [level=3] [ref=e452]
+        - paragraph [ref=e453]: Receba calendários de cunhagem, novidades de listas de acesso e análises do mercado.
+      - generic [ref=e454]:
+        - heading "Antecipe-se ao próximo lançamento" [level=3] [ref=e455]
+        - form "Inscrição de novidades" [ref=e456]:
+          - generic [ref=e457]: E-mail da newsletter
+          - generic [ref=e458]:
+            - textbox "E-mail da newsletter" [ref=e459]:
+              - /placeholder: Digite seu e-mail
+            - button "Inscrever na newsletter" [ref=e460] [cursor=pointer]: Enviar
+        - paragraph [ref=e461]: Novidades das coleções em uma inscrição demonstrativa.
+    - generic [ref=e462]:
+      - link "KURIO" [ref=e463] [cursor=pointer]:
+        - /url: /
+      - paragraph [ref=e464]: Feito para colecionadores,criadores e cultura
+      - generic [ref=e465]: Contato demonstrativo
+      - generic [ref=e466]: Sem transações reais
+    - generic [ref=e467]:
+      - generic [ref=e468]:
+        - heading "Meu perfil" [level=3] [ref=e469]
+        - link "Meu perfil" [ref=e470] [cursor=pointer]:
+          - /url: /profile
+        - generic [ref=e471]: Minha coleção
+        - generic [ref=e472]: Atividade
+        - generic [ref=e473]: Estúdio do criador
+        - button "Lista de interesse" [ref=e474] [cursor=pointer]
+      - generic [ref=e475]:
+        - heading "Central de ajuda" [level=3] [ref=e476]
+        - generic [ref=e477]: Central de ajuda
+        - generic [ref=e478]: Como comprar NFTs
+        - generic [ref=e479]: Carteira e segurança
+        - generic [ref=e480]: Política do mercado
+        - generic [ref=e481]: Denunciar item
+      - generic [ref=e482]:
+        - heading "Coleções" [level=3] [ref=e483]
+        - link "Arte digital" [ref=e484] [cursor=pointer]:
+          - /url: /?category=Art
+        - link "Fotografia" [ref=e485] [cursor=pointer]:
+          - /url: /?category=Photography
+        - link "Música" [ref=e486] [cursor=pointer]:
+          - /url: /?category=Music
+        - link "Arte 3D" [ref=e487] [cursor=pointer]:
+          - /url: /?category=3D
+        - link "Utilidade" [ref=e488] [cursor=pointer]:
+          - /url: /?category=Utility
+      - generic [ref=e489]:
+        - heading "Redes sociais" [level=3] [ref=e490]
+        - group "Redes sociais ilustrativas" [ref=e491]:
+          - link "Abrir Facebook em nova aba" [ref=e492] [cursor=pointer]:
+            - /url: https://www.facebook.com/
+          - link "Abrir Instagram em nova aba" [ref=e493] [cursor=pointer]:
+            - /url: https://www.instagram.com/
+          - link "Abrir X em nova aba" [ref=e494] [cursor=pointer]:
+            - /url: https://x.com/
+          - link "Abrir LinkedIn em nova aba" [ref=e495] [cursor=pointer]:
+            - /url: https://www.linkedin.com/
+          - link "Abrir YouTube em nova aba" [ref=e496] [cursor=pointer]:
+            - /url: https://www.youtube.com/
+        - generic [ref=e497]: Links ilustrativos do protótipo.
+        - heading "Carteiras compatíveis" [level=3] [ref=e498]
+        - paragraph [ref=e499]: METAMASK · WALLETCONNECT · COINBASE
+        - generic [ref=e500]: Interface demonstrativa. Sem conexão a carteiras reais.
+    - paragraph [ref=e501]: © 2026 Kurio. Propriedade digital para todos.
+    - button "Opções da demonstração" [ref=e502] [cursor=pointer]: Demonstração
+```

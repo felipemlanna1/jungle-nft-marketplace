@@ -1,0 +1,146 @@
+[
+  {
+    "width": 320,
+    "horizontalOverflow": false,
+    "section": {
+      "x": 24,
+      "y": 1470.40625,
+      "width": 272,
+      "height": 1689
+    },
+    "cards": [
+      {
+        "x": 24,
+        "y": 1611.40625,
+        "width": 272,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 2004.40625,
+        "width": 272,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 2397.40625,
+        "width": 272,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 2790.40625,
+        "width": 272,
+        "height": 369
+      }
+    ]
+  },
+  {
+    "width": 414,
+    "horizontalOverflow": false,
+    "section": {
+      "x": 24,
+      "y": 1739,
+      "width": 366,
+      "height": 1689
+    },
+    "cards": [
+      {
+        "x": 24,
+        "y": 1880,
+        "width": 366,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 2273,
+        "width": 366,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 2666,
+        "width": 366,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 3059,
+        "width": 366,
+        "height": 369
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "horizontalOverflow": false,
+    "section": {
+      "x": 24,
+      "y": 3119,
+      "width": 720,
+      "height": 889
+    },
+    "cards": [
+      {
+        "x": 24,
+        "y": 3246,
+        "width": 348,
+        "height": 369
+      },
+      {
+        "x": 396,
+        "y": 3246,
+        "width": 348,
+        "height": 369
+      },
+      {
+        "x": 24,
+        "y": 3639,
+        "width": 348,
+        "height": 369
+      },
+      {
+        "x": 396,
+        "y": 3639,
+        "width": 348,
+        "height": 369
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "horizontalOverflow": false,
+    "section": {
+      "x": 120,
+      "y": 2386.296875,
+      "width": 1200,
+      "height": 477
+    },
+    "cards": [
+      {
+        "x": 120,
+        "y": 2494.296875,
+        "width": 268,
+        "height": 369
+      },
+      {
+        "x": 412,
+        "y": 2494.296875,
+        "width": 268,
+        "height": 369
+      },
+      {
+        "x": 704,
+        "y": 2494.296875,
+        "width": 268,
+        "height": 369
+      },
+      {
+        "x": 996,
+        "y": 2494.296875,
+        "width": 268,
+        "height": 369
+      }
+    ]
+  }
+]

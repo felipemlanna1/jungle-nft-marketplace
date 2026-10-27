@@ -1,7 +1,9 @@
 import * as Dialog from '@radix-ui/react-dialog';
-import { FlaskConical, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import type { Scenario } from '../../contracts';
 import { useScenarioPanel } from './useScenarioPanel';
+import type { ScenarioPanelProps } from './shared-types';
+import { DEMO_LOGIN } from '../../config/demo';
 const scenarios: { value: Scenario; label: string }[] = [
   { value: 'default', label: 'Rede normal' },
   { value: 'slow', label: 'Rede lenta' },
@@ -12,24 +14,14 @@ const scenarios: { value: Scenario; label: string }[] = [
   { value: 'payment-refused', label: 'Pagamento recusado' },
   { value: 'order-timeout', label: 'Timeout após criar pedido' },
 ];
-export const ScenarioPanel = ({ connected }: { connected: boolean }) => {
+export const ScenarioPanel = ({ open, onOpenChange, onCloseAutoFocus }: ScenarioPanelProps) => {
   const { scenario, message, busy, choose, reset, changeNft, replay, disconnect, reconnect } =
     useScenarioPanel();
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button className="demo-trigger" aria-label="Open demo scenarios">
-          <FlaskConical size={16} />
-          <span>Cenários da demonstração</span>
-          <i
-            aria-label={connected ? 'Socket conectado' : 'Socket desconectado'}
-            className={connected ? 'connection-dot connected' : 'connection-dot'}
-          />
-        </button>
-      </Dialog.Trigger>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className="dialog-overlay" />
-        <Dialog.Content className="dialog-content demo-dialog">
+        <Dialog.Content className="dialog-content demo-dialog" onCloseAutoFocus={onCloseAutoFocus}>
           <div className="modal-heading">
             <Dialog.Title>Explore todos os estados</Dialog.Title>
             <Dialog.Close asChild>
@@ -56,9 +48,9 @@ export const ScenarioPanel = ({ connected }: { connected: boolean }) => {
             </select>
           </label>
           <p className="muted">
-            Conta: collector@example.test
+            Conta: {DEMO_LOGIN.email}
             <br />
-            Senha: Collect0r!Demo
+            Senha: {DEMO_LOGIN.password}
           </p>
           <div className="stack">
             <button

@@ -1,0 +1,130 @@
+{
+  "source": "https://www.figma.com/design/Ff0SksUi7UFtPWUO8kyNtw/Frontend-Challenge?node-id=0-1",
+  "reviewedAt": "2026-10-27",
+  "readOnly": true,
+  "distinctCommentsRead": 62,
+  "missingNumbersNotObserved": [1, 2, 22, 62],
+  "sourceResolutionStatus": "Não foram alterados nem resolvidos comentários no Figma. Os comentários lidos apareciam sem respostas; datas exibidas eram relativas.",
+  "interpretation": "Comentários são evidência de dúvidas e defeitos percebidos, não uma aprovação da empresa para qualquer alternativa sugerida.",
+  "items": [
+    {
+      "commentId": 61,
+      "subject": "Espaçamento entre as fileiras do catálogo",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "Grid usa gap vertical uniforme de 72 px no desktop. A revisão visual anterior confirmou os cards sem deslocamento externo."
+    },
+    {
+      "commentId": 60,
+      "subject": "Alinhamento externo dos cards e das colunas",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "Grid mantém as três colunas com largura de 258 px e início fixo, sem offsets horizontais por linha. Os recortes internos da arte não alteram a borda dos cards."
+    },
+    {
+      "commentId": 59,
+      "subject": "Alinhamento vertical do cabeçalho",
+      "implementationStatus": "Pendente de comparação final",
+      "decision": "A correção deve priorizar centro visual de logo, navegação e ações, preservando o divisor. Não há evidência suficiente para registrar como resolvido."
+    },
+    {
+      "commentId": 58,
+      "subject": "Overlay do cadastro",
+      "implementationStatus": "Conferência delegada à revisão da conta",
+      "decision": "O responsável pela conta deve verificar a camada escura e o foco modal; não foi alterado o arquivo do Figma."
+    },
+    {
+      "commentId": 23,
+      "subject": "Significado das miniaturas e edições",
+      "implementationStatus": "Decisão implementada",
+      "decision": "Miniaturas representam enquadramentos da obra; a seleção de edição é independente e altera ID, preço e estoque. Carrinho e comprovante preservam a edição escolhida."
+    },
+    {
+      "commentId": 21,
+      "subject": "Consistência do ID do token",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "Cart usa o tokenId canônico da NFT. O backend inclui tokenId no snapshot do OrderItem e o comprovante exibe esse valor histórico, sem consultar dados correntes da NFT."
+    },
+    {
+      "commentId": 20,
+      "subject": "Formulário do pagamento no mobile",
+      "implementationStatus": "Decisão da implementação",
+      "decision": "Os campos exigidos devem continuar acessíveis no mobile; a ausência no desenho não autoriza eliminar requisitos funcionais."
+    },
+    {
+      "commentId": 19,
+      "subject": "Estados de pedido ausentes no desenho",
+      "implementationStatus": "Implementado",
+      "decision": "Pendente, confirmado e recusado continuam explícitos, com recuperação de consulta e sem recriar compras ao atualizar."
+    },
+    {
+      "commentId": 17,
+      "subject": "Ícones no lugar de letras decorativas",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "Rodapé usa ícones Lucide coerentes com carteira, criadores e lançamentos."
+    },
+    {
+      "commentId": 16,
+      "subject": "Espaço para exclusão no carrinho mobile",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "A linha reserva área própria para excluir. Verificado sem overflow em 320 e 414 px."
+    },
+    {
+      "commentId": 15,
+      "subject": "Reuso dos controles de quantidade",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "CartItemRow usa QuantityInput do styleguide, compartilhado com detalhes do item."
+    },
+    {
+      "commentId": 14,
+      "subject": "Navegação após autenticação",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "O cabeçalho troca Entrar pela conta autenticada. O estado é consultado pela sessão atual."
+    },
+    {
+      "commentId": 10,
+      "subject": "Desabilitar decremento no mínimo",
+      "implementationStatus": "Aplicado no componente compartilhado",
+      "decision": "QuantityInput recebe min=1 e desabilita o decremento nesse limite."
+    },
+    {
+      "commentId": 7,
+      "subject": "Voltar à página anterior",
+      "implementationStatus": "Implementado",
+      "decision": "Paginação mantém anterior, próxima e seleção de página, com estado na URL."
+    },
+    {
+      "commentId": 6,
+      "subject": "Opções de ordenação",
+      "implementationStatus": "Decisão implementada",
+      "decision": "Listados recentemente, menor preço e maior preço são opções funcionais."
+    },
+    {
+      "commentId": 5,
+      "subject": "Precisão dos preços no mobile",
+      "implementationStatus": "Aplicado na implementação",
+      "decision": "Dois campos de texto min/max complementam os sliders; os valores usam decimais exatos e aceitam vírgula."
+    },
+    {
+      "commentId": 4,
+      "subject": "Filtros combináveis",
+      "implementationStatus": "Implementado com limite documentado",
+      "decision": "Categoria, preço, rede, busca, ordenação e aba são combináveis. Atualmente há uma categoria e uma rede por vez; não foi inferida seleção múltipla a partir de uma sugestão sem resposta."
+    },
+    {
+      "commentId": 3,
+      "subject": "Quadros mobile/tablet ausentes",
+      "implementationStatus": "Adaptação explícita",
+      "decision": "Confirmação de pedido, perfil, carteiras e larguras de tablet recebem adaptação responsiva. Não há quadro original para certificar equivalência nessas combinações."
+    },
+    {
+      "commentId": 24,
+      "subject": "Separação entre seletor e área animada",
+      "implementationStatus": "Implementação em validação",
+      "decision": "Indicadores do destaque ficam fora do track animado, com espaço próprio e área de toque. A galeria mantém os controles fora da região ampliada. Animação respeita prefers-reduced-motion."
+    }
+  ],
+  "remainingContextualComments": [
+    66, 65, 64, 63, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38,
+    37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 18, 13, 12, 11, 9, 8
+  ],
+  "privacy": "Nomes de autores e transcrição integral são mantidos somente no registro temporário local; não integram este documento público."
+}

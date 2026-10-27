@@ -1,35 +1,63 @@
 import type { NFT } from '../contracts';
+
 const artworks = [
-  ['The future of ETH®', 'Marco Conti', 'Abstract', '0.32', 'art-01'],
-  ['Silent dimensions', 'Sofia Reyes', 'Art', '0.48', 'art-02'],
-  ['Beyond the horizon', 'Eli Nova', 'Photography', '0.19', 'art-03'],
-  ['Dream in color', 'Maya Chen', 'Abstract', '0.72', 'art-04'],
-  ['Crystal universe', 'Kai Studio', 'Art', '0.24', 'art-05'],
-  ['A different kind of blue', 'Luca Moreau', 'Photography', '0.56', 'art-06'],
-  ['Electric bloom', 'Nina Park', 'Abstract', '0.37', 'art-07'],
-  ['The observer', 'Theo West', 'Art', '0.91', 'art-08'],
-  ['Golden hour', 'Ava Lake', 'Photography', '0.15', 'art-09'],
-  ['Orbital stories', 'Marco Conti', 'Abstract', '0.63', 'art-10'],
-  ['Still in motion', 'Sofia Reyes', 'Art', '0.41', 'art-11'],
-  ['Soft geometry', 'Eli Nova', 'Abstract', '0.28', 'art-12'],
-  ['Ritual of light', 'Maya Chen', 'Photography', '0.82', 'art-13'],
-  ['Parallel worlds', 'Kai Studio', 'Art', '0.34', 'art-14'],
-  ['Out of the ordinary', 'Nina Park', 'Abstract', '0.47', 'art-15'],
-  ['Moonlight signal', 'Theo West', 'Art', '0.29', 'art-16'],
-  ['Chromatic island', 'Ava Lake', 'Photography', '0.67', 'art-17'],
-  ['Infinite potential', 'Luca Moreau', 'Abstract', '0.53', 'art-18'],
+  ['Emerald Ape #042', 'Kurio Editions', 'Art', '1.19', 'emerald'],
+  ['Sage Nomad #009', 'Kurio Editions', 'Photography', '1.69', 'sage'],
+  ['Neon Vessel #552', 'Kurio Editions', '3D', '1.99', 'ivory'],
+  ['Cosmic Bloom #118', 'Studio Nomad', 'Art', '1.29', 'sage'],
+  ['Violet Nomad #314', 'Studio Nomad', 'Generative', '1.39', 'sage'],
+  ['Ivory Baron #088', 'Kurio Editions', 'Collectibles', '1.79', 'ivory'],
+  ['Golden Beat #207', 'Studio Signal', 'Music', '0.99', 'golden'],
+  ['Golden Pulse #099', 'Studio Signal', 'Gaming', '0.79', 'golden'],
+  ['Golden Signal #160', 'Studio Signal', 'Utility', '0.39', 'golden'],
+  ['Linen Scholar #011', 'Kurio Studio', 'Art', '1.05', 'linen'],
+  ['Olive Explorer #027', 'Kurio Studio', '3D', '0.84', 'olive'],
+  ['Terracotta Traveler #016', 'Kurio Studio', 'Photography', '0.63', 'terracotta'],
+  ['Midnight Curator #101', 'Kurio Studio', 'Generative', '0.41', 'midnight'],
+  ['Ivory Listener #204', 'Kurio Studio', 'Memberships', '0.28', 'listener'],
+  ['Burgundy Collector #018', 'Kurio Studio', 'Collectibles', '0.82', 'burgundy'],
+  ['Southbound #041', 'Atelier Atlantic', 'Art', '0.34', 'cartographer'],
+  ['Clay Archive #063', 'Atelier Atlantic', 'Utility', '0.47', 'maker'],
+  ['Last Light #090', 'Studio Signal', 'Art', '0.53', 'golden'],
 ] as const;
+const studioPopularity = [98, 92, 86, 78, 90, 72] as const;
+const artworkImages = {
+  emerald: '/figma/art/f20b58b99de12b6e.webp',
+  sage: '/figma/art/9b25d8d72395aa62.webp',
+  ivory: '/figma/art/326df4c1c08c31c8.webp',
+  golden: '/figma/art/2a42ba5adc341c3d.webp',
+  cartographer: '/art/atlantic-cartographer.webp',
+  maker: '/art/ceramic-maker.webp',
+  linen: '/art/apes/linen-scholar.webp',
+  olive: '/art/apes/olive-explorer.webp',
+  terracotta: '/art/apes/terracotta-traveler.webp',
+  midnight: '/art/apes/midnight-curator.webp',
+  listener: '/art/apes/ivory-listener.webp',
+  burgundy: '/art/apes/burgundy-collector.webp',
+} as const;
+
 export function createNfts(): NFT[] {
-  return artworks.map(([title, creator, category, price], index) => ({
+  return artworks.map(([title, creator, category, price, artwork], index) => ({
     id: `nft-${index + 1}`,
     title,
     creator,
-    collection: 'Beyond imagination',
+    collection: index < 9 ? 'Kurio Apes' : index < 15 ? 'Kurio Studio Apes' : 'Atlantic Editions',
     category,
     price,
-    image: `/art/nft-${(index % 12) + 1}.svg`,
-    available: index === 17 ? 0 : 3 + (index % 6),
+    ...(index === 2 ? { previousPrice: '2.29' } : {}),
+    image: artworkImages[artwork],
+    network: index < 9 || index % 3 === 0 ? 'Ethereum' : 'Polygon',
+    releasedAt: Date.UTC(2026, 9, 27) - index * 5 * 86_400_000,
+    popularity:
+      index >= 9 && index < 15 ? studioPopularity[index - 9] : Math.max(0, 96 - index * 4),
+    available: index === 17 ? 0 : index === 5 ? 10 : 3 + (index % 6),
+    tokenId: title.split('#')[1],
+    description: `Colecionável digital da coleção ${index < 9 ? 'Kurio Apes' : index < 15 ? 'Kurio Studio Apes' : 'Atlantic Editions'}. Esta obra e sua negociação fazem parte de uma simulação.`,
+    attributes: index === 0 ? ['Óculos', 'Esmeralda', 'Raro'] : [category, 'Edição digital'],
+    rating: index === 0 ? 4.5 : 4,
+    reviewCount: index === 0 ? 19 : 3 + index,
+    rarity: [2, 9, 13, 14].includes(index) ? 'Rare' : 'Common',
     version: 1,
   }));
 }
-export const DEMO_PASSWORD = 'Collect0r!Demo';
+export { DEMO_LOGIN } from '../config/demo';

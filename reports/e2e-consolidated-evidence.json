@@ -1,0 +1,17 @@
+{
+  "sourceBefore": "dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c",
+  "sourceAfter": "dca453d660ec132bffb1224ece2cc64bb91dc4d0013cd4424c622572d8214e9c",
+  "unchangedSource": true,
+  "changedFiles": [],
+  "stats": {
+    "startTime": "2026-10-27T14:04:44.202Z",
+    "duration": 205015.834,
+    "expected": 76,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report": "reports/e2e-consolidated-verified.json",
+  "scope": "76 testes funcionais; visuais e order-reconnect são rodadas separadas.",
+  "approval": true
+}

@@ -13,9 +13,7 @@ test('slow data keeps skeletons, error state recovers through real network mocks
   );
   await page.reload();
   await expect(page.locator('.nft-grid .skeleton').first()).toBeVisible();
-  await expect(
-    page.getByRole('link', { name: 'Ver The future of ETH®', exact: true }),
-  ).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Ver Emerald Ape #042', exact: true })).toBeVisible();
   await page.evaluate(() =>
     fetch('/api/demo/scenario', {
       method: 'POST',
@@ -35,13 +33,11 @@ test('slow data keeps skeletons, error state recovers through real network mocks
     }),
   );
   await page.getByRole('button', { name: 'Tentar novamente', exact: true }).click();
-  await expect(
-    page.getByRole('link', { name: 'Ver The future of ETH®', exact: true }),
-  ).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Ver Emerald Ape #042', exact: true })).toBeVisible();
 });
 test('unknown routes provide a real recovery link', async ({ page }) => {
   await page.goto('/not-a-route');
-  await expect(page.getByRole('heading', { name: 'Page not found' })).toBeVisible();
-  await page.getByRole('link', { name: 'Explore NFTs' }).click();
+  await expect(page.getByRole('heading', { name: 'Página não encontrada' })).toBeVisible();
+  await page.getByRole('link', { name: 'Explorar NFTs' }).click();
   await expect(page.locator('#hero-title')).toBeVisible();
 });

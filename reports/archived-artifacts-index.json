@@ -1,0 +1,2127 @@
+{
+  "completedAt": "2026-10-27T17:58:10.345774+00:00",
+  "purpose": "Reduce source receive-pack without deleting evidence. Functional source, public assets, tests and production dist are unchanged.",
+  "fullLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication",
+  "archiveVerifiedBeforeRemoval": true,
+  "removedFiles": 299,
+  "removedBytes": 189581582,
+  "preserved": [
+    "reports/playwright-final-build-html/ complete",
+    "all JSON, log, Markdown and source fingerprint files",
+    "reports/diagnostics/login-bootstrap-first-full-run/failure/trace.zip",
+    "all current reports/lighthouse/ JSON and HTML, including low scores and failed attempts"
+  ],
+  "scopeExclusion": "reports/visual-comparison is managed independently by the visual reviewer; no file there was touched.",
+  "jsonReferencesUpdated": [
+    "reports/adversarial-release-review.json",
+    "reports/catalog-sort-evidence.json",
+    "reports/diagnostics/bootstrap-readiness-run/e2e-final-build-verified.json",
+    "reports/diagnostics/login-bootstrap-first-full-run/e2e-final-build-verified.json",
+    "reports/diagnostics/pre-optimization-green-run/e2e-final-build-verified.json",
+    "reports/diagnostics/pre-optimization-green-run/login-bootstrap-counterproof.json",
+    "reports/e2e-final-build-verified.json",
+    "reports/login-bootstrap-counterproof.json",
+    "reports/newsletter-ui-review.json",
+    "reports/visual-regression-round/hero-edge-results.json",
+    "reports/visual-regression-round/hero-geometry-final-results.json",
+    "reports/visual-regression-round/hero-geometry-green-results.json",
+    "reports/visual-regression-round/hero-geometry-results.json",
+    "reports/visual-regression-round/hero-geometry-static-results.json"
+  ],
+  "referencePolicy": "Identical SHA256 images reuse final HTML data. Archived-only references have null path plus explicit original path, SHA256 and localArchive; no absent file is represented as available.",
+  "artifacts": [
+    {
+      "originalPath": "reports/account-desktop-login.png",
+      "bytes": 1791401,
+      "sha256": "c40ccef6042d48f771ef7ca43eac2db00215005bb3ac9907971b2e7dda716012",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-desktop-login.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-desktop-profile.png",
+      "bytes": 186498,
+      "sha256": "f31d51e153fe3e793ade4f3bf89a1216c51ca5d68d6e346f0cbf3cbd0d5ac94e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-desktop-profile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-desktop-register.png",
+      "bytes": 1775487,
+      "sha256": "906c0e93e070077a7781055f1cbe18a324ee725c497c98befb770d64f19a6674",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-desktop-register.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-desktop-wallets.png",
+      "bytes": 209201,
+      "sha256": "904c77c6a5618c029d7099c7ad13c495d0f0a7adbd240b4c17679695e0aad1c9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-desktop-wallets.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-mobile-login.png",
+      "bytes": 104539,
+      "sha256": "e85dbb7e2576bde36f87fe82b729c2eaef9ce2fc2a9ff1e74c0eaf0c96ece7f0",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-mobile-login.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-mobile-profile.png",
+      "bytes": 583989,
+      "sha256": "9afd1c46ef44435aa3c33bae446c3953c24de91308ad74ee9db7b32a584caa04",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-mobile-profile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-mobile-register.png",
+      "bytes": 72714,
+      "sha256": "d53cc8f2d012b6955323d2804bd7f0a7975693f45bc1adebe66077a0a548100f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-mobile-register.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/account-mobile-wallets.png",
+      "bytes": 663299,
+      "sha256": "9d850e35aae32f982731eab2f2709fb70aad1bf999210c42a7e2818def487558",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/account-mobile-wallets.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/0353aa22bfbe514952cd166a40cf58b0980906b6fbaa1e3da046abdd32d90fb3.png",
+      "bytes": 409956,
+      "sha256": "0353aa22bfbe514952cd166a40cf58b0980906b6fbaa1e3da046abdd32d90fb3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/0353aa22bfbe514952cd166a40cf58b0980906b6fbaa1e3da046abdd32d90fb3.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/0e100702cd99b67fe30acfab46b92459341b5f7e15e0933821fbcffbc14c85d4.png",
+      "bytes": 63060,
+      "sha256": "0e100702cd99b67fe30acfab46b92459341b5f7e15e0933821fbcffbc14c85d4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/0e100702cd99b67fe30acfab46b92459341b5f7e15e0933821fbcffbc14c85d4.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/0f3e7955d592733fd5bbcc491cd63d5b56a326c5eb27070b23b4fe5855df889f.png",
+      "bytes": 77138,
+      "sha256": "0f3e7955d592733fd5bbcc491cd63d5b56a326c5eb27070b23b4fe5855df889f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/0f3e7955d592733fd5bbcc491cd63d5b56a326c5eb27070b23b4fe5855df889f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/0f9a945f09f3f079791e083dc2310cff9a6fba9ba85802880a077de87291a74d.png",
+      "bytes": 410715,
+      "sha256": "0f9a945f09f3f079791e083dc2310cff9a6fba9ba85802880a077de87291a74d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/0f9a945f09f3f079791e083dc2310cff9a6fba9ba85802880a077de87291a74d.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/10cef39ba195d5b7d7c677f55bf0f7917ded2b95e0fe70c0b3ae747433d027b6.png",
+      "bytes": 539072,
+      "sha256": "10cef39ba195d5b7d7c677f55bf0f7917ded2b95e0fe70c0b3ae747433d027b6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/10cef39ba195d5b7d7c677f55bf0f7917ded2b95e0fe70c0b3ae747433d027b6.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+      "bytes": 1348758,
+      "sha256": "158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/158b463d62f83bf0c9ba1a936ef82d4b3bc645202d0e6f461311e003ac90870a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/1a08285c31f903c5d16982d5a3d225f2d6e2b765b969b3991b0c80cf650fc61e.png",
+      "bytes": 517767,
+      "sha256": "1a08285c31f903c5d16982d5a3d225f2d6e2b765b969b3991b0c80cf650fc61e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/1a08285c31f903c5d16982d5a3d225f2d6e2b765b969b3991b0c80cf650fc61e.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/1bf9dd3a16fe0b3fee95d58abdb572ff8b87a1c363f03a48a92d75d00a1a8e8c.png",
+      "bytes": 82912,
+      "sha256": "1bf9dd3a16fe0b3fee95d58abdb572ff8b87a1c363f03a48a92d75d00a1a8e8c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/1bf9dd3a16fe0b3fee95d58abdb572ff8b87a1c363f03a48a92d75d00a1a8e8c.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/1e64edef6dc0620fc5f5f5ec70c66bff0ae6256f50f060851353aaf7b6111380.png",
+      "bytes": 82858,
+      "sha256": "1e64edef6dc0620fc5f5f5ec70c66bff0ae6256f50f060851353aaf7b6111380",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/1e64edef6dc0620fc5f5f5ec70c66bff0ae6256f50f060851353aaf7b6111380.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/1f70524df95ec1aceceb9cc5f95b926285ed3061e64e22df03cd4a71ab4759e5.png",
+      "bytes": 79560,
+      "sha256": "1f70524df95ec1aceceb9cc5f95b926285ed3061e64e22df03cd4a71ab4759e5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/1f70524df95ec1aceceb9cc5f95b926285ed3061e64e22df03cd4a71ab4759e5.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/22cc0a1525e9324df6e126105951daa7189de8003b42b0d96a8c777cff040c3f.png",
+      "bytes": 538780,
+      "sha256": "22cc0a1525e9324df6e126105951daa7189de8003b42b0d96a8c777cff040c3f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/22cc0a1525e9324df6e126105951daa7189de8003b42b0d96a8c777cff040c3f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/2d2bdcec531e5d1606d02b5fbc42539c93e8c10627442a5f2de0131c7d0cd943.png",
+      "bytes": 63713,
+      "sha256": "2d2bdcec531e5d1606d02b5fbc42539c93e8c10627442a5f2de0131c7d0cd943",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/2d2bdcec531e5d1606d02b5fbc42539c93e8c10627442a5f2de0131c7d0cd943.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/2d61bcef6d07bf3dee0d969e6c3656f0e8edb59dc1dcfd29be5d76236c3e5e43.png",
+      "bytes": 79620,
+      "sha256": "2d61bcef6d07bf3dee0d969e6c3656f0e8edb59dc1dcfd29be5d76236c3e5e43",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/2d61bcef6d07bf3dee0d969e6c3656f0e8edb59dc1dcfd29be5d76236c3e5e43.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/30a055ec15941448ae0f090d0ebcb67a5f5694d2653e5f55a7df625e78314773.png",
+      "bytes": 409626,
+      "sha256": "30a055ec15941448ae0f090d0ebcb67a5f5694d2653e5f55a7df625e78314773",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/30a055ec15941448ae0f090d0ebcb67a5f5694d2653e5f55a7df625e78314773.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/32d13ec2278f6bf5217d83c6da60f9642cee8a49c2ca6752a0613fd463a3f204.png",
+      "bytes": 77127,
+      "sha256": "32d13ec2278f6bf5217d83c6da60f9642cee8a49c2ca6752a0613fd463a3f204",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/32d13ec2278f6bf5217d83c6da60f9642cee8a49c2ca6752a0613fd463a3f204.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3bf92a508e12db3d52c22a5c65f6a631e266c7852ebd12189981d3b59d123a14.png",
+      "bytes": 513849,
+      "sha256": "3bf92a508e12db3d52c22a5c65f6a631e266c7852ebd12189981d3b59d123a14",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3bf92a508e12db3d52c22a5c65f6a631e266c7852ebd12189981d3b59d123a14.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6.png",
+      "bytes": 1797876,
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964.png",
+      "bytes": 1005257,
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3da285bcd3b0344934fe27729c1cf8e491d3a9d3e93a4ba0c007a00890c9ebc9.png",
+      "bytes": 77189,
+      "sha256": "3da285bcd3b0344934fe27729c1cf8e491d3a9d3e93a4ba0c007a00890c9ebc9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3da285bcd3b0344934fe27729c1cf8e491d3a9d3e93a4ba0c007a00890c9ebc9.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3e97c2c697a1f6675251179f995f09cc9d1ebc91d816fad0eb26f97f3fefd719.png",
+      "bytes": 77323,
+      "sha256": "3e97c2c697a1f6675251179f995f09cc9d1ebc91d816fad0eb26f97f3fefd719",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3e97c2c697a1f6675251179f995f09cc9d1ebc91d816fad0eb26f97f3fefd719.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/3f638aa7e5518b76f04f6f7aba8e43b0ec474102fcaf51da855596c35cbe9988.png",
+      "bytes": 1010071,
+      "sha256": "3f638aa7e5518b76f04f6f7aba8e43b0ec474102fcaf51da855596c35cbe9988",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/3f638aa7e5518b76f04f6f7aba8e43b0ec474102fcaf51da855596c35cbe9988.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d.png",
+      "bytes": 1348860,
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/467f24456c96c71da162380bbeaf90928fcbf69bed97b7d462bb7b18c7cac99f.png",
+      "bytes": 79628,
+      "sha256": "467f24456c96c71da162380bbeaf90928fcbf69bed97b7d462bb7b18c7cac99f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/467f24456c96c71da162380bbeaf90928fcbf69bed97b7d462bb7b18c7cac99f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/46d892cc1a057c296e57c2d498a6a80f72b013838b54aae9c26ab59d27110229.png",
+      "bytes": 540366,
+      "sha256": "46d892cc1a057c296e57c2d498a6a80f72b013838b54aae9c26ab59d27110229",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/46d892cc1a057c296e57c2d498a6a80f72b013838b54aae9c26ab59d27110229.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/4e647ec370c849235fe013ceed7daf484430b2cc685a19da1e17dea9ae83595c.png",
+      "bytes": 538693,
+      "sha256": "4e647ec370c849235fe013ceed7daf484430b2cc685a19da1e17dea9ae83595c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/4e647ec370c849235fe013ceed7daf484430b2cc685a19da1e17dea9ae83595c.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/52c9271631ab6b538f0d8314a3529f016fd50bd443129ef8abc60615674c133a.png",
+      "bytes": 83004,
+      "sha256": "52c9271631ab6b538f0d8314a3529f016fd50bd443129ef8abc60615674c133a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/52c9271631ab6b538f0d8314a3529f016fd50bd443129ef8abc60615674c133a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/6465a5c9718345fba7c4b9a14f8fc11c6e63c4f3ae2068e4b8e2e5981db60862.png",
+      "bytes": 63780,
+      "sha256": "6465a5c9718345fba7c4b9a14f8fc11c6e63c4f3ae2068e4b8e2e5981db60862",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/6465a5c9718345fba7c4b9a14f8fc11c6e63c4f3ae2068e4b8e2e5981db60862.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/65d5874ff708c9b65bbfaa029a6e534acb974705ad1c3fcdf85e19bdc5bf94a1.png",
+      "bytes": 77168,
+      "sha256": "65d5874ff708c9b65bbfaa029a6e534acb974705ad1c3fcdf85e19bdc5bf94a1",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/65d5874ff708c9b65bbfaa029a6e534acb974705ad1c3fcdf85e19bdc5bf94a1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/6d66060fb8c095797ce8dd0a7ca305337ccf0e90e51c0a056d6595a5f4e1c796.png",
+      "bytes": 123778,
+      "sha256": "6d66060fb8c095797ce8dd0a7ca305337ccf0e90e51c0a056d6595a5f4e1c796",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/6d66060fb8c095797ce8dd0a7ca305337ccf0e90e51c0a056d6595a5f4e1c796.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4.png",
+      "bytes": 514820,
+      "sha256": "6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/6eefad01df3a87e0d681a644b7570e67b4fcfb88df0f63afaa8c398e1ba58ca1.png",
+      "bytes": 539176,
+      "sha256": "6eefad01df3a87e0d681a644b7570e67b4fcfb88df0f63afaa8c398e1ba58ca1",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/6eefad01df3a87e0d681a644b7570e67b4fcfb88df0f63afaa8c398e1ba58ca1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/6ffdcb26ee75947c284bd0f660f3a080793cb19566b23694f512770a675490d5.png",
+      "bytes": 500249,
+      "sha256": "6ffdcb26ee75947c284bd0f660f3a080793cb19566b23694f512770a675490d5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/6ffdcb26ee75947c284bd0f660f3a080793cb19566b23694f512770a675490d5.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/714e9685eb21c53376e6e734e20eb0483d7f62b4dbbde9268a835d29536719b3.png",
+      "bytes": 540408,
+      "sha256": "714e9685eb21c53376e6e734e20eb0483d7f62b4dbbde9268a835d29536719b3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/714e9685eb21c53376e6e734e20eb0483d7f62b4dbbde9268a835d29536719b3.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90.png",
+      "bytes": 82812,
+      "sha256": "7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/7a416d0a4fe3839931d7ac50d963d6712124e922bf041689a7ef2e0a6c119b90.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/7b0750c6e0dd6a2745484c3ff6f700eb592d023a5b882a7e214567b67393d68b.png",
+      "bytes": 496345,
+      "sha256": "7b0750c6e0dd6a2745484c3ff6f700eb592d023a5b882a7e214567b67393d68b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/7b0750c6e0dd6a2745484c3ff6f700eb592d023a5b882a7e214567b67393d68b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/803dc642a36ad6008a34a865ebe745988108b0e9a968d7cb1fc88db4fa47bb00.png",
+      "bytes": 77149,
+      "sha256": "803dc642a36ad6008a34a865ebe745988108b0e9a968d7cb1fc88db4fa47bb00",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/803dc642a36ad6008a34a865ebe745988108b0e9a968d7cb1fc88db4fa47bb00.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/8669de004188213c945e9e4121177c371787805feec8bdc19893ed96482b5ef2.png",
+      "bytes": 496324,
+      "sha256": "8669de004188213c945e9e4121177c371787805feec8bdc19893ed96482b5ef2",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/8669de004188213c945e9e4121177c371787805feec8bdc19893ed96482b5ef2.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800.png",
+      "bytes": 63645,
+      "sha256": "88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/88bc74b710223f4c3196b4e816631f39ce73b808e9077578afa44de7b3b5f800.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377.png",
+      "bytes": 1360508,
+      "sha256": "892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/892e556d0b0b37153a45b4f4700209007931529af8fe348a3a8b46f2b62d9377.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107.png",
+      "bytes": 339293,
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/906bb593a50c5747ab2baa1bbe1a207710815e11fd876bd55eec5c606c7d0d94.png",
+      "bytes": 79722,
+      "sha256": "906bb593a50c5747ab2baa1bbe1a207710815e11fd876bd55eec5c606c7d0d94",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/906bb593a50c5747ab2baa1bbe1a207710815e11fd876bd55eec5c606c7d0d94.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/9082f0e3b52de858437505ab3f4f5586ef59f44ac2267359c414f2dba18df793.png",
+      "bytes": 79699,
+      "sha256": "9082f0e3b52de858437505ab3f4f5586ef59f44ac2267359c414f2dba18df793",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/9082f0e3b52de858437505ab3f4f5586ef59f44ac2267359c414f2dba18df793.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/9162d3d81aa194b420dbbc48525316a3ea30cc5d18ce34597ef53a88c53d0c78.png",
+      "bytes": 83033,
+      "sha256": "9162d3d81aa194b420dbbc48525316a3ea30cc5d18ce34597ef53a88c53d0c78",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/9162d3d81aa194b420dbbc48525316a3ea30cc5d18ce34597ef53a88c53d0c78.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a.png",
+      "bytes": 123704,
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/a10f2388acf05b931146e55c63dc1159c25443d9bcbb019a629b69c3762282a8.png",
+      "bytes": 514210,
+      "sha256": "a10f2388acf05b931146e55c63dc1159c25443d9bcbb019a629b69c3762282a8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/a10f2388acf05b931146e55c63dc1159c25443d9bcbb019a629b69c3762282a8.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/a417ed634960f7b1a415fee7bea47a78fad50333c681448d7b82ae4995161d56.png",
+      "bytes": 79711,
+      "sha256": "a417ed634960f7b1a415fee7bea47a78fad50333c681448d7b82ae4995161d56",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/a417ed634960f7b1a415fee7bea47a78fad50333c681448d7b82ae4995161d56.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965.png",
+      "bytes": 184363,
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/a8aa33676fd662720bf6d0a0e3490ef1b181cfaa5c58fc58aa3438b64fa49b03.png",
+      "bytes": 495960,
+      "sha256": "a8aa33676fd662720bf6d0a0e3490ef1b181cfaa5c58fc58aa3438b64fa49b03",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/a8aa33676fd662720bf6d0a0e3490ef1b181cfaa5c58fc58aa3438b64fa49b03.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/b00a2b5ec3c1220e1649dcf6ee43bd96047745944ae0b743d52bc61cc862ec1f.png",
+      "bytes": 410204,
+      "sha256": "b00a2b5ec3c1220e1649dcf6ee43bd96047745944ae0b743d52bc61cc862ec1f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/b00a2b5ec3c1220e1649dcf6ee43bd96047745944ae0b743d52bc61cc862ec1f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/b5e9c7c2fe3a61f4858dd037bfc907bebe64f5d751ca1f30b0787e5689b07084.png",
+      "bytes": 538438,
+      "sha256": "b5e9c7c2fe3a61f4858dd037bfc907bebe64f5d751ca1f30b0787e5689b07084",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/b5e9c7c2fe3a61f4858dd037bfc907bebe64f5d751ca1f30b0787e5689b07084.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/b83bcd156db5bc6d7c7d9f345afa3dc1004367242e306bc7b095d375739e746d.png",
+      "bytes": 82834,
+      "sha256": "b83bcd156db5bc6d7c7d9f345afa3dc1004367242e306bc7b095d375739e746d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/b83bcd156db5bc6d7c7d9f345afa3dc1004367242e306bc7b095d375739e746d.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/b87635ad30818a861d56cda68af6cfd09895aef76e62f4d072f61153ac7f9a9a.png",
+      "bytes": 517524,
+      "sha256": "b87635ad30818a861d56cda68af6cfd09895aef76e62f4d072f61153ac7f9a9a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/b87635ad30818a861d56cda68af6cfd09895aef76e62f4d072f61153ac7f9a9a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/baf6ccd6748b88bd7868dc76415e904d029002cdd3d458d9bc1a3d5471f00039.png",
+      "bytes": 538099,
+      "sha256": "baf6ccd6748b88bd7868dc76415e904d029002cdd3d458d9bc1a3d5471f00039",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/baf6ccd6748b88bd7868dc76415e904d029002cdd3d458d9bc1a3d5471f00039.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/bdfd094bff5a1a0d8ec801000851da9da144511fcf0388c452f1d8cb27c074ea.png",
+      "bytes": 496267,
+      "sha256": "bdfd094bff5a1a0d8ec801000851da9da144511fcf0388c452f1d8cb27c074ea",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/bdfd094bff5a1a0d8ec801000851da9da144511fcf0388c452f1d8cb27c074ea.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6.png",
+      "bytes": 684360,
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c04910eafe9205ea479e73ac722633d01ba455193dffdb1149f7e16d7a066063.png",
+      "bytes": 82913,
+      "sha256": "c04910eafe9205ea479e73ac722633d01ba455193dffdb1149f7e16d7a066063",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c04910eafe9205ea479e73ac722633d01ba455193dffdb1149f7e16d7a066063.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544.png",
+      "bytes": 82884,
+      "sha256": "c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c77d0d60068ae869dfaf0ef281cf591331016693d39dca8747d964647894ca8a.png",
+      "bytes": 409726,
+      "sha256": "c77d0d60068ae869dfaf0ef281cf591331016693d39dca8747d964647894ca8a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c77d0d60068ae869dfaf0ef281cf591331016693d39dca8747d964647894ca8a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c8ee7d5b97843f98d969a633e16cea38cc8825b2e51af4e350cc46b323c4e7b8.png",
+      "bytes": 538242,
+      "sha256": "c8ee7d5b97843f98d969a633e16cea38cc8825b2e51af4e350cc46b323c4e7b8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c8ee7d5b97843f98d969a633e16cea38cc8825b2e51af4e350cc46b323c4e7b8.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/c96806033c3c8c2124c308f359a7207d6dacef8ffd7d09eaf33db1dd3fdfc0c9.png",
+      "bytes": 496627,
+      "sha256": "c96806033c3c8c2124c308f359a7207d6dacef8ffd7d09eaf33db1dd3fdfc0c9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/c96806033c3c8c2124c308f359a7207d6dacef8ffd7d09eaf33db1dd3fdfc0c9.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/d2250a9d8e670455c2ae8e7dd3edc148b86362ca7d0ec11b93b491d4816e507c.png",
+      "bytes": 267806,
+      "sha256": "d2250a9d8e670455c2ae8e7dd3edc148b86362ca7d0ec11b93b491d4816e507c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/d2250a9d8e670455c2ae8e7dd3edc148b86362ca7d0ec11b93b491d4816e507c.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/d2ddbdfe222a1a46df0e9a97bdbac252f6f0b88ad187aaccd2e49e95ea81a147.png",
+      "bytes": 83050,
+      "sha256": "d2ddbdfe222a1a46df0e9a97bdbac252f6f0b88ad187aaccd2e49e95ea81a147",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/d2ddbdfe222a1a46df0e9a97bdbac252f6f0b88ad187aaccd2e49e95ea81a147.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/d3b86806a93eaef853403eeee9dc49023edb7f758d0fcdb7f1465e9fb220b883.png",
+      "bytes": 686168,
+      "sha256": "d3b86806a93eaef853403eeee9dc49023edb7f758d0fcdb7f1465e9fb220b883",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/d3b86806a93eaef853403eeee9dc49023edb7f758d0fcdb7f1465e9fb220b883.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/db0b65575fdb0d41cbef8c2514f385abba64ddda2f0e3df1ebadd326185082be.png",
+      "bytes": 539951,
+      "sha256": "db0b65575fdb0d41cbef8c2514f385abba64ddda2f0e3df1ebadd326185082be",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/db0b65575fdb0d41cbef8c2514f385abba64ddda2f0e3df1ebadd326185082be.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897.png",
+      "bytes": 243136,
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/eb7b031eb28ae0da898f836d7eff0ce8444064611f09969f07adeb46f4bf2942.png",
+      "bytes": 514670,
+      "sha256": "eb7b031eb28ae0da898f836d7eff0ce8444064611f09969f07adeb46f4bf2942",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/eb7b031eb28ae0da898f836d7eff0ce8444064611f09969f07adeb46f4bf2942.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/ed342d9e826bf2fc1b3a292f6cc3ea891ac33bd12d0e73a86bf2401b4ea2fd2c.png",
+      "bytes": 63681,
+      "sha256": "ed342d9e826bf2fc1b3a292f6cc3ea891ac33bd12d0e73a86bf2401b4ea2fd2c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/ed342d9e826bf2fc1b3a292f6cc3ea891ac33bd12d0e73a86bf2401b4ea2fd2c.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027.png",
+      "bytes": 540055,
+      "sha256": "ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f187f24c50203140af504f493cfaed1cc4df23fd1cfc04b931ad9ebde1582a3f.png",
+      "bytes": 63580,
+      "sha256": "f187f24c50203140af504f493cfaed1cc4df23fd1cfc04b931ad9ebde1582a3f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f187f24c50203140af504f493cfaed1cc4df23fd1cfc04b931ad9ebde1582a3f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f529902744b829eaf50ae4fa1dafeb5dc5561568c4e22a3eb5acd00cd868365f.png",
+      "bytes": 339296,
+      "sha256": "f529902744b829eaf50ae4fa1dafeb5dc5561568c4e22a3eb5acd00cd868365f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f529902744b829eaf50ae4fa1dafeb5dc5561568c4e22a3eb5acd00cd868365f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f553efd8b44fcf6401f33cce005340b46b3dd76674b098340b35e85713278d81.png",
+      "bytes": 540281,
+      "sha256": "f553efd8b44fcf6401f33cce005340b46b3dd76674b098340b35e85713278d81",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f553efd8b44fcf6401f33cce005340b46b3dd76674b098340b35e85713278d81.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f587a5293e28dbba6b7a33feb776d7fc7420f705b1627aa5a8696e89ab8e9b37.png",
+      "bytes": 499671,
+      "sha256": "f587a5293e28dbba6b7a33feb776d7fc7420f705b1627aa5a8696e89ab8e9b37",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f587a5293e28dbba6b7a33feb776d7fc7420f705b1627aa5a8696e89ab8e9b37.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f737c00b1acc1fb5217e725aec067a20ee37e3db0a7892500ae4c500912ec60b.png",
+      "bytes": 76957,
+      "sha256": "f737c00b1acc1fb5217e725aec067a20ee37e3db0a7892500ae4c500912ec60b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f737c00b1acc1fb5217e725aec067a20ee37e3db0a7892500ae4c500912ec60b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d.png",
+      "bytes": 410348,
+      "sha256": "f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f827a9ec57a7c33c43f8a2397308700760784100c4cbe878906439a5b2d1ea7d.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/f8a6ee02deae7c09733b692ee4d8aa522399c8be54f26ddb06fc9d9629b4a98c.png",
+      "bytes": 409857,
+      "sha256": "f8a6ee02deae7c09733b692ee4d8aa522399c8be54f26ddb06fc9d9629b4a98c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/f8a6ee02deae7c09733b692ee4d8aa522399c8be54f26ddb06fc9d9629b4a98c.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/fc462f54071bd98a83fe62126ee7c8d9aa08a86577281257b12296d28ef6572e.png",
+      "bytes": 410100,
+      "sha256": "fc462f54071bd98a83fe62126ee7c8d9aa08a86577281257b12296d28ef6572e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/fc462f54071bd98a83fe62126ee7c8d9aa08a86577281257b12296d28ef6572e.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f.png",
+      "bytes": 540278,
+      "sha256": "fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/fe4b4076bcd5ceb92df6257c5f428ae204156186a29e8d666a90f1426a490b9f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/attachments/ffb3b5759627b6cca58630f407f0d223776ec233ca2f40c967faa369fb2f71c6.png",
+      "bytes": 63045,
+      "sha256": "ffb3b5759627b6cca58630f407f0d223776ec233ca2f40c967faa369fb2f71c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/attachments/ffb3b5759627b6cca58630f407f0d223776ec233ca2f40c967faa369fb2f71c6.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/catalog-sort-keyboard-desktop.png",
+      "bytes": 578080,
+      "sha256": "f90bec1526ccda8beaf1ec9fcacc80e6937a8e79de9abff5475825879e4c0de8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/catalog-sort-keyboard-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/catalog-sort-keyboard-mobile.png",
+      "bytes": 109287,
+      "sha256": "3b58ff1f3d93d1e478cefefcf273cdc9d7a6052f74ce3f117269ffa7b39303b2",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/catalog-sort-keyboard-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-desktop/test-failed-1.png",
+      "bytes": 151635,
+      "sha256": "a62039ee506f955b8db0e8df7f1e3d1496d19638ff3d735a2d482225b72b630b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-desktop/trace.zip",
+      "bytes": 1371897,
+      "sha256": "c7ebc3f7bd88b8b959b7137592cd32fc5f0b2aea56bf9381b17e01267a442e71",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-mobile/test-failed-1.png",
+      "bytes": 135563,
+      "sha256": "47e4ef4bd4be65916ef79102dddd4165f8cfabfa410f09162ace5c3e6d4d4806",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-mobile/trace.zip",
+      "bytes": 1530847,
+      "sha256": "bca58036c80e76e6638995fc50a52800188a74632728171c51dd7d1540727430",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/favorites-navigation-guest-07d0c--without-reopening-the-menu-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-desktop/test-failed-1.png",
+      "bytes": 151625,
+      "sha256": "c6c5c02789c2c373a6335b6a37ba32c6548860b99ba4419da03942e9d1964e8f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-desktop/trace.zip",
+      "bytes": 2470588,
+      "sha256": "ab1f344f7e4c527baca448fefb65e491a0c21d77bceb1c19db2b8ed39e16fce4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-mobile/test-failed-1.png",
+      "bytes": 136809,
+      "sha256": "60d47aab737446d6b1fd2b294751d8f59b79c73b80c36b812bf0293b4a7f2f06",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-mobile/trace.zip",
+      "bytes": 2493424,
+      "sha256": "532dfb9331c38aac891bd002ba068726994e78d074c165f943a4f61d83f99ed3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/kurio-opening-the-menu-pre-080a9-rs-and-cart-through-refresh-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/recovery-opening-an-older--a1639-ecovery-never-duplicates-it-desktop/test-failed-1.png",
+      "bytes": 593647,
+      "sha256": "a6dd876a2a1068edd382c4dfc51c6bd57d0429ea09656216d8ebd38995ea0182",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/recovery-opening-an-older--a1639-ecovery-never-duplicates-it-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/failures/recovery-opening-an-older--a1639-ecovery-never-duplicates-it-desktop/trace.zip",
+      "bytes": 2901404,
+      "sha256": "483aee5e8854d374aaa0b1ec7421ca022dc121afe8c1e501e1a45ea1b261bc64",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/failures/recovery-opening-an-older--a1639-ecovery-never-duplicates-it-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/100a64fbfd46664d11738e7eeab7d85e588628a0.png",
+      "bytes": 82834,
+      "sha256": "b83bcd156db5bc6d7c7d9f345afa3dc1004367242e306bc7b095d375739e746d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/100a64fbfd46664d11738e7eeab7d85e588628a0.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/1500e1bb960162e7297009fb2de947336e3cd50b.png",
+      "bytes": 517524,
+      "sha256": "b87635ad30818a861d56cda68af6cfd09895aef76e62f4d072f61153ac7f9a9a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/1500e1bb960162e7297009fb2de947336e3cd50b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "bytes": 1797876,
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/18d159885f0c9ca5d2fafaf7351df79ef48ec1ae.png",
+      "bytes": 63045,
+      "sha256": "ffb3b5759627b6cca58630f407f0d223776ec233ca2f40c967faa369fb2f71c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/18d159885f0c9ca5d2fafaf7351df79ef48ec1ae.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/18ded43d1b9fe1dad851d50f98190813660e1bed.png",
+      "bytes": 539176,
+      "sha256": "6eefad01df3a87e0d681a644b7570e67b4fcfb88df0f63afaa8c398e1ba58ca1",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/18ded43d1b9fe1dad851d50f98190813660e1bed.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/1e550b871e3318fce19e60aef478f9eaee14123a.zip",
+      "bytes": 2493424,
+      "sha256": "532dfb9331c38aac891bd002ba068726994e78d074c165f943a4f61d83f99ed3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/1e550b871e3318fce19e60aef478f9eaee14123a.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/2dfbf1ff1c87cf0c9df436ecda6c712a1a6de4c9.png",
+      "bytes": 82912,
+      "sha256": "1bf9dd3a16fe0b3fee95d58abdb572ff8b87a1c363f03a48a92d75d00a1a8e8c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/2dfbf1ff1c87cf0c9df436ecda6c712a1a6de4c9.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "bytes": 184363,
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/31ff5ae98dc528e29044026fc863c59a7e50238d.png",
+      "bytes": 593647,
+      "sha256": "a6dd876a2a1068edd382c4dfc51c6bd57d0429ea09656216d8ebd38995ea0182",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/31ff5ae98dc528e29044026fc863c59a7e50238d.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/35a7c08e0ba852e5d4ed045474f7e33e32b0928b.zip",
+      "bytes": 1371897,
+      "sha256": "c7ebc3f7bd88b8b959b7137592cd32fc5f0b2aea56bf9381b17e01267a442e71",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/35a7c08e0ba852e5d4ed045474f7e33e32b0928b.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/3c74b46068f79f51e681ff9a6849117e5a1fd2a2.zip",
+      "bytes": 2901404,
+      "sha256": "483aee5e8854d374aaa0b1ec7421ca022dc121afe8c1e501e1a45ea1b261bc64",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/3c74b46068f79f51e681ff9a6849117e5a1fd2a2.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "bytes": 243136,
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/51d7738ae70d1c021044c59c8d23eb67ec268fca.png",
+      "bytes": 77189,
+      "sha256": "3da285bcd3b0344934fe27729c1cf8e491d3a9d3e93a4ba0c007a00890c9ebc9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/51d7738ae70d1c021044c59c8d23eb67ec268fca.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "bytes": 339293,
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/7c5d6e4b55828f8371cc25a458822edf4cf0e510.png",
+      "bytes": 410715,
+      "sha256": "0f9a945f09f3f079791e083dc2310cff9a6fba9ba85802880a077de87291a74d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/7c5d6e4b55828f8371cc25a458822edf4cf0e510.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/8c3fd3dcf2665c5ed255b1c01a2793ef10d53674.png",
+      "bytes": 500249,
+      "sha256": "6ffdcb26ee75947c284bd0f660f3a080793cb19566b23694f512770a675490d5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/8c3fd3dcf2665c5ed255b1c01a2793ef10d53674.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/a1f8118801c5cc37be47a2ba72fd2d5c1ba917c3.zip",
+      "bytes": 2470588,
+      "sha256": "ab1f344f7e4c527baca448fefb65e491a0c21d77bceb1c19db2b8ed39e16fce4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/a1f8118801c5cc37be47a2ba72fd2d5c1ba917c3.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/c713fe08fee2fde9ce275b6ab68d5d2fb25ba581.png",
+      "bytes": 136809,
+      "sha256": "60d47aab737446d6b1fd2b294751d8f59b79c73b80c36b812bf0293b4a7f2f06",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/c713fe08fee2fde9ce275b6ab68d5d2fb25ba581.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "bytes": 1005257,
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/d5c57e30c22fd5161b6312d647cf3cb9f1ac98e7.png",
+      "bytes": 79699,
+      "sha256": "9082f0e3b52de858437505ab3f4f5586ef59f44ac2267359c414f2dba18df793",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/d5c57e30c22fd5161b6312d647cf3cb9f1ac98e7.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/d7a043a0402a0d827f5c0218579838c17cbe3893.png",
+      "bytes": 151635,
+      "sha256": "a62039ee506f955b8db0e8df7f1e3d1496d19638ff3d735a2d482225b72b630b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/d7a043a0402a0d827f5c0218579838c17cbe3893.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/dbb9bd0d95bde740cd7e9edbdf4ee2758ffa83b7.png",
+      "bytes": 540055,
+      "sha256": "ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/dbb9bd0d95bde740cd7e9edbdf4ee2758ffa83b7.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "bytes": 1348860,
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "bytes": 123704,
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/ed2ee50ffd946d553ceba05b28ce44204b6cbddd.png",
+      "bytes": 151625,
+      "sha256": "c6c5c02789c2c373a6335b6a37ba32c6548860b99ba4419da03942e9d1964e8f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/ed2ee50ffd946d553ceba05b28ce44204b6cbddd.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/ed497789200dfed0da473a3b301a06ec57758606.zip",
+      "bytes": 1530847,
+      "sha256": "bca58036c80e76e6638995fc50a52800188a74632728171c51dd7d1540727430",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/ed497789200dfed0da473a3b301a06ec57758606.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/fe724db2eff3e745c946b6d1ab145d04ba863bbd.png",
+      "bytes": 135563,
+      "sha256": "47e4ef4bd4be65916ef79102dddd4165f8cfabfa410f09162ace5c3e6d4d4806",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/fe724db2eff3e745c946b6d1ab145d04ba863bbd.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "bytes": 684360,
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/index.html",
+      "bytes": 747816,
+      "sha256": "e0bb49a5a80e437122f0d5448cd040929fe970d23b57b4e495ede3444b73d26d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/assets/codeMirrorModule-BEB2e8M3.js",
+      "bytes": 307393,
+      "sha256": "0da75d228abc1d8b940aa04ec086570dace7b2e7b2ccc5f4bc16f05e79bdb7d7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/assets/codeMirrorModule-BEB2e8M3.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/assets/defaultSettingsView-D-g2vrvf.js",
+      "bytes": 667649,
+      "sha256": "554bdef910d18e763118f1221667b809edafba46e29e3f8de4b9dcf21c6b7d79",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/assets/defaultSettingsView-D-g2vrvf.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/assets/urlMatch-L3liM589.js",
+      "bytes": 2510,
+      "sha256": "1bc6321e32d11c31a452bc75896f0b344e6153321854d9f1658818be7f845c16",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/assets/urlMatch-L3liM589.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/codeMirrorModule.-QdMvsKi.css",
+      "bytes": 6251,
+      "sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/codeMirrorModule.-QdMvsKi.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/codicon.DCmgc-ay.ttf",
+      "bytes": 80340,
+      "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/codicon.DCmgc-ay.ttf",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/defaultSettingsView.C8BeHuxd.css",
+      "bytes": 107270,
+      "sha256": "278101b68ab48ee6323a6afbf4e0e629324e10e96902a62a0875643a1bba3d94",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/defaultSettingsView.C8BeHuxd.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/index.B_TqY17P.css",
+      "bytes": 2055,
+      "sha256": "08a212fcacae1866f44f065654afcc4c7d03409c68c74b3315c5bda17a0ca003",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/index.B_TqY17P.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/index.html",
+      "bytes": 2363,
+      "sha256": "4c168083713c6868f577f492f3d50eecdfbf6235e0b0af421796b7ddd9013bd6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/index.oNry3Hjv.js",
+      "bytes": 6628,
+      "sha256": "87f339e5e169f67633a91e17d9c8f65afb8de66d9b88a4167c79da78f562518d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/index.oNry3Hjv.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/manifest.webmanifest",
+      "bytes": 429,
+      "sha256": "d8540500603a32a39fe7e5a0375dc0f9ebafd11118e06a846db7efc608223ab9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/manifest.webmanifest",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/playwright-logo.svg",
+      "bytes": 5033,
+      "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/playwright-logo.svg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/snapshot.B_Jk1wbt.js",
+      "bytes": 650,
+      "sha256": "d4d09e05451d107d8e1a6bbd041405fe518b9fd2833890e4ebaaad83b7f554f5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/snapshot.B_Jk1wbt.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/snapshot.html",
+      "bytes": 389,
+      "sha256": "c608c8899c95c5a74d3f556e20146c3d852b9df85ae2854c659a7cc773c9b727",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/snapshot.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/sw.bundle.js",
+      "bytes": 96737,
+      "sha256": "d1d6fec6687eb3fd93a8990bd9daa3951422695afffae2382f97f10811cf1c30",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/sw.bundle.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.CYwC_gH1.js",
+      "bytes": 38121,
+      "sha256": "c920eaa161f65b6c0dd431a642c4bdf2e6262ae51335c02d155b187f48c0296c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.CYwC_gH1.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.CyMfwkXJ.css",
+      "bytes": 54590,
+      "sha256": "fb403cf0b07007bc1d771e29737f7408924da300e2fab8b289a3ef2e8fc08d7b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.CyMfwkXJ.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.html",
+      "bytes": 727,
+      "sha256": "6de2f5db7f7532c30e8b1381752a1daf23facbdef6bea130cef0cfa5a003eb22",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/uiMode.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/bootstrap-readiness-run/html/trace/xtermModule.kHJ-D0s7.css",
+      "bytes": 2853,
+      "sha256": "0dd60056134e6a2994a86b59a1e9789b9f04e92924da109aef8c923acaf08ce5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/bootstrap-readiness-run/html/trace/xtermModule.kHJ-D0s7.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/failure/test-failed-1.png",
+      "bytes": 125490,
+      "sha256": "ccad0c277c1fcf51f5750c066da8a248891f35c5405a26883dd549f424e8ea58",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/failure/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/034ce325778bb059cedc7c951bd1b9f0dd00b95b.png",
+      "bytes": 496345,
+      "sha256": "7b0750c6e0dd6a2745484c3ff6f700eb592d023a5b882a7e214567b67393d68b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/034ce325778bb059cedc7c951bd1b9f0dd00b95b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/0cc17c1c4d59c3bf59db6b0a1882d4ba077c91d9.png",
+      "bytes": 125490,
+      "sha256": "ccad0c277c1fcf51f5750c066da8a248891f35c5405a26883dd549f424e8ea58",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/0cc17c1c4d59c3bf59db6b0a1882d4ba077c91d9.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "bytes": 1797876,
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "bytes": 184363,
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "bytes": 82884,
+      "sha256": "c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/42d277e2533f1d0e033dae727456b8a3e95e88f6.png",
+      "bytes": 79711,
+      "sha256": "a417ed634960f7b1a415fee7bea47a78fad50333c681448d7b82ae4995161d56",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/42d277e2533f1d0e033dae727456b8a3e95e88f6.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "bytes": 243136,
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/5d2932052ed9df96b68c1b3aa2038984c63f4d9f.png",
+      "bytes": 82913,
+      "sha256": "c04910eafe9205ea479e73ac722633d01ba455193dffdb1149f7e16d7a066063",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/5d2932052ed9df96b68c1b3aa2038984c63f4d9f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "bytes": 514820,
+      "sha256": "6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "bytes": 339293,
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/8ceefba1914778cd519408b38e3115fa627b0cab.png",
+      "bytes": 77168,
+      "sha256": "65d5874ff708c9b65bbfaa029a6e534acb974705ad1c3fcdf85e19bdc5bf94a1",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/8ceefba1914778cd519408b38e3115fa627b0cab.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/926547776343fd97f65179dd4aaf688c2b2c8efc.png",
+      "bytes": 409956,
+      "sha256": "0353aa22bfbe514952cd166a40cf58b0980906b6fbaa1e3da046abdd32d90fb3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/926547776343fd97f65179dd4aaf688c2b2c8efc.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/98c48324965fccce3a7fe4747891729adc2bfa3b.png",
+      "bytes": 538693,
+      "sha256": "4e647ec370c849235fe013ceed7daf484430b2cc685a19da1e17dea9ae83595c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/98c48324965fccce3a7fe4747891729adc2bfa3b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/adc92661a5f28c771b348e10244ba72ea0776766.png",
+      "bytes": 540366,
+      "sha256": "46d892cc1a057c296e57c2d498a6a80f72b013838b54aae9c26ab59d27110229",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/adc92661a5f28c771b348e10244ba72ea0776766.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/c19bb413bd67fbe8188342c6b7412cb72d20c162.zip",
+      "bytes": 3105775,
+      "sha256": "0319e4bdcfaf0378e18f37b3a93b9a6d18161a266cc5a0a7416ec3613c94f85c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/c19bb413bd67fbe8188342c6b7412cb72d20c162.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "bytes": 1005257,
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "bytes": 1348860,
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "bytes": 123704,
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "bytes": 684360,
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/data/ffd207685b129fe30e0b7bc3b1d0ffdf5f307afc.png",
+      "bytes": 63713,
+      "sha256": "2d2bdcec531e5d1606d02b5fbc42539c93e8c10627442a5f2de0131c7d0cd943",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/data/ffd207685b129fe30e0b7bc3b1d0ffdf5f307afc.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+      "bytes": 741400,
+      "sha256": "51c8f4cbe2b07a0f0d21fde93ab39282edd67c9f4e23f1a3350c8aba0dc0e260",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/codeMirrorModule-BEB2e8M3.js",
+      "bytes": 307393,
+      "sha256": "0da75d228abc1d8b940aa04ec086570dace7b2e7b2ccc5f4bc16f05e79bdb7d7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/codeMirrorModule-BEB2e8M3.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/defaultSettingsView-D-g2vrvf.js",
+      "bytes": 667649,
+      "sha256": "554bdef910d18e763118f1221667b809edafba46e29e3f8de4b9dcf21c6b7d79",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/defaultSettingsView-D-g2vrvf.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/urlMatch-L3liM589.js",
+      "bytes": 2510,
+      "sha256": "1bc6321e32d11c31a452bc75896f0b344e6153321854d9f1658818be7f845c16",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/assets/urlMatch-L3liM589.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/codeMirrorModule.-QdMvsKi.css",
+      "bytes": 6251,
+      "sha256": "20be824a82832b62cc04642d31da3c609fd280b23f1cdcb1e622c4f40aac5ab8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/codeMirrorModule.-QdMvsKi.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/codicon.DCmgc-ay.ttf",
+      "bytes": 80340,
+      "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/codicon.DCmgc-ay.ttf",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/defaultSettingsView.C8BeHuxd.css",
+      "bytes": 107270,
+      "sha256": "278101b68ab48ee6323a6afbf4e0e629324e10e96902a62a0875643a1bba3d94",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/defaultSettingsView.C8BeHuxd.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.B_TqY17P.css",
+      "bytes": 2055,
+      "sha256": "08a212fcacae1866f44f065654afcc4c7d03409c68c74b3315c5bda17a0ca003",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.B_TqY17P.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.html",
+      "bytes": 2363,
+      "sha256": "4c168083713c6868f577f492f3d50eecdfbf6235e0b0af421796b7ddd9013bd6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.oNry3Hjv.js",
+      "bytes": 6628,
+      "sha256": "87f339e5e169f67633a91e17d9c8f65afb8de66d9b88a4167c79da78f562518d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/index.oNry3Hjv.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/manifest.webmanifest",
+      "bytes": 429,
+      "sha256": "d8540500603a32a39fe7e5a0375dc0f9ebafd11118e06a846db7efc608223ab9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/manifest.webmanifest",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/playwright-logo.svg",
+      "bytes": 5033,
+      "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/playwright-logo.svg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/snapshot.B_Jk1wbt.js",
+      "bytes": 650,
+      "sha256": "d4d09e05451d107d8e1a6bbd041405fe518b9fd2833890e4ebaaad83b7f554f5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/snapshot.B_Jk1wbt.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/snapshot.html",
+      "bytes": 389,
+      "sha256": "c608c8899c95c5a74d3f556e20146c3d852b9df85ae2854c659a7cc773c9b727",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/snapshot.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/sw.bundle.js",
+      "bytes": 96737,
+      "sha256": "d1d6fec6687eb3fd93a8990bd9daa3951422695afffae2382f97f10811cf1c30",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/sw.bundle.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.CYwC_gH1.js",
+      "bytes": 38121,
+      "sha256": "c920eaa161f65b6c0dd431a642c4bdf2e6262ae51335c02d155b187f48c0296c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.CYwC_gH1.js",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.CyMfwkXJ.css",
+      "bytes": 54590,
+      "sha256": "fb403cf0b07007bc1d771e29737f7408924da300e2fab8b289a3ef2e8fc08d7b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.CyMfwkXJ.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.html",
+      "bytes": 727,
+      "sha256": "6de2f5db7f7532c30e8b1381752a1daf23facbdef6bea130cef0cfa5a003eb22",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/uiMode.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/trace/xtermModule.kHJ-D0s7.css",
+      "bytes": 2853,
+      "sha256": "0dd60056134e6a2994a86b59a1e9789b9f04e92924da109aef8c923acaf08ce5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/trace/xtermModule.kHJ-D0s7.css",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "bytes": 1797876,
+      "sha256": "3cc14cb932a228a9d95fd8e9f94e7077919ec2384e549a6c85e6520e2fb878b6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/160a3c93d2683fcdeda084e0de033c4813ef700a.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/21f0d505550a62b6478894b8a2f0d53e6c40716b.png",
+      "bytes": 409857,
+      "sha256": "f8a6ee02deae7c09733b692ee4d8aa522399c8be54f26ddb06fc9d9629b4a98c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/21f0d505550a62b6478894b8a2f0d53e6c40716b.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/28eab583b8f88542a8215510154ec7f3cd8ababa.png",
+      "bytes": 496627,
+      "sha256": "c96806033c3c8c2124c308f359a7207d6dacef8ffd7d09eaf33db1dd3fdfc0c9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/28eab583b8f88542a8215510154ec7f3cd8ababa.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "bytes": 184363,
+      "sha256": "a5f8bb1fa25467c22e016324213ba6d72b36deb7611fd96e75d69ab11ad40965",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/312fad8ccd02eb12ad774f4b9698e7febf704e50.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "bytes": 82884,
+      "sha256": "c0b4971e0eba64c49a262ea32ccb202558071e52d09156b783e2c4c45dfdd544",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/314fb4fe747c5f659aff9b53cdf4e7bb54268fbf.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "bytes": 243136,
+      "sha256": "db116cfd2a3c26202494ad7535c0368dff78b4a21fde7f592b295bdd23bb6897",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/4bc1cd8d6938902a9980521372805a2f591f4256.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/64fb5f08ff55a62075fdbffbf165c449b0358301.png",
+      "bytes": 538242,
+      "sha256": "c8ee7d5b97843f98d969a633e16cea38cc8825b2e51af4e350cc46b323c4e7b8",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/64fb5f08ff55a62075fdbffbf165c449b0358301.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/6edb381fb0e9f6359316d69f826f397eaa95361e.png",
+      "bytes": 83050,
+      "sha256": "d2ddbdfe222a1a46df0e9a97bdbac252f6f0b88ad187aaccd2e49e95ea81a147",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/6edb381fb0e9f6359316d69f826f397eaa95361e.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "bytes": 514820,
+      "sha256": "6dda456d66da28d06f8daf3f403f318df50fb07beadc6aca8b6d92ec6dbb59f4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/7303ca619997a90c6b3a3d0e14be8ee6aaf7773e.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "bytes": 339293,
+      "sha256": "8c0038831b3ac9233c15d48ea291d947c05bad0898fd858bc21fe14733127107",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/75064e83cabed095fa9822f6a9b380179e36914f.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/760dc8f19fa545f836116ce80d903c8b1f01f096.png",
+      "bytes": 63580,
+      "sha256": "f187f24c50203140af504f493cfaed1cc4df23fd1cfc04b931ad9ebde1582a3f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/760dc8f19fa545f836116ce80d903c8b1f01f096.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/b83f76dfab5a8a2da5af2e229c9a4a11f11f7d56.png",
+      "bytes": 77127,
+      "sha256": "32d13ec2278f6bf5217d83c6da60f9642cee8a49c2ca6752a0613fd463a3f204",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/b83f76dfab5a8a2da5af2e229c9a4a11f11f7d56.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "bytes": 1005257,
+      "sha256": "3d295e77e8f82f56a51348c843a94636ae6f8d0bb51701a384c349484ae2a964",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/d27b33a93aaa9f705df95d8ef309d7a4207fc783.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/dbb9bd0d95bde740cd7e9edbdf4ee2758ffa83b7.png",
+      "bytes": 540055,
+      "sha256": "ef2539ff19cd283491f82bdde2faa6edeba38d0d8b73625827d5deed79841027",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/dbb9bd0d95bde740cd7e9edbdf4ee2758ffa83b7.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "bytes": 1348860,
+      "sha256": "41d6488cd8fcc1e6ecf714588fe34c9d0a4f8cc4ab4b13ceb9181e9b5f81bb8d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/e210cf44f2eecc6aa2e4c616464aa29d6f25fd22.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "bytes": 123704,
+      "sha256": "928c42945a022822e30a1582cacde01741165f59209f1a5c297f78883665081a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/ec99468c489c1b851ce64899005daeb9a6759c79.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/ee3ff3bbed1f556b170329ba32796c5a56998da0.png",
+      "bytes": 79560,
+      "sha256": "1f70524df95ec1aceceb9cc5f95b926285ed3061e64e22df03cd4a71ab4759e5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/ee3ff3bbed1f556b170329ba32796c5a56998da0.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "bytes": 684360,
+      "sha256": "c0486c0372474b7fa9d31cefa216f1240054e0846fe5eea370d563f1fb3e39c6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/data/ff9c28ab60ffc0263b136dc6d2f6735163fdf3d2.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/diagnostics/pre-optimization-green-run/html/index.html",
+      "bytes": 740428,
+      "sha256": "b1e2d7b82bd9f519327bb749b272c7b1348f7eb9beaa947e88c46c71fe88b95c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/pre-optimization-green-run/html/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/editorial-desktop.png",
+      "bytes": 329773,
+      "sha256": "ae1913d02de8cdd8b3d9c450c619362b90ff84154c509785541199be37554810",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/editorial-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/editorial-mobile.png",
+      "bytes": 59643,
+      "sha256": "23dc4ec06fcd503e65a0a94ca2b0687f85b7bec20c6fec7e7e066a3659a9c940",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/editorial-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-login-catalog-desktop.png",
+      "bytes": 1669773,
+      "sha256": "ad11d330fdb440cdcca1eb62188dc7dd33dc213fd50772ba2cfc9bbb920c81bb",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-login-catalog-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-login-catalog-mobile.png",
+      "bytes": 133897,
+      "sha256": "f997838c8bd349beadad30f5be756d7eaabb69252d3b2585a1e991fd7f020576",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-login-catalog-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-login-detail-desktop.png",
+      "bytes": 1762259,
+      "sha256": "5d4d4a8f5fe48ad3a509713149c7e26fb2f00b3ee41597efc5a0d6d63bc4fc69",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-login-detail-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-login-detail-mobile.png",
+      "bytes": 122747,
+      "sha256": "d10e434df8847a698e02f26accf2a94fe8295a85078f953a5bec33a62e3e96d5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-login-detail-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-saved-catalog-desktop.png",
+      "bytes": 1338963,
+      "sha256": "3eb441777aefc7112fa82ce7145c185d9d3b5c9938fa9574df357451e1004f20",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-saved-catalog-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-saved-catalog-mobile.png",
+      "bytes": 3521977,
+      "sha256": "fee3fc15cb720d8e846f22270376cd042bc17143190e681a519386b4dd88395e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-saved-catalog-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-saved-detail-desktop.png",
+      "bytes": 552348,
+      "sha256": "035cdf9a4fcd4e1952785776ad77529eac27d288a45252943a92c99d1c8269dd",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-saved-detail-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/favorite-saved-detail-mobile.png",
+      "bytes": 1893408,
+      "sha256": "375df658669424af07d120368a4589b9a7df8efce2681b23c03527dc9412e599",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/favorite-saved-detail-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/footer-desktop.png",
+      "bytes": 113070,
+      "sha256": "e9c4ec4f995c5dd0dc936f150d0f9555500e5638109fac5bd8ef4a906d1db138",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-desktop.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/footer-mobile-newsletter.png",
+      "bytes": 57727,
+      "sha256": "67463be010df9a0e25e96da13e427dfdd974403fe79d5f975954619a017a6de3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-mobile-newsletter.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/footer-mobile-socials.png",
+      "bytes": 55396,
+      "sha256": "ab9c374c2ff6b102a617ce404566f2f4891416f23a253666d410d5e6d5b5d0be",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-mobile-socials.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/footer-mobile.png",
+      "bytes": 122088,
+      "sha256": "98dbd2b19cd4e957875b8ac927a62c1baea86da9219a07a5cd4d30616e209a04",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/footer-mobile.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-desktop-1.report.html",
+      "bytes": 717117,
+      "sha256": "3dbf23b5cc0c5afa82df87f71bce60091b1d35948b984049a8169cdb9957c11a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-desktop-1.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-desktop-2.report.html",
+      "bytes": 717145,
+      "sha256": "d43c96f64c062b2ed76a7ddf0664f034c199aef8a99d1b2c23dcb0e509488db7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-desktop-2.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-desktop-3.report.html",
+      "bytes": 717178,
+      "sha256": "256fcbe739dc03662f053ef70ec5d5f7a8a95b4585062da2f8d402c05299f2d7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-desktop-3.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-mobile-1.report.html",
+      "bytes": 674196,
+      "sha256": "495d4e7f5a7373243c4f9d4dae9bf9d25df5f30dd2da6c4ee7c6754e94ca3f1f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-mobile-1.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-mobile-2.report.html",
+      "bytes": 674199,
+      "sha256": "74255983303a2e3d1e1b2fcfb2a2580aff55738b50ff1bf305f910eb19aa6527",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-mobile-2.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/detail-mobile-3.report.html",
+      "bytes": 674044,
+      "sha256": "76960aca7da8849c884528cd2a21da4c971ad3a2f1dc68d74a77a193e15fe1e5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/detail-mobile-3.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-desktop-1.report.html",
+      "bytes": 973080,
+      "sha256": "5f1dab7615dbc866e5e13e14fb3d2f349f0c1f240c1d3a486c4ad56357d2ee5f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-desktop-1.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-desktop-2.report.html",
+      "bytes": 959143,
+      "sha256": "5e3b3b96517dfd97a9b70a3f33cd7d1f45244db736ed0617ea210105d2b62e16",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-desktop-2.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-desktop-3.report.html",
+      "bytes": 959141,
+      "sha256": "1a4a13830728a59cb40ef325f99d7e93a66d5d80a36f20f48de1a85021269eda",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-desktop-3.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-mobile-1.report.html",
+      "bytes": 854461,
+      "sha256": "4bc45136f7bb4beb2819373bf4c7764b89bed4e71100497f5611f6a7cb501b7b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-mobile-1.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-mobile-2.report.html",
+      "bytes": 876468,
+      "sha256": "b300c3b4fec87c9145aaec1657230d6135bc576bf8959b5c666896509c593a5c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-mobile-2.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/historical/34ba5b5/lighthouse/home-mobile-3.report.html",
+      "bytes": 876954,
+      "sha256": "3769bdc855f9427482c06edd67d7ccccacdb2211a9db57e89a65ceaa5d61801b",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/historical/34ba5b5/lighthouse/home-mobile-3.report.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/mobile-login-current.png",
+      "bytes": 27234,
+      "sha256": "fd254fbd34d1d7907175611cf3aaa1f87737059a7af6b859aaf9c985802fa388",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/mobile-login-current.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-desktop/test-failed-1.png",
+      "bytes": 125233,
+      "sha256": "5358884ff42e700765a71cae6334326b8655e8fb4f78ab455312e508ce0109b9",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-desktop/trace.zip",
+      "bytes": 4186689,
+      "sha256": "fefde3096a403a6336ed55724a6ebbbec81542528ab6decbe01dc232b807b217",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/test-failed-1.png",
+      "bytes": 79060,
+      "sha256": "ef41a1e150cb4dcab73e84f827e39880d769fad7f96b39c87894ee85b14b3f60",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/trace.zip",
+      "bytes": 3224491,
+      "sha256": "91a521e3f2f26accd3b8ddbb83c123e557124ed1bde4e08283942cdd44951326",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-final-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/test-failed-1.png",
+      "bytes": 79060,
+      "sha256": "ef41a1e150cb4dcab73e84f827e39880d769fad7f96b39c87894ee85b14b3f60",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-final-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/newsletter-e2e-final-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/trace.zip",
+      "bytes": 3054124,
+      "sha256": "10c636b3bc39593349162f15c741ed2efd9086ac20ea580685df06e11c22d58d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/newsletter-e2e-final-artifacts/newsletter-newsletter-draf-acc93-signs-into-another-identity-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/playwright-inventory-decrease-build-html/index.html",
+      "bytes": 520304,
+      "sha256": "50e44cfc917c5c76b48898312bb24797179a1e3ceb10e156f0da4146198af2e7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/playwright-inventory-decrease-build-html/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/playwright-readiness-cases-build-html/index.html",
+      "bytes": 530140,
+      "sha256": "e6bceb1c0c3d93492477e7260246eba87edcf9ad194c8fd458dd257dbb9f2d87",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/playwright-readiness-cases-build-html/index.html",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/cart-desktop-darwin-review.jpg",
+      "bytes": 106296,
+      "sha256": "1fb427f1903d8cf13d6ecd60bde06efdb8b526190924e005813f4d4b41937e04",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/cart-desktop-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/cart-mobile-darwin-review.jpg",
+      "bytes": 215563,
+      "sha256": "3df2553076219563e20e97692a12f973520422cb017d9ecfd13a42b438e4422e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/cart-mobile-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/catalog-desktop-darwin-review.jpg",
+      "bytes": 265423,
+      "sha256": "62f7b219485ec252c29071777b7d533040be777033262692083a314cd8bd4840",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/catalog-desktop-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/catalog-desktop-final-review.jpg",
+      "bytes": 265929,
+      "sha256": "c6c543cc2d91a5097859c051f2e9fbe01110990e39b29940f6ac5f83856c2cc5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/catalog-desktop-final-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/catalog-mobile-darwin-review.jpg",
+      "bytes": 428105,
+      "sha256": "d4d9694862b49b0452ca2b8241705d584bf0b638f81a50c0f58575ab5d61d8b7",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/catalog-mobile-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/catalog-mobile-final-review.jpg",
+      "bytes": 420334,
+      "sha256": "75fb2c07d7db5d291042fe752bfa7ff52ed5a5ef68f4c3c5bbe3e5b928c0f140",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/catalog-mobile-final-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/detail-desktop-darwin-review.jpg",
+      "bytes": 141026,
+      "sha256": "b1858bd5ce62d629bc98a83fef3991af00c03e95e7786cf047bc978f68f3eb4f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/detail-desktop-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/detail-mobile-darwin-review.jpg",
+      "bytes": 277692,
+      "sha256": "645cddced8ac39774760e4dd4065ebf765f20b6bc04c84a21969d7fa769d76e2",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/detail-mobile-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/payment-desktop-darwin-review.jpg",
+      "bytes": 101036,
+      "sha256": "45a276fd73e0e5c4f5b9b8d1d8219f1d2d065630f2207ad1d65abf356f37efc5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/payment-desktop-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final/payment-mobile-darwin-review.jpg",
+      "bytes": 253358,
+      "sha256": "bddaee971d547714085741b8ba643dffa57746a7dec0813ad304aa822f8a7f47",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final/payment-mobile-darwin-review.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-detail-update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "bytes": 439570,
+      "sha256": "0c8c277dbaaf6173bd83193de021018e32935f1fc9638026f492f0750da38a6a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-detail-update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-home-update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "bytes": 1811895,
+      "sha256": "b0b986f9e9484d7ac34dfa1d8a7d63b0f19c9ba401d3cdedbae9ae71cd46303d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-home-update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "bytes": 1978310,
+      "sha256": "f66e1e78b997e60ecf84d5ae65c9027729f21bf12227ae09757e16833370762f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/marketplace-catalog-visual-regression-mobile/catalog-actual.png",
+      "bytes": 1053645,
+      "sha256": "557b8c07c6135559b155a78a573cd3df9e7cd780a183ed57a286962a0a0d60f0",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/marketplace-catalog-visual-regression-mobile/catalog-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-cart-visual-regression-desktop/cart-actual.png",
+      "bytes": 493513,
+      "sha256": "6d041eecae38c68595888fde601f1bfdcdb9bf0e11dcf1c33d8edcfe1920d77d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-cart-visual-regression-desktop/cart-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-cart-visual-regression-mobile/cart-actual.png",
+      "bytes": 273482,
+      "sha256": "959d5437e82343b1d3b8ac5e29c00e55f55d3991e4dfb6f8da26dccdd87cda7a",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-cart-visual-regression-mobile/cart-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-detail-visual-regression-desktop/detail-actual.png",
+      "bytes": 802616,
+      "sha256": "a0d74012d5f6410355e2c44164a9aa41ffacb014b2ea09f309da7ff12c0de147",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-detail-visual-regression-desktop/detail-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "bytes": 441397,
+      "sha256": "3f6efaa0fef3f245c335ebd6ccb21f8ac7e9971bf9653b6de7b83101e18fa146",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-payment-visual-regression-desktop/payment-actual.png",
+      "bytes": 237737,
+      "sha256": "497a07e823507d232c5ecce21f7db10841c7bcb1c7e1d716d19d4dd5c50accb2",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-payment-visual-regression-desktop/payment-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-final-update-artifacts/views-payment-visual-regression-mobile/payment-actual.png",
+      "bytes": 220635,
+      "sha256": "b9e9fe0a5346a43daaac9ed42579e473f04cf6d3f045b56cf512b5534f9f5c07",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-final-update-artifacts/views-payment-visual-regression-mobile/payment-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/detail-mobile-candidate-320.png",
+      "bytes": 142964,
+      "sha256": "0e077b3b732f2201ea6083247ddba5588db3226c2b4fa695b31872603ce977d3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/detail-mobile-candidate-320.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/detail-mobile-candidate-390.png",
+      "bytes": 187925,
+      "sha256": "6993fe33741c7dc9762f682c6aacd59c631be944a65a799697f9c6ffa64a3d0c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/detail-mobile-candidate-390.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/detail-mobile-candidate-414.png",
+      "bytes": 204270,
+      "sha256": "71b93fbc1f9b726d2619deef4fb0cd15345d3513fae38eb6c07e9bc6e5f77d6d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/detail-mobile-candidate-414.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-desktop/test-failed-1.png",
+      "bytes": 590792,
+      "sha256": "fc09eb7f2e0baa730f30f576bba60499d908b6fd1d7c4f6dec2ff60bc1186ffe",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-desktop/trace.zip",
+      "bytes": 1682368,
+      "sha256": "b0aa6a508345794c452aebfc0cea6f17ca4c15f0529718b45bf22b7f42e44b71",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-mobile/test-failed-1.png",
+      "bytes": 1131295,
+      "sha256": "fb854c5ad907cbd9de205e35f16057296a6c290184be0cee88270697518bfb2f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-mobile/trace.zip",
+      "bytes": 2039198,
+      "sha256": "eecde7e4e7edbef6c554bc6e3122824a90cf86461cc328316babfbc71a697eff",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/expedition-update-artifacts/themes-expedition-home-visual-regression-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-5173-zoom-1.25.png",
+      "bytes": 397403,
+      "sha256": "2b9f3e3b8998baeae81e665bc29a008b8d5f8044fc60a087b087394e4fc3af9c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-5173-zoom-1.25.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-5173-zoom-1.png",
+      "bytes": 565171,
+      "sha256": "358fa9b311462f5066d90a1aa1679debc2a2ab02e9a877e26f6782891914c186",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-5173-zoom-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-5174-zoom-1.25.png",
+      "bytes": 397403,
+      "sha256": "2b9f3e3b8998baeae81e665bc29a008b8d5f8044fc60a087b087394e4fc3af9c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-5174-zoom-1.25.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-5174-zoom-1.png",
+      "bytes": 565171,
+      "sha256": "358fa9b311462f5066d90a1aa1679debc2a2ab02e9a877e26f6782891914c186",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-5174-zoom-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-bug-before.png",
+      "bytes": 568026,
+      "sha256": "c63c58dc770081d4d2491856540291a044404b8d5c2f1d9b21cc3ad8c5a534b0",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-bug-before.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-fixed-1440.png",
+      "bytes": 565171,
+      "sha256": "358fa9b311462f5066d90a1aa1679debc2a2ab02e9a877e26f6782891914c186",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-fixed-1440.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-fixed-320.png",
+      "bytes": 230185,
+      "sha256": "2f48c0c3f9e738b39a973b9abe83583fd1a34bf04e5d04de02f1cd1ca63abb5e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-fixed-320.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-fixed-768.png",
+      "bytes": 315659,
+      "sha256": "59d4ada4e6e0f02f0ff6b8695293b5e020f986729879e7dbadfd54190b3ee1a4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-fixed-768.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/test-failed-1.png",
+      "bytes": 3158237,
+      "sha256": "800de6b4f7e94d205382381cc2dcc486ebdc7505ed0a9a168da796b0a0348698",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/trace.zip",
+      "bytes": 8020269,
+      "sha256": "12fa7f26a1d766a78765c2a37f19e18c3b7490551c0512b3176a6fa0e18b0280",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/test-failed-1.png",
+      "bytes": 288429,
+      "sha256": "d3b46f899a5ff00e49b210538e6ea0255c42a9650cb02fc596ff0fbe79681c38",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/trace.zip",
+      "bytes": 941643,
+      "sha256": "5db359133ed95abcf266ee55ee53d1db13adc6e55ee4755e8c193136e05d4127",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/test-failed-1.png",
+      "bytes": 1771573,
+      "sha256": "00dccf366c3d08b0b1164da70c16f00dccaeea23383cbc3918a61860b550fd39",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/trace.zip",
+      "bytes": 2577508,
+      "sha256": "341f8b4394fa9b97f41780d4d76eb7eedf56a0f5a7c3256cbf146c362bf43e6c",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-390px-mobile/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/test-failed-1.png",
+      "bytes": 330442,
+      "sha256": "3ad0bf1abdac3ab4845c1e828eb0110911abec533089380072f2c7fc7aac60ed",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/trace.zip",
+      "bytes": 5855560,
+      "sha256": "8ee71aa0f1d0566390657222f42cd9a28d6732efda9abd374cc308c55fbf89af",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-artifacts/hero-geometry-hero-geometry-stays-contained-at-768px-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-green-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-desktop/test-failed-1.png",
+      "bytes": 560863,
+      "sha256": "94bbc1e267032d2c29ea05e22deb3b2b51de4cc7f1106377d2408ebdb551122e",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-green-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-desktop/test-failed-1.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-geometry-green-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-desktop/trace.zip",
+      "bytes": 9795708,
+      "sha256": "4f636a57b0cc48dd4483c0f5b2441dff5dcde38d42aeb6ff87eb8123acf6f7ac",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-geometry-green-artifacts/hero-geometry-hero-geometr-5e1c6-px-with-125-content-scaling-desktop/trace.zip",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-static-review-desktop.jpg",
+      "bytes": 164748,
+      "sha256": "1cfc0ce60e5791cd0fb2bd23274367c671320c128c39a1cb15ab0ec8ec446468",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-static-review-desktop.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/hero-static-review-mobile.jpg",
+      "bytes": 170379,
+      "sha256": "d86a2d1b06a0a7f28a87e16c5ac4bf859f2070470a954f833a61921ef19875e4",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/hero-static-review-mobile.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/snapshots-review-1.jpg",
+      "bytes": 303387,
+      "sha256": "8f6c1a4fb7972d437824d556138c8c628838cacf61fb22148a1e6b5f2afbfae5",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/snapshots-review-1.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/snapshots-review-2.jpg",
+      "bytes": 322262,
+      "sha256": "f97f9140ac6dff0133084543a16093355fd4bdac0ab66cebb021054512ce5dfc",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/snapshots-review-2.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/snapshots-review-3.jpg",
+      "bytes": 178836,
+      "sha256": "f454650b8a5256b9a05b941544e67242577be3a1ca886ded5ba7ae9b13fada87",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/snapshots-review-3.jpg",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "bytes": 1617391,
+      "sha256": "3accd8959bb81afac5bc487a19be44821d67ed568045221db1ce21c37d8891a6",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/marketplace-catalog-visual-regression-desktop/catalog-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/marketplace-catalog-visual-regression-mobile/catalog-actual.png",
+      "bytes": 497025,
+      "sha256": "60ed53476e164ec273d3132d531aa3070a133cff4cce1b455003ae7e420b17de",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/marketplace-catalog-visual-regression-mobile/catalog-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/themes-expedition-home-visual-regression-desktop/expedition-home-actual.png",
+      "bytes": 2618916,
+      "sha256": "14153ba1bb874f2d858a1d12f9774ce2dd6be219a85505f7a5c219173843fa21",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/themes-expedition-home-visual-regression-desktop/expedition-home-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/themes-expedition-home-visual-regression-mobile/expedition-home-actual.png",
+      "bytes": 1360994,
+      "sha256": "b870fb2b95d8a080f87815297190d0844629ee02a3e7fc5d033b2cbc0e30a4ea",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/themes-expedition-home-visual-regression-mobile/expedition-home-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-cart-visual-regression-desktop/cart-actual.png",
+      "bytes": 412243,
+      "sha256": "2745c6f74cc61fe1190bb2084a865f9e186d7a8d9a17bb8a711fe611eeb7ef4d",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-cart-visual-regression-desktop/cart-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-cart-visual-regression-mobile/cart-actual.png",
+      "bytes": 140679,
+      "sha256": "f9d951b09f1dd2bcbd3948ce65b41e9f4594e80d3f4f11ebc521aa3600d340d3",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-cart-visual-regression-mobile/cart-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-detail-visual-regression-desktop/detail-actual.png",
+      "bytes": 723894,
+      "sha256": "a486ceda59b2feb8b88c9466b9fe2658b44cd1a33d298ac8efa8efc045e5ac03",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-detail-visual-regression-desktop/detail-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "bytes": 313168,
+      "sha256": "e582c2ffea2876bca0fcdc386c05337b46511f636e32071c50acf7a447e5fc11",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-detail-visual-regression-mobile/detail-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-payment-visual-regression-desktop/payment-actual.png",
+      "bytes": 233554,
+      "sha256": "0db7e13d3cff695020ff96b8809f151dfc2cfff36b60fbe78726fd85dd4f2324",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-payment-visual-regression-desktop/payment-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    },
+    {
+      "originalPath": "reports/visual-regression-round/update-artifacts/views-payment-visual-regression-mobile/payment-actual.png",
+      "bytes": 96034,
+      "sha256": "401c910f0940a084f3a04e9598fc8a2cf38cf836bb87d8810831746011614d1f",
+      "localArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/visual-regression-round/update-artifacts/views-payment-visual-regression-mobile/payment-actual.png",
+      "reason": "Redundant or intermediate binary/HTML. Original bytes verified against the complete local archive before removal."
+    }
+  ]
+}

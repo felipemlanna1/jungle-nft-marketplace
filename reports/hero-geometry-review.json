@@ -1,0 +1,131 @@
+{
+  "scope": "Carrossel de destaques Kurio e contenção de texto e artes.",
+  "status": "A geometria passou em 20 casos no candidato estático local, sem HMR.",
+  "confirmedFindings": [
+    {
+      "finding": "O viewport mobile começava dentro do padding e recortava 6 px do topo da arte.",
+      "change": "Viewport integral ao banner, com padding em cada slide e pintura contida no próprio slide."
+    },
+    {
+      "finding": "A descrição do primeiro slide excedia o banner em 8 px na largura 390.",
+      "change": "Tipografia adaptativa antes do quadro de 414 px e descrição mais compacta nas larguras inferiores."
+    }
+  ],
+  "interactionAssessment": "O screenshot de vizinhos visíveis não permitiu distinguir transição em andamento de estado final. A biblioteca já impede dragstart nativo; draggable=false explicita a intenção nas artes, sem atribuir a ele uma causa única não comprovada.",
+  "preservedReferenceGeometry": [
+    {
+      "width": 414,
+      "boxes": {
+        ".carousel-viewport": {
+          "x": 24,
+          "y": 101,
+          "width": 366,
+          "height": 190
+        },
+        ".carousel-slide:not([inert])": {
+          "x": 24,
+          "y": 101,
+          "width": 366,
+          "height": 190
+        },
+        ".carousel-slide:not([inert]) .hero-copy": {
+          "x": 40,
+          "y": 117,
+          "width": 188,
+          "height": 164
+        },
+        ".carousel-slide:not([inert]) .hero-art": {
+          "x": 236,
+          "y": 111,
+          "width": 138,
+          "height": 138
+        }
+      }
+    },
+    {
+      "width": 1440,
+      "boxes": {
+        ".carousel-viewport": {
+          "x": 120,
+          "y": 101,
+          "width": 1200,
+          "height": 450
+        },
+        ".carousel-slide:not([inert])": {
+          "x": 120,
+          "y": 101,
+          "width": 1200,
+          "height": 450
+        },
+        ".carousel-slide:not([inert]) .hero-copy": {
+          "x": 160,
+          "y": 144,
+          "width": 600,
+          "height": 364
+        },
+        ".carousel-slide:not([inert]) .hero-art": {
+          "x": 870,
+          "y": 101,
+          "width": 450,
+          "height": 450
+        }
+      }
+    }
+  ],
+  "verification": {
+    "development": {
+      "passed": 20,
+      "failed": 0,
+      "report": "reports/visual-regression-round/hero-geometry-final-results.json"
+    },
+    "staticCandidate": {
+      "status": "passed",
+      "passed": 20,
+      "failed": 0,
+      "candidateId": "5ff40d1fe71c88c8c6d388f95db1a05c33dd86f760d256a7d94ce5893773eccd",
+      "report": "reports/visual-regression-round/hero-geometry-static-results.json",
+      "sourceDigests": "reports/visual-regression-round/layout-candidate-sources.json",
+      "bundleDigests": "reports/visual-regression-round/layout-candidate-bundle.json",
+      "manualReview": "Os 20 segundos slides foram inspecionados em duas folhas de revisão, uma por projeto de teste."
+    },
+    "widths": [
+      320,
+      375,
+      390,
+      412,
+      414,
+      768,
+      1024,
+      1440,
+      1920
+    ],
+    "scaling": "Um cenário adicional em 1440 com CSS zoom 1.25 verifica escala de conteúdo. Isso não equivale a certificar todas as formas de zoom nativo de todos os navegadores.",
+    "checks": [
+      "Clique no segundo indicador e espera pelo estado selecionado antes de medir.",
+      "Texto, linhas do título, arte e slide ativo dentro do viewport, com tolerância geométrica de 1 px.",
+      "Separação entre texto e arte.",
+      "Slides vizinhos fora do viewport após o movimento assentar.",
+      "Arraste real por mouse e toque para o terceiro slide.",
+      "Retorno pelo loop usando ArrowRight e nova conferência geométrica.",
+      "Ausência de rolagem horizontal e preservação da escala aplicada."
+    ]
+  },
+  "visualBaselines": {
+    "status": "Aprovação pausada após o relato de defeitos pelo usuário. A primeira atualização dos 10 baselines não aprova as alterações de fonte posteriores.",
+    "maxDiffPixelRatio": 0.02
+  },
+  "claim": "Regressão estável não certifica equivalência integral com o Figma nem uma nota de qualidade arbitrária.",
+  "mobileDetail": {
+    "verifiedWidths": [
+      320,
+      390,
+      414
+    ],
+    "viewportHeight": 896,
+    "buyButtonY": 808,
+    "buyButtonBottom": 868,
+    "horizontalOverflow": false,
+    "evidence": "reports/visual-comparison/detail-mobile.side-by-side.webp",
+    "remainingDifference": "O deslocamento superior foi corrigido no build final. A comparação nativa atual mostra arte, dados, quantidade e Comprar NFT na primeira dobra; permanecem diferenças de metadados simulados."
+  }
+}

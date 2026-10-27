@@ -1,0 +1,75 @@
+{
+  "scope": "Responsive delivery of the same supplied artwork; no API or business-model changes",
+  "selectionChecks": [
+    {
+      "viewport": 412,
+      "dpr": 1.75,
+      "hero": "http://127.0.0.1:5173/figma/art/f20b58b99de12b6e-300.webp",
+      "card": "http://127.0.0.1:5173/figma/art/f20b58b99de12b6e-360.webp"
+    },
+    {
+      "viewport": 412,
+      "dpr": 3,
+      "hero": "http://127.0.0.1:5173/figma/art/f20b58b99de12b6e-600.webp",
+      "card": "http://127.0.0.1:5173/figma/art/f20b58b99de12b6e-600.webp"
+    }
+  ],
+  "variants": [
+    {
+      "path": "public/figma/art/f20b58b99de12b6e-360.webp",
+      "width": 360,
+      "bytes": 28930,
+      "quality": 95,
+      "sha256": "67bd333c7361ce3a2158bdd9758959f714f86181533ed55201bc6a91965ba07f"
+    },
+    {
+      "path": "public/figma/art/f20b58b99de12b6e-600.webp",
+      "width": 600,
+      "bytes": 64120,
+      "quality": 95,
+      "sha256": "273d87f1ff563e9b7346e8249b18e592d05884d8cf14539e2f1b528f0f763923"
+    },
+    {
+      "path": "public/figma/art/9b25d8d72395aa62-360.webp",
+      "width": 360,
+      "bytes": 26822,
+      "quality": 95,
+      "sha256": "821805dbc32e9e363d42dbdeafc8729483ecc204d6d84ac156ddc36a5c185d30"
+    },
+    {
+      "path": "public/figma/art/9b25d8d72395aa62-600.webp",
+      "width": 600,
+      "bytes": 64614,
+      "quality": 95,
+      "sha256": "3e4245f3f55caddc956417dfab737402f1a6a9752c90c17e19776fab7fb26b1f"
+    },
+    {
+      "path": "public/figma/art/326df4c1c08c31c8-360.webp",
+      "width": 360,
+      "bytes": 23484,
+      "quality": 95,
+      "sha256": "e3ed9587f07f84417d5b939a6887b147b5340c823762f58c58f5e135a0b8b556"
+    },
+    {
+      "path": "public/figma/art/326df4c1c08c31c8-600.webp",
+      "width": 600,
+      "bytes": 55560,
+      "quality": 95,
+      "sha256": "07f24fcdb0f9e31c1ad1c277b6fd77c43a8d56f2de429e49a597b14172ad722c"
+    },
+    {
+      "path": "public/figma/art/2a42ba5adc341c3d-360.webp",
+      "width": 360,
+      "bytes": 29280,
+      "quality": 95,
+      "sha256": "3a808f766c8abbb6a502c32eeba18cf07a326c031dfd59769ceacfdd255ec54b"
+    },
+    {
+      "path": "public/figma/art/2a42ba5adc341c3d-600.webp",
+      "width": 600,
+      "bytes": 72408,
+      "quality": 95,
+      "sha256": "4fa98976c51cd2c7c9bb290f4898abb872124b14be7b007369f549c21a027e91"
+    }
+  ]
+}

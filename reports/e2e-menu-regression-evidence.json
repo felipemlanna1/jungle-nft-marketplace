@@ -1,0 +1,17 @@
+{
+  "sourceBefore": "f5b71c9afceaab66da04cc6cb91e3cdfef233a70cb2cb5acc0a1a05d67f0d736",
+  "sourceAfter": "f5b71c9afceaab66da04cc6cb91e3cdfef233a70cb2cb5acc0a1a05d67f0d736",
+  "changedFiles": [],
+  "stats": {
+    "startTime": "2026-10-27T15:15:46.273Z",
+    "duration": 113875.31,
+    "expected": 34,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "report": "reports/e2e-menu-regression-verified.json",
+  "approval": true,
+  "scope": "Regressões dos consumidores do menu após retirada da alternância visual; não substitui testes visuais separados.",
+  "baselineExclusion": "PNG dos testes visuais fora do hash; src/public e código dos testes ativos incluídos."
+}

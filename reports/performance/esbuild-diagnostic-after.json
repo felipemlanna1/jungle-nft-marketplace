@@ -1,0 +1,179 @@
+{
+  "outputs": [
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Wallets-SPHXIHUS.js",
+      "bytes": 4311
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/OrderRoute-RO5Y7ICD.js",
+      "bytes": 4522
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/application-MDAMJVFQ.js",
+      "bytes": 236054
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/graphql-F3VP4NKJ.js",
+      "bytes": 174868
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/browser-ZVLVGXYH.js",
+      "bytes": 323140
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/main.js",
+      "bytes": 516
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/esm-6WZPSH5X.js",
+      "bytes": 32261
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-S3GGLA7T.js",
+      "bytes": 10756
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/NftRoute-CCTMOHEG.js",
+      "bytes": 6603
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-OJPRM4DH.js",
+      "bytes": 60271
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Cart-JMUEURDT.js",
+      "bytes": 4613
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Login-RTON5MSQ.js",
+      "bytes": 261
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Register-3KN7N45V.js",
+      "bytes": 264
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-JSEX7MG3.js",
+      "bytes": 3424
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Checkout-H6LUGBOP.js",
+      "bytes": 9560
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-PX7ROWRB.js",
+      "bytes": 469
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-AM5UHCW2.js",
+      "bytes": 638
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-JXLPMVWY.js",
+      "bytes": 962
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/Profile-SNG45QPG.js",
+      "bytes": 5143
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-C3VBSIDF.js",
+      "bytes": 953
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-ESBH2EYC.js",
+      "bytes": 364
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-YCRBUULT.js",
+      "bytes": 209120
+    },
+    {
+      "path": "../../../../../tmp/jungle-perf-diagnostic/chunk-5TBO732O.js",
+      "bytes": 605
+    }
+  ],
+  "groups": [
+    [
+      "msw",
+      275591
+    ],
+    [
+      "react-dom",
+      209440
+    ],
+    [
+      "graphql",
+      169798
+    ],
+    [
+      "application",
+      93092
+    ],
+    [
+      "axios",
+      58574
+    ],
+    [
+      "@tanstack/router-core",
+      52216
+    ],
+    [
+      "@tanstack/query-core",
+      32740
+    ],
+    [
+      "zod",
+      23165
+    ],
+    [
+      "engine.io-client",
+      19612
+    ],
+    [
+      "@tanstack/react-router",
+      15035
+    ],
+    [
+      "socket.io-client",
+      12342
+    ],
+    [
+      "react",
+      8407
+    ],
+    [
+      "tldts-core",
+      6938
+    ],
+    [
+      "react-remove-scroll",
+      5921
+    ],
+    [
+      "lucide-react",
+      5912
+    ],
+    [
+      "socket.io-parser",
+      5702
+    ],
+    [
+      "@radix-ui/react-dismissable-layer",
+      5287
+    ],
+    [
+      "@radix-ui/react-dialog",
+      4987
+    ],
+    [
+      "path-to-regexp",
+      4787
+    ],
+    [
+      "@tanstack/history",
+      4513
+    ]
+  ],
+  "zodLocales": 64
+}

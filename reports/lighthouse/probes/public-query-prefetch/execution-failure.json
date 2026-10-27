@@ -1,0 +1,12 @@
+{
+  "completedAt": "2026-10-27T17:19:59.388144+00:00",
+  "status": "browser-initialization-failure",
+  "completeMatrix": false,
+  "approved": false,
+  "measuredRuns": 0,
+  "error": "TargetCloseError: Protocol error (Target.setAutoAttach): Target closed",
+  "node": "22.22.0",
+  "lighthouse": "13.5.0",
+  "sourceOrBuildChanges": false,
+  "retryReason": "No Lighthouse report or score was generated; rerun same frozen artifact and configuration."
+}

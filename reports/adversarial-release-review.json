@@ -1,0 +1,142 @@
+{
+  "scope": "Leitura adversarial dos cartões, prévia, adição ao carrinho, detalhe mobile, menu e transições entre diálogos antes da rodada final.",
+  "findings": [
+    {
+      "id": "UI-MENU-001",
+      "priority": "P2",
+      "status": "corrigido",
+      "cause": "O botão Lista de interesse abria outro diálogo sem fechar o menu. Ao navegar para uma obra, fechava apenas a lista e mantinha o menu persistente sobre a nova rota.",
+      "fix": "Handlers de layout fecham o menu na transição, restauram o acionador externo ao fechar a lista e suprimem esse restauro durante navegação para preservar o foco do destino.",
+      "evidence": {
+        "report": "reports/e2e-favorites-navigation-verified.json",
+        "stats": {
+          "startTime": "2026-10-27T15:29:46.926Z",
+          "duration": 10569.382,
+          "expected": 4,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "environment": "Desenvolvimento 5173; estes 4 casos também estão na suíte completa preparada para o build."
+      }
+    },
+    {
+      "id": "UI-QTY-001",
+      "status": "corrigido",
+      "cause": "Após o limite de estoque cair abaixo da quantidade selecionada, Diminuir podia permanecer habilitado e rejeitar silenciosamente o próximo valor intermediário.",
+      "fix": "A redução respeita o limite atual; o estado sem estoque continua impedindo envio inválido.",
+      "evidence": {
+        "report": "reports/e2e-inventory-decrease-build-verified.json",
+        "html": null,
+        "htmlOriginalPath": "reports/playwright-inventory-decrease-build-html/index.html",
+        "htmlSha256": "50e44cfc917c5c76b48898312bb24797179a1e3ceb10e156f0da4146198af2e7",
+        "htmlLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/playwright-inventory-decrease-build-html/index.html",
+        "htmlAvailability": "local-archive-only",
+        "stats": {
+          "startTime": "2026-10-27T15:38:59.772Z",
+          "duration": 4186.66,
+          "expected": 2,
+          "skipped": 0,
+          "unexpected": 0,
+          "flaky": 0
+        },
+        "environment": "Build otimizado em 4173, Chromium desktop e mobile.",
+        "method": "Uma compra simulada efetiva reserva 2 de 3 unidades pela REST normal. O Socket.IO atualiza o limite para 1 enquanto a seleção permanece 3; Diminuir ajusta para 1 e a compra fica habilitada."
+      }
+    },
+    {
+      "id": "AUTH-BOOTSTRAP-001",
+      "priority": "P1",
+      "status": "corrigido",
+      "cause": "A primeira descoberta da geração de sessão incrementava o epoch local e cancelava um login válido iniciado antes da resposta dessa descoberta. As duas requisições retornaram HTTP 200 na falha registrada.",
+      "fix": "A adoção inicial de uma geração desconhecida não é tratada como troca de identidade; transições posteriores continuam protegidas.",
+      "evidence": {
+        "counterproof": "reports/login-bootstrap-counterproof.json",
+        "firstRun": null,
+        "firstRunOriginalPath": "reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+        "firstRunSha256": "51c8f4cbe2b07a0f0d21fde93ab39282edd67c9f4e23f1a3350c8aba0dc0e260",
+        "firstRunLocalArchive": "/Users/felipemoreiralanna/Documents/ChatGPT/jungle-review-evidence/2026-10-27/complete-before-publication/reports/diagnostics/login-bootstrap-first-full-run/html/index.html",
+        "firstRunAvailability": "local-archive-only",
+        "finalRun": "reports/playwright-final-build-html/index.html",
+        "finalEvidence": "reports/e2e-final-build-evidence.json",
+        "browserTestUnchanged": true
+      }
+    },
+    {
+      "id": "AUTH-HANDSHAKE-001",
+      "priority": "P1",
+      "status": "corrigido",
+      "cause": "Um navegador com geração conhecida 17 podia enviar login enquanto a descoberta de um banco reiniciado ainda corrigia a geração para 1.",
+      "fix": "Login/cadastro aguardam a consulta de sessão compartilhada antes do POST. Guards HTTP permanecem ativos.",
+      "evidence": {
+        "before": "reports/auth-handshake-before.log",
+        "after": "reports/auth-handshake-after.log",
+        "unitRegressions": 5,
+        "fullRun": "reports/e2e-final-build-evidence.json"
+      }
+    }
+  ],
+  "otherObservedBlockers": [],
+  "invariantsRead": [
+    "Adição ao carrinho valida o proprietário antes da requisição e antes dos efeitos de sucesso.",
+    "A prévia conserva apenas um ID público no Zustand; seus dados vêm da API e o estado é descartado ao fechar.",
+    "Detalhes são identificados pela chave do NFT na rota, evitando preservar a seleção da obra anterior.",
+    "A barra mobile de compra tem camada inferior à dos diálogos, e o limite de estoque continua validado no backend."
+  ],
+  "sourcesAtReview": [
+    {
+      "path": "src/modules/catalog/components/NFTCard/index.tsx",
+      "sha256": "706740fa40940eca26e7832432a4065939e197f8395d626c1ddcfd60b1a441c4"
+    },
+    {
+      "path": "src/modules/catalog/components/NFTCard/useNftCard.ts",
+      "sha256": "e2279aa6683b0fe2f2018fa78da6d6540e8b3f7bf18d3c866c9eb39613da766c"
+    },
+    {
+      "path": "src/modules/catalog/components/NftPreview/index.tsx",
+      "sha256": "b22a0fb8254f58cf828bd71524b352c0db017667bb780ec389b22d792fbdf1d9"
+    },
+    {
+      "path": "src/modules/catalog/components/NftPreview/useNftPreview.ts",
+      "sha256": "e6baa8eecded189aa05bc52f732e1e73720dcc642c7cf81ac0e1819a137423c2"
+    },
+    {
+      "path": "src/modules/catalog/hooks/useAddToCart.ts",
+      "sha256": "70dc89508a529a113082c3d60a08b6b0e9e2bb4a50c96eb912d751d4a345f6ed"
+    },
+    {
+      "path": "src/modules/catalog/pages/NftDetails/index.tsx",
+      "sha256": "bda71cd599b9ad882583052defd8389640e15a01ed0eb54f6ee75dbd14c1626a"
+    },
+    {
+      "path": "src/modules/catalog/pages/NftDetails/useNftDetails.ts",
+      "sha256": "a693fcd0b6dfa3a6479404645cdafc72c01e9321d736bbc12a147793907b26e1"
+    },
+    {
+      "path": "src/components/Layout/index.tsx",
+      "sha256": "108714d88a05028e8e6dd38ab7aec9953e8efac97a3ec6ea5485187b1cd64bd5"
+    },
+    {
+      "path": "src/components/Layout/useLayout.ts",
+      "sha256": "c3af1909d70d9ef1f131904850445ffc9faee6378a19e997201ace597ea9a860"
+    },
+    {
+      "path": "src/styleguide/components/QuantityInput/useQuantityInput.ts",
+      "sha256": "c1949e8c8bbfa23c3d9a3df88abbb9ddf5f7f89011b39bc17b4067a1e23a2325"
+    },
+    {
+      "path": "src/styleguide/theme/kurio/styles/commerce.template.css",
+      "sha256": "705342ec33e4f47eac670c34477f559211d8e319e0b71c7acd90979624dbfc40"
+    }
+  ],
+  "limits": "A leitura é restrita aos componentes informados e foi complementada pela suíte completa de 148 casos no build otimizado. Não representa nota global, fidelidade integral ao Figma nem auditoria exaustiva de segurança.",
+  "finalVerification": {
+    "passed": 148,
+    "failed": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "buildPort": 4173,
+    "report": "reports/e2e-final-build-evidence.json",
+    "readinessCorrection": "reports/e2e-readiness-correction.json"
+  }
+}

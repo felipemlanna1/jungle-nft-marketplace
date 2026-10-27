@@ -1,3 +1,4 @@
+import { openOptions } from './helpers/interface';
 import { test, expect, type Page } from '@playwright/test';
 
 async function boot(page: Page) {
@@ -21,12 +22,12 @@ async function login(page: Page, email = 'collector@example.test') {
 }
 async function checkout(page: Page) {
   await page.goto('/nft/nft-1');
-  await page.getByRole('button', { name: /Adicionar ao carrinho/i }).click();
+  await page.getByRole('button', { name: 'Comprar NFT', exact: true }).click();
   await expect(page.getByText('A obra está no seu carrinho.', { exact: false })).toBeVisible();
   await page.goto('/checkout');
   await page.getByRole('button', { name: 'Conectar carteira', exact: true }).click();
   await page.getByRole('button', { name: /Revisar compra/i }).click();
-  await expect(page.getByRole('heading', { name: 'Revise sua compra' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Revise sua compra', level: 2 })).toBeVisible();
 }
 
 test('a changed quote requires a second explicit confirmation before any order exists', async ({
@@ -46,7 +47,10 @@ test('a changed quote requires a second explicit confirmation before any order e
   await expect(
     page
       .getByRole('alert')
-      .filter({ hasText: /changed.*confirm again|mudou.*confirm/i })
+      .filter({
+        hasText:
+          'O preço, a disponibilidade ou as taxas mudaram. Revise os valores e confirme novamente.',
+      })
       .first(),
   ).toBeVisible();
   expect(
@@ -66,7 +70,7 @@ test('favorites and private profile do not cross a logout and account switch', a
   await expect(
     page.getByRole('button', { name: 'Remover dos favoritos', exact: true }),
   ).toHaveAttribute('aria-pressed', 'true');
-  await page.getByRole('button', { name: /Alex Collector/ }).click();
+  await openOptions(page);
   await page.getByRole('button', { name: 'Sair', exact: true }).click();
   await login(page, 'second@example.test');
   await page.goto('/nft/nft-1');

@@ -1,185 +1,177 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowLeft, ArrowRight, Check, Heart, Minus, Plus, ShieldCheck } from 'lucide-react';
+import * as Tabs from '@radix-ui/react-tabs';
+import { ArrowLeft, ArrowRight, ShoppingBag, Star } from 'lucide-react';
 import { errorMessage } from '../../../../services/marketplace';
-import { Button, Notice, Skeleton } from '../../../../components/ui';
+import { Button, Notice, QuantityInput } from '../../../../styleguide';
+import { NftDetailsSkeleton } from '../../components/NftDetailsSkeleton';
+import { NftFavoriteAction } from '../../components/NftFavoriteAction';
+import { NftGallery } from '../../components/NftGallery';
+import { RelatedNfts } from '../../components/RelatedNfts';
 import { useNftDetails } from './useNftDetails';
+
 export function NFTDetailPage({ id }: { id: string }) {
   const {
+    canAdd,
     nft,
     session,
     favorite,
     quantity,
-    validQuantity,
-    isFavorite,
-    add,
-    added,
-    decrease,
-    increase,
+    available,
+    price,
+    edition,
+    selectEdition,
     changeQuantity,
+    isFavorite,
+    toggleFavorite,
+    add,
+    addToCart,
+    added,
   } = useNftDetails(id);
-  if (nft.isPending)
-    return (
-      <section className="page-shell detail-page" aria-label="Carregando obra" role="status">
-        <nav className="breadcrumbs" aria-hidden="true">
-          <span>Início</span>
-          <span>/</span>
-          <span>Marketplace</span>
-          <span>/</span>
-          <span>Carregando obra</span>
-        </nav>
-        <div className="detail-grid">
-          <div className="detail-art">
-            <Skeleton className="detail-art-skeleton" />
-          </div>
-          <div className="detail-copy stack" aria-hidden="true">
-            <Skeleton className="text-skeleton short" />
-            <Skeleton className="text-skeleton" />
-            <Skeleton className="text-skeleton short" />
-            <div className="detail-creator">
-              <Skeleton className="text-skeleton" />
-            </div>
-            <div className="detail-description">
-              <Skeleton className="text-skeleton" />
-              <Skeleton className="text-skeleton" />
-              <Skeleton className="text-skeleton short" />
-            </div>
-            <div className="edition-picker">
-              <Skeleton className="text-skeleton" />
-            </div>
-            <Skeleton className="text-skeleton" />
-          </div>
-        </div>
-      </section>
-    );
+  if (nft.isPending) return <NftDetailsSkeleton />;
   if (nft.isError)
     return (
       <section className="page-shell empty-state">
         <h1>Obra não encontrada</h1>
         <p>{errorMessage(nft.error)}</p>
-        <Button asChild variant="secondary">
+        <Button asChild>
           <Link to="/">Voltar ao marketplace</Link>
         </Button>
       </section>
     );
   const item = nft.data;
   return (
-    <section className="page-shell detail-page">
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+    <section className="page-shell detail-page commerce-page">
+      <div className="detail-mobile-toolbar">
+        <Link to="/" aria-label="Voltar ao marketplace">
+          <ArrowLeft size={18} aria-hidden="true" />
+        </Link>
+        <NftFavoriteAction
+          nftId={id}
+          authenticated={Boolean(session.data)}
+          active={isFavorite}
+          pending={favorite.isPending}
+          onToggle={toggleFavorite}
+          showLabel={false}
+        />
+      </div>
+      <nav className="breadcrumbs" aria-label="Caminho da página">
         <Link to="/">Início</Link>
         <span>/</span>
-        <Link to="/">Marketplace</Link>
-        <span>/</span>
-        <span>{item.title}</span>
+        <Link to="/">Mercado</Link>
       </nav>
       <div className="detail-grid">
-        <div className="detail-art">
-          <img src={item.image} alt={item.title} width="680" height="680" fetchPriority="high" />
-          <span className="detail-edition">{item.collection}</span>
-        </div>
+        <NftGallery image={item.image} title={item.title} />
         <div className="detail-copy">
-          <p className="eyebrow">
-            {item.category} · Coleção verificada <Check size={12} />
-          </p>
-          <h1>{item.title}</h1>
-          <p className="detail-price">
-            {item.price}
-            <span>ETH</span>
-          </p>
-          <div className="detail-creator">
-            <span className="creator-avatar">{item.creator.slice(0, 1)}</span>
-            <div>
-              <span className="overline">Criado por</span>
-              <strong>{item.creator}</strong>
+          <div className="detail-title">
+            <h1>{item.title}</h1>
+            <div className="detail-price-row">
+              <strong className="detail-price">{price} ETH</strong>
+              {item.reviewCount !== undefined && (
+                <span className="detail-rating">
+                  <span aria-label={`${item.rating ?? 0} de 5 estrelas`}>
+                    {Array.from({ length: 5 }, (_, index) => (
+                      <Star
+                        key={index}
+                        size={15}
+                        fill={index < Math.floor(item.rating ?? 0) ? 'currentColor' : 'none'}
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </span>
+                  <span className="detail-rating-count">
+                    {item.reviewCount} avaliações de colecionadores
+                  </span>
+                  <span className="detail-rating-compact">
+                    <Star size={13} aria-hidden="true" /> {item.rating}({item.reviewCount})
+                  </span>
+                </span>
+              )}
             </div>
-            <span className="verified">
-              <Check size={10} />
-            </span>
           </div>
           <div className="detail-description">
-            <h2>Sobre esta obra</h2>
+            <h2>Sobre este NFT:</h2>
             <p>
-              Uma expressão original de cor, forma e imaginação. Esta peça faz parte da coleção{' '}
-              {item.collection}, criada para quem vê o extraordinário nos detalhes.
-            </p>
-            <p className="muted">
-              Obra e transação demonstrativas. Nenhum ativo real é comprado ou transferido.
+              {item.description ??
+                `Colecionável digital da coleção ${item.collection}. Obra demonstrativa, sem transferência de ativos reais.`}
             </p>
           </div>
-          <div className="edition-picker">
+          <fieldset className="edition-selector">
+            <legend>Edição:</legend>
             <div>
-              <span className="overline">Edição disponível</span>
-              <strong>
-                {item.available > 0 ? `${item.available} unidades` : 'Edição esgotada'}
-              </strong>
+              {item.editions?.map((option) => (
+                <button
+                  type="button"
+                  key={option.id}
+                  aria-pressed={edition?.id === option.id}
+                  onClick={() => selectEdition(option.id)}
+                >
+                  {option.id === 'open' ? 'ABERTA' : option.label}
+                </button>
+              ))}
             </div>
-            <label className="quantity-picker">
-              <span className="sr-only">Quantidade</span>
-              <button
-                type="button"
-                aria-label="Diminuir quantidade"
-                disabled={quantity <= 1}
-                onClick={() => {
-                  decrease();
-                }}
-              >
-                <Minus size={15} />
-              </button>
-              <input
-                type="number"
-                min="1"
-                max={item.available}
-                aria-label="Quantidade"
+          </fieldset>
+          <div className="detail-buy-controls">
+            <div className="detail-quantity-wrap">
+              <span className="detail-mobile-quantity-label">Qtd.</span>
+              <QuantityInput
                 value={quantity}
-                onChange={(event) => {
-                  changeQuantity(Number(event.target.value));
-                }}
+                max={available}
+                label="Quantidade"
+                onValueChange={changeQuantity}
+                disabled={add.isPending || !available}
               />
-              <button
-                type="button"
-                aria-label="Aumentar quantidade"
-                disabled={quantity >= item.available}
-                onClick={() => {
-                  increase();
-                }}
+            </div>
+            <strong className="detail-mobile-price">{price} ETH</strong>
+            <div className="detail-actions">
+              <Button
+                aria-label="Comprar NFT"
+                onClick={addToCart}
+                disabled={add.isPending || !canAdd}
               >
-                <Plus size={15} />
-              </button>
-            </label>
+                {add.isPending ? (
+                  'ADICIONANDO…'
+                ) : (
+                  <>
+                    <span className="kurio-desktop-copy">COMPRAR</span>
+                    <span className="kurio-mobile-copy">Comprar NFT</span>
+                  </>
+                )}
+              </Button>
+              <NftFavoriteAction
+                nftId={id}
+                authenticated={Boolean(session.data)}
+                active={isFavorite}
+                pending={favorite.isPending}
+                onToggle={toggleFavorite}
+                className="detail-favorite-action"
+              />
+              <Button
+                className="detail-add-icon"
+                size="icon"
+                aria-label="Adicionar ao carrinho"
+                onClick={addToCart}
+                disabled={add.isPending || !canAdd}
+              >
+                <ShoppingBag size={20} />
+              </Button>
+            </div>
           </div>
-          <div className="detail-actions">
-            <Button
-              onClick={() => add.mutate()}
-              disabled={add.isPending || item.available === 0 || quantity !== validQuantity}
-            >
-              {add.isPending ? (
-                'Adicionando…'
-              ) : added ? (
-                <>
-                  <Check size={16} /> Adicionado ao carrinho
-                </>
-              ) : (
-                <>
-                  Adicionar ao carrinho <ArrowRight size={16} />
-                </>
-              )}
-            </Button>
-            <Button
-              variant="secondary"
-              disabled={favorite.isPending || !session.data}
-              aria-label={isFavorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-              aria-pressed={isFavorite}
-              onClick={() => favorite.mutate({ id, active: !isFavorite })}
-            >
-              <Heart size={17} fill={isFavorite ? 'currentColor' : 'none'} />
-            </Button>
-          </div>
-          {!session.data && (
-            <p className="field-hint">
-              <Link to="/login" search={{ redirect: `/nft/${id}` }}>
-                Entre para salvar favoritos.
-              </Link>{' '}
-              Você pode adicionar ao carrinho como visitante.
-            </p>
+          <dl className="nft-properties">
+            <div>
+              <dt>ID do token:</dt>
+              <dd>{item.tokenId ?? item.title.split('#')[1] ?? item.id}</dd>
+            </div>
+            <div>
+              <dt>Coleção:</dt>
+              <dd>{item.collection}</dd>
+            </div>
+            <div>
+              <dt>Atributos:</dt>
+              <dd>{item.attributes?.join(', ') ?? `${item.category}, ${item.network}`}</dd>
+            </div>
+          </dl>
+          {!available && (
+            <Notice tone="error">Esta edição está esgotada. Selecione outra edição.</Notice>
           )}
           {add.isError && <Notice tone="error">{errorMessage(add.error)}</Notice>}
           {favorite.isError && (
@@ -189,15 +181,50 @@ export function NFTDetailPage({ id }: { id: string }) {
           )}
           {added && (
             <Notice tone="success">
-              A obra está no seu carrinho. <Link to="/cart">Ver carrinho →</Link>
+              A obra está no seu carrinho.{' '}
+              <Link to="/cart">
+                Ver carrinho <ArrowRight size={14} />
+              </Link>
             </Notice>
           )}
-          <div className="detail-assurance">
-            <ShieldCheck size={18} />
-            <span>Cotação e disponibilidade confirmadas no checkout.</span>
-          </div>
         </div>
       </div>
+      <Tabs.Root className="nft-content-tabs" defaultValue="details">
+        <Tabs.List aria-label="Informações da obra">
+          <Tabs.Trigger value="details">Detalhes do NFT</Tabs.Trigger>
+          <Tabs.Trigger value="collection">Informações da coleção</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="details">
+          <p>
+            {item.title} é uma obra da coleção {item.collection}. O preço e a disponibilidade desta
+            edição são confirmados pela cotação antes da compra.
+          </p>
+          <p>
+            Esta demonstração registra um recibo imutável de cada pedido confirmado. Carteiras e
+            transações são simuladas, sem movimentação de ativos reais.
+          </p>
+          <dl className="nft-properties">
+            <div>
+              <dt>Rede:</dt>
+              <dd>{item.network}</dd>
+            </div>
+            <div>
+              <dt>Contrato:</dt>
+              <dd>Ambiente demonstrativo. Nenhum contrato real é executado.</dd>
+            </div>
+          </dl>
+        </Tabs.Content>
+        <Tabs.Content value="collection">
+          <p>
+            {item.collection}, de {item.creator}. As imagens e os dados utilizados nesta
+            demonstração estão documentados na entrega.
+          </p>
+          <Link to="/" search={{ category: item.category }}>
+            Explorar esta categoria <ArrowRight size={14} />
+          </Link>
+        </Tabs.Content>
+      </Tabs.Root>
+      <RelatedNfts title="Mais desta coleção" excludeIds={[id]} />
       <Link to="/" className="back-link">
         <ArrowLeft size={16} /> Continuar explorando
       </Link>

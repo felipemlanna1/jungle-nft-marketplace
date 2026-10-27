@@ -1,0 +1,15 @@
+
+Running 6 tests using 1 worker
+
+(node:97210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal (5.2s)
+  ✓  2 [desktop] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from detail survives demo sign-in, refresh and removal (4.1s)
+  ✓  3 [desktop] › tests/e2e/favorite-login.spec.ts:97:1 › demo prefill never resets a password changed by the collector (2.7s)
+(node:97268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  4 [mobile] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from catalog survives demo sign-in, refresh and removal (3.3s)
+  ✓  5 [mobile] › tests/e2e/favorite-login.spec.ts:6:3 › guest favorite from detail survives demo sign-in, refresh and removal (3.4s)
+  ✓  6 [mobile] › tests/e2e/favorite-login.spec.ts:97:1 › demo prefill never resets a password changed by the collector (2.6s)
+
+  6 passed (23.7s)

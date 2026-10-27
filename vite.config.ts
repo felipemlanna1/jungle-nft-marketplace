@@ -16,5 +16,15 @@ export default defineConfig({
     },
   },
   preview: { port: 4173, strictPort: true },
-  build: { sourcemap: false },
+  build: {
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (/\/node_modules\/(react|react-dom|scheduler)\//.test(id)) return 'react-runtime';
+          if (id.includes('/node_modules/@tanstack/')) return 'tanstack';
+        },
+      },
+    },
+  },
 });

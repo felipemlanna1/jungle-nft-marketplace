@@ -11,3 +11,5 @@ coverage/
 *.sql.gz
 
 *.tsbuildinfo
+
+/assets/
